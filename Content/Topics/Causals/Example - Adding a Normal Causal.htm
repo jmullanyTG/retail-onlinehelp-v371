@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="5981" MadCap:lastWidth="1773" MadCap:conditions="General.How-To Guides">
+    <head>
+        <link href="../../Resources/TableStyles/Video Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Example - Adding a Normal Causal</h1>
+        <p>In this example, we will create a causal that explains several spikes in sales in the e-commerce channel for the item "143 (All Season Lined Parka_Dark Navy - L). We know these spikes coincided with a recurring promotion, and we want JustEnough to identify the spikes in sales as being due to the promotion rather than part of the item's "normal" demand patterns. Because we are planning to run this promotion in the future, we will create a normal causal for the promotion so that JustEnough will account for the expected boost in sales when generating a demand forecast for the item.</p>
+        <p>This example includes the following tasks:</p>
+        <ul>
+            <li><a href="#Review">Review the item forecast</a> - In this step, we look at the original item forecast and see that no causals have been applied to the spikes in sales that resulted from the parka promotions. As a result, the demand forecast for the item assumes the increase in sales is "organic" and not related to any promotions.</li>
+            <li><a href="#Create">Create a causal</a> - In this step, we create a causal for the parka promotion and apply it to the past and future dates of the promotion.</li>
+            <li><a href="#Review2">Review the revised item forecast</a> - In this step, we review the updated forecast to confirm that the causals were applied to the correct periods and that the demand forecast reflects the changes as expected.</li>
+        </ul>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Workflow</h2>
+        <p>Click to open the Managing Events workflow.</p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=18"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#18" class="workflow" /></a>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Related videos</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p>
+                                    <p>
+                                        <p>
+                                            <object MadCap:HTML5Video="true" src="../../Resources/Videos/BC-4 CD-10 Promotion Management - Add Causal.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video">
+                                            </object>
+                                        </p>
+                                    </p>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>
+                                    <p>&#160;</p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                                <p>Adding Causals</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Instructions</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Review"></a>1. Review the item forecast.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Forecasts</b>.</li>
+                    <li>If the Items - Level View dialog box does not automatically appear, click <b>Level View</b> in the Forecast toolbar to open it.</li>
+                    <li>
+                        <p>In the Items - Level View dialog box, select the <b>(All Items)</b> filter.</p>
+                    </li>
+                    <li>
+                        <p>In the Forecasts screen select the following item in the Item list: </p>
+                        <ul>
+                            <li>Item Master Code;&#160;<b>143</b></li>
+                            <li>Item Master: <b>All Season Lined Parka_Dark Navy-L</b></li>
+                            <li>Channel Code:&#160;<b>E-Com</b></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Review the forecast. Note in the screenshot below that there are sales spikes in the following weeks: 2016 Week 30, 2017 Week 18, and 2017 Week 34 (dates in your example may vary). We know these spikes coincide with the online parka promotion. There are also forecasted spikes  in 2017 Week 27 and 2017 Week 43 that have no matching spikes in sales. We know these discrepancies are due to the fact that the online parka promotion did not run during those periods. Finally, we know that we are running the same online parka promotion again in 2018 Weeks 8 and 31 but no corresponding spikes in demand are shown in the forecast. To fix all these issues, we must create a causal that resolves the past discrepancies and enables JustEnough to accurately forecast demand for future online parka promotions.</p>
+                        <p>
+                            <img src="../../Resources/Images/Causals/Example - original demand.png" />
+                        </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Create"></a>2. Create a causal.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Causals</b>.</li>
+                    <li>In the Causals toolbar, click <b>New</b> to create a new causal.</li>
+                    <li>
+                        <p>In the New dialog box, enter the following information and click <b>OK</b>:</p>
+                        <ul>
+                            <li>Name: <code>Parka Online Sale</code></li>
+                            <li>Type: <b>Normal</b></li>
+                            <li>Bucket Type: <b>Weekly</b></li>
+                            <li>Default Value:<code> 0</code></li>
+                        </ul>
+                        <p>
+                            <img src="../../Resources/Images/Causals/Example - new normal.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The new causal appears in the Causals screen. In the Series Values tab, enter the value <code>1 </code>in each week that corresponds to the online parka promotion. (In this example, <code>1 </code>is entered for the following weeks: 2016 Week 30, 2017 Week 18, 2017 Week 34, 2018 Week 8, and 2018 Week 31.) </p>
+                    </li>
+                    <li>
+                        <p>Click <b>Save</b> in the toolbar to see the results.</p>
+                        <p>
+                            <img src="../../Resources/Images/Causals/Example - causal finished.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Level Links tab, click <b>Add</b> in the Level toolbar to link the new causal to the filter with the parka items.</p>
+                        <ul>
+                            <li>For this example,  select the <b>(All Items)</b> filter.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>The Level Links tab now displays the items that are linked to this causal.</p>
+                        <p>
+                            <img src="../../Resources/Images/Causals/Example - level links.png" />
+                        </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Review2"></a>3. Review the revised item forecast.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Forecasts</b>.</li>
+                    <li>If the Items - Level View dialog box does not automatically appear, click <b>Level View</b> in the Forecast toolbar to open it.</li>
+                    <li>
+                        <p>In the Items - Level View dialog box, select the filter that contains the items whose forecasts you want to review.</p>
+                        <ul>
+                            <li>
+                                <p>For this example,  select the <b>(All Items)</b> filter.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>In the Forecasts screen select the following item in the Item list: </p>
+                        <ul>
+                            <li>Item Master Code;&#160;<b>143</b></li>
+                            <li>Item Master: <b>All Season Lined Parka_Dark Navy-L</b></li>
+                            <li>Channel Code:&#160;<b>E-Com</b></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Review the forecast. Note that the Parka Online Sale causal now corresponds to the historic spikes in sales and also that upcoming Parka Online Sale promotions have corresponding spikes in demand.</p>
+                        <p>
+                            <img src="../../Resources/Images/Causals/Example - updated demand.png" />
+                        </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="../Item Manager/Defining Item Life Cycle Dates.htm">Defining Item Life Cycle Dates</a>
+            </li>
+            <li><a href="../Item Manager/Item Manager Overview.htm">Item Manager Overview</a>
+            </li>
+            <li><a href="../How-To Guides/Item Management/How to Introduce New Items Into Your Stores.htm">Introducing New Items to Your Stores</a>
+            </li>
+        </ul>
+    </body>
+</html>

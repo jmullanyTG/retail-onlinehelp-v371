@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Notifications Overview"
+    Link="/Content/Topics/Notifications/Notifications Overview.htm"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Notifications Configuration"
+    Link="/Content/Topics/Notifications/Notifications Configuration.htm">
+    <TocEntry
+      Title="Notification User Rights"
+      Link="/Content/Topics/Notifications/Notification User Rights.htm" />
+    <TocEntry
+      Title="Standardized Jobs"
+      Link="/Content/Topics/Notifications/Standardized Jobs.htm">
+      <TocEntry
+        Title="Notification Nightly Purge"
+        Link="/Content/Topics/Notifications/Notification Nightly Purge.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Notification Subscription Screen"
+    Link="/Content/Topics/Notifications/Notification Subscription Screen.htm">
+    <TocEntry
+      Title="Notification Subscription Selection"
+      Link="/Content/Topics/Notifications/Notification Subscription Selection.htm">
+      <TocEntry
+        Title="Core Notifications"
+        Link="/Content/Topics/Notifications/Core Notifications.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Custom Notifications"
+      Link="/Content/Topics/Notifications/Custom Notifications.htm">
+      <TocEntry
+        Title="Create a Custom Notification"
+        Link="/Content/Topics/Notifications/Create a Custom Notification.htm">
+        <TocEntry
+          Title="Insert a Token within a Message"
+          Link="/Content/Topics/Notifications/Insert a Token within a Message.htm" />
+        <TocEntry
+          Title="Insert a Source Link within a Message"
+          Link="/Content/Topics/Notifications/Insert a Source Link within a Message.htm" />
+        <TocEntry
+          Title="Preview a Custom Notification"
+          Link="/Content/Topics/Notifications/Preview a Custom Notification.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Modify a Custom Notification"
+        Link="/Content/Topics/Notifications/Modify a Custom Notification.htm" />
+      <TocEntry
+        Title="Delete a Custom Notification"
+        Link="/Content/Topics/Notifications/Delete a Custom Notification.htm" />
+      <TocEntry
+        Title="Initiate Custom Notification Configuration"
+        Link="/Content/Topics/Notifications/Initiate Custom Notification Configuration.htm" />
+      <TocEntry
+        Title="Custom Notification Implementation Examples"
+        Link="/Content/Topics/Notifications/Custom Notification Implementation Examples.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Notification Delivery Methods"
+      Link="/Content/Topics/Notifications/Notification Delivery Methods.htm" />
+    <TocEntry
+      Title="User Notification Preferences"
+      Link="/Content/Topics/Notifications/User Notification Preferences.htm"></TocEntry>
+    <TocEntry
+      Title="User Notification Inbox"
+      Link="/Content/Topics/Notifications/User Notification Inbox.htm">
+      <TocEntry
+        Title="Dismiss a Notification"
+        Link="/Content/Topics/Notifications/Dismiss a Notification.htm"></TocEntry>
+      <TocEntry
+        Title="Sort Notifications"
+        Link="/Content/Topics/Notifications/Sort Notifications.htm" />
+      <TocEntry
+        Title="View Dismissed Notifications"
+        Link="/Content/Topics/Notifications/View Dismissed Notifications.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Notifications Help"
+    Link="/Content/Topics/Notifications/Notifications Help.htm" />
+</CatapultToc>

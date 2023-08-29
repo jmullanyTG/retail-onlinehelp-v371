@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="1.888.326.8579">1.888.326.8579</Variable>
+  <Variable
+    Name="CompanyName"
+    Comment="Mi9 Retail"
+    EvaluatedDefinition="Mi9 Retail">Mi9 Retail</Variable>
+  <Variable
+    Name="Mosaic"
+    Comment="Store Operations"
+    EvaluatedDefinition="Mosaic">Mosaic</Variable>
+  <Variable
+    Name="Affinity"
+    Comment="Back Office Suite"
+    EvaluatedDefinition="Affinity Merchandising">Affinity Merchandising</Variable>
+  <Variable
+    Name="Satellite"
+    Comment="Mi9 Satellite Application"
+    EvaluatedDefinition="Satellite Solution">Satellite Solution</Variable>
+  <Variable
+    Name="XSM"
+    Comment="Service for Standalone Manager (XSM)"
+    EvaluatedDefinition="POS Sync">POS Sync</Variable>
+  <Variable
+    Name="Clienteling"
+    Comment="Clienteling"
+    EvaluatedDefinition="Mosaic Clienteling">Mosaic Clienteling</Variable>
+  <Variable
+    Name="Mosaic Inventory"
+    Comment="Inventory Management"
+    EvaluatedDefinition="Inventory Management">Inventory Management</Variable>
+  <Variable
+    Name="Merchant"
+    Comment="Merchandise Management"
+    EvaluatedDefinition="Merchant">Merchant</Variable>
+  <Variable
+    Name="Standalone"
+    Comment="Standalone"
+    EvaluatedDefinition="Offline POS">Offline POS</Variable>
+  <Variable
+    Name="RVA"
+    Comment="Mi9's Reporting Solution"
+    EvaluatedDefinition="Visual Analytics">Visual Analytics</Variable>
+  <Variable
+    Name="Reporting"
+    Comment="Reporting"
+    EvaluatedDefinition="Mi9 Reporting">Mi9 Reporting</Variable>
+  <Variable
+    Name="FiscalEngine"
+    Comment="Fiscal Engine"
+    EvaluatedDefinition="Fiscal Engine">Fiscal Engine</Variable>
+  <Variable
+    Name="SafeManagement"
+    Comment="Safe or Cash Management"
+    EvaluatedDefinition="Safe Management">Safe Management</Variable>
+  <Variable
+    Name="PhoneNumber"
+    Comment=""
+    EvaluatedDefinition="514.737.0941">514.737.0941</Variable>
+  <Variable
+    Name="PhoneNumber"
+    Comment=""
+    EvaluatedDefinition="647.849.1100">647.849.1100</Variable>
+</CatapultVariableSet>

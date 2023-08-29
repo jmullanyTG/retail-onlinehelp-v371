@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Profiles Overview"
+    Link="/Content/Topics/Profiles/Profiles Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Profile Set Management"
+    Link="/Content/Topics/Profiles/Profile Set Management.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Profiles/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Create a Profile Set"
+        Link="/Content/Topics/Profiles/Create a Profile Set.htm">
+        <TocEntry
+          Title="Hierarchy Settings"
+          Link="/Content/Topics/Profiles/Hierarchy Settings.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Rules and Application"
+        Link="/Content/Topics/Profiles/Rules and Application.htm">
+        <TocEntry
+          Title="Inventory Apply Rules"
+          Link="/Content/Topics/Profiles/Inventory Apply Rules.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Profiles/Practical Application.htm">
+      <TocEntry
+        Title="Create a Profile Set"
+        Link="/Content/Topics/Profiles/Create a Profile Set_1.htm">
+        <TocEntry
+          Title="Hierarchy Settings"
+          Link="/Content/Topics/Profiles/Hierarchy Settings_1.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Set Apply and Ordering Rules"
+        Link="/Content/Topics/Profiles/Set Apply and Ordering Rules.htm" />
+      <TocEntry
+        Title="Inventory Apply Rules"
+        Link="/Content/Topics/Profiles/Inventory Apply Rules_1.htm">
+        <TocEntry
+          Title="Change Model"
+          Link="/Content/Topics/Profiles/Change Model.htm" />
+        <TocEntry
+          Title="Edit Apply Rule"
+          Link="/Content/Topics/Profiles/Edit Apply Rule.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Profiles/Technical Execution.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Profile Management"
+    Link="/Content/Topics/Profiles/Profile Management.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Profiles/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Profile Set Items"
+        Link="/Content/Topics/Profiles/Profile Set Items.htm" />
+      <TocEntry
+        Title="Profile Set Item Details"
+        Link="/Content/Topics/Profiles/Profile Set Item Details.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Profiles/Practical Application_1.htm">
+      <TocEntry
+        Title="Example before application of profile"
+        Link="/Content/Topics/Profiles/Example before application of profile.htm" />
+      <TocEntry
+        Title="Choose Curve"
+        Link="/Content/Topics/Profiles/Choose Curve.htm" />
+      <TocEntry
+        Title="Filter"
+        Link="/Content/Topics/Profiles/Filter.htm" />
+      <TocEntry
+        Title="Link"
+        Link="/Content/Topics/Profiles/Link.htm" />
+      <TocEntry
+        Title="Manual Push"
+        Link="/Content/Topics/Profiles/Manual Push.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Profiles/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Curve Management"
+    Link="/Content/Topics/Profiles/Curve Management.htm" />
+</CatapultToc>

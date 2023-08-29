@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Audit Configuration</h1>
+        <p>The audit configuration is used to control the audit task functions within JustEnough. </p>
+        <h2 >Essential Business Concepts</h2>
+        <p>The auditable tables will be listed and settings for each should be applied for the audit task. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Schema Name</span> – The database schema in which the table exists. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Table Name </span>– The name of the database table to be audited. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Insert Trigger Start Date/Time </span>– The audit start date/time for all INSERT statements related to the table. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Insert Trigger End Date/Time </span>– The audit end date/time for all INSERT statements related to the table.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Delete [Insert Trigger] (After End Date/Time) </span>– If selected, the trigger for all INSERT statements related to the table will be deleted after the specified end date has passed.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Insert </span><span style="font-weight: bold;">Data</span> <span style="font-weight: bold;">Retention</span><span style="font-weight: bold;"> Days </span>– Number of days forward for which logged data is kept.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Update Trigger Start Date/Time </span>– The audit start date/time for all UPDATE statements related to the table. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Update Trigger End Date/Time </span>– The audit end date/time for all UPDATE statements related to the table.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Delete [Update Trigger] (After End Date/Time) </span>– If selected, the trigger for all UPDATE statements related to the table will be deleted after the specified end date has passed.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Update </span><span style="font-weight: bold;">Data Retention</span><span style="font-weight: bold;"> Days </span>– Number of days forward for which logged data is kept.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Delete Trigger Start Date/Time </span>– The audit start date/time for all DELETE statements related to the table.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Delete Trigger End Date/Time </span>– The audit end date/time for all DELETE statements related to the table.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Delete [Delete Trigger] (After End Date/Time) </span>– If selected, the trigger for all DELETE statements related to the table will be deleted after the specified end date has passed.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Delete </span><span style="font-weight: bold;">Data Retention</span><span style="font-weight: bold;"> Days </span>– Number of days forward for which logged data is kept.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Updates Date/Time </span>– The date and time of the most recent update to the audit table configuration for this entry. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Updated User Name </span>– The user account which made the most recent update to the audit table configuration for this entry. </li>
+        </ul>
+        <p>&#160;</p>
+        <h2 >Practical Application</h2>
+        <h3 >Configure Triggers</h3>
+        <p>To set up audit triggers, edit the date ranges to in order to affect any dates which fall within the range. Upon pressing “Apply” any active triggers will be returned to the grid with a conditional format (green highlight) indicating that an audit trigger is active. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Audit Configuration.png" style="visibility: visible;width: 673px;height: 149px;" />
+        </p>
+        <p>Once configured, any INSERT, UPDATE, or DELETE made to the table will create an entry in the appropriate audit log table. </p>
+        <h3 >Check Audit Logs</h3>
+        <p>Once audit triggers have been created, the audit log tables will be created within a specific audit schema. These tables may then be queried through SSMS or built into a view within JustEnough through a data grid widget and associated select procedure. </p>
+        <p>The audit log tables will be name-spaced within a schema based on the following format: <span style="font-weight: bold;">z_[schema].[table]</span></p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Audit Configuration_1.png" style="visibility: visible;width: 673px;height: 146px;" />
+        </p>
+        <h2 >Technical Execution</h2>
+        <p>The audit task will run automatically; there is no additional work required beyond configuration of the triggers in order to begin table auditing. </p>
+        <h3 >Blacklist</h3>
+        <p>There is a blacklist of tables which are excluded from audit trigger creation due in part to their size and the overall frequency with which they are updated or inserted into. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;font-weight: bold;">Tbl_Forecast</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-weight: bold;">Tbl_InventoryHistory</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-weight: bold;">Tbl_SalesHistoryByType</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-weight: bold;">Tbl_AssortmentPlan_ItemDetail</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-weight: bold;">All import tables (includes API import tables)</li>
+        </ul>
+        <h3 >Audit Database</h3>
+        <p>If a database exists within the same SQL server environment which is specifically named “z_[database name] to match the existing database on which triggers are configured, the audit logs will be written there instead of to the audit schema on the existing database. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Audit Configuration_2.png" style="visibility: visible;width: 211px;height: 145px;" />
+        </p>
+        <p>In the above example, any audit triggers configured within the ProductSandbox database will be logged directly to the z_ProductSandbox database. </p>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2134" MadCap:lastWidth="2377" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - "Direct To Store Delivery" Supply Chain</h1>
+        <p>This example shows  a direct-to-store supply chain where the inventory source for a store is the external supplier. </p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Workflow</h2>
+        <p>Click to view a diagram of a direct-to-store supply chain.</p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=4" title="Click to open workflow" alt="Click to open workflow"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#4" class="workflow" style="margin-left: 0px;margin-bottom: 0px;padding-left: 1px;padding-bottom: 1px;" /></a>
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>
+                <p>From the Maintain tab, click <b>Supply Chain</b>.</p>
+                <p><b>Note</b>: If the Open Supply Chain dialog box does not automatically appear, click <b>Open Supply Chain</b> on the toolbar.</p>
+            </li>
+            <li>
+                <p>In the Open Supply Chain dialog box, select the <b>[Supplier - DC/Store]</b> supply chain.</p>
+            </li>
+            <li>
+                <p> In the supply chain document, select a store site in the Hierarchy pane. Notice that it's source (displayed in the Alternate Source gird) is External Supplier.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - flat - source.png" />
+                </p>
+            </li>
+        </ol>
+        <h2>Results</h2>
+        <p>With this supply chain, JustEnough will:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>Calculate projected demand versus projected stock on hand for each item at each site.</li>
+            <li>Generate orders as needed from the external supplier for each item at each location.</li>
+            <li>Have those orders delivered directly from the supplier to each site.</li>
+        </ol>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Managing Supply Chains.htm">Managing Supply Chains</a>
+            </li>
+            <li><a href="Supply Chain Overview.htm">Supply Chain Overview</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

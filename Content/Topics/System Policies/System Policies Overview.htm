@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="3078" MadCap:lastWidth="2377">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">System Policies Overview</h1>
+        <p style="margin-bottom: 0pt;">The System Policies module is the control panel for JustEnough. The user interface is meant to interact with the system policy table (<span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_SystemPolicy</span>) and should not be manipulated by anyone other than a JustEnough technical consultant or an extremely well trained administrative level user. <br /></p>
+        <p style="margin-bottom: 0pt;">System policies are grouped together for ease of navigation. They may apply to one of the .NET engines, or to the behavior of a specific module, or to the application as a whole. </p>
+        <h2 >Essential Business Concepts</h2>
+        <p>System policy settings are segregated by module, engine, or overall system. They should only be manipulated with a full understanding of the potential consequences. System policies are organized by system policy type. These are typically grouped together by module, or within context of system specific functions or tasks. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Engine – </span>Relates to an engine specific set of policies and parameters. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">General –</span> Relates to common application settings. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Import Defaults –</span> Relates to assigned defaults for imported data. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Module –</span> Policy settings specific to the context of the listed module. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Process –</span> Policy settings common across the application. </li>
+        </ul>
+        <h2 >Practical Application</h2>
+        <p>The list of available system policies will be displayed in a navigation pane.</p>
+        <p>
+            <img src="../../Resources/Images/System Policy/System Policy Overview.png" style="visibility: visible;mso-wrap-style: square;width: 230px;height: 690px;" />
+        </p>
+        <p>Users may expand these folders in order to view the available system policies.</p>
+        <p>
+            <img src="../../Resources/Images/System Policy/System Policy Overview_1.png" style="visibility: visible;mso-wrap-style: square;width: 230px;height: 219px;" />
+        </p>
+        <p>Highlighting these will populate the system policy settings screen.</p>
+        <p>
+            <img src="../../Resources/Images/System Policy/System Policy Overview_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 364px;" />
+        </p>
+        <h3 >Required Configuration</h3>
+        <p>For certain modules, system policy settings will need to be configured as part of the setup and initialization process. Details related to the specifics of these policies should be referenced within the functional help documentation of the associated modules. </p>
+        <h2 >Technical Execution</h2>
+        <p style="margin-bottom: 0pt;">All policies which appear in the user interface have a <span style="font-family: Consolas;color: #008080;font-size: 10pt;">SystemPolicyIsVisibleFlag</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #FF0000;font-size: 10pt;">'1'</span></p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">Policy types control the display groupings of system polices. These may be referenced in <span style="font-family: Consolas;color: #4F81BD;font-size: 10pt;">tbl_SystemPolicyType. </span></p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <h3 >Policy Data Type</h3>
+        <p>A single character is used to designate the data type which may be entered within a system policy setting field. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">B – </span>Boolean. A bit/flag indicating an on/off setting. May be a “1” or a “0”. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">C –</span> Char. A single letter character.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">D –</span> Date. A datetime value. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">E –</span> Enumerator. A value selected from the available values listing. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">I –</span> Integer. An integer value. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">N –</span> Number. A number?????</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">S –</span> String. A Unicode text value. May be a list.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

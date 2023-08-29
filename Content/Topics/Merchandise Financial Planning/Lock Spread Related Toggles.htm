@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 >Lock &amp; Spread Related Toggles</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove Locks On </span><span style="font-weight: bold;color: #000000;">Save</span><span style="font-weight: bold;color: #000000;">:</span> <span style="color: #000000;">user editable checkbox; when checked, all locks present in the current plan are removed whenever the user clicks Save in the Main Planning, Comp/Non-Comp, or Sales By Type views</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove Locks on Merge:</span> <span style="color: #000000;">user editable checkbox; when checked, all locks present in the current plan are removed whenever the user merges the plan into another plan manually or via the Approve action in the Financial Plan Maintenance dialog</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Aggregate Locked Metrics Always Hold:</span> <span style="color: #000000;">user editable checkbox; defines the calculation behavior for dependent aggregate level metrics when an aggregate level lock (i.e. product category lock with multiple subcategories beneath, or a month level lock with weeks beneath) is present</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Dependent Metrics:</span><span style="color: #000000;"> when locks are engaged for any Sales or sales related metric, all dependent metrics also lock. These are:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sales</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sales % +/- LY</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sales Units</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sales Units % +/- LY</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">AUR</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">AUR % +/- LY</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">MMU % (Product)</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Markdowns % </span><span style="font-weight: bold;color: #000000;">of</span><span style="font-weight: bold;color: #000000;"> Sales</span>
+            </li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns (Perm)</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns % of Sales (Perm)</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns (Promo)</li>
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns % of Sales (Promo)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span> <span style="font-style: italic;color: #000000;">Markdowns and Markdowns % to Sales will appear locked but must still recalculate at the aggregate level when changes are made beneath</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important</span><span style="font-weight: bold;font-style: italic;">: </span><span style="font-style: italic;">in the Hybrid Cost Dual Markdown plan type, Markdowns (Perm) and Markdowns % of Sales (Perm) WILL hold at the aggregate level whenever Sales/Total Sales at the aggregate level also holds. This is in all cases then Aggregate Locked Metrics Always Hold is checked and whenever Sales/Total Sales is changed directly when Aggregate Locked Metrics Always Hold is unchecked</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Checked</span><span style="color: #000000;">: </span><span style="color: #000000;">when checked, all aggregate level metrics that appear locked (conditionally formatted red) will hold their values when changes are made to periods/entities beneath the locked level</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">in order to achieve this, dependent metrics in periods/entities beneath the locked level other than the one changed may not adhere to the active calc toggle for the metric changed</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">In the example below, </span><span style="font-style: italic;color: #000000;">a lock has been placed on 2017_m07, locking all sales dependent metrics as noted above</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Lock Spread Related Toggles.png" style="visibility: visible;width: 634px;height: 308px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;font-style: italic;color: #000000;">Sales Units have been increased to 500 for 2017_wk28 and the current Sales Units calc toggle is HOLD: AUR, AUC, AUT | CALC: Sales, COGS, Markdowns, MMU %</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Lock Spread Related Toggles_1.png" style="visibility: visible;width: 634px;height: 308px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that all aggregate locked metrics (except as noted above) have held their values. At the period level, Sales have recalculated for all periods, balancing to $4,800, and Sales Units have recalculated for the periods that were not changed manually to balance to 1,200. </span><span style="font-style: italic;color: #FF0000;">Note, also, that Markdowns have recalculated while AUR has remained constant, indicating an underlying change to AUT – which is contrary to the active calc toggle but consistent with the behavior for when Aggregate Metrics Always Hold is checked.</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Unchecked</span><span style="color: #000000;">:</span><span style="color: #000000;"> when unchecked, only the value of the aggregate level metric corresponding to the metric being changed for a period/entity beneath the locked level (i.e. Sales, if Sales was changed beneath the lock, etc.) will hold while other dependent aggregate level metrics may change</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">the advantage to this option is that all changes to other periods/entities below the lock, as well as those of dependent metrics at the aggregate level will adhere to the active calc toggle of the metric that was changed</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">In the next example, </span><span style="font-style: italic;color: #000000;">the view has been changed to group sales for all brands beneath each week and </span><span style="font-style: italic;color: #000000;">a lock has been placed on 2017_</span><span style="font-style: italic;color: #000000;">w28</span><span style="font-style: italic;color: #000000;">, locking all sales dependent metrics as noted above</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Lock Spread Related Toggles_2.png" style="visibility: visible;width: 634px;height: 298px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Sales Units have been </span><span style="font-style: italic;color: #000000;">de</span><span style="font-style: italic;color: #000000;">creased to </span><span style="font-style: italic;color: #000000;">200</span><span style="font-style: italic;color: #000000;"> for</span><span style="font-style: italic;color: #000000;"> the Great Value brand </span><span style="font-style: italic;color: #000000;">and the current Sales Units calc toggle is still HOLD: AUR, AUC, AUT | CALC: Sales, COGS, Markdowns, MMU %</span>
+        </p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Lock Spread Related Toggles_3.png" style="visibility: visible;width: 634px;height: 298px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;font-style: italic;">Note that this time, Sales Units at the aggregate level has held, but the other aggregate level metrics have been allowed to recalculate. This creates a different calculation behavior for the brand level metrics beneath the lock as well. Users should familiarize themselves with these differences and choose the option that most closely fits their planning style</p>
+    </body>
+</html>

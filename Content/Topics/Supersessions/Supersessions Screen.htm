@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="2883" MadCap:lastWidth="2754">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Supersessions Screen</h1>
+        <p>The supersessions screen is where you can create, delete, view, and update supersessions.</p>
+        <p>
+            <img src="../../Resources/Images/Supersessions/Supersessions Screen.png" style="mc-thumbnail-max-width: 800px;mc-thumbnail: popup;width: 300px;" />
+        </p>
+        <h2 >Supersession Grid</h2>
+        <p>The supersession grid lists all of the active and inactive supersessions in your JustEnough system. It contains the following details for each supersession.. </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Detail</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Old Item</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The item which is supplying the supersession history. In many instances, this is the item which is being replaced (last year’s model).</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">New Item </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The item which will supersede the item described in the “old item” column. This is the item which is replacing the old item (this year’s model).</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Superseded for Replenishment </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">If selected, this will supersede the new item over the old item for all replenishment orders</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Superseded for Forecasting </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2"> If selected, this will bring in the demand history of the old item into the forecast engine in order to calculate the projected demand for the new item</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Replenishment Ratio </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Value of the ratio to 1 which will be applied to the old item stock on hand quantities. A value of 1 will give a 1:1 ratio of old item quantities to new item quantities. A value of 2 will give a 2:1 ratio of new item demand to old item demand, a 100% increase. A value of 1.2 would be for a 20% increase. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Forecast Ratio</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Value of the ratio to 1 which will be applied to the old item sales history amounts. A value of 1 will give a 1:1 ratio of old item quantities to new item quantities. A value of 2 will give a 2:1 ratio of new item demand to old item demand, a 100% increase. A value of 1.2 would be for a 20% increase. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Sales History Start Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1"> This will define the beginning of the measurement period for the old item sales history.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Sales History End Date </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">This will define the end of the measurement period for the old item sales history.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Supersession Start Date </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">This will define when the supersession becomes active. If blank, the supersession will be considered active from the go live date of the system.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Supersession End Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">This will define when the supersession becomes inactive. If blank, the supersession will be considered to continue in perpetuity. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Active </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The active flag will display in the check box if the supersession is currently active.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Old Item Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">This will determine the replenishment status of the old item.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Redundant </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The item will remain in stock, but will no longer be ordered. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Non-Stocked</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The item will no longer remain in stock (not on the shelf). </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">User </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The UserID of the creator of the supersession. Useful for audit purposes. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Date Created</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">The date on which the supersession was created.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sites Affected</h3>
+        <p>For the supersession highlighted in the supersession grid, this will display the sites affected by said supersession. </p>
+        <h3>Notes</h3>
+        <p>A place for additional notes. Will be populated with the UserID of the note adder and a timestamp.</p>
+        <h2>Actions</h2>
+        <p>The following actions are available from the Supersession toolbar.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><a href="Creating Supersessions.htm">New</a>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Creates a new supersession.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Edit</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Updates the sites for the selected supersession.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Delete</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Deletes the selected supersession.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Save</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Saves property changes made on the Supersessions grid.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Related topics</h2>
+        <ul>
+            <li>
+                <MadCap:xref href="Supersessions Overview.htm">Supersessions Overview</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

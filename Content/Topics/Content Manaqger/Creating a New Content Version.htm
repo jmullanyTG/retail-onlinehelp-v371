@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating a New Content Version</h1>
+        <p>You can create content versions from the Content Versions tab of the <a href="Content Manager Configuration Window.htm">Content Manager Configuration</a> window.</p>
+        <ol>
+            <li>In the Content Manager Configuration window, open the Content Versions tab and click <b>New</b> in the toolbar.</li>
+            <li>
+                <p>In the New Content Version dialog box, enter values for the following fields:</p>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="font-weight: bold;">Field</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="font-weight: bold;">Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p><b>Content Version Name</b>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>Enter a descriptive label to summarize the purpose of the Content Version. This will be used to identify the Content Version for Promotion Content.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p><b>Default Version</b>
+                                </p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p>Select to make the new content version  be the default content version. If selected, the new content version will automatically include all geographies when saved. When a promotion is added to a Slot, if there are any Geographies that are not associated with a specific Content Version, they will be assigned the default Content Version.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p><b>Description</b>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>Optional. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">Clusters pane</td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">In the Selected column, select the site clusters that you want to assign to this content version.</td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">Content Field pane</td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p>In the <b>Display</b> column, select the content fields that you want to assign to this content version.</p>
+                                <ul>
+                                    <li>You can set the order in which selected content fields will be displayed by dragging them up or down the list.</li>
+                                    <li>
+                                        <p>You can control edit permissions for a content field by double-clicking on the blue user icon in the field's <b>Access</b> column. (The field must be selected in the Display column.)</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Content Manaqger/Remove User Access dialog.png">
+                                            </img>
+                                        </p>
+                                        <p>Users and roles listed in the Keep Role/User Access list will be able to edit this field. Those in the Remove Role/User Access list will be able to see the field but not edit it (it will appear read-only). </p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">Notes<span style="font-weight: normal;">:</span></p>
+        <ul>
+            <li>To associate a new content version with a promotion in an event that is currently in planning, you must first manually remove the promotion from the event slot and then add the promotion to the event again to reference the new content version. Any prior modifications to event-specific content will be lost.</li>
+            <li>Promotions added to events after a new content version is created will automatically inherit the new content version.</li>
+        </ul>
+    </body>
+</html>

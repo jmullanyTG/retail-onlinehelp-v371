@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="9880" MadCap:lastWidth="1945">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Sales Plan View</h1>
+        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Sales Plan view allows users to make period level edits to the sales plan of the selected placeholder/collection, either in total or by average store and compare them to the high level plan created in the Main Planning view of Line Visualization. Users can also track inventory and plan shrink and adjustments for more detailed control both pre and in-season.</p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Sales Plan View.png" style="visibility: visible;width: 634px;height: 219px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Parameters:</span> <span style="font-size: 12pt;">shows/hides the parameters pane at the top of the view</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Execute:</span> <span style="font-size: 12pt;">refreshes the view</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">this is not typically necessary, as the view refreshes on its own when a new placeholder/collection is selected in the main planning view, when changes are applied, and when the Comparison Snapshot or View Mode are changed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Comparison Snapshot:</span> <span style="font-size: 12pt;">user editable dropdown; selects a snapshot all saved snapshots within the current plan that are relevant to the current Product and Site Hierarchy selections in the Main Planning view parameters</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">View Mode:</span> <span style="font-size: 12pt;">user editable dropdown; selects the view mode for sales plan view – Total Company or Average Store</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Total Company: </span><span style="font-size: 12pt;">allows the user to view/plan </span><span style="font-size: 12pt;">revenue and unit metrics </span><span style="font-size: 12pt;">as total company values – meaning the total volume for all sites contained in whatever level the Pivot Grid is aggregated to</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Average Store:</span> <span style="font-size: 12pt;">allows the user to view/plan revenue and unit metrics as average store values – meaning </span><span style="font-size: 12pt;">the per site volume for the number of sites contained in whatever level the Pivot Grid is aggregated to</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">General Metrics and Concepts</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">System vs User Metrics:</span> <![CDATA[ ]]></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">System: </span><span style="font-size: 12pt;">denoted by </span><span style="font-size: 12pt;">the word “system” at the beginning (System Sales, System BOP Units, etc.) </span><span style="font-size: 12pt;">and green row coloration; system metrics </span><span style="font-size: 12pt;">are those based on the values shown in the Main Planning and Cluster Set views of Line Visualization</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">User:</span><span style="font-size: 12pt;"> user metrics default to the System metrics of like name, but these are based on edits made in Sales Plan view to the editable metrics, thus, the user plan can diverge from the system plan in Sales Plan view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Ex VAT Metrics</span><span style="font-weight: bold;font-size: 12pt;">: </span><span style="font-size: 12pt;">denoted by “ex VAT” being appended to the end of the metric name (System Sales ex VAT &amp; Sales ex VAT, for example); in implementations where VAT (value added tax) is in play, ex VAT metrics are provided to give accurate profit calculations (margin) after taxes have been removed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">in implementations where VAT is NOT in play, no customization of calculations is necessary</span><span style="font-style: italic;font-size: 12pt;">; simply go to </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Plan &gt; Views &gt; Currency &gt; Planning VAT Rates </span><span style="font-style: italic;font-size: 12pt;">and set the VAT rates for all levels of the product hierarchy assigned to your assortment plan to 0. This will set the ex VAT metrics equal to the non ex VAT metrics</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Comparison Metrics:</span> <span style="font-size: 12pt;">denoted by purple row coloration and “(Comparison)” appended to the end of the metric (Sales (Comparison), etc.); these metrics are direct data reads from the selected Comparison Snapshot; defaults to zero if no snapshot is selected or no data is present in the snapshot</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Editable Metrics:</span> <span style="font-size: 12pt;">denoted by light blue row coloration, these are the only metrics that are editable by the user in Sales Plan view; all others are calculations or reads from other sources</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #FF0000;font-size: 12pt;"><span style="color: #000000;">* </span></span><span style="color: #FF0000;font-size: 12pt;"><span style="color: #000000;">System, ex VAT, and Comparison metrics are never editable in Sales Plan view</span></span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">with the exception of Selling Period, </span><span style="font-style: italic;font-size: 12pt;">edits made in Sales Plan view </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">DO NOT</span><span style="font-style: italic;font-size: 12pt;"> change the plan values in the Main Planning and Cluster Set views of Line Visualization – this is by design </span><span style="font-style: italic;font-size: 12pt;">to allow for comparison of original plans with period level changes. You can, however, bring the SPV Sls $ and Sls U metrics into your Main Planning view layout to view these edits at placeholder/collection or cluster set/cluster level</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Calculations: </span><span style="font-size: 12pt;">calculations in Sales Plan view all work based on one-directional locking calculations, depending on the metrics changed; for more information on the calculation model used in this view see the supplemental Microsoft Excel file </span><span style="font-weight: bold;font-size: 12pt;">Assortment Planning – Sales Plan View</span>
+            </li>
+            <li><span style="font-weight: bold;font-size: 12pt;">Plan Horizon vs. Receipt Planning Engine Horizon: </span><span style="font-size: 12pt;">if the Plan Horizon, set at the time of plan creation, extends beyond the receipt planning engine horizon for a given item, data that extends past the receipt engine horizon will appear in blue italics with zero values (<b style="font-style: italic; color: #6495ed;">$0.00</b>, for example). See example in <b>Plan Horizon vs. Replen Forecast Horizon</b> below).</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold; font-size: 12pt; color: #000000;">Replen Placeholders/Collections: </span><span style="font-size: 12pt;">when a placeholder/collection is of the Status Replen, the system pulls all relevant data to form its sales plan from the Forecasts module. </span><span style="font-size: 12pt;">Users should be aware of the following differences in this view when dealing with Replen items</span><span style="font-size: 12pt;">:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Read Only:</span><span style="font-size: 12pt;"> all normally editable metrics in Sales Plan view become read only, being populated directly from aggregated replenishment forecast data, with the exception of all Shrink and Inventory Adjustments related metrics</span><span style="font-size: 12pt;">, which remain editable and can still be planned normally</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Plan Horizon vs. Replen Forecast Horizon: </span><span style="font-size: 12pt;">if the Plan Horizon, set at the time of plan creation, extends beyond the replenishment forecast horizon for a given item, the system will conditionally format the periods that go beyond the replenishment forecast as shown below to draw the user’s attention to this. These periods will also display zeros for the metrics being read from replenishment data, as no forecast exists:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Assortment Planning/Sales Plan View_1.png" style="visibility: visible;width: 618px;height: 222px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Toolbar Functions</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Clear Sales Plan Overrides: </span><span style="font-size: 12pt;">this button reverts all user metrics back to the values of their System counterparts</span><span style="font-size: 12pt;">; this also reinstates all periods as valid Selling Periods (see Selling Period description below)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">metrics without system counterparts (the Shrink and Adjustments metrics, for example) cannot be reverted using this function</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note:</span> <span style="font-style: italic;font-size: 12pt;">to revert a single cell to the value of its System counterpart, simply select the desired cell, press the Delete key, then click Apply</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Apply:</span> <span style="font-size: 12pt;">saves all changes made since the last Apply</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Cancel:</span> <span style="font-size: 12pt;">cancels all changes made since the last Apply and reverts them to their previously saved values</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Export: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; exports and saves the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Open: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; opens the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF – does not require save prior to viewing in the desired format</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Graph: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; graphs the selected data in the view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; allows the user to customize the field layout for the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Custom layouts can be saved and restored by right-clicking in the Pivot Grid and selecting </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Save Layout</span><span style="color: #000000;font-size: 12pt;"> or </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Re</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">s</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">tore Layout</span><span style="color: #000000;font-size: 12pt;">, respectively</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Selling Period: </span><span style="font-size: 12pt;">user editable checkbox; selling period allows the user to specify periods where sales are not planned for the selected placeholder/collection but is still in phase</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-size: 12pt;">Unchecking zeros out System Sales, System Sales Units, Sales, and Sales Units for the period, thus </span><span style="font-weight: bold;font-size: 12pt;">metrics in the Main Planning and Cluster Set views ARE updated by this change</span><span style="font-weight: bold;font-size: 12pt;">; </span><span style="font-size: 12pt;">users will not be able to enter sales for unchecked periods</span>
+            </li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">When unchecked, inventory (BOP, EOP) still calculates normally for the period</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">When unchecked, receipts can still be realized for the period</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">When unchecked, all Inventory Adjustments metrics (see below) can still be planned normally</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">common uses for this feature might be items that repeat seasonally, such as holiday themed goods, where you will still retain inventory in the items between selling periods</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Seasonality Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Seasonal Index:</span> <span style="font-size: 12pt;">non-editable decimal (1.01); </span><span style="font-size: 12pt;">seasonal index for the period based on the assigned </span><span style="font-size: 12pt;">seasonality </span><span style="font-size: 12pt;">curve</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Promotion Index:</span> <span style="font-size: 12pt;">non-editable decimal (1.01); combined </span><span style="font-size: 12pt;">promotional index for all applied promotions in the period</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">System Effective Index</span><span style="font-weight: bold;font-size: 12pt;">: </span><span style="font-size: 12pt;">non-editable decimal (1.01); </span><span style="font-size: 12pt;">index applied to period rate of sale to calculate period sales</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Sales Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Sales:</span> <span style="font-size: 12pt;">user editable</span><span style="color: #FF0000;font-size: 12pt;">*</span><span style="font-size: 12pt;"> currency</span><span style="font-size: 12pt;"> ($100); planne</span><span style="font-size: 12pt;">d</span><span style="font-size: 12pt;">/actual</span><span style="font-size: 12pt;"> sales revenue for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales Units * AUR)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Sales Build Ratio:</span> <span style="font-size: 12pt;">non-editable decimal (1.01); </span><span style="font-size: 12pt;">Ratio indicating the relationship of Sales of the current period to the previous period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales / Previous Period Sales)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Sales Units:</span> <span style="font-size: 12pt;">user editable</span><span style="color: #FF0000;font-size: 12pt;">*</span><span style="font-size: 12pt;"> integer; planned/actual </span><span style="font-size: 12pt;">sales units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales / AUR)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Sales Units Build Ratio:</span> <span style="font-size: 12pt;">non-editable decimal (1.01); </span><span style="font-size: 12pt;">Ratio indicating the relationship of Sales </span><span style="font-size: 12pt;">Units </span><span style="font-size: 12pt;">of the current period to the previous period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales Units / Previo</span><span style="font-style: italic;font-size: 12pt;">u</span><span style="font-style: italic;font-size: 12pt;">s Period Sales Units)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">AUT:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average unit ticket price for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">N/A</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">AUR:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average unit retail price for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales / Sales Units)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Sellthrough:</span> <span style="font-size: 12pt;">non-editable percentage (</span><span style="font-size: 12pt;">1.01%); </span><span style="font-size: 12pt;">percentage of inventory sold for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales Units / BOP Units)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Cost of Sales Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">COGS:</span> <span style="font-size: 12pt;">non-editable currency ($100); cost of goods sold for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales Units </span><span style="font-style: italic;font-size: 12pt;">* AUC</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">AUC:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average unit cost price for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Avg BOP Unit Cost</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Margin Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Margin:</span> <span style="font-size: 12pt;">non-editable currency ($100); </span><span style="font-size: 12pt;">planned/actual margin revenue (profit) for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales </span><span style="font-style: italic;font-size: 12pt;">ex VAT - COGS</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Margin %</span> <span style="font-size: 12pt;">non-editable percentage (1.01%); planned/actual margin percentage for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Margin / Sales ex VAT</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">BOP Inventory Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">BOP Units:</span> <span style="font-size: 12pt;">non-editable integer; planned/actual beginning of period inventory units</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Previous Period EOP</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">BOP Cost:</span> <span style="font-size: 12pt;">non-editable currency ($100); planned/actual beginning of period inventory cost </span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Previous Period EOP Cost</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Avg BOP Unit Cost:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average beginning of period cost per inventory unit</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">BOP Cost / BOP Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipts Metrics</span><span style="font-weight: bold;font-size: 12pt;">: </span><span style="color: #FF0000;font-size: 12pt;">note that receipt metrics are not editable in Sales Plan view because they are managed in greater detail in Receipt Plan view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Units:</span> <span style="font-size: 12pt;">non-editable integer; planned/actual receipt units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">From Receipt Plan</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt AUC:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average cost per unit for receipts in the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">From Receipt Plan</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Cost:</span> <span style="font-size: 12pt;">non-editable currency ($100); planned/actual cost of receipts for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Receipt Units * Receipt AUC</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Minimum Presentation:</span> <span style="font-size: 12pt;">non-editable integer; </span><span style="font-size: 12pt;">Minimum units required to maint</span><span style="font-size: 12pt;">ain floor presentation for each site</span><span style="font-size: 12pt;"> selling the item</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">From Receipt Plan</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">On Order Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order Units:</span> <span style="font-size: 12pt;">non-editable integer; confirmed units on order for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-weight: bold;font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">purchase order units not yet received but scheduled for the period)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order Units var to Receipt Units:</span> <span style="font-size: 12pt;">non-editable integer; </span><span style="font-size: 12pt;">Difference o</span><span style="font-size: 12pt;">f On Order Units to the planned/a</span><span style="font-size: 12pt;">ctual Receipt Units</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">On Order Units – Receipt Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order AUC:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average cost per unit of inbound orders for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">On Order Cost / On Order Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order Cost:</span> <span style="font-size: 12pt;">non-editable currency ($100); cost of inbound orders for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">N/A</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order Cost % +/- Receipt Cost</span><span style="font-weight: bold;font-size: 12pt;">: </span><span style="font-size: 12pt;">non-editable percentage (1.01%); percentage of </span><span style="font-size: 12pt;">On Order Cost to </span><span style="font-size: 12pt;">planned/ac</span><span style="font-size: 12pt;">tual </span><span style="font-size: 12pt;">R</span><span style="font-size: 12pt;">eceipt Cost</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">On Order Cost / Receipt Cost</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Stock To Sales Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Stock Cost to COGS:</span> <span style="font-size: 12pt;">non-editable decimal (1.01); </span><span style="font-size: 12pt;">r</span><span style="font-size: 12pt;">atio expressing the relationship of BOP Cost to COGS</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">BOP Cost / COGS</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Stock Units to Sales Units:</span> <span style="font-size: 12pt;">non-editable decimal (1.01) </span><span style="font-size: 12pt;">; ratio expressing the relationship of BOP Units to Sales Units</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">BOP Units / Sales Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Inventory Adjustments Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Shrink Units:</span> <span style="font-size: 12pt;">user editable integer; planned/actual shrink units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Shrink Units % of Sales Units * Sales Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Shrink Units % of Sales Units:</span> <span style="font-size: 12pt;">user editable percentage (1.01%); percentage of sales units represented by shrink units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Shrink Units / Sales Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Shrink Cost:</span> <span style="font-size: 12pt;">user editable currency ($100); cost value of planned/actual shrink units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Shrink Cost % of COGS * COGS</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Shrink Cost % of COGS:</span> <span style="font-size: 12pt;">user editable percentage (1.01%); percentage of COGS represented by Shrink Cost for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Shrink Cost / COGS</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Inventory Adjustment Units:</span> <span style="font-size: 12pt;">user editable integer; planned/actual inventory adjustment units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">N/A</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Inventory Adjustment Cost:</span> <span style="font-size: 12pt;">user editable currency; planned/actual cost of inventory adjustments for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">N/A</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">EOP Inventory Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">EOP Units:</span> <span style="font-size: 12pt;">non-editable integer; planned/actual end of period inventory units</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">BOP Units – Sales Units + Receipt Units – Shrink Units + Inventory Adjustment Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">EOP Cost:</span> <span style="font-size: 12pt;">non-editable currency ($100); planned/actual end of period inventory cost</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">BOP Cost – Sales Cost + Receipt Cost – Shrink Cost + Inventory Adjustment Cost</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Avg EOP Unit Cost:</span> <span style="font-size: 12pt;">non-editable currency ($1.01); average end of period cost per inventory unit</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">EOP Cost / EOP Units</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">VAT Metrics</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">VAT:</span> <span style="font-size: 12pt;">non-editable currency ($100); </span><span style="font-size: 12pt;">v</span><span style="font-size: 12pt;">alue added tax value of </span><span style="font-size: 12pt;">planned/a</span><span style="font-size: 12pt;">ctual Sales</span><span style="font-size: 12pt;"> for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-weight: bold;font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Sales - (Sales / (1 + VAT %))</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">VAT %:</span> <span style="font-size: 12pt;">non-editable percentage (1.01%); v</span><span style="font-size: 12pt;">alue added tax rate of the </span><span style="font-size: 12pt;">p</span><span style="font-size: 12pt;">lanned</span><span style="font-size: 12pt;">/actual </span><span style="font-size: 12pt;">Sales</span><span style="font-size: 12pt;"> for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">VAT / Sales ex VAT</span><span style="font-style: italic;font-size: 12pt;">)</span></li>
+        </ul>
+    </body>
+</html>

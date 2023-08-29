@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Dynamic Policy</h1>
+        <p>Dynamic inventory policies may be set with start and end dates in order to make time period specific adjustments. Policy settings may be either replaced or adjusted. Dynamic policies may be layered in order to systematically affect only certain measures during eligible periods. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Policy Date – </span>The effective start date for the dynamic policy. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">End Date –</span> The end date for the dynamic policy. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Notes –</span> Optional notes field. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Policy Type –</span> Determines how dynamic policy values will affect the default settings. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Replace –</span> A value in a replace policy type will overwrite the default policy value during the effective period of the dynamic policy. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Adjust –</span> Adjustments may be either additive or multiplicative. Not applicable to all policy settings (e.g. order policy type, target service level).</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;">Additive –</span> An additive value will apply a positive or negative quantity change to the default policy value. </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;">Multiplicative –</span> Will apply a multiplicative percent adjustment to the default policy value (Note: Applying a multiplicative adjustment to a ratio or percentage policy value will produce a multiplicative result. E.g. if a back order ratio is set to 50%, applying a +5% change will yield a result of 52.5% effective back order ratio, <span style="text-decoration: underline;">not</span> 55%).</li>
+        </ul>
+    </body>
+</html>

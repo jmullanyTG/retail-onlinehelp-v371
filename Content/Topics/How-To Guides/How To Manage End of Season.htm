@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="2844" MadCap:lastWidth="1785" style="mc-master-page: url('../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:conditions="General.How-To Guides">
+    <head>
+        <link href="../../Resources/TableStyles/Video Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>How To Manage End of Season</h1>
+        <p>Managing end of season inventory involves identifying excess stock and redistributing it to alternate sites. This process is similar to redistributing excess inventory from permanently closed sites. That process is described below.</p>
+        <h2>Workflow</h2>
+        <p>Click to open the Managing Leftover Product/End of Season workflow.</p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=10" title="Click to open the workflow" alt="Click to open the workflow"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#10" class="workflow" /></a>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Related videos</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p>
+                                    <p>
+                                        <object MadCap:HTML5Video="true" class="video" MadCap:Param_autoplay="false" MadCap:Param_loop="false" MadCap:Param_muted="false" src="../../Resources/Videos/BC-2 BC-6 Identify Leftover Product.mp4" MadCap:Param_controls="true">
+                                        </object>
+                                    </p>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>
+                                    <p>
+                                        <p>
+                                            <object MadCap:HTML5Video="true" class="video" MadCap:Param_autoplay="false" MadCap:Param_loop="false" MadCap:Param_muted="false" src="../../Resources/Videos/BC-2 BC-6 Redistribution Management.mp4" MadCap:Param_controls="true">
+                                            </object>
+                                        </p>
+                                    </p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2">Identifying Leftover Products</td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">Redistributing Leftover Products</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Instructions</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>1. <MadCap:dropDownHotspot>Identify leftover inventory.</MadCap:dropDownHotspot></MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Item Manager</b>.</li>
+                    <li> In the Items dialog box, select the <b>Identify Leftover Product</b> filter, which finds items at all permanently closed stores.</li>
+                    <li>In the Choose Fields dialog box, select or create a view that includes the following fields:<ul><li style="font-weight: normal;">Stock On Hand</li><li style="font-weight: normal;">Excess Stock Quantity</li><li style="font-weight: normal;">Excess Stock for Redistribution Quantity</li><li style="font-weight: normal;">Excess for Redistribution</li><li style="font-weight: normal;">Phase In Date</li><li style="font-weight: normal;">Phase Out Date</li></ul></li>
+                    <li>In the Item Manager document, review the leftover items. This analysis can help you determine the best course of action for redistributing the leftover product. For example, you may conclude you need to refine your redistribution supply chain as a result, in which case you should do that before having JustEnough generate any redistribution orders for the leftover inventory.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>2. <MadCap:dropDownHotspot>Redistribute leftover inventory.</MadCap:dropDownHotspot></MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Order Manager</b>.</li>
+                    <li>In the Order toolbar, click <b>Redistribution</b>.</li>
+                    <li>In the Items dialog box, select the <b>Identify Leftover Product</b> filter and choose the <b>Select only some items from the current filter</b> option.</li>
+                    <li>
+                        <p>In the Item Selection dialog box, filter for a closing site (such as New Orleans) and select all items returned for that site.</p>
+                        <p>
+                            <img src="../../Resources/Images/Order Manager/Example -redistribuiton - select all items by site.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Add Redistribution Order dialog box, enter the following parameters and click <b>OK</b>:</p>
+                        <ul>
+                            <li><b>Supply Chain</b>: [Redistribution Supply Chain]</li>
+                            <li><b>Source Stock</b>:Excess, Excess for Redistribution</li>
+                            <li style="font-weight: normal;"><b>Future Recommended Orders: </b>Choose <b>Today's Orders</b> to generate redistribution orders based on today's need within the other stores in the New Orleans store's redistribution pool.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Once JustEnough calculates the recommended orders, they appear in the Order screen. Each row represents a different recommended order, and contains basic details of the order. </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

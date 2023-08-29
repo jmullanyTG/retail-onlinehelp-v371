@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="824" MadCap:lastWidth="624">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 >Calc Toggle Details – Hybrid Cost Dual Markdown Plan Type</h1>
+        <p>Though many similarities exist between the calc toggles for the Hybrid Cost &amp; Retail plan types and those for the Hybrid Cost Dual Markdown type, there are some major differences that warrant the examples in this section. There are also a few behaviors specific to this plan type worth noting that will help you better understand the way this plan type functions:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Markdowns (Promo) and Promo Sales are linked: </span>the nature of a promotional (or temporary) markdown is such that it is only realized when an accompanying sale of a unit on promotion is sold, thus promotional sales must be present in order for there to be promotional markdowns and vice-versa. That said, <span style="color: #FF0000;">any time a change to either promo markdowns or promo sales occurs, there must also be an accompanying change to the other metric</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">Markdowns (Promo) values can always be validated via (AUT – Promo AUR) * Promo Sales Units</span><span style="font-style: italic;">, however, </span><span style="font-style: italic;">not al</span><span style="font-style: italic;">l significant digits store</span><span style="font-style: italic;">d</span><span style="font-style: italic;"> in the database are displayed on screen, thus small variances</span> <span style="font-style: italic;">may occur when manually calculating based on on-screen values. Exact values can be calculated by exporting to Excel and using formulas including the relevant metric cells</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Markdowns (Perm) are only calculated as a percent of Sales: </span>contrary to promotional markdowns, permanent markdowns are realized at the time the price of goods is decreased, regardless of when the marked down units actually sell. That said, Markdown Sales planned could potentially include units that were marked down in the past, and thus, cannot be directly linked to permanent markdowns. They are calculated as a percentage of sales and subtracted from MMU in the period they are realized to assist in gauging true profitability for that period</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">AUT </span><span style="font-weight: bold;">holds unless changed directly or via IMU %: </span>while AUT is directly related to the amount of promotional markdowns in a given period, we never recalculate AUT to achieve changes in markdowns, opting instead to recalculate Promo AUR or Promo Sales Units. This being true, AUT for a period (or other periods beneath an aggregate level lock) will not change unless it is changed directly by the user or indirectly through a change to IMU %</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">AUT at aggregate levels (ie. Month, etc.) may fluctuate without being changed via these methods due to the mix of inventory represented in the levels beneath</span>
+            </li>
+        </ul>
+        <p>Keeping in mind the points above, you will now more readily understand the calc toggle examples that follow:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sales</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">HOLD Markdown % of Sales, AUR, IMU % | Calc Sales Units, COGS, IMU Retail, MMU, Markdowns</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the default Sales calc toggle, this is employed when the user wishes to change sales revenue and units while maintaining the planned average selling price (AUR) per unit</span><span style="font-style: italic;color: #000000;">; this toggle is also allows the user to maintain Markdowns % of Sales (Promo)</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type.png" style="visibility: visible;width: 634px;height: 217px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, Sales has been changed to $1</span><span style="font-style: italic;color: #000000;">50</span><span style="font-style: italic;color: #000000;">,000 for 201</span><span style="font-style: italic;color: #000000;">8</span><span style="font-style: italic;color: #000000;">_wk</span><span style="font-style: italic;color: #000000;">10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_1.png" style="visibility: visible;width: 631px;height: 216px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that Sales Units has increased to </span><span style="font-style: italic;color: #000000;">8,309</span><span style="font-style: italic;color: #000000;"> while AUR has remained at $</span><span style="font-style: italic;color: #000000;">18</span><span style="font-style: italic;color: #000000;">.</span><span style="font-style: italic;color: #000000;">05</span><span style="font-style: italic;color: #000000;"> to balance the change in Sales</span><span style="font-style: italic;color: #000000;">. Additionally, Markdowns (Promo) and Markdowns (Perm) have increased to $22,500, and $15,000, respectively, to balance their corresponding Markdowns % to Sales metrics, which have held</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">HOLD Sales Units, COGS, IMU, Markdowns % of Sales (Perm) | Calc AUR, MMU, Markdowns, Markdowns % of Sales</span><span style="font-weight: bold;color: #000000;"> (Promo)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the alternate calc toggle for Sales allows for a slightly different approach in which the user wishes to maintain Sales Units while adjusting the average selling price (AUR) per unit</span><span style="font-style: italic;color: #000000;">; note that</span><span style="font-style: italic;color: #000000;"> Markdowns % of Sales (Perm) still holds but Markdowns % of Sales (Promo) cannot</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_2.png" style="visibility: visible;width: 634px;height: 215px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, Sales has </span><span style="font-style: italic;color: #000000;">now been decreased to $75,000 </span><span style="font-style: italic;color: #000000;"> for 201</span><span style="font-style: italic;color: #000000;">8</span><span style="font-style: italic;color: #000000;">_wk</span><span style="font-style: italic;color: #000000;">10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM  Plan Type_3.png" style="visibility: visible;width: 634px;height: 218px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">This time, </span><span style="font-style: italic;color: #000000;">Sales Units holds at </span><span style="font-style: italic;color: #000000;">5,540</span><span style="font-style: italic;color: #000000;"> while AUR </span><span style="font-style: italic;color: #000000;">decrea</span><span style="font-style: italic;color: #000000;">ses to $</span><span style="font-style: italic;color: #000000;">13.54</span><span style="font-style: italic;color: #000000;"> to balance the change in Sales</span><span style="font-style: italic;color: #000000;">. Markdowns % of Sales (Perm) has held at 10%, just like in the first toggle’s example, but this time, Markdowns % of Sales (Promo) must recalculate along with Markdowns (Promo) and Markdowns (Perm) because the change in AUR widens the gap between AUT and the underlying Promo AUR, forcing an increase in Markdowns (Promo)</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sales Units</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">HOLD A</span><span style="font-weight: bold;color: #000000;">UR, IMU %, Markdowns % of Sales </span><span style="font-weight: bold;color: #000000;">| Calc Sales, CO</span><span style="font-weight: bold;color: #000000;">GS, IMU Retail, MMU, Markdowns</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the default Sales Units calc toggle, this is employed when the user wishes to change sales units with a resulting change to sales revenue, while maintaining the planned average selling price (AUR) per unit</span><span style="font-style: italic;color: #000000;">;</span> <span style="font-style: italic;color: #000000;">this toggle is also allows the user to maintain Markdowns % of Sales (Promo)</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_4.png" style="visibility: visible;width: 634px;height: 218px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, Sales</span><span style="font-style: italic;color: #000000;"> Units</span><span style="font-style: italic;color: #000000;"> has been changed to </span><span style="font-style: italic;color: #000000;">6</span><span style="font-style: italic;color: #000000;">,000 for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_5.png" style="visibility: visible;width: 634px;height: 216px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that Sales has increased to </span><span style="font-style: italic;color: #000000;">$108,311</span><span style="font-style: italic;color: #000000;"> while AUR has remained at $18.05 to balance the change in Sales</span><span style="font-style: italic;color: #000000;"> Units</span><span style="font-style: italic;color: #000000;">. Additionally, Markdowns (Promo) and Markdowns (Perm) have increased to $</span><span style="font-style: italic;color: #000000;">16</span><span style="font-style: italic;color: #000000;">,</span><span style="font-style: italic;color: #000000;">247</span><span style="font-style: italic;color: #000000;">, and $</span><span style="font-style: italic;color: #000000;">10</span><span style="font-style: italic;color: #000000;">,</span><span style="font-style: italic;color: #000000;">831</span><span style="font-style: italic;color: #000000;">, respectively, to balance their corresponding Markdowns % to Sales metrics, which have held</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">HOLD Sales, IMU %, Markdowns (Perm), Markdowns % of Sales (Perm) | Calc AUR, COGS, IMU Retail, MMU, Markdowns (Promo), Markdown % of Sales (Promo)</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the alternate calc toggle for Sale</span><span style="font-style: italic;color: #000000;">s</span><span style="font-style: italic;color: #000000;"> Units</span><span style="font-style: italic;color: #000000;"> allows for a slightly different approach in which th</span><span style="font-style: italic;color: #000000;">e user wishes to maintain Sales</span><span style="font-style: italic;color: #000000;"> while adjusting the average selling price (AUR) per unit; note that Markdowns % of Sales (Perm) still holds but Markdowns % of Sales (Promo) cannot</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_6.png" style="visibility: visible;width: 634px;height: 216px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, Sales</span><span style="font-style: italic;color: #000000;"> Units</span><span style="font-style: italic;color: #000000;"> has now been decreased to </span><span style="font-style: italic;color: #000000;">5</span><span style="font-style: italic;color: #000000;">,000&#160; for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_7.png" style="visibility: visible;width: 634px;height: 218px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">This time, Sales holds at </span><span style="font-style: italic;color: #000000;">$100,000</span><span style="font-style: italic;color: #000000;"> while AUR </span><span style="font-style: italic;color: #000000;">in</span><span style="font-style: italic;color: #000000;">creases to $</span><span style="font-style: italic;color: #000000;">20</span><span style="font-style: italic;color: #000000;">.</span><span style="font-style: italic;color: #000000;">00</span><span style="font-style: italic;color: #000000;"> to balance the change in Sales</span><span style="font-style: italic;color: #000000;"> Units</span><span style="font-style: italic;color: #000000;">. Markdowns % of Sales (Perm) has held at 10%, just like in the first toggle’</span><span style="font-style: italic;color: #000000;">s example, but</span> <span style="font-style: italic;color: #000000;">Markdowns (Perm) also holds because Sales has not changed. Additionally, Markdowns (Promo) and </span><span style="font-style: italic;color: #000000;">Markdowns % of Sales (Promo) must recalculate because the change in AUR </span><span style="font-style: italic;color: #000000;">shrinks </span><span style="font-style: italic;color: #000000;">the gap between AUT and the underlying </span><span style="font-style: italic;color: #000000;">Promo AUR, forcing a</span> <span style="font-style: italic;color: #000000;">de</span><span style="font-style: italic;color: #000000;">crease in Markdowns (Promo)</span></p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">AUR</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">HOLD Sales Units, COGS, IMU, Markdown % of Sales (Perm) | Calc Sales, MMU, Markdowns, Markdown % of Sales (Promo)</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the default </span><span style="font-style: italic;color: #000000;">AUR</span><span style="font-style: italic;color: #000000;"> calc toggle, this is employed when the user wishes to change </span><span style="font-style: italic;color: #000000;">average unit selling price</span><span style="font-style: italic;color: #000000;"> with a resulting change to sales </span><span style="font-style: italic;color: #000000;">revenue</span><span style="font-style: italic;color: #000000;">, while maintaining </span><span style="font-style: italic;color: #000000;">sales</span><span style="font-style: italic;color: #000000;"> units</span><span style="font-style: italic;color: #000000;"> for the period</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_8.png" style="visibility: visible;width: 634px;height: 216px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, </span><span style="font-style: italic;color: #000000;">AUR</span><span style="font-style: italic;color: #000000;"> has been </span><span style="font-style: italic;color: #000000;">increased</span><span style="font-style: italic;color: #000000;"> to </span><span style="font-style: italic;color: #000000;">$19.00</span><span style="font-style: italic;color: #000000;"> for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_9.png" style="visibility: visible;width: 634px;height: 216px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that Sales has increased to $10</span><span style="font-style: italic;color: #000000;">5</span><span style="font-style: italic;color: #000000;">,</span><span style="font-style: italic;color: #000000;">252</span><span style="font-style: italic;color: #000000;"> while </span><span style="font-style: italic;color: #000000;">Sales Units</span><span style="font-style: italic;color: #000000;"> has </span><span style="font-style: italic;color: #000000;">held</span><span style="font-style: italic;color: #000000;"> at </span><span style="font-style: italic;color: #000000;">5,540</span><span style="font-style: italic;color: #000000;"> to balance the change in </span><span style="font-style: italic;color: #000000;">AUR</span><span style="font-style: italic;color: #000000;">. Additionally, </span><span style="font-style: italic;color: #000000;">Markdowns % o</span><span style="font-style: italic;color: #000000;">f Sales (Perm) has held at 10%, </span><span style="font-style: italic;color: #000000;">but Markdowns % of Sales (Promo) must recalculate along with Markdowns (Promo) and Markdowns (Perm) because the change in AUR shrinks the gap between AUT and the underlying Promo AUR, forcing a decrease in Markdowns (Promo)</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">HOLD Sales, IMU %, Markdowns (Perm), Markdown % of Sales (Perm) | Calc Sales Units, COGS, IMU Retail, MMU, Markdowns (Promo), Markdown % of Sales (Promo)</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the alternate calc toggle for </span><span style="font-style: italic;color: #000000;">AUR</span><span style="font-style: italic;color: #000000;"> allows for a slightly different approach in which the user wishes to maintain </span><span style="font-style: italic;color: #000000;">sales </span><span style="font-style: italic;color: #000000;">revenue</span><span style="font-style: italic;color: #000000;"> while adjusting sales </span><span style="font-style: italic;color: #000000;">units</span><span style="font-style: italic;color: #000000;"> for the period</span><span style="font-style: italic;color: #000000;">; </span><span style="font-style: italic;color: #000000;">as with the standard AUR toggle,</span><span style="font-style: italic;color: #000000;"> Markdowns % of Sales (Perm) still holds but Markdowns % of Sales (Promo) cannot</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_10.png" style="visibility: visible;width: 634px;height: 217px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, </span><span style="font-style: italic;color: #000000;">AUR</span><span style="font-style: italic;color: #000000;"> has now been decreased to </span><span style="font-style: italic;color: #000000;">$17.</span><span style="font-style: italic;color: #000000;">00 for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_11.png" style="visibility: visible;width: 634px;height: 218px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">This time, Sales holds at $100,000 while </span><span style="font-style: italic;color: #000000;">Sales Units</span><span style="font-style: italic;color: #000000;"> increases to </span><span style="font-style: italic;color: #000000;">5,882 to balance the change in AUR</span><span style="font-style: italic;color: #000000;">. </span><span style="font-style: italic;color: #000000;">Markdowns % of Sales (Perm) has held at 10%, just like in the first toggle’s example, but Markdowns (Perm) also holds because Sales has not changed. Additionally, Markdowns (Promo) and Markdowns % of Sales (Promo) must recalcu</span><span style="font-style: italic;color: #000000;">late because the change in AUR widens</span><span style="font-style: italic;color: #000000;"> the gap between AUT and the underlying Promo AUR, forcing a</span><span style="font-style: italic;color: #000000;">n</span> <span style="font-style: italic;color: #000000;">in</span><span style="font-style: italic;color: #000000;">crease in Markdowns (Promo)</span></p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">IMU %</span><span style="font-weight: bold;color: #000000;"> (and AUT)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">HOLD </span><span style="font-weight: bold;color: #000000;">Sales, Sales Units, AUR, Markdowns (Perm), Markdowns % of Sales (Perm) | CALC AUT, </span><span style="font-weight: bold;color: #000000;">IMU Retail, </span><span style="font-weight: bold;color: #000000;">Markdowns (Promo), Markdowns % of Sales (Promo)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the single IMU % calc toggle in this plan type allow</span><span style="font-style: italic;color: #000000;">s</span><span style="font-style: italic;color: #000000;"> users to adjust ticket price and promotional markdowns by setting target initial profitability percent</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_12.png" style="visibility: visible;width: 634px;height: 233px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, </span><span style="font-style: italic;color: #000000;">IMU % </span><span style="font-style: italic;color: #000000;">has been increased to </span><span style="font-style: italic;color: #000000;">80%</span><span style="font-style: italic;color: #000000;"> for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_13.png" style="visibility: visible;width: 634px;height: 233px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that </span><span style="font-style: italic;color: #000000;">AUT has increased to $26.46 to balance the increase in initial profit potential, however, because AUR has held, this also widens the gap between AUT and the underlying Promo AUR, thus forcing an increase in Markdowns (Promo). Because Sales has held, Markdowns % of Sales (Promo) must increase to balance the rise in Markdowns (Pr</span><span style="font-style: italic;color: #000000;">omo), however, Markdowns (Perm), being defined solely as a % of Sales maintains at $10,000</span>
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;">Note</span><span style="font-weight: bold;font-style: italic;color: #0070C0;">:</span> <span style="font-style: italic;color: #000000;">because changing AUT directly always yields a single behavior in each plan type, AUT is not listed explicitly in the Calculation Toggles tab, however, changing AUT essentially functions the same as changing IMU % but reciprocal – so changing AUT calculates IMU %. All other behavior described in the above example is the same.</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns (Perm)</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">HOLD Sales, Sales Units, AUR, COGS, IMU | Calc MMU, Markdowns, Markdown % of Sales</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the single Markdowns (Perm) calc toggle in this plan type allows users to plan permanent markdowns via direct value entry or as a % of sales and see the impact on profitability without adjusting sales</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_14.png" style="visibility: visible;width: 634px;height: 299px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, </span><span style="font-style: italic;color: #000000;">Markdowns</span><span style="font-style: italic;color: #000000;"> % </span><span style="font-style: italic;color: #000000;">to Sales (Perm) </span><span style="font-style: italic;color: #000000;">has been increased to </span><span style="font-style: italic;color: #000000;">2</span><span style="font-style: italic;color: #000000;">0% for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Plan Type_15.png" style="visibility: visible;width: 634px;height: 300px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that </span><span style="font-style: italic;color: #000000;">Markdowns (Perm) has increased to $20,000, balancing the newly entered % to sales</span><span style="font-style: italic;color: #000000;">, while the entire sales plan structure has been maintained</span><span style="font-style: italic;color: #000000;">. This increase directly impacts MMU (Product), decreasing it to $48,868 and forcing a recalculation of MMU % (Product). Also notice the increases in Markdowns (Total) and Markdowns % of Sales (Total)</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Markdowns (Promo)</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Hold Sales, IMU %, Reg Sales Plan, Promo Sales, Markdown Sales Plan | Calc Sales Units, AUR, COGS, IMU Retail, MMU, Promo Sales Units &amp; AUR</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the </span><span style="font-style: italic;color: #000000;">standard Markdowns (Promo) calc toggle allows users to plan promotional markdowns, either by directly entering a value or as a target % of sales, while holding period sales revenue and only impacting the promo sales component beneath</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Type_16.png" style="visibility: visible;width: 634px;height: 316px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, Markdowns % to Sales (P</span><span style="font-style: italic;color: #000000;">romo</span><span style="font-style: italic;color: #000000;">) has been increased to </span><span style="font-style: italic;color: #000000;">1</span><span style="font-style: italic;color: #000000;">0</span><span style="font-style: italic;color: #000000;">% for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Plan Type_17.png" style="visibility: visible;width: 634px;height: 339px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">Note that Markdowns (</span><span style="font-style: italic;color: #000000;">Promo</span><span style="font-style: italic;color: #000000;">) has increased to $</span><span style="font-style: italic;color: #000000;">1</span><span style="font-style: italic;color: #000000;">0,000, balancing the newly entered % to sales</span><span style="font-style: italic;color: #000000;"> while </span><span style="font-style: italic;color: #000000;">sales </span><span style="font-style: italic;color: #000000;">revenue and IMU % </span><span style="font-style: italic;color: #000000;">have held.</span> <span style="font-style: italic;color: #000000;">Sales Units and AUR change, reflecting the underlying change to the corresponding Promo metrics. </span><span style="font-style: italic;color: #000000;">This </span><span style="font-style: italic;color: #000000;">in</span><span style="font-style: italic;color: #000000;">directly impacts MMU </span><span style="font-style: italic;color: #000000;">and MMU % </span><span style="font-style: italic;color: #000000;">(Product)</span><span style="font-style: italic;color: #000000;"> through an increase in COGS. Markdowns (Perm), being a function of the target % of sales, remains fixed, but</span><span style="font-style: italic;color: #000000;"> Markdowns (Total) and Markdowns % of Sales (Total)</span><span style="font-style: italic;color: #000000;"> increase, showing the underlying increase in promotional markdowns. The real key to this behavior lies in what happens to the Sales by Type mix:</span></p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Plan Type_18.png" style="visibility: visible;width: 634px;height: 355px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;font-style: italic;color: #000000;">Prior to the change, the Sales by Type mix looks like the above…</p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Plan Type_19.png" style="visibility: visible;width: 634px;height: 356px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;font-style: italic;color: #000000;">…after the change, notice how only Promo Sales Units and AUR have changed while the sales plans for Reg and Markdown have held, making this toggle perfect for specific edits to promotional activity</p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">HOLD Sales, IMU %, Reg AUR, Promo AUR, Markdown AUR | Calc Sales Units, AUR, COGS, IMU Retail, MMU, Reg Sales, Promo Sales, Markdown Sales</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the alternate Markdowns (Promo) calc toggle </span><span style="font-style: italic;color: #000000;">takes a slightly different approach, still allowing users to plan promotional markdowns as either a value or a % of sales, but this method holds period sales revenue while remixing the underlying sales component’s revenue and units, holding component AUR, and changing period sales units and AUR as a result of the remix</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Type_16.png" style="visibility: visible;width: 634px;height: 316px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">In the example above, Markdowns % to Sales (Promo) </span><span style="font-style: italic;color: #000000;">has, again, </span><span style="font-style: italic;color: #000000;">been increased to 10% for 2018_wk10</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_20.png" style="visibility: visible;width: 634px;height: 314px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">At first glance, this toggle </span><span style="font-style: italic;color: #000000;">appears to function almost identically to the standard Markdowns (Promo) toggle, but again, it is </span><span style="font-style: italic;color: #000000;">what h</span><span style="font-style: italic;color: #000000;">appens to the Sales by Type mix that makes this toggle unique:</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HDCM Plan Type_18.png" style="visibility: visible;width: 634px;height: 355px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;font-style: italic;color: #000000;">Prior to the change, the Sales by Type mix looks like the above…</p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/MFP/Calc Toggle Details HCDM Plan Type_21.png" style="visibility: visible;width: 634px;height: 355px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">…after the change, </span><span style="font-style: italic;color: #000000;">notice that the entire sales mix has recalculated, yielding an increase in Promo Sales and Sales Units to correspond with the increase in promotional markdowns, while Sales and Sales Units for the Reg and Markdown components have decreased to hold period Sales. AUR’s hold for all sales components, but Total Sales AUR recalculates as a result of changed Total Sales Units</span>
+        </p>
+    </body>
+</html>

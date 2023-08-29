@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >Create a Versioned Content Output file row</h1>
+        <p>To add a row to the Configuration, click on <span style="font-weight: bold;">New</span>, fill in the required columns and click on <span style="font-weight: bold;">Save</span>.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Output Column&#160; (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter the column that will contain the data for the desktop publishing software plugin in the appropriate format. This may be the same as the Source Column or different if the Source Column needs to be reformatted before it can be output to desktop publishing software. If Output Column is left blank, it is given the same value as Source Column. A new column is created in the database if one does not already exist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Data Type&#160; (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Displays the Output Column data type.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Export&#160; (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select if the field should be included in the output file. If a field should no longer be included in the file, deselect this column.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Source Column&#160; (<span style="color: #FF0000;">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select the associated Column where the necessary data is stored.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Source Type&#160; (<span style="color: #FF0000;">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select from the following source types. The selection made here will determine what columns populate the Source Column.</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;">System – After initial configuration, this option should not be selected.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Content</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Price Output</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Price Output Column</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Repository</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Promotion Attribute</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Event Info</li>
+                            <li class="ListParagraph" style="list-style-type: disc;">Promotion Info</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Order&#160; (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Enter the order number for this field in the file. Unless specified otherwise, the new field is appended to the file.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Friendly Name (<span style="color: #FF0000;">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter a user friendly name that will appear in the file header and is required for the desktop publishing software plugin to work successfully. All Friendly Name values must be unique.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p>Comments&#160; (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Enter the purpose of this field in the output file.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2368" MadCap:lastWidth="1924">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Surplus Stock</h1>
+        <p style="margin-bottom: 0;">Surplus stock exceptions identify situations when incoming orders are projected to cause an item to be overstocked at a location beyond a specified number of days. In such situations, it may be best to cancel or defer the surplus orders. </p>
+        <p style="margin-bottom: 0;">You can use filters and views to create an ad-hoc Surplus Stock report in Item Manager that displays your surplus stock exceptions. In this example, we'll use a pre-created exception filter that identifies items with at least one upcoming surplus order and 60 days of projected excess stock. </p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Example database text.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <h2>Related video</h2>
+        <p>
+            <object MadCap:HTML5Video="true" src="../../../Resources/Videos/BC-5 CD-18 Inventory Exception Management_Overstock_Surplus.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video">
+            </object>
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Manage tab, click <b>Item Manager</b>.</li>
+            <li>
+                <p> In the Items dialog box, select the <b>Inventory Exception: Surplus</b> filter.</p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>In the Choose Fields dialog box, select the <b>Inventory Exception: Overstock (Surplus) </b>view.</p>
+            </li>
+            <li>
+                <p> In the item document, you can see all of the items that exceed the Excess Stock Days threshold specified in the filter.</p>
+                <p>For this example, the threshold is "more or equal to 60 days". </p>
+            </li>
+            <li>
+                <p>In the grid, you can sort items by priority ("A" items listed first) and review each item's Excess Stock Days, Excess Stock Quantity, Excess Stock Value, and more.</p>
+                <p>
+                    <img src="../../../Resources/Images/Exceptions/Inventory/Example - Excess grid.png">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>In the Details pane, review an item's Stock Holding Projection tab to see how the incoming orders affect the projected amount of excess stock at the location over time.</p>
+                <p>
+                    <img src="../../../Resources/Images/Exceptions/Inventory/Example - surplus shp.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click on the Inbound and Outbound Orders tab in the Details pane to see the upcoming surplus order details.</p>
+                <p>
+                    <img src="../../../Resources/Images/Exceptions/Inventory/Example - Surplus orders.png" />
+                </p>
+            </li>
+            <li>Review other tabs in the Detail pane as desired to get a better understanding of the forecasted demand, inventory policy, and other information governing the item stock at the location.</li>
+        </ol>
+        <h2>Potential Actions</h2>
+        <p>Actions you can take to resolve surplus stock exceptions include:</p>
+        <ul>
+            <li>Canceling or deferring surplus orders until stock quantities are balanced with demand.</li>
+            <li><a href="../../How-To Guides/How To Manage End of Season.htm">Redistributing</a> excess stock.</li>
+        </ul>
+    </body>
+</html>

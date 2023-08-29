@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Actions </h1>
+        <p>The actions configuration will allow users to build a column into their data set which may be converted into a button which pops up another view. In order to create an action column:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">First you will need to create the view that you are planning to pop up from your other view, note the view ID and the parameters SQL names for the view that you are popping open.</li>
+            <li class="ListParagraph">Now you should identify the fields in your main view that you are going to be passing to the pop up view and write down the column names. You can also pass parameters from the main view into the pop up view so if you are going to pass those write the SQL names down.</li>
+            <li class="ListParagraph">Now you will need to create a placeholder column where you are going to put your button, for example I have added the column: CUSTOM_MultiSupplierActionXML CHAR(1) to my data set.</li>
+            <li class="ListParagraph">Add the Action, select your column, the caption you want and Action Type "Action".</li>
+            <li class="ListParagraph">Under Action Template put:&#160;COMMON_MULTIPLEX_ACTION_MESSAGES</li>
+            <li class="ListParagraph">Now you will need to create an Action Parameters Collection Template (see example XML).</li>
+            <li class="ListParagraph">Lastly make your button column editable and run the view.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/Views/Actions.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 475px;" />
+        </p>
+        <p>&#160;</p>
+        <p>Example XML for action message button creation (four parts):</p>
+        <p>
+            <div style="margin-top: 2.75pt;width: 469.5pt;height: 642.75pt;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 3.6pt;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 3.6pt;mso-position-horizontal: absolute;mso-position-horizontal-relative: text;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: top;margin-left: 0pt;">
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">CREATE FUNCTION [dbo].[cudf_ItemCreation_PopView]</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">(</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">@ViewID INTEGER = 48,</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">@SQLParameterName NVARCHAR(100) = '@KeyItemVariantID',</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">@ParameterValue VARCHAR(MAX) = '5'</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">)</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">RETURNS XML</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">AS </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">BEGIN </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">DECLARE @ActionXML XML </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">SELECT @ActionXML = CAST(</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">'&lt;dictionary&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;"> &lt;item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;valueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160; &lt;string&gt;System.Collections.Generic.List`1[[JustEnough.Common.Action.ActionMessage, JustEnough.Common.Action]], mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/valueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160; &lt;string&gt;COMMON_MULTIPLEX_ACTION_MESSAGES_COLLECTION&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160; &lt;ArrayOfActionMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Sender&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string /&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Sender&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Recipients&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ArrayOfString /&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Recipients&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Action&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_SEND_OPEN_VIEW&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Action&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Count&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;5&lt;/int&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Count&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160; &lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWID&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;int&gt;' + CAST(@ViewID AS VARCHAR(20)) + '&lt;/int&gt;</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCETYPE&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;JustEnough.UIL.View.Core.Enumerators.EnumViewInstanceType, JustEnough.UIL.View.Core&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;EnumViewInstanceType&gt;Modal&lt;/EnumViewInstanceType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCEHEIGHT&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;600&lt;/int&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCEWIDTH&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;800&lt;/int&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCEID&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.String, mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;' + @ParameterValue + '&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;ActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Sender&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string /&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Sender&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Recipients&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_' + CAST(@ViewID AS VARCHAR(20)) + '_' + @ParameterValue + '&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;/ArrayOfString&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/Recipients&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Action&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_SEND_SET_PARAMETERSQLNAME_VALUE&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Action&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Count&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;2&lt;/int&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Count&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160; &lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_PARAMETERSQLNAME_NAME&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.String, mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;' + @SQLParameterName + '&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_PARAMETERSQLNAME_VALUE&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;' + @ParameterValue + '&lt;/int&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;ActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;Sender&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;string /&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/Sender&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;Recipients&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_' + CAST(@ViewID AS VARCHAR(20)) + '_' + @ParameterValue + '&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;/ArrayOfString&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/Recipients&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;Action&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_SEND_EXECUTE_PARAMETERS_DATA&lt;/string&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/Action&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;ActionParameters.Count&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160; &lt;int&gt;0&lt;/int&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/ActionParameters.Count&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;ActionParameters /&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;/ActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ArrayOfActionMessage&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&#160; &lt;/value&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;"> &lt;/item&gt;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">&lt;/dictionary&gt;' </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;"> AS XML) </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;"> RETURN @ActionXML</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;"> END</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;"> GO</p>
+                <p>&#160;</p>
+            </div>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>
+            <div style="margin-left: 0;width: 469.5pt;height: 491.25pt;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 3.6pt;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 3.6pt;mso-position-horizontal: absolute;mso-position-horizontal-relative: text;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: top;margin-top: 0pt;">
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;string&gt;JustEnough.UIL.View.Core.Enumerators.EnumViewInstanceType, JustEnough.UIL.View.Core&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;EnumViewInstanceType&gt;Modal&lt;/EnumViewInstanceType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCEHEIGHT&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;600&lt;/int&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCEWIDTH&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;800&lt;/int&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEWS_VIEWINSTANCEID&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.String, mscorlib&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;' + @ParameterValue + '&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionMessage&gt;</p>
+                <p>&#160;</p>
+            </div>
+        </p>
+        <p>&#160;</p>
+        <p>
+            <div style="margin-left: 0;margin-top: 0;width: 469.5pt;height: 492.75pt;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 3.6pt;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 3.6pt;mso-position-horizontal: absolute;mso-position-horizontal-relative: text;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: top;">
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;ActionMessage&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Sender&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string /&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Sender&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Recipients&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_' + CAST(@ViewID AS VARCHAR(20)) + '_' + @ParameterValue + '&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;/ArrayOfString&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;/Recipients&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Action&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_SEND_SET_PARAMETERSQLNAME_VALUE&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/Action&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Count&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;2&lt;/int&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Count&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160; &lt;ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_PARAMETERSQLNAME_NAME&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.String, mscorlib&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;' + @SQLParameterName + '&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_PARAMETERSQLNAME_VALUE&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Key&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;string&gt;System.Int32, mscorlib&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.ValueType&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;int&gt;' + @ParameterValue + '&lt;/int&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item.Value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters.Item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionParameters&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ActionMessage&gt;</p>
+                <p>&#160;</p>
+            </div>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>
+            <div style="margin-left: 0;margin-top: 4.45pt;width: 469.5pt;height: 347.25pt;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 3.6pt;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 3.6pt;mso-position-horizontal: absolute;mso-position-horizontal-relative: text;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: top;">
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;ActionMessage&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;Sender&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;string /&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;/Sender&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;Recipients&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_' + CAST(@ViewID AS VARCHAR(20)) + '_' + @ParameterValue + '&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;/ArrayOfString&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;/Recipients&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;Action&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;string&gt;PLUGIN_VIEW_SEND_EXECUTE_PARAMETERS_DATA&lt;/string&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;/Action&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;ActionParameters.Count&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160; &lt;int&gt;0&lt;/int&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;/ActionParameters.Count&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;ActionParameters /&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;/ActionMessage&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;/ArrayOfActionMessage&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&#160; &lt;/value&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;"> &lt;/item&gt;</p>
+                <p class="HTMLPreformatted" style="color: #000000;">&lt;/dictionary&gt;' </p>
+                <p class="HTMLPreformatted" style="color: #000000;"> AS XML) </p>
+                <p class="HTMLPreformatted">&#160;</p>
+                <p class="HTMLPreformatted" style="color: #000000;"> RETURN @ActionXML</p>
+                <p class="HTMLPreformatted">&#160;</p>
+                <p class="HTMLPreformatted" style="color: #000000;"> END</p>
+                <p class="HTMLPreformatted">&#160;</p>
+                <p class="HTMLPreformatted" style="color: #000000;"> GO</p>
+                <p>&#160;</p>
+            </div>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3 >Minimums and Maximums</h3>
+        <p>Through settings such as weeks of cover (WOC), safety stock units, minimum stock per size, and maximum stock, JustEnough allows users to create ceilings and floors to their stocking strategies. However, with great power comes great responsibility, and caution must be paid to how changing values in these fields will affect the allocation volumes. </p>
+        <p>Maximum stock is a by period stock holding constraint. Allocation recommendations based on normal demand will not be created if the proposed order and the projected stock on hand at the store exceed the maximum stock. Maximum stock constraints will be exceeded by unconstrained stock minimums. </p>
+        <p><span style="font-weight: bold;font-style: italic;">Please note</span>: <span style="font-style: italic;">if capacity and stock maximums are a legitimate concern, users should consider eliminating weeks of cover from their strategies.</span> <![CDATA[ ]]></p>
+        <p>Safety stock units and minimum stock per size are a unit based minimum; they will always violate maximums or other constraints such as maximum stock. </p>
+        <p>Weeks of cover is a days based safety stock value (displayed and entered as “weeks”). As such, the resolved effective units value will vary based on projected demand. It may be capped so as not to exceed the maximum stock through application of the system policy Allocate.AllocateStrategy.MaxSafetyStockPercent. The value in the system policy will set a percentage of maximum stock which will act as an effective “cap” for the WOC/SS days value. </p>
+    </body>
+</html>

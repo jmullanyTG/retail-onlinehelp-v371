@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Strategies</h1>
+        <p class="NormalWeb_1"><span class="span_7">Within the Promotion Strategy screen, </span><span class="span_7">click</span><span class="span_8"> New</span><span class="span_7"> to create a new Promotion Strategy. Enter the required fields </span><span class="span_7">in the Promotion Strategies Detail grid </span><span class="span_7">and click </span><span class="span_8">Save</span><span class="span_7">.</span>
+        </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p class="p_2">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p class="p_2">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Strategy Name (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter a name for Promotion Strategy that will be used to select a Promotion Strategy when creating a Promotion.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Strategy Type ID (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select the Strategy Type from the dropdown list that will determine how the Promotion Strategy will be displayed.</p>
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1"><span class="span_1">Promoted Price</span> - A promotional price.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Promoted Discount</span> – An amount off or percent off Promotion.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Buy Get</span> – A buy X get X or buy X get Y Promotion.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Spend Get</span> – A spend X get points, dollars, or percent off.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Rebate</span> – A regular retail or promotional price with a rebate.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Method (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The dropdown is populated by the available methods (i.e. advanced processes applied at the database level) configured for use. &#160;Select a method the system will apply for the Promotion Strategy. This will be run before anything else on the Promotion.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Calculation Set (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select a Calculation Set from the dropdown list. Populated with Calculation Sets defined in the Promotion Validation Configuration grid. Calculations will be performed after methods.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Validation Set (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select a Validation Set from the dropdown list. Populated with Validation Sets defined in the Promotion Validation Configuration grid. Validations will be performed after Calculations.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Output Set (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select a Promotion Pricing Detail from the dropdown list. Populated with Pricing Outputs defined in the Promotion Price Output Set Configuration grid.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Default Price Method (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The dropdown is populated by the available methods (i.e. advanced processes applied at the database level) configured for use. &#160;Select a method the system will apply for the Promotion Strategy. This will be run second, after the Method is run on the Promotion.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Analysis View Collection Set (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The dropdown is populated by available pivot template to display analysis information. Select a display to use in the Promotion – Analysis tab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price View Collection Set (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The dropdown is populated by available pivot template to display pricing information. Select a display to use in the Promotion – Price Details tab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Is Group Synced (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Must be selected for all BOGO AA type Promotion Strategies.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Active Flag (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Selected by default to indicate that the Promotion Strategy will be available when working with Promotions.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="NormalWeb_2">&#160;</p>
+    </body>
+</html>

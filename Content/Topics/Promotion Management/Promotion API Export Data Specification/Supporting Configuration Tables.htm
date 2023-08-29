@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <p>
+        </p>
+        <h1 class="Heading1">Supporting &amp; Configuration Tables</h1>
+        <h2 >export.Export_Config_Header </h2>
+        <p>Populated by the Promotion Configuration Export Maintenance screen. </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">ExportID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Int (Identity)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">System generated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">ExportTypeID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p><span style="color: #000000;font-size: 10pt;">export.</span><span style="color: #000000;font-size: 10pt;">Export_Config_ExportType</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">ModuleID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p><span style="color: #000000;font-size: 10pt;">export.</span><span style="color: #000000;font-size: 10pt;">Export_Config_Modules</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">ExportName</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">User entered</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExportProcName</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Looked up from tbl_common_StoredProcedureLookup</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExportBaseFileName</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Only used by File Export Type </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExportOutPutPath</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(500)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Only used by File Export Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">ExportDeltasFlag</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">bit</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Currently not used</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Column_Delimiter</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">char(1)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Only used by File Export Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Default = ‘|’</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">MaxDetailRecordBatchSize</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">User entered</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p><span style="color: #000000;font-size: 10pt;"># of records to ou</span><span style="color: #000000;font-size: 10pt;">t</span><span style="color: #000000;font-size: 10pt;">put per batch for API export</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">OutputMethod</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(50)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">ActiveFlag</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">bit</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">User entered</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Defaults to Active</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">RowStatusID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">smallint</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">CreateDate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">CreateUserID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">LastModifiedDate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">LastModifiedUserID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">OutputUserName</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(50)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2 >export.Export_Config_Columns</h2>
+        <p>Stores columns defined for a specific Export</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">ExportColumnID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">System Generated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">ExportID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Link to export.Export_Config_Header</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">ColumnName</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Customer Entered From dropList</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Level</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Customer Entered From dropList</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">FriendlyColumnName</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">Assigned by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">IncludeFlag</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">bit</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">User entered</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(500)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">User entered</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Data_Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">nvarchar(50)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">Determined by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">RowStatusID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">smallint</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">CreateDate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">CreateUserID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">LastModifiedDate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #000000;font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">LastModifiedUserID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="color: #000000;font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

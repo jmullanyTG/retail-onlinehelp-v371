@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Breaking Changes</h1>
+        <h2>Allocation</h2>
+        <p>To migrate existing (pre-3.7.1) product groups to the new architecture, a one-time maintenance process needs to be executed. During this process, existing product groups will be moved from their old "variant eligibility" table to a new "included allocation strategies" table. If a variant has multiple associated allocation strategies, users will be able to select the allocation strategies they want to include/exclude from the migrated product group.</p>
+        <p>For more information, see the Demand Management Installation Guide.</p>
+        <h2>API</h2>
+        <p>A maintenance procedure has been added to clean up potential duplicate styles in core.Style. The cleanup involves: </p>
+        <ol>
+            <li>Picking one correct value among any duplicates found.</li>
+            <li>Remapping values in referencing tables (core.Variant and tbl_FinancialPlan_Common_Level), if they exist. </li>
+            <li>Deleting erroneous duplicate values from core.Style.</li>
+        </ol>
+        <h2>Assortment </h2>
+        <h3>Actualization maintenance</h3>
+        <p>A new maintenance step (method assortment_Maintenance_SystemPolicy_CurrencyIDs) must be added in weekly processing before actualization.</p>
+        <h3>New Period Status ID</h3>
+        <p>A new Period Status ID (ID=5) has been created for "Receipt Eligible Inactive" periods. Any customization that includes references to PeriodStatusID in code will need to be evaluated and changed to account for the new status (other than code specifying WHERE PeriodStatusID = 1).</p>
+        <h2>Financial Planning</h2>
+        <h3>DC stock splitting</h3>
+        <p>Due to logic changes and bug fixes, the way DC stock splitting works has changed from 3.7.0.2 forward. </p>
+        <p>Now, DC stock splitting:</p>
+        <ul>
+            <li>Occurs only at actualization.</li>
+            <li>Uses only the master plan as the demand signal.</li>
+            <li>Prevents stock in channel-specific DCs from being split to other channels.</li>
+            <li>Splits stock in non-channel-specific DCs according to the supply chain.</li>
+            <li>Prevents double-counting of channel-specific DC stock in EOP&#160;metrics. </li>
+        </ul>
+        <p>To apply these changes safely, maintenance needs to be run on all plans after upgrading from 3.7.0.1 or earlier to 3.7.0.2 or later. Warning: this will require a long time to execute, as potentially long-running data updates will need to occur, and then all Hybrid MFP plans must have weekly maintenance re-run.</p>
+        <h3>View Collection Set </h3>
+        <p>The MFP&#160;View Collection Set now points to the new Hybrid Financial Planning Grid view/widget. Any customization done on the old widgets (Hybrid Based MFP, Com/Non-Comp, Sales by Type) will no longer be viewable. Those customizations should be applied to the new view, as warranted.</p>
+        <h3>New input parameter</h3>
+        <p>A new input parameter: @cGUID has been added to the following procs:</p>
+        <p>dbo.usp_FinancialPlan_Hybrid_Calculate_MapDerivedToCore</p>
+        <p>dbo.cusp_FinancialPlan_Hybrid_Calculate_MapDerivedToCore_Replace</p>
+        <p>dbo.cusp_FinancialPlan_Hybrid_Calculate_MapDerivedToCore_Pre</p>
+        <p>dbo.cusp_FinancialPlan_Hybrid_Calculate_MapDerivedToCore_Post</p>
+        <p>dbo.usp_FinancialPlan_Hybrid_RebalanceLocks</p>
+        <p>dbo.cusp_FinancialPlan_Hybrid_RebalanceLocks</p>
+        <h3>New index for snapshot tables</h3>
+        <p>An index on SnapshotHeaderID was added for snapshot tables. This index can take a long time to create, and it changes the way performance works in SQL. The resulting index should make things faster after it is applied, but performance using MFP snapshots should be monitored, and any custom indexes should be evaluated and potentially removed.</p>
+        <p>&#160;</p>
+    </body>
+</html>

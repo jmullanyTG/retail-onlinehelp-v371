@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Validating Enhanced Size Curves</h1>
+        <p>You can set up pass/fail tests to ensure each of your sites had enough qualified data left over after <a href="Data Cleansing Thresholds.htm">data cleansing</a> to calculate a "valid" size curve. </p>
+        <p style="font-weight: normal;"><b>Note</b>: Size curve validations are for informational purposes only and do not affect whether or not a curve is used by JustEnough. See <a href="#steps">Next steps</a> for suggestions on what to do with size curves that fail validation.</p>
+        <h2>Thresholds</h2>
+        <p style="font-weight: bold;"><span style="font-weight: normal;">Validations are based on the following user-defined thresholds, which appear as columns in the Size Curves grid. </span>
+        </p>
+        <p style="font-weight: normal;"><span style="font-weight: normal;"><b>Note</b>: These thresholds measure the data-cleansed variants, sales units, and sizes at a site </span><b>within the item filter selected for the size curve</b>.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 264px;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 736px;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Threshold</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;"># Variants Qualified</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                       The minimum number of variants required at a site for its size curve to be valid.
+                        <p>If, after data cleansing, the number of remaining variants at a site is less than this value, the curve validation fails for that site. </p></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">% Variants Qualified</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        The minimum percentage of variants at a site that must pass data cleansing for the size curve to be valid.
+                        <p>If, after data cleansing, the remaining percentage of variants at a site is less than this value, the curve validation fails for that site.  </p></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Qualified Sales Units</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        The minimum number of sales units required at a site for its size curve to be valid.
+                        <p>If, after data cleansing, the number of sales units at a site is less than this value, the curve validation fails for that site.</p></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;"># Sizes Under</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                       The maximum number of sizes allowed at a site whose contribution to the size curve falls below the value defined in the <b>%&#160;Sizes Under</b> threshold.
+                        </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2" MadCap:pattern="4">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">% Sizes Under</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The % contribution value to test against when validating # <b>Sizes Under</b>. (A size's'% contribution value is shown in the Size Curve Detail pane's Contribution column.)</p>
+                        <p>
+                            <img src="../../../Resources/Images/Allocation Size/Contribution values.png" />
+                        </p>
+                        <p>For example, if this value is set to 10, and the <b># Sizes Under </b>value is set to 2, then JustEnough checks the number of sizes with Contribution values below 10%. If more than 2 sizes at a site have contribution values below 10%, then the validation fails for that site. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1" MadCap:pattern="1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;"># Sizes Over</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                       The maximum number of sizes to allow at the site whose contribution to the size curve is greater than the value defined in the <b>%&#160;Sizes Over</b> threshold.
+                        </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="font-weight: bold;">%&#160;Sizes Over</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>The % contribution value to test against when validating # <b>Sizes Over</b>. (A size's'% contribution value is shown in the Size Curve Detail pane's Contribution column.)</p>
+                        <p>
+                            <img src="../../../Resources/Images/Allocation Size/Contribution values.png">
+                            </img>
+                        </p>
+                        <p>For example, if this value is set to 25, and the <b># Sizes Over </b>value is set to 2, then JustEnough checks the number of sizes with Contribution values greater than 25%. If more than 2 sizes at a site have contribution values greater than 25%, then the validation fails for that site. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You do not have to use all of these thresholds to test your size curves, just choose the ones that make sense for your data. Also, you can customize validations <i>per curve</i>, choosing different sets of thresholds and values for each curve as desired. </p>
+        <p style="font-style: normal;">If you use more than one threshold to test a size curve, note that <b>a curve must satisfy all thresholds in order to pass validation</b>. JustEnough stops testing a site's curve once any threshold test fails.</p>
+        <p style="font-style: normal;">Once you save changes to a size curve's thresholds, JustEnough automatically validates your site-specific curves against those thresholds and displays the <a href="#results">results</a> in the Size Curve Detail pane. </p>
+        <h2>Setup</h2>
+        <p>This section describes how to set up validations for your enhanced size curves. </p>
+        <ol>
+            <li>From the <b>Manage</b> tab, click <b>Allocation</b> to open the Allocation window.</li>
+            <li> Click <b>Size Curves</b> on the toolbar to open the Size Curves grid.</li>
+            <li>
+                <p>Find the row of the enhanced size curve you want to validate. (To tell if a size curve is enhanced or not, look at the curve's read-only <b>Used Advanced Calc</b> column. If the checkbox is marked, it is an enhanced size curve.)</p>
+                <p>
+                    <img src="../../../Resources/Images/Allocation Size/Used Advanced Calc.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the size curve row, enter the desired threshold values in the threshold columns described in the table above. </p>
+                <p>
+                    <img src="../../../Resources/Images/Allocation Size/Validation Thresholds.png" />
+                </p>
+                <p><b>Note</b>: You can enter any combination of thresholds you choose. However, if defining Sizes Under or Sizes Over thresholds, you must enter values in both the <b># Sizes</b> and <b>% Sizes</b> columns.</p>
+            </li>
+            <li>
+                <p>Click <b>Save</b> to save the thresholds and execute the validations against the site-specific size curves. Results are <a href="#results">shown</a> in the Size Curve Detail pane.</p>
+                <p><b>Note</b>: Size curves are not automatically recalculated prior to validation. They are run against the current/existing size curve.</p>
+            </li>
+            <li>Repeat steps 3-5 for each enhanced size curve you want to validate.</li>
+        </ol>
+        <h2><a name="results"></a>Validation results</h2>
+        <p>Select a size curve in the Size Curves grid to view its validation results in the Size Curve Detail pane</p>
+        <p>
+            <img src="../../../Resources/Images/Allocation Size/Validation Results.png" />
+        </p>
+        <p>The <b>Pass?</b> column indicates whether or not the size curve for each site passed validation. </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 920px;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <img src="../../../Resources/Images/Allocation Size/Validation Pass.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The size curve for this site passed validation.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <img src="../../../Resources/Images/Allocation Size/Validation Fail.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        The size curve for this site failed validation.
+                        <p>In addition, the site's Total Contribution column value appears <b style="color: #ff4500;">red</b>. (This is a visual indicator only and does not reflect anything "wrong" with the total contribution value itself.)</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="steps"></a>Next steps</h2>
+        <p>If a size curve fails validation, you have the following options:</p>
+        <ul>
+            <li><a href="Manual Size Curve Overrides.htm">Manually override</a> the size curve.</li>
+            <li><a href="Making Size Curve Substitutions.htm">Substitute</a> a size curve from another site.</li>
+            <li>Do nothing. JustEnough will continue to use the size curve "as is". </li>
+        </ul>
+    </body>
+</html>

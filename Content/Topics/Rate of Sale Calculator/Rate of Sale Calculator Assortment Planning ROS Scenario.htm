@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="4970" MadCap:lastWidth="1269">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Rate of Sale Calculator – Assortment Planning ROS Scenario Creation</h1>
+        <p>The first component is where users create a Rate of Sale scenario which defines the inputs required to model historic data in which to generate rates of sale outputs.&#160; Users can define and save rate of sale scenarios for application now or in the future based on existing placeholder/variant and site filters – or define filters on the fly to suit your needs and specified time frames. Users can also apply Min/Max Price and Max Price Discount filters to limit the data being considered during calculation. </p>
+        <p>Additionally, users can easily recall saved scenarios by filtering the list with placeholder/variant and site filters.&#160; Time frame selection can be static or dynamic, with the ability to name dynamic ranges (i.e. Last 4 weeks) and dynamic scenarios will recalculate regularly to make use of the most current historical data.&#160; Further filtering against the historical data is available to refine the ROS scenarios by defining minimum price, maximum price, maximum discounts and price types as restrictions on what is and is not included in the data set.</p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario.png" style="visibility: visible;width: 637px;height: 141px;" />
+        </p>
+        <p style="font-weight: bold;font-size: 12pt;">Step by Step Instructions – ROS Scenario Creation</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Variant</span> and <span style="font-weight: bold;">Site</span><span style="font-weight: bold;"> Filter</span> selection</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph">Select an existing placeholder/variant filter or create a new filter to select the items for the scenario (this determines which scenarios will appear after scenarios have been created and saved)</li>
+            <li class="ListParagraph">Select an existing site filter or create a new filter to select the sites for the scenario (for application in assortment planning, select (All Sites)</li>
+        </ol>
+        <p style="margin-left: 54pt;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_1.png" style="visibility: visible;width: 469px;height: 37px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li class="ListParagraph">Click the <span style="font-weight: bold;">Execute</span> button</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;"> <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_2.png" style="visibility: visible;width: 73px;height: 31px;" /></p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li class="ListParagraph">Click the <span style="font-weight: bold;">Add </span>button to create a new scenario line</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_3.png" style="visibility: visible;width: 59px;height: 32px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li class="ListParagraph" style="font-weight: bold;">Scenario line inputs</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_4.png" style="visibility: visible;width: 634px;height: 43px;" />
+        </p>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Name</span> – Input a name for the scenario (a default name will populate, but can be overridden) </li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Description</span> – Input a description for the scenario</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Scenario Mode </span>– Select Assortment Planning</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Assortment Plan </span>– Select the active assortment plan</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Type</span> – Select Revenue or Sales Units to model against</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Product Filter</span> – Select the product filter for the scenario, this will drive which items are included in the calculation</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Cluster Set</span> – Select the cluster sets to be included for the scenario, this will drive which clusters are included in the calculation. (Cluster sets must be <a href="../Cluster Site Manager/Cluster Set Configuration Screen.htm">configured</a> for use with Assortment Planning.)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Sales types</span> – Select the type(s) of sales to include in scenario (Reg, Markdown, Promo, etc)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Time Frame</span> – <a href="../Time Frame/Selecting a Time Frame.htm">Select</a> an existing time frame or create a new time frame for the scenario</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="10">
+            <li class="ListParagraph"><span style="font-weight: bold;">Max Price</span> –Input the highest price of variants to include in the scenario; set to zero to ignore this parameter<ul style="margin-left: 72pt;" start="10"><li><p><b style="font-style: italic;">Note</b><i>: during calculation, the Max Price specified is compared against the selling price by period, as defined in sales history by type, for all sales included in the Product Filter, Cluster Set, Sales Types, and Time Frame parameters of the scenario; any sales made at a selling price above Max Price will be excluded</i></p></li><li><p><b style="font-style: italic; color: #ff0000;">Important</b>: <i>selling prices by period do not necessarily correlate to average selling prices shown in the UI (for example, AUR within Assortment Planning)</i></p></li></ul></li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Min Price</span> – Input the lowest price of variants to include in the scenario; set to zero to ignore this parameter<ul style="margin-left: 72pt;" start="10"><li class="ListParagraph"><b style="font-style: italic;">Note</b><i>: during calculation, the Min Price specified is compared against the selling price by period, as defined in sales history by type, for all sales included in the Product Filter, Cluster Set, Sales Types, and Time Frame parameters of the scenario; any sales made at a selling price below Min Price will be excluded</i></li><li class="ListParagraph"><b style="font-style: italic; color: #ff0000;">Important</b>: <i>selling prices by period do not necessarily correlate to average selling prices shown in the UI (for example, AUR within Assortment Planning)</i></li></ul></li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="10">
+            <li class="ListParagraph"><span style="font-weight: bold;">Max Price Discount</span> – Input the max % discount to ticket price of variants to include in the scenario; set to zero to ignore this parameter<ul style="margin-left: 72pt;" start="10"><li><p><b style="font-style: italic;">Note</b><i>: during calculation, the Max Price Discount specified is compared against the selling price by period, as defined in sales history by type, for all sales included in the Product Filter, Cluster Set, Sales Types, and Time Frame parameters of the scenario; any sales made at a selling price below (Max Price Discount * ticket price (full undiscounted price) of the variant in question) will be excluded</i></p></li><li class="ListParagraph"><b style="font-style: italic; color: #ff0000;">Important</b>: <i>selling prices by period do not necessarily correlate to average selling prices shown in the UI (for example, AUR within Assortment Planning)</i></li></ul></li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Price Type</span> – Select the price type to include in the scenario</li>
+        </ol>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">price type is only valid with Max Price, Min Price, and/or Max Price Discount are specified</span><span style="font-style: italic;">; price types are defined by your organization during software implementation and can be </span><span style="font-style: italic;">things like MSRP, Clearance, etc.</span>
+            </li>
+            <li class="ListParagraph"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span> <span style="font-style: italic;">the difference between Sales Type and Price Type can be difficult to understand, but basically, think of Sales Types as defining the larger bucket of sales from which to draw; Price Type is an optional data point that can change by period and can be used to further limit the data selection for the scenario; </span><span style="font-style: italic;color: #0070C0;">for example, it is possible to include the Sales Type Markdown but then further limit that data by setting a Price Type of Clearance and a Max Price Discount of 75% to only capture variants that had the Clearance Price Type and selling prices that were no more than 75% the original ticket price for each period in the </span><span style="font-style: italic;color: #0070C0;">scenario time frame</span></li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="14">
+            <li class="ListParagraph"><span style="font-weight: bold;">Minimum Volume Threshold</span> – Input the minimum number of sales per item/week/all sites to include in the scenario</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Access Level</span> – Select access level to the scenario</li>
+        </ol>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph">Public, Private, Shared</li>
+            <li class="ListParagraph">If shared, select the shared users by clicking on the <span style="font-weight: bold;">ellipsis</span></li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="5">
+            <li class="ListParagraph">Click <span style="font-weight: bold;">Save</span><span style="font-weight: bold;">– </span>This will save the scenario inputs</li>
+            <li class="ListParagraph">Click<span style="font-weight: bold;"> Calculate – </span>This will calculate the scenario line/lines</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_6.png" style="visibility: visible;width: 156px;height: 45px;" />
+        </p>
+    </body>
+</html>

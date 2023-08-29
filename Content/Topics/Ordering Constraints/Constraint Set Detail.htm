@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Constraint Set Detail</h1>
+        <p>Values will change as users highlight different constraint sets within the header. When building a new constraint it is easy to think of the constraint as the following template sentence:</p>
+        <p style="text-align: center;"><span style="font-style: italic;">Constrain so that “</span><span style="font-weight: bold;font-style: italic;">Constraint Type”</span><span style="font-style: italic;"> is </span><span style="font-weight: bold;font-style: italic;">“Operator”</span><span style="font-style: italic;"> the value </span><span style="font-weight: bold;font-style: italic;">“Constraint Value”</span><span style="font-style: italic;">.</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority – </span>Constraints are applied in order of priority within context of the constraint set. Priority 1 will applied last and may override lower prioritized constraints.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Constraint Type –</span> The inventory property which is to be constrained. <span style="font-style: italic;text-decoration: underline;">All monetary constraint values apply to the system default currency.</span> One of the following attributes:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Default Cost Value –</span> A standard cost value. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Default Sell Value –</span> A standard value based on retail price. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Quantity –</span> The quantity of units.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Volume –</span> A volumetric measurement. Volumetric data must be present. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Weight –</span> A weight measurement. Weight data must be present. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Secondary Cost Price –</span> A specific cost type labeled as “secondary cost price”.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Secondary Sell Price –</span> A specific cost type labeled as “secondary sell price”.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Freight Cost –</span> Associated shipping cost for the item or items. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Cost –</span> Overall cost of the order. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Operator –</span> The mathematical operator for the constraint. May be one of the following:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;">Greater Than</li>
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;">Less Than</li>
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;">Equal To</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Equal to Multiple of – </span>Used for basic case pack logic.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Constraint Value –</span> Numerical value of the constraint.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Tolerance Above –</span> Should the system be unable to constrain the value exactly to the correct amount, the tolerance above the value which is considered acceptable. This may be expressed as a percentage, or quantity of units.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Tolerance Below –</span> Should the system be unable to constrain the value exactly to the correct amount, the tolerance below the value which is considered acceptable. This may be expressed as a percentage, or quantity of units.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Rounding –</span> For instances when the operator is “equal to multiple of”, acceptable rounding rules must be selected. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;">Round Up</li>
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;">Round Down</li>
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;">Round to Nearest</li>
+        </ul>
+        <p>Additional fields may be added by including groups of items within the selection. </p>
+    </body>
+</html>

@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:onlyLocalStylesheets="True">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Error Method Overview</h1>
+        <p>You can choose which error metric JustEnough uses to determine the winner of a <a href="JustEnough Forecast Tournament.htm">forecast tournament</a>.</p>
+        <h2>MAPE</h2>
+        <p> Historically, the default error metric has been Uniform MAPE, the Mean Absolute Percentage Error. This is a good metric for measuring the success of each individual point of the forecast, but analysis has found that it is less than optimal at maximizing the statistics most JustEnough customers actually desire. Generally, what is most important to our customers is a forecast which minimizes the total error, summed across an order period. To this end, we are introducing the Absolute Total Error (ATE) metric.</p>
+        <h2>ATE</h2>
+        <p>ATE is based on a simple summation of the errors between the forecast and the actual history. Thus, errors in opposite directions in neighboring periods (overestimating one week and underestimating the next) cancel out. There are numerous other case examples of how ATE outperforms MAPE, outlined below. The summation is transformed into a percentage, and then into a model fit, which is presented to the user. This mirrors the existing interface for using and displaying MAPE error.</p>
+        <p>The data science team at JustEnough recommends the usage of ATE in all scenarios (see below). That said, it is a semi-experimental new design choice, with far-reaching ramifications, so we urge caution as well. Please keep us appraised of any problem situations that arise with the new forecasting metric.</p>
+        <h3>Functionality</h3>
+        <p>ATE forecasting can be enabled for all inventories by changing the System Policy “Forecast Error Method” in the “Engine: Forecasts” tab to say “ATE”. At present there is no way to use MAPE on some forecasts and ATE on others, without manually switching the system policy for each forecast.</p>
+        <h3>Differences and notes</h3>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">ATE will often prefer smoother, flatter forecasts than MAPE, especially in high noise histories (this is desirable).</li>
+            <li class="ListParagraph">ATE forecasts tend to be somewhat less responsive to sudden changes then MAPE (this can be an advantage or disadvantage).</li>
+            <li class="ListParagraph">As with MAPE, model fit can be compared between products to determine where problems are occurring.</li>
+            <li class="ListParagraph">Due to how the mathematics work out, model fit for ATE will be higher across the board than model fit for MAPE; for this reason, new limits on what is considered a ‘problem’ may need to be considered, and model fits cannot be meaningfully compared between ATE forecasts and MAPE forecasts.</li>
+        </ol>
+        <h3>Usage Recommendation</h3>
+        <p>The data science team at JustEnough has concluded that ATE produces comparable or superior forecasts to MAPE in nearly all scenarios we considered, including long term products, high sales products, low sales and intermittent sales products, highly seasonal products and products with strong trends. In particular, we found that intermittent forecasts were vastly better when ATE was used. For this reason, we recommend using ATE for all inventories. The only exception we found, where MAPE was significantly better than ATE, was on inventories whose behavior changed suddenly in a non-predictable, non-seasonal manner, particularly when such changes happened to line up with the parsimony cutoff in the history (see Examples below for more details). However, we consider this an unlikely edge case, compared to the across-the-board superiority of ATE elsewhere.</p>
+        <h3>Math</h3>
+        <p MadCap:conditions="General.Temp Exclude">Given a history <span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mover accent="true"><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mo>→</mml:mo></mml:mover></mml:math></MadCap:equation></span>, a certain subset of the most recent history (where possible, a full year) is classified as ‘parsimony.’ Models are trained on the non-parsimony section of the history, then forecasted against the parsimony. The errors between the forecasts of various models and the actual history in the parsimony region are compared, and the model/parameter set with the lowest error is selected. This model is then retrained using the entire history, and that trained model is used for the final forecast. The model fit is calculated from the error in the parsimony region as follows:</p>
+        <p MadCap:conditions="General.Temp Exclude">(<span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mover accent="true"><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mo>→</mml:mo></mml:mover></mml:math></MadCap:equation></span> is the history, <span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mover accent="true"><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mo>→</mml:mo></mml:mover></mml:math></MadCap:equation></span> is the forecast, <span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>n</mml:mi></mml:math></MadCap:equation></span> is the number of points in the parsimony. Summations are over the parsimony region. MAPE has special handling for zero value histories. Both methods report model fits less than 0 as zero.)</p>
+        <table style="border-collapse: collapse;" MadCap:conditions="General.Temp Exclude">
+            <thead>
+                <tr>
+                    <th style="background-color: #auto;vertical-align: middle;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Method</p>
+                    </th>
+                    <th style="background-color: #auto;vertical-align: middle;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Error</p>
+                    </th>
+                    <th style="background-color: #auto;vertical-align: middle;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Model Fit</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #auto;vertical-align: middle;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">MAPE</p>
+                    </td>
+                    <td style="background-color: #auto;vertical-align: middle;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;"><span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:mfrac><mml:mrow><mml:munder><mml:mo stretchy="false">∑</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:munder><mml:mrow><mml:mfrac><mml:mrow><mml:mfenced open="|" close="|" separators="|"><mml:mrow><mml:msub><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mrow></mml:mrow></mml:math></MadCap:equation></span>
+                        </p>
+                    </td>
+                    <td style="background-color: #auto;vertical-align: middle;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;"><span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>-</mml:mo><mml:mi>E</mml:mi></mml:math></MadCap:equation></span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;vertical-align: middle;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">ATE</p>
+                    </td>
+                    <td style="background-color: #auto;vertical-align: middle;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;"><span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mfenced open="|" close="|" separators="|"><mml:mrow><mml:mrow><mml:munder><mml:mo stretchy="false">∑</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:munder><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:msub><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mrow><mml:munder><mml:mo stretchy="false">∑</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:munder><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:msub><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:mfrac></mml:math></MadCap:equation></span>
+                        </p>
+                    </td>
+                    <td style="background-color: #auto;vertical-align: middle;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;"><span style="font-family: Cambria Math;font-style: italic;"><MadCap:equation><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>-</mml:mo><mml:mi>E</mml:mi></mml:math></MadCap:equation></span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>MAPE&#160;vs ATE case studies</h2>
+        <p>Case 1: overvaluing low-volume periods</p>
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">History</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 1</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 2</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F1 Percent Error</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F2 Percent Error</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">2</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">100%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 2</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">100</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">105</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">110</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">5%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">10%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">ATE / MAPE</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">2.87%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">4.69%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">52.5%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">5.00%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Using MAPE, the second forecast is vastly preferred. This is because MAPE over penalizes small errors in the low volume period, weighting that far heavier than accurately predicting the magnitude of the spike. It is assumed that most users would prefer Forecast 1, which is selected by ATE.</p>
+        <p>&#160;</p>
+        <p>Case 2: poorly weighing intermittent sales</p>
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">History</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 1</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 2</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F1 Percent Error</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F2 Percent Error</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0.25</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">25%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 2</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0.25</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">25%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 3</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0.25</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">100%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">75%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 4</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0.25</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">25%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">ATE/MAPE</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">50%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">25%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">37.5%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>By simply predicting zero sales every period, Forecast 1 is 100% correct three quarters of the time, which gives it a very low MAPE. ATE sums the total of the forecasts, giving a perfect model fit to forecast 2. In intermittent products where the date of sales is essentially random, this is greatly preferred.</p>
+        <p>&#160;</p>
+        <p>Case 3: Adding opposite errors</p>
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">History</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 1</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 2</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F1 Percent Error</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F2 Percent Error</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">45</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">50</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">47</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">11.1%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">4.44%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 2</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">50</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">45</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">52</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">10.0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">4.00%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">ATE / MAPE</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">2.05%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">10.6%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">4.22%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>MAPE prefers Forecast 2 in this case, since the error each period is lower. However, if a customer is placing a single order to cover both periods, they would prefer Forecast 1, since the total error across the two periods is lower. ATE correctly selects Forecast 1.</p>
+        <p>&#160;</p>
+        <p>Case 4: mis-aligned spike</p>
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">History</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 1</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Forecast 2</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F1 Percent Error</p>
+                    </th>
+                    <th style="background-color: #auto;border-top-style: solid;border-top-width: 1pt;border-top-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">F2 Percent Error</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">100</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">50</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">10000%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">5000%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">Period 2</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">100</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">1</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">50</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">99.0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">50.0%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">ATE / MAPE</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">&#160;</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">0.98%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">5050%</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;">
+                        <p style="margin-bottom: 0pt;">2525%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In this case, MAPE greatly prefers the flat forecast; though it doesn’t predict any spike, it also is less wrong in both time periods. ATE sees that the forecast with a spike is more accurate in aggregate, even though the spike occurs in the wrong period. Which forecast is actually preferable in this scenario likely varies by customer and by product. However, it is important to note that, at present, no JustEnough forecast method will attempt to change the phase (i.e. period) of a spike. Whether there is a spike at all depends on whether a given method is seasonal, includes causals etc., but if there is a spike, no method will outperform any others at lining it up.</p>
+        <h2>Examples</h2>
+        <p>
+            <img src="../../Resources/Images/ATE Forecasting Documentation/ATE Forecasting.png" style="visibility: visible;mso-wrap-style: square;width: 538px;height: 374px;" />
+        </p>
+        <p>ATE prefers smoother forecasts, which tend to be more accurate over multiple periods</p>
+        <p>
+            <img src="../../Resources/Images/ATE Forecasting Documentation/ATE Forecasting_1.png" style="visibility: visible;mso-wrap-style: square;width: 538px;height: 374px;" />
+        </p>
+        <p>ATE is less responsive to sudden shifts, making it better at forecasting noisy data series.</p>
+        <p>
+            <img src="../../Resources/Images/ATE Forecasting Documentation/ATE Forecasting_2.png" style="visibility: visible;mso-wrap-style: square;width: 570px;height: 384px;" />
+        </p>
+        <p>ATE tends to drastically outperform MAPE at intermittent forecasting</p>
+        <p>
+            <img src="../../Resources/Images/ATE Forecasting Documentation/ATE Forecasting_3.png" style="visibility: visible;mso-wrap-style: square;width: 569px;height: 384px;" />
+        </p>
+        <p>Again, ATE produces more reasonable forecasts than MAPE</p>
+        <p>
+            <img src="../../Resources/Images/ATE Forecasting Documentation/ATE Forecasting_4.png" style="visibility: visible;mso-wrap-style: square;width: 608px;height: 384px;" />
+        </p>
+        <p>A rare exception, where the responsiveness of MAPE accurately picks up an emerging behavioral shift.</p>
+    </body>
+</html>

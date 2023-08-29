@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Policy Overview"
+    Link="/Content/Topics/Policy/Policy Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Policy Tasks"
+    Link="/Content/Topics/Policy/Policy Tasks.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Policy/Essential Business Concepts.htm"></TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Policy/Practical Application.htm">
+      <TocEntry
+        Title="General Policy Information"
+        Link="/Content/Topics/Policy/General Policy Information.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Policy/Technical Execution.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Policy Pivot"
+    Link="/Content/Topics/Policy/Policy Pivot.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Policy/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Parameters"
+        Link="/Content/Topics/Policy/Parameters.htm" />
+      <TocEntry
+        Title="Grid"
+        Link="/Content/Topics/Policy/Grid.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Policy/Practical Application_1.htm">
+      <TocEntry
+        Title="Parameters"
+        Link="/Content/Topics/Policy/Parameters_1.htm" />
+      <TocEntry
+        Title="Grid"
+        Link="/Content/Topics/Policy/Grid_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Policy/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Inventory Policy Details"
+    Link="/Content/Topics/Policy/Inventory Policy Details.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Policy/Essential Business Concepts_2.htm">
+      <TocEntry
+        Title="Policy Task Actions"
+        Link="/Content/Topics/Policy/Policy Task Actions.htm">
+        <TocEntry
+          Title="Manual Order Policy Indicator"
+          Link="/Content/Topics/Policy/Manual Order Policy Indicator.htm" />
+        <TocEntry
+          Title="Manual Policy Setting"
+          Link="/Content/Topics/Policy/Manual Policy Setting.htm">
+          <TocEntry
+            Title="Do Not Update"
+            Link="/Content/Topics/Policy/Do Not Update.htm" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Policy"
+        Link="/Content/Topics/Policy/Policy.htm">
+        <TocEntry
+          Title="Order Policy Type"
+          Link="/Content/Topics/Policy/Order Policy Type.htm" />
+        <TocEntry
+          Title="Bin Settings"
+          Link="/Content/Topics/Policy/Bin Settings.htm" />
+        <TocEntry
+          Title="Non-Stocked Settings"
+          Link="/Content/Topics/Policy/Non Stocked Settings.htm" />
+        <TocEntry
+          Title="Normal Stocked Settings"
+          Link="/Content/Topics/Policy/Normal Stocked Settings.htm" />
+        <TocEntry
+          Title="Redundant/Discontinued"
+          Link="/Content/Topics/Policy/Redundant Discontinued.htm" />
+        <TocEntry
+          Title="Dynamic Policy"
+          Link="/Content/Topics/Policy/Dynamic Policy.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Policy/Practical Application_2.htm">
+      <TocEntry
+        Title="Policy Task Actions"
+        Link="/Content/Topics/Policy/Policy Task Actions_1.htm" />
+      <TocEntry
+        Title="Manual Order Policy Indicator"
+        Link="/Content/Topics/Policy/Manual Order Policy Indicator_1.htm"></TocEntry>
+      <TocEntry
+        Title="Manual Policy Setting"
+        Link="/Content/Topics/Policy/Manual Policy Setting_1.htm" />
+      <TocEntry
+        Title="Replenishment Strategy"
+        Link="/Content/Topics/Policy/Replenishment Strategy.htm">
+        <TocEntry
+          Title="Safety Stock"
+          Link="/Content/Topics/Policy/Safety Stock.htm" />
+        <TocEntry
+          Title="Bin Level"
+          Link="/Content/Topics/Policy/Bin Level.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Policy/Technical Execution_2.htm">
+      <TocEntry
+        Title="Model Stockholding"
+        Link="/Content/Topics/Policy/Model Stockholding.htm" />
+      <TocEntry
+        Title="Inventory Policy Data"
+        Link="/Content/Topics/Policy/Inventory Policy Data.htm">
+        <TocEntry
+          Title="Order Policy Indicator"
+          Link="/Content/Topics/Policy/Order Policy Indicator.htm" />
+        <TocEntry
+          Title="Back Order Ratio and Service Level"
+          Link="/Content/Topics/Policy/Back Order Ratio and Service Level.htm" />
+        <TocEntry
+          Title="Default Priority"
+          Link="/Content/Topics/Policy/Default Priority.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

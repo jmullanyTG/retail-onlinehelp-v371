@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1583" MadCap:lastWidth="1167">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Generic View Collection Set Module Overview</h1>
+        <p>The <b>Generic View Collection Set Module</b> is a top-level dock for custom view collections and tabs which can be used as shortcuts to Views that are useful and frequently accessed.  This module provides a View Collection Set structure independent of other features so that the included views and widgets will only load when needed.   Mi9 Technical Consultants may add new view collection sets to this dock as needed for custom functionality.</p>
+        <h2>Access rights</h2>
+        <p>The access right <b>Access To Generic View Collection Set Configuration</b> is required.</p>
+        <h2>Case sensitivity</h2>
+        <p>If users wish to add a new View to an existing page or group, they must ensure that they enter the existing plugin, page, or group name exactly as is. Entering a plugin, page, or group name that does not exactly match case results in a new plugin, page, or group being created. For example, <b>Influence</b> and <b>influence</b> would be two different tabs on the ribbon.</p>
+        <h2>Creating a custom view</h2>
+        <p>To create a custom view:</p>
+        <ol>
+            <li>Navigate to <b>Generic View Collection Set Module</b>.</li>
+            <li>Click <b>Add</b> on the toolbar.</li>
+            <li>
+                <p>Complete the fields as required.</p>
+                <p class="note">To add a View to an existing group or tab, enter the existing group’s name in the <b>Plugin Group Name</b> field.</p>
+            </li>
+            <li>In the <b>Plugin Image</b> field, click the drop down arrow and select an icon for the plugin.</li>
+            <li>Click the ellipsis in the <b>View Collection Set</b> field and select a view from the <b>Maintain View Collection Set</b> dialog.</li>
+            <li>Check the check box in the <b>Enabled</b> field to display the plugin when the new plugin is saved.</li>
+            <li>
+                <p>Set the access level by clicking the drop down arrow in the <b>Plugin Access Level</b> field and choosing the appropriate option.</p>
+                <p>If the plugin access level is set to other than <b>Shared</b>, then the <b>Plugin Users</b> field is disabled.</p>
+            </li>
+            <li>
+                <p>Optionally, if the plugin access level was set to <b>Shared</b>, then In the <b>Plugin Users</b> field, click <b>Change</b> to display the <b>Maintain Users And Roles</b> dialog:</p>
+                <ol>
+                    <li>Set the Roles and Users as required.</li>
+                    <li>Click <b>Ok</b> to close the dialog.</li>
+                </ol>
+            </li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h2>Field definitions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Plugin Name</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The plugin name as it displays in the Plugin Group in the ribbon.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Plugin Description</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The description that displays when a user hovers the mouse over the icon.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Plugin Display Order</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The position in which the plugin displays. The left most position is <b>Plugin Display Order</b> 0 (zero).</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Plugin Group Name</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The name of the group as it will appear when the module is selected. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Plugin Group Description</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The plugin group description.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Plugin Group Display Order</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The position on the ribbon where the new plugin group will appear.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Plugin Page Name</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The name of the module as it will appear in the ribbon.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Plugin Page Description</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The plugin page description.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Plugin Page Display Order</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The position on the ribbon where the new plugin page will appear.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Plugin Author</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The user who created the plugin.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Plugin Image</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">An image selected by the user.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>View Collection Set</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The collection set to display.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Enabled</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Default is unchecked. If checked, then the new plugin displays when <b>Save</b> is clicked.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Plugin Access Level</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Whether the plugin is private to the user who created it or shared with other users.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1"><b>Plugin Users</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">The Roles and Users with access to the plugin. The Change button is enabled when <b>Plugin Access Level</b> is set to <b>Shared</b>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

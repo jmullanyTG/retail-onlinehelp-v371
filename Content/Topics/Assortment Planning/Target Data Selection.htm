@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="5013.667" MadCap:lastWidth="1945">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Target Data Selection </h1>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Target Data Selection.png" style="visibility: visible;width: 413px;height: 300px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Depending on the size of the Target Creation window, it is possible that all fields in Target Data Selection may not be visible, with no vertical scroll bar available. The fields can still be accessed by simply clicking one of the visible fields then hitting the Tab key until the hidden fields come into view; alternatively, they can be made visible by enlarging the window or by dragging the handle between the Target Data Selection and Segment Cluster Details sections</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Target Data Selection_1.png" style="visibility: visible;width: 634px;height: 183px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Scenario Name: </span><span style="color: #000000;font-size: 12pt;">User editable alpha-numeric; name for the scenario</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Plan Basis: </span><span style="color: #000000;font-size: 12pt;">User editable dropdown; merchandise financial plan on which to base the scenario; not required</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">If Linked Financial Plan is set for the active assortment plan, populates with branch plans and snapshots of that plan; otherwise, populates with available merchandise financial plans that are compatible the Product and Site Hierarchy selections for the current plan</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">my assortment plan product hierarchy levels are Company &gt; Category &gt; Class &gt; Subclass and my financial plan product hierarchy levels are Category &gt; Class – this financial plan is compatible with the assortment plan and can be used as a Plan Basis</span></li>
+            <li>If the selected plan is a hybrid plan from the Merchandise Financial Planning module (<a href="../Merchandise Financial Planning/Essential Business Concepts.htm">plan type</a> = "Hybrid ...") , then only sales types selected in the <b>Sales by Type</b> field below will be used to create the scenario. For all other plans, all sales included in the plan will be used. </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">s:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">if a Plan Basis is set, the Product and Site Hierarchy selections for the scenario will intersect with available plan data, potentially limiting the scope of the scenario. For example, if I choose a Plan Basis which only contains plans for Mens Apparel, even if I set the scenario Product Hierarchy selection to</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> include Womens Apparel, the system will still only generate segments for Mens Apparel when using the Segment By Hierarchy function</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">when a Plan Basis is set and the Segment By Hierarchy function (see </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Segment By </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Hierarchy</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> above</span><span style="font-style: italic;color: #000000;font-size: 12pt;">) is</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> used to create target segments, Refreshing/Recalculating the scenario will update segments according to specific Site and Product Hierarchy changes made </span><span style="font-style: italic;color: #000000;font-size: 12pt;">to the plan selected as the Plan Basis</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a merchandise financial plan for Mens Tops for the US and UK and subdivisions of Knits, Wovens, and Sweaters. I create a scenario using this plan as the Plan Basis and Segment By Hierarchy to create my segments; my total Scenario Target is $1</span><span style="font-style: italic;color: #000000;font-size: 12pt;">0</span><span style="font-style: italic;color: #000000;font-size: 12pt;">M, breaking down as follows:</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 144pt;">&#160;</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;color: #000000;font-size: 12pt;">Segment</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;color: #000000;font-size: 12pt;">Sales</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: justify;color: #000000;font-size: 12pt;">Knits</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">US</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: right;color: #000000;font-size: 12pt;">$3,000,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: justify;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">UK</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: right;color: #000000;font-size: 12pt;">$2,000,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: justify;color: #000000;font-size: 12pt;">Wovens</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">US</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: right;color: #000000;font-size: 12pt;">$1,000,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: justify;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">UK</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: right;color: #000000;font-size: 12pt;">$2,000,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: justify;color: #000000;font-size: 12pt;">Sweaters</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">US</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: right;color: #000000;font-size: 12pt;">$1,250,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: justify;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">UK</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: right;color: #000000;font-size: 12pt;">$750,000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 144pt;font-style: italic;color: #000000;font-size: 12pt;">In the Plan Basis plan, I increase the total sales of UK Sweaters to $1,000,000 and decrease US Sweaters to $1,000,000 then Refresh the scenario; though the total Scenario Target remains at $10M, the US and UK Sweaters segment clusters each adjust to $1,000,000 each, just as in the Plan Basis plan</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">creating or altering segments to use a Target Filter instead of being defined by a hierarchy level</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> (as with Segment By Hierarchy) will break the direct linkage to the Plan Basis described above; instead, the scenario will break down the Scenario Target by segment cluster according to % contribution, as calculated from the historical data specified by the Target Filter, Cluster Sets, and Comparison Timeframe</span> </li>
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">it is possible to choose financial plans as a Plan Basis whose hierarchies do not directly correlate with the hierarchies used in the active assortment plan; as long as at least one level of the hierarchies in each plan have matching item master groups, even if those levels don’t fall in the same position in each hierarchy</span><span style="font-style: italic;color: #000000;font-size: 12pt;">. </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The system will aggregate/disaggregate the Plan Basis plan data as needed to yield the correct Scenario Target and splits, once segments are created</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Status:</span> <span style="color: #000000;font-size: 12pt;">Non-editable dropdown; status for the scenario; can be Created, Calculated, Rationalized, or Smart Started</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">See </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Scenario Status Changes</span><span style="color: #000000;font-size: 12pt;"> below for details</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product Hierarchy:</span> <span style="color: #000000;font-size: 12pt;">User editable multi-select tree; sets the level(s) of the assortment plan product hierarchy to be broken down into segments within the scenario</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Hierarchy:</span> <span style="color: #000000;font-size: 12pt;">User editable multi-select tree; sets the level(s) of the assortment plan site hierarchy to be used within the scenario</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this selection also limits which cluster sets are available for assignment to segments within the scenario</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Window of Time:</span> <span style="color: #000000;font-size: 12pt;">User editable multi-select tree; selects the window of time </span><span style="color: #000000;font-size: 12pt;">to be modeled in the scenario</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">This also sets the window of time to be pulled from the plan selected as Plan Basis, if set</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this selection must be a single contiguous range of periods; the system will automatically reset the range to the entire window of time between the starting and ending periods if a user attempts to remove periods and Apply</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Sales Basis:</span> <span style="color: #000000;font-size: 12pt;">User editable dropdown; </span><span style="color: #000000;font-size: 12pt;">selects the </span><span style="color: #000000;font-size: 12pt;">type for Scenario Target and the </span><span style="color: #000000;font-size: 12pt;">basis for Calculation and Rationalization for the scenario; Units or Revenue</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">This setting also determines the basis for the Target Percent Contribution field in the Segment Cluster Details section</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">when adding new areas of business, whether new products or clusters, this setting determines which metric must be entered first – TY Act New Sales or TY Act New Sales U – in order to build a sales plan for the new area in the Segment Cluster Details section. If Units, enter TY Act New Sales U first, then AUR; if Revenue, enter TY Act New Sales first, then AUR</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Sales By Type:</span> <span style="color: #000000;font-size: 12pt;">User editable multi-select; selects the sales types to be included in calculation for the scenario; types defined during system implementation</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">if Plan Basis is set but the selected sales types are not separated out in the selected plan, system will </span><span style="font-style: italic;color: #000000;font-size: 12pt;">default to using</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> all sales for the specified intersection of product, site, and time </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Scenario Target:</span> <span style="color: #000000;font-size: 12pt;">User editable integer; system or user set target for the scenario in revenue or units, depending on the Sales Basis</span><span style="color: #000000;font-size: 12pt;">; not required</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">If Plan Basis is set, defaults to the </span><span style="color: #000000;font-size: 12pt;">total sales volume within the selected plan for the intersection of Product Hierarchy, Site Hierarchy, and Window of Time defined in Target Data Selection</span>
+            </li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">If Plan Basis is NOT set, defaults to the total sales volume within the intersection of the selected Comparison Time Frames by segment and the Product Hierarchy and Site Hierarchy selections in Target Data Selection</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Applying changes to this field will split the value among all segment clusters in Segment Cluster Details based on the Target Percent Contribution defined for each</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Privacy:</span> <span style="color: #000000;font-size: 12pt;">User editable dropdown; sets the privacy for the scenario; Public, Private, or Shared</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Public means all users can view and users with the proper product and site hierarchy permissions can edit this scenario</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Private means the scenario can only be viewed and edited by the user who created it</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Shared means a specified list of users can view and those with the proper product and site hierarchy permissions can edit this scenario</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Sharing Settings:</span> <span style="color: #000000;font-size: 12pt;">User editable multi-select; sets the users with permission to view and edit the scenario; only valid if Privacy is set to Shared</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span><span style="color: #000000;font-size: 12pt;"> Saves the scenario and all Target Data Selection parameters</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">If Plan Basis is set, also calculates and sets Scenario Target</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="color: #000000;font-size: 12pt;">Reverts all changes to Target Data Selection parameters made since the last Apply to their previous values</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+    </body>
+</html>

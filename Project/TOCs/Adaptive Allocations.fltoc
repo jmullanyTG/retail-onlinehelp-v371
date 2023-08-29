@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    PageType="title"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl"
+    conditions="General.Printed Manuals" />
+  <TocEntry
+    Title="Adaptive Allocations Overview"
+    Link="/Content/Topics/Adaptive Allocations/Adaptive Allocations Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl" />
+  <TocEntry
+    Title="Setup and Configuration"
+    Link="/Content/Topics/Adaptive Allocations/Setup and Configuration.htm">
+    <TocEntry
+      Title="Size Ranges and Default Curves"
+      Link="/Content/Topics/Adaptive Allocations/Size Ranges and Default Curves.htm" />
+    <TocEntry
+      Title="Variant-Size Range Relationships"
+      Link="/Content/Topics/Adaptive Allocations/Variant Size Range Relationships.htm" />
+    <TocEntry
+      Title="Attribute Management"
+      Link="/Content/Topics/Adaptive Allocations/Attribute Management.htm" />
+    <TocEntry
+      Title="System Policies"
+      Link="/Content/Topics/Adaptive Allocations/System Policies.htm">
+      <TocEntry
+        Title="Average Inclusion Threshold"
+        Link="/Content/Topics/Adaptive Allocations/Average Inclusion Threshold.htm" />
+      <TocEntry
+        Title="Active Variant Threshold Factor"
+        Link="/Content/Topics/Adaptive Allocations/Active Variant Threshold Factor.htm" />
+      <TocEntry
+        Title="Active Variant Time on Offer Minimum"
+        Link="/Content/Topics/Adaptive Allocations/Active Variant Time on Offer Minimum.htm" />
+      <TocEntry
+        Title="Calendar"
+        Link="/Content/Topics/Adaptive Allocations/Calendar.htm" />
+      <TocEntry
+        Title="Cost Type"
+        Link="/Content/Topics/Adaptive Allocations/Cost Type.htm" />
+      <TocEntry
+        Title="Currency"
+        Link="/Content/Topics/Adaptive Allocations/Currency.htm" />
+      <TocEntry
+        Title="Item Master Hierarchy"
+        Link="/Content/Topics/Adaptive Allocations/Item Master Hierarchy.htm" />
+      <TocEntry
+        Title="Maximum Pick Ratio Default"
+        Link="/Content/Topics/Adaptive Allocations/Maximum Pick Ratio Default.htm" />
+      <TocEntry
+        Title="Minimum Pick Ratio Default"
+        Link="/Content/Topics/Adaptive Allocations/Minimum Pick Ratio Default.htm" />
+      <TocEntry
+        Title="Period Type"
+        Link="/Content/Topics/Adaptive Allocations/Period Type.htm" />
+      <TocEntry
+        Title="Price Type"
+        Link="/Content/Topics/Adaptive Allocations/Price Type.htm" />
+      <TocEntry
+        Title="Accounting Type"
+        Link="/Content/Topics/Adaptive Allocations/Accounting Type.htm" />
+      <TocEntry
+        Title="Engines"
+        Link="/Content/Topics/Adaptive Allocations/Engines.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Additional Data Requirements"
+      Link="/Content/Topics/Adaptive Allocations/Additional Data Requirements.htm">
+      <TocEntry
+        Title="Location Planning"
+        Link="/Content/Topics/Adaptive Allocations/Location Planning.htm" />
+      <TocEntry
+        Title="Merchandise Financial Planning"
+        Link="/Content/Topics/Adaptive Allocations/Merchandise Financial Planning.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Demand Plan"
+    Link="/Content/Topics/Adaptive Allocations/Demand Plan.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Adaptive Allocations/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Detail Configuration"
+        Link="/Content/Topics/Adaptive Allocations/Detail Configuration.htm">
+        <TocEntry
+          Title="Financial Plan"
+          Link="/Content/Topics/Adaptive Allocations/Financial Plan.htm" />
+        <TocEntry
+          Title="Location Plan"
+          Link="/Content/Topics/Adaptive Allocations/Location Plan.htm" />
+        <TocEntry
+          Title="Rolling WOC"
+          Link="/Content/Topics/Adaptive Allocations/Rolling WOC.htm" />
+        <TocEntry
+          Title="User Target Value"
+          Link="/Content/Topics/Adaptive Allocations/User Target Value.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Demand Plan Results"
+        Link="/Content/Topics/Adaptive Allocations/Demand Plan Results.htm"></TocEntry>
+      <TocEntry
+        Title="Practical Application"
+        Link="/Content/Topics/Adaptive Allocations/Practical Application.htm">
+        <TocEntry
+          Title="Demand Plan"
+          Link="/Content/Topics/Adaptive Allocations/Demand Plan_1.htm" />
+        <TocEntry
+          Title="Detail Configuration"
+          Link="/Content/Topics/Adaptive Allocations/Detail Configuration_1.htm">
+          <TocEntry
+            Title="Financial Plan"
+            Link="/Content/Topics/Adaptive Allocations/Financial Plan_1.htm" />
+          <TocEntry
+            Title="Location Plan"
+            Link="/Content/Topics/Adaptive Allocations/Location Plan_1.htm" />
+          <TocEntry
+            Title="Rolling WOC"
+            Link="/Content/Topics/Adaptive Allocations/Rolling WOC_1.htm" />
+          <TocEntry
+            Title="User Target Value"
+            Link="/Content/Topics/Adaptive Allocations/User Target Value_1.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Demand Plan Results"
+          Link="/Content/Topics/Adaptive Allocations/Demand Plan Results_1.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Technical Execution"
+        Link="/Content/Topics/Adaptive Allocations/Technical Execution.htm">
+        <TocEntry
+          Title="Financial Plan"
+          Link="/Content/Topics/Adaptive Allocations/Financial Plan_2.htm" />
+        <TocEntry
+          Title="Location Plan"
+          Link="/Content/Topics/Adaptive Allocations/Location Plan_2.htm" />
+        <TocEntry
+          Title="Rolling WOC"
+          Link="/Content/Topics/Adaptive Allocations/Rolling WOC_2.htm" />
+        <TocEntry
+          Title="User Target Value"
+          Link="/Content/Topics/Adaptive Allocations/User Target Value_2.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Product Set"
+    Link="/Content/Topics/Adaptive Allocations/Product Set.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Adaptive Allocations/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Product Set"
+        Link="/Content/Topics/Adaptive Allocations/Product Set_1.htm" />
+      <TocEntry
+        Title="Variant Details"
+        Link="/Content/Topics/Adaptive Allocations/Variant Details.htm">
+        <TocEntry
+          Title="Variant Attribute Details"
+          Link="/Content/Topics/Adaptive Allocations/Variant Attribute Details.htm"></TocEntry>
+        <TocEntry
+          Title="Variant Site Details"
+          Link="/Content/Topics/Adaptive Allocations/Variant Site Details.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Attribute Details"
+        Link="/Content/Topics/Adaptive Allocations/Attribute Details.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Adaptive Allocations/Practical Application_1.htm">
+      <TocEntry
+        Title="Product Set"
+        Link="/Content/Topics/Adaptive Allocations/Product Set_2.htm" />
+      <TocEntry
+        Title="Variant Details"
+        Link="/Content/Topics/Adaptive Allocations/Variant Details_1.htm">
+        <TocEntry
+          Title="Variant Attribute Details"
+          Link="/Content/Topics/Adaptive Allocations/Variant Attribute Details_1.htm" />
+        <TocEntry
+          Title="Variant Site Details"
+          Link="/Content/Topics/Adaptive Allocations/Variant Site Details_1.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Attribute Details"
+        Link="/Content/Topics/Adaptive Allocations/Attribute Details_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Adaptive Allocations/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Choice Count Model"
+    Link="/Content/Topics/Adaptive Allocations/Choice Count Model.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Adaptive Allocations/Essential Business Concepts_2.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Adaptive Allocations/Practical Application_2.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Adaptive Allocations/Technical Execution_2.htm">
+      <TocEntry
+        Title="Maximum Choice Count Output Limiter"
+        Link="/Content/Topics/Adaptive Allocations/Maximum Choice Count Output Limiter.htm" />
+      <TocEntry
+        Title="Qualification Thresholds"
+        Link="/Content/Topics/Adaptive Allocations/Qualification Thresholds.htm">
+        <TocEntry
+          Title="Sales Volume % of Max Threshold"
+          Link="/Content/Topics/Adaptive Allocations/Sales Volume of Max Threshold.htm" />
+        <TocEntry
+          Title="Active Variant Threshold Factor"
+          Link="/Content/Topics/Adaptive Allocations/Active Variant Threshold Factor_1.htm" />
+        <TocEntry
+          Title="Minimum % of Selling Periods Threshold"
+          Link="/Content/Topics/Adaptive Allocations/Minimum of Selling Periods Threshold.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Scenario Plan"
+    Link="/Content/Topics/Adaptive Allocations/Scenario Plan.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Adaptive Allocations/Essential Business Concepts_3.htm">
+      <TocEntry
+        Title="Scenario Plan"
+        Link="/Content/Topics/Adaptive Allocations/Scenario Plan_1.htm" />
+      <TocEntry
+        Title="Scenario Details"
+        Link="/Content/Topics/Adaptive Allocations/Scenario Details.htm">
+        <TocEntry
+          Title="Choice Counts"
+          Link="/Content/Topics/Adaptive Allocations/Choice Counts.htm" />
+        <TocEntry
+          Title="Allocation Volumes"
+          Link="/Content/Topics/Adaptive Allocations/Allocation Volumes.htm">
+          <TocEntry
+            Title="Attributes"
+            Link="/Content/Topics/Adaptive Allocations/Attributes.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Demand Plan Results"
+          Link="/Content/Topics/Adaptive Allocations/Demand Plan Results_2.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Adaptive Allocations/Practical Application_3.htm">
+      <TocEntry
+        Title="Scenario Plan"
+        Link="/Content/Topics/Adaptive Allocations/Scenario Plan_2.htm">
+        <TocEntry
+          Title="Workflow"
+          Link="/Content/Topics/Adaptive Allocations/Workflow.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Choice Counts"
+        Link="/Content/Topics/Adaptive Allocations/Choice Counts_1.htm">
+        <TocEntry
+          Title="Scenario Details: Graph"
+          Link="/Content/Topics/Adaptive Allocations/Scenario Details Graph.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Allocation Volumes"
+        Link="/Content/Topics/Adaptive Allocations/Allocation Volumes_1.htm">
+        <TocEntry
+          Title="Scenario Details: Pivot"
+          Link="/Content/Topics/Adaptive Allocations/Scenario Details Pivot.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Demand Plan Results"
+        Link="/Content/Topics/Adaptive Allocations/Demand Plan Results_3.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Adaptive Allocations/Technical Execution_3.htm">
+      <TocEntry
+        Title="Engine Replays"
+        Link="/Content/Topics/Adaptive Allocations/Engine Replays.htm" />
+      <TocEntry
+        Title="Draft Audit Options"
+        Link="/Content/Topics/Adaptive Allocations/Draft Audit Options.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Order Creation"
+    Link="/Content/Topics/Adaptive Allocations/Order Creation.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Adaptive Allocations/Essential Business Concepts_4.htm"></TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Adaptive Allocations/Practical Application_4.htm">
+      <TocEntry
+        Title="Creating Orders in Adaptive Allocations"
+        Link="/Content/Topics/Adaptive Allocations/Creating Orders in Adaptive Allocations.htm" />
+      <TocEntry
+        Title="Creating Orders within Order Manager"
+        Link="/Content/Topics/Adaptive Allocations/Creating Orders within Order Manager.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Adaptive Allocations/Technical Execution_4.htm" />
+  </TocEntry>
+</CatapultToc>

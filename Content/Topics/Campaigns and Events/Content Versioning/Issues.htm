@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Issues</h1>
+        <h2>Geography and price cluster issues</h2>
+        <p>Due to the complexity of matching Sites across Geographies and Price Clusters, mismatches may occur. The most common issues are:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">False Versions</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Conflicting Versions</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Price Range Versions</li>
+        </ul>
+        <h3>False versions</h3>
+        <p>A Site in an Event Geography may be missing from the Price Cluster Set of a linked Promotion due to one of the following reasons:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">The Site was removed from the Promotion after it was added to the Event</li>
+            <li class="ListParagraph" style="list-style-type: disc;">The Site was added to the Event’s Geographies but not added to the Promotion’s Price Clusters</li>
+        </ul>
+        <p>Either of these scenarios creates a gap, or false version for the affected Geography in which the Promotion has no pricing data. Until this is resolved the computed version will be inaccurate and it will appear that the Geography belongs to more than one Plate Version, i.e. one Plate Version for the Geography with a price and another Plate Version for the same Geography with a missing price. </p>
+        <p>Please see example below where the Site, Store 104, belongs to Geography, Zone 1, but is missing from the Promotion Price Clusters.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th colspan="5" class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;">Slot 1</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Event Geography</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Geography Site</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Cluster</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Cluster Site</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Price Cluster Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p> None</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>&#160;Missing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p style="color: #FF0000;">No Price</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Conflicting versions </h3>
+        <p>Conflicting versions occur a Geography is linked to multiple versions. Unlike a false version, this condition is not the result of a Site missing from a Promotion, but rather an Event Geography with a list of Sites that result in the Geography being linked to more than one Price Cluster for the linked Promotion. While it is possible that the pricing data for all the linked Price Clusters may be the same and not affect the price, if any value returned is different it will be impossible for the versioning process to resolve a single price for the Geography resulting in unreliable versions for the Slot Set. There may be two Plate Versions for the Geography, each showing a different price.</p>
+        <p>Please see the example below where the Site, Store 104, belongs to a Geography, Zone 1. Store 104, but belongs to a Promotion Price Cluster, Price Zone 2, that is different from the Price Cluster of the other Sites that belong to Price Zone 1.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th colspan="5" class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;">Slot 1</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Event Geography</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Geography Site</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Cluster</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Cluster Site</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Price Cluster Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="color: #FF0000;">Price Zone 2</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="color: #FF0000;">Store 104</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p style="color: #FF0000;">$8.99 </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Price range versions</h3>
+        <p>This issue is most likely to occur when a Promotion made up of a Price Cluster Set composed of a few relatively wide Price Clusters (many Sites in each) is joined to an Event configured with much narrower Event Geographies (just a few Sites in each). In addition, the Price Display Format is configured to display a highest and/or lowest Price Cluster Set price value. </p>
+        <p>It is important to understand that while the Sites in the Geography are joined on the Sites of the Price Cluster, and price range (low to high) values returned to the Event are aggregated based on all of the Sites in the linked Price Cluster and may not accurately reflect the low and high ranges for the Sites in the Geography. </p>
+        <p>This should not be a problem for Promotions with products that do not vary much from store to store, but for Promotions with a lot of price variance, a stores very low, or very high price may result in an inaccurate pricing range for the Event. </p>
+        <p>Please see example below where the Geography, Zone 1, is missing Sites Store 105 and Store 106. However, the associated Price Cluster includes those Sites. If the Price Display Format were to display the lowest and highest prices as a range, it would display “$7.99 to $11.99”. However, the Sites actually associated with Zone 1 have a range from $8.99 to $9.99.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th colspan="5" class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;">Slot 1</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Event Geography</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Geography Site</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Cluster</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Cluster Site</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Price Cluster Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>$8.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Missing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #FF0000;">Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="color: #FF0000;">Store 105</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="color: #FF0000;">$11.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Missing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="color: #FF0000;">Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="color: #FF0000;">Store 106</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p><span style="color: #FF0000;">$7</span><span style="color: #FF0000;">.99 </span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Special character issues</h2>
+        <p>Some special characters require configuration in inDesign to translate properly. See <a href="../Special Character Translations.htm">Special Character Translations</a> for more information.</p>
+    </body>
+</html>

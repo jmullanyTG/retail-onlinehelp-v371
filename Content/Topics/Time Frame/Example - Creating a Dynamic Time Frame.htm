@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3345" MadCap:lastWidth="2630">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Creating a Dynamic Time Frame</h1>
+        <p>In this example, we'll create a time frame that covers the last 90 days before an operation is run.</p>
+        <ol>
+            <li>
+                <p>In the Time Frame Maintenance window, click <b>Add</b>.</p>
+                <p>'<img src="../../Resources/Images/Time Frame/Example - add.png" /></p>
+            </li>
+            <li>
+                <p>In the Time Frame Editor, enter the following values:</p>
+                <ul>
+                    <li style="font-weight: normal;"><b>Name</b>: Last 90 Days</li>
+                    <li style="font-weight: normal;"><b>Security</b>: Private</li>
+                    <li style="font-weight: normal;">
+                        <p><b>Time Frame Definition Type</b>:&#160;Dynamic</p>
+                        <p>
+                            <img src="../../Resources/Images/Time Frame/Example - Editor.png" />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>In the Time Frame Definition toolbar, click <b>Add</b> to add a time frame definition row to the editor.This lets us define the time period for the time frame.</p>
+                <p>
+                    <img src="../../Resources/Images/Time Frame/Example - add definitoin.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click in the <b>Offset Days </b>cell, and enter the value <code>-90</code>. (Make sure to enter the "-" sign.) This tells JustEnough to go back 90 days to start the time period.</p>
+                <p>
+                    <img src="../../Resources/Images/Time Frame/Example - offset days.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click in the <b>Number of Rolling Days</b> cell and enter the value <code>90</code>.This tells JustEnough to include 90 days from the offset day in the time range.</p>
+                <p>
+                    <img src="../../Resources/Images/Time Frame/Example - Rolling.png" />
+                </p>
+            </li>
+            <li style="font-weight: normal;"><span style="font-weight: normal;">Click </span><b>OK</b>.</li>
+            <li style="font-weight: normal;">
+                <p>The new time frame appears in the Time Frame Maintenance grid. Select it to view its details.</p>
+                <p>
+                    <img src="../../Resources/Images/Time Frame/Example -details.png" />
+                </p>
+                <p>Note the following details:</p>
+                <ul>
+                    <li>In the grid, the <b>Dynamic Rule</b> box is checked, indicating that the time frame is dynamic.</li>
+                    <li>In the grid, the <b>Allow Multiple Definition</b>s box is not checked, indicating that only one time period is defined for the time frame.</li>
+                    <li>In the upper-right corner, the <b>Offset Days</b> and <b>Number of Rolling Days</b> values we entered for the time frame are displayed, showing us the values that JustEnough uses to calculate the effective time period for the time frame.</li>
+                    <li>
+                        <p>In the Calendar area, you can see the actual days covered by the time range defined for the time frame (displayed in red, in this example). The time range, being dynamic, is based on "today" being the day from which the start date of the time frame is offset, so the start date will be 90 days before today.</p>
+                        <ul>
+                            <li>In the weekly calendar (left side), the Time Range goes back 90 days from the current day (February 13, in this example). Its effective start and end dates are displayed in the calendar for your convenience.</li>
+                            <li>In the monthly calendar (right side), the dates covered by the time range are also shaded red. </li>
+                            <li>You can scroll backward and forward in either calendar and the other one tracks along for convenience.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>You can now use the time frame in other JustEnough modules. When executed, the time frame will include the 90 days before the current date. For example, if an operation using this time frame is executed on July 1, its time frame will cover the 90 days prior to July 1. If it is executed again on December 1, it will cover the 90 days prior to December 1.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

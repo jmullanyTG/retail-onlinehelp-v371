@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Campaigns and Events Overview"
+    Link="/Content/Topics/Campaigns and Events/Campaigns and Events Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Concepts &amp; terminology"
+      Link="/Content/Topics/Campaigns and Events/Concepts terminology.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Campaigns and Events/Content Versioning/Versioning Process.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Content Versioning/Versioning Example.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Content Versioning/Configuration Impacts on Versioning.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Content Versioning/Issues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Campaigns and Events/Content Versioning/Troubleshooting Issues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Campaigns and Events/Content Versioning/The Event Distribution Report.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Campaigns and Events/Content Versioning/The Event Pricing Report.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Campaigns and Events/Content Versioning/The Version Report.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Campaigns and Events/Content Versioning/Versioned Content Output Configuration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Event Configuration"
+    Link="/Content/Topics/Campaigns and Events/Event Configuration.htm">
+    <TocEntry
+      Title="Event Manager Global Policies"
+      Link="/Content/Topics/Campaigns and Events/Event Manager Global Policies.htm" />
+    <TocEntry
+      Title="Event Manager User Rights"
+      Link="/Content/Topics/Users/Events Management User Rights.htm" />
+    <TocEntry
+      Title="Spaces"
+      Link="/Content/Topics/Campaigns and Events/Spaces.htm">
+      <TocEntry
+        Title="Create a Space"
+        Link="/Content/Topics/Campaigns and Events/Create a Space.htm" />
+      <TocEntry
+        Title="Modify a Space"
+        Link="/Content/Topics/Campaigns and Events/Modify a Space.htm" />
+      <TocEntry
+        Title="Delete a Space"
+        Link="/Content/Topics/Campaigns and Events/Delete a Space.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Price Display Formats"
+      Link="/Content/Topics/Campaigns and Events/Price Display Formats.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Price Display Format Properties.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Splitting Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Merging Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Applying Equal Size to Selected Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Attribute Display Formats"
+      Link="/Content/Topics/Campaigns and Events/Attribute Display Formats.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Modifying an Attribute Display Format.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Attribute Display Format Properties.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Splitting Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Merging Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Applying Equal Size to Selected Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Item Display Formats"
+      Link="/Content/Topics/Campaigns and Events/Item Display Formats.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Modifying an Item Display Format.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Item Display Format Properties.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Splitting Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Merging Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Applying Equal Size to Selected Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Slot Set Templates"
+      Link="/Content/Topics/Campaigns and Events/Slot Set Templates.htm">
+      <TocEntry
+        Title="Creating a Slot Set Template"
+        Link="/Content/Topics/Campaigns and Events/Creating Slot Set Templates.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Modifying a Slot Set Template.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Slot Set Template Properties.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Renumbering Slots.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Merging Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Splitting Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Applying Equal Size to Selected Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Cost Types"
+      Link="/Content/Topics/Campaigns and Events/Cost Types.htm">
+      <TocEntry
+        Title="Create a Cost Type"
+        Link="/Content/Topics/Campaigns and Events/Create a Cost Type.htm" />
+      <TocEntry
+        Title="Modify a Cost Type"
+        Link="/Content/Topics/Campaigns and Events/Modify a Cost Type.htm" />
+      <TocEntry
+        Title="Delete a Cost Type"
+        Link="/Content/Topics/Campaigns and Events/Delete a Cost Type.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Event Types"
+      Link="/Content/Topics/Campaigns and Events/Event Types.htm">
+      <TocEntry
+        Title="Create an Event Type"
+        Link="/Content/Topics/Campaigns and Events/Create an Event Type.htm">
+        <TocEntry
+          Title="Configure Event Type default estimated costs"
+          Link="/Content/Topics/Campaigns and Events/Configure Event Type default estimated costs.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Modify an Event Type"
+        Link="/Content/Topics/Campaigns and Events/Modify an Event Type.htm" />
+      <TocEntry
+        Title="Delete an Event Type"
+        Link="/Content/Topics/Campaigns and Events/Delete an Event Type.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Versioned Content Output configuration"
+      Link="/Content/Topics/Campaigns and Events/Versioned Content Output configuration.htm">
+      <TocEntry
+        Title="Create a Versioned Content Output file row"
+        Link="/Content/Topics/Campaigns and Events/Create a Versioned Content Output file row.htm" />
+      <TocEntry
+        Title="Modify a Versioned Content Output file row"
+        Link="/Content/Topics/Campaigns and Events/Modify a Versioned Content Output file row.htm" />
+      <TocEntry
+        Title="Delete a Versioned Content Output file row"
+        Link="/Content/Topics/Campaigns and Events/Delete a Versioned Content Output file row.htm" />
+      <TocEntry
+        Title="Versioned Content Output File Export Settings"
+        Link="/Content/Topics/Campaigns and Events/Versioned content output file export settings.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Campaigns and Events/Special Character Translations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Event Manager Home Screen"
+    Link="/Content/Topics/Campaigns and Events/Event Manager Home Screen.htm">
+    <TocEntry
+      Title="List"
+      Link="/Content/Topics/Campaigns and Events/List.htm">
+      <TocEntry
+        Title="Filtering"
+        Link="/Content/Topics/Campaigns and Events/Filtering.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Calendar"
+      Link="/Content/Topics/Campaigns and Events/Calendar.htm">
+      <TocEntry
+        Title="Filtering"
+        Link="/Content/Topics/Campaigns and Events/Filtering_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Customizable event screen"
+      Link="/Content/Topics/Campaigns and Events/Customizable event screen.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Campaigns"
+    Link="/Content/Topics/Campaigns and Events/Campaigns.htm">
+    <TocEntry
+      Title="Create a Campaign"
+      Link="/Content/Topics/Campaigns and Events/Create a Campaign.htm" />
+    <TocEntry
+      Title="Modify a Campaign"
+      Link="/Content/Topics/Campaigns and Events/Modify a Campaign.htm" />
+    <TocEntry
+      Title="Delete a Campaign"
+      Link="/Content/Topics/Campaigns and Events/Delete a Campaign.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Events"
+    Link="/Content/Topics/Campaigns and Events/Events.htm">
+    <TocEntry
+      Title="Create an Event (wizard)"
+      Link="/Content/Topics/Campaigns and Events/Create an Event wizard.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Event Detail"
+    Link="/Content/Topics/Campaigns and Events/Event Detail.htm">
+    <TocEntry
+      Title="Common Fields and Icons"
+      Link="/Content/Topics/Campaigns and Events/Common Fields and Icons.htm" />
+    <TocEntry
+      Title="Event Selection"
+      Link="/Content/Topics/Campaigns and Events/Event Selection.htm">
+      <TocEntry
+        Title="Buttons"
+        Link="/Content/Topics/Campaigns and Events/Buttons.htm" />
+      <TocEntry
+        Title="Geographies and Sites"
+        Link="/Content/Topics/Campaigns and Events/Geographies and Sites.htm">
+        <TocEntry
+          Title="Create a Geography"
+          Link="/Content/Topics/Campaigns and Events/Create a Geography.htm">
+          <TocEntry
+            Title="Add Sites to a Geography"
+            Link="/Content/Topics/Campaigns and Events/Add Sites to a Geography.htm" />
+          <TocEntry
+            Title="Remove Sites from a Geography"
+            Link="/Content/Topics/Campaigns and Events/Remove Sites from a Geography.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Modify a Geography"
+          Link="/Content/Topics/Campaigns and Events/Modify a Geography.htm" />
+        <TocEntry
+          Title="Delete a Geography"
+          Link="/Content/Topics/Campaigns and Events/Delete a Geography.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Budget"
+        Link="/Content/Topics/Campaigns and Events/Budget.htm">
+        <TocEntry
+          Title="Create a Cost"
+          Link="/Content/Topics/Campaigns and Events/Create a Cost.htm" />
+        <TocEntry
+          Title="Modify a Cost"
+          Link="/Content/Topics/Campaigns and Events/Modify a Cost.htm" />
+        <TocEntry
+          Title="Delete a Cost"
+          Link="/Content/Topics/Campaigns and Events/Delete a Cost.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Event Workbench"
+        Link="/Content/Topics/Campaigns and Events/Event Workbench.htm">
+        <TocEntry
+          Title="Event Compositions"
+          Link="/Content/Topics/Campaigns and Events/Event Compositions.htm">
+          <TocEntry
+            Title="Create an Event Composition"
+            Link="/Content/Topics/Campaigns and Events/Create an Event Composition.htm" />
+          <TocEntry
+            Title="Modify an Event Composition"
+            Link="/Content/Topics/Campaigns and Events/Modify an Event Composition.htm" />
+          <TocEntry
+            Title="Delete an Event Composition"
+            Link="/Content/Topics/Campaigns and Events/Delete an Event Composition.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Reports"
+          Link="/Content/Topics/Campaigns and Events/Reports.htm">
+          <TocEntry
+            Title="Version report"
+            Link="/Content/Topics/Campaigns and Events/Version report.htm" />
+          <TocEntry
+            Title="Event Distribution report"
+            Link="/Content/Topics/Campaigns and Events/Event Distribution report.htm" />
+          <TocEntry
+            Title="Event Pricing report"
+            Link="/Content/Topics/Campaigns and Events/Event Pricing report.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Output"
+          Link="/Content/Topics/Campaigns and Events/Output.htm">
+          <TocEntry
+            Title="Generate output for page layout"
+            Link="/Content/Topics/Campaigns and Events/Generate output for page layout.htm" />
+        </TocEntry>
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Slot Set Selection"
+      Link="/Content/Topics/Campaigns and Events/Slot Set Selection.htm">
+      <TocEntry
+        Title="Buttons"
+        Link="/Content/Topics/Campaigns and Events/Buttons_1.htm" />
+      <TocEntry
+        Title="Slot set pane"
+        Link="/Content/Topics/Campaigns and Events/Slot set pane.htm" />
+      <TocEntry
+        Title="List"
+        Link="/Content/Topics/Campaigns and Events/List_1.htm" />
+      <TocEntry
+        Title="Layout"
+        Link="/Content/Topics/Campaigns and Events/Layout.htm">
+        <TocEntry
+          Title="Editing Slot Set Layouts"
+          Link="/Content/Topics/Campaigns and Events/Editing Slot Set Layouts.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Versions"
+        Link="/Content/Topics/Campaigns and Events/Versions.htm" />
+      <TocEntry
+        Title="Create a new Promotion"
+        Link="/Content/Topics/Campaigns and Events/Create a new Promotion.htm"></TocEntry>
+      <TocEntry
+        Title="Add an existing Promotion"
+        Link="/Content/Topics/Campaigns and Events/Add an existing Promotion.htm">
+        <TocEntry
+          Title="Available Promotions pane"
+          Link="/Content/Topics/Campaigns and Events/Available Promotions pane.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Modify a Promotion"
+        Link="/Content/Topics/Campaigns and Events/Modify a Promotion.htm" />
+      <TocEntry
+        Title="Remove a Promotion"
+        Link="/Content/Topics/Campaigns and Events/Remove a Promotion.htm"></TocEntry>
+      <TocEntry
+        Title="Slot versioning by Geography"
+        Link="/Content/Topics/Campaigns and Events/Slot versioning by Geography.htm">
+        <TocEntry
+          Title="Version prompt"
+          Link="/Content/Topics/Campaigns and Events/Version prompt.htm" />
+        <TocEntry
+          Title="Assign a Geography"
+          Link="/Content/Topics/Campaigns and Events/Assign a Geography.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Content Editor"
+        Link="/Content/Topics/Campaigns and Events/Content Editor.htm">
+        <TocEntry
+          Title="Text"
+          Link="/Content/Topics/Campaigns and Events/Text.htm" />
+        <TocEntry
+          Title="Images"
+          Link="/Content/Topics/Campaigns and Events/Images.htm" />
+        <TocEntry
+          Title="Content Update window"
+          Link="/Content/Topics/Campaigns and Events/Content Update window.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Workflow Status Changes"
+      Link="/Content/Topics/Campaigns and Events/Workflow Status Changes.htm">
+      <TocEntry
+        Title="Event status change"
+        Link="/Content/Topics/Campaigns and Events/Event status change.htm" />
+      <TocEntry
+        Title="Slot set status state change"
+        Link="/Content/Topics/Campaigns and Events/Slot set status state change.htm" />
+      <TocEntry
+        Title="Slot set status override"
+        Link="/Content/Topics/Campaigns and Events/Slot set status override.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Campaigns and Events Help"
+    Link="/Content/Topics/Campaigns and Events/Campaigns and Events Help.htm" />
+</CatapultToc>

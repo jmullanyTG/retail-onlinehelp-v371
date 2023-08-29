@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Default Priority</h1>
+        <p>Setting the default priority is an important step to establish a baseline for the task. There are several options for doing so:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Do Not Set Priority – </span>The task will not change the default priority. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Set Priority To Specified Value –</span> This will assign the priority of all items to a single priority. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Calculate Priority Based On Input Values –</span> This will use selected parameters to define the priority.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Prioritize Based On ___ Days –</span> This will set the number of days of historic demand or projected demand the calculation is done. It is common to set this to 365.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Entity – </span>Allows users to choose the entity type for classification (inventory, item master, or site).</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Contribution –</span> Contribution may be set to historic demand or forecasted demand.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Classify Based on </span><span style="font-weight: bold;">–</span> Determines the inventory metric by which the classification is made. May be one of the following:</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;">Classify Based On Unit Contribution –</span> This will be based on gross volume of units. Expressed as (Value * 1).</li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;">Classify Based On Cost On Cost Of Sales Contribution –</span> Based on the cost of the volume of units. Expressed as (Value * DefaultCostPrice).</li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;">Classify Based On Sales Revenue Contribution –</span> Based on the sales revenue of the volume of units. Expressed as (Value * DefaultSellingPrice).</li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;">Classify Based On Margin/Profit Contribution – </span>Based on the profit margin of the volume of units. Expressed as (Value * (DefaultSellingPrice – DefaultCostPrice))</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Group By – </span>Will determine the entity by which the classification is grouped. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Include Site Transfers –</span> Site transfers will be included if checked. This is important to consider if the site is a distribution center. As stated in the tooltip, “If prioritizing based on sales, previous receipted site transfers will be included in the calculation. If prioritizing based on forecast, projected site transfers and existing outstanding orders will be included. </li>
+        </ul>
+        <p>The percent contributions for each priority may be adjusted and a running total will be displayed at the bottom of the table. Immediate changed are also reflected in the pie graph. </p>
+    </body>
+</html>

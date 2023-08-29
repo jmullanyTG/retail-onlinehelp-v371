@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Scenario Behaviors by Status </h1>
+        <p style="margin-bottom: 8pt;color: #000000;">Scenario status is a very important part of how the Target Creation process is governed. The following table is a reference detailing expected system behaviors by scenario status for the various actions users can take when working in Target Creation:</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;">If a Scenario is in Status…</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;">and I…</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;">the system should…</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;">and the Scenario Status will…</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Name</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Plan Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">refresh the Scenario Target based on the selected plan and other Target Data Selection parameters</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Product Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing segments; on OK, delete segments</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Site Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding may change existing segment/cluster set assignments; on OK, if necessary, change cluster set assignments to defaults for new Site Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Window of Time</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">refresh the Scenario Target if a Plan Basis is set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">refresh the Scenario Target if a Plan Basis is set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales By Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Target</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Privacy or Sharing Settings</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Refresh</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">If a Plan Basis is set, refresh the Scenario Target, if not, do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Calculate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">return historical data based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Update to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Click Rationalize</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">return an error stating the scenario must be calcalated before being rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment target filter, cluster set, or comparison time frame</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">delete Segment Cluster Details, if present</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment supplemental filter</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Created</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment name, product hierarchy, or collection option</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Name</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Plan Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn user that segment revision, recalculation, and re-rationalization may be necessary due to the change in Plan Basis; refresh the Scenario Target based on the selected plan and other Target Data Selection parameters and spread new target down across segment/clusters by % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Product Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing segments and cluster detail data; on OK, delete segments and cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Site Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing cluster detail data; on OK, if necessary, change cluster set assignments to defaults for new Site Hierarchy and delete cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Window of Time</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing cluster detail data; on OK, refresh the Scenario Target if a Plan Basis is set and delete cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that recalculation and/or re-rationalization may be necessary to update the Scenario Target and Recommended Choice Counts; on OK, refresh the Scenario Target if a Plan Basis is set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales By Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing cluster detail data; on OK, delete cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Target</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will require re-rationalization to update recommended choice counts; spread new target down across segment/clusters by % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Privacy or Sharing Settings</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Refresh</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">If a Plan Basis is set, warn the user that proceeding will require re-rationalization to update recommended choice counts and refresh the Scenario Target and spread new target down across segment/clusters by % contribution, if not, do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Calculate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Update segment cluster details based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Click Rationalize</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Run rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices; update TY Recommended New Productivity and Average Active Periods Per Variant; default any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and update TY Act New Productivity as needed</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;"><span style="color: #000000;">Update to Ration</span><span style="color: #000000;">a</span><span style="color: #000000;">lized</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment target filter, cluster set, or comparison time frame</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">delete segment cluster details</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment supplemental filter</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment name, product hierarchy, or collection option</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to segment/cluster % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">update TY Sales Plan and TY New Item values; update TY Act New values that don't have user overrides</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Calculated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to any TY Act New values</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">update affected TY Act New values</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Name</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Rationalized</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Plan Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn user that segment revision, recalculation, and re-rationalization may be necessary due to the change in Plan Basis; refresh the Scenario Target based on the selected plan and other Target Data Selection parameters and spread new target down across segment/clusters by % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Product Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing segments and cluster detail data; on OK, delete segments and cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Site Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing cluster detail data; on OK, if necessary, change cluster set assignments to defaults for new Site Hierarchy and delete cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Window of Time</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing cluster detail data; on OK, refresh the Scenario Target if a Plan Basis is set and delete cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that recalculation and/or re-rationalization may be necessary to update the Scenario Target and Recommended Choice Counts; on OK, refresh the Scenario Target if a Plan Basis is set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales By Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will delete all existing cluster detail data; on OK, delete cluster detail data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Target</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will require re-rationalization to update recommended choice counts; spread new target down across segment/clusters by % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Privacy or Sharing Settings</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Rationalized</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Refresh</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">If a Plan Basis is set, warn the user that proceeding will require re-rationalization to update recommended choice counts and refresh the Scenario Target and spread new target down across segment/clusters by % contribution, if not, do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Calculate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Update segment cluster details based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Click Rationalize</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Run rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices; update TY Recommended New Productivity and Average Active Periods Per Variant; default any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and update TY Act New Productivity as needed</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Rationalized</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment target filter, cluster set, or comparison time frame</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">delete segment cluster details</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment supplemental filter</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment name, product hierarchy, or collection option</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Rationalized</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to segment/cluster % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">update TY Sales Plan and TY New Item values; update TY Act New values that don't have user overrides</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to TY Act New $, U, or AUR values</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">update affected TY Act New values</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Rationalized</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to TY Act New Choices</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;"><span style="color: #000000;">update TY Act New Product</span><span style="color: #000000;">i</span><span style="color: #000000;">vity</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Rationalized</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Name</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Plan Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">cannot be changed for scenarios in Smart Started Status</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Product Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">cannot be changed for scenarios in Smart Started Status</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Site Hierarchy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">cannot be changed for scenarios in Smart Started Status</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Window of Time</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">cannot be changed for scenarios in Smart Started Status</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales Basis</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">cannot be changed for scenarios in Smart Started Status</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Sales By Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">cannot be changed for scenarios in Smart Started Status</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Scenario Target</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">warn the user that proceeding will require re-rationalization to update recommended choice counts; spread new target down across segment/clusters by % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to Privacy or Sharing Settings</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Refresh</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">If a Plan Basis is set, warn the user that proceeding will require re-rationalization to update recommended choice counts and refresh the Scenario Target and spread new target down across segment/clusters by % contribution, if not, do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">click Calculate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Update segment cluster details based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Click Rationalize</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Run rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices; update TY Recommended New Productivity and Average Active Periods Per Variant; default any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and update TY Act New Productivity as needed</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Rationalized</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment target filter, cluster set, or comparison time frame</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">delete segment cluster details</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment supplemental filter</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">change a segment name, product hierarchy, or collection option</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">do nothing</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Remain as Smart Started</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to segment/cluster % contribution</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">update TY Sales Plan and TY New Item values; update TY Act New values that don't have user overrides</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to TY Act New $, U, or AUR values</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">update affected TY Act New values</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Smart Started</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">apply a change to TY Act New Choices</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">update TY Act New Producitvity</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Change to Rationalized</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom: 8pt;">&#160;</p>
+    </body>
+</html>

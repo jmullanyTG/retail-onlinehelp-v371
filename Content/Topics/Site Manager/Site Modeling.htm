@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Site Modeling</h1>
+        <p>When opening a new store or DC, you can choose an existing store or DC to model forecasts after. This creates a store supersession, which uses the product-level sales history from the model site to forecast demand for the new site. Orders for the new site can then be generated based on the modeled forecasts. </p>
+        <p>The Site Status tab contains a grid listing </p>
+        <h2>Site Model Options</h2>
+        <p>Site model options functions as the “header” for the supersession/model. Users may select the start and end dates of the model, as well as its active status. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Supersession Start Date – </span>The start date for the model. This is the first period of historical sales which will be considered. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Supersession End Date –</span> The end date for the model. This is the final period of historical sales which will be considered. If this date is beyond the date on which the new store will have accumulated actualized sales, the model will continue to be used to represent sales history. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Active –</span> A flag used to determine the active status of the supersession. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Opening Date –</span> The date on which a site is set to open. To be used for new store openings. This is not a user editable field.&#160; </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Created Date –</span> Date of creation for the supersession. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Created By –</span> User credited with the creation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Updated –</span> Date of the most recent update to the supersession. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Update By –</span> User credited with the most recent update. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Model Last Process –</span> The supersession model will need to be reprocessed periodically. This task should be done as part of a job which will coincide with sales history updates (i.e. nightly job). </li>
+        </ul>
+        <h2>Site Model Details</h2>
+        <p>Site model details will allow users to determine the product levels which will contribute to the creation of the model and their relative contributions. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Product Level – </span>The level within the product hierarchy which may be modeled. The available hierarchy levels are controlled through a system policy setting. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Model Site –</span> The site which will be used to create the model. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Model Site Opening Date –</span> The opening date for the modeled site. This is not a user editable field.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Factor –</span> The ratio which will be applied to the sales history of the modeled site. A value of “1” will apply 100% of the sales to the model. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Active -</span> A flag used to determine the active status of the product level within the model.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Created Date –</span> Date of creation for the model line. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Created By –</span> User credited with the creation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Updated –</span> Date of the most recent update to the model line. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Update By –</span> User credited with the most recent update. </li>
+        </ul>
+        <p>Users are able to create site model headers by using the site model options widget, then determine the effect of the models through the site model details widget. </p>
+        <h2>Site Model Options</h2>
+        <p>Site model options allows users to create site level supersessions by determining a start date, an end date, and an active status. Any supersession without a start date is assumed to go to the beginning of history within the system; any supersession without an end date is assumed to continue in perpetuity. </p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Modeling_1.png" style="visibility: visible;width: 673px;height: 143px;">
+            </img>
+        </p>
+        <p>New entries may be made by selecting the “New” button. Existing entries may be deleted by selecting the “Deleted” button. Any changes made will require users to select “Apply” before exiting in order to take effect. </p>
+        <h2>Site Model Details</h2>
+        <p>Once the product level hierarchy as ben set for the system (through use of a system policy), the applicable product levels will appear as rows within the site model details grid. </p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Modeling_1_1.png" style="visibility: visible;width: 673px;height: 203px;">
+            </img>
+        </p>
+        <p>For each line, users must select a model site, which will determine the set of historical sales to be copied, as well as a factor. The factor will determine the percentage of sales to be applied in the model. A factor of “1” will copy 100% of the sales quantity; a factor of “0.5” will copy 50% of the sales quantity. </p>
+        <h2>Example</h2>
+        <p><a href="../How-To Guides/Store Management/Planning Demand for a New Store.htm">See example</a>.</p>
+    </body>
+</html>

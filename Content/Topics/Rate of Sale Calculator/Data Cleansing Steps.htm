@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="2" MadCap:lastHeight="5455" MadCap:lastWidth="2592">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Data Cleansing Steps</h1>
+        <p>System will begin with Raw Sales Data based on the scenario inputs:</p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 576px;" />
+        </p>
+        <p><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">prior to data cleansing, the system must aggregate sales data from inventory (intersection of site and item master/size)/day level to variant/cluster/period level; to do this, the system first sums the data to variant/site/</span><span style="font-style: italic;">period</span><span style="font-style: italic;">, then takes an average of all </span><span style="font-style: italic;">resulting </span><span style="font-style: italic;">data points </span><span style="font-style: italic;">to seed the variant/cluster/period data points used in the steps described in this section</span>
+        </p>
+        <p style="font-weight: bold;text-decoration: underline;">Step 1</p>
+        <p>To remove any data points that are not indicative of a variants normal sales potential a max sales value is calculated at variant level, within each variant any data point that falls below a specified percentage of that max is eliminated. This is so that extreme outliers don't skew the deseasonalization process.</p>
+        <p>The % of Max is controlled by the system policy <span style="font-weight: bold;">Average Inclusion Threshold </span>located in <span style="font-weight: bold;">Maintain &gt; Policies &gt; Module: Rate of Sale </span>Calculator. It’s recommended that this % of Max is set quite low as it is only supposed to catch the most extreme outliers; default value is 3% or .03.</p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 576px;" />
+        </p>
+        <p style="font-weight: bold;text-decoration: underline;">Step 2</p>
+        <p>After initial outliers have been removed the data is deseasonalized and new sales values are obtained for all variants (where the seasonal effects have been stripped out). Period totals are used for deseasonalization, with outlier period totals being determined by calculating the median and defining the acceptable deviation from that median in terms of a percentage value.&#160; </p>
+        <p>This percentage is controlled by the system policy <span style="font-weight: bold;">Median Period Total </span>Threshold located in <span style="font-weight: bold;">Maintain &gt; Policies &gt; Module: Rate of Sale </span>Calculator. Essentially, it quantifies the max effect you expect <span style="text-decoration: underline;">seasonal</span> fluctuations to have on sales data, <span style="color: #0070C0;">for example,</span><span style="color: #0070C0;"> if the % of median=30% you don’t expect your sales to fall below 30% of what is considered the average because of seasonal fluctuations.</span> The default is 50%.</p>
+        <p>Any periods that fall below this defined level are then scaled back up to the acceptable level.</p>
+        <p>A deseasonalization factor is calculated by dividing each period total by the average period total. </p>
+        <p style="text-align: justify;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 96px;" />
+        </p>
+        <p>Every data point is then scaled by the deseasonalization factor for the corresponding period i.e. <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_3.png" style="width: 333px;height: 30px;" /></p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_4.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 552px;" />
+        </p>
+        <p style="font-weight: bold;text-decoration: underline;">Step 3</p>
+        <p>Next, any data points that might still skew the average sales value for a variant after deseasonalization are removed. An average sales value for each variant is calculated and all data points that fall below a specified percentage of that average are eliminated. This percentage is controlled by the system policy <span style="font-weight: bold;">Active Variant Threshold Factor</span> located in <span style="font-weight: bold;">Maintain &gt; Policies &gt; Module: Rate of Sale Calculator</span>.</p>
+        <p style="text-align: justify;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_5.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 576px;" />
+        </p>
+        <p style="font-weight: bold;text-decoration: underline;">Step 4</p>
+        <p>The final step is to remove any variants that do not have sufficient data to calculate a reliable average. After all outlier data points have been removed the weeks of data for each variant is counted.&#160; All variants with a count that is less than a specified percentage of the total weeks of data are eliminated.&#160; <span style="color: #0070C0;">For example if your time period is 9 weeks and your participation percentage is 30% then all variants that do not have at least 3 data points (i.e. 3 weeks of data) are eliminated from the calculation set.</span> The participation percentage is controlled by the system policy <span style="font-weight: bold;">Active Variant Time on Offer Minimum</span> located in <span style="font-weight: bold;">Maintain &gt; Policies &gt; Module: Rate of Sale Calculator</span>. The default is set to 31% or .31.</p>
+        <p style="text-align: justify;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_6.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 552px;" />
+        </p>
+        <p style="font-weight: bold;">Final Results</p>
+        <p style="text-align: justify;">
+            <img src="../../Resources/Images/Rate of Sale Calculator/Data Cleansing Steps_7.png" style="visibility: visible;mso-wrap-style: square;width: 425px;height: 576px;" />
+        </p>
+    </body>
+</html>

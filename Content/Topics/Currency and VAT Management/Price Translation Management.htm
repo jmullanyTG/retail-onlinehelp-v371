@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="4568" MadCap:lastWidth="2219">
+    <head><title></title>
+    </head>
+    <body>
+        <h3 >Price Translation Management</h3>
+        <p>This screen can be accessed via <span style="font-weight: bold;">Plan &gt; Views &gt; Currency &gt; Price Translation Management</span> and allows users to set different pricing strategies by currency and price range. The primary intent of this functionality is to allow users to account for differing costs of doing business in other countries without having to manage pricing for them all individually</p>
+        <p><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">In Assortment Planning, the Price Exceptions side view can be used to make overrides by item/currency to the rules created here.</span><span style="font-style: italic;"> See </span><span style="font-weight: bold;font-style: italic;">JustEnough Assortment Planning_Standard Documentation &gt; Line Visualization &gt; Supporting Views &gt; Price Exceptions View </span><span style="font-style: italic;">for more information.</span>
+        </p>
+        <p><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important: </span><span style="font-style: italic;">Even if no price translations are needed, you must, at a minimum, create at least one rule with Translation Factors </span><span style="font-style: italic;">of 1 </span><span style="font-style: italic;">for all From and To currencies to be used and with a Start Date of the earliest date to be used within any of your assortment plans and assign the rule to the Total Company level of the product hierarchies used in those plans</span>
+        </p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Price Translation Management.png" style="visibility: visible;width: 634px;height: 357px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Header Area Controls</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Currency From:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable dropdown; selects the currency to view/create translation rules from in the view</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">rules will generally only need to be created for the home currency that you will be managing your assortment plans in</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Currency To:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable multi-select; selects the currencies to view/create translations to in the view</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Include Unidentified:</span><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">&#160; </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable checkbox; sets whether or not rules that do not yet have From and To currencies defined appear in the Price Translation Rules section</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">when creating new rules, this should be left checked, as From and To currencies can only be defined in the Details section after clicking Apply in the Rules section. </span><span style="font-weight: bold;font-style: italic;color: #000000;">Clicking Apply with this setting unchecked when creating new rules will cause the new rule lines to disappear from the view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">clicking this parameter automatically refreshes the view without having to click Execute again</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Parameters:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">shows/hides the Parameters area of the view</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Execute:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">updates the Rules and Details sections of view to display rules with the selected Currency From and Currency To assignments</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">rules only have to match one of the Currency </span><span style="font-style: italic;color: #000000;">From or </span><span style="font-style: italic;color: #000000;">To assignments to be shown</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Price Translation Rules Section</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">New:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">creates a new price translation rule line</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Delete:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">deletes the selected price translation rule line(s)</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span><span style="font-style: italic;color: #000000;"> users will not be asked to confirm deletion of </span><span style="font-style: italic;color: #000000;">translation rules</span><span style="font-style: italic;color: #000000;">, so be certain you want to remove them before clicking Delete</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Fields: </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">opens the fields Customization dialog; users can drag fields to/from the </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">tab’s</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Currency Exchange Rates_7.png" style="visibility: visible;width: 227px;height: 194px;" />
+        </p>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">Custom layouts can be saved/restored by right-clicking in the </span><span style="color: #000000;">Pivot Grid</span><span style="color: #000000;"> and selecting Save Layout or Restore Layout, respectively</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">saves all new price translation rules created and changes made to existing rules since the last Apply</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">removes all new price translation rules created</span><span style="font-family: Arial;color: #000000;font-size: 12pt;">, </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">and </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">undoes deletions/</span><span style="font-family: Arial;color: #000000;font-size: 12pt;">reverts changes made to existing rules since the last Apply</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Price Translation Rule ID:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable integer; unique system identifier for the price translation rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Rule Name:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable alpha-numeric; sets/displays the name for the translation rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Privacy:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable dropdown; defines the privacy settings for the translation rule</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Public: </span><span style="color: #000000;">all users with sufficient system rights can view/edit the rule</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Private: </span><span style="color: #000000;">only the user who created the rule and view/edit it</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Shared: </span><span style="color: #000000;">only specified users with sufficient system rights can view/edit the rule</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Users:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">multi-select; sets the users allowed to view/edit the rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">From Currencies:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable multi-select; displays the currencies being translated from in the rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">To Currencies:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable multi-select; displays the currencies being translated to in the rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Price Range Endpoints:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the price range end points for the rule; corresponds to the Price Greater Than entries in the Details section</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">If the Price Greater Than 0 line in the Details section for the rule does not have a translation factor set, this field will be conditionally formatted:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Price Translation Management_1.png" style="visibility: visible;width: 634px;height: 189px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Minimum Date Present:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable calendar control; displays the earliest Start Date for the rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Maximum Date Present:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable calendar control; displays the latest Start Date for the rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Copy Rule:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable checkbox; if checked on Apply, creates a copy of the rule with “ – Copy” and the current date appended to the Rule Name</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">multiple rules can be copied with a single Apply</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Missing Values:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable checkbox; checked if the Price Greater than 0 line for the selected rule in the Rule Details section does not have Translation Factors set</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">all rules must, at a minimum, have a translation factor for the Price Greater Than 0 line </span><span style="font-style: italic;color: #000000;">set</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Price Translation Rule Details Section</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">New:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">creates a new translation factor line for the rule</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Delete: </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">deletes the selected price translation rule line(s)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span><span style="font-style: italic;color: #000000;"> users will not be asked to confirm deletion of </span><span style="font-style: italic;color: #000000;">lines</span><span style="font-style: italic;color: #000000;">, so be certain you want to remove them before clicking Delete</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;">Note:</span> <span style="font-style: italic;">the Price Greater Than 0 line populates for new rules by default and cannot be deleted; if deleted, the line will regenerate on Apply</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Fields: </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">opens the fields Customization dialog; users can drag fields to/from the </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">tab’s</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Currency Exchange Rates_7.png" style="visibility: visible;width: 227px;height: 194px;" />
+        </p>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">Custom layouts can be saved/restored by right-clicking in the </span><span style="color: #000000;">Pivot Grid</span><span style="color: #000000;"> and selecting Save Layout or Restore Layout, respectively</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">saves all new translation lines created and changes made to existing lines since the last Apply</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">removes all new translation </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">lines</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> created, and undoes deletions/reverts changes made to existing </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">lines</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> since the last Apply</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Price Greater Than:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable decimal</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> (10.1)</span><span style="font-family: Arial;color: #000000;font-size: 12pt;">; sets the starting price for the translation factor(s) defined in the line to </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">be applied; also sets the ending price for the previous line to be less than the value entered</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Start Date:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable calendar control; sets the date the translation factor(s) in the line will become active</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Price Translation Rule Detail ID:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">non-editable integer; unique system identifier for the translation rule detail; unique by line by currency</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Translation Factor:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable decimal (1.10); sets the translation factor for the corresponding currency and price range of the line;</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">translation factors are applied as a multipl</span><span style="font-style: italic;color: #000000;">ier to the ticket price </span><span style="font-style: italic;color: #000000;">(AUT) </span><span style="font-style: italic;color: #000000;">of the product</span><span style="font-style: italic;color: #000000;"> in the From Currency and are invoked by ticket prices in that currency, regardless of what the To Currencies are</span><span style="font-style: italic;color: #000000;">; </span><span style="font-weight: bold;font-style: italic;color: #000000;">setting a factor of 1 indicates no change</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important: </span><span style="font-style: italic;color: #000000;">translation factors are applied to </span><span style="font-weight: bold;font-style: italic;color: #000000;">VAT Inclusive </span><span style="font-style: italic;color: #000000;">ticket prices (AUTs) for the purposes of dependent calculations within Assortment Planning</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">I have a product with a ticket price of $20.00 USD; due to the increased cost of doing business in the UK, I create a translation rule with the following factors:</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Price Translation Management_2.png" style="visibility: visible;width: 395px;height: 149px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;"><span style="font-style: italic;color: #000000;">My </span><span style="font-style: italic;color: #000000;">current </span><span style="font-style: italic;color: #000000;">ticket price in USD for sites </span><span style="font-style: italic;color: #000000;">doing business in GBP will be $25.00, because the translation factor for products $20 and above is 1.25 ($20 * 1.25 = $25). A week later, the product goes on promotion for 20%, setting its new price in USD at $16.00. This means my new USD ticket price for my GBP sites will be $19.20 ($16 * 1.2 = $19.20)</span>
+        </p>
+    </body>
+</html>

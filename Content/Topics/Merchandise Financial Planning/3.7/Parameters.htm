@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Parameters Pane</h1>
+        <p>The Parameters pane contains a toolbar and a set of parameters.</p>
+        <h2>Toolbar</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 314px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Parameters</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Toggles hiding/showing the parameters.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2"><b>Execute</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Click to update the <a href="The Hybrid Financial Planning Grid.htm">hybrid financial plan grid</a> with data matching the selected parameters.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Parameters</h2>
+        <p style="font-weight: normal;">When executed, the following parameters filter the plan data displayed in a financial plan document. </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 314px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Product</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The levels of the product hierarchy to display in the document. (Only <a href="Product tab.htm">active</a> product levels are listed.) </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Product Agg Level</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The lowest level of the product hierarchy at which data will be pre-aggregated to optimize performance. This parameter should be set at the lowest level of the product hierarchy you want to view in the document. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Channel</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The levels of the site hierarchy to display in the document. (Only <a href="Channel tab.htm">active</a> site levels are listed.) </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Channel Agg Level</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The lowest level of the site hierarchy at which data will be pre-aggregated to optimize performance. This parameter should be set at the lowest level of the site hierarchy you want to view in the document. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Time</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The time periods for which data will be displayed in the document. Options include all time periods  including and after the <a href="General (Settings) tab.htm">Start Period</a> defined for the plan. The duration of each period is determined by the <a href="General (Settings) tab.htm">Calendar Level</a> setting defined for the plan.</p>
+                        <p style="font-weight: bold;">Note<span style="font-weight: normal;">: If non-contiguous time periods are selected, the system will automatically fill in the gaps and display data from all periods between the earliest period selected and the latest period selected.</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Currency</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The currency in which all revenue-based metrics are displayed. (Only currencies assigned to <a href="Channel tab.htm">active</a> sites are listed.)</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Comparison Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The type of <a href="Comparing Data.htm">data comparisons</a> to display in the document. Options are:</p>
+                        <ul>
+                            <li><b>None</b> - do not show comparison data in this document.</li>
+                            <li><b>vs. Branch</b> - compare this plan's metrics against the branch plan selected in the Comparison Plan parameter.</li>
+                            <li><b>vs. Master</b> - compare this plan's metrics against the  master plan selected in the Comparison Plan parameter.</li>
+                            <li><b>vs. Snapshot</b> - compare this plan's metrics against the  snapshot selected in the Comparison Plan parameter.</li>
+                            <li><b>vs. LLY</b> - compare this plan's metrics against the metric values from two years ago ("last last year"). </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Comparison Plan</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">When <b>vs. Branch</b>, <b>vs. Master</b>, or <b>vs. Snapshot</b> is selected in the Comparison Type parameter, this parameter sets the specific plan to use for comparison. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">View Mode</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Whether data displayed in the plan document represents <a href="Total Company and Average Store Modes.htm">total company values or average store values</a>.</p>
+                        <ul>
+                            <li><b>Total Company</b> - data values represent the total value aggregated from all active sites in the given time period.</li>
+                            <li><b>Average Store</b> - data values represent the average store value, calculated by dividing the total company value by the number of active sites in the given time period.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

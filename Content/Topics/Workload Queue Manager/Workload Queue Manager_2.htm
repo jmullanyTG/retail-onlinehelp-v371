@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Workload Queue Priorities</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Synchronous</span> - Bypasses the Workload Queue and runs in parallel with any queued Batches.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Immediate</span> - The Batch estimated workload was calculated to run first during the daily timeframe, in parallel with Synchronous Batches.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ASAP</span> - The Batch estimated workload was calculated to run during the daily timeframe, after Immediate Batches, taking into account escalation based upon the Batch’s S-Curve time factor.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Low Priority</span> - The Batch estimated workload was calculated to run during the daily timeframe, after ASAP and Immediate Batches, taking into account escalation based upon the Batch’s S-Curve time factor.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Nightly</span> - The Batch estimated workload was calculated to run during the nightly timeframe, after Low Priority, ASAP and Immediate Batches, taking into account escalation based upon the Batch’s S-Curve time factor.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Weekend</span> - The Batch estimated workload was calculated to run during the weekend timeframe, after Nightly, Low Priority, ASAP and Immediate Batches, taking into account escalation based upon the Batch’s S-Curve time factor.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

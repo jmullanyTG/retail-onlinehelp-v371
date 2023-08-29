@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2136" MadCap:lastWidth="1272">
+    <head>
+    </head>
+    <body>
+        <h1>Defining Item Life Cycle Dates</h1>
+        <p>You can define phase-in and phase-out dates for each of your items. These dates should reflect the dates an item will first and last appear on shelves in your locations. JustEnough uses these dates to optimize demand forecasts, purchase orders, and other related features for the item.</p>
+        <h2>Setup</h2>
+        <p>The following object should be set up before defining an item's life cycle dates:</p>
+        <ul>
+            <li>A filter that includes the items you want to manage.</li>
+        </ul>
+        <h2>Procedure</h2>
+        <ol>
+            <li>From the Manage tab, click <b>Item Manager</b>.</li>
+            <li>
+                <p>In the Items dialog box, select the filter that contains the items you want to manage.</p>
+                <p><b>Note</b>: If the Items dialog box does not automatically appear, click <b>Inventory Item Management</b> on the toolbar.</p>
+            </li>
+            <li>
+                <p>In the Choose Fields dialog box, select or create a view that includes the following fields:</p>
+                <ul>
+                    <li style="font-weight: normal;">Inventory Planning &gt;&#160;<b>Phase In Date</b></li>
+                    <li style="font-weight: normal;">Inventory Planning &gt; <b>Phase Out Date</b></li>
+                    <li style="font-weight: normal;">
+                        <p>Fields you can use to identify the items you want to manage. For example, Demand Planning &gt;&#160;<b>Site Group 3 Description</b>.</p>
+                        <p>
+                            <img src="../../Resources/Images/Item Manager/Item Manager_Choose Fields.png" />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>Click <b>OK</b>.</li>
+            <li>In the Item Manager screen, filter columns to locate the item(s) and/or channels in need of phase-in and/or phase-out dates. </li>
+            <li>
+                <p>To set dates for a single item, click in its <b>Phase In Date</b> and <b>Phase Out Date</b> fields and select the desired dates.</p>
+            </li>
+            <li>
+                <p>To set the same Phase In Date and/or Phase Out Date for multiple items:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Filter columns until only items with the same desired dates appear in the grid.</li>
+                    <li>Right-click in an item row and choose <b>Select All</b>.</li>
+                    <li>Right-click in an item's Phase In Date field and choose <b>Multiple Changes.</b></li>
+                    <li>
+                        <p>Select the desired phase-in date for the selected items.</p>
+                        <p>
+                            <img src="../../Resources/Images/Item Manager/Item Manager_Change_Multi.png" />
+                        </p>
+                    </li>
+                    <li>Right-click in an item's Phase Out Date field and choose <b>Multiple Changes.</b></li>
+                    <li>Select the desired phase-out date for the selected items.</li>
+                </ol>
+            </li>
+            <li>When all phase-in and phase-out dates have been entered, click <b>Save</b> on the toolbar to save the dates to the items.</li>
+        </ol>
+        <h2 MadCap:conditions="General.How-To Guides">Example</h2>
+        <ul MadCap:conditions="General.How-To Guides">
+            <li><a href="Example - Defining Item Lifec Cycle Dates.htm">Example - Defining Item Life Cycle Dates</a>
+            </li>
+        </ul>
+    </body>
+</html>

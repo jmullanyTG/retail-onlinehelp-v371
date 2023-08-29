@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating a Workflow</h1>
+        <ol>
+            <li>From the Maintain tab, click <b>Workflow Manager</b>.</li>
+            <li>
+                <p>From the Workflow Manager screen, click <b>New</b> in the Workflow toolbar.</p>
+                <p>
+                    <img src="../../Resources/Images/Workflow Manager/WF toolbar.png" />
+                </p>
+            </li>
+            <li>
+                <p>Enter the following details in the Workflow dialog box and click <b>OK</b>:</p>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="font-weight: bold;">Field</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="font-weight: bold;">Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Name</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">The workflow name appears in the <a href="Workflow Manager Screen.htm">Workflows list</a>.</td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Solution</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p>The JustEnough solution the workflow will govern.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Active</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">Whether or not to the workflow is "live" in the system. Consider making workflows inactive while creating or editing them to avoid unintended behavior.</td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2"><b>Controlled User Rights</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                                <p>The set of solution-specific user rights to be controlled by this workflow. The user rights selected in this property appear in the status permission blacklist of each status in the workflow. </p>
+                                <p>All user rights related to the selected solution are selected by default. You can customize this set by moving rights from the Workflow Controlled list to the Available list in the Workflow User Rights dialog box.</p>
+                                <p>
+                                    <img src="../../Resources/Images/Workflow Manager/WF User Rights.png" />
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>The new workflow appears in the Workflows screen. Its name is selected in the Workflows list under the selected solution, and the Design pane shows the default  workflow diagram for the solution selected.</p>
+                <p>
+                    <img src="../../Resources/Images/Workflow Manager/New WF.png" />
+                </p>
+            </li>
+        </ol>
+        <h2>Next Steps</h2>
+        <p>Once a workflow is created, you can start making the following changes:</p>
+        <ul>
+            <li>Edit the <a href="Adding a Status to a Workflow.htm#StatusProperties">status information</a> of the default status boxes.</li>
+            <li>Edit the <a href="Adding a Transition to a Workflow.htm">transition properties</a> of the default transitions.</li>
+            <li><a href="Adding a Status to a Workflow.htm">Add new status boxes</a> to the workflow.</li>
+            <li><a href="Adding a Transition to a Workflow.htm">Add new transitions</a> to the workflow.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-za">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Examples: Promotion Pricing Details</h1>
+        <p>The following example Promotion Pricing Details can be used to configure the standard Promotion Strategies.</p>
+        <p><span class="span_2">Note</span><span class="span_3">: The Promotion Pricing Details may vary from these defaults due to implementation requirements.</span>
+        </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p class="NormalWeb_5">Promotion Pricing Output Set</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p class="NormalWeb_5">Configuration</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>EDLP</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestPromotionPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Fixed</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">PromotionPrice (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">HighestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Amount Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">DollarDiscount (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_3">HighestDollarDiscount (Read Only)</li>
+                            <li class="NormalWeb_3">LowestDollarDiscount (Read Only)</li>
+                            <li class="NormalWeb_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">HighestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Percent Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">PercentDiscount (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_3">HighestPercentDiscount (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPercentDiscount (Read Only)</li>
+                            <li class="NormalWeb_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">HighestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Multi Buy</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_3">TotalPromotionalPrice (Read Only)</li>
+                            <li class="NormalWeb_3">MultiBuyQuantity (Read Only)</li>
+                            <li class="NormalWeb_3">HighestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPromotionPrice (Read Only)</li>
+                        </ul>
+                        <p class="p_6"><span class="span_2">Note</span><span class="span_3">: Multi Buy Promotion Strategies do not allow overrides since it would not be possible to accurately calculate a product’s promotion price if one or more products in the Promotion had an override.</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>BOGO AA Free</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestPromotionPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p class="NormalWeb_7">BOGO AB Free</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p class="NormalWeb_7">BOGO AA Amount Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">BogoDollarDiscount (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestDollarDiscount (Read Only)</li>
+                            <li class="ListParagraph_3">LowestDollarDiscount (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>BOGO AB Amount Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">BogoDollarDiscount (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestDollarDiscount (Read Only)</li>
+                            <li class="ListParagraph_3">LowestDollarDiscount (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p class="NormalWeb_7">BOGO AA Percent Off </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">BogoPercentDiscount (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPercentDiscount (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPercentDiscount (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>BOGO AB Percent Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">BogoPercentDiscount (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">HighestPercentDiscount (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPercentDiscount (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Multi Buy Amount Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_3">MultiBuyQuantity (Read Only)</li>
+                            <li class="NormalWeb_3">DollarDiscount (Read Only)</li>
+                            <li class="NormalWeb_3">HighestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPromotionPrice (Read Only) </li>
+                        </ul>
+                        <p class="p_6"><span class="span_2">Note</span><span class="span_3">: Multi Buy Promotion Strategies do not allow overrides since it would not be possible to accurately calculate a product’s promotion price if one or more products in the Promotion had an override.</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Multi Buy Percent Off</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_3">MultiBuyQuantity (Read Only)</li>
+                            <li class="NormalWeb_3">PercentDiscount (Read Only)</li>
+                            <li class="NormalWeb_3">HighestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestRetailPrice (Read Only)</li>
+                            <li class="NormalWeb_3">HighestPromotionPrice (Read Only)</li>
+                            <li class="NormalWeb_3">LowestPromotionPrice (Read Only) </li>
+                        </ul>
+                        <p class="p_6"><span class="span_2">Note</span><span class="span_3">: Multi Buy Promotion Strategies do not allow overrides since it would not be possible to accurately calculate a product’s promotion price if one or more products in the Promotion had an override.</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>BOGO AA Promo Price</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">BogoPromotionPrice (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p class="NormalWeb_7">BOGO AB Promo Price</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="NormalWeb_2"><span class="span_11">BuyQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">GetQuantity (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="NormalWeb_2"><span class="span_11">BogoPromotionPrice (</span><span class="span_17">Write Enabled</span><span class="span_11">) – Group Level, Item Level, Variant Level</span>
+                            </li>
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">HighestPromotionPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestPromotionPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Spend X Get Amount Discount</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Spend X Get Percent Discount</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Spend X Get Multi Points</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Spend X Get Points</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_3">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p>Spend X Get Gift Card</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1">HighestRetailPrice (Read Only)</li>
+                            <li class="ListParagraph_1">LowestRetailPrice (Read Only)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="p_4">&#160;</p>
+    </body>
+</html>

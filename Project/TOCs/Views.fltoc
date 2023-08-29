@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Views Overview"
+    Link="/Content/Topics/Views/Views Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Hierarchy"
+      Link="/Content/Topics/Views/Hierarchy.htm">
+      <TocEntry
+        Title="View Collection Set"
+        Link="/Content/Topics/Views/View Collection Set.htm" />
+      <TocEntry
+        Title="View Collection"
+        Link="/Content/Topics/Views/View Collection.htm" />
+      <TocEntry
+        Title="Views"
+        Link="/Content/Topics/Views/Views.htm" />
+      <TocEntry
+        Title="Widgets"
+        Link="/Content/Topics/Views/Widgets.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="View Collection Sets"
+    Link="/Content/Topics/Views/View Collection Sets.htm">
+    <TocEntry
+      Title="Maintain View Collection Sets"
+      Link="/Content/Topics/Views/Maintain View Collection Sets.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Views/Practical Application.htm">
+      <TocEntry
+        Title="Maintain View Collection Sets"
+        Link="/Content/Topics/Views/Maintain View Collection Sets_1.htm" />
+      <TocEntry
+        Title="Creating a Group"
+        Link="/Content/Topics/Views/Creating a Group.htm" />
+      <TocEntry
+        Title="Creating a View Collection Set"
+        Link="/Content/Topics/Views/Creating a View Collection Set.htm" />
+      <TocEntry
+        Title="View Collection Set Maintenance"
+        Link="/Content/Topics/Views/View Collection Set Maintenance.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Views/Technical Execution.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="View Collections"
+    Link="/Content/Topics/Views/View Collections.htm">
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Views/Practical Application_1.htm">
+      <TocEntry
+        Title="Creating a View Collection"
+        Link="/Content/Topics/Views/Creating a View Collection.htm" />
+      <TocEntry
+        Title="View Collection Maintenance"
+        Link="/Content/Topics/Views/View Collection Maintenance.htm">
+        <TocEntry
+          Title="User Access Rights"
+          Link="/Content/Topics/Views/User Access Rights.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Views/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Views"
+    Link="/Content/Topics/Views/Views_1.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Views/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Building and Maintaining Views"
+        Link="/Content/Topics/Views/Building and Maintaining Views.htm">
+        <TocEntry
+          Title="Field Definitions"
+          Link="/Content/Topics/Views/Field Definitions.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Standard Views"
+        Link="/Content/Topics/Views/Standard Views.htm" />
+      <TocEntry
+        Title="Custom Views"
+        Link="/Content/Topics/Views/Custom Views.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Views/Practical Application_2.htm">
+      <TocEntry
+        Title="Loading and Using a View"
+        Link="/Content/Topics/Views/Loading and Using a View.htm" />
+      <TocEntry
+        Title="Editing an Existing View"
+        Link="/Content/Topics/Views/Editing an Existing View.htm" />
+      <TocEntry
+        Title="Custom Views"
+        Link="/Content/Topics/Views/Custom Views_1.htm" />
+      <TocEntry
+        Title="Importing and Exporting Views"
+        Link="/Content/Topics/Views/Importing and Exporting Views.htm">
+        <TocEntry
+          Title="Import New"
+          Link="/Content/Topics/Views/Import New.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Views/Technical Execution_2.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Widgets"
+    Link="/Content/Topics/Views/Widgets_1.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Views/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Pivot Grids"
+        Link="/Content/Topics/Views/Pivot Grids.htm" />
+      <TocEntry
+        Title="Data Grids"
+        Link="/Content/Topics/Views/Data Grids.htm" />
+      <TocEntry
+        Title="Charts"
+        Link="/Content/Topics/Views/Charts.htm" />
+      <TocEntry
+        Title="Single Column Pivot Grids"
+        Link="/Content/Topics/Views/Single Column Pivot Grids.htm" />
+      <TocEntry
+        Title="Schedules"
+        Link="/Content/Topics/Views/Schedules.htm" />
+      <TocEntry
+        Title="Browsers"
+        Link="/Content/Topics/Views/Browsers.htm" />
+      <TocEntry
+        Title="Structured Report"
+        Link="/Content/Topics/Views/Structured Report.htm" />
+      <TocEntry
+        Title="OLAP Pivot Grids"
+        Link="/Content/Topics/Views/OLAP Pivot Grids.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Views/Practical Application_3.htm">
+      <TocEntry
+        Title="Pivot Grids"
+        Link="/Content/Topics/Views/Pivot Grids_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General.htm" />
+        <TocEntry
+          Title="Data Selection"
+          Link="/Content/Topics/Views/Data Selection.htm" />
+        <TocEntry
+          Title="Grid Properties"
+          Link="/Content/Topics/Views/Grid Properties.htm">
+          <TocEntry
+            Title="Grid Options"
+            Link="/Content/Topics/Views/Grid Options.htm" />
+          <TocEntry
+            Title="Column Total Options"
+            Link="/Content/Topics/Views/Column Total Options.htm" />
+          <TocEntry
+            Title="Row Total Options"
+            Link="/Content/Topics/Views/Row Total Options.htm" />
+          <TocEntry
+            Title="Update Options"
+            Link="/Content/Topics/Views/Update Options.htm" />
+          <TocEntry
+            Title="Chart Options"
+            Link="/Content/Topics/Views/Chart Options.htm" />
+          <TocEntry
+            Title="User Options"
+            Link="/Content/Topics/Views/User Options.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Column Properties"
+          Link="/Content/Topics/Views/Column Properties.htm">
+          <TocEntry
+            Title="Expression Columns"
+            Link="/Content/Topics/Views/Expression Columns.htm" />
+          <TocEntry
+            Title="Lookup Columns"
+            Link="/Content/Topics/Views/Lookup Columns.htm" />
+          <TocEntry
+            Title="Cell Formatting/Coloring Rules"
+            Link="/Content/Topics/Views/Cell Formatting Coloring Rules.htm" />
+          <TocEntry
+            Title="Data Column Hide Rules"
+            Link="/Content/Topics/Views/Data Column Hide Rules.htm" />
+          <TocEntry
+            Title="Write Back Settings"
+            Link="/Content/Topics/Views/Write Back Settings.htm" />
+          <TocEntry
+            Title="Aggregation Settings"
+            Link="/Content/Topics/Views/Aggregation Settings.htm" />
+          <TocEntry
+            Title="Rolling Actions"
+            Link="/Content/Topics/Views/Rolling Actions.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Data Writeback"
+          Link="/Content/Topics/Views/Data Writeback.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Data Grids"
+        Link="/Content/Topics/Views/Data Grids_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General_1.htm" />
+        <TocEntry
+          Title="Data Selection"
+          Link="/Content/Topics/Views/Data Selection_1.htm" />
+        <TocEntry
+          Title="Grid Properties"
+          Link="/Content/Topics/Views/Grid Properties_1.htm">
+          <TocEntry
+            Title="Grid Options"
+            Link="/Content/Topics/Views/Grid Options_1.htm" />
+          <TocEntry
+            Title="Layout Options"
+            Link="/Content/Topics/Views/Layout Options.htm" />
+          <TocEntry
+            Title="Update Options"
+            Link="/Content/Topics/Views/Update Options_1.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Column Properties"
+          Link="/Content/Topics/Views/Column Properties_1.htm">
+          <TocEntry
+            Title="Expression Columns"
+            Link="/Content/Topics/Views/Expression Columns_1.htm" />
+          <TocEntry
+            Title="Lookup Columns"
+            Link="/Content/Topics/Views/Lookup Columns_1.htm" />
+          <TocEntry
+            Title="Editability Rules"
+            Link="/Content/Topics/Views/Editability Rules.htm" />
+          <TocEntry
+            Title="Cell Formatting/Coloring Rules"
+            Link="/Content/Topics/Views/Cell Formatting Coloring Rules_1.htm"></TocEntry>
+          <TocEntry
+            Title="Actions"
+            Link="/Content/Topics/Views/Actions.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Data Writeback"
+          Link="/Content/Topics/Views/Data Writeback_1.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Charts"
+        Link="/Content/Topics/Views/Charts_1.htm">
+        <TocEntry
+          Title="Data Selection"
+          Link="/Content/Topics/Views/Data Selection_2.htm" />
+        <TocEntry
+          Title="Chart Configuration"
+          Link="/Content/Topics/Views/Chart Configuration.htm">
+          <TocEntry
+            Title="Construction"
+            Link="/Content/Topics/Views/Construction.htm" />
+          <TocEntry
+            Title="Presentation"
+            Link="/Content/Topics/Views/Presentation.htm" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Single Column Pivot Grids"
+        Link="/Content/Topics/Views/Single Column Pivot Grids_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General_2.htm" />
+        <TocEntry
+          Title="Data Selection"
+          Link="/Content/Topics/Views/Data Selection_3.htm" />
+        <TocEntry
+          Title="Grid Properties"
+          Link="/Content/Topics/Views/Grid Properties_2.htm">
+          <TocEntry
+            Title="Update Options"
+            Link="/Content/Topics/Views/Update Options_2.htm" />
+          <TocEntry
+            Title="Band Options"
+            Link="/Content/Topics/Views/Band Options.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Column Properties"
+          Link="/Content/Topics/Views/Column Properties_2.htm">
+          <TocEntry
+            Title="Column"
+            Link="/Content/Topics/Views/Column.htm" />
+          <TocEntry
+            Title="Column Settings"
+            Link="/Content/Topics/Views/Column Settings.htm" />
+          <TocEntry
+            Title="Font Settings"
+            Link="/Content/Topics/Views/Font Settings.htm" />
+          <TocEntry
+            Title="Expression Settings"
+            Link="/Content/Topics/Views/Expression Settings.htm" />
+          <TocEntry
+            Title="Lookup Settings"
+            Link="/Content/Topics/Views/Lookup Settings.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Data Writeback"
+          Link="/Content/Topics/Views/Data Writeback_2.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Schedules"
+        Link="/Content/Topics/Views/Schedules_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General_3.htm" />
+        <TocEntry
+          Title="Schedule Tree Data Selection"
+          Link="/Content/Topics/Views/Schedule Tree Data Selection.htm" />
+        <TocEntry
+          Title="Schedule Tree Data Mapping"
+          Link="/Content/Topics/Views/Schedule Tree Data Mapping.htm" />
+        <TocEntry
+          Title="Schedule Data Selection"
+          Link="/Content/Topics/Views/Schedule Data Selection.htm" />
+        <TocEntry
+          Title="Schedule Data Mapping"
+          Link="/Content/Topics/Views/Schedule Data Mapping.htm" />
+        <TocEntry
+          Title="Schedule Properties"
+          Link="/Content/Topics/Views/Schedule Properties.htm" />
+        <TocEntry
+          Title="Schedule Data Writeback"
+          Link="/Content/Topics/Views/Schedule Data Writeback.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Browsers"
+        Link="/Content/Topics/Views/Browsers_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General_4.htm" />
+        <TocEntry
+          Title="Browser Data Selection"
+          Link="/Content/Topics/Views/Browser Data Selection.htm" />
+        <TocEntry
+          Title="Parameter Mapping"
+          Link="/Content/Topics/Views/Parameter Mapping.htm" />
+        <TocEntry
+          Title="Browser Properties"
+          Link="/Content/Topics/Views/Browser Properties.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Structured Report"
+        Link="/Content/Topics/Views/Structured Report_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General_5.htm" />
+        <TocEntry
+          Title="Report Data Selection"
+          Link="/Content/Topics/Views/Report Data Selection.htm" />
+        <TocEntry
+          Title="Report Designer"
+          Link="/Content/Topics/Views/Report Designer.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="OLAP Pivot Grids"
+        Link="/Content/Topics/Views/OLAP Pivot Grids_1.htm">
+        <TocEntry
+          Title="General"
+          Link="/Content/Topics/Views/General_6.htm" />
+        <TocEntry
+          Title="OLAP Pivot Grid Properties"
+          Link="/Content/Topics/Views/OLAP Pivot Grid Properties.htm">
+          <TocEntry
+            Title="OLAP Pivot Grid Data"
+            Link="/Content/Topics/Views/OLAP Pivot Grid Data.htm" />
+          <TocEntry
+            Title="Grid Options"
+            Link="/Content/Topics/Views/Grid Options_2.htm" />
+          <TocEntry
+            Title="Column Total Options"
+            Link="/Content/Topics/Views/Column Total Options_1.htm" />
+          <TocEntry
+            Title="Row Total Options"
+            Link="/Content/Topics/Views/Row Total Options_1.htm" />
+          <TocEntry
+            Title="Chart Options"
+            Link="/Content/Topics/Views/Chart Options_1.htm" />
+          <TocEntry
+            Title="User Options"
+            Link="/Content/Topics/Views/User Options_1.htm" />
+        </TocEntry>
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Views/Technical Execution_3.htm">
+      <TocEntry
+        Title="Importing and Exporting Widgets"
+        Link="/Content/Topics/Views/Importing and Exporting Widgets.htm" />
+      <TocEntry
+        Title="Importing"
+        Link="/Content/Topics/Views/Importing.htm" />
+      <TocEntry
+        Title="Exporting"
+        Link="/Content/Topics/Views/Exporting.htm" />
+      <TocEntry
+        Title="Linking a Widget to a View in SQL"
+        Link="/Content/Topics/Views/Linking a Widget to a View in SQL.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Parameters"
+      Link="/Content/Topics/Views/Parameters.htm">
+      <TocEntry
+        Title="Essential Business Concepts"
+        Link="/Content/Topics/Views/Essential Business Concepts_2.htm" />
+      <TocEntry
+        Title="Practical Application"
+        Link="/Content/Topics/Views/Practical Application_4.htm" />
+      <TocEntry
+        Title="Create/Edit Parameter"
+        Link="/Content/Topics/Views/Create Edit Parameter.htm" />
+      <TocEntry
+        Title="Test Parameter Control"
+        Link="/Content/Topics/Views/Test Parameter Control.htm" />
+      <TocEntry
+        Title="Technical Execution"
+        Link="/Content/Topics/Views/Technical Execution_4.htm" />
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

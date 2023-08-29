@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Versioning Process</h1>
+        <p>Versioning may occur at many steps along the way to completing an advertising Event. Versioning is the association of a set of information (e.g. Promotion Strategy, price, copy, images, etc.) to one or more Site(s) while associating different information to other Site(s). </p>
+        <p>A Price Cluster is a grouping of Sites for the purposes of promotional price versioning. A Site may only belong to one Price Cluster in a Price Cluster Set. </p>
+        <p>A Geography is a grouping of Sites for the purposes of shared message versioning. A Site may belong to more than one Geography (i.e. distribution point) to allow the retailer to tailor content to the distribution whether it be based on language, images used, or just adjusted verbiage to better target a customer segment receiving the distributed version of the event. </p>
+        <p>Promotions may be versioned at the Price Cluster level to specify different Promotion Strategies or pricing. </p>
+        <p>Event Slots may be versioned to display a different Promotion for specified Geographies. </p>
+        <p>Lastly, every Promotion, whether added to an Event or not, may have Content Versions that specify copy and images assigned to Geographies.</p>
+        <p><span style="font-weight: bold;">Note:</span> Versioning is optional.</p>
+        <h2>Promotion Versioning</h2>
+        <p>At the Promotion level, it is possible to alter the product mix, Promotion Strategy and pricing for each associated Price Cluster. In addition, Promotion Content, i.e. copy and images, can be unique for each Content Version.</p>
+        <h2>Event Slot Versioning</h2>
+        <p>When a Promotion is placed in an advertised Slot of an Event Slot Set, it is possible to assign the Promotion to all, or some of the Event Geographies. This allows for the assignment of alternative Promotion(s) to the Slot for remaining Geographies thereby creating a regional product version. A Geography can only be associated to one Promotion in a Slot. Geographies are linked to Promotion Price Clusters through their respective Site assignments. </p>
+        <h2>Content Versioning</h2>
+        <p>After a Promotion is placed in an Event Slot, the Promotion’s Content is copied to create an Event Content instance that is specific to the Slot the Promotion was placed in. As with Promotions, Event Content, i.e. copy and images, can be unique for each Content Version. Content Versions are linked to Geographies. It is possible to associate a Geography to more than one Content Version. For example, a Geography may require that Content be provided in both English and French.</p>
+        <h2>Event Versioning</h2>
+        <p>The Geography in the Event represents a single message that describes all the Promotions assigned to it within the Event (i.e. the Event Slot Sets). The process of versioning, which is performed at the Slot Set level, is to compare the message for each Geography, and identify the true set of distinct messages, or Event Versions.</p>
+        <p>Calculating Event Versions is a two-step process in which each Slot Set is first broken down into Base (color) Versions according to image assignments and any non-black copy, price, or Promotion attribute values. After which, each Base Version is further broken down into additional Plate (black) Versions. The result is a distinct set of content data by Slot Set and Slot needed to create a complete Composition that is applicable to one or more Geographies.</p>
+        <p>The versioning order is based on the order of the Geographies in the Geography Set used for the Event. The first Geography in the set provides a constant for determining the first color version for the Slot Set. Further versions are grouped by their highest ranked Geography.</p>
+        <p>Base Versions are named using alpha characters beginning with the letter ‘A’. Should the number of bases exceed 26, the base name will become a 2-character string starting with ‘AA’ and continuing as ‘AB’, ‘AC’, etc. Plate (black) Versions are named numerically (preceded with the letter ‘P’) within their computed Base Version, and resets back to ‘1’ for each base afterwards. The naming convention for the complete version is the &lt;Event Name&gt;_ &lt;Slot Set Name&gt;_&lt;Base Name&gt;P&lt;Plate Version number&gt;. For example “MyEvent_Page1_AP1”. If an Event only contains one Geography and if every Promotion only uses one Price Cluster, the only version that should be created is ‘AP1’.</p>
+    </body>
+</html>

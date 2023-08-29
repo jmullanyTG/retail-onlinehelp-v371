@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="1904" MadCap:lastWidth="2715">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Practical Application</h1>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;font-size: 12pt;">One of the most common points of contention in the clustering process is simply determining which clustering algorithm – K-Means or K-Medoids – will yield the most accurate results. This decision really depends on the nature of the specific data being used to calculate the desired cluster sets. Here are a few things to consider when making this decision:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;font-size: 12pt;">Performance: </span><span style="font-size: 12pt;">the K-Means algorithm requires far fewer iterations to resolve than K-Medoids does, which means reduced time required to calculate (and re-calculate) cluster sets created via this method. If your business requires a large number of cluster sets and/or those cluster sets need to be updated frequently, this may be a point of differentiation when making your choice</span>
+            </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;font-size: 12pt;">Data </span><span style="font-weight: bold;font-size: 12pt;">Anomalies</span><span style="font-weight: bold;font-size: 12pt;">:</span><span style="font-size: 12pt;"> the K-Medoids algorithm is generally considered to be more responsive to data with a high degree of noise and/or outliers than K-Means. Whether K-Medoids will produce a more accurate result than K-Means is entirely dependent on the </span><span style="font-size: 12pt;">data returned by the criteria you specify. To illustrate this point, see the example* below:</span>
+            </li>
+        </ul>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;font-size: 12pt;">
+            <img src="../../Resources/Images/Cluster Site Manager/Practical Application.png" style="visibility: visible;width: 637px;height: 257px;" />
+        </p>
+        <p class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;margin-left: 36pt;"><span style="font-family: Arial;color: #252525;font-size: 8pt;">* </span><span style="font-family: Arial;color: #252525;font-size: 8pt;">The illustration was prepared with the Java applet, E.M. Mirkes,</span><span class="apple-converted-space" style="font-family: Arial;color: #252525;font-size: 8pt;">&#160;</span><a href="http://www.math.le.ac.uk/people/ag153/homepage/KmeansKmedoids/Kmeans_Kmedoids.html"><span class="Hyperlink" style="font-family: Arial;color: #663366;font-size: 8pt;">K-means and K-medoids: applet</span></a><span style="font-family: Arial;color: #252525;font-size: 8pt;">. University of Leicester, 2011</span>
+        </p>
+        <p class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;margin-left: 36pt;">&#160;</p>
+        <p class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;margin-left: 36pt;font-size: 12pt;">Figures 1a) – 1f) depict the iterations of the K-Means algorithm on a particular data set, where figures 2a) – 2h) depict the iterations of the K-Medoids algorithm on the same set; notice that, in this case, K-Means has ignored the clear differentiation of the two groups in the lower half of the grid, whereas K-Medoids provided what appears to be the more accurate solution</p>
+        <p class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;margin-left: 36pt;">&#160;</p>
+        <p class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;margin-left: 36pt;"><span style="font-size: 12pt;">This occurred largely due to the fact that K-Means estimates the ideal positioning of arbitrary centroids to define clusters whereas K-Medoids uses actual data points in the </span><span style="font-size: 12pt;">set as medoids to define its clusters. </span><span style="font-size: 12pt;">Not every data set will have such a clear-cut differentiation of groups</span><span style="font-size: 12pt;">, </span><span style="font-size: 12pt;">though, and users should be aware that, in </span><span style="font-size: 12pt;">some cases, </span><span style="font-size: 12pt;">the accuracy of one method over the other may be somewhat subjective</span>
+        </p>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-size: 12pt;">If there is one point that is crucial to take away from this manual, it is this: proper structuring of cluster sets is essential to getting the most out of JustEnough Assortment Planning. Before you begin creating cluster sets for use with Assortment Planning, make sure you’ve read the introduction to Cluster Set Management, as well as the Prerequisites and Essential Business Concepts</span><span style="font-size: 12pt;"> and have completed the steps described therein. </span><span style="font-size: 12pt;">Once you’ve done this, c</span><span style="font-size: 12pt;">reating the ideal cluster sets for your business really comes down</span><span style="font-size: 12pt;"> to two questions:</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #000000;font-size: 12pt;">At what level of our business is there the greatest variation in performance among stores</span><span style="color: #000000;font-size: 12pt;">?</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #000000;font-size: 12pt;">The best way to gain a proper understanding of this is by analyzing how your stores rank with your selected criteria at multiple levels:</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #000000;font-size: 12pt;">Create several groups of cluster sets, perhaps starting as high as total company for all products and stores, and building out groups all the way down to the lowest proposed level – use the same Classification and Attribute Settings for each group</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #000000;font-size: 12pt;">Compare the store rankings for each subsequent cluster set to the top level se</span><span style="color: #000000;font-size: 12pt;">t; there are a number of ways to achieve this but the focus of the analysis is essentially to compare how different the lower level results are against the top level results and determine if the variation at each level is significant enough to warrant the additional complexity; some examples of how to approach this are:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #000000;font-size: 12pt;">By store, calculate the number of cluster sets at each level that assign that store to each classification, sum the cluster sets whose classification assignment deviates from the top level assignment</span><span style="color: #000000;font-size: 12pt;">, then compare each level by sum or average deviations to identify the level at which additional complexity ceases to cause significant increase</span>
+            </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #000000;font-size: 12pt;">Calculate the number of deviations in classification assignment from the top level by store for each cluster set </span><span style="color: #000000;font-size: 12pt;">level</span><span style="color: #000000;font-size: 12pt;"> and compare each level by sum or average deviations to identify the level at which additional complexity ceases to cause significant increase</span>
+            </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">when using the sum of deviations by </span><span style="font-style: italic;color: #000000;font-size: 12pt;">level</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, depending on the nature of the underlying data used in calculation of your cluster sets, the tendency is for lower levels to yield greater sums simply because of the increase in the number of cluster sets</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #000000;font-size: 12pt;">Can our organization handle planning at this level of detail </span><span style="color: #000000;font-size: 12pt;">without significant impact to our current ordering timelines?</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #000000;font-size: 12pt;">Once you’ve answered the first question, you now need to understand if your team can realistically support analyzing at that level of detail:</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #000000;font-size: 12pt;">Group</span><span style="color: #000000;font-size: 12pt;"> the number of proposed cluster sets into areas </span><span style="color: #000000;font-size: 12pt;">that could be managed by a single individual</span>
+            </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #000000;font-size: 12pt;">If this number is greater than the number of people on your team, you need to weigh the perceived benefit of planning at the proposed level against the cost of hiring more personnel</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #000000;font-size: 12pt;">If the cost of changing your team to suit the greater level of detail is greater than the expected return, compromise by examining the other levels in your analysis and identifying one that is feasible </li>
+        </ul>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Grid</h1>
+        <p>The grid button in the upper right section of each Site Manager document will toggle the top grid widget on and off. Upon creation of the document, the grid will be populated by the default columns. Additional columns may be added using the “choose columns” functionality, or through creation of calculated columns. </p>
+        <h2 >Default Columns</h2>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Code – </span>Code used to identify the site throughout the organization. This is an imported field. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">SiteID – </span>A unique identifier for the site used within JustEnough. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Name –</span> The name for the site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority –</span> The global site priority value. It is read only within the top gird. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority Group –</span> The priority group value. It is read only within the top grid. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Currency –</span> The default currency for the site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Channel Code –</span> Code used to identify the associated explicit channel attribute. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Channel Description –</span> Optional description for the channel. </li>
+        </ul>
+        <h2 >Choose Columns</h2>
+        <p>Several other columns are selectable for inclusion in the grid section of the document. The “choose grid section of the document. Saved views may be saved and loaded using the “choose fields” window. Additional columns may be added to the choose columns functionality through configuration of the filter metadata. </p>
+        <h3 >Site Capacity</h3>
+        <p>Site capacity data may be returned within the grid view of the site manager. It is strictly informational. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Total Selling Capacity </span><span style="font-weight: bold;">–</span> Total quantity of stock (in units) which may be considered “for sale” at the site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Total Stockroom Capacity – </span>Total stockroom capacity indicates the quantity of stock (in units) which may be stored in the stockroom. </li>
+        </ul>
+        <h3 >Site Group</h3>
+        <p>All relevant site group information may be returned within the grid view. </p>
+        <h3 >Attribute</h3>
+        <p>Any imported or created site attributes. These are defined by each organization.</p>
+        <h3 >Site Schedules</h3>
+        <p>Site shipping and receiving schedules may be set within the grid view of the site manager by selecting the shipping and receiving schedule columns from the “choose columns” option list. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Receiving Schedule – </span>Determines the set of dates (inclusive or exclusive) on which the site may receive shipments of stock. Schedules must be created within the Schedules Module. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Shipping Schedule –</span> Determines the set of dates (inclusive or exclusive) on which the site may ship stock. Schedules must be created within the Schedules Module. </li>
+        </ul>
+        <h3 >Site Exclusion</h3>
+        <p>If site product exclusions exist (Site Product Exclusion tab), they may be filtered down for further investigation based on the value in this field. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Product Exclusion Exists – </span>Will display a checked box if any exclusions exist for the site. </li>
+        </ul>
+        <h3 >Site Type</h3>
+        <p>Site type data will define the role of the location within organization as well as its existence within the plane of reality (if it is virtual or a logical partition within a real location). </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Type – </span>Defines the role of the site within the organization (e.g. store or DC).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Is Contract –</span> Checked if a site is a contract site (i.e. a persistent logical partition).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Contract Site –</span> If a site is marked as a contract site, this field lists the associated physical site to which is it linked.  </li>
+        </ul>
+        <h2 >Calculated</h2>
+        <p>Users may create calculated columns using any logical combination of the existing columns. These columns are built using the expression editor. </p>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Essential Business Concepts</h1>
+        <p>Line Visualization is designed to allow users to view and refine their plans at multiple levels whether or not they know the exact items they will be ordering yet. Here, you can assort items to site clusters, craft your sales plans via rate of sale, total sales, or total targeted buy quantity in both revenue and units, plan receipt flow strategy, and even manage your sales and inventory plans pre or in-season by period. Here are some key concepts to be aware of when working within Line Visualization:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Maximum Data Rows – </span>the system policy <span style="font-weight: bold;">Line Visualization Maximum number SQL Data Rows</span>, accessible via <span style="font-weight: bold;">Maintain &gt; Policies &gt; Module: Assortment</span>, determines the maximum number of SQL data rows that can be queried in Line Visualization</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Error:</span> <span style="font-style: italic;">if the data selection parameters exceed this maximum, an error will be raised</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Placeholders and Variants</span> – whether you seed your plan via the Smart Start process or choose to manually add lines to you plan and build from the ground up, <span style="font-weight: bold;">placeholder items are your starting point</span>. Think of placeholders as slots into which actual styles can be placed. <span style="font-weight: bold;">We refer to actual styles as variants</span>. All aspects of your assortment plan can be managed regardless of whether variants are attached to placeholders, and when variants are attached, all your work remains intact</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Assigning Variants </span>– Assortment Planning can accept an external data feed from a PLM (Product Lifecycle Management) or similar system to define variants within JustEnough. When this feed is configured, assigning variants is as simple as dragging and dropping them from the Style Bank (see <span style="font-weight: bold;">Style Bank</span> section below). Additionally, if the integrated PLM is able to send product attribute information attached to the variant data, those attributes will be passed on to placeholders to which those variants are assigned.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Placeholders and Collections </span>– it is possible to plan at either the placeholder (equivalent to style-color) or collection (equivalent to style) level by using the view mode for each. While the most typical case for planning in collection mode is to plan multiple colors of the same style together, JustEnough Assortment Planning does not restrict collections to this configuration. Collections can be comprised of multiple styles within the same product level or even across product levels.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span> <span style="font-style: italic;">collections comprised of styles that cross multiple product levels may not be visible in their entirety to all users, based on their product hierarchy permissions. In this scenario, the user will only be able to view and work with the portion of the collection to which they have appropriate permissions.</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Clusters versus Sites</span> – In order to maximize system performance, JustEnough Assortment Planning was deliberately designed to operate primarily at the site cluster, rather than site, level, however it is still possible to make site level product exclusions, saving you the effort of having to create custom clusters every time you have a scenario where a particular variant should not be assorted to specific locations within existing clusters. See <span style="font-weight: bold;">Location Exclusions</span> below for more information.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Calculation Model – </span>the Line Visualization calculation model is built on single directional locking calculations that change all dependent metrics and balance to all levels of the plan regardless of which level they were changed at. In most cases, users are able to see the effects of their changes immediately without having to Apply them first, but there are some calculations, such as when AUT (average unit ticket), phase in, or phase out are changed, that require background processing, and, thus, an Apply, to complete. </li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 36pt;">&#160;</p>
+        <p class="ListParagraph" style="margin-left: 36pt;">Prior to Apply, the system will lock (indicated by a red or pink conditional format to the line, depending on the row color) any metrics for the placeholder or collection that are dependent upon changes already made:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Essential Business Concepts_3.png" style="visibility: visible;width: 634px;height: 294px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 36pt;">In this state, the user can continue to change unlocked metrics without Applying. All metrics will become unlocked again after clicking Apply.</p>
+        <p class="ListParagraph" style="margin-left: 36pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Tracking Against Ordering Deadlines – </span>as one of the primary purposes of Assortment Planning is planning future orders so it is essential to be able to track products you plan to order against relevant deadlines. Once commitment orders are generated for products within your plan, the workflow attached to those orders drives key dates in the ordering process, which can be tracked through <span style="font-weight: bold;">Order Manager</span> and the <span style="font-weight: bold;">Assortment Upcoming Commitments Dashboard</span>, but prior to commitments being created, assortment planning reads default lead times by product hierarchy level and suppliers associated with variants to provide visibility to initial order due dates. In order to benefit from this information, the following things need to be set up:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-left: 90pt;"><span style="font-weight: bold;">Default Lead Time Days by Product Hierarchy Level:</span> accessible via <span style="font-weight: bold;">Defaults</span> within the <span style="font-weight: bold;">Manage Assortment Plans </span>dialog, the <span style="font-weight: bold;">Lead Time Days </span>field allows users to set generic lead time days by product hierarchy level</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Essential Business Concepts_3_1.png" style="visibility: visible;width: 634px;height: 195px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 90pt;">The system uses this setting to determine the number of days before a receipt date an order must be placed to arrive on time when there is no variant specific supplier lead time available, either because no variant is assigned to a given placeholder or because the assigned variant doesn’t have a supplier and lead time associated (for more info on setting defaults, see <span style="font-weight: bold;">Manage Assortment Plans &gt; Essential Business Concepts &gt; Header Area Controls &gt; Defaults</span>)</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-left: 90pt;"><span style="font-weight: bold;">Variant Supplier Assignments</span>: provided supplier information has been imported into JustEnough, variant supplier assignments can be set through <span style="font-weight: bold;">Variant Manager </span>(<span style="font-weight: bold;">Manage &gt; Variant Manager</span>)</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Essential Business Concepts_3_2.png" style="visibility: visible;width: 634px;height: 204px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 90pt;">The Supplier Code / Lead Time field can be used to select from available suppliers for variants listed in the active Variant Manager Document. The system uses the lead time days associated with the selected supplier to determine the number of days prior to a receipt date when that variant is assigned to a placeholder within Assortment Planning</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;font-style: italic;">Helpful Hint: </span><span style="font-style: italic;">as with other fields in Variant Manager, the Supplier Code / Lead Time field can be set for multiple variants at once by using </span><span style="font-weight: bold;font-style: italic;">CTRL + Click </span><span style="font-style: italic;">or </span><span style="font-weight: bold;font-style: italic;">Shift + Click </span><span style="font-style: italic;">to select the desired variant lines then</span> <span style="font-style: italic;">using the </span><span style="font-weight: bold;font-style: italic;">right click &gt; Multiple Changes</span><span style="font-style: italic;"> functionality</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Actualization – </span>because Assortment Planning is an in-season planning tool as well as a pre-season tool, as periods within your plan pass, plan values will be replaced by actual values during regularly scheduled system processes. As this occurs, certain plan metrics and functions will be locked for placeholders whose lifecycles intersect with actualized periods:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Collection % Contribution, Ttl Buy $, Ttl Buy U, Min Pres, AUT, and AUC will not be directly editable</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Collection % Contribution, Ttl Buy $ &amp; U can still be impacted by changes to ROS $, ROS U, Ttl Sls $, Ttl Sls U, and S/T %</li>
+            <li>
+                <p>AUT can still be changed via the AUT side view, though changes can only be made to non-actualized periods; in the main planning and cluster set views, AUT will display the weighted average of AUT values for all periods, both actualized and future, beneath</p>
+            </li>
+            <li>
+                <p>AUC can still be indirectly impacted through the Receipt AUC of planned future receipts, as well as the cost of on order units and actual receipt units; in the main planning and cluster set views, AUC will display the weighted average of AUC values for all periods, both actualized and future, beneath</p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;">The Split function (see <span style="font-weight: bold;">Header Area Controls</span> below), which is used to split placeholders into two or more placeholders with shorter lifespans, will be disabled</li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 72pt;">&#160;</p>
+        <p class="ListParagraph" style="margin-left: 36pt;">Additionally, for metrics that remain editable, constraints will be put in place to prevent users from making changes that would cause sales to drop below actualized totals</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Essential Business Concepts_3_3.png" style="visibility: visible;width: 478px;height: 182px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 36pt;">If a user attempts to make a change that would violate this, they will receive an error and the changed metric(s) will be reverted to their previous values</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">VAT Actualization – </span><span style="color: #000000;">as periods begin to actualize in your assortment plan, we also actualize VAT amounts for those periods. </span><span style="color: #FF0000;"><span style="color: #000000;">If your organization deals with VAT, it is important that your data import includes</span></span><span style="color: #000000;"> </span><span style="color: #FF0000;"><span style="color: #000000;">Sales ex VAT</span></span><span style="color: #000000;">, as the system uses the difference between Sales and Sales ex VAT to calculate historic VAT % for actualized periods</span><span style="color: #FF0000;"><span style="color: #000000;">. If any records imported for a given variant/cluster/period lack Sales ex VAT, the system will null the VAT % for the entire variant/cluster/period</span></span><span style="color: #000000;">,</span> as an indicator to the user that there is missing data in the import. This has the potential to cause anomalies in AUR ex VAT in the Main Planning View as well as with metrics in the Price Exceptions View</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;">Helpful Hint: </span><span style="font-style: italic;">an easy way to check for this is to look at the VAT %’s in Sales Plan view for periods that have actualized VAT % of zero though </span><span style="font-style: italic;">VAT %’s were in effect for the product</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Essential Business Concepts_3_4.png" style="visibility: visible;width: 634px;height: 366px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li>&#160;</li>
+        </ul>
+    </body>
+</html>

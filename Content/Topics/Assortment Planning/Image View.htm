@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="4011" MadCap:lastWidth="2219">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Image View</h1>
+        <p>Use Image view to get a visual summary of your assortment plan, either by cluster or by period. Here, you can get a sense for how your assortment transforms over time. You can also make quick visual edits on the fly to see if the removal or certain items helps or hinders your visual goal.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Image View.png" />
+        </p>
+        <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">I<span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Notes: </span></p>
+        <ul>
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">Image view is not available in Collection mode</span>
+            </li>
+            <li><span style="font-style: italic;font-size: 12pt;">Th</span><span style="font-style: italic;font-size: 12pt;">e filter parameters in this view are linked with those</span><span style="font-style: italic;font-size: 12pt;"> in the Main Planning view; </span><span style="font-style: italic;font-size: 12pt;">when parameters change and are executed there, this view will update and refresh accordingly; Note that it is possible to </span><span style="font-style: italic;font-size: 12pt;">change the filter criteria within Image view to, for example, focus on a smaller window of time</span>
+            </li>
+            <li><span style="font-style: italic;font-size: 12pt;">Due to the large data size associated with image files, selecting too much data to show in the view can cause the system to become sluggush and take a long time to refresh; the system policy </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Image View Maximum number of SQL Data Rows</span><span style="font-style: italic;font-size: 12pt;">, accessible via </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Assortment</span><span style="font-style: italic;font-size: 12pt;">, can be used to limit the amount of data that can be brought back in Image View and help mitigate such issues; the view will raise an error the the data selection exceeds the value set in this policy</span>
+            </li>
+        </ul>
+        <h2>Toolbar Actions</h2>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">View Options:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><b>Quick Text</b>: sets text display options for image cells within the view
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Show Code:</span><span style="font-size: 12pt;"> toggles the display of the placeholder code at the bottom of each cell; on by default</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Attributes:</span><span style="font-size: 12pt;"> select an Attribute Family defined in the </span><span style="font-weight: bold;font-size: 12pt;">Attribute Management</span><span style="font-size: 12pt;"> module to display in the upper-right corner of each cell</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">AUC, Ticket Price, ROS $, ROS U, Ttl Sls $, Ttl Sls U, Ttl Buy $, Ttl Buy U: </span><span style="font-size: 12pt;">selects the metric to display in the u</span><span style="font-size: 12pt;">pper-right corner of each cell</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Status: </span><span style="font-size: 12pt;">displays the Receipt Status, Clean or Dirty, </span><span style="font-size: 12pt;">in the upper-right corner of each cell </span><span style="font-size: 12pt;">as an indicator of if the placeholder requires recalculation of its receipt plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Replen Status:</span><span style="font-size: 12pt;"> displays the Replen Status, Clean or Dirty, in the upper-right corner of each cell as an indicator <span style="color: #000000;">of if the placeholder has been updated with the most recent Replenishment forecast data; </span></span><span style="color: #FF0000;font-size: 12pt;"><span style="color: #000000;">valid for placeholders of Replen status only</span></span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Status: </span><span style="font-size: 12pt;">displays the placeholder Status, Open, Created, Assigned, Committed, or Replen, in the upper-right corner of each cell</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">only one quick text option (attribute or metric), plus the placeholder code, can be selected to show at once</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li><b>Placeholder Tracking</b>:  When enabled, the placeholder selected in the Main Planning view (and any supporting views you have open) automatically changes to the placeholder of the image you select in Image view. This makes it more convenient to edit placeholders while working in Image view, because the placeholder values shown in the other views are always in sync with the image you select. Click this option to toggle enabling/disabling placeholder tracking.</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Inactive:</span> <span style="font-size: 12pt;">sets the desired visual behavior when temporarily making items inactive in Image view</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">By default, inactive images show as a diagonal slash:</li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Image View_1.png" style="visibility: visible;width: 406px;height: 179px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-size: 12pt;">This parameter can be set to </span><span style="font-weight: bold;font-size: 12pt;">Dark</span><span style="font-size: 12pt;">, which will cause temporarily inactive items to show as covered with a semi-transparent gray overlay:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Image View_2.png" style="visibility: visible;width: 405px;height: 178px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Parameters: </span><span style="font-size: 12pt;">shows/hides the parameters pane at the top of the view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Execute: </span><span style="color: #000000;font-size: 12pt;">refreshes Image view, based on the selected Product, Site Hierarchy, Cluster Sets, and Window of Time</span>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; selects a product filter for the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Assortment Planning/View Parameters.png" style="visibility: visible;mso-wrap-style: square;width: 21px;height: 18px;" /><span style="color: #000000;font-size: 12pt;">&#160; this button launches the Filter Conditions dialog, allowing the user to dynamically edit the criteria for the selected filter prior to executing it; the option also exists to create a new filter from the adjusted criteria on the fly</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" style="visibility: visible;mso-wrap-style: square;width: 22px;height: 22px;" /><span style="color: #000000;font-size: 12pt;">&#160; this button launches the Maintain Filter dialog, allowing the user to create or import a new filter, or update, delete, or export an existing filter</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Hierarchy: </span><span style="color: #000000;font-size: 12pt;">user editable tree multi-select; selects the levels of the current Plan’s Site Hierarchy to include in the current view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set: </span><span style="color: #000000;font-size: 12pt;">user editable multi-select dropdown; selects the cluster sets to include in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related, in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy; because of this, the Cluster Set dropdown will populate with the cluster sets contained beneath the selected Site Hierarchy levels</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Window of Time: </span><span style="color: #000000;font-size: 12pt;">user editable tree multi-select; selects the window of time to display in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">any placeholder/collection whose life cycle intersects with any part of the selected Window of Time will be displayed in the view; this is to allow the user to work with placeholders/collections holistically, as displaying subdivisions of their life cycle might alter the decisions made by the user if they have forgotten or are unaware of the full length of time a placeholder/collection will be for sale</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning:</span> <span style="font-style: italic;font-size: 12pt;">the selected timeframe must be a contiguous range of periods; if it is not, the system will still use the window of time defined by the first and last selected periods</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><b>Display Currency</b>: Sets the currency displayed in Image view.</li>
+            <li style="margin-bottom: 0pt;">
+                <p><b>Grid Config</b>: Sets the pivot fields for the Image view grid. Select which fields to use as rows and which to use as columns.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Grid Config.png" />
+                </p>
+            </li>
+        </ul>
+        <h2>Working with Image View</h2>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Question Mark Cells: </span><span style="font-size: 12pt;">placeholders that don’t currently </span><span style="font-size: 12pt;">have </span><span style="font-size: 12pt;">images assigned, either through an attached variant, or images that have been assigned to the placeholders themselves, show as question marks in Image view</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Image View_5.png" style="visibility: visible;width: 370px;height: 139px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Making Cells Inactive: </span><span style="font-size: 12pt;">for the sake of quick visual assessments, users can make pl</span><span style="font-size: 12pt;">a</span><span style="font-size: 12pt;">ceholders temporarily inactive in the view by </span><span style="font-weight: bold;font-size: 12pt;">double-clicking</span><span style="font-size: 12pt;"> any cell; if that placeholder is present in more than one cell, either by cluster or period, all cells related to the placeholder will be made inactive automatically</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">making placeholders temporarily inactive in this manner has no effect on the Active status of placeholders in the Main Planning view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Editing Images: </span><span style="font-size: 12pt;">to change the image of any placeholder in the view, simply </span><span style="font-weight: bold;font-size: 12pt;">right click </span><span style="font-size: 12pt;">and click </span><span style="font-weight: bold;font-size: 12pt;">Edit</span><span style="font-size: 12pt;">. This will launch the Repository Explorer (detailed earlier in this section), in which you can select a new image from the repository, delete images, or add new ones</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">images assigned in this manner will be applied to all instances of the placeholder, whether by cluster or period, in the view</span>
+            </li>
+        </ul>
+    </body>
+</html>

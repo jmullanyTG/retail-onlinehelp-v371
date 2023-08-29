@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>System Policies</h1>
+        <p>The following system policies have been added. </p>
+        <h2>Engine: Replenish</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Display Name</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">System Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Order Processing Lead Time Type</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Replenish.OrderProcessingLeadTimeType</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Sets whether the Order Processing Lead Time value specified in an inventory policy is applied according to calendar days or business days.</p>
+                        <p> <b>Example</b>: if an inventory policy specifies Order Processing Lead Time = 3, this means 3 days are required after delivery to process an order. If this policy is set to 0 (Calendar days), then exactly 3 days  will be allotted to process the order. If this policy is set to 1 (Business days), then the actual number of days allotted to process the order may be greater than 3 to account for days the business is scheduled to close (weekends, holidays, etc.).</p>
+                        <ul>
+                            <li>0 = Calendar days. </li>
+                            <li>1 = Business days. Business days are counted according to the Order Processing Lead Time Schedule set for a site or item. </li>
+                        </ul>
+                        <p>Default value = 0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

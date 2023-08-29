@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="1738" MadCap:lastWidth="1272">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Calculations assigned to a Calculation Set </h1>
+        <p class="NormalWeb_1"><span class="span_7">Any Calculations from the Calculation Repository can be assigned to a Calculation Set. </span><span class="span_7">A Promotion Strategy referencing the Calculation Set, will run the </span><span class="span_7">in the order that they are</span><span class="span_7"> listed in the Calculation Set.</span>
+        </p>
+        <p class="NormalWeb_1">
+            <img src="../../Resources/Images/Promotion Management1/Calculations assigned to a Calculation Set.png" style="height: 110px;width: 623px;" class="img_1" />
+        </p>
+        <p class="NormalWeb_1">&#160;</p>
+        <p class="NormalWeb_1"><span class="span_7">Promotion Manager provides flexibility when configuring Calculation Sets. However, in </span><span class="span_7">normal retail</span><span class="span_7"> situations the following</span> <span class="span_7">should be considered </span><span class="span_7">when assigning Calculations</span><span class="span_7"> to a Calculation Set</span><span class="span_7">:</span></p>
+        <ul class="ul_1">
+            <li class="NormalWeb_1"><span class="span_7">Values entered by </span><span class="span_7">you</span><span class="span_7"> (e.g. </span><span class="span_7">promoted price, </span><span class="span_7">amount off and percent off)</span> <span class="span_7">are </span><span class="span_7">keyed</span><span class="span_7"> at the Promotion</span><span class="span_7"> level</span><span class="span_7">,</span><span class="span_7"> with possible overrides at lower level</span><span class="span_7">s</span><span class="span_7"> (i.e</span><span class="span_7">. </span><span class="span_7">Group</span><span class="span_7">, Variant or Item </span><span class="span_7">level</span><span class="span_7">s</span><span class="span_7">). </span><span class="span_7">However, Promotion Price, Promotion Price High and Promotion Price Low values</span> <span class="span_7">cannot be immediately</span><span class="span_7"> calculated at this high level since </span><span class="span_7">individual product pri</span><span class="span_7">cing data is stored at the lowest Item</span><span class="span_7"> level.</span></li>
+            <li class="NormalWeb_1">
+                <p><span class="span_7">It is an important first step in a Calculation Set, to fill down manually entered values (e.g</span><span class="span_7">. promoted price, amount off</span><span class="span_7"> dollar off</span><span class="span_7">, total promotional price and multi buy quantity</span><span class="span_7">) that will be used to calculate Promotion Price, to the lowest level. This will ensure that all necessary values can be rolled up accurately.</span>  </p>
+                <p class="NormalWeb_3">After the values have been pushed to the lowest level, it may be necessary, depending on the type of Promotion Strategy, to calculate the Promotion Price at the lowest level. For promoted discount Promotion Strategies, the Promotion Price at the lowest level must be calculated and set based on the Item’s EDLP and the keyed promoted discount values.</p>
+                <p class="NormalWeb_4"><span class="span_12" style="font-weight: bold;">Notes</span><span class="span_13">: </span>
+                </p>
+                <p><span class="span_13">This is not needed for a Fixed Promotion Strategy since the manually entered value that is filled down is the actual Promotion Price and can be rolled up as needed. </span>
+                </p>
+                <p><span class="span_13">For an</span><span class="span_13">y</span><span class="span_13"> EDLP Promotion Strategy</span><span class="span_13"> (e.g. EDLP, BOGO AA Free, BOGO AB Free, etc.)</span><span class="span_13">, the EDLP price is already stored at the lowest level and does not need to be filled down. </span>
+                </p>
+                <p><span class="span_7">C</span><span class="span_7">alculations must be performed in a bottom up approach</span><span class="span_7"> for the system to derive the calculated lower levels to higher promotional aggregation levels</span><span class="span_7">. For example,</span><span class="span_7"> a calculation using</span><span class="span_7"> the Promotion Price for each Item in a product group is used to </span><span class="span_7">calculate</span><span class="span_7"> the </span><span class="span_7">product group’s </span><span class="span_7">Promotion Price</span><span class="span_7">. </span>
+                </p>
+                <p><span class="span_7">The Promotion Price</span><span class="span_7"> High</span><span class="span_7"> of the product group is determined by the highest Promotion Price of the </span><span class="span_7">products</span><span class="span_7"> in the product group. A similar calculation is performed for the product group’</span><span class="span_7">s </span><span class="span_7">Promotion Price</span><span class="span_7"> Low.</span>
+                </p>
+                <p><span class="span_7">These calculated values for the </span><span class="span_7">Promotion’s </span><span class="span_7">product groups are then rolled up to calculate </span><span class="span_7">Promotion Price High and Promotion Price Low at the Promotion Aggregate level.</span>
+                </p>
+                <p><span class="span_7">For </span><span class="span_7">promoted discount</span><span class="span_7"> Promotion Strategies, the high and low </span><span class="span_7">promoted </span><span class="span_7">discount values </span><span class="span_7">are </span><span class="span_7">usually </span><span class="span_7">presented to the customer. Calculating these high and low amounts should follow the same</span><span class="span_7"> bottom up approach</span><span class="span_7"> as Promotion Price</span><span class="span_7">,</span><span class="span_7"> once the manually entered discount is pushed to the lowest level.</span>
+                </p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="NormalWeb_1">&#160;</p>
+    </body>
+</html>

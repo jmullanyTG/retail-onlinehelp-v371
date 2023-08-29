@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Essential Business Concepts</h1>
+        <p style="margin-left: 2pt;color: #000000;font-size: 12pt;">Though Cluster Site Manager can be used to create store clusters for other purposes, its primary focus is to create clusters specifically for use within Assortment Planning. The following concepts are important to understanding the JustEnough store cluster construct and how it interacts with Assortment Planning to facilitate the planning activities that occur therein:</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Sets and Clusters </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">–</span> <span style="color: #000000;font-size: 12pt;">a group of stores is referred to as a cluster. A cluster set is typically a collection of two or more clusters that were derived using the same set of criteria, though it is possible to have a cluster set with a single cluster. </span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">a typical cluster set could for the Mens Tops level of the product hierarchy, where the clusters within are designated A, B, and C, and stores are assigned </span><span style="font-style: italic;color: #000000;font-size: 12pt;">to those clusters </span><span style="font-style: italic;color: #000000;font-size: 12pt;">based on their relative sales </span><span style="font-style: italic;color: #000000;font-size: 12pt;">unit volume against others stores in the set</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">a common example of this would be in the scenario where cluster sets are created by business channel and the Ecommerce channel consists of only one “store”, thus only one cluster is needed in the Ecommerce cluster set</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-size: 12pt;">Clusters as Persistent Entities – </span><span style="font-size: 12pt;">once a cluster is created within a cluster set, it remains as a persistent entity in that set, regardless of whether any stores are assigned to it at a given point in time; this is done to facilitate continuity of assortment plans, which continue on indefinitely once created, as the configuration of clusters within a set change over time</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;font-size: 12pt;">I create a cluster set with 5 clusters,&#160; A through E, </span><span style="font-style: italic;font-size: 12pt;">and, when I initially calculate the cluster set, stores naturally rank into all 5 groups based on their sales volume, but midway through the season, I recalculate the set with current data and find that the few stores that had previously ranked into the E cluster improved their performance and ranked into the D cluster, leaving cluster E with no stores; cluster E still exists because it had stores in it earlier in the season, and I am able to manually shift stores into it if I want, but this is not required</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-size: 12pt;">Cluster Sets and the Assortment Plan Site Hierarchy – </span><span style="font-size: 12pt;">in order to be usable within a given assortment plan, a cluster set must be contained within a single portion of the lowest level of the site hierarchy assigned to that plan</span><span style="font-size: 12pt;">; this is required to allow for correct aggregation to site hierarchy levels in the various reporting and analysis functions within Assortment Planning</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example: </span><span style="font-style: italic;font-size: 12pt;">I create an assortment plan and assign a site hierarchy which has the lowest level of Country, and in that level, I have the countries US, UK, and China; I want to plan my business divided by channel (Retail, Wholesale and Ecommerce) and product category (Apparel, Footwear, and Accessories), so I create the following cluster sets:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 110pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">US –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Retail – Apparel, US – Retail – Footwear, US – Retail Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">US –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Wholesale – Apparel, US – Wholesale – Footwear, US – Wholesale Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">US –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Ecomm – Apparel, US – Ecomm – Footwear, US – Ecomm </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">UK –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Retail – Apparel, UK – Retail – Footwear, UK – Retail </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">UK –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Wholesale – Apparel, UK – Wholesale – Footwear, UK – Wholesale </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">UK –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Ecomm – Apparel, UK – Ecomm – Footwear, UK – Ecomm </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">CHINA –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Retail – Apparel, CHINA – Retail – Footwear, CHINA – Retail </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">CHINA –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Wholesale – Apparel, CHINA – Wholesale – Footwear, CHINA – Wholesale </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– Accessories</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-style: italic;font-size: 12pt;">CHINA –</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Ecomm – Apparel, CHINA – Ecomm – Footwear, CHINA – Ecomm </span><span style="font-style: italic;color: #000000;font-size: 12pt;">– Accessories</span>
+            </li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 74pt;"><span style="font-style: italic;font-size: 12pt;">Be</span><span style="font-style: italic;font-size: 12pt;">cause the stores in each cluster set are contained within the lowest level of the site hierarchy assigned to my assortment plan, all of these clu</span><span style="font-style: italic;font-size: 12pt;">ster sets can be used within it</span>
+        </p>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;font-size: 12pt;">I create the same assortment plan as in the last example, but I ignore the lowest level of Country in my plan and create the following channel level cluster sets:</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 110pt;">
+            <li class="ListParagraph" style="list-style-type: square;font-style: italic;color: #000000;font-size: 12pt;">Retail – Apparel, Retail – Footwear, Retail – Accessories</li>
+            <li class="ListParagraph" style="list-style-type: square;font-style: italic;color: #000000;font-size: 12pt;">Wholesale – Apparel, Wholesale – Footwear, Wholesale – Accessories</li>
+            <li class="ListParagraph" style="list-style-type: square;font-style: italic;color: #000000;font-size: 12pt;">Ecomm – Apparel, Ecomm – Footwear, Ecomm – Accessories</li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 74pt;"><span style="font-style: italic;font-size: 12pt;">Stores within the Retail and Wholesale channels exist across multiple countries – the lowest level of the assortment plan site hierarchy – thus, these cluster sets will not pass validation by my assortment pl</span><span style="font-style: italic;font-size: 12pt;">an and cannot be used within it</span>
+        </p>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">though cluster sets and clusters are not explicitly tied to the site hierarchy, they are related to it in the manner shown by the examples above, thus cluster sets available for selection within Assortment Planning will be dictated by the levels of the site hierarchy that have been selected for the analysis or view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set Snapshots and Event Management</span><span style="color: #000000;font-size: 12pt;"> – Cluster Set Snapshots save the Cluster Set and associated Site configured Cluster with an effective start date. The effective start date is used within the Event Management solution to determine if it can be used during the timeframe of the Event. There must be at least one (1) day overlap, with the Event, for it to be available.</span>
+            </li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 38pt;color: #000000;font-size: 12pt;">Over time Site Clustering will need to be modified. Once a new snapshot is created, with a new effective start date, an end date will be in effect for the original snapshot and Event Management will no longer make it available to events that are configured out of it’s timeframe.</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set Snapshots and Promotion Management</span><span style="color: #000000;font-size: 12pt;"> – Cluster Set Snapshots save the Cluster Set and ass</span><span style="color: #000000;font-size: 12pt;">ociated Site configured Cluster </span><span style="color: #000000;font-size: 12pt;">with an effective start date. The effective start date is used within the Promotion Management solution to determine if it can be used during the timeframe of the Promotion. There must </span><span style="color: #000000;font-size: 12pt;">be at least one (1) day overlap, with the Promotion, for it to be available.</span>
+            </li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 38pt;color: #000000;font-size: 12pt;">Over time Site Clustering will need to be modified. Once a new snapshot is created, with a new effective start date, an end date will be in effect for the original snapshot and Promotion Management will no longer make it available to Promotions that are configured out of it’s timeframe.</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="page-break-after: avoid;page-break-inside: avoid;margin-left: 38pt;"><span style="font-weight: bold;font-size: 12pt;">Cluster Set Snapshots and Assortment Planning – </span><span style="font-size: 12pt;">cluster set snapshots save the specific cluster assignments of stores within a cluster set at a point in time. </span><span style="font-size: 12pt;">Once a snapshot passes validation within an assortment plan, it is used </span><span style="font-size: 12pt;">to define </span><span style="font-size: 12pt;">not only the cluster sets that are eligible for use within that plan, but the number, specific stores, and percent contribution of the stores within each cluster. It is possible to have multiple cluster set snapshots become effective over the course of a plan, or even within the life of a product, but </span><span style="font-weight: bold;font-size: 12pt;">at a minimum, one cluster set snapshot with an effective date of the earliest historical period you wish to use for analysis within the plan must be set</span><span style="font-size: 12pt;"> – this allows the system to properly assign sales </span><span style="font-size: 12pt;">to clusters, which are the lowest level at which plans are managed within Assortment Planning</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">cluster set snapshots are sent to all existing assortment plans for validation as soon as they are created; conversely, when new assortment plans are created, all existing cluster set snapshots are validated against them – no additional interaction is required to initiate the validation process</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-size: 12pt;">Clustering and Qualitative Criteria</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">because the k-cluster type algorithms used for clustering within Cluster Site Manager are unable to work with non-numeric data points, attributes with qualitative criteria cannot be specified as explicit conditions when creating cluster sets. That said, users do have two options when needing to cluster based on qualitative criteria:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-size: 12pt;">Specify the criteria as Partition By parameters during cluster set configuration (see </span><span style="font-weight: bold;font-size: 12pt;">Cluster Set Configuration</span><span style="font-size: 12pt;"> later in this manual); this will create separate cluster sets for each value that exists for the selected Partition By attribute, </span><span style="font-size: 12pt;">yielding essentially the same number of total clusters as the likely desired outcome</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-size: 12pt;">Create and assign Site Attribute Values to the stores you wish to cluster that are numeric equivalents or indicators of the desired qualitative criteria</span><span style="font-size: 12pt;">; this will create a single cluster set that will (potentially) rank stores into more granular clusters, depending on the number of clusters specified by the user</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 110pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;font-size: 12pt;">rather than specifying Store Capacity as High, Medium, and Low, specific square footage values could be assigned by store or numeric minimum or median values could be assigned for each desired tier (High = 20,000, Medium = 14,000, and Small = 8,000)</span></li>
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning:</span> <span style="font-style: italic;font-size: 12pt;">using this method </span><span style="font-style: italic;font-size: 12pt;">can produce unpredictable results depending on the specific numeric values used for the qualitative criteria equivalents, the degree of separation between each, and how those interact with the quantitative data points in the set; </span><span style="font-style: italic;color: #0070C0;font-size: 12pt;">for example, if clustering on sales volume and average temperature, stores with high </span><span style="font-style: italic;color: #0070C0;font-size: 12pt;">sales volume and a low average temperature could end up assigned to a cluster that was intended for low to mid sales volume and high average temperature, because, in this method, the system is agnostic of the specific intent of your criteria and simply resolves them mathematically for the purpose of ranking</span></li>
+        </ul>
+    </body>
+</html>

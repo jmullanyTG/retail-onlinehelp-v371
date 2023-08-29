@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="4075" MadCap:lastWidth="1535">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Causals button</h1>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting_JB1/Causals button.png" style="visibility: visible;width: 544px;height: 408px;" />
+        </p>
+        <p>&#160;</p>
+        <h1 class="Heading1"><a name="_Toc434937714"></a>Technical Details </h1>
+        <p>Like many operations within JustEnough, the forecasts module is dependent upon both SQL and a .NET engine. </p>
+        <h3 >SQL Tables and Procedures</h3>
+        <p>Forecast information is derived from several tables within JustEnough. </p>
+        <h4 >Forecast Tables</h4>
+        <p>The forecast series values will be stored in tbl_Forecast as “ForecastQty”. These quantities do not specifically represent the effective forecast, but instead the series values associated with the adjacent type described by the manual forecast flag. ManualForecastFlag much less of a "flag" and more of a type as it is of type tinyint. The types are as follows:</p>
+        <div>
+            <p>0 = System</p>
+            <p>1 = No longer used</p>
+            <p>2 = Forecast Manual Causal</p>
+            <p>3 = Sales Planning</p>
+            <p>4 = Forecast Manual</p>
+            <p>5 = Group</p>
+            <p>6 = BOM Forecast</p>
+            <p>7 = Profile</p>
+        </div>
+        <p>&#160;</p>
+        <p>There may be several values for an inventory item within the same bucket, differentiated by the manual forecast flag type. The effective forecast (red line series in the forecast viewer) is the highest priority out of all the concurrent manual forecast flag types. Priority is as follows:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Type 2 – Forecast Manual Causal</li>
+            <li>Type 4 – Forecast Manual (manual forecast)</li>
+            <li>Type 7 – Profile</li>
+            <li>Type 5 – Group (pushed down group forecast value)</li>
+            <li>Type 0 – System (system generated forecast)</li>
+        </ol>
+        <p>Types 1 and 3 are not used in this prioritization. Type 6 – BOM forecast is not listed in the prioritization because it is returned to the forecast viewer as a separate data series. </p>
+        <p>Total sales (not including lost sales) will be the value per period (bucket) as read in tbl_InventoryHistory for SalesHistoryQuantity plus SupercessionHistoryQuantity. This summation is done in the standard procedure usp_Forecast_Select_ForecastViewerInventory</p>
+        <p>Lost sales quantity is stored in tbl_InventoryHistory in the LostSalesQuantity column.</p>
+        <h3 >Forecasting Engine</h3>
+        <p>The JustEnough forecasting engine is a .NET computational engine which is housed on the application server (business-services tier) of a JustEnough deployment. It is fed data series from the database and after computation, returns the forecast values to the database. </p>
+        <h4 >Forecast Definition</h4>
+        <p>The forecasting engine operates within the parameters defined in the forecast definition module, which may be restricted based on certain user rights. </p>
+        <h3 >Maintenance</h3>
+        <p>Clean up maintenance related to the archived forecast data may be run periodically in order to save space on the database server. Running usp_Forecast_Maintenance_PerformCleanupGUIDTables will delete all of the “tbl_FCTemp” tables. It is extremely important that this procedure is run just prior to a nightly forecasting job. It cannot be run during or after the forecasting task as it will break many things.</p>
+        <p>&#160;</p>
+    </body>
+</html>

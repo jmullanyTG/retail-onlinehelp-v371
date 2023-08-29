@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2153" MadCap:lastWidth="1007">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 style="font-family: Arial;text-align: left;">Attribute Settings</h1>
+        <p style="font-family: Arial; text-align: left;">The Attribute Settings <a href="Cluster Set Configuration Screen.htm">cluster set property</a> lets you add, edit, delete, and rank the attributes used to calculate cluster sets. </p>
+        <h2>Attribute toolbar</h2>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Add</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Launches the <a href="#Adding">Add Attribute</a> dialog box.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Edit</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Edits the selected attribute.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Delete</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Deletes the selected attribute.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Adjustment Factors</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Launches the Adjustment Factor dialog box, where users can specify ratio modifiers for each attribute.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Attribut"></a>Attribute properties</h2>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Property</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Attribute Name</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The name of the attribute.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Attribute Description</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The description of the attribute.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Attribute Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Options include:</p>
+                        <ul>
+                            <li style="font-weight: normal;"><b>Site Attribute</b>: Select if you want to calculate cluster sets based on numeric site attributes such as selling square footage or average temperature.</li>
+                            <li style="font-weight: normal;"><b>Sale Attribute</b>: Select if you want to calculate cluster sets based on historical sales data.</li>
+                            <li style="font-weight: normal;"><b>Forecast Attribute</b>: Select if you want to calculate cluster sets based on forecasted sales data.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Priority</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">The priority ranking of each attribute. Adjust ranking up and down using the arrows on the right-hand side of the attribute list. The attribute with the lowest number has the highest ranking and will contain the stores with the highest relative value.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Adding"></a>Adding an attribute</h2>
+        <ol>
+            <li>In the Attribute Settings property toolbar, click <b>Add</b>.</li>
+            <li>In the Add Attribute dialog box, enter a name an description for the attribute.</li>
+            <li>
+                <p>Select the Attribute Type (see <a href="#Attribut">Attribute properties</a> above for a description of each type).</p>
+                <ul>
+                    <li>Sale Attribute and Forecast Attribute types have additional properties. See the following tables for descriptions.</li>
+                </ul>
+            </li>
+            <li>Click <b>OK</b> to create the attribute.</li>
+        </ol>
+        <h3>Sale attribute properties</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Property</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Sale Metric Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The sale metric to use for calculating cluster sets. Options are: </p>
+                        <ul>
+                            <li><![CDATA[
+
+]]><b>Unit</b>: uses sales unit volume to cluster stores.
+
+</li>
+                            <li><b>Revenue</b>: uses sales revenue volume to cluster stores.
+</li>
+                            <li><b>Cost</b>: uses cost of sales (COGS = Sales units * average cost per unit) to cluster stores.</li>
+                            <li><![CDATA[
+]]><b>Gross Margin</b>: uses gross margin revenue (Sales Revenue – COGS) to cluster stores.
+</li>
+                            <li><b>Gross Margin %</b>: uses gross margin percentage ((Sales Revenue – COGS) / Sales Revenue) to cluster stores.
+</li>
+                            <li><b>GMROII</b>: uses gross margin return on inventory investment (Margin Revenue / COGS).
+
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Time Frame</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The time frame to use for gathering historical sales metrics ("last 90 days", etc.). Options include all available time frames. Click <a href="../Time Frame/Time Frame Maintenance Window.htm">Maintain</a> to create a new time frame or edit one in the list.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Use Item Filter</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Whether or not to use a product filter to select the product data to use in cluster calculation.</p>
+                        <p><b>Note</b>: Item Filters, if used, supersede the selected product hierarchy level for each cluster set.</p>
+                        <p><span style="color: #6495ed;font-weight: bold;font-style: italic;">Example</span><i>: I create a cluster set template of type K-Means Collection Item Partition that uses the Subclass level of the selected product hierarchy to create different cluster sets; I choose to use an Item Filter with the criteria of Color Group = Black; for each cluster set, the data used in calculation will all product for which the user has access based on their assigned permiassions that have the Black Color Group attribute assigned to them.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Item Filter</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The item filter to use for gathering sales metrics.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Sales Types</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The type of sales to use in cluster calculation. (Sales types are defined during software implementation.)</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Include Returns</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Whether or not returns (negative sales) are included in the sales data used in cluster set calculation.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Forecast attribute properties</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Property</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Time Frame</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The time frame to use for gathering forecasted sales metrics ("next 90 days", etc.). Options include all available time frames. Click <a href="../Time Frame/Time Frame Maintenance Window.htm">Maintain</a> to create a new time frame or edit one in the list.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Use Item Filter</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Whether or not to use a product filter to select the product data to use in cluster calculation.</p>
+                        <p><b>Note</b>: Item Filters, if used, supersede the selected product hierarchy level for each cluster set.</p>
+                        <p><span style="color: #6495ed;font-weight: bold;font-style: italic;">Example</span><i>: I create a cluster set template of type K-Means Collection Item Partition that uses the Subclass level of the selected product hierarchy to create different cluster sets; I choose to use an Item Filter with the criteria of Color Group = Black; for each cluster set, the data used in calculation will all product for which the user has access based on their assigned permiassions that have the Black Color Group attribute assigned to them.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Item Filter</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">The item filter to use for gathering sales metrics.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

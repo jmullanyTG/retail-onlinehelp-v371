@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Site Product Exclusion</h1>
+        <p>The hierarchy used to populate the product dimension within this widget is determined by the following system policy: <span style="font-weight: bold;">Site.ItemMaster.ExcludeFilterItemMasterHierarchyID</span></p>
+        <p>Site product exclusion is designed to help users manage inventory restrictions at a site level. Users are able to create restrictions by adding item master filters to the exclusion list or by selecting segments of the product hierarchy. The product hierarchy used by the site product exclusion is determined by a system policy settings. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Code – </span>The site code of the selected site in the grid view. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Description –</span> Description of the selected site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Exclude Filter Type </span><span style="font-weight: bold;">–</span> The exclude filter type will determine the method for product exclusion. The selected filter type will “gray-out” the ineligible option; the eligibility will not overlap. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">ItemMaster Hierarchy Level –</span> If selected, the “Exclude Levels” field will become active. Users may then select segments of the product hierarchy for exclusion. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">ItemMaster Filter Master –</span> If selected, the “Filter Master ID” field will become active. Users may then select products for exclusion based on an item master filter. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Filter Master ID – </span>If selected, users may select products for exclusion based on an item master filter.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Exclude Levels –</span> If selected, users may select segments of the product hierarchy for exclusion</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Exclusion field chooser.png" />
+        </p>
+        <p>----</p>
+        <p>Only one product exclusion may be set per site at a time. As such, users must either create an appropriate item master filter to fulfil their requirements, or set the exclusion at an applicable level of the hierarchy. </p>
+        <h2>ItemMaster Hierarchy Level </h2>
+        <p>When ItemMaster hierarchy level is selected, users will be presented with a tree wizard which represents the selected hierarchy as set by the system policy. </p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Product Exclusion_1.png" style="visibility: visible;width: 673px;height: 445px;">
+            </img>
+        </p>
+        <p>Levels which should be excluded should be selected with a check mark. </p>
+        <h2>ItemMaster FilterMaster</h2>
+        <p>When ItemMaster filter master is selected, users will choose a filter using the filter chooser, which will then be applied.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Product Exclusion_1_1.png" style="visibility: visible;width: 416px;height: 216px;">
+            </img>
+        </p>
+        <p>Users should apply any desired changes by selecting “Apply” before exiting. If desired, the exclusions may be removed by deleting the entry using the “Delete” button. </p>
+        <p>------</p>
+        <h2>Product Exclusion Sets</h2>
+        <p>The Site Product Exclusion feature has been redesigned to provide greater flexibility and convenience. In previous versions, product exclusions had to be defined on a site-by-site basis and could be based on either a filter or hierarchy level. Now, you can create reusable product exclusion sets based on combinations of item filters and product hierarchy levels. Once created, a product exclusion set can be quickly assigned to any site in the Site Manager Grid.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Product Exclusion Sets.png" class="SS" />
+        </p>
+        <h3>New items</h3>
+        <p>The following items have been added to support this feature:</p>
+        <ul>
+            <li><b>Metadata</b>: Two new fields are now available:<ul><li><b>Product Exclusion Exists</b> - Indicates whether or not a product exclusion set has been applied to the selected site.</li><li><b>Product Exclusion Set</b> - Specifies the product exclusion set applied to the site.</li></ul></li>
+            <li><b>Site Manager Detail tab</b>:The Site Product Exclusion Set tab replaces the previous Site Product Exclusion tab.</li>
+        </ul>
+        <h3>Migration of existing site product exclusions</h3>
+        <p>If upgrading from a previous version of Demand Management, any existing site product exclusions will be migrated to new product exclusion sets during the upgrade process. For more information, see the Demand Management Installation Guide.</p>
+        <p>&#160;</p>
+    </body>
+</html>

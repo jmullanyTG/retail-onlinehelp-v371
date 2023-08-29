@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="For Printed Manuals"
+  Type="MsWord"
+  Destinations=""
+  MasterToc="/Project/TOCs/Cluster Manager.fltoc"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  RemoveImagesFromHeadings="true"
+  EmbedImages="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  ConditionTagExpression="include[&quot;General.How-To Guides&quot; or &quot;General.Online Help&quot; or &quot;General.Printed Manuals&quot;] "
+  MasterPageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GeneratePDF="false"
+    DisableMasterPageUsage="true" />
+  <Variables>
+    <Variable
+      Name="JustEnough Variables/Printed Manual Title">Cluster Manager</Variable>
+  </Variables>
+</CatapultTarget>

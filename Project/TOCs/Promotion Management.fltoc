@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Promotion Management Overview"
+    Link="/Content/Topics/Promotion Management/Promotion Management Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Promotion Management Configuration"
+    Link="/Content/Topics/Promotion Management/Promotion Management Configuration.htm">
+    <TocEntry
+      Title="Promotion Manager Global Policies"
+      Link="/Content/Topics/Promotion Management/Promotion Manager Global Policies.htm" />
+    <TocEntry
+      Title="Promotion Manager User Rights"
+      Link="/Content/Topics/Promotion Management/Promotion Manager User Rights.htm" />
+    <TocEntry
+      Title="Rounding Rules"
+      Link="/Content/Topics/Promotion Management/Rounding Rules.htm">
+      <TocEntry
+        Title="Create a Rounding Rule – standard or price ending"
+        Link="/Content/Topics/Promotion Management/Create a Rounding Rule standard or price ending.htm">
+        <TocEntry
+          Title="Create rounding criteria – standard"
+          Link="/Content/Topics/Promotion Management/Create rounding criteria standard.htm" />
+        <TocEntry
+          Title="Create rounding criteria – price ending"
+          Link="/Content/Topics/Promotion Management/Create rounding criteria price ending.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Modify a Rounding Rule or Rounding Rule criteria"
+        Link="/Content/Topics/Promotion Management/Modify a Rounding Rule or Rounding Rule criteria.htm" />
+      <TocEntry
+        Title="Delete a Rounding Rule or Rounding Rule criteria"
+        Link="/Content/Topics/Promotion Management/Delete a Rounding Rule or Rounding Rule criteria.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Promotion Calculations"
+      Link="/Content/Topics/Promotion Management/Promotion Calculations.htm">
+      <TocEntry
+        Title="Calculations"
+        Link="/Content/Topics/Promotion Management/Calculations.htm">
+        <TocEntry
+          Title="Create a Calculation"
+          Link="/Content/Topics/Promotion Management/Create a Calculation.htm" />
+        <TocEntry
+          Title="Modify a Calculation"
+          Link="/Content/Topics/Promotion Management/Modify a Calculation.htm" />
+        <TocEntry
+          Title="Delete a Calculation"
+          Link="/Content/Topics/Promotion Management/Delete a Calculation.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Calculation sets"
+        Link="/Content/Topics/Promotion Management/Calculation sets.htm">
+        <TocEntry
+          Title="Create a Calculation Set"
+          Link="/Content/Topics/Promotion Management/Create a Calculation Set.htm" />
+        <TocEntry
+          Title="Modify a Calculation Set"
+          Link="/Content/Topics/Promotion Management/Modify a Calculation Set.htm" />
+        <TocEntry
+          Title="Delete a Calculation Set"
+          Link="/Content/Topics/Promotion Management/Delete a Calculation Set.htm" />
+        <TocEntry
+          Title="Clone a Calculation Set"
+          Link="/Content/Topics/Promotion Management/Clone a Calculation Set.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Calculations assigned to a Calculation Set"
+        Link="/Content/Topics/Promotion Management/Calculations assigned to a Calculation Set.htm">
+        <TocEntry
+          Title="Assign a Calculation"
+          Link="/Content/Topics/Promotion Management/Assign a Calculation.htm" />
+        <TocEntry
+          Title="Modify assigned Calculations"
+          Link="/Content/Topics/Promotion Management/Modify assigned Calculations.htm" />
+        <TocEntry
+          Title="Delete assigned Calculations"
+          Link="/Content/Topics/Promotion Management/Delete assigned Calculations.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Examples: Promotion Calculations"
+        Link="/Content/Topics/Promotion Management/Examples Promotion Calculations.htm">
+        <TocEntry
+          Title="Examples: Calculations"
+          Link="/Content/Topics/Promotion Management/Examples Calculations.htm">
+          <TocEntry
+            Title="EDLP Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/EDLP Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Fixed Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Fixed Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Amount off Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Amount off Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Percent off Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Percent off Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Multi buy Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Multi buy Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AA Free Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AA Free Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AB Free Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AB Free Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AA Amount Off Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AA Amount Off Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AB Amount Off Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AB Amount Off Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AA Percent Off Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AA Percent Off Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AB Percent Off Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AB Percent Off Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Multi Buy Amount Off Promotion Strategy Specific Calculations"
+            Link="/Content/Topics/Promotion Management/Multi Buy Amount Off Promotion Strategy Specific Calculations.htm" />
+          <TocEntry
+            Title="Multi Buy Percent Off Promotion Strategy Specific Calculations"
+            Link="/Content/Topics/Promotion Management/Multi Buy Percent Off Promotion Strategy Specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AA Promo Price Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AA Promo Price Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="BOGO AB Promo Price Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/BOGO AB Promo Price Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Spend X Get Amount Discount Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Spend X Get Amount Discount Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Spend X Get Percent Discount Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Spend X Get Percent Discount Promotion Strategy specific.htm" />
+          <TocEntry
+            Title="Spend X Get Multiply Points Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Spend X Get Multiply Points Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Spend X Get Points Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Spend X Get Points Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Spend X Get Gift Card Promotion Strategy specific Calculations"
+            Link="/Content/Topics/Promotion Management/Spend X Get Gift Card Promotion Strategy specific Calculations.htm" />
+          <TocEntry
+            Title="Standard aggregation Calculations"
+            Link="/Content/Topics/Promotion Management/Standard aggregation Calculations.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Examples: Calculation Sets"
+          Link="/Content/Topics/Promotion Management/Examples Calculation Sets.htm">
+          <TocEntry
+            Title="EDLP Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/EDLP Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Fixed Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Fixed Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Amount off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Amount off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Percent off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Percent off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Multi buy Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Multi buy Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AA Free Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AA Free Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AB Free Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AB Free Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AA Amount Off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AA Amount Off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AB Amount Off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AB Amount Off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AA Percent Off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AA Percent Off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AB Percent Off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AB Percent Off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Multi Buy Amount Off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Multi Buy Amount Off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Multi Buy Percent Off Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Multi Buy Percent Off Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AA Promotion Price Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AA Promotion Price Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="BOGO AB Promotion Price Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/BOGO AB Promotion Price Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Spend X Get Amount Discount Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Spend X Get Amount Discount Promotion Strategy Calculation.htm" />
+          <TocEntry
+            Title="Spend X Get Percent Discount Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Spend X Get Percent Discount Promotion Strategy Calculation.htm" />
+          <TocEntry
+            Title="Spend X Get Multiply Points Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Spend X Get Multiply Points Promotion Strategy Calculation.htm" />
+          <TocEntry
+            Title="Spend X Get Points Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Spend X Get Points Promotion Strategy Calculation Set.htm" />
+          <TocEntry
+            Title="Spend X Get Gift Card Promotion Strategy Calculation Set"
+            Link="/Content/Topics/Promotion Management/Spend X Get Gift Card Promotion Strategy Calculation Set.htm" />
+        </TocEntry>
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Promotion Validations"
+      Link="/Content/Topics/Promotion Management/Promotion Validations.htm">
+      <TocEntry
+        Title="Validations library"
+        Link="/Content/Topics/Promotion Management/Validations library.htm">
+        <TocEntry
+          Title="Create a Validation Rule"
+          Link="/Content/Topics/Promotion Management/Create a Validation Rule.htm" />
+        <TocEntry
+          Title="Modify a Validation Rule"
+          Link="/Content/Topics/Promotion Management/Modify a Validation Rule.htm" />
+        <TocEntry
+          Title="Delete a Validation Rule"
+          Link="/Content/Topics/Promotion Management/Delete a Validation Rule.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Validation sets"
+        Link="/Content/Topics/Promotion Management/Validation sets.htm">
+        <TocEntry
+          Title="Create a Validation Set"
+          Link="/Content/Topics/Promotion Management/Create a Validation Set.htm" />
+        <TocEntry
+          Title="Modify a Validation Set"
+          Link="/Content/Topics/Promotion Management/Modify a Validation Set.htm" />
+        <TocEntry
+          Title="Delete a Validation Set"
+          Link="/Content/Topics/Promotion Management/Delete a Validation Set.htm" />
+        <TocEntry
+          Title="Clone a Validation Set"
+          Link="/Content/Topics/Promotion Management/Clone a Validation Set.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Validations assigned to a Validation Set"
+        Link="/Content/Topics/Promotion Management/Validations assigned to a Validation Set.htm">
+        <TocEntry
+          Title="Assign a validation"
+          Link="/Content/Topics/Promotion Management/Assign a validation.htm" />
+        <TocEntry
+          Title="Modify assigned validations"
+          Link="/Content/Topics/Promotion Management/Modify assigned validations.htm" />
+        <TocEntry
+          Title="Delete assigned validations"
+          Link="/Content/Topics/Promotion Management/Delete assigned validations.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Promotion Pricing Detail"
+      Link="/Content/Topics/Promotion Management/Promotion Pricing Detail.htm">
+      <TocEntry
+        Title="Create a Promotion Pricing Detail"
+        Link="/Content/Topics/Promotion Management/Create a Promotion Pricing Detail.htm" />
+      <TocEntry
+        Title="Modify a Promotion Pricing Detail"
+        Link="/Content/Topics/Promotion Management/Modify a Promotion Pricing Detail.htm" />
+      <TocEntry
+        Title="Delete a Promotion Pricing Detail"
+        Link="/Content/Topics/Promotion Management/Delete a Promotion Pricing Detail.htm"></TocEntry>
+      <TocEntry
+        Title="Fields assigned to a Promotion Pricing Detail"
+        Link="/Content/Topics/Promotion Management/Fields assigned to a Promotion Pricing Detail.htm">
+        <TocEntry
+          Title="Assign a field"
+          Link="/Content/Topics/Promotion Management/Assign a field.htm" />
+        <TocEntry
+          Title="Modify assigned fields"
+          Link="/Content/Topics/Promotion Management/Modify assigned fields.htm" />
+        <TocEntry
+          Title="Delete assigned fields"
+          Link="/Content/Topics/Promotion Management/Delete assigned fields.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Examples: Promotion Pricing Details"
+        Link="/Content/Topics/Promotion Management/Examples Promotion Pricing Details.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Promotion Strategies"
+      Link="/Content/Topics/Promotion Management/Promotion Strategies.htm">
+      <TocEntry
+        Title="Create a Promotion Strategy"
+        Link="/Content/Topics/Promotion Management/Create a Promotion Strategy.htm">
+        <TocEntry
+          Title="Strategies"
+          Link="/Content/Topics/Promotion Management/Strategies.htm" />
+        <TocEntry
+          Title="Field requirements"
+          Link="/Content/Topics/Promotion Management/Field requirements.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Modify a Promotion Strategy"
+        Link="/Content/Topics/Promotion Management/Modify a Promotion Strategy.htm" />
+      <TocEntry
+        Title="Delete a Promotion Strategy"
+        Link="/Content/Topics/Promotion Management/Delete a Promotion Strategy.htm" />
+      <TocEntry
+        Title="Examples: Promotion Strategy detail and field requirements"
+        Link="/Content/Topics/Promotion Management/Examples Promotion Strategy detail and field requirements.htm" />
+      <TocEntry
+        Title="Promotion strategy field formats"
+        Link="/Content/Topics/Promotion Management/Promotion strategy field formats.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Export Maintenance"
+      Link="/Content/Topics/Promotion Management/Export Maintenance.htm">
+      <TocEntry
+        Title="Exportable Statuses"
+        Link="/Content/Topics/Promotion Management/Exportable Statuses.htm" />
+      <TocEntry
+        Title="Export configuration"
+        Link="/Content/Topics/Promotion Management/Export configuration.htm" />
+      <TocEntry
+        Title="Create a new export configuration"
+        Link="/Content/Topics/Promotion Management/Create a new export configuration.htm">
+        <TocEntry
+          Title="Export definition"
+          Link="/Content/Topics/Promotion Management/Export definition.htm" />
+        <TocEntry
+          Title="Export columns"
+          Link="/Content/Topics/Promotion Management/Export columns.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Modify an export configuration"
+      Link="/Content/Topics/Promotion Management/Modify an export configuration.htm" />
+    <TocEntry
+      Title="Delete an export configuration"
+      Link="/Content/Topics/Promotion Management/Delete an export configuration.htm">
+      <TocEntry
+        Title="Export definition"
+        Link="/Content/Topics/Promotion Management/Export definition_1.htm" />
+      <TocEntry
+        Title="Export columns"
+        Link="/Content/Topics/Promotion Management/Export columns_1.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Promotions Home Screen"
+    Link="/Content/Topics/Promotion Management/Promotions Home Screen.htm">
+    <TocEntry
+      Title="Promotion list"
+      Link="/Content/Topics/Promotion Management/Promotion list.htm">
+      <TocEntry
+        Title="Promotion Validation Statuses"
+        Link="/Content/Topics/Promotion Management/Promotion Validation Statuses.htm" />
+      <TocEntry
+        Title="Promotion filter"
+        Link="/Content/Topics/Promotion Management/Promotion filter.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Promotion calendar"
+      Link="/Content/Topics/Promotion Management/Promotion calendar.htm">
+      <TocEntry
+        Title="Promotion filter"
+        Link="/Content/Topics/Promotion Management/Promotion filter_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Item Master/Variant calendar"
+      Link="/Content/Topics/Promotion Management/Item Master Variant calendar.htm">
+      <TocEntry
+        Title="Promotion filter"
+        Link="/Content/Topics/Promotion Management/Promotion filter_2.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Create a Promotion (Wizard)"
+    Link="/Content/Topics/Promotion Management/Create a Promotion Wizard.htm">
+    <TocEntry
+      Title="Adding products: promoted price or promoted discount type Promotion Strategies"
+      Link="/Content/Topics/Promotion Management/Adding products promoted price or promoted discount type.htm" />
+    <TocEntry
+      Title="Adding products: buy get type Promotion Strategies"
+      Link="/Content/Topics/Promotion Management/Adding products buy get type Promotion Strategies.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Modify a Promotion"
+    Link="/Content/Topics/Promotion Management/Modify a Promotion.htm">
+    <TocEntry
+      Title="Icons and buttons"
+      Link="/Content/Topics/Promotion Management/Icons and buttons.htm" />
+    <TocEntry
+      Title="Promotion Content"
+      Link="/Content/Topics/Promotion Management/Promotion Content.htm">
+      <TocEntry
+        Title="Text"
+        Link="/Content/Topics/Promotion Management/Text.htm" />
+      <TocEntry
+        Title="Images"
+        Link="/Content/Topics/Promotion Management/Images.htm" />
+      <TocEntry
+        Title="Content Update window"
+        Link="/Content/Topics/Promotion Management/Content Update window.htm" />
+      <TocEntry
+        Title="Change Promotion Status"
+        Link="/Content/Topics/Promotion Management/Change Promotion Status.htm" />
+      <TocEntry
+        Title="Messages"
+        Link="/Content/Topics/Promotion Management/Messages.htm" />
+      <TocEntry
+        Title="Promotion Header"
+        Link="/Content/Topics/Promotion Management/Promotion Header.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Promotion Site Clusters"
+      Link="/Content/Topics/Promotion Management/Promotion Site Clusters.htm">
+      <TocEntry
+        Title="Site cluster validation statuses"
+        Link="/Content/Topics/Promotion Management/Site cluster validation statuses.htm" />
+      <TocEntry
+        Title="Site cluster inventory"
+        Link="/Content/Topics/Promotion Management/Site cluster inventory.htm" />
+      <TocEntry
+        Title="Promotion Site Cluster Sites"
+        Link="/Content/Topics/Promotion Management/Promotion Site Cluster Sites.htm" />
+      <TocEntry
+        Title="Add Sites to Site Cluster"
+        Link="/Content/Topics/Promotion Management/Add Sites to Site Cluster.htm" />
+      <TocEntry
+        Title="Remove Sites from a Site Cluster"
+        Link="/Content/Topics/Promotion Management/Remove Sites from a Site Cluster.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Promotion Site Cluster products"
+      Link="/Content/Topics/Promotion Management/Promotion Site Cluster products.htm">
+      <TocEntry
+        Title="Add products to a Site Cluster"
+        Link="/Content/Topics/Promotion Management/Add products to a Site Cluster.htm" />
+      <TocEntry
+        Title="Promoted price or promoted discount type Promotion Strategies"
+        Link="/Content/Topics/Promotion Management/Promoted price or promoted discount type Promotion Strategies.htm" />
+      <TocEntry
+        Title="Buy get type Promotion Strategies"
+        Link="/Content/Topics/Promotion Management/Buy get type Promotion Strategies.htm" />
+      <TocEntry
+        Title="Remove products from a Site Cluster"
+        Link="/Content/Topics/Promotion Management/Remove products from a Site Cluster.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Price Details"
+      Link="/Content/Topics/Promotion Management/Price Details.htm">
+      <TocEntry
+        Title="Price Detail - Promotion Strategy"
+        Link="/Content/Topics/Promotion Management/Price Detail Promotion Strategy.htm" />
+      <TocEntry
+        Title="Price Detail – display positions (slots)"
+        Link="/Content/Topics/Promotion Management/Price Detail display positions slots.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Bids"
+      Link="/Content/Topics/Promotion Management/Bids.htm" />
+    <TocEntry
+      Title="Companion items"
+      Link="/Content/Topics/Promotion Management/Companion items.htm" />
+    <TocEntry
+      Title="Analysis"
+      Link="/Content/Topics/Promotion Management/Analysis.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Clone a Promotion"
+    Link="/Content/Topics/Promotion Management/Clone a Promotion.htm" />
+  <TocEntry
+    Title="Delete a Promotion"
+    Link="/Content/Topics/Promotion Management/Delete a Promotion.htm" />
+  <TocEntry
+    Title="Promotion Help"
+    Link="/Content/Topics/Promotion Management/Promotion Help.htm" />
+</CatapultToc>

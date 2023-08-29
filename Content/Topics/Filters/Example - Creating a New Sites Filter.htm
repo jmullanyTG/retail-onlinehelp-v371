@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1960" MadCap:lastWidth="2337">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Creating a New Sites Filter</h1>
+        <p>In this example, we will create a filter that identifies all sites created within the past 60 days. Of course, you are free to change the number of days to any value that best suits your purpose.</p>
+        <h2>Example</h2>
+        <p>The JustEnough Standard Demo database includes an example filter, <b>Identify New Stores</b>, based on the instructions provided below.</p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In the Maintain tab, click <b>Filters</b>.</li>
+            <li style="font-weight: normal;">In the Maintain Filters dialog box, select <b>Create a New Filter</b> and click <b>OK</b>.</li>
+            <li style="font-weight: normal;">In the Select Filter Entity type list, select <b>Site</b> and click <b>OK</b>.</li>
+            <li style="font-weight: normal;">In the Maintain Filter dialog box, enter the following information:<ul><li style="font-weight: normal;"><b>Filter Name</b>: <code>New Sites(Creation &lt; 60 days)</code>.</li><li style="font-weight: normal;"><b>Filter Notes</b>; Add a note.</li><li style="font-weight: normal;"><b>Filter Group:</b> select a filter group.</li><li style="font-weight: normal;"><b>Share this File</b>: select a sharing option.</li></ul></li>
+            <li>In the Criteria section, click <b>New</b>.</li>
+            <li style="font-weight: normal;">In the Setup Filter Criteria form, select <b>Criteria where all of the following conditions must be met</b>.</li>
+            <li>
+                <p>In the Condition section, click <b>New</b>.</p>
+            </li>
+            <li>
+                <p>In the Filter Condition dialog box, enter the following:</p>
+                <ul>
+                    <li><b>Field</b> Select: <b>Days From Creation</b> <![CDATA[ ]]></li>
+                    <li><b>Condition</b>: Select <b>Smaller or Equal To</b></li>
+                    <li>
+                        <p>Days From Creation Smaller or Equal To: Enter <b>60</b></p>
+                        <p>
+                            <img src="../../Resources/Images/Item Manager/Create New Sites Filter conditions.png" />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>The new filter is ready to use.</p>
+                <p>
+                    <img src="../../Resources/Images/Item Manager/Create New Sites Filter.png" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

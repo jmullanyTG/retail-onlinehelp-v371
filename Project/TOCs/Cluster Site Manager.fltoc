@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Cluster Site Manager Overview"
+    Link="/Content/Topics/Cluster Site Manager/Cluster Site Manager Overview.htm"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"
+    AutoEndOnLeftPage="disabled">
+    <TocEntry
+      Title="Questions to Consider"
+      Link="/Content/Topics/Cluster Site Manager/Questions to consider before.htm" />
+    <TocEntry
+      Title="Prerequisites"
+      Link="/Content/Topics/Cluster Site Manager/Prerequisites.htm"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Cluster Site Manager Screen"
+    Link="/Content/Topics/Cluster Site Manager/Cluster Site Manager Screenr.htm" />
+  <TocEntry
+    Title="Cluster Set Management Window"
+    Link="/Content/Topics/Cluster Site Manager/Cluster Set Management Window.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Cluster Site Manager/Cluster Set Site Comparison Report.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Cluster Site Manager/Cluster Set Snapshot Comparison Report.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Cluster Set Configuration Screen"
+    Link="/Content/Topics/Cluster Site Manager/Cluster Set Configuration Screen.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Cluster Site Manager/Cluster Set Group Management.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Cluster Site Manager/Attribute Settings.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Essential Business Concepts"
+    Link="/Content/Topics/Cluster Site Manager/Essential Business Concepts.htm"></TocEntry>
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Cluster Site Manager/Practical Application.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Cluster Site Manager/Filtering Sites in Site Clusters.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

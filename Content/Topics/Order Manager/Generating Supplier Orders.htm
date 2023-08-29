@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2623" MadCap:lastWidth="1272">
+    <head>
+    </head>
+    <body>
+        <h1>Generating Supplier Orders</h1>
+        <p>Supplier orders are orders that JustEnough recommends placing with your suppliers to ensure there is enough inventory in your sites to meet anticipated demand. In a typical supply chain, supplier orders are used to stock DCs. <a href="Generating Distribution Orders.htm">Distribution orders</a> can then be generated to distribute inventory to stores.</p>
+        <h2>Setup</h2>
+        <p>The following objects should be set up before generating supplier orders:</p>
+        <ul>
+            <li>A filter that includes the items and/or sites that you want to generate orders for.</li>
+            <li>The supply chain that you want to use.</li>
+            <li>Demand forecasts for the items you want to distribute.</li>
+            <li>Stocking strategies for the items you want to distribute.</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Manage tab, click <b>Order Manager</b>.</li>
+            <li>In the Order toolbar, click <b>Supplier</b>.</li>
+            <li>
+                <p>In the Items dialog box, select the filter with the items and sites you want to generate orders for.</p>
+            </li>
+            <li>
+                <p>In the Add Supplier Order dialog box, enter the parameters for the order.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Order_Add Supplier Order.png" />
+                </p>
+            </li>
+            <li>Click <b>OK</b>.</li>
+            <li>
+                <p>Once JustEnough calculates the recommended orders, they appear in the Order screen. Each row represents a separate recommended order, and contains basic details of the order. </p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Order_Supplier_Result.png" />
+                </p>
+            </li>
+            <li>
+                <p>Double-click on an order row to view the demand forecast, stocking strategy, stock holding projection, and other details that drove the order recommendation.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Order_Supplier_Order_Details.png" /> </p>
+            </li>
+            <li>Proceed according to your company's order authorization workflow.  </li>
+        </ol>
+        <h2>Results</h2>
+        <p>The order follows your company's authorization workflow. Once authorized, JustEnough sends the order to your ERP for processing. </p>
+        <h2 MadCap:conditions="General.How-To Guides">Example</h2>
+        <ul>
+            <li MadCap:conditions="General.How-To Guides"><a href="Example - Generating Supplier Orders.htm">Example - Generating Supplier Orders</a>
+            </li>
+        </ul>
+    </body>
+</html>

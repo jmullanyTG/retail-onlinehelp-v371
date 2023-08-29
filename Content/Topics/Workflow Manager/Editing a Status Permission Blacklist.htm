@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Editing  a Status Permission Blacklist</h1>
+        <ol>
+            <li>In the <a href="Workflow Manager Screen.htm">Workflow Manager screen</a>, select the workflow containing the permissions you want to edit.</li>
+            <li>In the Design pane, select the status whose permission blacklist you want to edit.</li>
+            <li>
+                <p>In the <a href="Status Permission Blacklist.htm">Status Permission Blacklist</a>, select the permissions you want to edit and click <b>Edit</b>. </p>
+                <p>
+                    <img src="../../Resources/Images/Workflow Manager/Permissions_Edit.png" />
+                </p>
+                <p>In this example, we've selected Edit Price Action and Delete Price Action user rights.</p>
+            </li>
+            <li>
+                <p>In the Remove User Rights dialog box:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select the user right/status state combinations you want to customize permissions for.</p>
+                        <p>
+                            <img src="../../Resources/Images/Workflow Manager/Remove User Rights 1.png" />
+                        </p>
+                        <p>In this example, we only want to customize edit and delete permissions for "validated" price actions.</p>
+                    </li>
+                    <li>
+                        <p>Choose the roles/users you want to remove rights for in those status/state circumstances:</p>
+                        <p>
+                            <img src="../../Resources/Images/Workflow Manager/Remove User Rights 2.png" />
+                        </p>
+                        <p>In this example, only users with Administrator or JustEnough Advanced User roles will be able to edit or delete  price actions that are in the Ready for Approval status and have been validated.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Save</b>. The Status Permission Blacklist is updated to reflect the changes you made. </p>
+                        <p>
+                            <img src="../../Resources/Images/Workflow Manager/Permissions_Save.png" />
+                        </p>
+                        <p>In this example, the blue user icons in the Validated column  indicate that Edit Price Action and Delete Price Action rights are removed for one or more users when a price action is in the Validated state during this status.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p><b>Note</b>: Alternatively, you can click on a user icon to view/edit permissions for that specific user right/status state combination.</p>
+    </body>
+</html>

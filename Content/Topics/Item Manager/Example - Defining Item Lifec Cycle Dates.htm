@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="3721" MadCap:lastWidth="1774" MadCap:conditions="General.How-To Guides">
+    <head>
+        <link href="../../Resources/TableStyles/Video Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Example - Defining Item Life Cycle Dates</h1>
+        <p>In this example, we will set a retail channel phase-in date for all style/color variants of the new item, "High Collar Angelina Jacket".</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Workflow</h2>
+        <p>Click to open the Managing Product Life Cycles workflow. </p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=13" title="Click to open the workflow" alt="Click to open the workflow"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#13" class="workflow" /></a>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Related videos</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p>
+                                    <p>
+                                        <p>
+                                            <object MadCap:HTML5Video="true" class="video" MadCap:Param_autoplay="false" MadCap:Param_loop="false" MadCap:Param_muted="false" src="../../Resources/Videos/BC-3 CD-12 Life Cycle Managment.mp4" MadCap:Param_controls="true">
+                                            </object>
+                                        </p>
+                                    </p>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>
+                                    <p>&#160;</p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                                <p>Managing Item Life Cycles</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Setup</h2>
+        <p>The following objects are used in this example.</p>
+        <ul>
+            <li>A filter that includes the new item and the old item.<ul><li> Filter used in this example: <b>New Items (Creation &lt;=14 Days)</b>.</li></ul></li>
+            <li>An Item Manager view that includes Site Group 3 Description and phase in/phase out fields.<ul><li><p>View used in this example: <b>Life Cycle Management</b>.</p></li></ul></li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Manage tab, click <b>Item Manager</b>.</li>
+            <li>
+                <p>In the Items dialog box, select the filter that contains the items you want to manage.</p>
+                <ul>
+                    <li>
+                        <p>For this example, select the <b>New Items (Creation &lt;=14 Days)</b> filter.</p>
+                    </li>
+                </ul>
+                <p><b>Note</b>: If the Items dialog box does not automatically appear, click <b>Inventory Item Management</b> on the toolbar.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">In the Choose Fields dialog box, select the <b>Life Cycle Management </b>view<b>.</b></p>
+                <p>
+                    <img src="../../Resources/Images/Item Manager/Item Manager_Choose Fields.png" class="Screenshot" />
+                </p>
+            </li>
+            <li>Click <b>OK</b>.</li>
+            <li>
+                <p>In the Item Manager screen, filter product and channel columns to identify the new item (in all its variants) and the desired channel (retail).</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>In the Product Description column filter, enter: <samp>High Collar Angelina Jacket</samp>.</li>
+                    <li>In the Site Group 3 Description column filter, enter <samp>Retail</samp>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>To set the same Phase In Date and/or Phase Out Date for all style/color variants of the new item:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Right-click in an item row and choose <b>Select All</b>.</li>
+                    <li>Right-click in an item's Phase In Date field and choose <b>Multiple Changes.</b></li>
+                    <li>
+                        <p>Select a date roughly 30 days in the future and click <b>Save</b>.</p>
+                        <p>
+                            <img src="../../Resources/Images/Item Manager/Item Manager_Change_Multi.png" class="Screenshot" />
+                        </p>
+                    </li>
+                    <li>Right-click in an item's Phase Out Date field and choose <b>Multiple Changes.</b></li>
+                    <li>Select the phase out date "12/31/2999" and click <b>Save</b>.</li>
+                    <li>
+                        <p>The rows in the Item Manager grid should reflect the new phase-in and phase-out dates.</p>
+                        <p>
+                            <img src="../../Resources/Images/Item Manager/Example_Item_Manager_Lifecycle_Results.png" class="Screenshot" />
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>Click <b>Save</b> on the toolbar to save the new phase-in and phase-out dates.</li>
+        </ol>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Defining Item Life Cycle Dates.htm">Defining Item Life Cycle Dates</a>
+            </li>
+            <li><a href="Item Manager Overview.htm">Item Manager Overview</a>
+            </li>
+            <li><a href="../How-To Guides/Item Management/How to Introduce New Items Into Your Stores.htm">Introducing New Items to Your Stores</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

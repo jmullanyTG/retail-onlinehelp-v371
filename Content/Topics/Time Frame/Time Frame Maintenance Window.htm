@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="3762" MadCap:lastWidth="2590">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Time Frame Maintenance Window</h1>
+        <p>The Time Frame Maintenance window is where you can create, edit, and delete <a href="Time Frames Overview.htm">time frames</a>.</p>
+        <p>
+            <img src="../../Resources/Images/Time Frame/Time Frame Maintenance Window.png" />
+        </p>
+        <p>It contains a toolbar and 3 areas:</p>
+        <ul>
+            <li>A <a href="#Grid">grid</a> listing all available time frames (upper-left).</li>
+            <li>A <a href="#Time">time frame definition</a> pane listing the effective time ranges for the time frame selected in the grid (upper-right).</li>
+            <li>A <a href="#Calendar">calendar</a> area showing the effective date ranges for the time frame selected in the grid (bottom).</li>
+        </ul>
+        <h2>Getting here</h2>
+        <p>To open the Time Frame Maintenance window:</p>
+        <ul>
+            <li>From the Maintenance tab, click <b>Time Frame</b>; or</li>
+            <li>From a Time Frames <a href="Selecting a Time Frame.htm">selection</a> dialog box, click <img src="../../Resources/Images/Filters/Maintain Filters Dialog Box_1.png" style="font-weight: bold;" /><b> (Maintain Time Frames</b>).</li>
+        </ul>
+        <h2>Toolbar</h2>
+        <p>The Time Frame toolbar contains the following actions.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><a href="Creating and Editing Time Frames.htm">Add</a>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Creates a new time frame.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><a href="Creating and Editing Time Frames.htm">Edit</a>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Edits the selected time frame.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Delete</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Deletes the selected time frame.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Refresh</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Refreshes the Time Frame Maintenance window.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Grid"></a>Grid details</h2>
+        <p>The read-only grid lists all of your available time frames. (Time frames for which you do not have access do not appear in the grid.)</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Time Frame ID</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The unique ID that JustEnough assigned to the time frame.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Name</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The name given to the time frame.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">An optional description of the time frame.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Dynamic Rule</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>When selected, the time frame covers "rolling" time ranges, such as "last 90 days" or "next 30 days". </p>
+                        <p>If not selected, the time frame covers static dates only, such as "March 1, 2018 - March 31, 2018".</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Allow Multiple Definitions</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>When selected, the time frame can include more than one defined time range. Each time range appears in its own row.</p>
+                        <p>For example, a time frame covering the week after Christmas for the years 2015-2017 would include the following static time ranges: "December 26-31, 2015",  "December 26-31, 2016", "December 26-31, 2017". </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">User Access</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Which JustEnough users have access to this time frame. </p>
+                        <ul>
+                            <li style="font-weight: normal;"><b>Private</b>: Only you have access.</li>
+                            <li style="font-weight: normal;"><b>Public</b>: All users have access.</li>
+                            <li style="font-weight: normal;"><b>Shared</b>: Only selected users have access.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Time"></a>Time Frame Definition pane</h2>
+        <p>This pane displays the definitions of the selected time frame. The fields shown depend on the  time frame definition type (static, dynamic, or schedule) that was selected for the time frame when it was created.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Time Frame Definition Fields.flsnp" />
+        <h2><a name="Calendar"></a>Calendar area</h2>
+        <p>The calendar area contains two calendars that show the effective time periods covered by the time frame selected in the grid. The calendar on the left shows time periods by week. The calendar on the right shows time periods by month. Both calendars track each other and, if the selected time frame allows multiple definitions, the calendars use the same color-coding for each included time range (see screenshot below).</p>
+        <p>
+            <img src="../../Resources/Images/Time Frame/calendar area.png" />
+        </p>
+        <p>In the screenshot above, you'll see a different time range has been defined for each calendar week. Each time range is color-coded so that you can easily distinguish the start and end days for each period in both the weekly (left) and monthly (right)&#160;calendars. </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

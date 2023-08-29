@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="_Execute_Action_Messages"></a>Execute Action Messages Immediately</h1>
+        <p>The Execute Action Messages Immediately, is a strategy that allows the abrupt execution of Action Messages as soon as they are available for processing. This strategy can be considered the rapid fire or message spray approach and is reflected to be the most resource intensive. In fact if there are enough action messages using this execution policy to fill up the windows services’ available thread pool, it may starve other sub-systems within JEBDS of threaded resources, reducing the throughput of JEBDS. A note of caution when this strategy is used it has the ability, under the correct circumstances to over subscribe the JustEnough Systems (JustEnough Engines and Web Service Methods) available resources. Hence this approach should only be used where near real-time processing is a non-negotiable requirement. In order to use this execution scheme one needs to compose an Action Message where the Action is the following constant string “DISPATCH_SERVICE_SEND_EXECUTE_ACTION”. The example provided below is a simple action message to Ping the JEBDS to determine if the service is currently running using the Execute Action Message Immediately strategy:</p>
+        <p>&lt;ActionMessage&gt;</p>
+        <p>&lt;Sender&gt;</p>
+        <p>&lt;string&gt;DATABASE&lt;/string&gt;</p>
+        <p>&lt;/Sender&gt;</p>
+        <p>&lt;Recipients&gt;</p>
+        <p>&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE&lt;/string&gt;</p>
+        <p>&lt;/ArrayOfString&gt;</p>
+        <p>&lt;/Recipients&gt;</p>
+        <p>&lt;Action&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE_SEND_EXECUTE_ACTION&lt;/string&gt;</p>
+        <p>&lt;/Action&gt;</p>
+        <p>&lt;ActionParameters.Count&gt;</p>
+        <p>&lt;int&gt;2&lt;/int&gt;</p>
+        <p>&lt;/ActionParameters.Count&gt;</p>
+        <p>&lt;ActionParameters&gt;</p>
+        <p>&lt;ActionParameters.Item&gt;</p>
+        <p>&lt;ActionParameters.Item.Key&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE_EXECUTE_ACTION_ACTION_MESSAGE&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.Key&gt;</p>
+        <p>&lt;ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;string&gt;JustEnough.Common.Action.ActionMessage, JustEnough.Common.Action&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;ActionParameters.Item.Value&gt;</p>
+        <p>&lt;ActionMessage&gt;</p>
+        <p>&lt;Sender&gt;</p>
+        <p>&lt;string&gt;DATABASE&lt;/string&gt;</p>
+        <p>&lt;/Sender&gt;</p>
+        <p>&lt;Recipients&gt;</p>
+        <p>&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /&gt;</p>
+        <p>&lt;/Recipients&gt;</p>
+        <p>&lt;Action&gt;</p>
+        <p>&lt;string&gt;COMMON_SEND_PING&lt;/string&gt;</p>
+        <p>&lt;/Action&gt;</p>
+        <p>&lt;ActionParameters.Count&gt;</p>
+        <p>&lt;int&gt;0&lt;/int&gt;</p>
+        <p>&lt;/ActionParameters.Count&gt;</p>
+        <p>&lt;ActionParameters /&gt;</p>
+        <p>&lt;/ActionMessage&gt;</p>
+        <p>&lt;/ActionParameters.Item.Value&gt;</p>
+        <p>&lt;/ActionParameters.Item&gt;</p>
+        <p>&lt;ActionParameters.Item&gt;</p>
+        <p>&lt;ActionParameters.Item.Key&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE_EXECUTE_ACTION_ACTION_MESSAGE_CALL_IDENTIFICATION_TOKEN&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.Key&gt;</p>
+        <p>&lt;ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;string&gt;System.String, mscorlib&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;ActionParameters.Item.Value&gt;</p>
+        <p>&lt;string&gt;33CAECFF-2419-4E78-A4BD-9612953EC2D0&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.Value&gt;</p>
+        <p>&lt;/ActionParameters.Item&gt;</p>
+        <p>&lt;/ActionParameters&gt;</p>
+        <p>&lt;/ActionMessage&gt;</p>
+        <p>&#160;</p>
+    </body>
+</html>

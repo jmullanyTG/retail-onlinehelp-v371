@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Configuration Migration Overview</h1>
+        <p>The JustEnough Configuration Migration utility helps automate migration of selected JustEnough objects from a source system (such as a QA system) to a destination system (such as a production system). Through the migration process, configuration objects are exported from the source system to a file.  That file can then be imported to the destination system, eliminating the opportunity for manual transcription errors.</p>
+        <h2>Configuration Migration user right</h2>
+        <p>Users must be granted the <a href="../Users/Configuration Migration.htm">Access To Configuration Migration</a> user right.</p>
+        <h2>Supported configuration objects</h2>
+        <p>The following configuration objects can be exported and imported through the Configuration Migration utility:</p>
+        <ul>
+            <li>Promotion strategies, including:<ul><li>Rounding rules (standard)</li><li>Rounding rules (price ending)</li><li>Calculations</li><li>Calculation sets</li><li>Promotion pricing details</li><li> Promotion validations</li><li> Promotion validation sets</li></ul></li>
+        </ul>
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>
+                <p>All customized database fields must be created in the target environment.</p>
+            </li>
+            <li>
+                <p>All stored procedures must be copied over manually to the target environment.</p>
+            </li>
+            <li>
+                <p>All view collection sets, views, and widgets must be copied over manually to the target environment.</p>
+            </li>
+            <li>
+                <p>The lower level environment must be a copy of the destination environment to ensure the configuration elements' UUID are aligned.</p>
+            </li>
+            <li>
+                <p>The lower level environment must be on the same version.</p>
+            </li>
+        </ul>
+        <h2>Actions</h2>
+        <p>The following actions are available from the Configuration toolbar.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');width: 100%;">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 259px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Import</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Click to import a configuration file into this system.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Export</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Click to export selected objects to an export file.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1"><b>Log</b> / <b>Details</b></td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Toggles displaying <a href="#Log">log messages</a> and configuration objects.</p>
+                        <ul>
+                            <li>
+                                <p>When configuration objects are displayed, click <b>Log</b> to view the log messages related to this system's imports and exports.</p>
+                                <p><b>Note</b>: <b>Import</b> and <b>Export</b> buttons are disabled when the log is displayed.</p>
+                            </li>
+                            <li>When the log is displayed, click <b>Details</b> to return to the configuration objects screen.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Exporting configuration objects from a source system</h2>
+        <ol>
+            <li>From the Maintain tab, click <b>Configuration Migration</b>.</li>
+            <li>
+                <p>In the Configuration Migration screen, select the objects you want to migrate to a destination system.</p>
+                <p>
+                    <img src="../../Resources/Images/Configuration Migration/Select objects.png" />
+                </p>
+            </li>
+            <li>Click <b>Export</b> on the Configuration toolbar.</li>
+            <li>
+                <p>In the Save As dialog box, enter a name and directory location for the configuration file. Click <b>OK </b>to begin the export.</p>
+                <p><b>Note</b>: You can view a <a href="#Log">log</a> of the export by clicking <b>Log</b> on the Configuration toolbar.</p>
+            </li>
+        </ol>
+        <h2>Importing configuration objects into a destination system</h2>
+        <ol>
+            <li>From the Maintain tab, click <b>Configuration Migration</b>.</li>
+            <li>In the Configuration Migration screen, click <b>Import</b> on the Configuration toolbar.</li>
+            <li>
+                <p>In the Open dialog box, select the configuration file you want to import and click <b>Open</b>.</p>
+                <p>JustEnough attempts to validate the configuration file. If the configuration file is valid, a Confirm Changes dialog box opens displaying the list of objects that will be updated as a result of the import.</p>
+                <p>
+                    <img src="../../Resources/Images/Configuration Migration/Confirm Changes.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click <b>Import</b> to update the system with the changes or <b>Cancel</b> to cancel the import.</p>
+                <p><b>Note</b>: You can view a <a href="#Log">log</a> of the import by clicking <b>Log</b> on the Configuration toolbar.</p>
+            </li>
+        </ol>
+        <h2><a name="Log"></a>Viewing the log</h2>
+        <p>The configuration migration log contains messages related to exports and imports of configuration files. </p>
+        <p>
+            <img src="../../Resources/Images/Configuration Migration/log.png" />
+        </p>
+        <p>The log includes the following columns, which can be sorted and filtered for convenience. </p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 415px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Message Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The icon in this column represents the type of message contained in the log entry. Message types are:</p>
+                        <p>
+                            <img src="../../Resources/Images/Configuration Migration/Start icon.png" class="icon" /> - Start of a task</p>
+                        <p>
+                            <img src="../../Resources/Images/Configuration Migration/End icon.png" class="icon" /> - End of a task</p>
+                        <p>
+                            <img src="../../Resources/Images/Configuration Migration/Information icon.png" class="icon" />- Information</p>
+                        <p>
+                            <img src="../../Resources/Images/Configuration Migration/Warning icon.png" class="icon" /> - Warning</p>
+                        <p>
+                            <img src="../../Resources/Images/Configuration Migration/Error icon.png" class="icon" /> - Error</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Date/Time</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The date and time of the message.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Task</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The type of task attempted (Import, Export, or Validating)</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Element</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Either the type of element (calculation, rounding rule, etc.) involved or "Start", which indicates the start of an import.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">User Name</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The name of the user who initiated the import or export.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Message</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">The log message.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

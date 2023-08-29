@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >ROS Scenario Calculation and Results</h1>
+        <p>Once the inputs for a scenario are set, calculation gathers the data returned by those inputs and then applies a data cleansing process to remove data points that would skew the scenario results. The cleansing process used is identical to that employed during Rationalization. For details on this process, refer to <span style="font-weight: bold;">Target Creation &gt; Rationalization</span> within this manual, or, for an expanded explanation with sample data, see the <span style="font-weight: bold;">Rate of Sale Calculator Standard Documentation</span>.</p>
+        <p><span style="font-weight: bold;font-style: italic;">Note</span><span style="font-weight: bold;">:</span><span style="font-weight: bold;">&#160; </span><span style="font-style: italic;">the system will also calculate </span><span style="font-style: italic;">and display a raw ROS, which has not undergone data cleansing, to the user, primarily for comparison purposes, although the raw ROS can also be applied if desired</span>
+        </p>
+        <p class="Default" style="font-family: Arial;font-size: 12pt;">Once scenarios have been calculated, users can review the resulting rates of sale by defined performance bands (set during configuration) as both raw and adjusted (cleansed) values.&#160; The results are grouped into the following performance percentiles (configurable during implementation): </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li class="ListParagraph" style="text-align: justify;">Minimum</li>
+            <li class="ListParagraph" style="text-align: justify;">25<sup>th</sup> percentile</li>
+            <li class="ListParagraph" style="text-align: justify;">Median (50<sup>th</sup> percentile)</li>
+            <li class="ListParagraph" style="text-align: justify;">75<sup>th</sup> percentile</li>
+            <li class="ListParagraph" style="text-align: justify;">Maximum</li>
+            <li class="ListParagraph" style="text-align: justify;">Average (default selection)</li>
+        </ul>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">Average shows the true average rate of sale per variant/period for the selected data, not the average from the configured percentile bands</span>
+            </li>
+        </ol>
+        <p class="Default" style="text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Calculation and Results.png" style="visibility: visible;mso-wrap-style: square;width: 550px;height: 110px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p class="Default">&#160;</p>
+        <p class="Default">&#160;</p>
+        <p class="Default">
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Calculation and Results_1.png" style="visibility: visible;width: 611px;height: 94px;" />
+        </p>
+        <p class="Default">&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">Review <span style="font-weight: bold;">Raw</span><span style="font-weight: bold;"> ROS</span> and <span style="font-weight: bold;">Adjusted</span> <span style="font-weight: bold;">ROS</span> sales distributions</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph">The sales history for the selected items is distributed across a performance percentile&#160; (Worst, 30%, 50%, 70%, Best) (Range is configurable during design)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Raw ROS</span> = No data cleansing or filtering</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Adjusted ROS</span> = Sales history that has been cleansed by the data cleansing steps outlined previously in this document</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Record Count</span> = the number of data points (style/color sales periods) used in the calculation of the displayed rates of sale – to serve as an indication of relative data strength</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Effective ROS</span> = Is the ROS that will be applied to the list of placeholders/variants in the third and bottom view of the ROS calculator screen.&#160; The Effective ROS can be adjusted by checking the ROS from the Scenario results, or by manually entering a value.&#160; ROS selection is cluster specific and the distribution selection can vary by cluster</li>
+        </ol>
+    </body>
+</html>

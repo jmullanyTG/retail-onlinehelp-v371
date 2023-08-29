@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Module: Supply Chain </h1>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 208px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Display Name</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">System Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Supply Chain Default Active Supply Chain ID</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">SupplyChain.DefaultActiveSupplyChainID</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The ID of the default supply chain</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Supply Chain Garbage Collection Max Minutes Allowed for Processing</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">SupplyChain.GarbageCollection.MinutesUntilTimeout</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The maximum number of minutes that garbage collection can be performed. Default value = 60.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Supply Chain Garbage Collection Max Number of Deleted Supply Chain to Process at a Time</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">SupplyChain.GarbageCollection.DeletedEntriesBatchSize</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The max number of deleted supply chains to process at one time. </p>
+                        <p>Default value = 100.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Supply Chain Garbage Collection Minutes to Wait Before Removal of Deleted Entries</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">SupplyChain.GarbageCollection.MinutesToWaitOnDeletedEntries</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The max number of minutes JustEnough waits after a supply chain is deleted to remove the entry plus related entries from the system. </p>
+                        <p>Default value = 129600 (90 days).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="font-weight: normal;">Supply Chain Override With From Supplier Flag</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">SupplyChain.OverrideSupplyChainUsingFromSupplierFlag</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">When set to <b>True</b>, the supply chain hierarchy is ignored for inventory that has a From Supplier Flag set to True. However, supply chain overrides are always used, if defined.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

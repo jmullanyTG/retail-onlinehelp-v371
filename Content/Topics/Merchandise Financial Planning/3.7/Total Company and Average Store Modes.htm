@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Total Company and Average Store Modes</h1>
+        <p style="font-weight: normal;">The <a href="Parameters.htm">View Mode parameter</a> lets you choose between viewing data for the total company (all stores combined) or for the average store (the total company value divided by the number of active sites). </p>
+        <p style="font-weight: bold;">Note: <span style="font-weight: normal;">It can be useful to <a href="Adding, Removing, and Rearranging Fields.htm">add</a> Site Count fields to your plan document (Site Count, Comp Site Count, LY&#160;Site Count). These metrics display the number of active sites in each period.</span></p>
+        <h2>Viewing Total Company data</h2>
+        <p>To view and plan in Total Company mode, choose <b>Total Company</b> as the View Mode parameter and click <b>Execute</b>.</p>
+        <p>
+            <img src="../../../Resources/Images/MFP/Total Company Mode 1.png" />
+        </p>
+        <p>In the screenshot above, notice the following Total Company values for the period 2018_wk11:</p>
+        <ul>
+            <li style="font-weight: bold;"><span style="font-weight: normal;"><b>Site Count</b>: 4</span>
+            </li>
+            <li><b>Sales Units</b>: 348</li>
+            <li><b>Sales</b>: $16,022</li>
+            <li><b>Sales % +/- LY</b>: -34.43%</li>
+        </ul>
+        <p style="font-weight: normal;">These values represent the combined sales over the 4 stores for the period.</p>
+        <h2>Viewing Average Store data</h2>
+        <p>To view metrics in Average Store mode, choose <b>Average Store</b> as the View Mode parameter and click <b>Execute</b>.</p>
+        <p>
+            <img src="../../../Resources/Images/MFP/Average Store Mode 1.png" />
+        </p>
+        <p>In the screenshot above, notice the values for the period 2018_wk11:</p>
+        <ul>
+            <li style="font-weight: bold;"><span style="font-weight: normal;"><b>Site Count</b>: 4</span>
+            </li>
+            <li><b>Sales Units</b>: 87</li>
+            <li><b>Sales</b>: $4,006</li>
+            <li><b>Sales % +/- LY</b>: -34.43%</li>
+        </ul>
+        <p style="font-weight: normal;">These values represent the Total Company values divided by the number of sites in the Site Count metric. For example, look at the Sales Units values. In Total Company mode, the Sales Units value for 2018_wk 11 is <b>348</b>. In Average Store mode, the Sales Units value is <b>87</b> (<b>348</b> units sold / <b>4</b> sites = <b>87</b> units sold per average store). </p>
+        <p style="font-weight: normal;"><b>Notes</b>:</p>
+        <ul>
+            <li style="font-weight: normal;"> Notice that the Sales % +/- LY value does not change between Total Company mode and Average Store mode. This is because metrics that are "already" averages or ratios (such as AUR, AUC, and AUT) do not get re-calculated in Average Store mode.</li>
+            <li>
+                <p style="font-weight: normal;">The values displayed on screen in Average&#160;Store mode do not show all significant digits stored in the database. Thus, due to rounding, manual calculations may deviate slightly from displayed values.</p>
+            </li>
+        </ul>
+        <h2>Planning in Average Store mode</h2>
+        <p>Plannable metrics can be edited while in Average Store mode, but remember that the system will interpret your entries as an average value for a single store, thus multiplying them by the site count to calculate the Total Company value.</p>
+        <p>&#160;</p>
+    </body>
+</html>

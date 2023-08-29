@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2124" MadCap:lastWidth="1885" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Confirming Open Dates for New Sites</h1>
+        <p>In this example, we will find new sites imported from the ERP and confirm their opening dates are scheduled accurately in JustEnough. JustEnough uses site opening dates to help determine when item orders need to be placed for the new stores.</p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Manage tab, click <b>Site Manager</b>.</li>
+            <li>
+                <p> In the Items dialog box, select the  <b>Identify New Stores</b> filter.</p>
+                <p>
+                    <img src="../../../Resources/Images/Site Manager/Site Manager filter.png" />
+                </p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>In the site document, you can see that two new sites have been added (Calgary and Nashville).</p>
+                <p>
+                    <img src="../../../Resources/Images/Site Manager/Site Manager example.png" />
+                </p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>In the local Columns toolbar, click <b>Choose</b> to select the additional fields you want to appear in the site document. In this example, we will choose fields related to site type, site status, and site group.</p>
+                <p>
+                    <img src="../../../Resources/Images/Site Manager/Site Manager choose fields.png" />
+                </p>
+            </li>
+            <li style="font-weight: normal;"> In the site document, choose one of the new sites and click on its row in the grid to view its details. (If the Details pane is hidden, click <b>Details</b> on the toolbar to show it.)</li>
+            <li>
+                <p>In the Site Status tab, find the Closed entry. If the Status End Date value is empty, select the day before the store is scheduled to open.</p>
+            </li>
+            <li>If there is not already an "Open" status entry for the site, click <b>New</b> in the Entry toolbar to add a new status.</li>
+            <li>Enter the following values for the status entry:<ul><li>Site Status = <b>Open</b></li><li>Site Status Attribute = Open</li><li>Status Start Date = The date of the store opening.</li></ul></li>
+            <li>
+                <p>Click <b>Save</b> in the Entry toolbar to save the new status entry.</p>
+                <p>
+                    <img src="../../../Resources/Images/Item Manager/Example - New Store open date.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Site Manager grid, you can see the values have been updated in the Days to First Open, Days to Status Change, Next Site Status Date, Next Status Description, and other status-related fields. </p>
+                <p>
+                    <img src="../../../Resources/Images/Item Manager/Example - Store open fields.png" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

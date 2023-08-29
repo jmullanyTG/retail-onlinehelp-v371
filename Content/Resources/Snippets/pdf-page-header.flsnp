@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="23" MadCap:lastWidth="624">
+    <body>
+        <table>
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <td>
+                    </td>
+                    <td style="text-align: right;">
+                        <p class="RunningHeader"><MadCap:variable name="Heading.Level1" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Demand Forecasting Overview</h1>
+        <p>Demand forecasting is the driving force behind inventory planning. It uncovers the true amounts that you should be replenishing while taking into account holidays, seasons, promotions and all those things that make it impossible to just order a flat quantity of products each month.</p>
+        <p>With smarter forecasts that represent true demand, you’ll avoid poor forecasting outcomes like overstocks, product obsolescence and lost sales.</p>
+        <h2>Forecast features</h2>
+        <p>To help provide the most accurate forecasting possible, JustEnough demand forecasts can account for trends and seasonality, lost sales, promotions, and more.</p>
+        <h3>Trends and seasonality</h3>
+        <p>JustEnough’s demand forecasting logic separates trends from seasonality to capture a clear picture of the selling curve for a specific time period, product and location.</p>
+        <p>Seasonality is identified by uncovering year-over-year recurring patterns in demand history that are typically visible in either weekly or monthly periods. This helps JustEnough correctly forecast future demand for products depending on whether they are in or out of season. This also makes it easy for you to phase inventory in and out for holidays or seasons without losing substantial margins.</p>
+        <p>Once these seasonal variations are accounted for, JustEnough “removes” them to uncover actual demand trends. This way, you won’t misinterpret seasonal increases or decreases as growth or decay.</p>
+        <h3>Lost sales</h3>
+        <p>For the most effective demand forecasting you need true demand history, not just sales history. JustEnough provides this critical piece by identifying periods of insufficient stock, which are then used to calculate lost sales. You'll get the full picture of what sales might have been, had there been enough of the products in stock that your customers wanted.</p>
+        <h3>Promotions</h3>
+        <p>You can flag historical periods where promotions occurred. JustEnough then captures the lift impact caused by the promotion and automatically adjust the forecast for those future periods where you plan to run the promotion again.</p>
+        <h3>Manual adjustments</h3>
+        <p>The science of demand forecasting isn't always all-knowing. Sometimes you have "insider" knowledge the system doesn't, such as an upcoming price change or a future business expansion. JustEnough lets you make manual history and forecast adjustments for situations like this. You can also override information, even to follow a hunch. After all, you're the industry expert.</p>
+        <h3>Shape forecasting</h3>
+        <p>With <a href="Shape Forecasting.htm">shape forecasting</a>, you can select a pre-selected curve to apply to an item's moving-average sales history. The forecasting engine then generates a moving-average based, season-affected demand forecast for that item.</p>
+        <h2>Forecast methodology</h2>
+        <p>JustEnough uses sophisticated and proprietary modeling algorithms to generate a forecast that’s based on true demand history. You don’t have to decide which forecasting algorithm will be the most accurate – JustEnough does that for you by automatically running a Tournament of Best Fit.</p>
+        <p>In the forecast tournament, 14 world-class forecasting methods compete against each other to determine which method should be used for a particular product. Each model is back-casted and compared against actual demand, which is computed by the Forecast Method Fit – a measure of forecast accuracy using Mean Absolute Percent Error (MAPE). The model with the best method fit wins and is used to forecast.</p>
+        <h2>Forecast levels</h2>
+        <p>You get to choose the level at which JustEnough generates a demand forecast.</p>
+        <h3>Inventory level forecasting</h3>
+        <p>An inventory forecast creates a demand forecast at the inventory level (item at site, or SKU/location).</p>
+        <h3>Level forecasting</h3>
+        <p>A level forecast creates a demand forecast for a specified level in the product or location hierarchy.</p>
+        <h3>Aggregate level forecasting</h3>
+        <p>Aggregate level forecasts creates a demand forecast across all sites contained within the company. There are many advantages for aggregate level forecasting of certain items. Aggregate forecasts can be used to give a better forecast for items with intermittent sales, or gain a more holistic view of the item’s impact across the entirety of the organization.</p>
+        <p>In order to generate an appropriate replenishment quantity at the inventory level, the aggregate forecast will be “pushed down” to the inventory level based on specific split factors. These split factors are produced based on the inventory level forecast quantities, or, in certain situations, custom specified split factors.</p>
+        <h3>Group forecasting</h3>
+        <p>With group forecasting, you can build groups of hierarchically-related items and create demand forecasts for those groups.</p>
+        <h2>Automated and ad-hoc forecasting</h2>
+        <p>JustEnough updates demand forecasts automatically as part of its scheduled tasks, so your inventory planning is always up-to-date with the latest forecasts. For convenience, you can also generate and update forecasts manually from within the application.</p>
+        <h2>Forecast visibility</h2>
+        <p>Because they play such a large role in your company’s success, it’s important to ensure demand forecasts are visible to all parts of your organization. JustEnough helps by making forecasts visible from multiple locations within the application, including</p>
+        <p>•	<b>Forecasts and Group Forecast</b> – you can create, view, and edit forecasts here.</p>
+        <p>•	<b>Item Manager</b> – you can view an item’s demand forecast alongside other relevant parameters.</p>
+        <p>•	<b>Order Manager</b> – you can view the demand forecast that drove a specific order.</p>
+        <h2 MadCap:conditions="General.How-To Guides">Related topics</h2>
+        <ul MadCap:conditions="General.How-To Guides">
+            <li><a href="Example - Generating a Demand Forecast.htm">Example - Demand Forecast</a>
+            </li>
+        </ul>
+    </body>
+</html>

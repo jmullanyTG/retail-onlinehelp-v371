@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="10" MadCap:lastHeight="3917" MadCap:lastWidth="1990">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >Cluster Set Configuration Screen</h1>
+        <p style="font-size: 12pt;">In the Cluster Set Configuration screen, users can define the actual parameters used in the creation of cluster templates and sets, including the cluster type, the sites to be included, the number and descriptions of the actual clusters, the range of data to be used, the specific criteria to be considered in the clustering algorithm, and any partitioning to be used in generating multiple cluster sets.</p>
+        <h2>Cluster Set Properties</h2>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Property</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The name of the cluster set/template.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Description</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">An optional description of the cluster set/template.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Group</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The group that the cluster set/template belongs to. Click the <b>Change</b> button to select a different group.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Security</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Whether or not this cluster set/template is available to all users (<b>Public</b>), some users (<b>Shared</b>), or just you (<b>Private</b>).</p>
+                        <p>If you select Shared, click the <b>Change</b> button to select the users and/or roles to share with.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Module</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The JustEnough module(s) that this cluster set/template is available to.</p>
+                        <p style="font-weight: normal;"><b>Notes</b>:</p>
+                        <ul>
+                            <li style="font-weight: normal;">The cluster set/template is automatically filtered out of modules that are not selected in this property. This prevents users from having to sort through the "clutter"of cluster sets that are not intended for use in a particular module. </li>
+                            <li style="font-weight: normal;"><b>Allocation</b> and <b>Assortment</b> include support for their respective scenarios in the Rate of Sale module.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Cluster Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The cluster set/template <a href="#Cluster">type</a>.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Cluster Partition Site Filter By Field</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>When the Cluster Type property is a Site Item Partition or Site Partition, this property sets the site property used to partition cluster sets.</p>
+                        <p>All site properties defined in <a href="../Site Manager/Site Manager Overview.htm">Site Manager</a> are available for selection, including basic store information, site attributes, hierarchy levels, site group, capacity, schedules and type.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Site Filter Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The method used to define the total group of stores to be clustered:</p>
+                        <ul>
+                            <li>Site Hierarchy Level</li>
+                            <li>Site Filter</li>
+                            <li>Intersection Site Hierarchy Level And Site Filter</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Site Hierarchy</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The site hierarchy to use to define the stores to be clustered.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Site Level</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The level of the selected Site Hierarchy to define the stores to be clustered. (Property not visible when Site Filter is selected as the Site Filter Type.)</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Site Filter</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The site filter to use for defining the stores to be clustered.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Cluster Partition ItemMaster Hierarchy</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">When the Cluster Type property is an Item Partition or Site Item Partition, this sets the product hierarchy to use for clustering data selection and cluster set partitioning.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Cluster Partition ItemMaster Level</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">When the Cluster Type property is an Item Partition or Item Site Partition, this property defines the product hierarchy level of the selected Cluster Partition ItemMaster Hierarchy to be used in clustering data selection and cluster set partitioning.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Cluster Items</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The clusters to assign stores to when the cluster set/template is calculated. </p>
+                        <p>Click <b>Maintain</b> to create, delete, and edit clusters.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Cluster Settings</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The priority ranking of each cluster selected in the Cluster Items property. Adjust ranking up and down using the arrows on the right-hand side of the cluster list. The cluster with the lowest number has the highest ranking and will contain the stores with the highest relative value.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Attribute Settings</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The priority ranking of each attribute used to calculate cluster sets. Adjust ranking up and down using the arrows on the right-hand side of the attribute list. The attribute with the lowest number has the highest ranking and will contain the stores with the highest relative value.</p>
+                        <p>See <a href="Attribute Settings.htm">Attribute Settings</a> for more information about attributes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Distance Function</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The distance function to use when calculating cluster sets. </p>
+                        <ul>
+                            <li><b>Euclidean Distance</b> calculates distance in a straight line (as the crow files).</li>
+                            <li style="font-weight: bold;"><b>Manhattan Disstance </b><span style="font-weight: normal;">calculates distance between two points as a sum of horizontal and vertical lines on a grid (no diagonals).</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Allow Cluster Count to be Resized </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Determines whether or not all clusters in the cluster set must have sites assigned to them. </p>
+                        <p>When selected, JustEnough ranks stores naturally according to the results of the selected Cluster Type algorithm. This may leave some clusters without any stores assigned to them.</p>
+                        <p>If this option is not selected, JustEnough will force at least one store to be assigned to each cluster in the cluster set.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <h2><a name="Cluster"></a>Cluster Types</h2>
+        <p>Cluster types are based on K-Means and K-Medoids statistical clustering algorithms.</p>
+        <p>K-Means estimates and plots a number of data centers (centroids) equal to the number of desired clusters specified by the user amidst a field of store-specific data points and then tests the distance of each data point to each data center to determine which cluster each point belongs to.</p>
+        <p>K-Medoids is similar to K-Means, but identifies actual data points within the data field as data centers (medoids) and uses an alternate distance calculation which is more robust to the presence of noise and outliers in the data set than K-Means; consequently, it also takes much longer to resolve than K-Means.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Type</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">K-Means</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Creates a single K-Means style cluster set.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">K-Means Collection Item Partition</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p><span style="color: #000000;">Creates a K-Means style cluster set template and multiple cluster sets based on the lowest level of the Cluster Partition Item Master Hierarchy.</span>
+                        </p>
+                        <p><span style="font-weight: bold;color: #0070C0;font-size: 12pt;font-style: italic;">Example:</span><span style="font-size: 12pt;font-style: italic;">the lowest level of the Cluster Partition Item Master Hierarchy is Subclass and contains the subclasses Tees, Woven Tops, Knit Tops, and Sweaters and I’ve set a Sale Attribute to pull all sales from the last year – this option will create separate cluster sets for Tees, Woven Tops, Knit Tops, and Sweaters using the last years’ worth of sales for each product area</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">K-Means Collection Site Item Partition</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1"><span style="color: #000000;">Creates a K-Means style cluster set template and multiple cluster sets based on the intersection of the lowest level of the Cluster Partition Item Master Hierarchy and the values in the selected Cluster Partition Site Filter By Field.</span>
+                        <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span><span style="font-style: italic;font-size: 12pt;">The lowest level of the Cluster Partition Item Master Hierarchy is Subclass and contains the subclasses Tees, Woven Tops, Knit Tops, and Sweaters, the </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Cluster Partition Site Filter By Field</span><span style="font-style: italic;font-size: 12pt;">is set to Store Capacity, which contains the values High, Medium, and Low, and I’ve set a Sale Attribute to pull all sales from the last year – this option will create the following cluster sets using the last years’ worth of sales for the intersection of the product areas and stores that meet the Store Capacity criteria:</span>
+                        </p>
+                        <ul>
+                            <li style="margin-bottom: 0pt;font-style: italic;font-size: 12pt;">Tees – High, Tees – Medium, Tees – Low</li>
+                            <li style="margin-bottom: 0pt;font-style: italic;font-size: 12pt;">Woven Tops – High, Woven Tops – Medium, Woven Tops – Low</li>
+                            <li style="margin-bottom: 0pt;font-style: italic;font-size: 12pt;">Knit Tops – High, Knit Tops – Medium, Knit Tops – Low</li>
+                            <li style="margin-bottom: 0pt;font-style: italic;font-size: 12pt;">Sweaters – High, Sweaters – Medium, Sweaters – Low</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">K-Means Collection Site Partition</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Creates a K-Means style cluster set template and multiple cluster sets based on the values in the selected Cluster Partition Site Filter By Field.</p>
+                        <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;font-size: 12pt;">The </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Cluster Partition Site Filter By Field</span><span style="font-style: italic;font-size: 12pt;"> is set to Store Capacity, which contains the values High, Medium, and Low, and I’ve set a Sale Attribute to pull all sales from the last year – this option will create separate cluster sets for High, Medium, and Low capacity stores using the last years’ worth of sales for stores that meet the Store Capacity criteria</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">K-Medoids</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Creates a single K-Medoids style cluster set.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">K-Medoids Collection Item Partition</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Creates a K-Medoids style cluster set template and multiple cluster sets based on the lowest level of the Cluster Partition Item Master Hierarchy.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">K-Medoids Collection Site Item Partition</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Creates a K-Medoids style cluster set template and multiple cluster sets based on the intersection of the lowest level of the Cluster Partition Item Master Hierarchy and the values in the selected Cluster Partition Site Filter By Field.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">K-Medoids* Collection Site Partition</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Creates a K-Medoids style cluster set template and multiple cluster sets based on the values in the selected Cluster Partition Site Filter By Field.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Manual K-Cluster</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">Creates a single manually defined cluster set</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

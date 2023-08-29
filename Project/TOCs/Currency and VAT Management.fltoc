@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Currency and VAT Management Overview"
+    Link="/Content/Topics/Currency and VAT Management/Currency and VAT Management Overview.htm"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"
+    AutoEndOnLeftPage="disabled"></TocEntry>
+  <TocEntry
+    Title="Essential Business Concepts"
+    Link="/Content/Topics/Currency and VAT Management/Essential Business Concepts.htm">
+    <TocEntry
+      Title="Currency Exchange Rates"
+      Link="/Content/Topics/Currency and VAT Management/Currency Exchange Rates.htm" />
+    <TocEntry
+      Title="Price Translation Management"
+      Link="/Content/Topics/Currency and VAT Management/Price Translation Management.htm" />
+    <TocEntry
+      Title="Price Translation Hierarchy Assignment"
+      Link="/Content/Topics/Currency and VAT Management/Price Translation Hierarchy Assignment.htm" />
+    <TocEntry
+      Title="Planning VAT Rates"
+      Link="/Content/Topics/Currency and VAT Management/Planning VAT Rates.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Currency and VAT Management/Practical Application.htm" />
+</CatapultToc>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Export definition</h1>
+        <p>To create an Export Configuration, first click<span class="span_1"> New</span> above the Export Definition grid, fill in the required columns and click <span class="span_1">Save</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management1/Export definition.png" style="height: 91px;width: 623px;" class="img_1" />
+        </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p class="p_2">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p class="p_2">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Export Type (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select an Export Type from the following dropdown list:</p>
+                        <p><span class="span_1">API</span> – For this export type, the Module ID, Export Name and Method Called columns are required.</p>
+                        <p><span class="span_1">File</span> – For this export type, the Module ID, Export Name, Base Output File Name, Output Path/Table, and Output Method columns are required.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Module ID (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Defaulted to ‘Promotions’.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Export Name (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter the descriptive label for the export process.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Method Called (<span class="span_5">Required</span>/<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select ‘Export Promotions FileOutput’ from the dropdown list unless a custom method has been created. This column is required for File export types.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Base Output File Name (<span class="span_5">Required</span>/<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter the base file name for File export types. A timestamp will be added to this name.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Output Path/Table (<span class="span_5">Required</span>/<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Enter the path that the export file will be written to for File export types. Do not include closing ‘\’.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Output Method (<span class="span_5">Required</span>/<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select either ‘Dispatch Broker’ or ‘xp_cmdShell’ from the dropdown list for File export types. The former is the preferred method.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Active (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select this column to indicate that the export is active.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Column Delimiter (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter the single character column delimiter to be included in the output. Ensure that the column delimiter is a unique character that is not used elsewhere e.g. in field names or values.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Max Detail Record Batch Size (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Enter the maximum number of detail records to output per batch for API export.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Output User (<span class="span_5">Required</span>/<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Select a SQL Server login that has been configured for exporting from the dropdown list.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

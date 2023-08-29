@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Name="BookTitle"
+    Comment=""
+    EvaluatedDefinition="SET IN TARGET">SET IN TARGET</Variable>
+  <Variable
+    Name="BookSubTitle"
+    Comment=""
+    EvaluatedDefinition="User Guide">User Guide</Variable>
+  <Variable
+    Name="BookVersion"
+    Comment=""
+    EvaluatedDefinition="2019.1">2019.1</Variable>
+</CatapultVariableSet>

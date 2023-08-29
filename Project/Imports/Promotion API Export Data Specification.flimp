@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="true"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="false"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  ConvertEquations="true"
+  LastCollectTime="2018-06-15T15:41:10.4453052-07:00"
+  ProjectName="JEhelp_3.6.2"
+  ProjectFolder="C:\Users\Jonathan.Boswell\Documents\My Projects\Just Enough Help Center 3.6.2\"
+  AutoSync="false"
+  AutoFitTables="true"
+  UseHeaderRows="true"
+  LastImport="2018-06-15T15:42:28.3681543-07:00">
+  <Files>
+    <Url
+      Source="../../../../JustEnough/3.6.2/3.6.1 Docs/Promotion API Export Data Specification.docx"
+      AbsoluteSource="file:///C:/Users/Jonathan.Boswell/Documents/JustEnough/3.6.2/3.6.1 Docs/Promotion API Export Data Specification.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Promotion API Export Data Specification/Process Flow.png"
+      TimeStamp="6/15/2018 3:41:54 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/Process Flow.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/Export Table Structures.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/dbo tbl_API_Export_Promotion.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/dbo tbl_API_Export_Promotion_Archive.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/Supporting Configuration Tables.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/export Export_Config_Columns.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/Procedures.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/Configuration and Execution.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/Notes.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Promotion API Export Data Specification/TroubleShooting.htm"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../TOCs/Promotion API Export Data Specification.fltoc"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Promotion API Export Data Specification.css"
+      TimeStamp="6/15/2018 3:41:55 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+    <Map
+      From="Heading 4"
+      To="h4.Heading 4" />
+    <Map
+      From="Heading 5"
+      To="h5.Heading 5" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="Heading 1" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="Heading 3" />
+    <StyleName
+      Name="List Paragraph" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles />
+</MsWordImport>

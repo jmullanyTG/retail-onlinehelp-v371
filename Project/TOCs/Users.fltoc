@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Users Overview"
+    Link="/Content/Topics/Users/Users Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Users/Essential Business Concepts.htm">
+      <TocEntry
+        Title="User Details"
+        Link="/Content/Topics/Users/User Details.htm" />
+      <TocEntry
+        Title="Contact Details"
+        Link="/Content/Topics/Users/Contact Details.htm" />
+      <TocEntry
+        Title="Roles"
+        Link="/Content/Topics/Users/Roles.htm" />
+      <TocEntry
+        Title="Rights"
+        Link="/Content/Topics/Users/Rights.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Users/Practical Application.htm">
+      <TocEntry
+        Title="Create"
+        Link="/Content/Topics/Users/Create.htm" />
+      <TocEntry
+        Title="Edit"
+        Link="/Content/Topics/Users/Edit.htm" />
+      <TocEntry
+        Title="Delete"
+        Link="/Content/Topics/Users/Delete.htm" />
+      <TocEntry
+        Title="Clone User"
+        Link="/Content/Topics/Users/Clone User.htm" />
+      <TocEntry
+        Title="Assign Roles"
+        Link="/Content/Topics/Users/Assign Roles.htm" />
+      <TocEntry
+        Title="Assign Rights"
+        Link="/Content/Topics/Users/Assign Rights.htm" />
+      <TocEntry
+        Title="Synchronize From Active Directory"
+        Link="/Content/Topics/Users/Synchronize From Active Directory.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Users/Technical Execution.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Roles"
+    Link="/Content/Topics/Users/Roles_1.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Users/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Role Details"
+        Link="/Content/Topics/Users/Role Details.htm" />
+      <TocEntry
+        Title="Memberships"
+        Link="/Content/Topics/Users/Memberships.htm" />
+      <TocEntry
+        Title="Rights"
+        Link="/Content/Topics/Users/Rights_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Users/Practical Application_1.htm">
+      <TocEntry
+        Title="Create a Role"
+        Link="/Content/Topics/Users/Create a Role.htm" />
+      <TocEntry
+        Title="Modify a Role"
+        Link="/Content/Topics/Users/Modify a Role.htm" />
+      <TocEntry
+        Title="Deleting a Role"
+        Link="/Content/Topics/Users/Deleting a Role.htm" />
+      <TocEntry
+        Title="Synchronize From Active Directory"
+        Link="/Content/Topics/Users/Synchronize From Active Directory_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Users/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Rights"
+    Link="/Content/Topics/Users/Rights_2.htm">
+    <TocEntry
+      Title="Allocations and Replenishment"
+      Link="/Content/Topics/Users/Allocations and Replenishment.htm" />
+    <TocEntry
+      Title="Allocation Rules"
+      Link="/Content/Topics/Users/Allocation Rules.htm" />
+    <TocEntry
+      Title="Assortment Planning"
+      Link="/Content/Topics/Users/Assortment Planning.htm" />
+    <TocEntry
+      Title="Broker Dispatch Viewer"
+      Link="/Content/Topics/Users/Broker Dispatch Viewer.htm" />
+    <TocEntry
+      Title="Causals"
+      Link="/Content/Topics/Users/Causals.htm" />
+    <TocEntry
+      Title="Constraints"
+      Link="/Content/Topics/Users/Constraints.htm" />
+    <TocEntry
+      Title="Content Manager "
+      Link="/Content/Topics/Users/Content Manager User Rights.htm" />
+    <TocEntry
+      Title="Curves"
+      Link="/Content/Topics/Users/Curves.htm" />
+    <TocEntry
+      Title="Dashboard"
+      Link="/Content/Topics/Users/Dashboard.htm" />
+    <TocEntry
+      Title="Events"
+      Link="/Content/Topics/Users/Events Management User Rights.htm">
+      <TocEntry
+        Title="Allow Access to Budget"
+        Link="/Content/Topics/Users/Allow Access to Budget.htm" />
+      <TocEntry
+        Title="Allow Access to Event"
+        Link="/Content/Topics/Users/Allow Access to Event.htm" />
+      <TocEntry
+        Title="Allow Access to Event Module View Collection Set"
+        Link="/Content/Topics/Users/Allow Access to Event Module View Collection Set.htm" />
+      <TocEntry
+        Title="Allow Access to Event View Collection Set"
+        Link="/Content/Topics/Users/Allow Access to Event View Collection Set.htm" />
+      <TocEntry
+        Title="Allow Access to Slot Set Layout Edit"
+        Link="/Content/Topics/Users/Allow Access to Slot Set Layout Edit.htm" />
+      <TocEntry
+        Title="Allow Access to Slot Set Layout View"
+        Link="/Content/Topics/Users/Allow Access to Slot Set Layout View.htm" />
+      <TocEntry
+        Title="Allow Access to Slot Set List View"
+        Link="/Content/Topics/Users/Allow Access to Slot Set List View.htm" />
+      <TocEntry
+        Title="Allow Access to Slot Set Views"
+        Link="/Content/Topics/Users/Allow Access to Slot Set Views.htm" />
+      <TocEntry
+        Title="Allow Add Promotion to Event"
+        Link="/Content/Topics/Users/Allow Add Promotion to Event.htm" />
+      <TocEntry
+        Title="Allow Creation of Campaign"
+        Link="/Content/Topics/Users/Allow Creation of Campaign.htm" />
+      <TocEntry
+        Title="Allow Creation of Event"
+        Link="/Content/Topics/Users/Allow Creation of Event.htm" />
+      <TocEntry
+        Title="Allow Creation of Geography"
+        Link="/Content/Topics/Users/Allow Creation of Geography.htm" />
+      <TocEntry
+        Title="Allow Creation of Promotion from Event"
+        Link="/Content/Topics/Users/Allow Creation of Promotion from Event.htm" />
+      <TocEntry
+        Title="Allow Creation of Slot"
+        Link="/Content/Topics/Users/Allow Creation of Slot.htm" />
+      <TocEntry
+        Title="Allow Creation of Slot Set"
+        Link="/Content/Topics/Users/Allow Creation of Slot Set.htm" />
+      <TocEntry
+        Title="Allow Creation of Tags"
+        Link="/Content/Topics/Users/Allow Creation of Tags_1.htm" />
+      <TocEntry
+        Title="Allow Deleting Of Campaign"
+        Link="/Content/Topics/Users/Allow Deleting Of Campaign.htm" />
+      <TocEntry
+        Title="Allow Deleting Of Event"
+        Link="/Content/Topics/Users/Allow Deleting Of Event.htm" />
+      <TocEntry
+        Title="Allow Deleting Of Geography"
+        Link="/Content/Topics/Users/Allow Deleting Of Geography.htm" />
+      <TocEntry
+        Title="Allow Deleting Of Slot"
+        Link="/Content/Topics/Users/Allow Deleting Of Slot.htm" />
+      <TocEntry
+        Title="Allow Deleting Of Slot Set"
+        Link="/Content/Topics/Users/Allow Deleting Of Slot Set.htm" />
+      <TocEntry
+        Title="Allow Editing Of Bids"
+        Link="/Content/Topics/Users/Allow Editing Of Bids.htm" />
+      <TocEntry
+        Title="Allow Editing Of Campaign"
+        Link="/Content/Topics/Users/Allow Editing Of Campaign.htm" />
+      <TocEntry
+        Title="Allow Editing Of Content"
+        Link="/Content/Topics/Users/Allow Editing Of Content_1.htm" />
+      <TocEntry
+        Title="Allow Editing Of Event"
+        Link="/Content/Topics/Users/Allow Editing Of Event.htm" />
+      <TocEntry
+        Title="Allow Editing Of Event after Ad Start Date"
+        Link="/Content/Topics/Users/Allow Editing Of Event after Ad Start Date.htm" />
+      <TocEntry
+        Title="Allow Editing of Event Header"
+        Link="/Content/Topics/Users/Allow Editing of Event Header.htm" />
+      <TocEntry
+        Title="Allow Editing Of Slot Set Header"
+        Link="/Content/Topics/Users/Allow Editing Of Slot Set Header.htm" />
+      <TocEntry
+        Title="Allow Editing Of Slot Set Status State"
+        Link="/Content/Topics/Users/Allow Editing Of Slot Set Status State.htm" />
+      <TocEntry
+        Title="Allow Modify Event Status"
+        Link="/Content/Topics/Users/Allow Modify Event Status.htm" />
+      <TocEntry
+        Title="Allow Overriding Slot Set Status"
+        Link="/Content/Topics/Users/Allow Overriding Slot Set Status.htm" />
+      <TocEntry
+        Title="Allow Removal of Item from Slot"
+        Link="/Content/Topics/Users/Allow Removal of Item from Slot.htm" />
+      <TocEntry
+        Title="Allow Save as for Event"
+        Link="/Content/Topics/Users/Allow Save as for Event.htm" />
+      <TocEntry
+        Title="Config - Allow Access to Event Config"
+        Link="/Content/Topics/Users/Config Allow Access to Event Config.htm" />
+      <TocEntry
+        Title="Config - Allow Creation of Cost Type"
+        Link="/Content/Topics/Users/Config Allow Creation of Cost Type.htm" />
+      <TocEntry
+        Title="Config - Allow Creation of Event Type"
+        Link="/Content/Topics/Users/Config Allow Creation of Event Type.htm" />
+      <TocEntry
+        Title="Config - Allow Creation of Item Display Format"
+        Link="/Content/Topics/Users/Config Allow Creation of Item Display Format.htm" />
+      <TocEntry
+        Title="Config - Allow Creation of Slot Set Template"
+        Link="/Content/Topics/Users/Config Allow Creation of Slot Set Template.htm" />
+      <TocEntry
+        Title="Config - Allow Creation of Space"
+        Link="/Content/Topics/Users/Config Allow Creation of Space.htm" />
+      <TocEntry
+        Title="Config - Allow Deleting Of Cost Type"
+        Link="/Content/Topics/Users/Config Allow Deleting Of Cost Type.htm" />
+      <TocEntry
+        Title="Config - Allow Deleting Of Event Type"
+        Link="/Content/Topics/Users/Config Allow Deleting Of Event Type.htm" />
+      <TocEntry
+        Title="Config - Allow Deleting Of Item Display Format"
+        Link="/Content/Topics/Users/Config Allow Deleting Of Item Display Format.htm" />
+      <TocEntry
+        Title="Config - Allow Deleting Of Slot Set Template"
+        Link="/Content/Topics/Users/Config Allow Deleting Of Slot Set Template.htm" />
+      <TocEntry
+        Title="Config - Allow Deleting Of Space"
+        Link="/Content/Topics/Users/Config Allow Deleting Of Space.htm" />
+      <TocEntry
+        Title="Config - Allow Editing Of Cost Type"
+        Link="/Content/Topics/Users/Config Allow Editing Of Cost Type.htm" />
+      <TocEntry
+        Title="Config - Allow Editing Of Event Type"
+        Link="/Content/Topics/Users/Config Allow Editing Of Event Type.htm" />
+      <TocEntry
+        Title="Config - Allow Editing Of Item Display Format"
+        Link="/Content/Topics/Users/Config Allow Editing Of Item Display Format.htm" />
+      <TocEntry
+        Title="Config - Allow Editing Of Price Display Format"
+        Link="/Content/Topics/Users/Config Allow Editing Of Price Display Format.htm" />
+      <TocEntry
+        Title="Config - Allow Editing Of Slot Set Template"
+        Link="/Content/Topics/Users/Config Allow Editing Of Slot Set Template.htm"></TocEntry>
+      <TocEntry
+        Title="Config - Allow Editing Of Space"
+        Link="/Content/Topics/Users/Config Allow Editing Of Space.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Files"
+      Link="/Content/Topics/Users/Files.htm" />
+    <TocEntry
+      Title="Filters"
+      Link="/Content/Topics/Users/Filters.htm" />
+    <TocEntry
+      Title="Financial Planning"
+      Link="/Content/Topics/Users/Financial Planning.htm" />
+    <TocEntry
+      Title="Forecast Definition"
+      Link="/Content/Topics/Users/Forecast Definition.htm" />
+    <TocEntry
+      Title="Forecasts"
+      Link="/Content/Topics/Users/Forecasts.htm" />
+    <TocEntry
+      Title="Group Forecasts"
+      Link="/Content/Topics/Users/Group Forecasts.htm" />
+    <TocEntry
+      Title="Help Configuration Manager"
+      Link="/Content/Topics/Users/Help Configuration Manager.htm" />
+    <TocEntry
+      Title="Inventory Classification"
+      Link="/Content/Topics/Users/Inventory Classification.htm" />
+    <TocEntry
+      Title="Inventory Policy"
+      Link="/Content/Topics/Users/Inventory Policy.htm" />
+    <TocEntry
+      Title="Item Manager"
+      Link="/Content/Topics/Users/Item Manager.htm" />
+    <TocEntry
+      Title="Job Manager"
+      Link="/Content/Topics/Users/Job Manager.htm" />
+    <TocEntry
+      Title="Languages"
+      Link="/Content/Topics/Users/Languages.htm" />
+    <TocEntry
+      Title="Media Manager"
+      Link="/Content/Topics/Users/Media Manager.htm" />
+    <TocEntry
+      Title="Notes"
+      Link="/Content/Topics/Users/Notes.htm" />
+    <TocEntry
+      Title="Notifications"
+      Link="/Content/Topics/Notifications/Notification User Rights.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Order Upload"
+      Link="/Content/Topics/Users/Order Upload.htm" />
+    <TocEntry
+      Title="Parameters"
+      Link="/Content/Topics/Users/Parameters.htm" />
+    <TocEntry
+      Title="Price Manager" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      Link="/Content/Topics/Users/Price Manager.htm" />
+    <TocEntry
+      Title="Profiles"
+      Link="/Content/Topics/Users/Profiles.htm"></TocEntry>
+    <TocEntry
+      Title="Promotions"
+      Link="/Content/Topics/Users/Promotion Management User Rights.htm">
+      <TocEntry
+        Title="Allow Access to Analysis"
+        Link="/Content/Topics/Users/Allow Access to Analysis.htm" />
+      <TocEntry
+        Title="Allow Access to Bids"
+        Link="/Content/Topics/Users/Allow Access to Bids.htm" />
+      <TocEntry
+        Title="Allow Access to Companion Items"
+        Link="/Content/Topics/Users/Allow Access to Companion Items.htm" />
+      <TocEntry
+        Title="Allow Access to Content"
+        Link="/Content/Topics/Users/Allow Access to Content.htm" />
+      <TocEntry
+        Title="Allow Access to Promotion"
+        Link="/Content/Topics/Users/Allow Access to Promotion.htm" />
+      <TocEntry
+        Title="Allow Creation of Price Cluster"
+        Link="/Content/Topics/Users/Allow Creation of Price Cluster.htm" />
+      <TocEntry
+        Title="Allow Creation of Promotion"
+        Link="/Content/Topics/Users/Allow Creation of Promotion.htm" />
+      <TocEntry
+        Title="Allow Creation of Tags"
+        Link="/Content/Topics/Users/Allow Creation of Tags.htm" />
+      <TocEntry
+        Title="Allow Deleting of Price Cluster"
+        Link="/Content/Topics/Users/Allow Deleting of Price Cluster.htm" />
+      <TocEntry
+        Title="Allow Deleting of Promotion"
+        Link="/Content/Topics/Users/Allow Deleting of Promotion.htm" />
+      <TocEntry
+        Title="Allow Editing of Content"
+        Link="/Content/Topics/Users/Allow Editing of Content.htm" />
+      <TocEntry
+        Title="Allow Editing of Price Cluster"
+        Link="/Content/Topics/Users/Allow Editing of Price Cluster.htm" />
+      <TocEntry
+        Title="Allow Editing of Promotion"
+        Link="/Content/Topics/Users/Allow Editing of Promotion.htm" />
+      <TocEntry
+        Title="Allow Editing of Promotion after Sale Start Date"
+        Link="/Content/Topics/Users/Allow Editing of Promotion after Sale Start Date.htm" />
+      <TocEntry
+        Title="Config - Allow Access to Promotion Config"
+        Link="/Content/Topics/Users/Config Allow Access to Promotion Config.htm" />
+      <TocEntry
+        Title="Modify Promotion Status"
+        Link="/Content/Topics/Users/Modify Promotion Status.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Reporting Services"
+      Link="/Content/Topics/Users/Reporting Services.htm" />
+    <TocEntry
+      Title="Sales Forecast"
+      Link="/Content/Topics/Users/Sales Forecast.htm" />
+    <TocEntry
+      Title="Security Configuration"
+      Link="/Content/Topics/Users/Security Configuration.htm" />
+    <TocEntry
+      Title="Setting Rights"
+      Link="/Content/Topics/Users/Setting Rights.htm" />
+    <TocEntry
+      Title="Site Manager"
+      Link="/Project/TOCs/Site Manager.fltoc" />
+    <TocEntry
+      Title="Supersessions"
+      Link="/Content/Topics/Users/Supersessions.htm" />
+    <TocEntry
+      Title="Supply Chain"
+      Link="/Content/Topics/Users/Supply Chain.htm" />
+    <TocEntry
+      Title="System Policy"
+      Link="/Content/Topics/Users/System Policy.htm" />
+    <TocEntry
+      Title="Tags"
+      Link="/Content/Topics/Users/Tags.htm" />
+    <TocEntry
+      Title="User Manager"
+      Link="/Content/Topics/Users/User Manager.htm" />
+    <TocEntry
+      Title="Views"
+      Link="/Content/Topics/Users/Views.htm" />
+    <TocEntry
+      Title="Widgets"
+      Link="/Content/Topics/Users/Widgets.htm"></TocEntry>
+    <TocEntry
+      Title="Workflow Manager" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Workload Queue"
+      Link="/Content/Topics/Users/Workload Queue User Rights.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Users/Practical Application_2.htm" />
+  <TocEntry
+    Title="Technical Execution"
+    Link="/Content/Topics/Users/Technical Execution_2.htm" />
+</CatapultToc>

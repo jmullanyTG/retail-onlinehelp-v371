@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Size Similarity Manager"
+    Link="/Content/Topics/Allocations/Size Similarity Manager Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Functionality Notes"
+      Link="/Content/Topics/Allocations/Functionality Notes.htm" />
+    <TocEntry
+      Title="Header Area Controls"
+      Link="/Content/Topics/Allocations/Header Area Controls.htm" />
+    <TocEntry
+      Title="Field Descriptions"
+      Link="/Content/Topics/Allocations/Field Descriptions.htm" />
+    <TocEntry
+      Title="Technical Fields List"
+      Link="/Content/Topics/Allocations/Technical Fields List.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Enhanced Size Curve Calculation"
+    Link="/Content/Topics/Allocations/Size Curves/Size Curve Calculation.htm">
+    <TocEntry
+      Title="Enhanced Curve Calculation Requirements"
+      Link="/Content/Topics/Allocations/Size Curves/Curve Calculation Requirements.htm" />
+    <TocEntry
+      Title="Data Cleansing Thresholds"
+      Link="/Content/Topics/Allocations/Size Curves/Data Cleansing Thresholds.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Allocations/Size Curves/Validating Size Curves.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations/Size Curves/Practical Application.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Size Curve Substitution"
+    Link="/Content/Topics/Allocations/Size Curves/Size Curve Substitution.htm">
+    <TocEntry
+      Title="Making Size Curve Substitutions"
+      Link="/Content/Topics/Allocations/Size Curves/Making Size Curve Substitutions.htm" />
+    <TocEntry
+      Title="Syncing Size Curve Substitutions"
+      Link="/Content/Topics/Allocations/Size Curves/Syncing Size Curve Substitutions.htm" />
+    <TocEntry
+      Title="Manual Size Curve Overrides"
+      Link="/Content/Topics/Allocations/Size Curves/Manual Size Curve Overrides.htm" />
+    <TocEntry
+      Title="Clearing Substitutions and Other Size Curve Overrides"
+      Link="/Content/Topics/Allocations/Size Curves/Clearing Substitutions and Other Size Curve Overrides.htm" />
+    <TocEntry
+      Title="Recalculating Size Curves When Overrides are Present"
+      Link="/Content/Topics/Allocations/Size Curves/Recalculating Size Curves When Overrides are Present.htm" />
+  </TocEntry>
+</CatapultToc>

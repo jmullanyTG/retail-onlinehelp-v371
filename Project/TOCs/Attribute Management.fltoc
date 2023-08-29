@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Attribute Management and Assignment Overview"
+    Link="/Content/Topics/Attribute Management/Attribute Management and Assignment.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Attribute Management Module"
+      Link="/Content/Topics/Attribute Management/Attribute Management Module.htm" />
+    <TocEntry
+      Title="Attribute Sets"
+      Link="/Content/Topics/Attribute Management/Attribute Sets.htm" />
+    <TocEntry
+      Title="Attribute Sets Widget"
+      Link="/Content/Topics/Attribute Management/Attribute Sets Widget.htm" />
+    <TocEntry
+      Title="Attribute Set Hierarchy Assignments Widget"
+      Link="/Content/Topics/Attribute Management/Attribute Set Hierarchy Assignments.htm" />
+    <TocEntry
+      Title="Assigning Attributes to Variants"
+      Link="/Content/Topics/Attribute Management/Assigning Attributes to Variants.htm" />
+    <TocEntry
+      Title="Attribute Families Widget"
+      Link="/Content/Topics/Attribute Management/Attribute Families Widget.htm" />
+    <TocEntry
+      Title="Assigning Attributes to Sites"
+      Link="/Content/Topics/Attribute Management/Assigning Attributes to Sites.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Attribute Management/Practical Application.htm" />
+  <TocEntry
+    Title="Report Using Attributes"
+    Link="/Content/Topics/Attribute Management/Report Using Attributes.htm" />
+</CatapultToc>

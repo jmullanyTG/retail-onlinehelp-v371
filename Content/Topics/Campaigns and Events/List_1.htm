@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >List</h1>
+        <p>The Slot Set List view, displays the Slots in the selected Slot Set as rows in a grid. Access to this screen depends on the user’s rights.</p>
+        <p>
+            <img src="../../Resources/Images/Campaigns and Events/List_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 200px;" />
+        </p>
+        <p>For each Slot, the following attributes are displayed as columns:</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Slot Number (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The Position of the Slot in the Slot Set.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Assigned Promotion (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>If a Promotion has been added to the Slot, the Promotion Name will be displayed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Content Version (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>If a Promotion has been added to the Slot and more than one Content Version exists for it, each Content Version will have its own row in the grid. The Content Version Name will be displayed in this column.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Item Display Format (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Indicates the Item Display Format to be used across all Promotions in the Slot. This may be modified by selecting a new Item Display Format from the dropdown list. All Promotions associated with a Slot must use the same Item Display Format.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Space (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Indicates the Space assignment for the Slot. This may be modified by selecting a new Space from the dropdown list. Changing the Space assignment may affect user permissions to the Slot.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Status (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>If a Promotion has been added to the Slot, the Status is ‘Assigned’, otherwise it is ‘Open’. It is possible for a Slot to have Statuses of ‘Assigned’ and ‘Opened’ if not all of the available Geographies are assigned a Promotion.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Notes (<span style="color: #0070C0;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter instructions or additional information related to the treatment of the assigned Promotion directly into the grid. This is not editable if the Slot is ‘Open’.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Start Date (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Displays the Promotion Start Date.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>End Date (Read Only)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Displays the Promotion End Date.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Every Slot Set has a Position 0 Slot. This is where all unadvertised Promotions will be located for the Slot Set. Position 0 does not have an associated Item Display Format, Space, and the Status is ‘Unassigned’.</p>
+        <p>Selecting a Slot in the grid, will refresh the Geography and Promotion panes below the grid. </p>
+        <p>
+            <img src="../../Resources/Images/Campaigns and Events/List_1_1.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 239px;" />
+        </p>
+        <p>The Geography pane indicates which Geographies will be automatically assigned to the Promotion when it is added to the Slot. The Promotions pane indicates which Promotions are available to add to the Slot. A Promotion with a checkmark, indicate that it has been added to the Slot Set but not necessarily the selected Slot. If a Promotion is assigned to the selected Slot, only it will be the only one displayed in the Promotions pane.</p>
+        <p>Depending on the Global Policy ‘Promotion Double Click Action’ setting, double clicking on an assigned Promotion in the grid will load the Promotion in either a window or in the Promotions solution.</p>
+    </body>
+</html>

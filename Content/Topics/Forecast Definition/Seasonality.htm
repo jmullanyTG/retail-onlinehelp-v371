@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h3 >Seasonality</h3>
+        <p>The seasonality processor should be applied to "DeSeasonalize" and then "ReSeasonalize" data on an average seasonal pulse basis. What this means is that the pre-processor will take any apparent seasonality and remove it from the series, then re-add it during the post-processor. In order to determine what is “DeSeasonalized”, the seasonal sales are calculated by period. For each period, the engine determines a factor by which the data point determined to be higher or lower. It will then average that factor across the entire data series.</p>
+        <p>There are no user configurable parameter values for the processor seasonality rule. Seasonality is pre-determined and specified in each particular database.</p>
+    </body>
+</html>

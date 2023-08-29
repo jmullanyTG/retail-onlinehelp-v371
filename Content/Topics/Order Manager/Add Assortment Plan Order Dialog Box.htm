@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="3619" MadCap:lastWidth="2110">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Add Assortment Plan Order Dialog Box</h1>
+        <p style="text-align: center">
+            <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box.png" style="visibility: visible;width: 413px;height: 375px" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Source: </span><span style="color: #000000;">non-editable alpha-numeric; indicates the type of order being created; always sets to Assortment Plan Commitment when clicking the Commitment button</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Workflow: </span><span style="color: #000000;">user-editable dropdown; sets the active workflow for the order documents created upon clicking OK</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">available workflows are based on user permissions set in the Workflow module</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important: </span><span style="font-style: italic;">although an inactive flag exists within Workflow Manager to designate workflows that are no longer in play, this feature has not yet been integrated with Order Manager as of 3.6.0, thus, you will still see workflows flagged as inactive as selections in this dropdown</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Name: </span><span style="color: #000000;">user editable alpha-numeric; sets the name for the order or group of orders created</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">the system also appends the values from the Assortment Plan, Product, and Owner fields, as well as the receipt date, to the end of the name specified for ease of identification</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Description</span><span style="color: #000000;">: user editable alpha-numeric; sets an optional description for the orders created</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Owner: </span><span style="color: #000000;">non-editable alpha-numeric; displays the UserID of the user who will initially own the created orders; defaults to the current user</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Security: </span><span style="color: #000000;">user editable dropdown; defines which users will have access to view/change the created orders</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Public: </span><span style="color: #000000;">all users with sufficient permissions can view/edit</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Private</span><span style="font-weight: bold;color: #000000;">: </span><span style="color: #000000;">only the owner of the created order(s) can view/edit</span>
+            </li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Shared: </span><span style="color: #000000;font-size: 12pt;">only specified users have access to view/edit</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Change: </span><span style="color: #000000;">launches the Maintain Users and Roles dialog; only active when Security is set to Shared</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_1.png" style="visibility: visible;width: 385px;height: 207px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;">Filter Field: </span>type in this field to filter the list of Roles and Users below; filters using a “Contains” type filter by default</li>
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;">Orientation Button (</span>
+                <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_2.png" style="visibility: visible;mso-wrap-style: square;width: 15px;height: 17px;" /><span style="font-weight: bold;">): </span>changes the orientation of the Roles and Users selection area from a standard multi-select to a tree style multi-select as show below:</li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_3.png" style="visibility: visible;width: 384px;height: 196px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;">Cancel: </span>closes with Maintain Users and Roles dialog without setting/changing the list of authorized users</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">OK: </span>sets/changes the list of authorized users to those selected in the Maintain Users and Roles dialog</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Assortment Plan: </span><span style="color: #000000;">user editable dropdown; selects the assortment plan from which to create commitment orders</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product: </span><span style="color: #000000;">user editable dropdown; selects a product filter </span><span style="color: #000000;">to create commitment orders for</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_4.png" style="visibility: visible;mso-wrap-style: square;width: 21px;height: 18px;" /><span style="color: #000000;">&#160; this button launches the Filter Conditions dialog, allowing the user to dynamically edit the criteria for the selected filter prior to executing it; the option also exists to create a new filter from the adjusted criteria on the fly</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_5.png" style="visibility: visible;mso-wrap-style: square;width: 22px;height: 22px;" /><span style="color: #000000;">&#160; this button launches the Maintain Filter dialog, allowing the user to create or import a new filter, or update, delete, or export an existing filter</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Site Hierarchy: </span><span style="color: #000000;">user editable tree multi-select; selects the levels of the </span><span style="color: #000000;">Assortment Plan’s</span><span style="color: #000000;"> Site Hierarchy to </span><span style="color: #000000;">create commitment orders for</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cluster Set: </span><span style="color: #000000;">user editable multi-select dropdown; selects the cluster sets to </span><span style="color: #000000;">create commitment orders for</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related, in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy; because of this, the Cluster Set dropdown will populate with the cluster sets contained beneath the selected Site Hierarchy levels</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Window of Time: </span><span style="color: #000000;">user editable tree multi-select; selects the window of time to </span><span style="color: #000000;">create commitment orders for</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">only receipts planned within the specific window of time selected will be captured in the created orders</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #245897;">Warning:</span> <span style="font-style: italic;">the selected timeframe must be a contiguous range of periods; if it is not, the system will still use the window of time defined by the first and last selected periods</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cancel: </span><span style="color: #000000;">Closes the Add Assortment Plan Order dialog without creating any orders</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">OK:</span> <span style="color: #000000;">creates one order document per receipt date for all planned receipts captured by the specified criteria</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Error</span><span style="font-style: italic;color: #000000;">: if no receipts are captured by the criteria you specify, you will receive the following error message:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_6.png" style="visibility: visible;width: 377px;height: 152px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;"><span style="font-style: italic;color: #000000;">This may occur because the receipts you are trying to capture do not have the Commit flag checked in Receipt Plan view, because the placeholders in question do not have size curves assigned, or because you have already created commitment orders for them. </span><span style="font-style: italic;color: #FF0000;">If you wish to re-create a commitment order, you must delete the already existing commitment order within Order Manager</span><span style="font-style: italic;color: #000000;">.</span>
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #245897;">Warning</span><span style="font-weight: bold;font-style: italic;color: #000000;">: </span><span style="font-style: italic;color: #000000;">If any orders the system attempts to create through this process are in violation of the Rec Order Min or Rec Size Min constraints set in Receipt Plan view, the system will raise the following warning:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Order Manager/Add Assortment Plan Order Dialog Box_7.png" style="visibility: visible;width: 373px;height: 177px;" alt="https://lh5.googleusercontent.com/qXkqaD1NifEqHrwdIxk0RqhuFTT4R5kxE4-uVoGH9t3fLrQqI52paeWljKhrgLB-5njDIc9BUY3sCI0uKckgtQT2egaazZwxe-vAFHuSCYqlah9MfKPEUYL7Tg9UoAcHCBCIyVBW" />
+        </p>
+    </body>
+</html>

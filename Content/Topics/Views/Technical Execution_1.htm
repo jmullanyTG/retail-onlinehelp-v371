@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Technical Execution</h1>
+        <p style="margin-bottom: 0pt;">View collection data are stored in the database in the “<span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_VW</span>” namespace. While it is typical to create a view collection in the user interface using the method described in the practical application section, they can created with a SQL script as follows (example is for merchandise financial planning):</p>
+        <p>
+            <div style="margin-left: 0;margin-top: 29.1pt;width: 465.75pt;height: 379.5pt;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 3.6pt;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 3.6pt;mso-position-horizontal: absolute;mso-position-horizontal-relative: margin;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: top;">
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;font-size: 10pt;">&#160;&#160;&#160;&#160; </span><span style="font-family: Consolas;color: #008000;font-size: 10pt;">-- Create View Collection</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">IF</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">NOT</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">EXISTS</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">(</span> <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">SELECT</span><span style="font-family: Consolas;font-size: 10pt;"> 1</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">FROM</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">dbo</span><span style="font-family: Consolas;color: #808080;font-size: 10pt;">.</span><span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_VW_ViewCollection</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">WHERE</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">Name</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #FF0000;font-size: 10pt;">'Merchandise Financial Planning'</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">)</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">BEGIN</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">DECLARE</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionID</span> <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">INT</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">INSERT</span> <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">INTO</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">dbo</span><span style="font-family: Consolas;color: #808080;font-size: 10pt;">.</span><span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_VW_ViewCollection</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">(</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">Name</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">Description</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">ImageIndex</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">[Order]</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;font-size: 10pt;">&#160;&#160; </span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">)</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">VALUES</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">(</span> <span style="font-family: Consolas;color: #FF0000;font-size: 10pt;">N'Merchandise Financial Planning'</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #FF0000;font-size: 10pt;">N'Merchandise Financial Planning Collection.'</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span><span style="font-family: Consolas;font-size: 10pt;"> 123</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span><span style="font-family: Consolas;font-size: 10pt;"> 0</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;font-size: 10pt;">&#160;&#160; </span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">)</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">SET</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #FF00FF;font-size: 10pt;">SCOPE_IDENTITY</span><span style="font-family: Consolas;color: #808080;font-size: 10pt;">()</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;">&#160;</p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">END</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">ELSE</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">BEGIN</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">SELECT</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">ViewCollectionID</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">FROM</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">dbo</span><span style="font-family: Consolas;color: #808080;font-size: 10pt;">.</span><span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_VW_ViewCollection</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">WHERE</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">Name</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #FF0000;font-size: 10pt;">'Merchandise Financial Planning'</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">END</span>
+                </p>
+                <p>&#160;</p>
+            </div>
+        </p>
+        <p>&#160;</p>
+        <p>Linking the view collection to the parented view collection set may be done using the following script:</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>
+            <div style="margin-left: 414.55pt;margin-top: 0;width: 465.75pt;height: 242.25pt;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 3.6pt;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 3.6pt;mso-position-horizontal: right;mso-position-horizontal-relative: margin;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: top;">
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;font-size: 10pt;">&#160;&#160;&#160;&#160; </span><span style="font-family: Consolas;color: #008000;font-size: 10pt;">-- Link View Collection Set to View Collection</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">IF</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">NOT</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">EXISTS</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">(</span> <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">SELECT</span><span style="font-family: Consolas;font-size: 10pt;"> 1</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">FROM</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">dbo</span><span style="font-family: Consolas;color: #808080;font-size: 10pt;">.</span><span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_VW_ViewCollectionSetLink</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">WHERE</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">ViewCollectionID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionID</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">AND</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">ViewCollectionSetID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">=</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionSetID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">)</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">AND</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">IS</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">NOT</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">NULL</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">AND</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionSetID</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">IS</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">NOT</span> <span style="font-family: Consolas;color: #808080;font-size: 10pt;">NULL</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">BEGIN</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">INSERT</span> <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">INTO</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">dbo</span><span style="font-family: Consolas;color: #808080;font-size: 10pt;">.</span><span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_VW_ViewCollectionSetLink</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">(</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">ViewCollectionSetID</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">ViewCollectionID</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">[Order]</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">)</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">VALUES</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">(</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionSetID</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span> <span style="font-family: Consolas;color: #008080;font-size: 10pt;">@iViewCollectionID</span></p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">,</span><span style="font-family: Consolas;font-size: 10pt;"> 0</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #808080;font-size: 10pt;">)</span>
+                </p>
+                <p style="margin-left: 5pt;margin-right: 5pt;margin-bottom: 0pt;"><span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">END</span>
+                </p>
+                <p>&#160;</p>
+            </div>
+        </p>
+    </body>
+</html>

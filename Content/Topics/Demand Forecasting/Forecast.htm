@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h4 >Forecast</h4>
+        <p>The forecast information will display information only related to the forecast method currently applied.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">History Start Date – </span><span style="color: #000000;">The first (oldest) time period of demand history data for the </span><span style="color: #000000;">inventory item used by the forecasting engine</span><span style="color: #000000;">.</span> Default is approximately two years previous to the forecast start date. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Forecast Start Date –</span> <span style="color: #000000;">The date that the forecast tournament was last run on the item, or the date of the last saved forecast.</span></li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Accuracy –</span> The accuracy field is a placeholder for configurable accuracy measurement displays. It does not populate by default.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Lock Expiration –</span> If the forecast methods have been locked, the expiration date for this lock will be displayed here. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Forecast Message –</span> If the forecast method was disqualified from the tournament, the reason for disqualification will be displayed here, in addition to the forecast method drop down list. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Forecast Parameters –</span> The forecast parameters displayed will vary depending on the method applied:</li>
+        </ul>
+        <p>&#160;</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #FFFFFF;">Parameter Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #FFFFFF;">Description</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #FFFFFF;">Associated Method(s)</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Period</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Number of previous periods to use.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Simple Linear Regression with a Trend and Seasonality, Weighted Moving Average with a Trend, Moving Average with a Trend, Seasonal Moving Average with a Trend, Weighted Moving Average, Moving Average</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Weightings</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Weightings of previous periods.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Weighted Moving Average with a Trend, Seasonal Moving Average, Weighted Moving Average</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">SeasonalPeriod</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Number of previous seasonal periods to use.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Seasonal Moving Average with a Trend, Seasonal Moving Average</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Alpha</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Level smoothing.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Croston Intermittent Demand, Holt-Winters Additive Trend Additive Seasonality, Holt-Winters Multiplicative Seasonality, Holt-Winters Linear Method, Exponential Smoothing with a Trend and Seasonality, Exponential Smoothing with a Trend, Exponential Smoothing</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Beta</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Trend smoothing.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Holt-Winters Additive Trend Additive Seasonality, Holt-Winters Multiplicative Seasonality, Holt-Winters Linear Method, Exponential Smoothing with a Trend and Seasonality, Exponential Smoothing with a Trend</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Gamma</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;"><span style="color: #000000;">Seasonality smoot</span><span style="color: #000000;">h</span><span style="color: #000000;">ing. </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Holt-Winters Additive Trend Additive Seasonality, Holt-Winters Multiplicative Seasonality</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Parsimony</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Parsimony refers to the number of points used to determine the quality of the forecast fit.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">All</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">SeriesMin</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Minimum value allowed for forecast periods.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">All</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Slope</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">The rate of growth/decline trend of a forecast model, typically related to the (m) in the mathematical equation of a straight line:&#160; Y=mX + b, where (b) is the Y-intercept, and (m) is the slope of the line</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">All</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Seasonality</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">Seasonality (different from Seasonality Constant) is a value assigned to each item to specify the number of consecutive buckets to consider when determining seasonality trends.&#160; If it is set to 12, a seasonal trend will only qualify if it repeats itself in two sets of consecutive 12-bucket periods.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;">All seasonal methods</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">Normalized Slope</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">The normalized slope value shows the percent change per period of the regression (best fit) line.</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;">All</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

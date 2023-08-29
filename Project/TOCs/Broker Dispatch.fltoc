@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/PrintCover.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="title"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/FrontMatter.flpgl"
+    conditions="General.Printed Manuals" />
+  <TocEntry
+    Title="Broker Dispatch Overview"
+    Link="/Content/Topics/Broker Dispatch/Broker Dispatch Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Scheduling Service"
+      Link="/Content/Topics/Broker Dispatch/Scheduling Service.htm" />
+    <TocEntry
+      Title="Dispatch Accessor"
+      Link="/Content/Topics/Broker Dispatch/Dispatch Accessor.htm" />
+    <TocEntry
+      Title="Push Service Accessor"
+      Link="/Content/Topics/Broker Dispatch/Push Service Accessor.htm" />
+    <TocEntry
+      Title="Job Manager Accessor"
+      Link="/Content/Topics/Broker Dispatch/Job Manager Accessor.htm" />
+    <TocEntry
+      Title="Action Message Coordinator"
+      Link="/Content/Topics/Broker Dispatch/Action Message Coordinator.htm">
+      <TocEntry
+        Title="Execute Action Messages Immediately"
+        Link="/Content/Topics/Broker Dispatch/Execute Action Messages Immediately.htm" />
+      <TocEntry
+        Title="Execute Action Messages Queue On Distinct Action Message"
+        Link="/Content/Topics/Broker Dispatch/Execute Action Messages Queue.htm" />
+      <TocEntry
+        Title="Execute Action Messages Queue On Distinct Action"
+        Link="/Content/Topics/Broker Dispatch/Execute Action Messages Queue_1.htm" />
+      <TocEntry
+        Title="Execute Action Message Allow Singleton Execution On Distinct Action Message"
+        Link="/Content/Topics/Broker Dispatch/Execute Action Message Allow.htm" />
+      <TocEntry
+        Title="Execute Action Message Allow Singleton Execution On Distinct Action"
+        Link="/Content/Topics/Broker Dispatch/Execute Action Message Allow_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Annexure A – JustEnough System Overview (No Legacy Components) Diagram"
+      Link="/Content/Topics/Broker Dispatch/Annexure A JustEnough System.htm" />
+    <TocEntry
+      Title="Annexure B – JustEnough Broker Dispatch Service Diagram"
+      Link="/Content/Topics/Broker Dispatch/Annexure B JustEnough Broker.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Broker Dispatch/Excluding Messages By Type.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="JustEnough Broker Dispatch Service"
+    Link="/Content/Topics/Broker Dispatch/JustEnough Broker Dispatch.htm">
+    <TocEntry
+      Title="Logging Service"
+      Link="/Content/Topics/Broker Dispatch/Logging Service.htm">
+      <TocEntry
+        Title="JustEnough Database Logging Service Accessor"
+        Link="/Content/Topics/Broker Dispatch/JustEnough Database Logging.htm" />
+      <TocEntry
+        Title="Windows Event Logging"
+        Link="/Content/Topics/Broker Dispatch/Windows Event Logging.htm" />
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

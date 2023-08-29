@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Supply Chain Overview</h1>
+        <p>JustEnough's Supply Chain feature lets you define the supply chains that provide inventory to your distribution centers (DCs) and stores. </p>
+        <h2>ERP data integration</h2>
+        <p>JustEnough uses supplier and site data from your ERP system as the building blocks for your supply chains. You can view this site data in several places within JustEnough:</p>
+        <ul>
+            <li><a href="../Supplier Manager/Supplier Manager Overview.htm">Supplier Manager</a> - displays data about your external suppliers.</li>
+            <li><a href="../Site Manager/Site Manager Overview.htm">Site Manager</a> - displays data about your stores and DCs.</li>
+            <li><a href="../Item Manager/Item Manager Overview.htm">Item Manager</a> - displays the supplier for an item at a location.</li>
+        </ul>
+        <h2>Flexible supply chain designs</h2>
+        <p>Real-world supply chains can be simple or complex, and JustEnough provides you with the flexibility to design supply chains that reflect this reality. </p>
+        <h3>Supplier to DC/Store supply chains</h3>
+        <p>In these "flat" supply chains, stores get their inventory directly from external suppliers. </p>
+        <ul style="list-style-type: square;">
+            <li MadCap:conditions="General.How-To Guides"><a href="Example - Direct to Store Supply Chain.htm">See example</a>
+            </li>
+        </ul>
+        <h3>Supplier to DC to Store supply chains</h3>
+        <p>This is a traditional supply chain design, with external suppliers feeding distribution centers (DCs) which in turn distribute inventory to local stores.</p>
+        <ul style="list-style-type: square;">
+            <li MadCap:conditions="General.How-To Guides"><a href="Example - Supplier to DC to Store Supply Chain.htm">See example</a>
+            </li>
+        </ul>
+        <h3>Multi-level supply chains</h3>
+        <p>This design has multiple levels of distribution centers (primary and regional) supplying stores.</p>
+        <ul style="list-style-type: square;">
+            <li MadCap:conditions="General.How-To Guides"><a href="Example - Multi-Level Supply Chain.htm">See example</a>
+            </li>
+        </ul>
+        <h3>Redistribution supply chains</h3>
+        <p>This is a special type of supply chain which lets you group stores or DCs into redistribution pools. These pools define where inventory can be redistributed from when there are inventory overages or shortages in your sites. You can customize lead times and source priorities within each pool as needed.</p>
+        <ul style="list-style-type: square;">
+            <li MadCap:conditions="General.How-To Guides"><a href="Example - Redistribution Supply Chain.htm">See example</a>
+            </li>
+        </ul>
+        <h2><a name="Supply"></a>Supply chain overrides</h2>
+        <p>Supply chain overrides are used for situations when you want certain products at certain sites to be supplied from a different source than their regular supply chain. For example, during November and December you may want suppliers to deliver Christmas-related merchandise directly to stores instead of your DCs. Overrides can be planned for specific time periods (such as holiday rushes) or set to run indefinitely. </p>
+        <ul style="list-style-type: square;">
+            <li><a href="Example - Supply Chain Override.htm" MadCap:conditions="General.How-To Guides">See example</a>
+            </li>
+        </ul>
+        <h2><a name="Customiz"></a>Customizable source priority</h2>
+        <p>If a site is facing a potential shortfall in inventory, you can rank the preferred order of other sites it receives stock from. For example, you may want to prioritize geographically "close" sites but protect your flagship stores. To determine site priority, JustEnough checks the following values (in order):</p>
+        <ol>
+            <li>Priority defined for the site in the supply chain.</li>
+            <li>Priority group (if present).</li>
+            <li><a href="../Site Manager/Example - Setting Global Priority.htm">Global site priority</a>.</li>
+            <li>Site ID.</li>
+            <li>Wait time days.</li>
+        </ol>
+        <h2>Automated supply chain resolution</h2>
+        <p>You can create a <a href="../Job Manager/Inventory Supply Chain Resolution Task.htm">task</a> in JustEnough's Job Manager to re-process your supply chains as part of a nightly or weekly job. This ensures that any additions or modifications made to your supply chains get propagated throughout the system.</p>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="../Site Manager/Site Manager Overview.htm">Site Manager Overview</a>
+            </li>
+            <li><a href="../Order Manager/Order Manager Overview.htm">Order Manager Overview</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

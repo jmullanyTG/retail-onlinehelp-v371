@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.How-To Guides" MadCap:lastBlockDepth="8" MadCap:lastHeight="4308" MadCap:lastWidth="1845">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Add New Schedule Set</h1>
+        <p>In this example, we will add a new schedule set that allows 7 day a week delivery to the New York City store. </p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Example database text.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <h2>Related video</h2>
+        <p>This video shows how to create and apply a "weekday delivery only" schedule set.</p>
+        <p>
+            <p>
+                <object MadCap:HTML5Video="true" src="../../../Resources/Videos/BC-1 CD-6 S-1 Schedule Management.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video">
+                </object>
+            </p>
+        </p>
+        <h2>Instructions</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>1. Create a schedule set and add a schedule that allows daily deliveries.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Maintain tab, click <b>Schedules</b>.</li>
+                    <li>In the Schedule Set toolbar, click <b>New</b>.</li>
+                    <li>In the Name field, enter "7 Day Delivery".</li>
+                    <li>Click <b>Save</b> to save the schedule set. <br /><img src="../../../Resources/Images/Schedules/example - Schedule Set Name.png" /></li>
+                    <li>In the Schedule toolbar, click <b>Add.</b></li>
+                    <li>Enter the following schedule details:<ul><li><b>Name</b>: Daily Deliveries</li><li><b>Frequency</b>: Occurs: <b>Daily</b></li><li><b>Start Date</b>: Choose today's date<br /><img src="../../../Resources/Images/Schedules/example - add schedule.png" /><br /></li></ul></li>
+                    <li>Click <b>Save</b> to add the Daily Deliveries schedule to the 7 Day Delivery schedule set.</li>
+                    <li>
+                        <p>In the Schedule Set list, expand the 7 Day Delivery schedule set to show the Daily Delivery schedule. In the Daily Deliveries schedule row, set the Mode column value to <b>Include</b>. This instructs JustEnough to include deliveries on the days specified in the schedule.</p>
+                        <p>
+                            <img src="../../../Resources/Images/Schedules/Example - Include Mode.png" />
+                        </p>
+                    </li>
+                    <li>Click <b>Save</b> in the Schedule Set toolbar.<br /></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2. Apply the new schedule set to items at the New York City store.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Item Manager</b>.</li>
+                    <li>If the Items dialog box does not automatically open, click <b>Inventory Manager Document</b> to open it.</li>
+                    <li>In the Items dialog box, select the <b>Receive Schedule: Week Day Delivery Only</b> filter. (This filter limits item/site combinations to items at retail stores). </li>
+                    <li>
+                        <p>In the Choose Fields dialog box, choose <b>Receive Schedule</b>.</p>
+                        <p>
+                            <img src="../../../Resources/Images/Item Manager/Example - Schedule Choose Fields.png" />
+                        </p>
+                    </li>
+                    <li style="font-weight: normal;">
+                        <p>In the new inventory management document, filter the Site Name Column for <b>New York City</b>. Now, only items for the New York City store are displayed.</p>
+                        <p>
+                            <img src="../../../Resources/Images/Item Manager/Example - New York City Schedule before.png" />
+                        </p>
+                    </li>
+                    <li>To change the receiving schedule for the items:<ol style="list-style-type: lower-alpha;"><li> Select all rows in the document.</li><li>Right-click in the Receive Schedule column and choose <b>Multiple Changes</b>.</li><li>In the Multi Data Change Form's new value field, choose the new schedule set, <b>7 Day Delivery</b>.</li><li><p>In the Name field, enter "7 Day Delivery" and click <b>Save</b>. </p><p><img src="../../../Resources/Images/Item Manager/Example - Multi Data Change.png" /></p></li></ol></li>
+                    <li>
+                        <p>The document now shows 7 Day Delivery as the receive schedule for items at the New York City store.</p>
+                        <p>
+                            <img src="../../../Resources/Images/Item Manager/Example - Receive Schedule after.png" />
+                        </p>
+                    </li>
+                    <li>Click <b>Save</b> to save the changes.<br /></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="How To Manage Inventory.htm">How To Manage Inventory Strategies</a>
+            </li>
+            <li><a href="../../Schedules/Schedules Overview.htm">Schedules Overview</a>
+            </li>
+        </ul>
+    </body>
+</html>

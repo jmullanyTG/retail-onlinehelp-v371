@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Shape Forecasting</h1>
+        <p>Shape Forecasting applies a pre-selected curve to an item's moving-average sales history in order to generate a moving-average based, season-affected demand forecast for that item.</p>
+        <p>The Shape Forecasting method appears in the Forecast task dialog box and participates in the forecast tournament when selected. </p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Shape Forecasting Method.png">
+            </img>
+        </p>
+        <p>Shape forecasting requires the following setup tasks: </p>
+        <ul>
+            <li>Define appropriate curves in the <a href="../Curves/Curves Overview.htm">Curves</a> module.</li>
+            <li>Identify the desired curve for each item in the Shape Forecast Maintenance view.</li>
+        </ul>
+        <h3>Shape Forecast Maintenance View</h3>
+        <p>The Shape Forecasting Maintenance view  is where you identify the curve that JustEnough should use to generate an item's shape forecast.</p>
+        <ol>
+            <li>
+                <p>In the Views module, open the Shape Forecast Maintenance view.</p>
+                <p>
+                    <img src="../../Resources/Images/Demand Forecasting/Shape Forecasting Maintenance View.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the <b>Filter</b> list, choose the filter containing your desired item(s). The items appear in two grids. The top grid lists items at sites. The bottom grid lists items by channel. (The same items appear in both grids.)</p>
+            </li>
+            <li>
+                <p>To define an item's curve, select the item in a grid and click in its <b>Curve</b> cell to display the "<b>...</b>" button. Click the "<b>...</b>"  button to open the Curve Selection dialog box.</p>
+                <p>
+                    <img src="../../Resources/Images/Demand Forecasting/Curve button.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Curve Selection dialog box, choose the curve you want to apply by selecting its row in the grid and clicking <b>OK</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/Demand Forecasting/Curve Selection dialog.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click <b>Save</b> above the grid to save the change.</p>
+                <p>
+                    <img src="../../Resources/Images/Demand Forecasting/Curve save.png" />
+                </p>
+            </li>
+            <li>
+                <p>Repeat steps 2-5 for all desired items.</p>
+                <p>The next time that JustEnough generates demand forecasts for these items, it will use these curves to create their shape forecasts. </p>
+            </li>
+        </ol>
+    </body>
+</html>

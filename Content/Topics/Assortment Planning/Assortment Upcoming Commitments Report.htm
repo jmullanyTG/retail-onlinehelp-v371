@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="62185" MadCap:lastWidth="500">
+    <head>
+    </head>
+    <body>
+        <h1 >Assortment Upcoming Commitments Report</h1>
+        <p style="text-align: justify;"><span style="font-size: 12pt;">The </span><span style="font-size: 12pt;">Assortment Upcoming Commitments Report</span><span style="font-size: 12pt;"> allows users to easily track key milestones in the commitment process for orders created from assortment plans and quickly navigate to those orders to complete the next required steps</span><span style="font-size: 12pt;">.&#160; </span>
+        </p>
+        <p style="text-align: justify;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">planned receipts that have not yet had commitments created for them will still appear in this report, however certain fields may be blank, and the Due Date will calculate based on the intended receipt date and the Default Lead Time Days assigned to the corresponding product</span>
+        </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Example of calculating choice counts_1.png" style="visibility: visible;width: 634px;height: 131px;">
+            </img>
+        </p>
+        <p>The Assortment Buy Sheet Report is controlled by four parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Example of calculating choice counts_2.png" style="visibility: visible;width: 635px;height: 69px;">
+            </img>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> Hierarchy</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable </span><span style="color: #000000;font-size: 12pt;">tree multi-select</span><span style="color: #000000;font-size: 12pt;">; selects </span><span style="color: #000000;font-size: 12pt;">the levels of current plan’s Product Hierarchy levels to include in</span><span style="color: #000000;font-size: 12pt;"> the current view</span>
+            </li>
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Hierarchy: </span><span style="color: #000000;font-size: 12pt;">user editable tree multi-select; selects the levels of the current plan’s Site Hierarchy to include in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Window of Time: </span><span style="color: #000000;font-size: 12pt;">user editable tree multi-select; selects the window of time to display in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">order documents are returned based on associated milestone due dates that fall within the selected window; multiple future due dates may exist for an order, but if any of them fall within the selection, the due date displayed will be the one nearest to the current date</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Display Currency: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; sets the currency to display for all revenue based fields in the view; defaults to the Home Currency for the active Assortment Plan</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;">&#160;</p>
+        <p style="text-align: justify;">After the user has set the parameter selections at the top of the screen, clicking Execute will return the following columns:</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Order Header Name:</span><span style="font-size: 12pt;">non-editable alpha numeric; displays the name of the order document associated with the listed due date</span><span style="font-size: 12pt;">; blank for receipts that have not yet had commitment orders created for them</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Product</span><span style="font-weight: bold;font-size: 12pt;"> Code:</span><span style="font-size: 12pt;">non-editable alpha numeric; displays the variant</span><span style="font-size: 12pt;"> or placeholder</span><span style="font-size: 12pt;"> code(s) associated with the corresponding order document</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Product</span><span style="font-weight: bold;font-size: 12pt;"> Description:</span><span style="font-size: 12pt;">non-editable alpha numeric; displays the </span><span style="font-size: 12pt;">description(s) for the variant(s) </span><span style="font-size: 12pt;">or placeholder(s) </span><span style="font-size: 12pt;">associated with the corresponding order document</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Receipt Units:</span><span style="font-size: 12pt;">non-editable integer; displays the total receipt units for the corresponding </span><span style="font-size: 12pt;">product</span><span style="font-size: 12pt;">(s)</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Receipt AUC:</span><span style="font-size: 12pt;">non-editable currency ($5.00); displays the average unit cost of the receipt units for the corresponding </span><span style="font-size: 12pt;">product</span><span style="font-size: 12pt;">(s)</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Receipt Cost:</span><span style="font-size: 12pt;">non-editable currency ($5,000.00); displays the total cost of receipt units for the corresponding </span><span style="font-size: 12pt;">product</span><span style="font-size: 12pt;">(s); calculated as Receipt AUC * Receipt Units</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Order Created: </span><span style="font-size: 12pt;">non-editable checkbox; indicates whether a commitment order has been created for the corresponding receipt</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Order Date:</span><span style="font-size: 12pt;">non-editable calendar control; displays the date the corresponding order document was created</span><span style="font-size: 12pt;">; if no order has been created, set to the Due Date</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Delivery Date:</span><span style="font-size: 12pt;">non-editable calendar control; displays the date the corresponding order is due for delivery</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Required Action:</span><span style="font-size: 12pt;">non-editable alpha-numeric; displays the nearest milestone, based on the assigned workflow; that is due within the selected Window of Time for the corresponding order</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Due Date:</span><span style="font-size: 12pt;">non-editable calendar control; displays the date the corresponding Required Action is due</span><span style="font-size: 12pt;">, based on the workflow assigned to the order document</span><span style="font-size: 12pt;">, or for receipts without created commitments, based on the Default Lead Time Days of the corresponding product</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note:</span><span style="font-style: italic;font-size: 12pt;"> due dates that are in the past will be conditionally formatted for easy identification; this DOES NOT mean the listed Required Action can no longer be completed, however, failure to meet milestones may adversely effect on-time delivery of orders</span>
+            </li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Example of calculating choice counts_3.png" style="visibility: visible;width: 304px;height: 87px;">
+            </img>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">View Order:</span><span style="font-size: 12pt;">clicking this button automatically launches Order Manager and displays the corresponding order document for review/action</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">clicking this button for receipts that have not yet had orders created (ie. Order Created checkbox is blank) will do nothing</span>
+            </li>
+        </ul>
+        <p>.</p>
+    </body>
+</html>

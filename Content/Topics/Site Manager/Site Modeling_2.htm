@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Site Modeling</h1>
+        <p>The hierarchy used to populate the product dimension within this widget is determined by the following system policy: <span style="font-weight: bold;">Site Modeling: Product Hierarchy</span></p>
+        <h2 >Sales History</h2>
+        <p>Site modeling will create entries in <span style="font-family: Consolas;font-size: 9pt;">tbl_SalesHistoryByType</span> as supersession sales history. In order to process the site modeling data, <span style="font-family: Consolas;font-size: 9pt;">usp_Site_Model_ProcessModelData</span> must be run. It is recommended to add this procedure as a task within the daily job, or as frequently as sales history is updated within JustEnough. </p>
+        <h2 >Site Opening Date</h2>
+        <p>The site opening date is read from <span style="font-family: Consolas;font-size: 9pt;">tbl_Site_Status_T</span><span style="font-family: Consolas;font-size: 9pt;">emporal</span>. It is the minimum of start dates where site status is 1 (open).</p>
+    </body>
+</html>

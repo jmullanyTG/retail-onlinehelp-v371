@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Merchandise Financial Planning Overview"
+    Link="/Content/Topics/Merchandise Financial Planning/Merchandise Financial Planning Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Major Changes in this Version"
+      Link="/Content/Topics/Merchandise Financial Planning/Major Changes in this Version.htm">
+      <TocEntry
+        Title="Technical Note on Customizations"
+        Link="/Content/Topics/Merchandise Financial Planning/Technical Note on Customizations.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Plan Creation &amp; Management"
+    Link="/Content/Topics/Merchandise Financial Planning/Plan Creation Management.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Planning with VAT"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts.htm#Planning"></TocEntry>
+      <TocEntry
+        Title="Creating New Plans"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts.htm#Creating"></TocEntry>
+      <TocEntry
+        Title="Branch Plans"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts.htm#Branch"></TocEntry>
+      <TocEntry
+        Title="Snapshots"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts.htm#Snapshot" />
+      <TocEntry
+        Title="Header Area Controls"
+        Link="/Content/Topics/Merchandise Financial Planning/Header Area Controls.htm" />
+      <TocEntry
+        Title="Rebalance Functionality"
+        Link="/Content/Topics/Merchandise Financial Planning/Rebalance Functionality.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Merchandise Financial Planning/Practical Application.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Plan Approvals"
+    Link="/Content/Topics/Merchandise Financial Planning/Plan Approvals.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Header Area Controls"
+        Link="/Content/Topics/Merchandise Financial Planning/Header Area Controls_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Merchandise Financial Planning/Practical Application_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Main Planning View"
+    Link="/Content/Topics/Merchandise Financial Planning/Main Planning View.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm">
+      <TocEntry
+        Title="Aggregation Levels"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Agg" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        StartSection="false"></TocEntry>
+      <TocEntry
+        Title="PivotGrid Functionality"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Piv"></TocEntry>
+      <TocEntry
+        Title="Fields Customization"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Fie"></TocEntry>
+      <TocEntry
+        Title="Customizing Workspaces"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Customiz" />
+      <TocEntry
+        Title="Saving/Restoring Layouts"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Sav"></TocEntry>
+      <TocEntry
+        Title="Chart View"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Chart"></TocEntry>
+      <TocEntry
+        Title="Open/Export"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Open"></TocEntry>
+      <TocEntry
+        Title="Calc Toggles"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Calc"></TocEntry>
+      <TocEntry
+        Title="Plannable Metrics"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Plan"></TocEntry>
+      <TocEntry
+        Title="Ex-VAT Metrics"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Ex"></TocEntry>
+      <TocEntry
+        Title="Comparison Metrics"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Comp"></TocEntry>
+      <TocEntry
+        Title="Actualized Periods"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#Act"></TocEntry>
+      <TocEntry
+        Title="DC Stock Inclusion"
+        Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_2.htm#DC" />
+      <TocEntry
+        Title="Parameters"
+        Link="/Content/Topics/Merchandise Financial Planning/Parameters.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Merchandise Financial Planning/3.7/Total Company and Average Store Modes.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Header Area Controls"
+        Link="/Content/Topics/Merchandise Financial Planning/Header Area Controls_2.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Merchandise Financial Planning/Metric Details Hybrid Cost Retail Plan Types.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Merchandise Financial Planning/Metric Details Hybrid Cost Dual Markdown Plan Type.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Merchandise Financial Planning/Practical Application_2.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Calculation Toggles"
+    Link="/Content/Topics/Merchandise Financial Planning/Calculation Toggles.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_3.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Merchandise Financial Planning/Calc Toggle Details Hybrid Cost Retail Plan Types.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Merchandise Financial Planning/Calc Toggle Details Hybrid Cost Dual Markdown Plan Type.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Lock &amp; Spread Related Toggles"
+        Link="/Content/Topics/Merchandise Financial Planning/Lock Spread Related Toggles.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Merchandise Financial Planning/Practical Application_3.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Lock &amp; Spread"
+    Link="/Content/Topics/Merchandise Financial Planning/Lock Spread.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_4.htm">
+      <TocEntry
+        Title="Lock Controls"
+        Link="/Content/Topics/Merchandise Financial Planning/Lock Controls.htm" />
+      <TocEntry
+        Title="Low Level Locks"
+        Link="/Content/Topics/Merchandise Financial Planning/Low Level Locks.htm" />
+      <TocEntry
+        Title="Aggregate Level Locks"
+        Link="/Content/Topics/Merchandise Financial Planning/Aggregate Level Locks.htm" />
+      <TocEntry
+        Title="Locks at Multiple Intersecting Levels"
+        Link="/Content/Topics/Merchandise Financial Planning/Locks at Multiple Intersecting Levels.htm" />
+      <TocEntry
+        Title="Lock &amp; Spread in Comp/Non-Comp and Sales By Type Views"
+        Link="/Content/Topics/Merchandise Financial Planning/Lock Spread in Comp Non Comp and Sales By Type Views.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Merchandise Financial Planning/Practical Application_4.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Comp/Non-Comp Planning View"
+    Link="/Content/Topics/Merchandise Financial Planning/Comp Non Comp Planning View.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_5.htm">
+      <TocEntry
+        Title="Metric Details"
+        Link="/Content/Topics/Merchandise Financial Planning/Metric Details.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Sales By Type Planning View"
+    Link="/Content/Topics/Merchandise Financial Planning/Sales By Type Planning View.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Merchandise Financial Planning/Essential Business Concepts_6.htm">
+      <TocEntry
+        Title="Metric Details"
+        Link="/Content/Topics/Merchandise Financial Planning/Metric Details_1.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Glossary"
+    Link="/Content/Topics/Merchandise Financial Planning/Key Terms.htm"></TocEntry>
+</CatapultToc>

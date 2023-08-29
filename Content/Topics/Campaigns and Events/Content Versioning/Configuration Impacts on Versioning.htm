@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuration Impacts on Versioning</h1>
+        <p>While the actual values for content, images, and pricing determine the number of versions, there are also configured components of both Events and Promotions that determine which values are used and what role they play in the creation of versions. In some cases how the environment is configured can contribute to <a href="Issues.htm">conflicting or false versions</a>.</p>
+        <h2>Events Management – Configured Display Formats</h2>
+        <p>Slots display Promotion and Content information based on the following configured Display Formats and their relationships with each other:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Item Display Formats</span> – specified at the Slot level to determine how a Promotion and its associated Content is displayed in the Slot Set. Item Display Formats may include text, images, copy fields, Price Display Formats and Attribute Display Formats.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Price Display Formats</span> – dynamically applied to an Item Display Format that includes a Price container. The actual Price Display Format applied depends on the Promotion Strategy used for the Promotion. Price Display Formats may include text and Promotion price fields.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Attribute Display Formats</span> – custom Promotion attributes that can be added to Item Display Formats. Attribute Display Formats may include text and Promotion attribute fields.</li>
+        </ul>
+        <p>Together, these Display Formats determine what Content and Promotion fields are displayed and drive the creation of Base and Plate Versions.</p>
+        <p><span style="font-weight: bold;">Note:</span> Content fields, Promotion Attributes, Image View Types and pricing fields referenced in Display Formats must be unique. For example, if an Item Display Format includes a Content field named “Comments” and also includes a price field named “Comments” it will cause the versioning process to fail.</p>
+        <h2>Item Display Formats</h2>
+        <p>Each Slot within a Slot Set Template is assigned an Item Display Format, which filters content and pricing for any assigned Promotion. During the configuration of an Item Display Format you may add one or more of the following:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">Content field sections – select from a list of pre-defined Content attributes.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Image containers – select from a list of pre-defined Image View Types. Any image marked with the view type in a Promotion’s Content Version that matches the view type in the Item Display Format’s image container will be used for version calculations.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Price container – placeholder for the dynamic Price Display Format that will be determined from the Promotion Strategy. Only one price container should be added to an Item Display Format.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Attribute display containers – select from a list of custom pre-defined Promotion attributes.</li>
+        </ul>
+        <p>Within an Item Display Format, only the color properties for Content fields within the format can be modified to have color or black influence on version calculations. Image containers are always interpreted as color values regardless of the actual color properties of any image assigned to them. </p>
+        <p>The following is an example of an Item Display Format field set to affect Base Version calculations.</p>
+        <p>
+            <img src="../../../Resources/Images/Content Versioning/Configuration Impacts on Versioning.png" style="visibility: visible;mso-wrap-style: square;width: 480px;height: 223px;" />
+        </p>
+        <p>Though you are allowed to modify the color selection for embedded price containers and Attribute display containers, the selected color does not have any effect on versioning. These are only containers for the Price Display Format and Attribute Display Format(s). The configuration of the actual Price Display Format to be displayed and the configuration of the selected Attribute Display Format will determine if the containers will be considered colored or black.</p>
+        <p>Any color other than black, even shades of gray, will be interpreted as color, thus supplying a value that will affect color Base Version calculations.</p>
+        <h2>Price Display Formats</h2>
+        <p>Price Display Formats have a direct one to one relationship with Promotion Strategies, therefore one cannot exist without the other. They are not added to the Item Display Format directly, rather you add a Price container. The actual Price Display Format and the pricing fields used is determined by the assigned Promotion’s Promotion Strategy. </p>
+        <p>Within the Price Display Format, the color property is applied to the specific text container, which may contain multiple pricing fields, and the color value will apply to all fields within the container. It should be noted that any static text is used only for UI display and is not evaluated by the versioning process because <span class="CommentReference">S</span>tatic text does not vary by Geography.</p>
+        <p><span style="font-weight: bold;">Note:</span> Adding more than one Price container to an Item Display Format will only display duplicate information.</p>
+        <h2>Attribute Display Formats</h2>
+        <p>Configured using pre-defined Promotion attributes. Unlike Content attributes, Promotion attributes are global for the Promotion within the Event, and cannot vary for different Geographies, therefore for practical purposes have little or no effect on versioning. Any use of Promotion attributes currently requires customization in the database and software. Unlike Price Display Formats, multiple Attribute Display Format containers can be embedded within an Item Display Format with each assigned to a different Attribute Display Format.</p>
+        <p>The process for applying color properties to fields within an Attribute Display Format is identical to Price Display Formats. The key difference is that Promotion attributes are entered for the overall Promotion and do not vary by Geography, therefore have little, if any at all, effect on version calculations.</p>
+        <h2>Event Geographies versus Promotion Price Clusters</h2>
+        <p>The most common cause for Event versioning issues is rooted in the configuration of Event Geographies and their relationship to an associated Promotion’s Price Cluster Set. Geographies and Price Clusters are linked by Site assignments. Care must be taken when configuring both or it is possible that mismatches or cross-overs that may have a negative impact on computed versions. These types of configuration issues may cause <a href="Issues.htm">false versions</a>, <a href="Issues.htm">conflicting versions</a>, or <a href="Issues.htm">price range versions</a>.</p>
+        <h3>Promotion Price Cluster Sets&#160;&#160; </h3>
+        <p>A Price Cluster Set is composed of a selection of Sites (stores) broken up into one or more distinct groups known as ‘Price Clusters’. In a single Price Cluster Set, a Site may appear in no more than one Price Cluster, and all of the Sites within a Price Cluster must share a common Currency ID.</p>
+        <p>When you create a new Promotion, a Price Cluster Set must be specified to create the Price Clusters for the Promotion. Promotional pricing is calculated for Item Masters assigned to the Price Cluster based on the cumulative retails for all the Sites assigned to the Price Cluster. Once the Promotion is created, Price Clusters are maintained directly in the Promotion and are no longer linked to the originating Price Cluster Set.</p>
+        <h2>Event Geographies </h2>
+        <p>An event's geography set represents all of the distribution areas (geographies) configured for a specific advertising vehicle or publication. Adding multiple geographies to an event lets you customize that event's content (language, images used, messaging, etc.) by geographical area. Like promotion price clusters, event geographies are based on cluster sets, which prevent sites from appearing in multiple clusters at the same time. Unlike promotion price clusters, however, you can get around this limitation with event geographies. In events where you want the same site to appear in multiple geographies, you can modify the event to <a href="../Add Sites to a Geography.htm">add the site</a> directly to as many geographies as desired. This does not alter the site's membership in its original site cluster, and is applied only in the context of that event.</p>
+        <h2>Event Compositions and Versioning</h2>
+        <p>By default, all Event Slot Sets are assigned to all Geographies associated with the Event. The default Event Composition includes all Slot Sets and Geographies. In the example where one Geography and one Slot Set is removed from the default Composition and both are associated to a new Composition, all of the Slot Set versions, except the version associated with the single Geography, are ignored. This illustrates how Compositions may impact versioning by filtering any versions of the Slot Set that are not applicable to the Composition.</p>
+    </body>
+</html>

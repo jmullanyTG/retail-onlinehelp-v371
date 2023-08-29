@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Event Manager Global Policies</h1>
+        <p>Global Policies are configured to set up default settings for all JustEnough solutions. They are configured by Professional Services and should not be modified without assistance from JustEnough Professional Services or Support. Changes to some Policies may require closing and opening the JustEnough software before the changes are available so it is recommended to restart the software after any Policy change. Below is a list of global policies related to events and the purpose of each.</p>
+        <p>To configure event policies:</p>
+        <ul>
+            <li style="font-weight: bold;">
+                <p><span style="font-weight: normal;">From the Maintain tab, click <b>Policies</b> and choose <b>Module:Events</b> in the navigation pane.</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Campaigns and Events/Event Manager Global Policies.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 64px;" />
+                </p>
+            </li>
+        </ul>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Global Policy</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Allow Sale date range to occur before Ad date range</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>If set to ‘True’, provides the ability to set an Event Sale Start Date to occur before the Event Ad Start Date.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Allowed Versioned Content Output Methods</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Provides ability to customize output and affects in the Output Method dropdown list options in the Workbench &gt; Output &gt; Generate Output for Page Layout tab. </p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Standard</span> – Output for versioned content will be formatted to meet the standard Generate Output process for import into a desktop publishing software.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Custom</span> – Output for versioned content will be customized as defined by a custom database procedure to meet specific customer needs.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Both</span> – The user is given the option to select either ‘Standard’ or ‘Custom’ for each Slot Set in the Event to determine what formatting method should be used for each.</li>
+                        </ul>
+                        <p>
+                            <img src="../../Resources/Images/Campaigns and Events/Event Manager Global Policies_2.png" style="visibility: visible;mso-wrap-style: square;width: 384px;height: 163px;" />&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Default new Promotion with Event date range</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Provide the ability to set the default start and end dates for Promotions created from within an Event</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Use Sale date range</span> – Set the Promotion dates to match the sale dates.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Use Ad date range</span> – Set the Promotion dates to match the ad dates.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Event Calendar View Collection Set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Assign the View Collection Set to display the Event Calendar by its ID. If this is not set to a valid ID, a blank screen would be displayed in the Event Calendar tab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Event Level Output</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Choose whether to output an event's slot sets to a single file or multiple files:</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Event </span>– Outputs all of an event's slot sets to a single file in the configured event directory. (<b>Note</b>: If this option is selected, the Allowed Versioned Content Output Methods policy must be set to Standard. Custom output is not supported.)</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Slot Set</span> – Outputs selected slot sets as separate files in slot set-specific sub-directories. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Event Module View Collection Set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Assign the View Collection Set ID to be display in the third tab of Event Manager by its ID. If this is not set to a valid ID, a blank screen would be displayed for this customized tab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Gantt View date display type for Events</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Ability to set the default Event dates to display in the Event Calendar:</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Sale dates</span> – Default the calendar to show Events listed by their Sale Start and End Dates.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Ad dates</span> – Default the calendar to show Events listed by their Ad Start and End Dates.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Go to Promotion Module after Promotion creation</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Provide the ability to go to Promotion Detail screen after a new Promotion is created from within an Event. If this is set to ‘False’, the user will return to the Event screen after the New Promotion Wizard is closed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>New Promotion View Collection Set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Assign the View Collection Set to display customized information in a second tab in the Products grid of the New Promotion Wizard by its ID. If this is not set to a valid ID, the second tab will not display in the New Promotion Wizard screen.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Populate Online Proofing Data</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Provide the ability to generate additional data sets required for the JustEnough Online Proofing solution.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Promotion Double Click Action</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Provide the ability to set what action occurs when the user double clicks on a Promotion in an Event:</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Go to Promotion module</span> – Open the Promotion Detail tab in the Promotions solution.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Open Promotion </span><span style="font-weight: bold;">window</span> – Open the Promotion in a window while remaining in the Events solution.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">None</span> – Do nothing when the user double clicks on a Promotion. </li>
+                        </ul>
+                        <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 9pt;">Note</span><span style="font-style: italic;font-size: 9pt;">: This setting will limit the user to only modifying or viewing the details of a Promotion from the Promotions solution.</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Select Destination Option for Event Generate Output</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Provide the ability to set where the generated Event output is sent:</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Pipe Delimited File</span> – Generate Output will create pipe delimited data stored in files that can be used by page layout software.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Database Only</span> – Generate Output will populate database tables.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Show Auto Filter Row for Campaign Data Grid</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Provide the ability to display a filter row at the top of the Campaign data grid. The filter will refine the list of Campaigns that begin with the string entered in the filter.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Show Auto Filter Row for Event Data Grid</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Provide the ability to display a filter row at the top of the Event data grid. The filter will refine the list of Events that begin with the string entered in the filter.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Show View Collection Set in Event Calendar</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>If this is set to ‘True’, show the View Collection Set defined in the ‘Event Calendar View Collection Set’ policy, otherwise use the static Event Calendar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Slot Set display order for Events</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>If an Event has more than one Composition, the Slot Sets can be displayed in the Event tree in the following ways:</p>
+                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Slot Set Name Order</span> – Alphabetically, by Slot Set Name.</li>
+                            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Composition Order</span> – In the order defined in the first Composition with remaining Slot Sets displayed in alphabetical order.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Validate Promotion Date Range</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Provide the ability to ensure the Promotion date range matches the Event start and end sale dates before allowing the user to add it to the Event.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

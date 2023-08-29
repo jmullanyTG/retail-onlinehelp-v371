@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Rate of Sale Calculator Overview"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Rate of Sale Calculator – Assortment Planning"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning.htm" />
+  <TocEntry
+    Title="Rate of Sale Calculator – Assortment Planning ROS Scenario Creation"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario.htm" />
+  <TocEntry
+    Title="Rate of Sale Calculator – Assortment Planning ROS Scenario Calculation"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_1.htm">
+    <TocEntry
+      Title="Data Cleansing Steps"
+      Link="/Content/Topics/Rate of Sale Calculator/Data Cleansing Steps.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Rate of Sale Calculator – Assortment Planning ROS Scenario Results"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_2.htm" />
+  <TocEntry
+    Title="Rate of Sale Calculator – Assortment Planning ROS Scenario Detail"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_3.htm" />
+  <TocEntry
+    Title="Rate of Sale Calculator – Assortment Planning ROS Scenario Application"
+    Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning ROS Scenario_4.htm" />
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Rate of Sale Calculator/Practical Application.htm" />
+</CatapultToc>

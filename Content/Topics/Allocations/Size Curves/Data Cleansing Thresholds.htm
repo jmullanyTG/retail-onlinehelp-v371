@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="1961" MadCap:lastWidth="1272">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Data Cleansing Thresholds</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Percent Covered: </span><span style="color: #000000;">this threshold allows the user to specify a percentage of sizes that must have been in-stock at a site on a given period for a variant for the corresponding sales from that period to be included in the size curve calculation for that site; the threshold is applied as follows:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="color: #000000;">First, because not all sizes carry equal importance at a g</span><span style="color: #000000;">iven site, the system d</span><span style="color: #000000;">etermines the relative importance of each size present in the selected Size Range for each site</span><span style="color: #000000;"> by summing the uncleansed sales by size for all items in the selected Filter and date range then dividing by </span><span style="color: #000000;">the sum of sales for all sizes.</span>
+                </p>
+                <p>
+                    <img src="../../../Resources/Images/Allocation Size/Data Cleansing Thresholds.png" style="visibility: visible;width: 635px;height: 101px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="color: #000000;">Next, each period in the selected date range is evaluated against the set Percent Covered threshold</span><span style="color: #000000;">. T</span><span style="color: #000000;">he </span><span style="color: #000000;">% contribution of all sizes in stock for each variant at that site are summed and compared to the Percent Covered threshold – if the sum value is equal or greater, the sales for that variant/period are included in the size curve calculation for that site; if not, they are removed.</span>
+                </p>
+                <p>
+                    <img src="../../../Resources/Images/Allocation Size/Data Cleansing Thresholds_1.png" style="visibility: visible;width: 634px;height: 165px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Weeks Covered: </span><span style="color: #000000;">this threshold allows the user to specify a minimum number of periods </span><span style="color: #000000;">that a variant must have been in-stock at a given site for its sales to be included in the size curve calculation for that site; </span><span style="color: #FF0000;">when paired with a Percent Covered threshold, this threshold is applied after any periods that did not pass the Percent Covered threshold are removed</span><span style="color: #000000;">; the threshold is applied as follows:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="color: #000000;">The system evaluates each period for each variant to see if it was acceptably in-stock at the site. If no Percent Covered threshold is specified, </span><span style="color: #000000;">the system simply checks if there was stock on-hand in any size for each period .</span>
+                </p>
+                <p>
+                    <img src="../../../Resources/Images/Allocation Size/Data Cleansing Thresholds_2.png" style="visibility: visible;width: 634px;height: 378px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="color: #000000;">In-stock periods are then counted for each variant and compared to the Weeks Covered threshold – variants with counts equal to or greater than the threshold are included in the size curve calculation for that site; variants </span><span style="color: #000000;">with lower counts are</span><span style="color: #000000;"> removed. </span>
+                </p>
+                <p>
+                    <img src="../../../Resources/Images/Allocation Size/Data Cleansing Thresholds_3.png" style="visibility: visible;width: 634px;height: 378px;" />
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

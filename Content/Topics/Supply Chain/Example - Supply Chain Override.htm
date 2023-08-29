@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2346" MadCap:lastWidth="3209" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Supply Chain Override</h1>
+        <p>In this example, we'll create an override that tells JustEnough to ignore the designed supply chain for a specific set of items at specific sites, and instead use another source for those items.</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Setup</h2>
+        <p>The following objects are used in this example.</p>
+        <ul>
+            <li>Supply Chain BC 1 - SC2 [Supplier - DC - Store]</li>
+            <li>Filter BC1 - SC2 (Item Filter for SC2 Override)</li>
+            <li>Filter BC1 - SC2 (Site Filter for SC2 Override)</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Maintain tab, click <b>Supply Chain</b>.<object MadCap:HTML5Video="true" class="video" src="../../Resources/Videos/BC-1 CD-2 S-1 Override and Ordering Engine Task Updte.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false"></object></li>
+            <li>
+                <p>In the Open Supply Chain dialog box, select the supply chain you want to create an override for.</p>
+                <p>For this example, select "Supply chain BC1 - 1 SC1 [Supplier - DC- Store]".</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - override open.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Override pane, click <b>New</b> on the Override toolbar. A new override row appears in the pane.</p>
+            </li>
+            <li>
+                <p>Click the '...' button in the new override's Item Filter column to select the items that will be included in the override.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/override - new.png" />
+                </p>
+            </li>
+            <li>In the Items filter, choose BC1 - SC2 (Item Filter for SC2 Override).</li>
+            <li>
+                <p>Click the '...' button in the new override's Site Filter column to select the sites that will be included in the override.</p>
+            </li>
+            <li>
+                <p>In the Items filter, choose choose BC1 - SC2 (Site Filter for SC2 Override).</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/override - filters.png" />
+                </p>
+            </li>
+            <li>In the Override Source pane, click <b>New</b>.A new override source row appears in the pane.</li>
+            <li>
+                <p>In the new source's Source Supplier list, choose JustEnough JustinTime as the override supplier.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/example - override source.png" />
+                </p>
+            </li>
+            <li>In the new source's Lead Time Days column, enter the value <samp>7</samp>.</li>
+            <li>Click <b>Save</b> on the Supply Chain toolbar to save the new override to the supply chain.</li>
+            <li>Click <b>Reprocess</b> in the Supply Chain toolbar to process the saved changes and rebuild the supply chain.</li>
+        </ol>
+        <h2>Results</h2>
+        <p>For the sites specified in the override (step 6 above), the override items (step 4 above) will now be sourced from JustEnough JustinTime.</p>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Managing Supply Chains.htm">Managing Supply Chains</a>
+            </li>
+            <li><a href="Supply Chain Overview.htm">Supply Chain Overview</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

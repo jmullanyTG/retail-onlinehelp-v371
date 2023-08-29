@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Allocations Overview"
+    Link="/Content/Topics/Allocations/Allocation Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Setup and Configuration"
+      Link="/Content/Topics/Allocations/Setup and Configuration.htm">
+      <TocEntry
+        Title="Essential Business Concepts"
+        Link="/Content/Topics/Allocations/Essential Business Concepts.htm">
+        <TocEntry
+          Title="Common Table Definitions"
+          Link="/Content/Topics/Allocations/Common Table Definitions.htm" />
+        <TocEntry
+          Title="Hierarchy Configuration"
+          Link="/Content/Topics/Allocations/Hierarchy Configuration.htm" />
+        <TocEntry
+          Title="System Policy Settings"
+          Link="/Content/Topics/Allocations/System Policy Settings.htm" />
+        <TocEntry
+          Title="Size Range Configuration"
+          Link="/Content/Topics/Allocations/Size Range Configuration.htm" />
+        <TocEntry
+          Title="Supply Chain Configuration"
+          Link="/Content/Topics/Allocations/Supply Chain Configuration.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Allocation Strategy"
+    Link="/Content/Topics/Allocations/Allocation Strategy.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Parameters"
+        Link="/Content/Topics/Allocations/Parameters.htm" />
+      <TocEntry
+        Title="Allocation Strategy"
+        Link="/Content/Topics/Allocations/Allocation Strategy_1.htm" />
+      <TocEntry
+        Title="Allocate Strategy Product Model Link"
+        Link="/Content/Topics/Allocations/Allocate Strategy Product.htm" />
+      <TocEntry
+        Title="Allocate Strategy Exception Details"
+        Link="/Content/Topics/Allocations/Allocate Strategy Exception.htm" />
+      <TocEntry
+        Title="Allocate Strategy DC Site Details"
+        Link="/Content/Topics/Allocations/Allocate Strategy DC Site.htm" />
+      <TocEntry
+        Title="Stock Availability Restrictions"
+        Link="/Content/Topics/Allocations/Stock Availability Restrictions.htm" />
+      <TocEntry
+        Title="Allocate Cluster Rate of Sale"
+        Link="/Content/Topics/Allocations/Allocate Cluster Rate of Sale.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations/Practical Application.htm">
+      <TocEntry
+        Title="Allocation Strategy"
+        Link="/Content/Topics/Allocations/Allocation Strategy_2.htm"></TocEntry>
+      <TocEntry
+        Title="Location Exceptions View"
+        Link="/Content/Topics/Allocations/Location Exceptions View.htm" />
+      <TocEntry
+        Title="Allocate Strategy Product Model Link"
+        Link="/Content/Topics/Allocations/Allocate Strategy Product_1.htm" />
+      <TocEntry
+        Title="Allocate Strategy Exception Details"
+        Link="/Content/Topics/Allocations/Allocate Strategy Exception_1.htm" />
+      <TocEntry
+        Title="Allocate Strategy DC Site Details"
+        Link="/Content/Topics/Allocations/Allocate Strategy DC Site_1.htm" />
+      <TocEntry
+        Title="Allocate Strategy Stock Availability Restrictions (DC)"
+        Link="/Content/Topics/Allocations/Allocate Strategy Stock Availability.htm" />
+      <TocEntry
+        Title="Allocate Strategy Stock Availability Restrictions (PO + Breakdown)"
+        Link="/Content/Topics/Allocations/Allocate Strategy Stock Availability_1.htm" />
+      <TocEntry
+        Title="Cluster Rate of Sale"
+        Link="/Content/Topics/Allocations/Cluster Rate of Sale.htm" />
+      <TocEntry
+        Title="Configuring Strategy State"
+        Link="/Content/Topics/Allocations/Configuring Strategy State.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Site Manager/Reserving Stock at a DC.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations/Technical Execution.htm">
+      <TocEntry
+        Title="Inventory Cache"
+        Link="/Content/Topics/Allocations/Inventory Cache.htm" />
+      <TocEntry
+        Title="Exception Definitions"
+        Link="/Content/Topics/Allocations/Exception Definitions.htm" />
+      <TocEntry
+        Title="Available to Allocate Calculation"
+        Link="/Content/Topics/Allocations/Available to Allocate Calculation.htm" />
+      <TocEntry
+        Title="Total Push and Push Quantity Calculations"
+        Link="/Content/Topics/Allocations/Total Push and Push Quantity.htm" />
+      <TocEntry
+        Title="Sales Plan Calculation"
+        Link="/Content/Topics/Allocations/Sales Plan Calculation.htm" />
+      <TocEntry
+        Title="Dynamic Location Policy (Dynamic Store)"
+        Link="/Content/Topics/Allocations/Dynamic Location Policy Dynamic.htm" />
+      <TocEntry
+        Title="Minimums and Maximums"
+        Link="/Content/Topics/Allocations/Minimums and Maximums.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Product Groups"
+    Link="/Content/Topics/Allocations/Product Groups.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations/Essential Business Concepts_2.htm">
+      <TocEntry
+        Title="Product Groups"
+        Link="/Content/Topics/Allocations/Product Groups_1.htm" />
+      <TocEntry
+        Title="Variant Eligibility"
+        Link="/Content/Topics/Allocations/Variant Eligibility.htm" />
+      <TocEntry
+        Title="Variant Eligibility Breakdown"
+        Link="/Content/Topics/Allocations/Variant Eligibility Breakdown.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations/Practical Application_1.htm">
+      <TocEntry
+        Title="Product Groups"
+        Link="/Content/Topics/Allocations/Product Groups_2.htm" />
+      <TocEntry
+        Title="Variant Eligibility"
+        Link="/Content/Topics/Allocations/Variant Eligibility_1.htm" />
+      <TocEntry
+        Title="Variant Eligibility Breakdown"
+        Link="/Content/Topics/Allocations/Variant Eligibility Breakdown_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations/Technical Execution_1.htm">
+      <TocEntry
+        Title="Available to Allocate Calculation"
+        Link="/Content/Topics/Allocations/Available to Allocate Calculation_1.htm" />
+      <TocEntry
+        Title="Configuration of Groups"
+        Link="/Content/Topics/Allocations/Configuration of Groups.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Product Model"
+    Link="/Content/Topics/Allocations/Product Model.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations/Essential Business Concepts_3.htm">
+      <TocEntry
+        Title="Product Models"
+        Link="/Content/Topics/Allocations/Product Models.htm" />
+      <TocEntry
+        Title="Site Contribution"
+        Link="/Content/Topics/Allocations/Site Contribution.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations/Practical Application_2.htm">
+      <TocEntry
+        Title="Product Models"
+        Link="/Content/Topics/Allocations/Product Models_1.htm" />
+      <TocEntry
+        Title="Define Time Frame"
+        Link="/Content/Topics/Allocations/Define Time Frame_1.htm" />
+      <TocEntry
+        Title="Site Contribution"
+        Link="/Content/Topics/Allocations/Site Contribution_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations/Technical Execution_2.htm"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Location Strategy"
+    Link="/Content/Topics/Allocations/Location Strategy.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations/Essential Business Concepts_4.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations/Practical Application_3.htm">
+      <TocEntry
+        Title="Location Strategies"
+        Link="/Content/Topics/Allocations/Location Strategies.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Allocations/Filtering Sites in Location Strategies.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations/Technical Execution_3.htm">
+      <TocEntry
+        Title="Dynamic Store Eligibility"
+        Link="/Content/Topics/Allocations/Dynamic Store Eligibility.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Size Curves"
+    Link="/Content/Topics/Allocations/Size Curves.htm">
+    <TocEntry
+      Title="Size Curve Configuration"
+      Link="/Content/Topics/Allocations/Size Curve Configuration.htm"></TocEntry>
+    <TocEntry
+      Title="Size Curve Detail"
+      Link="/Content/Topics/Allocations/Size Curve Detail.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Allocations/Size Curves/Size Curve Calculation.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Size Curve Calculation Requirements"
+        Link="/Content/Topics/Allocations/Size Curves/Curve Calculation Requirements.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Allocations/Size Curves/Data Cleansing Thresholds.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Allocations/Size Curves/Validating Size Curves.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Allocations/Size Curves/Practical Application.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Size Curve Substitution"
+      Link="/Content/Topics/Allocations/Size Curves/Size Curve Substitution.htm">
+      <TocEntry
+        Title="Making Size Curve Substitutions"
+        Link="/Content/Topics/Allocations/Size Curves/Making Size Curve Substitutions.htm" />
+      <TocEntry
+        Title="Syncing Size Curve Substitutions"
+        Link="/Content/Topics/Allocations/Size Curves/Syncing Size Curve Substitutions.htm" />
+      <TocEntry
+        Title="Manual Size Curve Overrides"
+        Link="/Content/Topics/Allocations/Size Curves/Manual Size Curve Overrides.htm" />
+      <TocEntry
+        Title="Clearing Substitutions and Other Size Curve Overrides"
+        Link="/Content/Topics/Allocations/Size Curves/Clearing Substitutions and Other Size Curve Overrides.htm" />
+      <TocEntry
+        Title="Recalculating Size Curves When Overrides are Present"
+        Link="/Content/Topics/Allocations/Size Curves/Recalculating Size Curves When Overrides are Present.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Size Similarity Manager"
+    Link="/Content/Topics/Allocations/Size Similarity Manager Overview.htm">
+    <TocEntry
+      Title="Functionality Notes"
+      Link="/Content/Topics/Allocations/Functionality Notes.htm" />
+    <TocEntry
+      Title="Header Area Controls"
+      Link="/Content/Topics/Allocations/Header Area Controls.htm" />
+    <TocEntry
+      Title="Field Descriptions"
+      Link="/Content/Topics/Allocations/Field Descriptions.htm" />
+    <TocEntry
+      Title="Technical Fields List"
+      Link="/Content/Topics/Allocations/Technical Fields List.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Allocations Rollup"
+    Link="/Content/Topics/Allocations/Allocations Rollup.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations/Essential Business Concepts_6.htm">
+      <TocEntry
+        Title="Parameters"
+        Link="/Content/Topics/Allocations/Parameters_1.htm" />
+      <TocEntry
+        Title="Allocations Rollup"
+        Link="/Content/Topics/Allocations/Allocations Rollup_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations/Practical Application_5.htm"></TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations/Technical Execution_5.htm">
+      <TocEntry
+        Title="Metric Definitions"
+        Link="/Content/Topics/Allocations/Metric Definitions.htm" />
+      <TocEntry
+        Title="Behavior of Product Groups within Allocations Rollup"
+        Link="/Content/Topics/Allocations/Behavior of Product Groups.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Additional Process Steps"
+    Link="/Content/Topics/Allocations/Additional Process Steps.htm">
+    <TocEntry
+      Title="Order Manager"
+      Link="/Content/Topics/Allocations/Order Manager.htm" />
+    <TocEntry
+      Title="Inventory Policy"
+      Link="/Content/Topics/Allocations/Inventory Policy.htm" />
+    <TocEntry
+      Title="Site Manager"
+      Link="/Content/Topics/Allocations/Site Manager.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Multi-Tiered Allocations"
+    Link="/Content/Topics/Allocations/Multi Tiered Allocations.htm">
+    <TocEntry
+      Title="Total Push Demand Type"
+      Link="/Content/Topics/Allocations/Total Push Demand Type.htm" />
+    <TocEntry
+      Title="Secondary DC Stock Management"
+      Link="/Content/Topics/Allocations/Secondary DC Stock Management.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Supply Chain Configuration"
+    Link="/Content/Topics/Allocations/Supply Chain Configuration_1.htm">
+    <TocEntry
+      Title="Multi-Tiered Alternate Sources"
+      Link="/Content/Topics/Allocations/Multi Tiered Alternate Sources.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Monte Carlo Simulation (Retrending)"
+    Link="/Content/Topics/Allocations/Monte Carlo/Monte Carlo Re Trend Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Allocations/Monte Carlo/Example.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Allocations/Monte Carlo/Practical Application.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

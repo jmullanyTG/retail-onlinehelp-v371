@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Versioned Content Output Configuration</h1>
+        <p>Located in the Output tab of the Event Workbench, the ‘Versioned Content Output Configuration’ allows someone with administrative rights to configure the composition of any Versioned Content Export file. In this screen there is a ‘Versioned Content Output File Export Settings’ tab which contains various settings used to export versioned content for use with InDesign, or other creative layout applications. </p>
+        <p>In the case that versioning is not being computed for a Slot Set, the ‘Non-Export Prefix’ setting on this tab could be the source of the problem. This setting checks the Slot Set Name to see if it starts with the designated prefix, and exclude it from version calculations if it does. If Slot Sets are not getting versioned even though they should, checking this setting may reveal that this is the case because of how the Slot Set is named, or a bad prefix value for the setting. If the prefix is not to be used the easiest way to ensure it will not interfere with versioning is set the value to “Export all Slot Sets” (which must be manually keyed).</p>
+        <p>In the example below the Non-Export Prefix value will exclude any Slot Sets with a name that begins with "UA".</p>
+        <p>
+            <img src="../../../Resources/Images/Content Versioning/Versioned Content Output Configuration.png" style="visibility: visible;mso-wrap-style: square;width: 623px;height: 257px;" />
+        </p>
+    </body>
+</html>

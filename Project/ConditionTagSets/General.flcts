@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Comment=""
+    Name="Online Help"
+    BackgroundColor="#90ee90"
+    OriginalName="Online Help" />
+  <ConditionTag
+    Comment="Use on topics related to how-to guides"
+    Name="How-To Guides"
+    BackgroundColor="Red"
+    OriginalName="How-To Guides" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="Printed Manuals"
+    Comment="Use on topics intended for print output only" />
+  <ConditionTag
+    BackgroundColor="#ffd700"
+    Name="Temp Exclude"
+    Comment="" />
+</CatapultConditionTagSet>

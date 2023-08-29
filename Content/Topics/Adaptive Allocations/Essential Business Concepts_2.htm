@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Essential Business Concepts</h1>
+        <p>Choice count models are built to sample sales history based on a filter of items, a time frame, sales types, and then removing disqualified sales periods. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Choice Count Model Name – </span>The unique name for the choice count model. Will be used to look-up choice count models within the scenario plan configuration screen.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Choice Count Model Description –</span> An optional description for the choice count model. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Product Filter –</span> The filter of items which will be used to calculate the choice count. Though not required, a more consistent result is expected if this filter has some relevance to the product selection used within demand plan generation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Time Frame –</span> The time frame used to sample sales history. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Sales Volume % of Max Threshold</span><span style="font-weight: bold;"> –</span> The percentage of the maximum sales volume of the sample which must be met for a selling period to be included. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Active Variant Threshold Factor</span><span style="font-weight: bold;"> –</span> The percent of each store-variant’s average sales which will set the minimum threshold for de-seasonalized values. This value is available for use when calculating longer sales periods with highly seasonal products within the sample, but is otherwise not applicable to many common Adaptive Allocations scenarios. System default value for this threshold is “0”. This field is hidden by default, but may be returned to the configuration gird through the “choose columns” functionality. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Minimum % of Selling Periods </span><span style="font-weight: bold;">Threshold</span><span style="font-weight: bold;"> –</span> Defines the percentage of periods within the sample to have recorded a sale in order for the variant to be considered a part of the choice count model. By setting this to a high value, this will eliminate low selling periods for variants which may have set late or had stock-out related issues. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Sales Types –</span> The sales types included in the sampling. Options include regular, promotion, markdown, and all supersession sales types (should be used for modeled stores and new products).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Access Level –</span> Used to define user access to the choice count model. This will control its visibility in this screen as well as restrict its selection for use within a scenario plan. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Public –</span> Available to all users within the application. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Private –</span> Available only to the creator.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Shared –</span> Available to only specific users. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">User Select – </span>If set to a shared access level, the list of shared users. </li>
+        </ul>
+    </body>
+</html>

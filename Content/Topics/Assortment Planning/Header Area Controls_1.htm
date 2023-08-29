@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Header Area Controls </h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Refresh: </span><span style="color: #000000;font-size: 12pt;">If a Plan Basis is set for the scenario, refreshes the Scenario Target based on the current plan data</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Segment by Hierarchy: </span><span style="color: #000000;font-size: 12pt;">creates one target segment for each lowest level leaf of the selected product hierarchy for the scenario</span><span style="color: #000000;font-size: 12pt;">,</span><span style="color: #000000;font-size: 12pt;"> define temporary Target Filters for each based on the </span><span style="color: #000000;font-size: 12pt;">items belonging to the corresponding hierarchy levels, and assign any default cluster sets you have defined through </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Manage Assortment Plans &gt; Defaults </span><span style="color: #000000;font-size: 12pt;">(see corresponding section above for details)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">the selected product hierarchy level for the scenario is the department Mens Tops; beneath Mens Tops, there are 4 sub-departments: Mens Tees, Mens Wovens, Mens Knits, and Mens Sweaters. Clicking Segment by Hierarchy will create </span><span style="font-style: italic;color: #000000;font-size: 12pt;">one segment for each in the Target Segment Definitions area</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">if additional hierarchy levels exist between the product hierarchy level selected for the scenario and the lowest level in the product hierarchy set for the plan, the system will still generate segments for the leaves of the lowest level. If you want to use this functionality to create segments at a higher level, you must assign a different hierarchy to the plan that only goes down to the level desired</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;font-size: 12pt;">we strongly advise against defining product hierarchies that extend to the style level or below, as this will greatly diminish system performance and overcomplicate the assortment planning process</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">View Exclusions: </span><span style="color: #000000;font-size: 12pt;">launches the View Exclusions dialog</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_1.png" style="visibility: visible;width: 634px;height: 383px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">displays a list of all </span><span style="color: #000000;font-size: 12pt;">placeholder </span><span style="color: #000000;font-size: 12pt;">items present during the specified Comparison Time Frames for each segment which belong to the specified Product Hierarchy selection for the scenario but which are not included in any defined segments based </span><span style="color: #000000;font-size: 12pt;">on their Target Filter criteria</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product Hierarchy fields: </span><span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; fields indicating the specific leaf of each product hierarchy level the item belongs to</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Fields shown are based on the levels present in the product hierarchy for the current assortment plan</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Collection Code:</span> <span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; </span><span style="color: #000000;font-size: 12pt;">user or system defined code for the collection containing the </span><span style="color: #000000;font-size: 12pt;">placeholder </span><span style="color: #000000;font-size: 12pt;">item</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Collection Description:</span> <span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; user or system defined description for the collection containing the </span><span style="color: #000000;font-size: 12pt;">placeholder </span><span style="color: #000000;font-size: 12pt;">item</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Placeholder Code:</span> <span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; user or system defined code for the placeholder item</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Placeholder Description:</span> <span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; user or system defined description for the placeholder item</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Color Code:</span> <span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; </span><span style="color: #000000;font-size: 12pt;">system color code for the placeholder item</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Color Description:</span> <span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; system color description for the placeholder item</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Image:</span> <span style="color: #000000;font-size: 12pt;">Non-editable image </span><span style="color: #000000;font-size: 12pt;">thumbnail; image assigned to the corresponding variant item in the system</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Images can be assigned to variant items through </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Manage &gt; Variant Manager &gt; Image Maintenance</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Assigned Attributes: </span><span style="color: #000000;font-size: 12pt;">Non-editable alpha-numeric; delimited list of imported and/or user defined product attributes assigned to the placeholder item</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Product attributes can be assigned directly to placeholders within the Assortment Plan through the right side Attributes panes in the Collection and Placeholder views or to variant items through </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Manage &gt; Variant Manager &gt; Variant Attribute Management</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUT:</span> <span style="color: #000000;font-size: 12pt;">Non-editable currency ($1.01); average ticket price per unit for the placeholder item during the selected Comparison Time Frame</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">AUT is assumed to be VAT inclusive for the purposes of all dependent calculations</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUC:</span> <span style="color: #000000;font-size: 12pt;">Non-editable currency ($1.01); average cost per unit for the placeholder item during the selected Comparison Time Frame</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Gross Margin:</span> <span style="color: #000000;font-size: 12pt;">Non-editable percentage (1.01%); gross margin percentage for the placeholder item during the selected Comparison Time Frame</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">(AUR – AUC) / AUR</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Sales:</span> <span style="color: #000000;font-size: 12pt;">Non-editable currency ($1.01); sales revenue for the placeholder item during the selected Comparison Time Frame</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Sales Units:</span> <span style="color: #000000;font-size: 12pt;">Non-editable integer; sales units for the placeholder item during the selected Comparison Time Frame</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUR:</span> <span style="color: #000000;font-size: 12pt;">Non-editable currency ($1.01); average retail (selling) price per unit for the placeholder item during the selected Comparison Time Frame</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">Sales / Sales Units</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Manually Assigned Segment: </span><span style="color: #000000;font-size: 12pt;">User editable dropdown; segment to which the excluded placeholder item will be assigned for the purpose of scenario </span><span style="color: #000000;font-size: 12pt;">C</span><span style="color: #000000;font-size: 12pt;">alculation</span><span style="color: #000000;font-size: 12pt;"> and Rationalization; not required</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Populates with the names of all defined segments within the scenario</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Apply: </span><span style="color: #000000;font-size: 12pt;">assigns all placeholder items with Manually Assigned Segment specified to those segments for the current scenario</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this will not update the filters specified in Target Filter for any segment – it makes only temporary assignments used within the scenario</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel: </span><span style="color: #000000;font-size: 12pt;">reverts any changes made to Manually Assigned Segment since the last Apply to their previous values </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Calculate:</span> <span style="color: #000000;font-size: 12pt;">Calculates the Segment Cluster Details section based on the Target Data Selection parameters and Target Segment Definitions you have set for the scenario</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">While calculating, the system will display the following dialog:</li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_2.png" style="visibility: visible;width: 245px;height: 72px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">See </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Segment Cluster Details </span><span style="color: #000000;font-size: 12pt;">below for more specific information on calculations for each field</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">generally, this process takes only a few seconds to complete, but depending on the volume of data being queried and the complexity of the specified criteria, it could take up to a minute or more.</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">If </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Calculate</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> is clicked before segments have been defined for the scenario, the Segment Cluster Details section will refresh but return no data</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Rationalize:</span> <span style="color: #000000;font-size: 12pt;">executes the Rationalization process to calculate recommended new choice counts by segment cluster based on the Target Data Selection parameters and Target Segment Definitions you have set for the scenario</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">While calculating, the system will display the following dialog:</li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 54pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_2.png" style="visibility: visible;width: 245px;height: 72px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">See </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Rationalization</span><span style="color: #000000;font-size: 12pt;"> below for more information on how the Rationalization calculation works to arrive at recommended choice counts</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">generally, this process takes only a few seconds to complete, but depending on the volume of data being queried and the complexity of the specified criteria, it could take up to a minute or more.</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">If Rationalize is clicked before segments have been defined for the scenario, the Segment Cluster Details section will refresh but return no recommended choice counts</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Clear</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> Overrides</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">:</span> <span style="color: #000000;font-size: 12pt;">Reverts any edits made to Target Percent Contribution, TY Act New Sales, TY Act New Sales U, TY Act New AUR, and TY Act New Choices in the Segment Cluster Details section back to their system generated values</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Smart Start:</span> <span style="color: #000000;font-size: 12pt;">Initiates the Smart Start process for the </span><span style="color: #000000;font-size: 12pt;">current</span><span style="color: #000000;font-size: 12pt;"> scenario, generating the number of placeholder items required, and seeding with beginning sales plan data elements</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">For details, see the </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Smart Start </span><span style="color: #000000;font-size: 12pt;">section later in this document</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">View Data Cleansing Report: </span><span style="color: #000000;font-size: 12pt;">launches the Data Cleansing dialog</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_3.png" style="visibility: visible;width: 634px;height: 383px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Segments: </span><span style="color: #000000;font-size: 12pt;">user editable </span><span style="color: #000000;font-size: 12pt;">multi-select</span><span style="color: #000000;font-size: 12pt;">; selects the segments from the active</span><span style="color: #000000;font-size: 12pt;"> scenario to include in the report</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Sets: </span><span style="color: #000000;font-size: 12pt;">user editable multi-select; selects the cluster sets from those assigned to segments within the active scenario to include in the report</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Clusters:</span> <span style="color: #000000;font-size: 12pt;">user editable multi-select; selects the clusters from those cluster sets assigned to segments within the active scenario to include in the report</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Parameters:</span> <span style="color: #000000;font-size: 12pt;">shows/hides the Parameters area of the report</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Execute:</span> <span style="color: #000000;font-size: 12pt;">refreshes the report based on the currently selected parameters</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Target Data Cleansing Settings:</span> <span style="color: #000000;font-size: 12pt;">this section displays the data cleansing parameters used for each segment for reference purposes</span><span style="color: #000000;font-size: 12pt;">; the background color of the threshold fields in this section correspond to data points that were cleansed or altered as a result of each</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_4.png" style="visibility: visible;width: 634px;height: 114px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Segment:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the segment name</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Average Inclusion Threshold: </span><span style="color: #000000;font-size: 12pt;">non-editable percentage (10.00%); corresponds to the system policy of the same name; displays the % of average applied in step 1 of the data cleansing process (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="color: #000000;font-size: 12pt;"> section below) to remove data points with extreme low sales</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 90pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_5.png" style="visibility: visible;width: 597px;height: 146px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Median Period Total Threshold: </span><span style="color: #000000;font-size: 12pt;">non-editable percentage (10.00%); corresponds to the system policy of the same name; displays the % of median applied in step 2 of the data cleansing process (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="color: #000000;font-size: 12pt;"> section below) to raise periods falling below to more consistent levels prior to deseasonalization</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_6.png" style="visibility: visible;width: 593px;height: 165px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Active Variant Threshold Factor:</span> <span style="color: #000000;font-size: 12pt;">non-editable pe</span><span style="color: #000000;font-size: 12pt;">rcentage (10.00%); corresponds to the system policy of the same name; displays the % of max applied in step 3 of the data cleansing process (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="color: #000000;font-size: 12pt;"> section below) </span><span style="color: #000000;font-size: 12pt;">to remove outlier data points</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_7.png" style="visibility: visible;width: 597px;height: 146px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Active Variant Time On Offer Minimum:</span> <span style="color: #000000;font-size: 12pt;">non-editable percentage (10.00%); corresponds to the system policy of the same name; displays the % of the scenario window of time applied in step </span><span style="color: #000000;font-size: 12pt;">4</span><span style="color: #000000;font-size: 12pt;"> of the data cleansing process (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="color: #000000;font-size: 12pt;"> section below) to remove variants without a sufficient number of data points remaining after steps 1-3</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 108pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_8.png" style="visibility: visible;width: 592px;height: 149px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Target Data Cleansing – Pre-Deseasonalization:</span> <span style="color: #000000;font-size: 12pt;">this section displays raw sales data for all variants included in the segment, cluster set and cluster Parameters selections and shows those data points removed or altered by steps 1 and 2 of the data cleansing process prior to deseasonalization (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="color: #000000;font-size: 12pt;"> section below)</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_9.png" style="visibility: visible;width: 634px;height: 206px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Segment:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the segment name</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the name of the cluster set assigned to the segment</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster:</span><span style="color: #000000;font-size: 12pt;"> non-editable alpha-numeric; displays the name of the cluster within the indicated cluster set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Variant:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the variant code</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Variant Description:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the variant description</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Total:</span> <span style="color: #000000;font-size: 12pt;">non-editable integer or currency (depending on Sales Basis of units or revenue); displays the total raw sales that occurred in the corresponding cluster across the scenario window of time for the variant</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Maximum:</span> <span style="color: #000000;font-size: 12pt;">non-editable integer or currency (depending on Sales Basis of units or revenue); displays the maximum period raw sales that occurred in the corresponding cluster across the scenario window of time for the variant</span><span style="color: #000000;font-size: 12pt;"> (used in step 1 of data cleansing)</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Period Data Fields:</span> <span style="color: #000000;font-size: 12pt;">non-editable integer or currency (depending on Sales Basis of units or revenue); displays the raw sales per period that occurred in the corresponding cluster for the variant</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Target Data Cleansing – Post-Deseasonalization:</span> <span style="color: #000000;font-size: 12pt;">this section displays deseasonalized sales data for all variants included in the segment, cluster set and cluster Parameters selections and shows those data points removed by steps 3 and 4 of the data cleansing process prior to deseasonalization (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="color: #000000;font-size: 12pt;"> section below); the conditional formatting for data points removed by steps 1 also shows in this view to provide enhanced context when viewing the additional edits</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1_10.png" style="visibility: visible;width: 634px;height: 176px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Segment: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the segment name</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the name of the cluster set assigned to the segment</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster:</span><span style="color: #000000;font-size: 12pt;"> non-editable alpha-numeric; displays the name of the cluster within the indicated cluster set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Variant: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the variant code</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Variant Description: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha-numeric; displays the variant description</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Total: </span><span style="color: #000000;font-size: 12pt;">non-editable integer or currency (depending on Sales Basis of units or revenue); displays the remaining (after data cleansing step 1) deseasonalized sales that occurred in the corresponding cluster across the scenario window of time for the variant</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Average:</span> <span style="color: #000000;font-size: 12pt;">non-editable integer or currency (depending on Sales Basis of units or revenue); displays the average period deseasonalized sales that occurred in the corresponding cluster across the scenario window of time for the variant (used in step 3 of data cleansing) </span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Period Data Fields:</span> <span style="color: #000000;font-size: 12pt;">non-editable integer or currency (depending on Sales Basis of units or revenue); displays the deseasonalized sales per period that occurred in the corresponding cluster for the variant</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Display Currency: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; sets the currency to display for all revenue based fields in the view; defaults to the Home Currency for the active Assortment Plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Execute: </span><span style="color: #000000;font-size: 12pt;">refreshes the Target Creation dialog</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="485" MadCap:lastWidth="2200">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Curve Calculation Requirements</h1>
+        <p style="color: #000000;">The following are prerequisites that must be met for the size curve calculation to run:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Stock On-hand Data by Site/Size</span><span style="font-weight: bold;">: </span>the size curve calculation makes use of stock on-hand data to qualify whether the sales that occurred for a given variant/period should be included when calculating a size curve for a given site. If this data is not present for the items included in the product Filter selected for the size curve, the enhanced calculation method cannot be employed and the old sales-only calculation method will be used instead</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Technical Note: </span><span style="font-style: italic;">the specific check done to qualify this requirement is that tbl_inventory.InventoryLevelArchive is checked for any entries for the inventories in the Filter between the dates specified (Start Date to End Date or Last X Days). The presence of a single inventory record will qualify the check to proceed with the enhanced calculation method</span>
+            </li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 36pt;"><span style="font-weight: bold;">Data Cleansing Thresholds:</span> at least one of the two data cleansing threshold fields must be set to a positive value</p>
+    </body>
+</html>

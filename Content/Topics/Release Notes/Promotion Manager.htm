@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Promotion Manager</h1>
+        <p>The following promotion-related enhancements are now available.</p>
+        <h2>Validation Failure Override</h2>
+        <p>You can now override promotion validation failures in order to make those promotions acceptable and available for downstream processes and systems. The ability to override validation failures is controlled by a new user right and configurable at the validation set level.</p>
+        <p> This enhancement involves changes to a number of areas within Demand Management. These changes are described below.</p>
+        <h3>New user right</h3>
+        <p>A new right controls a user's ability to override validation failures.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-Standard" cellspacing="0">
+            <col class="TableStyle-Standard-Column-Column1">
+            </col>
+            <col class="TableStyle-Standard-Column-Column2">
+            </col>
+            <col class="TableStyle-Standard-Column-Column3">
+            </col>
+            <thead>
+                <tr class="TableStyle-Standard-Head-Header1">
+                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Right Group</th>
+                    <th class="TableStyle-Standard-HeadE-Column2-Header1">Right Name</th>
+                    <th class="TableStyle-Standard-HeadD-Column3-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Standard-Body-Body1">
+                    <td class="TableStyle-Standard-BodyB-Column1-Body1">Promotions</td>
+                    <td class="TableStyle-Standard-BodyB-Column2-Body1">Allow Override of Validation Failures</td>
+                    <td class="TableStyle-Standard-BodyA-Column3-Body1">Enables the user to edit the Validation Failure Override checkbox in the Promotion Validation Log.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Workflow Manager integration</h3>
+        <p>The new Allow Override of Validation Failures user right appears in the Status Permission Blacklists of all new promotion workflows, letting you control which users are able to override validation failures and when. </p>
+        <p>To add the new user right to the Status Permission Blacklists in an existing promotion workflow, edit the workflow and add the new user right to the list of workflow-controlled user rights.</p>
+        <p>
+            <img src="../../Resources/Images/Workflow Manager/add user right.png" class="SS" MadCap:mediastyle="@media print { max-width: 75%; }" />
+        </p>
+        <h3>Promotion Validation screen</h3>
+        <p>The Promotion Validation screen in the Promotion Configuration window now includes an Allow Validation Override checkbox. To enable validation failure overrides for a validation set, mark the Allow Validation Override checkbox for that validation set.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management1/Allow Validation Checkbox.png" class="SS" MadCap:mediastyle="@media print { max-width: 75%; }" />
+        </p>
+        <h3>Promotion Validation Log</h3>
+        <p>You can view and override validation failures from within the Promotion Validation Log, which can be opened by double-clicking on a promotion's Validation Severity icon. </p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management1/Promotion Validation Log.png" class="SS" MadCap:mediastyle="@media print { max-width: 75%; }" />
+        </p>
+        <p>The Promotion Validation Log includes the following new columns.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 176px;">
+            </col>
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 816px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Validation Severity</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">Displays an icon representing the promotion's current validation state (see Validation Severity Column section below).</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Override</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">
+                        This checkbox indicates whether the validation failure has been overridden. Users with the <b>Allow Override of Validation Failures</b> right can edit this checkbox.
+                        <ul><li>Checked - This validation failure has been overridden.</li><li>Unchecked - This validation failure has not been overridden.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Override By</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">The user who overrode the validation failure.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: normal;">Override Date</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2" style="font-weight: normal;">The timestamp of when the validation failure was overridden.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Validation Severity columns</h3>
+        <p>Validation Severity columns display an icon representing the worst validation result found in an affected object (promotion header, price cluster, etc.). This enables users to understand what the "worst case scenario" may be before using that object. For example, the screenshot below shows the Available Promotions grid from the Campaigns and Events module. Ad coordinators  can reference the Validation Severity column in this grid to understand at a glance what the validation status is for a promotion before deciding to place it on a page.</p>
+        <p>
+            <img src="../../Resources/Images/Campaigns and Events/Available Promotions - validation severity.png" class="SS" MadCap:mediastyle="@media print { max-width: 75%; }" />
+        </p>
+        <p>All Validation Severity columns across Demand Management now include "Reviewed" severity levels to indicate when validation failures have been reviewed and overridden, thereby giving users greater confidence knowing that those failures have been reviewed and accepted. </p>
+        <p>The following table shows the complete set of icons and severity levels sorted in order of severity, from least severe (on top) to most severe (at bottom). </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 50px;">
+            </col>
+            <col class="TableStyle-jeTables-Column-Column1">
+            </col>
+            <col class="TableStyle-jeTables-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Icon</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Severity Level</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/validated icon.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">Validated</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">This validation passed with no failures.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/information reviewed icon.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;background-color: #ffffff;">Information Reviewed</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;background-color: #ffffff;">The validation information provided has been reviewed and the failure is overridden.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/warning reviewed.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">Warning Reviewed</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;background-color: #ffffff;"> This validation warning has been reviewed and the failure is overridden.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/error reviewed.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;background-color: #ffffff;">Error Reviewed</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;background-color: #ffffff;">This validation error has been reviewed and the failure is overridden.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/information icon.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">Information Provided</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">This validation failed with severity level, "Information Provided".</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/warning icon.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;background-color: #ffffff;">Warning Encountered</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;background-color: #ffffff;">This validation failed with severity level, "Warning".</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="background-color: #ffffff;vertical-align: bottom;padding-left: 2px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #c0c0c0;">
+                        <img src="../../Resources/Images/Promotion Management1/error icon.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">Error Found</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1" style="font-weight: normal;background-color: #ffffff;">This validation failed with severity level, "Error".</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Validation Severity columns now appear in the following locations:</p>
+        <ul>
+            <li>Promotions module<ul><li><b>Promotions Home screen</b>. Shows the worst validation severity found in each promotion listed.</li><li><b>Price cluster grids</b>. Shows the worst validation severity found in each price cluster listed.</li></ul></li>
+            <li>Campaigns and Events module<ul><li><b>Available Promotions grids</b>. Shows the worst validation severity found in each promotion listed.</li><li><b>Event Pricing Report</b>. The Validation Status column displays the worst validation severity level found in each promotion listed. </li></ul></li>
+        </ul>
+        <h3>Effects of overriding validation failures</h3>
+        <p>When you click <b>Save</b> on the Promotion Validation Log after overriding any validation failures:</p>
+        <ul>
+            <li>The Override By and Override Date fields are populated in the Promotion Validation Log.</li>
+            <li>Affected Validation Severity columns across Demand Management are updated to reflect the new "worst" validation severity. For example, if a price cluster contains a promotion with 4 "validated" validations and 1 error, and you just overrode the error, the validation severity for that promotion will change from "Error" to "Error Reviewed". </li>
+        </ul>
+        <p>When a promotion with a validation failure override is recalculated, the override will persist if the validation fails again with the same severity as the previously overriden failure. For example, if you override a validation warning and, after recalculating, the same warning is generated, that warning will still be overriden. However, the override will be automatically removed if instead a different failure severity is generated (or if the validation succeeds).</p>
+        <h3>Promotion exports</h3>
+        <p>You can now export promotions with "overriden" validation errors, provided that all errors in the promotion have been overriden. </p>
+        <p>A new exportable field, <code>PPH.[ValidationStatusIconValue]</code>, has been added with the following values:</p>
+        <ul>
+            <li>NULL = Validated</li>
+            <li>1 = Information Provided</li>
+            <li>2 = Warning Encountered</li>
+            <li>3 = Error Found</li>
+            <li>9 = Information Reviewed</li>
+            <li>10 = Warning Reviewed</li>
+            <li>11 = Error Reviewed</li>
+        </ul>
+        <h3>Configuration Migration</h3>
+        <p>When promoting validation set configurations to different environments, the new Allow Validation Override settings are included. </p>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-za" MadCap:lastBlockDepth="13" MadCap:lastHeight="2988" MadCap:lastWidth="1733">
+    <head>
+        <link href="../../../Resources/TableStyles/Video Table.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>FC vs LY Demand Variance Exceptions</h1>
+        <p>The FC vs LY Demand Variance exception flags level forecasts when the forecast (FC) for the next 3 periods is exceedingly above or below the item's sales history for the same periods last year (LY). </p>
+        <h2>Formula </h2>
+        <p>This exception is based on the variance in demand (calculated as a percentage) between the upcoming and last year periods. The formula for determining the percentage of demand variance is: </p><pre xml:space="preserve"><code>(Forecast - LY Demand History) / LY Demand History</code></pre>
+        <p>Where:</p>
+        <ul>
+            <li><code>Forecast</code>= the sum of <b>Effective Forecast</b> quantities for the upcoming number of periods (default is 3 periods).</li>
+            <li><code>LY&#160;Demand History</code> = the sum of <b>Total Sales</b> quantities for the same number of periods in the previous year (counted as 52 weeks prior to the upcoming periods).</li>
+        </ul>
+        <p>A positive value resulting from this calculation occurs when the forecast for the upcoming periods is greater than the demand for the same periods last year. A negative value occurs when the forecast for the upcoming periods is less than the demand for the same periods last year. </p>
+        <p>Whether the resulting value constitutes an exception depends on the variance threshold defined in the exception filters. </p>
+        <p><b>Notes</b>:
+        </p>
+        <ul>
+            <li>The default number of periods examined for this exception is 3 and includes the current period. </li>
+            <li>If either the <code>Forecast </code>or <code>LY Demand History</code> value is equal to zero, the variance percentage will equal 100%. </li>
+        </ul>
+        <h2>Examples</h2>
+        <p>The following example shows an <i>over-forecast</i> exception, which is a forecast where the upcoming demand is determined to be too<b>high</b> when compared to the demand history for the same periods last year. </p>
+        <p>
+            <img src="../../../Resources/Images/Exceptions/Forecasting/Example - ly over.png" />
+        </p>
+        <p>The next example shows an<i>under-forecast</i> exception, which is a forecast where the upcoming demand is determined to be too <b>low</b> when compared to the demand history for the same periods last year:</p>
+        <p>
+            <img src="../../../Resources/Images/Exceptions/Forecasting/Example - ly under.png" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Related videos</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p>
+                                    <p>
+                                        <p>
+                                            <p>
+                                                <p>
+                                                    <object MadCap:HTML5Video="true" class="video" src="../../../Resources/Videos/BC-4 CD-9 Forecast Exception Management_OverForecastException.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false">
+                                                    </object>
+                                                </p>
+                                            </p>
+                                        </p>
+                                    </p>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <object MadCap:HTML5Video="true" class="video" src="../../../Resources/Videos/BC-4 CD-9 Forecast Exception Management_UnderForecastException.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false">
+                                </object>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>
+                                    <p>&#160;</p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                                <p>Over Forecast Exception</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2">Under Forecast Exception</td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Filter conditions</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To filter for forecasts with FC vs LY&#160;Demand <i>over-forecast</i> exceptions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>From the Level Forecast Exceptions field group:
+<![CDATA[        ]]></p>
+                <ul>
+                    <ul>
+                        <li>Field <b>LevelForecastFCvLYSalesPercent</b> is more or equal to <b>3</b> (or whatever positive percentage value you want to be the threshold).</li>
+                        <li>Field <b>LevelForecastReviewed</b> is <b>False</b>.</li>
+                    </ul>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>To filter for forecasts with FC vs LY&#160;Demand <i>under-forecast</i> exceptions</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>From the Level Forecast Exceptions field group:
+<![CDATA[        ]]></p>
+                    <ul>
+                        <ul>
+                            <li>Field <b>LevelForecastFCvLYSalesPercent</b> is smaller or equal to <b>-0.75</b> (or whatever negative percentage value you want to be the threshold).</li>
+                            <li>Field <b>LevelForecastReviewed</b> is <b>False</b>.</li>
+                        </ul>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </p>
+        <h2>Reviewing and resolving FC vs LY&#160;Demand exceptions</h2>
+        <p>See <a href="Reviewing Forecast Exceptions.htm">Reviewing Forecast Exceptions</a> for more information on how to review and resolve forecast exceptions.</p>
+    </body>
+</html>

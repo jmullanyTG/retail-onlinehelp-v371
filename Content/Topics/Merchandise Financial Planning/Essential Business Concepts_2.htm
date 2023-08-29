@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 style="color: #000000;">Essential Business Concepts</h2>
+        <p style="color: #000000;">When working in the main planning view, there are some basic constructs and conventions the user should be aware of in order to get the most out of the available functionality:</p>
+        <h3><a name="Agg"></a>Aggregation Levels</h3>
+        <p>In order to provide a more fluid user experience, the data selection parameters include product and channel aggregation levels. Data for the selected portions of the product and site hierarchies will be pre-aggregated to these levels in temporary database tables, thus reducing the total number of rows that must be read/written and improving overall system performance.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts.png" style="visibility: visible;width: 634px;height: 95px;" />
+        </p>
+        <p class="ListParagraph">Aggregation levels can be changed at any time without consequence to the work users have done. Data will simply be re-aggregated/disaggregated. Note, however, that actual values are always stored at the lowest plan levels in the database, regardless of what levels you are currently aggregated to. Changes made at higher levels are simply broken down by percent contribution of the previous values.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;">based on the aggregation level selected, the user will see values for that level as well as those above. In the chart below, if the user selects Total Company as the Channel Agg Level, the system will only display a single section for Vandelay Industries and $22,500.00 in sales, but if the user selected Channel as the Channel Agg Level, the system would display separate sub-sections for Retail, Outlet, and Ecomm, within the country sections for US and UK and also a grand total section for Vandelay Industries.</span></p>
+                <p>
+                    <img src="../../Resources/Images/MFP 529/Essential Business Concepts_1.png" style="visibility: visible;mso-wrap-style: square;width: 502px;height: 241px;" />
+                </p>
+            </li>
+        </ul>
+        <h3><a name="Piv"></a>PivotGrid Functionality</h3>
+        <p>Very similar to the popular Microsoft Excel Pivot Table but with enhanced functionality, the PivotGrid allows users to quickly aggregate, disaggregate, and rearrange the view as well as make edits to all plannable metrics at multiple levels.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_2.png" style="visibility: visible;width: 634px;height: 289px;" />
+        </p>
+        <p class="ListParagraph">By clicking the arrows at the left corner of major sections, such as the Brand section Great Value in the example above, users can work at the total Brand level for both Channels shown:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_3.png" style="visibility: visible;width: 634px;height: 197px;" />
+        </p>
+        <p class="ListParagraph">Now, any changes made will be for both Retail and Outlet Channels of the Great Value Brand. Changes made at this level will be broken down to the individual channels in the database, based on the percent contribution of the existing values of each. Thus, if the user expands the section again, the Retail and Outlet Channels will be updated accordingly.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_4.png" style="visibility: visible;width: 634px;height: 237px;" />
+        </p>
+        <p class="ListParagraph">Similarly, horizontal sections, such as the month and year sections shown above, can be collapsed by clicking the arrows at the left of each to work at aggregate levels of time:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_5.png" style="visibility: visible;width: 634px;height: 196px;" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_6.png" style="visibility: visible;width: 634px;height: 201px;" />
+        </p>
+        <p class="ListParagraph">In the first example, changes made will now affect the entire month, and in the second, changes will affect the entire year, and all changes made will be broken down to the lower levels via percent contribution of the existing values.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_7.png" style="visibility: visible;width: 634px;height: 240px;" />
+        </p>
+        <p class="ListParagraph">Finally, fields in the PivotGrid can also be dragged and dropped to other sections to quickly rearrange the view:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_8.png" style="visibility: visible;width: 634px;height: 195px;" />
+        </p>
+        <p class="ListParagraph">Dragging the ProductLevelDescription field at the left up to the column area of the grid will rearrange the grid so all Brands can be viewed side-by-side for each week.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_9.png" style="visibility: visible;width: 634px;height: 393px;" />
+        </p>
+        <p class="ListParagraph">Similarly, fields can be dragged from the column area to the row area. In the above example, dragging the Month and Week fields to the row area allows the user to view time vertically while still having all Brands arranged side-by-side for easy comparisons.</p>
+        <h3><a name="Fie"></a>Fields Customization</h3>
+        <p>The fields visible to the user in a PivotGrid can be customized by clicking the <img src="../../Resources/Images/MFP 529/Essential Business Concepts_10.png" style="visibility: visible;mso-wrap-style: square;width: 52px;height: 21px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" /> button in the view header area to launch the Fields Customization dialog:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_11.png" style="visibility: visible;width: 634px;height: 419px;" />
+        </p>
+        <p class="ListParagraph">In the Simple tab, users can simply drag fields from the various areas of the PivotGrid into others. The order the fields appear in each section defines the order they appear in the actual grid. Order can also be manually defined by typing over the numbers in the column to the right of each field name.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_12.png" style="visibility: visible;width: 634px;height: 419px;" />
+        </p>
+        <p class="ListParagraph">In the Advanced tab, the Pivot Area of each field can be selected via dropdown menu, or, again, set manually by overwriting the order Index number. <span style="color: #0070C0;">The real benefit to the Advanced tab, however is in the ability to use the Multiple Changes function to move many fields to a desired Pivot Area in a single action. </span>See <span style="font-weight: bold;">Multiple Changes </span>below for more information.</p>
+        <h3><a name="Customiz"></a>Customizing Workspaces</h3>
+        <p>You can customize your workspace by dragging any tab (such as Main Planning, Sales By Type, and Comp/Non-Comp Sales) or side-panel (such as Calculation Toggles or Endpoint) and dropping it wherever makes sense for the tasks you are performing:</p>
+        <ul>
+            <li style="font-weight: normal;">
+                <p><b>Docked at the top/bottom/side of the window</b>. When you drag a tab or panel header, semi-transparent docking helpers appear on the screen. Simply drop the tab/header on a helper to dock it in that helper's location.  (The area where the tab/header will be docked is highlighted in blue when you hover over a docking helper.) </p>
+                <p>
+                    <img src="../../Resources/Images/MFP/docking helper.png" /> <img src="../../Resources/Images/MFP/docked side-by-side.png" /></p>
+            </li>
+            <li style="font-weight: bold;">
+                <p>As a tab<span style="font-weight: normal;">. Dropping a tab/panel header next to an existing tab adds it as another tab in that pane. </span></p>
+                <p>
+                    <img src="../../Resources/Images/MFP/drag tab.png" /> <img src="../../Resources/Images/MFP/drag-tab after.png" /></p>
+            </li>
+            <li style="font-weight: normal;"><b>On another screen</b>. Simply drag a tab or panel header outside of the JustEnough window and float it wherever your prefer.</li>
+        </ul>
+        <p style="font-weight: normal;">Best of all, JustEnough keeps all these areas in synch no matter where they are positioned, so when you change data in one tab, the effects are immediately visible in the other areas.</p>
+        <h4><a name="Saving/R"></a>Saving/Restoring Workspaces</h4>
+        <p style="font-weight: normal;">Once you have your workspace configured just right, you can save it (and share it) for later use. Just right-click next to the tabs in the main planning view (or click the down arrow) to open the Workspaces context menu.</p>
+        <p style="font-weight: normal;">
+            <img src="../../Resources/Images/MFP/workspace menu.png" />
+        </p>
+        <ul>
+            <li>Choose <b>Save</b> <b>New</b> to save the current workspace configuration. You have the option of making your configuration private (only you can use it) or public (others can choose it as well).</li>
+            <li>Choose <b>Workspaces &gt; [workspace name]</b> to load a previously saved workspace.</li>
+        </ul>
+        <h3><a name="Sav"></a>Saving/Restoring Layouts</h3>
+        <p>Changes made to the screen layout through use of the Fields button and/or PivotGrid manipulation can be saved and quickly recalled later:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">
+                <p><span style="font-weight: bold;">Saving: </span>right clicking in the pivot field in the row area nearest the Data field (Week in the example below) or anywhere in the data grid area will bring up a context menu:</p>
+                <p>
+                    <img src="../../Resources/Images/MFP 529/Essential Business Concepts_13.png" style="visibility: visible;width: 633px;height: 346px;" />
+                    <br />Click <span style="font-weight: bold;">Save Layout </span>to launch the Save Layout dialog:<br /><img src="../../Resources/Images/MFP 529/Essential Business Concepts_14.png" style="visibility: visible;width: 488px;height: 247px;" /><br />Enter a Name for the layout, an optional Description, and a privacy option – Private, Public, or Shared (if Shared, click <img src="../../Resources/Images/MFP 529/Essential Business Concepts_15.png" style="visibility: visible;mso-wrap-style: square;width: 23px;height: 22px;" /> to define the users with which to share the layout). If you wish to make the layout you are saving the Default system layout for the current view, check Default. Click OK and then the layout will be saved for future recall<br /></p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Restoring: </span>right click as shown in <span style="font-weight: bold;">Saving</span>, above, to bring up the context menu:<br /><img src="../../Resources/Images/MFP 529/Essential Business Concepts_16.png" style="visibility: visible;width: 633px;height: 345px;" /><br /></li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 72pt;">Click <span style="font-weight: bold;">Restore Layout</span> then choose the layout you wish to recall to switch the view to the chosen layout</p>
+        <h3><a name="Chart"></a>Chart View</h3>
+        <p>Users can view a customizable chart of whatever data is currently highlighted in the view by simply clicking the <img src="../../Resources/Images/MFP 529/Essential Business Concepts_17.png" style="visibility: visible;mso-wrap-style: square;width: 63px;height: 25px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" /> button in the view header area:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_18.png" style="visibility: visible;width: 634px;height: 453px;" />
+        </p>
+        <p class="ListParagraph">Change the chart style by selecting a Chart Type. You can also toggle other options with the checkboxes in the Chart header area.</p>
+        <h3><a name="Open"></a>Open/Export</h3>
+        <p>Right clicking in the pivot field in the row area nearest the Data field (Week in the example below) or anywhere in the data grid area will bring up a context menu:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_19.png" style="visibility: visible;width: 633px;height: 275px;" />
+        </p>
+        <p class="ListParagraph">Click <span style="font-weight: bold;">Open/Export </span>and then click the desired format; note that Open will open the data from the view directly in the application associated with the chosen format whereas Export requires the user to name and save the file and DOES NOT immediately open the data in the associated application.</p>
+        <h3><a name="Calc"></a>Calc Toggles</h3>
+        <p>The Calc Toggles view defines which dependent metrics recalculate and which ones hold when changes are made:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_22.png" style="visibility: visible;width: 634px;height: 137px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">Calculation toggles do not require Saving to be in effect. The change is immediate one the selection is made.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">When alternate (non-default) calc toggles are selected, they appear in darker gray for easy identification at a glance</li>
+            <li class="ListParagraph" style="list-style-type: disc;">The Calc Toggles view can be collapsed by clicking the arrow at the top left adjacent the view title:<br /><img src="../../Resources/Images/MFP 529/Essential Business Concepts_23.png" style="visibility: visible;width: 592px;height: 347px;" /><br />Once collapsed, the view will be visible only as a tab at the right hand side of the screen and can be restored by clicking the arrow near the view title again:<br /><img src="../../Resources/Images/MFP 529/Essential Business Concepts_24.png" style="visibility: visible;width: 634px;height: 219px;" /><br /></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">Not all plannable metrics have multiple calculation directions, thus not all plannable metrics are shown in this view</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">Based on the planning method – Retail or Cost – some calculation toggles may not be available. This is due to the differences in how the calculation model must function together as a whole to properly balance within each method</span>
+            </li>
+        </ul>
+        <h3><a name="Plan"></a>Plannable Metrics</h3>
+        <p>All plannable metrics are conditionally formatted in light blue for easy identification:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_25.png" style="visibility: visible;width: 634px;height: 181px;" />
+        </p>
+        <h3><a name="Ex"></a>Ex-VAT Metrics</h3>
+        <p>All ex VAT metrics, or metrics which exclude any amount associated with value added tax, are conditionally formatted in light green for easy identification:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_26.png" style="visibility: visible;width: 634px;height: 195px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">if the VAT % is zero for the given product/site level, ex VAT metrics will be equal to the non-ex VAT metrics (ie. Sales = Sales ex VAT, etc.)</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;color: #00B050;">Calculation:</span><span style="font-style: italic;"> the generic calculation for any ex VAT metric is = non-ex VAT metric value / (1 + VAT %)</span>
+            </li>
+        </ul>
+        <h3><a name="Comp"></a>Comparison Metrics</h3>
+        <p>Comparison metrics display values read directly from the selected Comparison Plan in the view Parameters; all comparison metrics are conditionally formatted light purple for easy identification:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_27.png" style="visibility: visible;width: 634px;height: 195px;" />
+        </p>
+        <h3><a name="Act"></a>Actualized Periods</h3>
+        <p>Periods that have already actualized (meaning they are in the past and actual data has been imported for them) are conditionally formatted gray for easy identification; actualized periods are also locked from editing:</p>
+        <p>
+            <img src="../../Resources/Images/MFP 529/Essential Business Concepts_28.png" style="visibility: visible;width: 634px;height: 195px;" />
+        </p>
+        <h3><a name="DC"></a>DC stock inclusion and splitting by supply chain</h3>
+        <p>Units owned by sites of type DC are rolled into the last actualized period of the active plan and considered part of total inventory ownership by product/channel hierarchy level. Within each product hierarchy level, available DC stock is split among all relevant site hierarchy levels based on the supply chain defined for the relevant master plan. (The supply chain defines which DCs are sources for which sites. By analyzing the supply chain, the system can "smartly" apportion units to each DC according to the anticipated need of the sites they source.)  If a master plan does not have a valid supply chain, stock is split "generically" among all DCs instead (see <a href="#Generic">Generic Stock Splits</a> below). </p>
+        <p>You can view the supply chain defined for a master plan (as well as its status) in the Financial Plan Maintenance window:</p>
+        <ol>
+            <li>Click <b>Manage</b> on the Financial Planning toolbar.</li>
+            <li> Select a plan. </li>
+            <li>
+                <p>The <b>Stock Split Supply Chain</b> and <b>Supply Chain Status </b>fields appear in the <b>Settings</b> tab. From there, you can also click <b>Edit</b> to choose a supply chain, <a href="Validating a Supply Chain.htm">validate</a> it, and view any validation errors detected in the supply chain.</p>
+                <p>If a master plan's supply chain is missing or invalid, the Supply Chain Status field is in the master plan (and its branches) is colored red in the plan's Settings/General tab. 
+</p>
+                <p>
+                    <img src="../../Resources/Images/MFP/Supply Chain status red.png" class="SS" />
+                </p>
+            </li>
+        </ol>
+        <p><b>Notes</b>:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">In order for DC stock splitting to occur, the DCs containing the stock you want split <b>must be </b><b>included</b> in the master plan.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Sites in the supply chain must have a DC as their primary source. <a href="../Supply Chain/Supply Chain Overview.htm#Supply">Supply chain overrides</a> are permitted as long as the overriding source is also a DC.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">Stock in DCs that are part of enabled channel levels of the plan will show as part of the stock on hand for those channels; <span style="color: #0070C0;">this is recommended for cases where there is a 1-1 mapping between channels and DCs and stock from a single DC will not be shared among multiple channels</span></li>
+            <li class="ListParagraph" style="list-style-type: disc;">DC stock split quantities can be viewed in the Main Planning view in the fields <span style="font-weight: bold;">Actual EOP Units Cluster </span>(if the <span style="font-weight: bold;">Inventory Is Shared </span>policy is set to False) and <span style="font-weight: bold;">Actual EOP Units DC Split</span> for reference</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">the </span><span style="font-weight: bold;font-style: italic;">Inventory Is Shared </span><span style="font-style: italic;">system policy is used only for legacy Cost based plans to share incoming inventory among the site levels and </span><span style="font-weight: bold;font-style: italic;">is not used in Hybrid based plans</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">DC stock is stored against the Master plan and split from there, ensuring that stock is not double-counted in branch plans beneath</li>
+            <li class="ListParagraph" style="list-style-type: disc;">DC stock splits are recalculated dynamically, either when daily maintenance procedures run, or when changes to Sales Units and/or Receipt Units are made to any periods specified by the system policy and Save is clicked</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Because it is possible for multiple versions of branch plans for the same product/channel levels to exist (upside, downside, and flat scenario plans, for example), if all channels sharing the DC stock for a given product level are not present in a branch, the system will use the planned values from the channels present in the branch and the master plan values for the same periods for the channels not present in the branch to determine DC stock splits in each branch. This is because, if multiple branch versions exist, it is not possible for the system to determine which one to use in the calculation of relative need by channel.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">I</span><span style="font-weight: bold;font-style: italic;color: #FF0000;">mportant:</span><span style="font-style: italic;"> in the case where multiple branch plans exist for the same product level but different channel levels, it is possible that DC stock splits for those branches will recalculate when branches are merged into the Master plan, necessitating review of the receipt plans in each branch</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Helpful Hint:</span><span style="font-style: italic;"> in this scenario, it is recommended to have a “master branch” containing all product and channel levels so that branches can be merged into it and reviewed/adjusted at aggregate levels prior to merging into the Master plan</span>
+            </li>
+        </ul>
+        <h4><a name="Generic"></a>Generic Stock Splits</h4>
+        <p>If a plan's supply chain is missing or invalid, the stock is split "generically" among DCs according to the following system policy:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">DC Stock Splits Future Number of Periods: </span>this policy sets the number of periods forward the system uses to calculate the ideal splitting of available inventory among relevant site hierarchy levels; default setting is 8.</li>
+        </ul>
+        <p>JustEnough calculates the relative need of each site hierarchy level by comparing the planned Sales Units for the number of periods specified in this policy against the planned Receipt Units for the same number of periods plus the last actualized period’s EOP Units. The system then splits available inventory among the relevant site hierarchy levels and adds the split quantities to the EOP Units of last actualized period for each and carries them forward into the BOP Units for the following period.</p>
+        <p>&#160;</p>
+    </body>
+</html>

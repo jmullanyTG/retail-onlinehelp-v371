@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="21597" MadCap:lastWidth="1269">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >Receipt Plan View</h1>
+        <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Receipt Plan view allows users to hone in on the ideal receipt strategy for </span><span style="color: #000000;font-size: 12pt;">items they are planning to purchase. </span><span style="color: #000000;font-size: 12pt;">Set</span> <span style="color: #000000;font-size: 12pt;">constraints, such as minimum Periods of Supply, define the periods in which receipts are allowed to arrive, and how many receipts are needed. From here, you can also send commitment orders to JustEnough Order Manager for final processing, review, approval, and submission to external systems.</span></p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Receipt Plan View.png" style="visibility: visible;width: 634px;height: 243px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Parameters: </span><span style="font-size: 12pt;">shows/hides the parameters pane at the top of the view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Execute: </span><span style="font-size: 12pt;">refreshes the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">this is not typically necessary, as the view refreshes on its own when a new placeholder/collection is selected in the main planning view, when changes are applied, and when the View Mode </span><span style="font-style: italic;font-size: 12pt;">is</span><span style="font-style: italic;font-size: 12pt;"> changed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">View Mode: </span><span style="font-size: 12pt;">user editable dropdown; selects the view mode for </span><span style="font-size: 12pt;">receipt</span><span style="font-size: 12pt;"> plan view – Total Company or Average Store</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Total Company: </span><span style="font-size: 12pt;">allows the user to view/plan revenue and unit metrics </span><span style="font-size: 12pt;">as total company values – meaning the total volume for all sites contained in whatever level the Pivot Grid is aggregated to</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Average Store:</span> <span style="font-size: 12pt;">allows the user to view/plan revenue and unit metrics as average store values – meaning the per site volume for the number of sites contained in whatever level the Pivot Grid is aggregated to</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">General Concepts</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Editable Metrics: </span><span style="font-size: 12pt;">denoted by light blue row coloration, these are the only metrics that are editable by the user in </span><span style="font-size: 12pt;">Receipt</span><span style="font-size: 12pt;"> Plan view; all others are calculations or reads from other sources</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">Changing </span><span style="font-style: italic;font-size: 12pt;">Minimum Presentation in this view </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">WILL</span><span style="font-style: italic;font-size: 12pt;"> update Min Pres in the Main Planning and Cluster Set views, as well as in Sales Plan View</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">Changing Receipt Units in this view </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">WILL</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;"> NOT</span><span style="font-style: italic;font-size: 12pt;"> update metrics in the Main Planning or Cluster Set views – this is by design, as </span><span style="font-style: italic;font-size: 12pt;">receipts are suggested in JustEnough Assortment Planning via a complex algorithm considering sales and all user-specified constraints; because sales are considered in the output already, to then, go update Ttl Buy U would cause the sales plan to change, thus potentially invalidating the results of the receipt calculation. </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">It WILL, however, update R</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">eceipt Units in Sales Plan view, as will changing Receipt AUC</span><span style="font-style: italic;font-size: 12pt;">.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Calculations: </span><span style="font-size: 12pt;">Receipt plans are calculated via the JustEnough Receipt Planning Engine, which uses a complex algorithm to determine the optimal receipt flow </span><span style="font-size: 12pt;">based on sales and minimum presentation by period and user-defined constraints; because of this, s</span><span style="font-size: 12pt;">ystem receipt recommendations require user action to recalculate, rather than recalculating on the fly as changes are made in the user interface.</span><span style="font-size: 12pt;"> Recalculation can be done either for the selected placeholder/collection only by clicking </span><span style="font-weight: bold;font-size: 12pt;">Recalculate Receipts </span><span style="font-size: 12pt;">in this view, or for all placeholders/collections that require recalculation by clicking </span><span style="font-weight: bold;font-size: 12pt;">R</span><span style="font-weight: bold;font-size: 12pt;">ecalculate</span> <span style="font-size: 12pt;">in the Main Planning view header area.</span></li>
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-size: 12pt;">Receipt Engine Outputs:</span><span style="font-size: 12pt;"> the System Receipt Units and Ideal EOP Units metrics are outputs of the Receipt Planning Engine, which must be re-run when any of the inputs it considered change. These fields will be conditionally formatted </span><span style="font-size: 12pt;">any time a change is made that could invalidate the results of the last engine run – changes to sales, min pres, shrink, inventory adjustments, or receipt constraints all fall into this category.</span>:</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Receipt Plan View_1.png" style="visibility: visible;width: 634px;height: 105px;" />
+                </p>
+            </li>
+            <li><span style="font-weight: bold;font-size: 12pt;">Plan Horizon vs. Receipt Planning Engine Horizon: </span><span style="font-size: 12pt;">if the Plan Horizon, set at the time of plan creation, extends beyond the receipt planning engine horizon for a given item, data that extends past the receipt engine horizon will appear in blue italics with zero values (<b style="font-style: italic; color: #6495ed;">$0.00</b>, for example). See example in <b>Plan Horizon vs. Replen Forecast Horizon</b> below).</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold; font-size: 12pt; color: #000000;">Replen Placeholders/Collections: </span><span style="font-size: 12pt;">when a placeholder/collection is of the Status Replen, the system pulls all relevant data to form its sales plan from the Forecasts module. Users should be aware of the following differences in this view when dealing with Replen items:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Read Only:</span><span style="font-size: 12pt;"> all normally editable metrics in Receipt Plan view become read only, being populated directly from aggregated replenishment forecast data</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Constraints: </span><span style="font-size: 12pt;">all receipt related constraints will be managed within the Forecasts module, thus receipt constraints in Assortment Planning for Replen placeholders/collections will be cleared; upon Status change to something other than Replen, the default constraints assigned to the corresponding product level, if any, will be reinstated</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Periods:</span><span style="font-size: 12pt;"> for Replen placeholders/collections, the necessary orders to support forecasted sales are generated from the Forecasts module and sent to Order Manager for processing, thus users don’t need to set Receipt Periods in this view the way they do for non-Replen items. Receipt Periods are set automatically based on when the generated orders are scheduled to arrive</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-size: 12pt;">Plan Horizon vs. Replen Forecast Horizon: </span><span style="font-size: 12pt;">if the Plan Horizon, set at the time of plan creation, extends beyond the replenishment forecast horizon for a given item, the system will conditionally format the periods that go beyond the replenishment forecast as shown below to draw the user’s attention to this. These periods will also display zeros for the metrics being read from replenishment data, as no forecast exists:</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Receipt Plan View_2.png" style="visibility: visible;width: 634px;height: 159px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">System Policies: </span><span style="font-size: 12pt;">a number system policies effect the output of the Receipt Planning Engine – they can be managed in </span><span style="font-weight: bold;font-size: 12pt;">Maintain &gt; Policies, </span><span style="font-size: 12pt;">however this should not be done without the assistance of a JustEnough technical consultant. The one possible exception is the following:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Assortment Engine Lead Time:</span> <span style="font-size: 12pt;">This setting determines the number of days forward from receipt date that receive</span><span style="font-size: 12pt;">d stock is assumed to be available to support sales</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Default is 7 to assume receipts are available to sell one week after receipt</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Can be adjusted based on a realistic assessment of the capabilities of your supply chain</li>
+            <li style="margin-bottom: 0pt;"><span style="font-size: 12pt;">When the engine is calculating receipts, this setting essentially determines the range of periods it must consider to meet the defined constraints for a given period</span><span style="font-size: 12pt;">; see examples for Periods of Supply and Min Stk to Sales below for details</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Toolbar Functions</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold; font-size: 12pt; color: #000000;">Recalculate Receipts</span><span style="font-weight: bold;color: #7030A0;font-size: 12pt;">: </span><span style="font-size: 12pt;">re-runs the Receipt Planning Engine for the selected placeholder/collection and </span><span style="font-size: 12pt;">populates System Receipt Units and Ideal EOP Units with the results</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">Receipt plan default constraints can be set via </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Manage Assortment Plans &gt; Defaults </span><span style="font-style: italic;color: #000000;font-size: 12pt;">(see corresponding section above for details)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-style: italic;color: #000000;font-size: 12pt;">System policies affecting the Assortment Engine output can be set via </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Maintain &gt; Policies &gt; Engine: Commitments</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> (see </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Line Visualization Supporting Views – Receipt Plan</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> below for details)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Receipt recalculations require complex calculations and, thus, are sent to the Workload Queue module for scheduling and processing. </span><span style="font-style: italic; font-size: 12pt; color: #000000;">Though, often, receipts are recalculated immediately, they may be deferred for later calculation based on the number of placeholders requiring recalculation and other jobs currently in the queue. Placeholders awaiting recalculation will become locked and conditionally formatted to indicate this.</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">receipts for placeholders/collections in Replen status are calculated in the Forecasts module and read in, thus they will never appear “Dirty” and will not be recalculated when this button is clicked</span><span style="font-style: italic;color: #000000;font-size: 12pt;">. Instead, the following error will be raised:'</span></p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Receipt Plan View_3.png" style="visibility: visible;width: 498px;height: 181px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">all changes to your plan, including changes made to constraints in the Receipt Plan supporting view, must be saved prior to recalculating receipts or they will not be taken into account by the Receipt Engine.</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold; font-size: 12pt; color: #000000;">Create Commitments:</span> <span style="font-size: 12pt;">sends receipt plan details for all defined Receipt Periods in the current view, provided 1) the Commit checkbox for the period is checked, and 2) there is a positive Receipt Units quantity in the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error:</span> <span style="font-style: italic;font-size: 12pt;">since orders for placeholders/collections in Replen status are generated in the Forecasts module, it is not necessary to create commitment orders for them in Assortment Planning, thus no commitment orders will be generated for such items when this button is clicked. Instead, the following error will be raised:</span></p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Receipt Plan View_3.png" style="visibility: visible;width: 498px;height: 181px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error: </span><span style="font-style: italic;font-size: 12pt;">if </span><span style="font-style: italic;font-size: 12pt;">no receipt plans are found that meet the above criteria, the following error will raise:</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Receipt Plan View_4.png" style="visibility: visible;width: 491px;height: 196px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The following message will display if this constraint is not met when attempting to Create Commitments:</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_8.png" style="visibility: visible;width: 480px;height: 226px;" alt="https://lh5.googleusercontent.com/qXkqaD1NifEqHrwdIxk0RqhuFTT4R5kxE4-uVoGH9t3fLrQqI52paeWljKhrgLB-5njDIc9BUY3sCI0uKckgtQT2egaazZwxe-vAFHuSCYqlah9MfKPEUYL7Tg9UoAcHCBCIyVBW" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Yes overrides the constraint and creates the commitment orders in </span><span style="color: #000000;font-size: 12pt;">Order Manager</span><span style="color: #000000;font-size: 12pt;">; No cancels commitment order creation</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">
+                <p>The system will create one order document per receipt date, containing separate order lines for each placeholder/cluster receipt quantity, launch Order Manager, and display the documents in separate tabs; created order documents can be viewed at the left of the Order Manager screen in the Public folder:</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Receipt Plan View_5.png" style="visibility: visible;width: 634px;height: 201px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Restore Default Constraints:</span> <span style="font-size: 12pt;">restores both Placeholder and Placeholder Cluster Constraints to their default settings, as defined in </span><span style="font-weight: bold;font-size: 12pt;">Manage Assortment Plans &gt; Defaults</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">because part of restoring the default constraints involves resetting the receipt periods for the placeholder/collection, receipts are automatically recalculated as part of this process, thus using this function has the side-effect of marking the placeholder/collection in question Clean </span><span style="font-style: italic;font-size: 12pt;">in the Receipt Status field of the Main Planning view.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Apply: </span><span style="font-size: 12pt;">saves all changes made since the last Apply</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Cancel: </span><span style="font-size: 12pt;">cancels all changes made since the last Apply and reverts them to their previously saved values</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Export: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; exports and saves the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Open: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; opens the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF – does not require save prior to viewing in the desired format</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Graph: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; graphs the selected data in the view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields: </span><span style="color: #000000;font-size: 12pt;">standard Pivot Grid functionality; allows the user to customize the field layout for the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Custom layouts can be saved and restored by right-clicking in the Pivot Grid and selecting </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Save Layout</span><span style="color: #000000;font-size: 12pt;"> or </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Re</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">s</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">tore Layout</span><span style="color: #000000;font-size: 12pt;">, respectively</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Placeholder Constraints</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Rec Var Min</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Receipt Variant Minimum)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the minimum total order quantity (including all cluster level orders) for a variant in a given period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a Rec Var Min of 1000, this constraint is considered NOT met in Wk 0 but met in Wk 3 in the table below:</span></p>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Period</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 0</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 1</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 2</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 3</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">A</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">200</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">B</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">C</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The following message will display if this constraint is not met when attempting to Create Commitments:</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_8.png" style="visibility: visible;width: 480px;height: 226px;" alt="https://lh5.googleusercontent.com/qXkqaD1NifEqHrwdIxk0RqhuFTT4R5kxE4-uVoGH9t3fLrQqI52paeWljKhrgLB-5njDIc9BUY3sCI0uKckgtQT2egaazZwxe-vAFHuSCYqlah9MfKPEUYL7Tg9UoAcHCBCIyVBW" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Yes overrides the constraint and creates the commitment orders in the current view; No cancels commitment order creation</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Rec Size Min</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Receipt Size Minimum)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the minimum total order quantity (including all cluster level orders) for a variant in a given period as a function of the number of sizes present in the Size Curve attached</span><span style="color: #000000;font-size: 12pt;"> to the variant</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a Rec Size Min of 200 and a Size Curve of S, M, L, XL, XXL assigned to the variant being ordered, this constraint is considered NOT met in Wk 0 but met in Wk 3 in the table below:</span></p>
+                <table align="center" class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Period</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 0</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 1</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 2</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 3</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">A</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">200</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">B</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">C</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The same message as shown for Rec Var Min will display if this constraint is not met when attempting to Create Commitments within the Receipt Plan supporting view.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Var Order Multiple</span><span style="color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer;</span><span style="color: #000000;font-size: 12pt;"> sets the number by which receipt quantities generated by the Recalculate Receipts functions in the Line Visualization main and receipt plan views will be evenly divisible by; persists in orders generated from assortment plans within Order Manager (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Order Manager – Break By Size </span><span style="color: #000000;font-size: 12pt;">and</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> Prepack </span><span style="color: #000000;font-size: 12pt;">sections below for details)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Defaults to the plan default value set for the product hierarchy level assigned to the selected placeholder (see </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Manage Assortment Plans &gt; Header Area Controls &gt; Defaults button</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> above for details)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">The system will always round up to meet Order Multiple constraints; this ensures that the base sales plan on which the receipt plan is built will always be satisfied</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a sales plan of 241 units for weeks 1-4, and an Order Multiple of 50 set (this is common in businesses where very small parts are sold individually but it is not practical to ship them that way); the system will yield a receipt quantity of 250 units – the lowest multiple of 50 that will satisfy the entire sales plan</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;font-size: 12pt;">Placeholder Cluster Constraints</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Periods of Supply:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the periods of supply (period type as defined by the current assortment plan) for </span><span style="color: #000000;font-size: 12pt;">the placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance as a minimum stock constraint for receipt engine output</span><span style="color: #000000;font-size: 12pt;">s</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Actual by period constraint is defined as the sales planned for this many periods forward from a given period</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this setting interacts with the system policy: Assortment Engine Lead Time (Maintain &gt; Policies &gt; Engine: Commitments) </span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Assortment Engine Lead Time is set to 7 days, Periods of Supply is set to 2, and I am planning a receipt to arrive in Wk 1. For this constraint to be considered fulfilled for Wk 1, I must end the period with at least 60 units of inventory on hand to cover weeks 2 and 3. The lead time of 7 days stipulates that stock being received in given week cannot be used to cover the sales planned in that week, thus Periods of Supply begins calculating need at Wk 2 rather than Wk 1.</span>
+                </p>
+                <table align="center" class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Period</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 0</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 1</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 2</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 3</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">A</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">200</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">B</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">C</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Periods Before Phase In: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the default number of periods prior to Phase In date that initial receipt quantities for </span><span style="color: #000000;font-size: 12pt;">the</span> <span style="color: #000000;font-size: 12pt;">placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance</span><span style="color: #000000;font-size: 12pt;"> should be scheduled to be received</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">I have a placeholder instance with a Phase In date of wk 4 and a Periods Before Phase In of 2 - my default calculated initial receipt for the placeholder instance will be in wk 2</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Flow Cadence:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the default number of periods between receipt dates calculated by the receipt planning engine</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a placeholder instance with a Phase In date of wk 3, a Periods Before Phase In of 2, and a Flow Cadence of 4 - if I have 3 receipts, they will occur in wk 1, wk 7, and wk 11. This is because the purpose of Periods Before Phase In is to ensure product can be in stores by the Phase In date, thus the first flow date is considered to be the Phase In date for the purposes of receipt engine calculation</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Min Stk/Sales</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Minimum Stock to Sales)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the minimum stock to sales ratio for </span><span style="color: #000000;font-size: 12pt;">the placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance</span><span style="color: #000000;font-size: 12pt;"> as a minimum stock constr</span><span style="color: #000000;font-size: 12pt;">aint for receipt engine outputs</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Actual by period constraint is defined as the sales planned for a given period multiplied by the constraint value (period sales of 10 * Min Stk/Sls of 4 = EOP stock requirement of 40)</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Shrink % of Sales:</span><span style="color: #000000;font-size: 12pt;"> user editable positive percentage to 2 decimal places (1.52%); sets the anticipated shrink units per period as a percentage of planned period sales units for </span><span style="color: #000000;font-size: 12pt;">the placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance</span><span style="color: #000000;font-size: 12pt;"> as a minimum stock constr</span><span style="color: #000000;font-size: 12pt;">aint for receipt engine outputs</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">if I have a period with planned sales of 500</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> units</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> and a Shrink % of Sales of 2.00%, I must have an EOP units of at least 10 for this constraint to be satisfied for the period</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Target Sell-Through</span><span style="font-weight: bold;font-size: 12pt;"> %:</span> <span style="font-size: 12pt;">non-editable percentage (10.01%); S/T % for the </span><span style="color: #000000;font-size: 12pt;">placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance </span><span style="font-size: 12pt;">as defined in Cluster Set view</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Calc Sell-Through %:</span> <span style="font-size: 12pt;">non-editable percentage (10.01%); calculated sell-through percentage for the </span><span style="color: #000000;font-size: 12pt;">placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance</span><span style="font-size: 12pt;">, given the current sale and receipt plan shown in the view</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Recalc Buy:</span> <span style="font-size: 12pt;">user editable checkbox; sets whether System Receipt Units and Ideal EOP Units will be recalculated for the </span><span style="color: #000000;font-size: 12pt;">placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance </span><span style="font-size: 12pt;">when Recalculate Receipts in Receipt Plan view or Recalculate in the Main Planning view is clicked</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Hold Receipts:</span> <span style="font-size: 12pt;">user editable checkbox; sets whether the current total Receipt Units for the </span><span style="color: #000000;font-size: 12pt;">placeholder/collection </span><span style="color: #000000;font-size: 12pt;">instance</span><span style="color: #000000;font-size: 12pt;"> can change to accommodate Placeholder Cluster Constraints upon recalculation</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">If unchecked, the system will calculate the receipt strategy to meet the specified constraints for as long as possible without increasing Receipt Units by moving receipt units forward in time</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">If unchecked, there will be scenarios where the system will not be able to satisfy user defined constraints for the life of </span><span style="font-style: italic;font-size: 12pt;">the item within the cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Plan</span><span style="font-weight: bold;font-size: 12pt;"> Metrics</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Site Count: </span><span style="font-size: 12pt;">non-editable integer; count of all sites the placeholder/collection is assorted to at whatever level the Pivot Grid is aggregated to for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">if multiple cluster set snapshots are effective during the life of the placeholder/collection, this number can vary by period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Sales Units: </span><span style="font-size: 12pt;">non-</span><span style="font-size: 12pt;">editable integer; planned/actual sales units for the period</span><span style="font-size: 12pt;">; read from Sales Units (user, not System) in Sales Plan view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Sales / AUR)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Minimum Presentation: </span><span style="font-size: 12pt;">user </span><span style="font-size: 12pt;">editable integer; </span><span style="font-size: 12pt;">Minimum units required to maint</span><span style="font-size: 12pt;">ain floor presentation for each site</span><span style="font-size: 12pt;"> selling the item</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">From Receipt Plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">the Mkdn Date metric in the Main Planning and Cluster Set views interacts with Min Pres to set the period in which the system should stop respecting it; if Mkdn date is set for the placeholder/cluster instance, Minimum Presentation will drop to zero from the corresponding period forward</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">BOP Units: </span><span style="font-size: 12pt;">non-editable integer; planned/actual beginning of period inventory units</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Previous Period EOP)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Period:</span><span style="font-size: 12pt;"> user editable checkbox; set the periods in which receipts can occur</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">If Flow Cadence is set, recalculating receipts will also check the appropriate Receipt Periods based on the defined frequency</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Receipt Period will be checked for the period corresponding to the Periods Before Phase In Constraint but it will be un-editable</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">When receipts are recalculated, the engine output will respect Receipt Periods and only suggest receipts in periods that are checked</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Users will not be able to enter Receipt Units in periods where Receipt Period is unchecked</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Commit:</span> <span style="font-size: 12pt;">user editable checkbox; sets the periods for which to create commitment orders when Create Commitments is clicked</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Checked by default for checked Receipt Periods</li>
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Cannot be checked for periods where Receipt Period is not checked</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Order By Date: </span><span style="font-size: 12pt;">non-editable date (10/2/2017); displays the order deadline for </span><span style="font-size: 12pt;">the corresponding Receipt Period/Units</span><span style="font-size: 12pt;"> based on assigned default lead times; essentially, </span><span style="font-size: 12pt;">the first day of the receipt period </span><span style="font-size: 12pt;">minus Default Lead Days</span><span style="font-size: 12pt;"> from the Main Planning view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Units: </span><span style="font-size: 12pt;">user </span><span style="font-size: 12pt;">editable integer; planned/actual receipt units for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Defaults to System Receipt Units unless user has manually entered a quantity and Applied</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">System Receipt Units – Committed Units – On Order Units – On Order (Unknown) Units</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note:</span> <span style="font-style: italic;font-size: 12pt;">once a commitment order has been created (see Create Commitments, above), the quantity that was in this field will move into the Committed Units field, indicating that an order has been generated for the planned quantity; as the order moves through the commitment process, the units will transition or On Order Units (or On Order (Unknown) Units) and then ultimately show again as receipt units when the period in question actualizes, provided the units were actually received in that period; </span><span style="font-style: italic;font-size: 12pt;">this ensures that units for the same order are not double-counted as they move through the process; </span><span style="font-style: italic;font-size: 12pt;">see related field descriptions below for details</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note:</span> <span style="font-style: italic;font-size: 12pt;">once the above described transition occurs, it is still possible to add more Receipt Units to this field and place subsequent commitment orders for them as needed; </span><span style="font-style: italic;font-size: 12pt;">this may happen automatically as your sales plan changes as a result of receipt plan recalculations but you can also simply enter the desired additional quantity in the field then again clicking Create Commitments when ready; </span><span style="font-style: italic;font-size: 12pt;">each individual order will contribute to the totals shown and be tracked and transitioned through the applicable fields individually</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Helpful Hint:</span> <span style="font-style: italic;font-size: 12pt;">entering Receipt Units at the Grand Total level in this view is a quick way to balance your receipt plan to the Ttl Buy U in the Main Planning and/or Cluster Set views if desired</span><span style="font-style: italic;font-size: 12pt;">; simply aggregate the pivot grid to the desired level by removing fields as needed (ie. Cluster Set, Cluster, Style, etc.) and enter the Ttl Buy U value in the Grand Total column at the far right – the structure of your receipt plan, including flow dates and % to total of receipt units by period, will be respected while the system balances the period level entries to match t</span><span style="font-style: italic;font-size: 12pt;">he new Grand Total</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt AUC: </span><span style="font-size: 12pt;">user </span><span style="font-size: 12pt;">editable currency ($1.01); </span><span style="font-size: 12pt;">sets the </span><span style="font-size: 12pt;">average cost per unit for receipts in the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">N/A</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt Cost: </span><span style="font-size: 12pt;">non-editable currency ($100); planned/actual cost of receipts for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Receipt Units * Receipt AUC)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Committed Units: </span><span style="font-size: 12pt;">non-editable integer; units for which commitment orders have been created but which do not have corresponding confirmed purchase orders</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;font-size: 12pt;">Auto-populated when commitments are created for periods having Receipt Units; read from commitment orders for the corresponding variant/cluster/period in Order Manager</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">receipt units for a given period are transitioned </span><span style="font-style: italic;font-size: 12pt;">out of Receipt Units </span><span style="font-style: italic;font-size: 12pt;">to Committed Units</span><span style="font-style: italic;font-size: 12pt;"> when commitments are created for that period</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important:</span> <span style="font-style: italic;font-size: 12pt;">Commitment Units can be automatically decremented based on the presence of confirmed On Order Units</span> <span style="font-style: italic;font-size: 12pt;">but only if the system policy </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Assortment Order Type</span><span style="font-style: italic;font-size: 12pt;"> (</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Assortment)</span><span style="font-style: italic;font-size: 12pt;"> is set to Variant Orders and JustEnough has integrated with an ERP/POM system capable of returning order data with the UUID’s JustEnough generates for each order sent; </span><span style="font-style: italic;color: #FF0000;font-size: 12pt;">if this is not the case, a custom procedure will need to be created to appropriately decrement Commitment Units and avoid duplication of units with On Order (Unknown) Units </span><span style="font-style: italic;font-size: 12pt;">(where purchase order units the system is unable to tie to specific commitment orders populate)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order Units: </span><span style="font-size: 12pt;">non-editable integer; confirmed units on order for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;"> (</span><span style="font-style: italic;font-size: 12pt;">purchase order units not yet received but scheduled for the period)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">As stated above in Committed Units, when the system policy </span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Assortment Order Type</span><span style="font-style: italic;font-size: 12pt;"> (</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Assortment)</span><span style="font-style: italic;font-size: 12pt;"> is set to Variant Orders and JustEnough has integrated with an ERP/POM system capable of returning order data with the UUID’s JustEnough generates for each order sent, this field will populate with confirmed purchase order quantities by variant/cluster/period and decrement Committed Units accordingly</span><span style="font-style: italic;font-size: 12pt;">;</span> <span style="font-style: italic;font-size: 12pt;">i</span><span style="font-style: italic;font-size: 12pt;">n the case where </span><span style="font-style: italic;font-size: 12pt;">the system policy is set to Inventory Orders and/or </span><span style="font-style: italic;font-size: 12pt;">external systems are NOT able </span><span style="font-style: italic;font-size: 12pt;">to return UUID’s by order, purchase order units will appear in the On Order (Unknown) field</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">On Order (Unknown): </span><span style="font-size: 12pt;">non-editable integer; confirmed units on order for the period which cannot be matched to specific variant/cluster commitment orders</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;"> (</span><span style="font-style: italic;font-size: 12pt;">unlinked purchase order units not yet received but scheduled for the period)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">On Order (Unknown) units will be split across applicable clusters using th</span><span style="font-style: italic;font-size: 12pt;">e same splitting logic </span><span style="font-style: italic;font-size: 12pt;">a</span><span style="font-style: italic;font-size: 12pt;">s discussed below in EOP Units</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important: </span><span style="font-style: italic;font-size: 12pt;">See Committed Units above</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Total Orders: </span>non-editable integer; sum of all planned and confirmed incoming orders for the period</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Receipt Units + Committed Units + On Order Units + On Order (Unknown) Units)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Total Orders</span><span style="font-weight: bold;font-size: 12pt;"> AUC: </span><span style="font-size: 12pt;">non-editable currency ($1.01); average cost per unit of inbound orders for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(</span><span style="font-style: italic;font-size: 12pt;">Total</span><span style="font-style: italic;font-size: 12pt;"> Order</span><span style="font-style: italic;font-size: 12pt;">s</span><span style="font-style: italic;font-size: 12pt;"> Cost / </span><span style="font-style: italic;font-size: 12pt;">Total</span><span style="font-style: italic;font-size: 12pt;"> Order</span><span style="font-style: italic;font-size: 12pt;">s</span><span style="font-style: italic;font-size: 12pt;"> Units)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Total</span><span style="font-weight: bold;font-size: 12pt;"> Order</span><span style="font-weight: bold;font-size: 12pt;">s</span><span style="font-weight: bold;font-size: 12pt;"> Cost: </span><span style="font-size: 12pt;">non-editable currency ($100); cost of inbound orders for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(Total Orders Units * Total Orders AUC)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Stock Units to Sales Units: </span><span style="font-size: 12pt;">non-editable decimal (1.01) ; ratio expressing the relationship of BOP Units to Sales Units</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">(BOP Units / Sales Units)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Shrink Units: </span><span style="font-size: 12pt;">non-</span><span style="font-size: 12pt;">editable integer; planned/actual shrink units for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">From Sales Plan view</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Inventory Adjustment Units: </span><span style="font-size: 12pt;">non-</span><span style="font-size: 12pt;">editable integer; planned/actual inventory adjustment units for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">From Sales Plan view</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">EOP Units: </span>non-editable integer; planned/actual end of period inventory units</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> (BOP Units – Sales Units + Total Orders – Shrink Units + Inventory Adjustment Units)</li>
+            <li>
+                <p><b>Note</b>: For placeholders/collections for which inventory exists in a DC, the EOP Units of the last actualized period will include a portion of available DC on-hand split out per the following logic:</p>
+                <ul style="list-style-type: square;margin-left: 108pt;">
+                    <li>
+                        <p><b style="font-style: italic; color: #00b050;">Calculation</b>: (Cluster Previous Period EOP Units + Cluster Future Total Orders  – Cluster Future Planned Sales Units) / SUM(Cluster Previous Period EOP Units + Cluster Future Total Orders – Cluster Future Planned Sales Units for all clusters) * DC on-hand units</p>
+                    </li>
+                    <li><b>Note</b>: While there is an inherent degree of potential inaccuracy in splitting DC on-hand inventory via this method, this was a conscious design decision to assume optimal distribution of available inventory based on future demand by cluster, as the alternative of including complete supply chain logic would have had a significant impact on the performance of the system</li>
+                </ul>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">System Receipt Units:</span> <span style="font-size: 12pt;">non-editable integer; </span><span style="font-size: 12pt;">system recommended receipt units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">Receipt Planning Engine</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note:</span> <span style="font-style: italic;font-size: 12pt;">this metric seeds System Receipt Units in Sales Plan view as well</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Ideal EOP Units:</span> <span style="font-size: 12pt;">non-editable integer; system recommended EOP units for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">Receipt Planning Engine</span></li>
+        </ul>
+    </body>
+</html>

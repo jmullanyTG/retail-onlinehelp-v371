@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3 >Size Override Configuration</h3>
+        <p >Users will create a new size curve with name, size range, etc. and choose if the size curve is calculated from historical data, or allows overrides. </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li >If size range selected has default contribution specified in <span style="font-family: Consolas;color: #1F497D;font-size: 9pt;">tbl_Size_SizeRange_Link</span>, the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">DefaultContribution</span> value will populate the Contribution field on <span style="font-family: Consolas;color: #1F497D;font-size: 9pt;">tbl_Size_SizeCurve_Quantity</span> field.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="1">
+            <li >If bad default values are provided, (rebalance proc) is called to distribute the values properly with respective weights.</li>
+        </ol>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li  style="list-style-type: square;">Ex: if only one default value is provided of 0.75, that value becomes 1 and the rest of the sizes get 0.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="2">
+            <li >If good default values are provided, <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> field is populated.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li >If size range selected does not have default contribution values provided, the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> field will be split evenly between the count of sizes in the size range.</li>
+            <li >All sizes at all sites will be marked as <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">IsEligible</span> = 1 on creation.</li>
+            <li >Calculate option calls (calculate proc) and <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> value is updated based on history, given dates or a Last X Days.</li>
+            <li >Override option allows bottom size curve detail grid to be editable by user input.</li>
+        </ol>
+        <p ><span style="font-family: Consolas;color: #C0504D;font-size: 9pt;">tbl_Size_SizeCurve_Quantity</span> is populated for all sizes and sites; entries are only destroyed if the size range is changed during configuration to accommodate for new sizes selected in the size curve.</p>
+        <p >Calculated checkbox updates all default related fields; <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">IsEligible</span> is set back to 1 as a default and the newly calculated value is updated in the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> field on <span style="font-family: Consolas;color: #C0504D;font-size: 9pt;">tbl_Size_SizeCurve_Quantity</span>.</p>
+    </body>
+</html>

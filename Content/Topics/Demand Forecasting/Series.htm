@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h4 >Series</h4>
+        <p>Seeing the graphical representation of the different series related to the forecast gives users some insight into the meaning of the data.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Series.png" style="visibility: visible;width: 671px;height: 69px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Manual Forecast – </span>Will be dark red if a forecast has been manually changed.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Effective Forecast –</span> Will be the values passed along to the replenishment engine via the Item Manager. Should align with the system forecast (blue series) before any changes are made.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">System Forecast –</span> The system generated forecast produced by the JustEnough forecasting engine. The values past the current date will represent the values produced by the winning forecast model. Any series values preceding the current date may be viewed as the “model fit”, a combination of the simulation and backtrack.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Backtrack –</span> The backtrack series is considered to be “optimistic” in that it will correct itself in order to be closer to the historical series for each history period.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Simulation –</span> The simulation is considered to be “pessimistic” in that it will not correct itself in any way over the historical periods. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Original Forecast –</span> The yellow bars (not the yellow dotted-line) will represent the original system generated forecast. As changes are made, they will remain for comparison.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Prerequisites</h1>
+        <p>Before creating assortment plans, the following steps must be completed:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">Definition of product and site hierarchies: <span style="font-weight: bold;">Plan &gt; Views &gt; </span><span style="font-weight: bold;">Maintenance </span><span style="font-weight: bold;">&gt; </span><span style="font-weight: bold;">Hierarchy </span><span style="font-weight: bold;">Filtering</span></li>
+            <li class="ListParagraph"><span style="font-style: italic;">Optional: </span>If you desire to use product and site attributes for the creation of site clusters and/or within the assortment planning process, Attribute Sets, Families, and Values must be defined, and at a minimum, at least one set must be assigned to the topmost level of both the product and site hierarchy: <span style="font-weight: bold;">Maintain &gt; Attribute</span><span style="font-weight: bold;"> Management</span></li>
+        </ol>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">site and product attribute associations can be set via your configured data import processes, but they can also be managed manually in the following places:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;">Site Attributes: <span style="font-weight: bold;">Manage &gt; Site Manager &gt; Site Attribute Management </span></li>
+            <li class="ListParagraph" style="list-style-type: square;">Product Attributes: <span style="font-weight: bold;">Manage &gt; Variant Manager &gt; </span><span style="font-weight: bold;">Variant Attribute Maintenance</span></li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li class="ListParagraph"><span style="font-style: italic;">Optional: </span>If you will be managing the sales plans of ongoing items through the Forecasts module (replenishment forecast integration), it is recommended that you homogenize the dates for the time buckets used in forecasting and the periods to be used in Assortment Planning; it is also recommended that you review the information for Replen Status items in this manual (<span style="font-weight: bold;">Line </span><span style="font-weight: bold;">Visualization &gt; Placeholder &amp; Collection Modes &gt; Main Planning View &gt; Status</span>) to familiarize yourself with the specifics of how such management works between the two modules</li>
+            <li class="ListParagraph">Creation, snapshotting, and validation of cluster sets to used: <span style="font-weight: bold;">Plan &gt; </span><span style="font-weight: bold;">Cluster Site Manager</span></li>
+        </ol>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">cluster set validations occur automatically </span><span style="font-style: italic;">on plan creation as well as </span><span style="font-style: italic;">when cluster sets are snapshotted</span><span style="font-style: italic;">.</span>
+            </li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="5">
+            <li class="ListParagraph">Definition of Currency Exchange Rates, VAT Rates, and Price Translations</li>
+        </ol>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;">Currency: <span style="font-weight: bold;">Plan &gt; Views &gt; Currency &gt; Currency Exchange Rates</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;">VAT: <span style="font-weight: bold;">Plan &gt; Views &gt; Currency &gt; Planning VAT Rates</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;">Price Translations: <span style="font-weight: bold;">Plan &gt; Views &gt; Currency &gt; Price Translation Management </span>and <span style="font-weight: bold;">Price Translation Hierarchy Assignment</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">users not requiring VAT and/or Price Translations functionality must still set a rate/factor of 1 (indicating no change) and assign it for all </span><span style="font-style: italic;">site/</span><span style="font-style: italic;">product hierarchy levels</span><span style="font-style: italic;">, as these values are utilized in many system calculations within Assortment Planning</span>
+            </li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="6">
+            <li class="ListParagraph"><span style="color: #000000;">Review/set foundational system policies: </span><span style="color: #000000;">more system policies exist than are listed here, but the following are related to foundational data handling within Assortment Planning. Those not listed here are discussed in the specific sections they pertain to. All can be found in </span><span style="font-weight: bold;color: #000000;">Maintain &gt; Policies &gt; Module: Assortment</span>
+            </li>
+        </ol>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;color: #000000;">Assortment days history to actualize: </span><span style="color: #000000;">The number of days back to go when actualizing sales, receipts and stock on hand for assortment planning; default is 60</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;color: #000000;">Assortment days history to maintain:</span> <span style="color: #000000;">The number of days back to maintain detail data for in a live assortment plan. Data older than this date will be summarized and then deleted.&#160; Entering the value "0" will keep all history; default is 800</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important: </span><span style="font-style: italic;color: #000000;">this policy is useful for database size management, however it should be noted that the amount of historical data maintained has a direct correlation with the data that can be used to seed historical placeholder/variants for in the Seed process (see </span><span style="font-weight: bold;font-style: italic;color: #000000;">Header Area Controls &gt; Seed</span><span style="font-style: italic;color: #000000;"> later in this section for details) and the date from which to begin seeding cannot exceed the date designated by the current date minus the value set for this policy</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;color: #000000;">Assortment Order Type:</span> <span style="color: #000000;">Variant Orders created from assortment planning are reconciled to individual clusters when coming back as confirmed orders from the host system. Inventory Orders uses a calculated split factor to reconcile inbound order quantities to clusters (see </span><span style="font-weight: bold;color: #000000;">Line Visualization &gt; Supporting Views &gt; Receipt Plan View</span><span style="color: #000000;"> for details); default is Inventory Orders</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;color: #000000;">Days to keep deleted data:</span> <span style="color: #000000;">The maximum number of days that deleted data will be held (hidden) in the database.&#160; Set a lower number for more aggressive deleting and more space conservation; default is 30</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;color: #000000;">Default Commitment Merge:</span> <span style="color: #000000;">sets the default merging behavior of order lines when commitment orders are created: 0 = None, 1 = Merge by Variant (see </span><span style="font-weight: bold;color: #000000;">Commitment Orders in Order Manager &gt; General Functionality &gt; Creating Commitment Orders</span><span style="color: #000000;"> for details); default is 1 (merge by variant)</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;color: #000000;">Receipt Cluster Merge All:</span> <span style="color: #000000;">When commitments are generated, whether to group receipts for variants together across clusters by default, or whether to keep them separate by default.</span></li>
+        </ul>
+    </body>
+</html>

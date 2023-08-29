@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:sourceDocument="C:\Users\Jonathan.Boswell\Documents\JustEnough\Demand Forecasting_JB.docx" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1"><a name="_Forecast_graph"></a>Forecast graph</h1>
+        <p>The graph viewer will display the different series related to the forecast in a graphical format. </p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting_JB1/Forecast graph.png" style="visibility: visible;width: 646px;height: 216px;" />
+        </p>
+        <p>Hovering the mouse over the graph will pop up the infobox, a detailed description of the values for the time period.</p>
+        <p>Within the graph viewer, users may manipulate the red dot series (Manual Forecast) in order to affect a manual forecast value. </p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting_JB1/Forecast graph_1.png" style="visibility: visible;width: 130px;height: 211px;" />
+        </p>
+        <h4 >Series</h4>
+        <p>Seeing the graphical representation of the different series related to the forecast gives users some insight into the meaning of the data.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting_JB1/Forecast graph_2.png" style="visibility: visible;width: 646px;height: 41px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Manual Forecast – Will be dark red if a forecast has been manually changed.</li>
+            <li style="list-style-type: disc;">Effective Forecast – Will be the values passed along to the replenishment engine via the Item Manager. Should align with the system forecast (blue series) before any changes are made.</li>
+            <li style="list-style-type: disc;">System Forecast – The system generated forecast produced by the JustEnough forecasting engine. The values past the current date will represent the values produced by the winning forecast model. Any series values preceding the current date may be viewed as the “model fit”, a combination of the simulation and backtrack.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Backtrack – The backtrack series is considered to be “optimistic” in that it will correct itself in order to be closer to the historical series for each history period.</li>
+            <li style="list-style-type: circle;">Simulation – The simulation is considered to be “pessimistic” in that it will not correct itself in any way over the historical periods. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Original Forecast – The yellow bars (not the yellow dotted-line) will represent the original system generated forecast. As changes are made, they will remain for comparison.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>Clicking on the “graph” button within the forecast viewer will display the forecast graph. This displays the various information series related to sales history, forecasted demand and many others in an easy to understand graphical format. Within the graph, certain series are displayed as a line, while others may be displayed as a bar.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Manual Forecast – The manual forecast series is represented as a red or burgundy dot. Upon entering the he manual forecast series will overlap the effective forecast series and will only diverge upon manual manipulation of the series, either by dragging the dot in the graph, or the addition of a value to the manual forecast row in the grid. Once changes are made, the dot will change to burgundy in order to differentiate the series from the effective forecast which was displayed upon entering the viewer. </li>
+            <li style="list-style-type: disc;">Effective Forecast – The effective forecast is the approved forecast which will be referenced throughout other parts of the application. The effective forecast series will change if manual adjustments are made once the “save” button has been clicked. </li>
+            <li style="list-style-type: disc;">Causalled Manual Forecast – The causalled manual forecast series will appear if there is a manual forecast. The series will line up with the manual forecast except in cases where there is a manual (multiplicative) causal. The nature of the override resulting from the application of a manual forecast will ignore inferred causal effects such as a normal (additive) causal or event causal, but will still apply the direct causal effects of a manual (multiplicative) causal, such as % lift. </li>
+            <li style="list-style-type: disc;">Inventory Causals – Any linked inventory causal series will appear in the forecast viewer graph, however, colors will vary depending on the number of linked causals. </li>
+            <li style="list-style-type: disc;">System Forecast – The system forecast series represents the output from the forecasting engine. </li>
+            <li style="list-style-type: disc;">Effective Total – The effective total for demand history. Will determine the input to the forecasting engine when determining historical demand. The effective total series will usually run along the top of the total sales bar graph and total lost sales bar graph (if lost sales have been included). </li>
+            <li style="list-style-type: disc;">Original Forecast – When selecting between different forecast models, the yellow bar graph will show the resultant winner of the forecast tournament. This can be a useful comparison tool when choosing a forecast method.</li>
+            <li style="list-style-type: disc;">Total Lost Sales – If, when selecting forecast methods, users elect to include lost sales in their calculations, the lost sales totals will be represented by the purple bar. </li>
+            <li style="list-style-type: disc;">Total Sales – Historical demand from sales history. Will match the imported history totals of sales for the inventory item. </li>
+            <li style="list-style-type: disc;">Lost Sales and Sales – The shadings are not separate series, but a graphical representation of the area covered by both historical sales and lost sales. </li>
+        </ul>
+        <p>When hovering the mouse over the forecast graph, an informational box will appear displaying the values for the period in focus. </p>
+    </body>
+</html>

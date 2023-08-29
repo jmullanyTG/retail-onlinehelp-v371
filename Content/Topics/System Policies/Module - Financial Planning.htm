@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Module: Financial Planning</h1>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 208px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Display Name</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">System Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Approved Snapshot Retention Days
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.ApprovedSnapshotRetentionDays</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">How many days approved snapshots are kept in the system. Default = 720.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">DC Stock Splits future number of periods
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">FinancialPlan.Hybrid.DCSplitCalculation.Future.Periods</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Number of periods forward from the current period to determine % DC stock splits by channel. Default = 8.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Deleted Plan Retention Days
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.DeletedPlanRetentionDays</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>How many days plans are kept in the system after being deleted (closed). Default = 0.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Enable VAT in MFP
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">FinancialPlan.PlanningVatRate.Enabled</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Whether or not to use VAT. This should only be set once during implementation. Default = False.</p>
+                        <ul>
+                            <li>True = Use VAT</li>
+                            <li>False = Do not use VAT</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Financial Plan Master Plan Max Future Days
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.Masterplan.DaysForward</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Number of days forward to populate the master plan where periods exist. Start date being the start of the current period. Default = 720.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Inventory is Shared
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">FinancialPlan.InventoryIsShared</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Whether or not DC inventory is shared among all channels. (Are receipts planned for specific channels or not?) Default = False.</p>
+                        <ul>
+                            <li>True = Share DC&#160;inventory across channels.</li>
+                            <li>False = Do not share DC&#160;inventory across channels.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Multi Plan Seeding Merging
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.MultiPlanSeedingMerging</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Whether or not to allow seeding or merging from other plans. Default = False.</p>
+                        <ul>
+                            <li>True = Allow seeding and merging from other plans.</li>
+                            <li>False = Do not allow seeding and merging from other plans.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Open Multiple Plans
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">FinancialPlan.OpenMultiplePlans.Enabled</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">This policy enables or disables the ability to open multiple plans. Default(True)</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Planning VAT Rate Product Hierarchy ID
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.PlanningVatRate.ProductHierarchyID</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Product Hierarchy ID to use for planning VAT rates.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Run module in Debug mode
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">FinancialPlan.DebugMode</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Whether or not to run Financial Planning module procedures in debug mode.  </p>
+                        <ul>
+                            <li>0 = do not run in debug mode.</li>
+                            <li>1 = print records to application log.</li>
+                            <li>2 = return immediate results sets. This mode must be run through development tools; it will fail if run through the UI. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">Save the LLY data for hybrid financial plans
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.SaveLLYData</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>For hybrid financial plans, whether or not to save LLY&#160;data is saved on initialize and during maintenance.</p>
+                        <ul>
+                            <li>True = LLY&#160;data  is saved on initialize and during maintenance.</li>
+                            <li>False = LLY&#160;data is not saved.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Snapshot ViewCollectionSetID
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">FinancialPlan.Snapshot.ViewCollectionSetID</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Thee ViewCollectionSetID for the snapshots view collection set.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;">SqlServerPivotGrid Recommended Maximum number of SQL Data Rows
+</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">FinancialPlan.Hybrid.Maximum.Recommended.Max.SQL.DataRows</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Recommended maximum number of rows to return for any SQL Server Pivot Grid. If exceeded, a warning message is displayed in the UI. Default=2250.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: normal;">Use Supplier Receipts Only for Historic Receipts
+</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">FinancialPlan.UseSupplierReceiptsOnly</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Use tbl_SupplierReceipts solely for historic receipts in MFP and not a combination of tbl_SupplierReceipts, tbl_SupplierOrderHeader and tbl_SupplierOrderLine.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

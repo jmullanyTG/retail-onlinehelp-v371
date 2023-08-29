@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h4 >Forecast Tables</h4>
+        <p>The forecast series values will be stored in tbl_Forecast as “ForecastQty”. These quantities do not specifically represent the effective forecast, but instead the series values associated with the adjacent type described by the manual forecast flag. <span style="color: #000000;">ManualForecastFlag much less of a "flag" and more of a type as it is of type tinyint. The types are as follows:</span></p>
+        <div style="border-top-style: dashed;border-top-width: 1pt;border-top-color: #2F6FAB;border-left-style: dashed;border-left-width: 1pt;border-left-color: #2F6FAB;border-bottom-style: dashed;border-bottom-width: 1pt;border-bottom-color: #2F6FAB;border-right-style: dashed;border-right-width: 1pt;border-right-color: #2F6FAB;background-color: #F9F9F9;">
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">0 = System</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">1 = No longer used</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">2 = Forecast Manual Causal</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">3 = Sales Planning</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">4 = Forecast Manual</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">5 = Group</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">6 = BOM Forecast</p>
+            <p style="margin-left: 5pt;margin-right: 5pt;background-color: #F9F9F9;margin-bottom: 0pt;font-family: 'Courier New';color: #000000;font-size: 10pt;">7 = Profile</p>
+        </div>
+        <p>&#160;</p>
+        <p>There may be several values for an inventory item within the same bucket, differentiated by the manual forecast flag type. The effective forecast (red line series in the forecast viewer) is the highest priority out of all the concurrent manual forecast flag types. Priority is as follows:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">Type 2 – Forecast Manual Causal</li>
+            <li class="ListParagraph">Type 4 – Forecast Manual (manual forecast)</li>
+            <li class="ListParagraph">Type 7 – Profile</li>
+            <li class="ListParagraph">Type 5 – Group (pushed down group forecast value)</li>
+            <li class="ListParagraph">Type 0 – System (system generated forecast)</li>
+        </ol>
+        <p>Types 1 and 3 are not used in this prioritization. Type 6 – BOM forecast is not listed in the prioritization because it is returned to the forecast viewer as a separate data series. </p>
+        <p>Total sales (not including lost sales) will be the value per period (bucket) as read in tbl_InventoryHistory for SalesHistoryQuantity plus SupercessionHistoryQuantity. This summation is done in the standard procedure usp_Forecast_Select_ForecastViewerInventory</p>
+        <p>Lost sales quantity is stored in tbl_InventoryHistory in the LostSalesQuantity column.</p>
+    </body>
+</html>

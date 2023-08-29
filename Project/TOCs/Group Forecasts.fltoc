@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Group Forecasts Overview"
+    Link="/Content/Topics/Group Forecasts/Group Forecasts Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Forecast Group Model Management"
+    Link="/Content/Topics/Group Forecasts/Forecast Group Model Management.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Group Forecasts/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Model Creation and Maintenance"
+        Link="/Content/Topics/Group Forecasts/Model Creation and Maintenance.htm">
+        <TocEntry
+          Title="Edit Hierarchy"
+          Link="/Content/Topics/Group Forecasts/Edit Hierarchy.htm">
+          <TocEntry
+            Title="Advanced Settings"
+            Link="/Content/Topics/Group Forecasts/Advanced Settings.htm" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Model Apply and Ordering Rules"
+        Link="/Content/Topics/Group Forecasts/Model Apply and Ordering Rules.htm" />
+      <TocEntry
+        Title="Inventory Apply Rules"
+        Link="/Content/Topics/Group Forecasts/Inventory Apply Rules.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Group Forecasts/Practical Application.htm">
+      <TocEntry
+        Title="Edit Hierarchy"
+        Link="/Content/Topics/Group Forecasts/Edit Hierarchy_1.htm" />
+      <TocEntry
+        Title="Advanced Settings"
+        Link="/Content/Topics/Group Forecasts/Advanced Settings_1.htm" />
+      <TocEntry
+        Title="Model Apply and Ordering Rules"
+        Link="/Content/Topics/Group Forecasts/Model Apply and Ordering Rules_1.htm" />
+      <TocEntry
+        Title="Inventory Apply Rules"
+        Link="/Content/Topics/Group Forecasts/Inventory Apply Rules_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Group Forecasts/Technical Execution.htm">
+      <TocEntry
+        Title="Security"
+        Link="/Content/Topics/Group Forecasts/Security.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Group Forecast Model"
+    Link="/Content/Topics/Group Forecasts/Group Forecast Model.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Group Forecasts/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Hierarchy Navigation"
+        Link="/Content/Topics/Group Forecasts/Hierarchy Navigation.htm" />
+      <TocEntry
+        Title="Current Hierarchy Level – Data"
+        Link="/Content/Topics/Group Forecasts/Current Hierarchy Level Data.htm" />
+      <TocEntry
+        Title="Current Hierarchy Level - Details"
+        Link="/Content/Topics/Group Forecasts/Current Hierarchy Level Details.htm">
+        <TocEntry
+          Title="Chart"
+          Link="/Content/Topics/Group Forecasts/Chart.htm" />
+        <TocEntry
+          Title="Accuracy Dashboard"
+          Link="/Content/Topics/Group Forecasts/Accuracy Dashboard.htm" />
+        <TocEntry
+          Title="Level Statistical Forecast Information"
+          Link="/Content/Topics/Group Forecasts/Level Statistical Forecast Information.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Group Forecasts/Practical Application_1.htm">
+      <TocEntry
+        Title="Hierarchy Navigation"
+        Link="/Content/Topics/Group Forecasts/Hierarchy Navigation_1.htm" />
+      <TocEntry
+        Title="Current Hierarchy Level – Data"
+        Link="/Content/Topics/Group Forecasts/Current Hierarchy Level Data_1.htm">
+        <TocEntry
+          Title="View"
+          Link="/Content/Topics/Group Forecasts/View.htm" />
+        <TocEntry
+          Title="Pivot Data"
+          Link="/Content/Topics/Group Forecasts/Pivot Data.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Current Hierarchy Level - Details"
+        Link="/Content/Topics/Group Forecasts/Current Hierarchy Level Details_1.htm">
+        <TocEntry
+          Title="Chart"
+          Link="/Content/Topics/Group Forecasts/Chart_1.htm" />
+        <TocEntry
+          Title="Accuracy Dashboard"
+          Link="/Content/Topics/Group Forecasts/Accuracy Dashboard_1.htm" />
+        <TocEntry
+          Title="Level Statistical Forecast Information"
+          Link="/Content/Topics/Group Forecasts/Level Statistical Forecast Information_1.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Group Forecasts/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Slice Forecast"
+    Link="/Content/Topics/Group Forecasts/Slice Forecast.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Group Forecasts/Essential Business Concepts_2.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Group Forecasts/Practical Application_2.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Group Forecasts/Technical Execution_2.htm" />
+  </TocEntry>
+</CatapultToc>

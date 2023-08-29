@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="1450" MadCap:lastWidth="2219">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >General Functionality</h1>
+        <h1 >Header Area Controls </h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product: </span><span style="color: #000000;">user editable dropdown; selects a product filter for the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Assortment Planning/View Parameters.png" style="visibility: visible;mso-wrap-style: square;width: 21px;height: 18px;" /><span style="color: #000000;">&#160; this button launches the Filter Conditions dialog, allowing the user to dynamically edit the criteria for the selected filter prior to executing it; the option also exists to create a new filter from the adjusted criteria on the fly</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" style="visibility: visible;mso-wrap-style: square;width: 22px;height: 22px;" /><span style="color: #000000;">&#160; this button launches the Maintain Filter dialog, allowing the user to create or import a new filter, or update, delete, or export an existing filter</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">promotions, in and of themselves are not tied to any group of products or product hierarchy levels; the Product selection only affects the Promotion Applications shown and products listed in the Promotion Application Details</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span> <span style="font-style: italic;">given sufficient permissions, it is possible for a user to create promotion applications for products that </span><span style="font-style: italic;">aren’t included in the </span><span style="font-style: italic;">criteria specified by the selected product filter and, thus, disappear from the current view after clicking Execute; </span><span style="font-weight: bold;font-style: italic;">the </span><span style="font-weight: bold;font-style: italic;">applications</span><span style="font-weight: bold;font-style: italic;"> do not disappear</span><span style="font-style: italic;"> – to view them, simply change the filter selection or adjust the filter’s criteria to include them again</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Site Hierarchy: </span><span style="color: #000000;">user editable tree multi-select; selects the levels of the current Plan’s Site Hierarchy to include in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">similar to Product, Promotions are not </span><span style="font-style: italic;color: #000000;">tied to any Site Hierarchy levels; Site Hierarchy selection drives the Cluster Sets available for inclusion in the view, which, in turn, affects the Promotion Applications shown and the clusters shown in the Promotion Application Details </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cluster Sets: </span><span style="color: #000000;">user editable multi-select dropdown; selects the cluster sets to include in the current view. <span style="color: #000000;font-size: 12pt;"><span style="color: #000000;font-size: 12pt;">The cluster sets listed include all default and "additionally available" cluster sets for the product level selected in the Product parameter.</span></span></span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related, in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy; because of this, the Cluster Set dropdown will populate with the cluster sets contained beneath the selected Site Hierarchy levels</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">Promotions are not tied to Cluster Sets directly; </span><span style="font-style: italic;color: #000000;">Cluster Set</span> <span style="font-style: italic;">selection only affects the Promotion Applications shown and </span><span style="font-style: italic;">clusters</span><span style="font-style: italic;"> listed in the Promotion Application Details</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Window of Time: </span><span style="color: #000000;">user editable tree multi-select; selects the window of time to display in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">any </span><span style="font-style: italic;color: #000000;">promotion or promotion application</span><span style="font-style: italic;color: #000000;"> whose life cycle intersects with any part of the selected Window of Time</span><span style="font-style: italic;color: #000000;"> will be displayed in the view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span> <span style="font-style: italic;">the selected timeframe must be a contiguous range of periods; if it is not, the system will still use the window of time defined by the first and last selected periods</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Show Completed:</span> <span style="color: #000000;">user editable checkbox; </span><span style="color: #000000;">sets whether or not promotions whose end dates have passed will be displayed in the view</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">because the Window of Time selection returns all promotions whose eligibility timeframe or start and end dates intersect with any part of the range selected, this is useful for quickly hiding promotions that have already passed without adjusting the Window of Time selection</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Display Currency: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; sets the currency to display for all revenue based fields in the view; defaults to the Home Currency for the active Assortment Plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Parameters:</span> <span style="color: #000000;">shows/hides the Parameters area of the view</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Execute:</span> <span style="color: #000000;">updates the Defined Promotions, Promotion Application, and Promotion Application Details sections of the view based on the selected view parameters</span></li>
+        </ul>
+    </body>
+</html>

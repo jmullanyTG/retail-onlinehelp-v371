@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Scenario Plan</h1>
+        <p>The scenario plan grid manages the configuration of scenario plans. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Plan Name – </span>The unique name for the scenario plan. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Plan Description –</span> The optional description for the scenario plan. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Demand Plan –</span> A drop-down of the available demand plans. Must be populated in order to pass configuration status requirements.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Product Set –</span> A drop-down of the available product sets. Must be populated in order to pass configuration status requirements. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Choice Count –</span> A drop-down of the available choice count models. Must be populated in order to pass configuration status requirements.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Plan Length –</span> The expected duration of the stock coverage from the resulting plan. Though not restricted to aligning with the selected demand plan time frame, it is considered best practice not to deviate from the already specified length of time. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Min Pick Ratio –</span> Determines the minimum pick quantity for the draft engine based on a percentage of the ideal pick value (calculated as need target/choice count). This field is hidden by default and will default to system policy specified value (initializes to “50%”). </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Max Pick Ratio –</span> Determines the maximum pick quantity for the draft engine based on a percentage of the ideal pick value (calculated as need target/choice count). This field is hidden by default and will default to system policy specified value (initializes to “200%”).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Location Strategy –</span> A key component to calculation of both choice count and allocation volumes, the location strategy will specify the stores which are eligible to receive stock as part of the allocation. The location strategy may be configured within JustEnough Allocations. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Configuration Status –</span> Displays the status of the scenario plan. If configuration components are missing, they will be displayed in a comma separated list within this field. Missing configuration elements will prohibit scenario calculation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Access Level –</span> Used to define user access to the scenario plan. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Public –</span> Available to all users within the application. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Private –</span> Available only to the creator.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Shared –</span> Available to only specific users. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">User Select – </span>If set to a shared access level, the list of shared users. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Plan Status –</span> Defines the workflow options available for the scenario plan. Will updated based on changes made to the plan. Statuses include:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Requires Configuration –</span> Configuration elements are missing. Refer to the configuration status field for additional information. No workflow options are available until configuration is complete. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Configuration Changed –</span> Configuration elements have changed and a plan calculation is required. Any results currently displayed within the scenario details section are related to the previous configuration and are considered to be “stale”. Workflow options are identical to those of the “ready to calculate” status.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Ready to Calculate –</span> Once configuration is complete, the plan status will update to “ready to calculate” and the draft engine may be run. Workflow options are identical to those of the “configuration changed” status. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Ready to Execute –</span> Once calculation has been completed, the scenario plan results will be available to view within the scenario details section and the plan status will be changed to “ready to execute”. From this workflow status, users may elect to create orders if the results are satisfactory, or alter the configuration in order to produce different results, which will update the status to “ready to calculate”. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Scenario Finalized –</span> Once orders have been created, the scenario will become finalized and exist in a read-only state in order to prevent order duplication. </li>
+        </ul>
+    </body>
+</html>

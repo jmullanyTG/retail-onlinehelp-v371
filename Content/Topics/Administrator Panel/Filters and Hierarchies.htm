@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Filters and Hierarchies</h1>
+        <h2 >Hierarchy Creation</h2>
+        <p><span style="color: #020000;">The JustEnough </span><span style="font-weight: bold;color: #020000;">Hierarchy Filtering</span><span style="color: #020000;"> view, which is accessible through the views module and is used in the configuration process of an implementation. </span>
+        </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies.png" style="visibility: visible;width: 634px;height: 256px;" /> </p>
+        <h4 >Parameter </h4>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #020000;">Entity Type:</span><span style="color: #020000;"> Hierarchy type</span>
+            </li>
+        </ul>
+        <h4 >Hierarchy Level Configuration Editable Fields </h4>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #020000;">Active: </span><span style="color: #020000;">The Active flag is, by default, set to checked after creation of the hierarchy. When unchecked and applied the hierarchy, the level will no longer be accessible from the front end. </span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #020000;">Available for AP: </span><span style="color: #020000;">Available for AP need to be checked if the hierarchy must be available to select within Assortment Planning.</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #020000;">Is used in active AP Plan:</span><span style="color: #020000;"> This flag will become checked if the hierarchy is used in an active assortment plan.</span>
+            </li>
+        </ul>
+        <h3 >Hierarchy Configuration Editable Fields </h3>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #020000;">Order Number: </span><span style="color: #020000;">The lowest number represents the highest level of the hierarchy.</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #020000;">Enabled: </span><span style="color: #020000;">After the hierarchy is created, this flag will, by default, be unchecked. Setting this to checked a group makes it part of the current hierarchy being configured.</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span> <span style="font-style: italic;color: #020000;">Assortment Planning (AP) Specific Entity Types that must be configured are </span><span style="font-weight: bold;font-style: italic;color: #020000;">Variant</span><span style="font-style: italic;color: #020000;"> and </span><span style="font-weight: bold;font-style: italic;color: #020000;">Site. </span><span style="font-style: italic;color: #020000;">Both of these must be created prior to creating any assortment plan. The combination of the lowest levels of both hierarchies will make the lowest level of the assortment plan and the level at which placeholders will be created.</span></li>
+        </ul>
+        <h3 >Site Hierarchy</h3>
+        <p>A full description of the location hierarchy must be constructed. Using the Site Groups available (Friendly Names are maintained through the <span style="font-weight: bold;">Setup Table Definition Friendly Names</span> view) as well as the explicit “channel” attribute, configure the Site hierarchy to have levels of commonality between Merchandise Financial Planning and Allocation Planning. </p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_1.png" style="visibility: visible;width: 460px;height: 252px;" />
+        </p>
+        <h3 >Item Master Hierarchy</h3>
+        <p>Item master hierarchies are the hierarchies of the product dimension. They are used throughout the JustEnough modules to define hierarchal relationships and levels for both aggregation and dissemination of information. </p>
+        <p>Item master hierarchies are built out of item master groups, as well as the “variant” entity, and the explicit “style”,&#160; and “size” attributes (where applicable).</p>
+        <h3 >Variant Hierarchy</h3>
+        <p>Assortment Planning uses a Variant Entity hierarchy for its Product Hierarchy. This hierarchy will be used for all rollups and reporting in Assortment Planning. The Variant Hierarchy should be structured to extend to one level above Variant (equivalent to Placeholder in Assortment Planning; commonly referred to as style-color), unless a level for Style (referred to as a Collection within Assortment Planning; basically, a group of variants – often a single design in multiple colors) exists, then the Variant Hierarchy should extend to one level above that.</p>
+        <p><span style="font-weight: bold;font-style: italic;">Note:</span> When using the <span style="font-weight: bold;">Segment By Hierarchy </span>function of <span style="font-weight: bold;">Target Creation </span>within Assortment Planning, the lowest level of this hierarchy is the level at which target segments will be created.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_2.png" style="visibility: visible;width: 468px;height: 230px;" />
+        </p>
+        <p style="font-weight: bold;font-style: italic;">Notes: </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-style: italic;">In order</span><span style="font-style: italic;"> to use </span><span style="font-style: italic;">targets from a m</span><span style="font-style: italic;">erchandise </span><span style="font-style: italic;">f</span><span style="font-style: italic;">inancial </span><span style="font-style: italic;">p</span><span style="font-style: italic;">lan </span><span style="font-style: italic;">within a given</span> <span style="font-style: italic;">a</span><span style="font-style: italic;">ssortment </span><span style="font-style: italic;">plan, </span><span style="font-style: italic;">the </span><span style="font-style: italic;">product and site hierarchies assigned to both plans must share common levels from the top down to the lowest level of the merchandise financial plan hierarchies (assortment plan hierarchies generally extend to at least one level lower). The plans must also share common time structures (calendar, period type)</span><span style="font-style: italic;">.</span> <![CDATA[ ]]></li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-style: italic;">Cluster Sets to be used within assortment plans must be contained </span><span style="font-style: italic;">within </span><span style="font-style: italic;">a single </span><span style="font-style: italic;">leaf level of the site hierarchy</span><span style="font-style: italic;"> assigned to those plans – keep this in mind when structuring hierarchies.</span>
+            </li>
+        </ul>
+        <h2 >Find and Replace Filter Criteria </h2>
+        <p>The Find and Replace Filter Criteria view allows the user to find any filters created with a particular criteria, and to replace that criteria with a new one.&#160; A common use of this view may be after a hierarchy reclass; for example, you may need to find any filters that include the condition “items in Company &gt; Department Womens &gt; Subdepartment Tops &gt; Category Tees” and replace that condition with “Company &gt; Department Womens &gt; Subdepartment Shirts &gt; Category Short Sleeve.”<img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_3.png" style="visibility: visible;width: 673px;height: 189px;" /></p>
+        <h3 >Inputs</h3>
+        <p>In order to use the view, select:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">An entity type of filters to search for</li>
+            <li class="ListParagraph" style="list-style-type: disc;">A “Find Filter”</li>
+            <li class="ListParagraph" style="list-style-type: disc;">A “Replace Filter”</li>
+        </ul>
+        <p>Both the Find Filter and Replace Filter must have only one criteria and one criteria value set for them.&#160; The following is an example of having a single criteria and value:</p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_4.png" style="visibility: visible;width: 537px;height: 337px;" />
+        </p>
+        <p>The following is an example of a filter with multiple criteria values, and is therefore NOT valid for use here:</p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_5.png" style="visibility: visible;width: 541px;height: 337px;" />
+        </p>
+        <p>An error message similar to the following will be shown if either the Find or Replace Filter has more than one criteria or value:</p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_6.png" style="visibility: visible;width: 666px;height: 236px;" />
+        </p>
+        <p>The two filters must also have the same criteria condition.&#160; A filter for “Supplier ID = 103” can be replaced with the criteria of “Supplier ID = 207,” but a filter for “SupplierID = 103” cannot be replaced with “Supplier Name = Charleston.”</p>
+        <h3 >Usage</h3>
+        <p>The view process will find any filters who contain the Find Filter criteria and value.&#160; It will find filters with additional criteria, besides the one specified in the Find Filter.</p>
+        <p>You can select the Update Criteria? Checkbox, and click Save, and it will replace the criteria and value with the Replace Filter criteria.</p>
+        <p>For example, in the filter “Womens Bags, Site 22,” the filter was defined as follows:</p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_7.png" style="visibility: visible;width: 513px;height: 337px;" />
+        </p>
+        <p>When the filter is selected to be updated and Save is clicked:</p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_8.png" style="visibility: visible;width: 672px;height: 190px;" />
+        </p>
+        <p>The filter definition will be updated as follows:</p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Filters and Hierarchies_9.png" style="visibility: visible;width: 524px;height: 337px;" />
+        </p>
+        <p>Note that aesthetic things, like the filter name, will not be updated.</p>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="For Printed Manuals"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/Broker Dispatch.fltoc"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  RemoveImagesFromHeadings="true"
+  EmbedImages="true"
+  ConditionTagExpression="include[&quot;General.How-To Guides&quot; or &quot;General.Online Help&quot; or &quot;General.Printed Manuals&quot;] "
+  OutputFolder="C:\Help_Files\3.7.1\pdf">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GeneratePDF="false"
+    DisableMasterPageUsage="true" />
+  <Variables>
+    <Variable
+      Name="JustEnough Variables/Printed Manual Title">Broker Dispatch</Variable>
+    <Variable
+      Name="Variables/BookVersion">3.7.1</Variable>
+    <Variable
+      Name="Variables/BookTitle">Broker Dispatch</Variable>
+  </Variables>
+</CatapultTarget>

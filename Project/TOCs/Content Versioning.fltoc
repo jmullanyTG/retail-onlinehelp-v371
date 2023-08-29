@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Event Compositions"
+    Link="/Content/Topics/Campaigns and Events/Event Compositions.htm"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"
+    AutoEndOnLeftPage="disabled"></TocEntry>
+  <TocEntry
+    Title="Reports"
+    Link="/Content/Topics/Campaigns and Events/Reports.htm" />
+  <TocEntry
+    Title="Versioning Process"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/Versioning Process.htm" />
+  <TocEntry
+    Title="Versioning Example"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/Versioning Example.htm" />
+  <TocEntry
+    Title="Configuration Impacts on Versioning"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/Configuration Impacts on Versioning.htm" />
+  <TocEntry
+    Title="Issues"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/Issues.htm" />
+  <TocEntry
+    Title="Troubleshooting Issues"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/Troubleshooting Issues.htm" />
+  <TocEntry
+    Title="The Event Distribution Report"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/The Event Distribution Report.htm" />
+  <TocEntry
+    Title="The Event Pricing Report"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/The Event Pricing Report.htm" />
+  <TocEntry
+    Title="The Version Report"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/The Version Report.htm" />
+  <TocEntry
+    Title="Versioned Content Output Configuration"
+    Link="/Content/Topics/Campaigns and Events/Content Versioning/Versioned Content Output Configuration.htm" />
+</CatapultToc>

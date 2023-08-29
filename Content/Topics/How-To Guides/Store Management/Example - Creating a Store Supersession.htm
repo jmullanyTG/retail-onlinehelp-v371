@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2454" MadCap:lastWidth="1885" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Creating a Store Supersession</h1>
+        <p>Since new stores do not have sales histories of their own to base forecasts on, the sales histories from comparable stores can be used instead. In this example, we will identify an existing store to serve as a model for a new store in Calgary. Then, we will create a store supersession, which tells JustEnough to use product level sales histories from the model store when forecasting demand for the new Calgary store. </p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li style="font-weight: normal;">
+                <p>From the Manage tab, click <b>Site Manager</b>.</p>
+            </li>
+            <li style="font-weight: normal;"> In the Items dialog box, select <b>(All Sites)</b>.</li>
+            <li>
+                <p>In the Choose Fields dialog box, choose site group codes 2-5.</p>
+                <p>
+                    <img src="../../../Resources/Images/Site Manager/Example - choose site group fields.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the site document, filter site groups 2-5 to find a suitable store model for Calgary:</p>
+                <ul>
+                    <li style="font-weight: normal;">Site Group 2 Code = Canada</li>
+                    <li style="font-weight: normal;">Site Group 3 Code = Retail</li>
+                    <li style="font-weight: normal;">Site Group 5 Code = Medium Format</li>
+                </ul>
+                <p style="font-weight: normal;">The results show 2 similar stores: Edmonton and Montreal. For this example, we'll choose Edmonton as the model store for Calgary.<br /><img src="../../../Resources/Images/Site Manager/Example - site model filtering.png" /></p>
+            </li>
+            <li>Select Calgary in the grid.</li>
+            <li>In the Site Modeling tab, click <b>New</b> in the Site Model Options toolbar to create a new site model.</li>
+            <li>In the Site Model Options grid, enter the following details for the new site model row:<ul><li><b>Supersession Start Date</b>: Choose a date at least one year in the past. This is the date from which sales history will be copied from the model site (Edmonton) to the new site (Calgary).</li><li><b>Supersession End Date</b>:&#160;Choose a date two years from today. This is the date on which sales history will stop being copied from the model site to the new site. </li><li>Click the <b>Active</b> checkbox to mark the supersession as active.</li><li>Click <b>Save</b>.</li></ul></li>
+            <li>Now we need to tell JustEnough which item sales histories from Edmonton to copy through this supersession. For this example, we'll select sales from all product levels.<ol><li>In the Site Model Details grid, select all rows.</li><li>Right-click in the Model Site column and choose <b>Multiple Changes</b>.</li><li>In the Multi-Data Change Form dialog box, choose <b>Edmonton</b> from the New value field list and click <b>OK</b>.</li><li><p>Click Save in the Site Model details area to save Edmonton as the model site for all product levels at the Calgary store.</p><p><img src="../../../Resources/Images/Site Manager/Example - New Store planning site modeling.png" /></p></li></ol></li>
+        </ol>
+        <h2>Results</h2>
+        <p>JustEnough starts using the sales histories from the Edmonton store to generate demand forecasts for items in the new Calgary store. You can generate these forecasts manually or wait for JustEnough to generate the forecasts automatically as part of its scheduled overnight tasks. Once generated, you can r<a href="Example - Reviewing New Store Forecasts.htm">eview the demand forecasts for the new store</a> to see if any revisions may be required. </p>
+    </body>
+</html>

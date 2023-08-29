@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Site Capacity</h1>
+        <p>The hierarchy used to populate the product dimension within this widget is determined by the following system policy: <span style="font-weight: bold;">Site.Capacty:Product Hierarchy Filter</span></p>
+        <p>The site capacity view allows users to view and update site capacity information within JustEnough. This data is not consumed within any ordering operations and is used for reporting and filtering only. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Hierarchy Level – </span>The specified hierarchy level at which capacity will be measured for the site. The hierarchy used is controlled through a system policy setting. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Level –</span> The level value within the product dimension. Will associate directly with the hierarchy levels. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Selling Capacity –</span> Showroom capacity in quantity of units. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Stockroom Capacity –</span> Stockroom capacity in quantity of units. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Minimum Capacity –</span> Minimum capacity for the total site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Maximum Capacity –</span> Maximum capacity for the total site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Active –</span> A flag displaying the active status of the capacity constraint. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Created Date </span><span style="font-weight: bold;">–</span> Date of creation for the capacity entry. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Created By –</span> User credited with the creation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Updated –</span> Date of the most recent update to the capacity entry. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Last Update By –</span> User credited with the most recent update. </li>
+        </ul>
+        <p>----</p>
+        <p>Users may set selling capacity, stockroom capacity, minimum capacity, and maximum capacity within this view, as well as capacity settings active status. This information does not affect order creation, but may be used to drive filtering. </p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Capacity_1.png" style="visibility: visible;width: 673px;height: 166px;">
+            </img>
+        </p>
+        <h2>Site-Specific and Aggregate Capacity by Product Level</h2>
+        <p>You can define site capacities at a desired level in your product hierarchy (total store, department, style, etc.) and JustEnough will show you the aggregated capacity at the higher levels. </p>
+        <h3>Setup</h3>
+        <ul>
+            <li><b>Product Hierarchy</b> : Defined in Views &gt; Maintenance &gt; <b>Hierarchy Filtering</b> In the view, enable all of the levels of the hierarchy you want to use, with the lowest level enabled being the level at which site capacity will be entered. </li>
+            <li style="font-weight: normal;"><b>System Policy:</b> In the system policy <b>Module: Site Manager &gt; Site Capacity: Product Hierarchy</b>, enter the ID of the hierarchy from the Hierarchy Filtering view.</li>
+        </ul>
+        <p>Once this setup is completed, you can enter site capacities for each of your locations in the Site Manager’s Site Capacity detail tab. (Remember, you can only enter values at the lowest level of the product hierarchy.) Once capacities are entered, you can view aggregate capacities by selecting higher hierarchy levels in the tab.</p>
+    </body>
+</html>

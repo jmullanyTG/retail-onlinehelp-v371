@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h4 >Allocate Strategy Stock Availability Restrictions (PO + Breakdown)</h4>
+        <p>Information related to the strategy stock is displayed in the allocate strategy stock availability restrictions (PO + Breakdown) view and should be used as a driver in the decision to include or exclude the stock from the available pool. In order to be considered as actionable stock, the arrival date of the purchase order must fall within the window defined by the late orders window (days back) and available orders window (days forward) settings. These values may be set within System Policy. </p>
+        <h5 >PO View</h5>
+        <p>Displays the selectable purchase orders.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Selected - </span>If checked, the on order stock is considered to be “available” and will be included in the available stock calculations.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">PO # -</span> The purchase order number. Part of the supplier order header data. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Destination DCs –</span> The inbound destination site or sites of the purchase order. If more than one destination is specified, the sites will be displayed in a comma separated list. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">PO Qty –</span> The outstanding on order quantity (in case of partially delivered purchase orders). </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">PO Date –</span> The date on which the purchase order was placed. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Receive No Earlier –</span> The receive no earlier date specified in the supplier order information. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Receive No Later –</span> The receive no later date specified in the supplier order information. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Contains Pre-Pack – </span>Will display a check mark if the purchase order contains any pre-pack stock. </li>
+        </ul>
+        <h5 >Breakdown View</h5>
+        <p>Displays the Itemmaster/size level detail of the items contained within the purchase order.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Itemmaster Code – </span>The unique item code. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Itemmaster Description –</span> The description of the item. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Code –</span> The unique code for the site at which the purchase order stock is arriving. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Description –</span> The description for the site at which the purchase order stock is arriving. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority –</span> The global site priority for the destination site. This is a read-only field and must be managed within Site Manager. Does not affect any calculations.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority Group –</span> If in use, the associated priority group of the DC. This is a read-only field and must be managed within Site Manager. Does not affect any calculations.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Size Name –</span> The size name associated with the itemmaster. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Size Type Name </span><span style="font-weight: bold;">–</span> The size type associated with the size. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Cost Per Unit –</span> The per unit cost, reflective of the cost for the itemmaster at the destination site, displayed in the currency of the destination site. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Estimated Receipt Date –</span> The calculated estimated receipt date, defined as the PO order date, plus the lead time. <span style="font-style: italic;text-decoration: underline;">This is </span><span style="font-style: italic;text-decoration: underline;">only </span><span style="font-style: italic;text-decoration: underline;">an estimate</span>.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Outstanding Qty –</span> The by size outstanding order quantity. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Is Pre-Pack – </span>Will be checked if the listed size is a pre-pack item. </li>
+        </ul>
+    </body>
+</html>

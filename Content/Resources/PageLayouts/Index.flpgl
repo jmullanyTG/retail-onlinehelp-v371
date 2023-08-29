@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Index Title Page" Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="first">
+        <Frame Flow="footer" Height="0.4166667in" Right="0px" Bottom="-72px" X="0px" Y="9.333333in" Width="6.5in" VerticalAlign="middle" BorderTopStyle="solid" BorderTopWidth="1px" BorderTopColor="#a9a9a9" Anchors="">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <MadCap:snippetBlock xhtml:src="../Snippets/pdf-page-footer.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="2" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="6.5in" Height="780px" X="0px" Y="84px" Right="0px" Bottom="0px" Anchors="Bottom" FlowIndex="1">
+        </Frame>
+        <Frame X="0px" Y="-60px" Width="75px" Height="48px" Flow="decoration0" Right="549px" Bottom="876px" BackgroundImage="../Images/brand/Mi9-logo(RGB).svg" BackgroundRepeat="stretch" />
+        <Frame X="0px" Y="-59px" Width="624px" Height="47px" Flow="header" Right="0px" Bottom="876px" BorderBottomStyle="solid" BorderBottomWidth="1px" BorderBottomColor="#808080" Anchors="" VerticalAlign="middle">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <MadCap:snippetBlock xhtml:src="../Snippets/pdf-page-header.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame X="0px" Y="7px" Width="302px" Height="59px" FlowIndex="0" Flow="body" Right="322px" Bottom="798px" Anchors="" />
+    </Page>
+    <Page Name="Normal Index Page" Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in">
+        <Frame Flow="footer" Height="0.4166667in" Right="0px" Bottom="-72px" X="0px" Y="9.333333in" Width="6.5in" VerticalAlign="middle" BorderTopStyle="solid" BorderTopWidth="1px" BorderTopColor="#a9a9a9" Anchors="">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <MadCap:snippetBlock xhtml:src="../Snippets/pdf-page-footer.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="2" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="6.5in" Height="8.75in" X="0px" Y="24px" Right="0px" Bottom="0px" Anchors="">
+        </Frame>
+        <Frame X="0px" Y="-60px" Width="75px" Height="48px" Flow="decoration0" Right="549px" Bottom="876px" BackgroundImage="../Images/brand/Mi9-logo(RGB).svg" BackgroundRepeat="stretch" />
+        <Frame X="0px" Y="-59px" Width="624px" Height="47px" Flow="header" Right="0px" Bottom="876px" BorderBottomStyle="solid" BorderBottomWidth="1px" BorderBottomColor="#808080" Anchors="" VerticalAlign="middle">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <MadCap:snippetBlock xhtml:src="../Snippets/pdf-page-header.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+</PageStyles>

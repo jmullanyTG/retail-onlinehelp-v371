@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Release Notes"
+  Type="MsWord"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Release Notes.fltoc"
+  Medium="print"
+  EquationsOutputType="PNG"
+  PatchHeadingLevels="false"
+  InjectBookHeadings="true"
+  EmbedImages="true"
+  RemoveImagesFromHeadings="true"
+  MasterPageLayout="/Content/Resources/PageLayouts/Default.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  OutputFolder="C:\Help_Files\3.7 Word Guides">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    DisableMasterPageUsage="true"
+    EnableTrackedChanges="true" />
+  <Variables>
+    <Variable
+      Name="JustEnough Variables/JE Version">3.7.1</Variable>
+    <Variable
+      Name="JustEnough Variables/Printed Manual Title">Release Notes</Variable>
+  </Variables>
+</CatapultTarget>

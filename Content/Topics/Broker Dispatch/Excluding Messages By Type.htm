@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2154" MadCap:lastWidth="2630">
+    <head>
+    </head>
+    <body>
+        <h1>Excluding Unwanted Messages</h1>
+        <p>You can create filters that exclude unwanted messages from appearing in the Broker Dispatch Viewer, removing "clutter" from your message display. </p>
+        <p style="font-weight: normal;"><b>Note</b>: Filtered messages are not deleted, just suppressed from view in the Broker Dispatch Viewer screen.</p>
+        <h2>Message Lock Exclude&#160;Filter Management dialog box</h2>
+        <p style="font-weight: normal;">Exclude filters are managed from the Message Log Exclude Filter Management dialog box.</p>
+        <p style="font-weight: normal;">
+            <img src="../../Resources/Images/Broker Dispatch/Exclude Filter.png" />
+        </p>
+        <ul>
+            <li>
+                <p>To open the Message Log Exclude Filter Management dialog box, click <b>Exclude Filter</b> in the Broker Dispatch Viewer toolbar.</p>
+                <p>
+                    <img src="../../Resources/Images/Broker Dispatch/Toolbar.png" />
+                </p>
+            </li>
+        </ul>
+        <h2><a name="Creating"></a>Creating an exclude filter</h2>
+        <ol>
+            <li>
+                <p>In the Message Log Exclude Filter Management dialog box, click <b>New</b>. </p>
+            </li>
+            <li>
+                <p>Enter the following values for the new filter:</p>
+                <ul>
+                    <li style="font-weight: normal;"><b>Exclude Filter Description</b> - A brief name or description for the filter.</li>
+                    <li style="font-weight: normal;"><b>Exclude Filter Type</b> - Select what type of value the filter will exclude. Options are:<ul><li style="font-weight: normal;"><b>Message Regular Expression</b>: Select to filter based on the content of the message.</li><li style="font-weight: normal;"><b>Affable Message Regular Expression</b>:</li><li style="font-weight: normal;"><b>Message Event Log Entry Type</b>: Select if you want to filter messages by their severity (Information, Warning, or Error).</li><li style="font-weight: normal;"><b>Message Type</b>: Select if you want to filter messages of specific types (Dispatch, Progress, Application, Database Dispatch Execute Action Parallel, API, or Unknown).</li></ul></li>
+                    <li style="font-weight: normal;"><b>Exclude Filter Value(s)</b> Enter or select the values you want to exclude from view. Options are based on the Exclude Filter Type selected. <ul><li style="font-weight: normal;">For expression filter types, you can type or paste the value directly into the field.</li><li style="font-weight: normal;">For all other types, select one of the preset values.</li></ul></li>
+                    <li style="font-weight: normal;"><b>Security</b> - Choose whether to make the filter private (available only to you), public (available to all JustEnough roles and users), or shared (available only to selected users and/or roles).<ul><li style="font-weight: normal;">If you select <b>Shared</b>, click <b>Change</b> to select the users and/or roles to share the filter with.</li></ul></li>
+                    <li style="font-weight: normal;">
+                        <p><b>Is Enabled</b> - Select this option to enable the filter. When unchecked, the filter is disabled.</p>
+                        <p>
+                            <img src="../../Resources/Images/Broker Dispatch/New Filter.png" />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>Click <b>OK</b> to save the filter</li>
+        </ol>
+        <h2>Editing an exclude filter</h2>
+        <ol>
+            <li>In the Message Log Exclude Filter Management dialog box, select a filter and click <b>Edit</b>. </li>
+            <li>Edit the filter values as desired. See <a href="#Creating">Creating an exclude filter</a> above for descriptions of filter fields.</li>
+            <li>Click <b>OK</b> to save your changes.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

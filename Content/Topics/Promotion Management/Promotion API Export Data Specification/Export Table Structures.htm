@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Export Table Structures</h1>
+        <h2 >Promotion Export API Tables</h2>
+        <h3 >export.Promotion_Staging_API</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">StagingBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">System generated</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExportID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Passed in value</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExportBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Passed in value</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExternalID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Assigned by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">BatchPartitionID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Assigned by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p><span style="font-size: 10pt;">&#160;</span><span style="font-size: 10pt;">Also called ‘Page’</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">AuditReceipt</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Assigned by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Payload</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p><span style="font-size: 10pt;">nvarchar(max</span><span style="font-size: 10pt;">)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Contains configured columns in xml like format</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExportStatus</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Assigned by procedure, updated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">RowID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">Assigned by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 >export.Promotion_Staging_Log_API</h3>
+        <p>Logs basic API Promotion export information</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">StagingBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Export.Promotion_Staging_Log_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExportID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Passed in value</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExportBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Passed in value</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">LoadDate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">Generated by procedure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 >dbo.tbl_API_Export_Promotion</h3>
+        <p>Loads customer requested Page(s)</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">BatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Assigned by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExternalID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">BatchPartitionID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">AuditReceipt</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">StagingBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExportID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExportBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Payload</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">nvarchar(max)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">SeverityRecapID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">RowID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">export.Promotion_Staging_API</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 >dbo.tbl_API_Export_Promotion_Log</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">LocationOfOccurrence</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">nvarchar(128)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">RowID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">AuditReceipt</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">BatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">StatusCodeID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">SeverityID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExtraErrorDetails</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">nvarchar(512)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">LogDateTime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 >dbo.tbl_API_Export_Promotion_Archive</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Column Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Data Type</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Source Table</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">BatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExternalID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">BatchPartitionID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">AuditReceipt</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">StagingBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ExportID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">ExportBatchID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Payload</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">nvarchar(max)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">SeverityRecapID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">int</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">ArchivedDateTime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">datetime</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Populated by API process</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">RowID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">uniqueidentifier</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">dbo.tbl_API_Export_Promotion</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

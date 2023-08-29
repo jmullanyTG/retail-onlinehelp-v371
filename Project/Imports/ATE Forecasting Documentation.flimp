@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="true"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="false"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  ConvertEquations="true"
+  LastCollectTime="2018-08-08T17:02:59.8376360-07:00"
+  ProjectName="JustEnough Help Center 3.7"
+  ProjectFolder="C:\Users\Jonathan.Boswell\Documents\My Projects\JustEnough Help Center 3.7\"
+  AutoSync="false"
+  AutoFitTables="true"
+  UseHeaderRows="true"
+  LastImport="2018-08-08T17:04:25.2146598-07:00">
+  <Files>
+    <Url
+      Source="../../../../JustEnough/3.7/JIRA/ATE Forecasting Documentation.docx"
+      AbsoluteSource="file:///C:/Users/Jonathan.Boswell/Documents/JustEnough/3.7/JIRA/ATE Forecasting Documentation.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/ATE Forecasting Documentation/ATE Forecasting.png"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ATE Forecasting Documentation/ATE Forecasting_1.png"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ATE Forecasting Documentation/ATE Forecasting_2.png"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ATE Forecasting Documentation/ATE Forecasting_3.png"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ATE Forecasting Documentation/ATE Forecasting_4.png"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../../Content/ATE Forecasting Documentation/ATE Forecasting.htm"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../TOCs/ATE Forecasting Documentation.fltoc"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/ATE Forecasting Documentation.css"
+      TimeStamp="8/8/2018 5:04:11 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles />
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles>
+    <StyleName
+      Name="List Paragraph" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles />
+</MsWordImport>

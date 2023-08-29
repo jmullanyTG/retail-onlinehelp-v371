@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Forecast Definition Overview"
+    Link="/Content/Topics/Forecast Definition/Forecast Definition Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Order of Operations"
+    Link="/Content/Topics/Forecast Definition/Order of Operations.htm">
+    <TocEntry
+      Title="Pre-Survey"
+      Link="/Content/Topics/Forecast Definition/Pre Survey.htm" />
+    <TocEntry
+      Title="Pre-Rule"
+      Link="/Content/Topics/Forecast Definition/Pre Rule.htm" />
+    <TocEntry
+      Title="Pre-Processor"
+      Link="/Content/Topics/Forecast Definition/Pre Processor.htm" />
+    <TocEntry
+      Title="Mid-Pre-Rule"
+      Link="/Content/Topics/Forecast Definition/Mid Pre Rule.htm"></TocEntry>
+    <TocEntry
+      Title="Backtrack"
+      Link="/Content/Topics/Forecast Definition/Backtrack.htm">
+      <TocEntry
+        Title="Example:"
+        Link="/Content/Topics/Forecast Definition/Example.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Simulation"
+      Link="/Content/Topics/Forecast Definition/Simulation.htm" />
+    <TocEntry
+      Title="Forecast"
+      Link="/Content/Topics/Forecast Definition/Forecast.htm" />
+    <TocEntry
+      Title="Mid-Post-Rule"
+      Link="/Content/Topics/Forecast Definition/Mid Post Rule.htm" />
+    <TocEntry
+      Title="Post-Processor"
+      Link="/Content/Topics/Forecast Definition/Post Processor.htm" />
+    <TocEntry
+      Title="Post-Rule"
+      Link="/Content/Topics/Forecast Definition/Post Rule.htm" />
+    <TocEntry
+      Title="Post-Survey"
+      Link="/Content/Topics/Forecast Definition/Post Survey.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Base"
+    Link="/Content/Topics/Forecast Definition/Base.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Forecast Definition/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Modes"
+        Link="/Content/Topics/Forecast Definition/Modes.htm" />
+      <TocEntry
+        Title="Averaging Methods"
+        Link="/Content/Topics/Forecast Definition/Averaging Methods.htm">
+        <TocEntry
+          Title="Mean"
+          Link="/Content/Topics/Forecast Definition/Mean.htm" />
+        <TocEntry
+          Title="Moving Average"
+          Link="/Content/Topics/Forecast Definition/Moving Average.htm" />
+        <TocEntry
+          Title="Moving Average with a Trend"
+          Link="/Content/Topics/Forecast Definition/Moving Average with a Trend.htm" />
+        <TocEntry
+          Title="Seasonal Moving Average"
+          Link="/Content/Topics/Forecast Definition/Seasonal Moving Average.htm" />
+        <TocEntry
+          Title="Seasonal Moving Average with a Trend"
+          Link="/Content/Topics/Forecast Definition/Seasonal Moving Average with a Trend.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Exponential Smoothing Methods"
+        Link="/Content/Topics/Forecast Definition/Exponential Smoothing Methods.htm">
+        <TocEntry
+          Title="Exponential Smoothing"
+          Link="/Content/Topics/Forecast Definition/Exponential Smoothing.htm" />
+        <TocEntry
+          Title="Exponential Smoothing with a Trend"
+          Link="/Content/Topics/Forecast Definition/Exponential Smoothing with a Trend.htm" />
+        <TocEntry
+          Title="Exponential Smoothing with a Trend and Seasonality"
+          Link="/Content/Topics/Forecast Definition/Exponential Smoothing with a Trend and Seasonality.htm" />
+        <TocEntry
+          Title="Holt-Winters Linear Method"
+          Link="/Content/Topics/Forecast Definition/Holt Winters Linear Method.htm" />
+        <TocEntry
+          Title="Holt-Winters Multiplicative"
+          Link="/Content/Topics/Forecast Definition/Holt Winters Multiplicative.htm" />
+        <TocEntry
+          Title="Holt-Winters Additive Trend Additive Seasonality"
+          Link="/Content/Topics/Forecast Definition/Holt Winters Additive Trend Additive Seasonality.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Linear Regression"
+        Link="/Content/Topics/Forecast Definition/Linear Regression.htm">
+        <TocEntry
+          Title="Simple Linear Regression with a Trend and Seasonality"
+          Link="/Content/Topics/Forecast Definition/Simple Linear Regression with a Trend and Seasonality.htm" />
+        <TocEntry
+          Title="Intermittent Demand"
+          Link="/Content/Topics/Forecast Definition/Intermittent Demand.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="System Default"
+        Link="/Content/Topics/Forecast Definition/System Default.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Forecast Definition/Practical Application.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Survey Rules"
+    Link="/Content/Topics/Forecast Definition/Survey Rules.htm">
+    <TocEntry
+      Title="Surveys"
+      Link="/Content/Topics/Forecast Definition/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Trend Survey"
+        Link="/Content/Topics/Forecast Definition/Trend Survey.htm" />
+      <TocEntry
+        Title="Seasonal Trend Survey"
+        Link="/Content/Topics/Forecast Definition/Seasonal Trend Survey.htm" />
+      <TocEntry
+        Title="Seasonal Survey"
+        Link="/Content/Topics/Forecast Definition/Seasonal Survey.htm" />
+      <TocEntry
+        Title="Intermittent Survey"
+        Link="/Content/Topics/Forecast Definition/Intermittent Survey.htm" />
+      <TocEntry
+        Title="Linear Regression Survey"
+        Link="/Content/Topics/Forecast Definition/Linear Regression Survey.htm" />
+      <TocEntry
+        Title="Too Intermittent Survey"
+        Link="/Content/Topics/Forecast Definition/Too Intermittent Survey.htm" />
+      <TocEntry
+        Title="Trend Points"
+        Link="/Content/Topics/Forecast Definition/Trend Points.htm" />
+      <TocEntry
+        Title="Reasonable Survey"
+        Link="/Content/Topics/Forecast Definition/Reasonable Survey.htm" />
+      <TocEntry
+        Title="8 Weeks"
+        Link="/Content/Topics/Forecast Definition/8 Weeks.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Expression"
+      Link="/Content/Topics/Forecast Definition/Expression.htm" />
+    <TocEntry
+      Title="Parameters"
+      Link="/Content/Topics/Forecast Definition/Parameters.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Forecast Definition/Practical Application_1.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Forecast Definition/Technical Execution.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Series Rules"
+    Link="/Content/Topics/Forecast Definition/Series Rules.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Forecast Definition/Essential Business Concepts_2.htm">
+      <TocEntry
+        Title="Series Rules"
+        Link="/Content/Topics/Forecast Definition/Series Rules_1.htm">
+        <TocEntry
+          Title="Trend Limiter"
+          Link="/Content/Topics/Forecast Definition/Trend Limiter.htm" />
+        <TocEntry
+          Title="Trend Dampening"
+          Link="/Content/Topics/Forecast Definition/Trend Dampening.htm" />
+        <TocEntry
+          Title="Grubbs"
+          Link="/Content/Topics/Forecast Definition/Grubbs.htm" />
+        <TocEntry
+          Title="Percent Bias"
+          Link="/Content/Topics/Forecast Definition/Percent Bias.htm" />
+        <TocEntry
+          Title="Min"
+          Link="/Content/Topics/Forecast Definition/Min.htm" />
+        <TocEntry
+          Title="Max"
+          Link="/Content/Topics/Forecast Definition/Max.htm" />
+        <TocEntry
+          Title="Fill In"
+          Link="/Content/Topics/Forecast Definition/Fill In.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Series Rule Stages"
+        Link="/Content/Topics/Forecast Definition/Series Rule Stages.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Forecast Definition/Practical Application_2.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Forecast Definition/Technical Execution_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Step Rules"
+    Link="/Content/Topics/Forecast Definition/Step Rules.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Forecast Definition/Essential Business Concepts_3.htm">
+      <TocEntry
+        Title="Trend Limiter"
+        Link="/Content/Topics/Forecast Definition/Trend Limiter_1.htm" />
+      <TocEntry
+        Title="Trend Dampening"
+        Link="/Content/Topics/Forecast Definition/Trend Dampening_1.htm" />
+      <TocEntry
+        Title="Percent Bias"
+        Link="/Content/Topics/Forecast Definition/Percent Bias_1.htm" />
+      <TocEntry
+        Title="Min"
+        Link="/Content/Topics/Forecast Definition/Min_1.htm" />
+      <TocEntry
+        Title="Max"
+        Link="/Content/Topics/Forecast Definition/Max_1.htm" />
+      <TocEntry
+        Title="Period Trend Rate Limiter"
+        Link="/Content/Topics/Forecast Definition/Period Trend Rate Limiter.htm" />
+      <TocEntry
+        Title="Step Rule Stages"
+        Link="/Content/Topics/Forecast Definition/Step Rule Stages.htm">
+        <TocEntry
+          Title="Backtrack"
+          Link="/Content/Topics/Forecast Definition/Backtrack_1.htm" />
+        <TocEntry
+          Title="Simulation"
+          Link="/Content/Topics/Forecast Definition/Simulation_1.htm" />
+        <TocEntry
+          Title="Forecast"
+          Link="/Content/Topics/Forecast Definition/Forecast_1.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Forecast Definition/Practical Application_3.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Forecast Definition/Technical Execution_2.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Processors"
+    Link="/Content/Topics/Forecast Definition/Processors.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Forecast Definition/Essential Business Concepts_4.htm">
+      <TocEntry
+        Title="Seasonality"
+        Link="/Content/Topics/Forecast Definition/Seasonality.htm" />
+      <TocEntry
+        Title="Trend"
+        Link="/Content/Topics/Forecast Definition/Trend.htm" />
+      <TocEntry
+        Title="Independent Seasonality"
+        Link="/Content/Topics/Forecast Definition/Independent Seasonality.htm" />
+      <TocEntry
+        Title="No Confidence"
+        Link="/Content/Topics/Forecast Definition/No Confidence.htm" />
+      <TocEntry
+        Title="Seasonal Trend"
+        Link="/Content/Topics/Forecast Definition/Seasonal Trend.htm" />
+      <TocEntry
+        Title="Sporadic"
+        Link="/Content/Topics/Forecast Definition/Sporadic.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Forecast Definition/Practical Application_4.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Forecast Definition/Technical Execution_3.htm" />
+  </TocEntry>
+</CatapultToc>

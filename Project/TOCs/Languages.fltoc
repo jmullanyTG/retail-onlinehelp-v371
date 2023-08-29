@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Languages Overview"
+    Link="/Content/Topics/Languages/Languages Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Default Strings Maintenance"
+    Link="/Content/Topics/Languages/Default Strings Maintenance.htm" />
+  <TocEntry
+    Title="Default Culture for Language Maintenance"
+    Link="/Content/Topics/Languages/Default Culture for Language Maintenance.htm" />
+  <TocEntry
+    Title="Translate a Language or Language and Culture"
+    Link="/Content/Topics/Languages/Translate a Language or Language and Culture.htm" />
+</CatapultToc>

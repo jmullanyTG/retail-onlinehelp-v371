@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Module: Price Planning</h1>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');margin-left: 0;margin-right: auto;width: 100%;">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Display Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">System Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Auto update Price Action on import changes</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">PriceManager.AutoUpdatePriceActionsOnImportChanges</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Controls the system to implement automatic updates for imported product changes. By default, the system is set to ‘False’ requiring you to review changes before updating the Price Action with the new information from the user interface. <br /><br />If set to ‘True’ the system will automatically update Price Actions with imported changes that affect Pricing Actions with the same Product and Site combination.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p> Config View Collection Set </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">PriceManager.ViewCollectionSetForPriceManagerConfig</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>This policy determines the user interface to be used for the Price Manager’s Configuration.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Data Initialize Batch Size</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>This policy determines the number of records to return, at one time for performance reasons, when initializing a Price Action. The system default is 1000 Item Masters records. This will need to be modified based on the available server configuration.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Manager Inventory Meta Data View</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">PriceManager.DataInitializeBatchSize</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>This policy determines the default fields to be used when displaying Item Manager from Price Planning.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Inventory Meta Data View</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">PriceManager.InventoryMetaDataViewID</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Set ViewID for Price Manager inventory view meta data</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Plan Start Date Number Of Days Out</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">PriceManager.PlanStartDateNumberOfDaysOut</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Set default number of days out from current for start date field in Price Manager. This can only be overridden (i.e. backdated) by users with the ‘Emergency Pricing’ <a href="../Users/Price Manager.htm">user right</a>, which will allow a date to be selected as early as tomorrow.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Price Action Calendar View Collection Set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">PriceManager.ViewCollectionSetForPriceActionCalendar</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>This policy determines the user interface to be used for the Price Manager’s Calendar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Price Action View Collection Set</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">PriceManager.ViewCollectionSetForPriceAction</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>A View Collection Set that may be configured to display information in context of a Price Action (e.g. reports).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Price Planning View Collection Set</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">PriceManager.ViewCollectionSet</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">A View Collection Set that may be configured to display product information pertinent to Price Planning.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Pricing Plan View Collection Set</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">PriceManager.ViewCollectionSetForPricingPlan</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Sets whether or not to display a pricing plan view collection set as a tab in the Price Manager's pricing plan screen.</p>
+                        <p>Value = 0 does not display a view collection set tab.</p>
+                        <p style="font-style: normal;">Value = <i>n </i>(where "n" = a view collection set ID) displays the corresponding  view collection set as a tab in a pricing plan screen. The tab name is the name of the selected view collection set.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

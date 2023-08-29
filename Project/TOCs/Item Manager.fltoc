@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Item Manager Overview"
+    Link="/Content/Topics/Item Manager/Item Manager Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Item Manager Fields"
+      Link="/Content/Topics/Item Manager/Item Manager Fields.htm">
+      <TocEntry
+        Title="Basic Inventory Information"
+        Link="/Content/Topics/Item Manager/Full List of Standard Measures.htm"></TocEntry>
+      <TocEntry
+        Title="Demand Planning"
+        Link="/Content/Topics/Item Manager/Demand Planning.htm" />
+      <TocEntry
+        Title="Inventory Classification"
+        Link="/Content/Topics/Item Manager/Inventory Classification.htm" />
+      <TocEntry
+        Title="Inventory Planning"
+        Link="/Content/Topics/Item Manager/Inventory Planning.htm" />
+      <TocEntry
+        Title="Inventory Status"
+        Link="/Content/Topics/Item Manager/Inventory Status.htm" />
+      <TocEntry
+        Title="Replenishment"
+        Link="/Content/Topics/Item Manager/Replenishment.htm" />
+      <TocEntry
+        Title="Safety Stock Information"
+        Link="/Content/Topics/Item Manager/Safety Stock Information.htm" />
+      <TocEntry
+        Title="Supply Planning"
+        Link="/Content/Topics/Item Manager/Supply Planning.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Details Pane"
+      Link="/Content/Topics/Item Manager/Details Pane.htm">
+      <TocEntry
+        Title="Inventory Information"
+        Link="/Content/Topics/Item Manager/Inventory Information.htm" />
+      <TocEntry
+        Title="Inventory Groups"
+        Link="/Content/Topics/Item Manager/Inventory Groups.htm" />
+      <TocEntry
+        Title="Forecast Viewer"
+        Link="/Content/Topics/Item Manager/Forecast Viewer.htm" />
+      <TocEntry
+        Title="Inbound and Outbound Orders"
+        Link="/Content/Topics/Item Manager/Inbound and Outbound Orders.htm" />
+      <TocEntry
+        Title="Inter-site Projected Demand"
+        Link="/Content/Topics/Item Manager/Inter site Projected Demand.htm" />
+      <TocEntry
+        Title="Policy Information"
+        Link="/Content/Topics/Item Manager/Policy Information.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Item Manager/Effective Policy Information.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Status Information"
+        Link="/Content/Topics/Item Manager/Status Information.htm" />
+      <TocEntry
+        Title="Multi-Site Inventory"
+        Link="/Content/Topics/Item Manager/Multi Site Inventory.htm"></TocEntry>
+      <TocEntry
+        Title="Stock Holding Projection"
+        Link="/Content/Topics/Item Manager/Stock Holding Projection.htm" />
+      <TocEntry
+        Title="Supply Chain"
+        Link="/Content/Topics/Item Manager/Supply Chain.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Item Manager/Practical Application.htm">
+    <TocEntry
+      Title="Pivot Grid Capabilities"
+      Link="/Content/Topics/Item Manager/Pivot Grid Capabilities.htm" />
+    <TocEntry
+      Title="Calculated Columns"
+      Link="/Content/Topics/Item Manager/Calculated Columns.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Technical Execution"
+    Link="/Content/Topics/Item Manager/Technical Execution.htm">
+    <TocEntry
+      Title="Saving and Restoring Grid Layouts"
+      Link="/Content/Topics/Item Manager/Saving and Restoring Grid Layouts.htm" />
+    <TocEntry
+      Title="Creating Filter Metadata"
+      Link="/Content/Topics/Item Manager/Creating Filter Metadata.htm" />
+    <TocEntry
+      Title="Creating a View"
+      Link="/Content/Topics/Item Manager/Creating a View.htm">
+      <TocEntry
+        Title="Initialization"
+        Link="/Content/Topics/Item Manager/Initialization.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Adding Entries to Filter Type"
+      Link="/Content/Topics/Item Manager/Adding Entries to Filter Type.htm" />
+    <TocEntry
+      Title="Defining Metadata"
+      Link="/Content/Topics/Item Manager/Defining Metadata.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Investigating and Managing Stock Issues"
+    Link="/Content/Topics/Item Manager/Investigating and Managing Stock Issues.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Item Manager/Essential Business Concepts_1.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Item Manager/Practical Application_1.htm">
+      <TocEntry
+        Title="Task Example: Identifying Surplus Orders"
+        Link="/Content/Topics/Item Manager/Task Example Identifying Surplus Orders.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Item Manager/Defining Item Life Cycle Dates.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Item Manager/Example - Defining Item Lifec Cycle Dates.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Item Manager/Technical Execution_1.htm" />
+  </TocEntry>
+</CatapultToc>

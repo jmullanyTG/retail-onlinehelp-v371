@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Smart Start </h1>
+        <p style="margin-bottom: 8pt;"><span style="color: #000000;">Once a scenario has been rationalized, a user has the option of Smart Starting. On Smart Start, </span><span style="color: #000000;">the system generates placeholder items for each segment/cluster based on the following:</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;font-weight: bold;">TY Act New Choices &amp; TY Act New AUR</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;font-weight: bold;">The results of the Inter and Intra-style marginal return curves</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;font-weight: bold;">The Collection Option of each segment</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;font-weight: bold;">The configuration of choices to clusters within each segment</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;"><span style="font-weight: bold;">The default minimum presentation, </span><span style="font-weight: bold;">seasonality curve, curve mode,</span><span style="font-weight: bold;"> periods of supply, rec var min, rec size min, size curve, periods before phase in, flow cadence, min stk/sales, and shrink % of sales</span> </li>
+        </ul>
+        <p style="margin-bottom: 8pt;">Given these factors, the system will generate a fully defined sales plan for each placeholder item, including rates of sale, total sales, sales by period, receipt units and flow strategy. The user can can proceed straight to the assignment of actual variants and placing buys, or use the intuitive functionality within Line Visualization and its supporting modules to perform additional analysis and fine tune plans before proceeding.</p>
+        <p style="margin-bottom: 8pt;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">If multiple users attempt to Smart Start scenarios at the same time, the system will hold the second process until the first one finishes. This will be transparent to the user, aside from an apparent lag in processing time compared to normal for the user initiating the second Smart Start.</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Overlapping Scenarios</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span> <span style="font-style: italic;color: #000000;">If</span><span style="font-style: italic;color: #000000;"> the intersection of product and site hierarchies and time of a scenario you Smart Start overlaps </span><span style="font-style: italic;color: #000000;">ANY part of </span><span style="font-style: italic;color: #000000;">another scenario that has already been Smart Started, the system wil</span><span style="font-style: italic;color: #000000;">l display the following warning below. Proceeding will delete any placeholders in Open status. This is because the sales volume those areas account for within your business have already been accounted for in the overall assortment plan, and the system is attempting to prevent you from over-buying:</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Smart Start.png" style="visibility: visible;width: 497px;height: 195px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">I Smart Start a scenario for Mens Tops, US Retail, 4</span><sup style="font-style: italic;color: #000000;">th</sup><span style="font-style: italic;color: #000000;"> Quarter 2017 and leave all generated placeholders in Open status. Then, I create a new scenario for </span><span style="font-style: italic;color: #000000;">Mens Short Sleeved Tees, for US Retail – Southeast District, for December 2017 only. ALL placeholders for the first scenario are still deleted and replaced by those generated for the new scenario, because it contains portions of the sales volume that was accounted for in the first scenario. This is essentially like telling the system you want to plan at a more granular level, so it is making space for you to do so without double-accounting for sales volume.</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Placeholder to Cluster Assortment</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">Because all placeholders created for a given segment are assumed to be shared among all clusters assigned to that segment, the system is able to create a desirable tiering strategy based on the descending number of new choices set in the Smart Started scenario for each cluster.</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example: </span><span style="font-style: italic;">I have a segment with 3 clusters and new choice counts of 4, 3, and 2, respectively.</span><span style="font-style: italic;"> The system will generate 4 placeholder items for the segment and assort them to the clusters as follows:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;">Placeholder Rank</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;">Cluster A</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;">Cluster B</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="margin-bottom: 0pt;text-align: justify;font-weight: bold;">Cluster C</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: justify;">Mens Top # 1</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: justify;">Mens Top # 2</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: justify;">Mens Top # 3</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: justify;">Mens Top # 4</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: center;">X</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Initial Receipt Plans</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">Using the rates of sale assigned to each placeholder from the Marginal Return Curve Matrix, the default seasonality curve, minimum presentation, and other receipt planning parameters set for the relevant level of the product hierarchy, the system will calculate an optimized receipt flow strategy by cluster. <span style="font-weight: bold;">It is to your benefit to have these default parameters set up before you Smart Start a scenario to save yourself the time of having to manually set these parameters later for each placeholder/cluster combination.</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Reconciling Smart Start Output Back to Scenarios</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">The sum of the Ttl Sls $ and Ttl Sls U in Line Visualization for the placeholders generated by Smart Starting a scenario should be equal to the sum of TY Act New Sales $ or U for the scenario.</li>
+            <li style="margin-bottom: 0pt;">These sums may also tie back to the Scenario Target minus the TY C/O Sales $ or U, but because TY Act New Sales $ and U can be edited by the user and do not have to tie back to 100% of the Scenario Target, if overrides are made to these metrics, they will not likely tie to the output of Smart Start.</li>
+        </ul>
+    </body>
+</html>

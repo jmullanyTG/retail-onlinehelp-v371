@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >General Policies</h1>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Global Policy</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Default Batch Size</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The default work size, if not specified, if not defined for the Process Type (e.g. Assortment Planning, Inventory Forecast, etc.)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Default Queue Marshall Delay Time</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The number of seconds the system will wait before checking for new Batches to prioritize and place on the queue if the last check did not find anything.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Maximum Server Work Threshold</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The maximum work threshold (estimated work per item * estimate item count) the server can handle across all process types before downgrading Batches marked as ‘synchronous’ to ‘Immediate’</p>
+                        <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 9pt;">Note</span><span style="font-style: italic;font-size: 9pt;">: Ensure this setting doesn’t conflict with defined thresholds.</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p>Maximum Synchronous Threshold</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>The maximum work threshold (estimated work per item * estimate item count) the server will use, when allowed for a Process Type, to apply ‘Synchronous’ priority to a Batch. </p>
+                        <p>Any Process Type’s submitted Batch that is above this threshold will be prioritized as the configured Priority threshold settings.&#160; </p>
+                        <p>The Synchronous Threshold works in conjunction with Maximum Server Threshold across all process types.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

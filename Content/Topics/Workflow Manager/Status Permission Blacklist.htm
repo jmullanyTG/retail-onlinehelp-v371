@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="1499" MadCap:lastWidth="1218">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Status State Permission Blacklist</h1>
+        <p>An object (event, promotion, price action, order header) may pass through several states while being worked on within the context of a workflow status. For example, events are marked "in progress" while being worked on within the context of an event workflow status and "completed" when they are ready to progress to the next workflow status. </p>
+        <p>Status permission blacklists let you enforce different sets of permissions  based on the state of an object while it is in a specific workflow status. For example, an event workflow may begin with a Planning status. For events in the Planning status, you may choose to grant all users the right to edit events that are "in progress" but restrict edit rights to managers only once an event is marked "completed". As events progress through the workflow, you may choose to grant permissions to smaller sets of users in each progressive workflow status. </p>
+        <h2>Denying permissions for specific users</h2>
+        <p>You can choose to grant a permission to a Role while denying that same permission to a specific user who is associated to that Role. In this case, the specific user is blacklisted and unable to perform the action even though the Role the user is associated to is not blacklisted.</p>
+        <p>Where a Role is blacklisted but not the user, then the user is blacklisted because of their association to the Role.</p>
+        <h2>Setting permissions</h2>
+        <p>Select a workflow status in the Design pan to see its status permission blacklist in the Status Information pane. The blacklist contains a list of user rights and a set of columns representing potential object states.</p>
+        <p>
+            <img src="../../Resources/Images/Workflow Manager/blacklist.png" />
+        </p>
+        <p>A <b>black</b> user icon in a state column indicates that <u>all</u> roles/users are granted that user right when an object is in that state. A <span style="font-weight: bold; color: #6495ed;">blue </span>user icon indicates that at least one role/user has been denied that user right for objects in that state.</p>
+        <p> Click on a user icon to view or <a href="Editing a Status Permission Blacklist.htm">edit</a> its user permissions.</p>
+        <p>The object states in a blacklist differ according to the workflow type. </p>
+        <h3>Event states</h3>
+        <table style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 44px;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 536px;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Icon</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Workflow Manager/State_In_Progress.png" class="icon" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Work due for this status is in progress.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <img src="../../Resources/Images/Workflow Manager/State_Valid.png" class="icon" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Work due for this status has been completed.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Note</b>:&#160;Some user rights in an event status permission blacklist apply at the event level and others apply at the slot set level. See <a href="Event and Slot Set User Rights.htm">Event and Slot Set User Rights</a> for more information.</p>
+        <h3>Order Header states</h3>
+        <table style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 43px;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 536px;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Icon</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Workflow Manager/State_Order.png" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">Applies to the entire duration of the status. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Price action and promotion states</h3>
+        <p>Price action and promotion status states are based on the results of validations run while the price action or promotion is in the selected status.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 44px;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 536px;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Icon</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Workflow Manager/State_Valid.png" class="icon" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">All validations succeeded or had the "Information" severity type</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <img src="../../Resources/Images/Workflow Manager/State_Warning.png" class="icon" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">At least one validation with the "Warning" severity level failed.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Workflow Manager/State_Error.png" class="icon" />
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">At least one validation with the "Error" severity level failed.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

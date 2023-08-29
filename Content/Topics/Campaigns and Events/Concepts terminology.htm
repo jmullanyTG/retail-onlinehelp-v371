@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Concepts &amp; terminology</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Composition</span> – Every Event will have at least one Composition.&#160; A Composition represents a set of Event properties that may equal or consist of a subset of those of the parent Event.&#160; For example, if the Event was a printed four page insert, the Composition for the Event would be the collection of the 4 pages (for more information, see Slot Sets definition below) and their order in the completed ad.&#160; In most cases an Event may have only one Composition, but in other instances the previously mentioned 4 page insert may need to be versioned for demographic (English / Spanish) or for geographic (regional product selection) purposes.&#160; In these cases, multiple Compositions would be defined and populated.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Container</span> – A block of text, an Attribute, a Content Field, an Image, or a Slot may be referred to as a container when describing how to configure the layout of Price Format Displays, Attribute Format Displays, Item Format Displays, Slot Set Templates and Slot Sets. A parent container refers to the external area being configured, i.e. the Price Format Display, Attribute Format Display, Item Format Display, Slot Set Template, or Slot Set.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Event Types</span> – An Event Type is used to describe a specific media format used for an advertising Event.&#160; Examples of Event Types related to media are a flyer for print, or an email for internet.&#160; In promotional planning an Event Type should have some default properties including a default set of geographies for distribution, as well as a default set of demographic associations.&#160; In some cases, the Event Type may include a set of default layout or display properties used to define the basic construction of related Events.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Geographies/Geography Set</span> – Geographies refer to any regional mapping used to distribute or publish advertised Promotions.&#160; A Geography Set consist of a filtered set of Sites to which a Site grouping attribute is applied (i.e. Region, State, Zip Code, etc.) in order to create the actual Geographies, which can be used to resolve promotional pricing and content for the advertised products which are presented to them within the context of the Events to which they assigned.&#160; </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Items</span> – An item represents the link between an advertising Event and any worded message, offer, product, or product group for promotional purposes.&#160; The item is linked to a slot and can be assigned to all or a subset of the available Geographies.&#160;&#160; </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Media</span> – Media represents various types of advertising delivery vehicles such as newspapers, radio, television, and internet by which promotional messages are communicated to consumers.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Media Types</span> – Media represents a type of advertising channel, and can be defined as needed at a high or detailed level depending on the needs of the retailer implementing the solution.&#160; Each assigned media is broken up into Event Types that describe the specific vehicle for the advertisement being created in the system.&#160; The examples listed below represent the most commonly used at a very high level:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-left: 72pt;"><span style="font-weight: bold;">Broadcast</span> – All Radio and Television ads.</li>
+            <li class="ListParagraph" style="margin-left: 72pt;"><span style="font-weight: bold;">Physical</span> – Any physical, 3-dimensional advertisement, i.e. storefront, endcap, etc.</li>
+            <li class="ListParagraph" style="margin-left: 72pt;"><span style="font-weight: bold;">Print</span> – Any printed advertisement that is distributed to the customer via newspaper, mail, or in store.</li>
+            <li class="ListParagraph" style="margin-left: 72pt;"><span style="font-weight: bold;">Social Media</span> – Any advertisement that is delivered through online communications channels that enable people to input, interact, collaborate, and share content.</li>
+            <li class="ListParagraph" style="margin-left: 72pt;"><span style="font-weight: bold;">Web</span> – Any advertisement delivered through the internet, email, or mobile device.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Slots</span> – A Slot is a portion of the Slot Set to which a promotional item (message, offer, product) can be attached to an advertising Event.&#160; A Slot also denotes either the physical area or the percentage of the Slot Set that is allocated to the assigned item.&#160; The number of Slots defined for a Slot Set determines the number of items that can be assigned.&#160; The available Geographies for a given Slot are inherited from the Event and filtered by Composition assignments of its parent Slot Set. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Slot Sets</span> – Slot Sets segment an Event and represent the total area and layout of promotional content and offers for that particular portion of the Event. An example of this would be a page within a weekly flyer.&#160; In addition to defining the size of the page, the Slot Set also dictates the number of promotional items and their position on the page by further segmenting the Slot Set by using Slots. Slot Sets can belong to multiple Compositions within the Event, and inherit all their geographic and demographic properties from the Compositions to which they are assigned.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">State</span> – The Slot Sets in an Event inherit the Event Workflow Status. Each Slot Set is either in the State of ‘In Progress’ or ‘Complete’ with respect to the current Workflow Status. Once all Slot Sets in an Event are marked ‘Complete’ the next Workflow transition may be triggered depending on the Event Workflow configuration.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Status</span> – A Status is a Workflow step for the Event. Event Slot Sets automatically inherit the Status of the Event, however, it is possible to override the Status of the Slot Set to a previously completed Status to grant additional permissions to specific users.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Versions</span> – An Event version is determined by unique combinations of promotional content and pricing assigned to distribution points (e.g. geographies, demographics, segmentations, etc.).</li>
+        </ul>
+    </body>
+</html>

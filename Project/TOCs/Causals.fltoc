@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Causals Overview"
+    Link="/Content/Topics/Causals/Causals Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Causals"
+      Link="/Content/Topics/Causals/Causals.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Essential Business Concepts"
+    Link="/Content/Topics/Causals/Essential Business Concepts.htm">
+    <TocEntry
+      Title="General Information"
+      Link="/Content/Topics/Causals/General Information.htm" />
+    <TocEntry
+      Title="Details"
+      Link="/Content/Topics/Causals/Details.htm">
+      <TocEntry
+        Title="Series Values"
+        Link="/Content/Topics/Causals/Series Values.htm" />
+      <TocEntry
+        Title="Inventory Links"
+        Link="/Content/Topics/Causals/Inventory Links.htm" />
+      <TocEntry
+        Title="Item Master Links"
+        Link="/Content/Topics/Causals/Item Master Links.htm" />
+      <TocEntry
+        Title="Filter Links"
+        Link="/Content/Topics/Causals/Filter Links.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Practical Application"
+    Link="/Content/Topics/Causals/Practical Application.htm">
+    <TocEntry
+      Title="Adding or Deleting a Causal"
+      Link="/Content/Topics/Causals/Adding or Deleting a Causal.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Causals/Example - Adding a Normal Causal.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Making Changes to a Causal"
+      Link="/Content/Topics/Causals/Making Changes to a Causal.htm">
+      <TocEntry
+        Title="Series Values"
+        Link="/Content/Topics/Causals/Series Values_1.htm" />
+      <TocEntry
+        Title="Inventory Links"
+        Link="/Content/Topics/Causals/Inventory Links_1.htm" />
+      <TocEntry
+        Title="Item Master Links"
+        Link="/Content/Topics/Causals/Item Master Links_1.htm" />
+      <TocEntry
+        Title="Level Links"
+        Link="/Content/Topics/Causals/Level Links.htm" />
+      <TocEntry
+        Title="Filter Links"
+        Link="/Content/Topics/Causals/Filter Links_1.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Technical Execution"
+    Link="/Content/Topics/Causals/Technical Execution.htm">
+    <TocEntry
+      Title="Negative Normal Causals"
+      Link="/Content/Topics/Causals/Negative Normal Causals.htm" />
+    <TocEntry
+      Title="Causal Information"
+      Link="/Content/Topics/Causals/Causal Information.htm" />
+    <TocEntry
+      Title="Notes on Importing Causals"
+      Link="/Content/Topics/Causals/Notes on Importing Causals.htm" />
+  </TocEntry>
+</CatapultToc>

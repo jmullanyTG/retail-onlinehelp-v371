@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Column Properties</h1>
+        <p>The column properties section allows for users to add, modify, and delete columns as needed within the grid. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Column – </span>The column name.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Column Friendly Name –</span> An optional user readable name.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Tool Tip Text –</span> Will supply text for a mouse-over tool tip on the column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Visible –</span> If checked, the column will be visible within the widget. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Order –</span> The stacked numerical order for the columns in the widget. Any column without the “visible” flag checked will have an order of “0”.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Format String –</span> The format string settings will affect how data is displayed. Format string entries will vary depending on the data type. Examples include:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">P2 –</span> A percentage with two decimal places.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">F3 –</span> A fixed point decimal with three decimal places.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">C –</span> A currency.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">D6 –</span> A decimal with six decimal places.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Pivot Area – </span>The default area of the pivot grid for the column (may be moved). </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Allowed Pivot Areas –</span> If the column is allowed to be moved from its default pivot area, the available areas will be listed, or a value of “All” will be present. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Show Column Totals –</span> If checked, will show a total for the column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Show Column Grand Totals –</span> If checked, will show a grand total for the column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Fore Color –</span> The text color for the column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Back Color –</span> The background color for the column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aggregate Type –</span> Will determine how the data within the column is aggregated. </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Views/Column Properties.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 301px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aggregate Display Type –</span> Will determine how the aggregated data is displayed. </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Views/Column Properties_1.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 125px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Total Aggregate Type –</span> Total aggregate will refer to the level above the lowest level. The aggregate type selected will determine how that data is aggregated (e.g. week level data would be “aggregate type” and month level data would be “total aggregate type”).</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Views/Column Properties_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 263px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Show in Customization Form –</span> Will present the “fields” button within the user interface. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Show Values –</span> Will present the value to the users. This is different from the “visible” field in that the data is still available for calculations, but not presented to the end users.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Allow Drag –</span> Allows the column to be moved to another pivot area.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Allow Drag in Customization Form –</span> Allows the column to be moved to another pivot area within the customization form (fields view).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Running Total –</span> If selected, certain aggregation types (SUM, COUNT, etc.) will display the running total, which is calculated for values in the&#160;<a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1693.aspx">data area</a>&#160;and corresponds to the current&#160;<a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1710.aspx">column</a>&#160;or&#160;<a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1709.aspx">row field</a>. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Min Width –</span> The minimum number of pixel for width on the column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Width –</span> The standard number of pixels for width on the column.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Write Enabled –</span> Allows the field to be edited within the user interface.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Writeback Split Type –</span> Determines how the value is split when written back.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Direct –</span> Will write the value exactly as defined by the user.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Equal Split –</span> Will equally divide the value by the number of dependents at the lower level (i.e. month value would be split into four weeks equally).</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Weighted Split –</span> Will require the user to specify how the split is distributed. If selected, will require users to set the writeback weight based on column. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Writeback Weight Based on Column –</span> Defines the weighted split value.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Writeback to Column Name –</span> If selected, will allow a data writeback within the column to affect the value of another column.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Row Level Write Enabled Check Field –</span> At row level, will determine if the value is write enabled.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Pivot Level Write Enabled Check Field –</span> At the pivot level, will determine if the value is write enabled. If enabled at pivot level, the row level write back will also be enabled.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Row Level Locked Check Field –</span> If selected, will lock the data at the row level.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Write Enabled –</span> If selected, will allow a data writeback within the column to affect the value of multiple columns, (which must be specified).  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Writeback Value Calculation –</span> Allows for an expression to calculate the value which will be written back. Any column within the pivot grid may be referenced by using the true column name within square brackets (case sensitive). Available parameters include:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">@Value –</span> Whatever the user supplied value is will become the “@Value” (e.g. @Value/SalesUnits would be used to derive AUR).</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">@OldValue –</span> Will use the value before the user changed it to make the calculation (i.e. for holding calculations).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Writeback Split Type –</span> Determines how the value is split when written back.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Direct –</span> Will write the value exactly as defined by the user.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Equal Split –</span> Will equally divide the value by the number of dependents at the lower level (i.e. month value would be split into four weeks equally).</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Weighted Split –</span> Will require the user to specify how the split is distributed. If selected, will require users to set the writeback weight based on column. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Writeback Weight Based on Column –</span> Defines the weighted split value for the aux writeback.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Writeback to Column Name –</span> If selected, will allow a data writeback within the column to affect the value of another column.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Row Level Write Enabled Check Field –</span> At row level, will determine if the value is write enabled.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aux Pivot Level Write Enabled Check Field –</span> At the pivot level, will determine if the value is write enabled. If enabled at pivot level, the row level write back will also be enabled.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Sort Order –</span> Determines the sort order for the data within the column.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Sort by Column –</span> Enables the reference column used for sorting. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Column Used to Sort –</span> Specifies the reference column used for sorting. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Expression Column –</span> If checked, the column is an expression column used to make a calculation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Expression –</span> If the column is an expression column, this will display the value of the expression. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Expression Column Type –</span> Will describe the level at which the expression calculation is done.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Views/Column Properties_3.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 216px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Data Type –</span> Defines the output data type of the expression.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Derived Column Type –</span> Derived columns are legacy functionality and all features have been replaced by functionality in expression columns.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Derived From Column –</span> Derived columns are legacy functionality and all features have been replaced by functionality in expression columns.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Lookup Column –</span> Checked if column is a lookup column. </li>
+        </ul>
+    </body>
+</html>

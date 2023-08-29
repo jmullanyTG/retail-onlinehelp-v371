@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>The Hybrid Financial Planning Grid</h1>
+        <p>The Hybrid Financial Planning grid is where you view and edit a plan's data. </p>
+        <p>
+            <img src="../../../Resources/Images/MFP/hybrid finanical planning grid.png" />
+        </p>
+        <p>Because it would be impractical to display an entire financial plan on screen at once, you can choose which part of the plan to display in the grid.</p>
+        <p>The plan data displayed in the grid is determined by:</p>
+        <ul>
+            <li>The <a href="Parameters.htm">parameters</a> you execute.</li>
+            <li>The <a href="Customizing Layouts.htm">layout</a> you select.</li>
+            <li>The data layout you restore.</li>
+            <li>The <a href="Adding, Removing, and Rearranging Fields.htm">fields</a> you add or remove.</li>
+        </ul>
+        <h2><a name="Cell"></a>Cell Colors</h2>
+        <p>Data cells in the grid are color-coded to indicate what type of metrics they represent and whether their values are locked.  </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');margin-left: 0;margin-right: auto;" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 156px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Cell Color</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td style="background-color: #ceeef3;" class="TableStyle-jeTables-BodyE-Column1-Body1">Light blue</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Plannable metrics. These cells are editable. Their values represent the financial plan data.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td style="background-color: #e2daf8;" class="TableStyle-jeTables-BodyE-Column1-Body2">Light purple</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Comparison metrics. These cells are read-only. Their values are read directly from the comparison plan selected in the Parameters pane.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td style="background-color: #e1e1e1;" class="TableStyle-jeTables-BodyE-Column1-Body1">Dark Grey</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Actualized metrics. These cells are read-only. Their values come from the actual sales data that has been imported into Financial Planning.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td style="background-color: #e3efdf;" class="TableStyle-jeTables-BodyE-Column1-Body2">Light green</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Ex-VAT metrics. These cells are read-only.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td style="background-color: #f7cac3;" class="TableStyle-jeTables-BodyB-Column1-Body1">Light red</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>This cell value is locked. Light-red coloring is applied only to sales-related metrics. Other types of metrics do not change color when locked. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p> Aggregate-level values follow the same color-coding scheme, but use a gradient instead of a solid background. Examples:</p>
+        <ul>
+            <li>
+                <img src="../../../Resources/Images/MFP/gradient plannable.png" /> - an aggregated plannable value.</li>
+            <li>
+                <img src="../../../Resources/Images/MFP/gradient comp.png" /> - an aggregated comparison value.</li>
+            <li>
+                <img src="../../../Resources/Images/MFP/gradient red.png" /> - a locked aggregated sales-related value.</li>
+        </ul>
+        <h2>Toolbar</h2>
+        <p>Actions available from the Hybrid Financial Planning Grid are described below.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 278px;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Unlock</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Removes the lock from the selected cell and its dependents, meaning their values can now change as a result of changes made elsewhere in the plan.. See Lock &amp; Spread for more information.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Lock</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Prevents the value of the selected cell and its dependents from being changed as a result of changes made elsewhere in the plan. See Lock &amp; Spread for more information.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Remove All Locks</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Removes all locks on the financial plan, meaning all cell values are subject to change as a result of changes made elsewhere in the plan. See Lock &amp; Spread for more information.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Revert Cell</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Graph</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Toggles showing/hiding the graph.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Fields</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2"> Adds/removes/rearranges fields displayed in the grid.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Save</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Saves changes made to data values in the plan.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: bold;">Cancel</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Cancels unsaved data value changes.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

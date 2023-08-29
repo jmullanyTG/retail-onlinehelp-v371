@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3 >Configuring Strategy State</h3>
+        <p>Through proper configuration of the strategy state, users may streamline their workflows by hiding strategies which may not be managed, and setting strategies inactive which designates them as future candidates for deletion. There are four strategy states: Active, Inactive, Hidden, and Deleted. </p>
+        <h5 >Hidden State</h5>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Only the system shall be able to set a visible flag via a periodic/nightly process.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The hidden state shall be set if all of the following conditions are met:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">No Stock on Hand (SOH) at the DC</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">No inbound stock</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Allocation Strategy is Ready To Allocate</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Strategy is currently in an Active or Hidden State</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Not in a manual mode state</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">When the hidden state is set:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The user interface shall <span style="font-style: italic;">not</span> display the corresponding allocation strategy unless specified.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">All normal processing shall continue on the allocation strategy.&#160; </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">If a state is no longer hidden it shall revert to an Active state, even if it was previously inactive/deleted. This shall not apply to Manual Active Flag Management Type</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Additionally when a group is hidden and new variants are added to it, it should run the hidden process to see if it can now be active.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Similarly a strategy which is not active and not in manual mode shall run the hidden process to see if it can be active after a save of the allocation strategy occurs.&#160; </li>
+        </ul>
+        <h5 >Active/Inactive Flag and State</h5>
+        <p style="margin-bottom: 8pt;font-weight: bold;">User Specific </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">A user is able to determine if an allocation is active or not by setting the allocation strategy active flag.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Only allocation strategies that are variants shall be allowed to be made inactive.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Group allocation strategies shall be prevented from being marked inactive (prevent edit in grid). The delete button shall be used instead, which should mark the allocation strategy of the group deleted as well as release all included variants.&#160;&#160; </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The date/time is saved when the active flag is altered.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">When a user updates the active flag (via UI) </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">An indicator shall be set. Example an Active Flag Management Type is set to Manual. The indicator shall be displayed to the user as well.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The Allocation State shall be set accordingly.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">When an allocation has a Manual Active Flag Management Type it shall <span style="font-style: italic;">only</span> be affected by user input and not the system.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The Active Flag Management Type is comprised of Open, and Manual types. By default an Allocation’s Active Flag Management Type is set to Open. </li>
+        </ul>
+        <p style="margin-bottom: 8pt;font-weight: bold;">System Specific</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The system will update the active flag on all allocations that have an Active Flag Management Type of Open. For Open management types, the system has a standard check for setting the strategy state to inactive via a periodic/nightly process. This process may be customized.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The standard check shall mark the state inactive if all of the following conditions are met: </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">No Stock on Hand (SOH) at the DC </li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The average stock on hand for all stores in the allocation strategy &lt; then the Min Average SOH as defined by a system policy (Allocate.SetActiveState.MinAvgInStoreStock) but if not provided will default to 100. </li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">No inbound stock</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">No sales for X days, where X days is defined by a system policy (Allocate.SetActiveState.DaysOfNoSale) but if not provided will default to 30 days.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Allocation Strategy is Ready To Allocate</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Not Already in a Deleted State or Inactive State (so we do not reset the last modified time)</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Not an Allocation Group</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Not in a Manual State</li>
+        </ul>
+        <p style="margin-bottom: 8pt;font-weight: bold;">Effects of Inactive/Active Setting </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">When the state is set to inactive:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The user interface will <span style="font-style: italic;">not</span> display the corresponding allocation strategy unless specified. </li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The engine will <span style="font-style: italic;">not</span> process the allocation strategy. </li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The inventory cache will be cleared of any entries that relate to the allocation strategy.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Forecasts and Projected values will remain; however, the roll up screens shall not display values that correlate to inactive allocations. </li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The date/time stamp will be updated.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Any dependent fields such as location strategy or size curve will restricted from deletion in order to maintain data integrity.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">If the system/user marks an allocation strategy active the following shall occur:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The engine will continue to process the allocation strategy.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The date/time stamp will be updated.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">If a state is no longer inactive, it will revert to an Active State, even if it was previously deleted.</li>
+        </ul>
+        <h5 >Deleted State and Garbage Collection</h5>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Only the system will set the deleted flag via a periodic/nightly process.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The date/time will be saved when the deleted state is set.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">A user has the ability to see if an allocation strategy is deleted.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The deleted state will be set if all of the following conditions are met:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">An allocation strategy has been in an inactive state for X days, where X days is defined by a system policy but if not provided will default to 30 days.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">It does not matter if the inactive state was manually set or not</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The exception status can be in any state (missing configuration/ready to allocate)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">When the deleted state is set:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The user interface will not display the corresponding allocation strategy unless specified.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The date/time will be updated.</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Any dependent field such as location strategy or size curve shall still not be allowed to be deleted in order to obtain data integrity.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Only the system is able to garbage collect via a periodic/nightly process. </li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The process will <span style="font-style: italic;">not</span> allow the ability for customization. However some system policies have been provided:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Batch Size to process (Allocate.GarbageCollection.BatchSize)</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Number of Days an allocation has to be marked deleted (Allocate.GarbageCollection.DaysToWait)</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The max time to allow for processing (Allocate.GarbageCollection.MinutesUntilTimeout)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Garbage collection will occur when the following conditions are met:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">An allocation strategy has been in a deleted state for X days, where X days is defined by a system policy but if not provided will default to 90 days.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">When garbage collection starts the following should occur:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">The allocation strategy shall be removed from ALL Allocation related tables.</li>
+        </ul>
+    </body>
+</html>

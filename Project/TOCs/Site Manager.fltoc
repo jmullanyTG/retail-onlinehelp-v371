@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/Site Manager/Site Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/Site Manager/Creating a Site Manager Document.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/Site Manager/Metadata in Site Manager.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Site Manager Document Details"
+    Link="/Content/Topics/Site Manager/Site Manager Document Details.htm">
+    <TocEntry
+      Title="Site Status"
+      Link="/Content/Topics/Site Manager/Site Status.htm" />
+    <TocEntry
+      Title="Site Modeling"
+      Link="/Content/Topics/Site Manager/Site Modeling.htm" />
+    <TocEntry
+      Title="DC Source Priority"
+      Link="/Content/Topics/Site Manager/DC Source Priority.htm" />
+    <TocEntry
+      Title="Site Source Priority"
+      Link="/Content/Topics/Site Manager/Site Source Priority.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Site Manager/Global Site Priority.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Site Capacity"
+      Link="/Content/Topics/Site Manager/Site Capacity.htm" />
+    <TocEntry
+      Title="Site Product Exclusion"
+      Link="/Content/Topics/Site Manager/Site Product Exclusion.htm" />
+    <TocEntry
+      Title="Site Location Strategies"
+      Link="/Content/Topics/Site Manager/Site Location Strategies.htm" />
+    <TocEntry
+      Title="Site Placeholder"
+      Link="/Content/Topics/Site Manager/Site Placeholder.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Examples">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Site Manager/Example - Assigning Schedules to Sites.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Site Manager/Example - Setting Global Priority.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Site Manager/Example - Validating Site Data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Technical Execution"
+    Link="/Content/Topics/Site Manager/Technical/Technical Execution_1.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Site Manager/Technical/Site Manager Configuration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Creating a View"
+      Link="/Content/Topics/Site Manager/Technical/Creating a View.htm" />
+    <TocEntry
+      Title="Adding Entries to Filter Type"
+      Link="/Content/Topics/Site Manager/Technical/Adding Entries to Filter Type.htm" />
+    <TocEntry
+      Title="Defining Metadata"
+      Link="/Content/Topics/Site Manager/Technical/Defining Metadata.htm" />
+    <TocEntry
+      Title="Contract Site Details"
+      Link="/Content/Topics/Site Manager/Technical/Contract Site Details.htm" />
+    <TocEntry
+      Title="Site Modeling"
+      Link="/Content/Topics/Site Manager/Technical/Site Modeling_2.htm" />
+    <TocEntry
+      Title="DC Source Priority"
+      Link="/Content/Topics/Site Manager/Technical/DC Source Priority_2.htm" />
+    <TocEntry
+      Title="Site Source Priority"
+      Link="/Content/Topics/Site Manager/Technical/Site Source Priority_2.htm" />
+    <TocEntry
+      Title="Global Site Priority"
+      Link="/Content/Topics/Site Manager/Global Site Priority.htm" />
+  </TocEntry>
+</CatapultToc>

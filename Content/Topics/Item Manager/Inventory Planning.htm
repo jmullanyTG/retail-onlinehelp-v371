@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Inventory Planning</h1>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 8pt;">Field Category</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 8pt;">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 8pt;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Age</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Age in days of an item from first stocked date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Back Order Ratio</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Used in replenishment logic. Estimation of number of customers who will place a back order.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Bin Items In Use</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Items being used&#160;in, for example, a&#160;manufacturing plant.&#160; This is used for Bin Level calculations together with Bin Mean Time Between Failure values.&#160; These values need to be imported from the transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Bin Meantime Between Failure Days</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">The&#160;(mean) time in days before failure is likely to occur.&#160; This is used for Bin Level calculations together with Items in Use values.&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Creation Date</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Imported from transaction system date or today – imported date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Criticality Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Criticalities are user-applied indicators that are used to differentiate the functional importance of products such as a low cost item that is critical to the sale of a high cost item, but does not have a significant investment value.&#160; Criticalities can be used to set bin levels by service level per criticality and minimum safety stock values per criticality.&#160; Update during data import or by making the field editable.&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Days From Creation</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Today – Creation date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Days From First Stocked</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Today – First stock date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Days From Last Issue</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Today – Last issue date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Days From Last Receipt</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Today – Last receipt date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Default Cost Price</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Average Landed Cost</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Default Margin</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Default Sell Price – Default Cost Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Default Selling Price</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Recommended Retail Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Excess For Redistibution Threshold Days</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">LT + SS + RC + Factor (A)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">First Stocked Date</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Date when item was first created on the transaction system as read from transaction system, or if it is unavailable, the first&#160;date that the item has stock on hand on the transaction system.&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Generic</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Item code of generic material</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 1 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 1 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 2 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 2 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 3 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 3 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 4 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 4 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 5 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 5 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 6 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 6 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 7 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 7 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 8 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 8 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 9 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 9 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 10 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 10 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 11 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 11 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 12 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 12 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 13 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 13 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 14 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 14 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 15 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 15 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 16 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 16 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 17 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 17 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 18 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 18 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 19 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 19 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 20 Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group code, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group 20 Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Group description, downloaded from transaction system or updated by customisation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Issue Multiple Units</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Multiples that the item is issued in.&#160; Not necessarily equal to the order multiple. E.g. a product is ordered in multiples of 100 but sold in multiples of 4.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Last Issue Date</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Date of last issue date of inventory as read from transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Last Receipt Date</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Date of last receipt of inventory as read from transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Last Stock Count Date</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Date when last stock count was done on the item as read from transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Manual Order Policy Indicator Flag</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Setting as indicated in Policy Information tab for the right to change Type manually.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Manual Policy Setting Flag</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Setting as indicated in Policy Information tab for the right to change policy settings manually.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Maximum Stock Days</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Maximum stock days cover you want an inventory to have</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Maximum Stock Units</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Maximum stock units you want an inventory to have</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Minimum Safety Stock Units</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Minimum safety stock units to be kept on hand.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Priority</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Pareto Classification</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Replenishment Cycle Days</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Replenishment Cycle, specified in days.&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Required Bin Level</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Bin Level for an Item.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Review Period Days</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Review Period, specified in days.&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Safety Stock Days</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Safety stock, specified in days .</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Service Level</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Targeted service level for plant/material.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Stock On Hand</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Number of units on hand as read from transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Stock On Hand Value</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Value of stock on hand at cost.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Stock Reserved</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 8pt;">Items that are&#160;set a</span><span style="color: #000000;font-size: 8pt;">side for a certain purpose.&#160; Values </span><span style="color: #000000;font-size: 8pt;">subtracted from Stock on Hand to provide available inventory. </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Superceded From Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Old material linked to a new material </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Superceded From Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Old material linked to a new material </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Superceded To Code</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">New material linked to an old material </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Superceded To Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">New material linked to an old material </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Type</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 8pt;">P – Normal Stocked</span><span style="color: #000000;font-size: 8pt;"><br />N – Non Stocked</span><span style="color: #000000;font-size: 8pt;"><br />R – Redundant</span><span style="color: #000000;font-size: 8pt;"><br />B – Bin</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Type Description</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 8pt;">P – Normal Stocked</span><span style="color: #000000;font-size: 8pt;"><br />N – Non Stocked</span><span style="color: #000000;font-size: 8pt;"><br />R – Redundant</span><span style="color: #000000;font-size: 8pt;"><br />B – Bin</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Unit Of Issue</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">E.g. bottles, layers or each as read from transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Unit Of Measure</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">E.g. kg, liters or each as read from transaction system.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Inventory Planning</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Use Maximum Stock Flag</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p style="margin-bottom: 0pt;color: #000000;font-size: 8pt;">Use Maximum Stock (Days) (Ö) or not (&#160;) </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

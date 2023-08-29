@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="1682" MadCap:lastWidth="2386">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h4 >Total Push</h4>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #222222;">When using the total push </span><span style="color: #222222;">demand type</span><span style="color: #222222;">, if “push quantity” is </span><span style="font-weight: bold;color: #222222;">not </span><span style="color: #222222;">set, the push calculation determines the site demand based on (product model * size curve) and available stock, while taking into account any holdback % or units.</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Total Push uses the following inputs: </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Product Model</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Size Curve</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Site Exclusions</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Stock Restrictions</li>
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Supply Chain</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 8pt;">Total push demand type will <span style="text-decoration: underline;">only</span> produce a forecast if a Rate of Sale Override or Total Demand is set.&#160; </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #222222;">Total push (when pushing all the available stock or using “holdback”) does not do a looping mechanism since the system needs to ensure SOH is pushed proportionately (It does use looping logic when the Push Quantity is set)</span><span style="color: #222222;">.</span>
+            </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #222222;">Total Push uses the configured supply chain to gather all primary stores (if a DC has&#160;</span><span style="font-style: italic;color: #222222;">only</span><span style="color: #222222;">&#160;secondary and tertiary stores&#160;then the secondary stores are considered “primary”)</span><span style="color: #222222;">.</span>
+            </li>
+        </ul>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">The following three steps will generate the final allocated units to send to a store:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li style="margin-bottom: 8pt;font-weight: bold;"><span style="font-weight: bold;">Determine if ideal store demand can be fulfilled with the DC SOH by Size</span>
+            </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculates store percent contribution: ideal store/size demand/all store ideal demand in a DC for same size</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculates maximum allocation: DC SOH of Size * Store Percent Contribution&#160;</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">If store demand is greater than the maximum allocation, the system will allocate the maximum allocation. Otherwise system will allocate to the store’s demand. </li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">If using maximum allocation, then the remaining DC SOH is 0 and there will be remaining DC SOH or also called; Residual Demand to fulfill</li>
+        </ul>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Calculate by Store Demand – Maximum Allocation</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;font-weight: bold;color: #222222;">Determine which DC SOH to use to satisfy Residual Demand</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Calculates DC remaining SOH by size percentage: remaining on hand of size/total SOH at the DC for all sizes&#160;</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Calculates remaining demand for each Store: Aggregation of a Store Residual Demand</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Allocates Residual Unit: Current Allocated Units + (Remaining Demand * DC Remaining Percentage)</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;font-weight: bold;color: #222222;">Determine if the quantities that needed to be pushed have been allocated</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Determine if DC still needs to push stock –&gt; Original Available Push Quantity – What was pushed in previous steps&#160;</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Calculate the DC Remaining SOH for ones that have at least one store that can use a Size</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Calculate DC Remaining SOH By Size Percentage</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Determine if Remaining Push Qty at DC &gt; Total Remaining SOH; if it is then re-adjust Remaining Push Qty to be Total Remaining SOH</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #222222;">Spread the Remaining Push Qty to stores based on Store’s Contribution Percentage (if all 0 will spread equally)</li>
+        </ul>
+        <h5 >Notes:</h5>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="color: #222222;">Remaining Push Qty: </span><span style="font-style: italic;color: #222222;">Potential reason units weren’t allocated is perhaps due a store being ineligible to receive a size(s) and unfortunately that’s the only size(s) remaining in the DC.</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-style: italic;">If a size is marked ineligible for all stores, then Total Push may not push out all stock since there aren’t any stores that can receive that size from the DC</span><span style="font-style: italic;">.</span>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Parameters</h1>
+        <p>Several parameters and filters exist which may be used to narrow the focus of the allocation strategy screen in order to better facilitate a practical workflow for users. </p>
+        <h2>
+            <h>
+                <h><span style="font-weight: bold;">Strategy </span><span style="font-weight: bold;">Filter</span><span style="font-weight: bold;"> </span>
+                </h>
+            </h>
+        </h2>
+        <p>
+            <h>
+                <h><span style="font-weight: bold;"> </span>Any exception which occurs at the strategy level may be included in a filter for the allocation strategy screen. Many of these exceptions will be “blocking”, meaning that no action may be taken with the strategy until they are addressed. These strategy filter conditions are organized by group and are not mutually exclusive.</h>
+            </h>
+        </p>
+        <ul>
+            <li>
+                <p><span style="font-weight: bold;">Allocation Strategy State –</span> Status of the strategy as defined by the allocation strategy state field. </p>
+                <ul>
+                    <li><span style="font-weight: bold;">Active – </span>Default state. The strategy may be actively managed and allocations may be created using the strategy. Type 1.</li>
+                    <li><span style="font-weight: bold;">Hidden – </span>Strategies with no actionable stock may be set to hidden to ease navigation. Type 2. </li>
+                    <li><span style="font-weight: bold;">Inactive – </span>User driven status to deactivate a strategy. Type 3.</li>
+                    <li><span style="font-weight: bold;">Deleted – </span>System setting for inactive strategies which may be removed from JustEnough. Type 4.</li>
+                </ul>
+            </li>
+            <li><span style="font-weight: bold;">Allocation Exception Status – </span>Displays if required configuration elements are missing from the strategy or if it is ready to allocate. <ul><li><p><span style="font-weight: bold;">Missing Configuration –</span> Required elements are missing and the strategy may not be executed without completion. </p></li><li><span style="font-weight: bold;">Ready to Allocate –</span> The strategy is ready to allocate. </li></ul></li>
+        </ul>
+        <h3><span style="font-weight: bold;">Allocation Strategy Exceptions </span>
+        </h3>
+        <p>If a strategy is considered to have missing configuration elements and is otherwise not ready to allocate, these criteria may cause blocking errors.</p>
+        <h4>New Item Exceptions</h4>
+        <ul>
+            <li>
+                <p><b>Undefined Product Model</b> – An item without a selected product model.</p>
+            </li>
+            <li><b>Unallocated Weeks Before Set</b> – For new items, the difference in time between the current week and the scheduled set week are less than the defined lead time.</li>
+        </ul>
+        <h4>Both New Item and Ongoing Exceptions</h4>
+        <ul>
+            <li><b>Missing Actionable Inventory</b> - The allocation strategy does not have any available inventory.</li>
+            <li><b>Phase Window Exceeds Limit</b> – The phase window (defined as the number of days between the phase-in and phase-out dates) exceeds the allowed quantity as defined by the system policy for the phase window.</li>
+            <li><b>Size Curve to Range Mismatch</b> – The allocation strategy has a size curve that does not cover all of the sizes for the selected item or product group.</li>
+            <li><b>Supply Chain Incomplete</b> – An Inventory does not have an associated DC or Store as a source site priority.</li>
+            <li><b>Undefined Size Curve Option</b> – An item without a selected size curve.</li>
+            <li><b>Undefined Strategy Location</b> – An item without a selected location strategy.</li>
+            <li><b>Undefined Temporal Plan</b> – An item which has been defined as using an imported plan sales type curve, without a plan selected.</li>
+        </ul>
+        <h3 style="font-weight: bold;">Allocation Item Exceptions </h3>
+        <p>Item level exceptions which may or may not be blocking.</p>
+        <h4>New Item Exceptions</h4>
+        <ul>
+            <li>I<b>tem Recording Selling</b> – Item is defined as “New Item” but has actualized selling of more than 3 periods.</li>
+            <li><b>In DC Missing Cutoff</b> – Item is defined as “New Item”.  The goods will not arrive in time to be ordered and arrive in store by the Phase In date.  There is no DC OH or store OH and the Projected PO Receipt Date is greater than the Phase In date minus the lead time.</li>
+            <li><b>Purchase Order, No Allocation</b> – Item is defined as “New Item” and has purchase orders at DC and no Stock OnHand in the stores and no orders have been generated.</li>
+            <li><b>Stock On Hand, No Sales</b> – Item is defined as “New Item” and has warehouse OH and no Stock OnHand in the stores and no units in transit to the stores.</li>
+        </ul>
+        <h4>Ongoing Allocations</h4>
+        <ul>
+            <li><b>Out of Stock</b> – There is not enough inventory to fill the projected weeks of cover between today and the Phase Out date.</li>
+            <li><b>Below Min SOH</b> – There is not enough inventory to fill the projected weeks of cover.  At least 1 store will be below the minimum stock OH.</li>
+            <li><b>Markdown Upcoming</b> – the specified MD Date is within the defined weeks of cover, or the MD Date is the week after the current week.</li>
+            <li><b>Phase-Out Upcoming</b> - the specified Phase Out Date is within the defined weeks of cover, or the Phase Out Date is the week after the current week.</li>
+            <li><b>Incoming MD, Below Sell-thru</b> - The projected sell thru % at the item defined Markdown Date is less than the item defined sell thru %.</li>
+            <li><b>Purchase Order, No Allocation</b> – Item is defined as “Ongoing Allocation” and the incoming Purchase Order at DC has not been allocated and the receipt date is with the weeks of cover.</li>
+            <li><b>Aged DC Inventory</b> – Item is defined as “Ongoing Allocation” and the Warehouse stock OH is greater than 0 and there has been sales recorded for 13 weeks and no reduction in DC Inventory.</li>
+            <li><b>Flow Expected, No Receipt</b> – The Store Purchase Order receipt date is before the current week, but the goods have not arrived.</li>
+        </ul>
+        <h4>Both New Item and Ongoing Exceptions</h4>
+        <ul>
+            <li><b>Actual Qty Above Expected Qty</b> - The actualized PO receipt for the week is greater than 105% of the total expected units from the purchase order.</li>
+            <li><b>Actual Qty Below Expected Qty –</b> The actualized PO receipt for the week is less than 95% of the total expected units from the purchase order.</li>
+            <li><b>Unable to Fulfill Pending Orders</b> – Pending Orders will not be fulfilled due to a lack of stock OH and/or incoming order.</li>
+        </ul>
+        <h2><span style="font-weight: bold;">Item </span><span style="font-weight: bold;">Filter </span>
+        </h2>
+        <p>An item master level filter which will return the appropriate variants to the strategy screen. Users may also launch the filter manager wizard directly from the allocation strategy screen in order to build a new filter or edit an existing filter. </p>
+        <ul>
+            <li><span style="font-weight: bold;">Display Items Below Thresholds –</span> Unselected by default, the display items below thresholds flag will determine if strategies containing items which do not meet criteria defined by an individual exception threshold defined in a threshold table are returned to the allocation strategy screen or ignored. This is meant to streamline workflows by eliminating strategies with minimal stock. </li>
+        </ul>
+    </body>
+</html>

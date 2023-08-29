@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="2883" MadCap:lastWidth="1272">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >Standardized Jobs</h1>
+        <p>Standardized jobs, found in the <a href="../Job Manager/Job Manager Overview.htm">Job Manager</a> module, come pre-configured with JustEnough. They organize user- and system-submitted jobs into <a href="#Daily">daily</a>, <a href="#Nightly">nightly</a>, and <a href="#Weekend">weekend</a> batches, according to estimated workload. </p>
+        <p>
+            <img src="../../Resources/Images/Workload Queue Manager/Standardized jobs.png" />
+        </p>
+        <p> Standardized <a href="Cleanup.htm">cleanup</a> and <a href="Optimization Tuning.htm">optimization tuning</a> jobs are also included.</p>
+        <h2><a name="Daily"></a>Daily job</h2>
+        <p>The Daily job processes batches of low-workload jobs during daytime working hours. Daily job tasks should be scheduled to run during the day--for example, Monday through Friday, 7 AM - 6 PM.</p>
+        <h2><a name="Nightly"></a>Nightly job</h2>
+        <p>The Nightly job processes batches of medium-workload jobs overnight. Nightly job tasks should be scheduled to run after normal working hours--for example, Monday through Friday, 6 PM - 11 PM.</p>
+        <h2><a name="Weekend"></a>Weekend job</h2>
+        <p>The Weekend job processes batches of medium-workload jobs overnight. Weekend job tasks should be scheduled to run during the weekend--for example, Saturday 3 AM - 11 PM.</p>
+        <h2>Job Task Configuration</h2>
+        <p>For convenience and speed, you can configure your daily, nightly, and weekly standard job tasks to include all (or specific) process types (forecasts, price actions, etc.) and to take advantage of parallel processing capabilities. Double-click on a task in the Job Manager to view and edit the properties described in the table below.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Method Parameter Name</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Default Value</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">@bDebug</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">False</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Required.<span style="font-weight: normal;">&#160;Whether or not the system should provide additional logging</span></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">@bEnforceWorkLimit</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">True</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Required. Whether or not the system adheres to the <a href="General Policies.htm">Maximum Server Work Threshold</a> system policy. </p>
+                        <ul>
+                            <li>If set to <b>True</b> and the amount of work meets or exceeds the threshold set in the policy, any un-processing job tasks will go into "delay"&#160;cycles until the amount of work returns below the threshold value. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">@bNightly</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">False</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Required. Whether or not the job task processes only nightly jobs.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">@ParallelBatching</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">False</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Required. Applicable only when multiple job tasks are configured for a processing period (Daily, Nightly, or Weekend).</p>
+                        <ul>
+                            <li>If set to <b>True</b>,  all job tasks work on  the same job until it is completed. Then, they move on to the next job in the queue.</li>
+                            <li>If set to <b>False</b>,each job task works on distinct jobs. </li>
+                            <li>All job tasks must have the same value (True or False).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">@bWeekly</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">False</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Required. Whether or not the job task processes only weekend jobs.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">@iProcessTypeID</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Optional. Specifies the type of jobs that this job task will run. Leave this value blank to run all job types. Otherwise, enter a single integer value from the list below:</p>
+                        <ul>
+                            <li>1 = Inventory Forecast</li>
+                            <li>2 = Level Forecast</li>
+                            <li>3 = Group Forecast</li>
+                            <li>4 = Replenish Inventory</li>
+                            <li>5 = Assortment Receipt Plan</li>
+                            <li>6 = Adaptive Allocations</li>
+                            <li>7 = Assortment Prepack</li>
+                            <li>8 = Allocations</li>
+                            <li>9 = Replenish Set</li>
+                            <li>10 = Price Manager</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">@iUserID</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">1</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Optional. The integer ID&#160;of the user that the job task will run as if the job process is submitted without an identified user.</p>
+                        <ul>
+                            <li>This user must have all necessary access rights to complete work for the @iProcessTypeID value.</li>
+                            <li>Default value is the IOAdmin ID. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">@nMarshalID</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Required. Unique ID&#160;value for this job task. To ensure accurate processing and logging, value must be unique across all job tasks. Best practice is to include this ID value in the job name ("Workload Queue Parallel - Nightly - <b>1</b>", for example). </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

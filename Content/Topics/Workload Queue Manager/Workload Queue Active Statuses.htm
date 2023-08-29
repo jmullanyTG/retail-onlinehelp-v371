@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Workload Queue Active Statuses</h1>
+        <p>The following Statuses will be seen in the Workload Queue Active list</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Unknown</span> - The system includes a ‘default’ Status Type which is only used if the system is experiencing an issue and JustEnough Support should be contacted.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Preparing</span> (a.k.a. Batching) - The system is evaluating the Items in the submitted Batch and estimated workload.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Coalescing</span> - The system is marking Items in the submitted Batch to reduce processing time by removing duplicate items. Last Batch submission, with like Items, we be processed first. Prior Batches will complete the non-coalesced Items and then be placed into a Status of ‘purgatory’ until the last Batch, with ‘like’ Items, has been completed.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Ready</span> - The system has completed preparation and coalescing the Batch making it ready to be executed by the Workload Queue Marshall.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Executing</span> - The system is executing the submitted Batch.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Purgatory</span> - The Batch is waiting for a following Batch, with like Items, to be completed.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

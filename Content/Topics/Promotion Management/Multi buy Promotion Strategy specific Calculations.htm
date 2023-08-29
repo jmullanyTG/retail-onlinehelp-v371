@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-za">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Multi buy Promotion Strategy specific Calculations</h1>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p class="NormalWeb_5">Calculation Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p class="NormalWeb_6">Configuration</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Multi - Filldown – Total Promo Price – Item</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Fill down the keyed total promotional price to all levels. To be used in an ItemMaster implementation.</p>
+                        <ul class="ul_1">
+                            <li class="NormalWeb_1"><span class="span_14">Method</span><span class="span_11"> – Promotion_PriceCalculation_OverrideColumn_Filldown_ItemMaster</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Level</span><span class="span_11"> – Group Level</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Group Type</span><span class="span_11"> – Buy Get Group</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Field </span><span class="span_11">– TotalPromotionalPrice</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Multi - Filldown – Total Promo Price – Variant</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Fill down the keyed total promotional price to all levels.&#160; To be used in a Variant implementation.</p>
+                        <ul class="ul_1">
+                            <li class="NormalWeb_1"><span class="span_14">Method</span><span class="span_11"> – Promotion_PriceCalculation_OverrideColumn_Filldown_Variant</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Level</span><span class="span_11"> – Group Level</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Group Type</span><span class="span_11"> – Buy Get Group</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Field </span><span class="span_11">– TotalPromotionalPrice</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Multi - Filldown – Multi Buy Quantity – Item</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Fill down the keyed multi buy quantity to all levels. To be used in an ItemMaster implementation.</p>
+                        <ul class="ul_1">
+                            <li class="NormalWeb_1"><span class="span_14">Method</span><span class="span_11"> – Promotion_PriceCalculation_OverrideColumn_Filldown_ItemMaster</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Level</span><span class="span_11"> – Group Level</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Group Type</span><span class="span_11"> – Buy Get Group</span>
+                            </li>
+                            <li class="ListParagraph_3"><span class="span_1">Calculation Field </span>– MultiBuyQuantity</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Multi - Filldown – Multi Buy Quantity – Variant</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Fill down the keyed multi buy quantity to all levels.&#160; To be used in a Variant implementation.</p>
+                        <ul class="ul_1">
+                            <li class="NormalWeb_1"><span class="span_14">Method</span><span class="span_11"> – Promotion_PriceCalculation_OverrideColumn_Filldown_Variant</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Level</span><span class="span_11"> – Group Level</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Group Type</span><span class="span_11"> – Buy Get Group</span>
+                            </li>
+                            <li class="ListParagraph_3"><span class="span_1">Calculation Field </span>– MultiBuyQuantity</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Multi - Promo Low - Item</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Set the LowestPromotionPrice field at the Item level to the total promotional price divided by the multi buy quantity. Overrides are not configured for multi buy Promotion Strategies because it is not possible to accurately calculate individual product Promotion Price with overrides.</p>
+                        <ul class="ul_1">
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Level</span><span class="span_11"> – Item Level</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Group Type</span><span class="span_11"> – Buy Get Group</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Field </span><span class="span_11">– LowestPromotionPrice</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Formula</span><span class="span_11"> – LowestPromotionPrice = (CASE WHEN&#160; ISNULL(MultiBuyQuantity,0) &lt;&gt; 0 THEN (( ISNULL(TotalPromotionalPrice,0))/ ISNULL(MultiBuyQuantity,0)) ELSE 0 END)</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p>Multi - Promo High - Item</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Set the HighestPromotionPrice field at the Item level to the total promotional price divided by the multi buy quantity. Overrides are not configured for multi buy Promotion Strategies because it is not possible to accurately calculate individual product Promotion Price with overrides.</p>
+                        <ul class="ul_1">
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Level</span><span class="span_11"> – Item Level</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Group Type</span><span class="span_11"> – Buy Get Group</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Calculation Field </span><span class="span_11">– HighestPromotionPrice</span>
+                            </li>
+                            <li class="NormalWeb_1"><span class="span_14">Formula</span><span class="span_11"> – HighestPromotionPrice = (CASE WHEN&#160; ISNULL(MultiBuyQuantity,0) &lt;&gt; 0 THEN (( ISNULL(TotalPromotionalPrice,0))/ ISNULL(MultiBuyQuantity,0)) ELSE 0 END)</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p_4">&#160;</p>
+    </body>
+</html>

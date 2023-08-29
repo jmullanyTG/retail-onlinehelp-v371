@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 >Create a Calculation</h1>
+        <p>Within the Price Manager Configuration Calculation screen, click <span style="font-weight: bold;">New</span> to create a new Calculation or Calculation Rule, enter the required fields and click <span style="font-weight: bold;">Save</span>.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Calculation Name (<span style="color: #FF0000;">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter a descriptive label to summarize the purpose of the Calculation or Rule.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Calculation Description (<span style="color: #4F81BD;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Enter a summary of the Calculation or Rule.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Calculation Method (<span style="color: #4F81BD;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select from a list of preconfigured database stored procedure for more complex mathematical formulas or validations. Selection in the ‘method’ field will override any entry in the ‘formula’ field.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Calculation Formula (<span style="color: #FF0000;">Required</span>/<span style="color: #4F81BD;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Enter the mathematical expression for the system to evaluate. Configured variables can be found in the right panel. Selection in the ‘method’ field will override any entry in the ‘formula’ field.</p>
+                        <p>Calculation Example:</p><pre>Retail Sales Price is % Above Cost1</pre><pre style="text-indent: 0.5in;"><span style="color: #76923C;">Variable1</span> = (1+<span style="color: #4F81BD;">Variable2</span>)*<span style="color: #E36C0A;"> Variable3</span></pre><pre style="text-indent: 1in;"><span style="color: #76923C;">Variable1= [RSP]</span></pre><pre style="text-indent: 1in;"><span style="color: #4F81BD;">Variable2 = [PercentAbove]</span></pre><pre style="text-indent: 1in;"><span style="color: #E36C0A;">Variable3 = [Cost1]</span></pre><pre style="text-indent: 0.5in;"><span style="color: #76923C;">[RSP] </span>= (1+<span style="color: #4F81BD;">[PercentAbove]</span><span style="color: #000000;">)*</span><span style="color: #E36C0A;">[Cost1]</span></pre><pre style="text-indent: 0.5in;"><span style="color: #76923C;">$5.988 </span><span style="color: #000000;">= (1+</span><span style="color: #4F81BD;">.20</span><span style="color: #000000;">)*</span><span style="color: #E36C0A;">$4.99</span></pre>
+                        <p>The system will populate <span style="color: #76923C;">[RSP] </span>to the ‘targeted output field’ and the system will continue validation and calculation of the Price Action Strategy<span style="color: #000000;">.</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Targeted Output Field (<span style="color: #FF0000;">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select from the list of configured Variables (i.e. user input only) that the configured mathematical formula will populate. Output fields cannot be specified for ‘validation’ types.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Rounding Rule (<span style="color: #4F81BD;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select from the list of configured Rounding Rules for the system to apply to the Calculation. Rounding Rules cannot be applied to ‘validation’ types.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p>Calculation Active (<span style="color: #4F81BD;">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Unmarking the checkbox, will remove the ability to configure the Calculation in any new Price Strategies.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

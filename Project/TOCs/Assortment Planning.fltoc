@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Assortment Planning Overview"
+    Link="/Content/Topics/Assortment Planning/Assortment Planning Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="Key Terms"
+      Link="/Content/Topics/Assortment Planning/Key Terms.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Manage Assortment Plans"
+    Link="/Content/Topics/Assortment Planning/Manage Assortment Plans.htm">
+    <TocEntry
+      Title="Prerequisites"
+      Link="/Content/Topics/Assortment Planning/Prerequisites.htm" />
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Header Area Controls"
+        Link="/Content/Topics/Assortment Planning/Header Area Controls.htm" />
+      <TocEntry
+        Title="General Tab"
+        Link="/Content/Topics/Assortment Planning/General Tab.htm" />
+      <TocEntry
+        Title="Snapshot Tab"
+        Link="/Content/Topics/Assortment Planning/Snapshot Tab.htm" />
+      <TocEntry
+        Title="Cluster Set Validation Tab"
+        Link="/Content/Topics/Assortment Planning/Cluster Set Validation Tab.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Target Creation – Scenario Manager"
+    Link="/Content/Topics/Assortment Planning/Target Creation Scenario Manager.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_1.htm">
+      <TocEntry
+        Title="Parameters"
+        Link="/Content/Topics/Assortment Planning/Parameters.htm" />
+      <TocEntry
+        Title="Target Creation Scenarios"
+        Link="/Content/Topics/Assortment Planning/Target Creation Scenarios.htm" />
+      <TocEntry
+        Title="Scenario Details"
+        Link="/Content/Topics/Assortment Planning/Scenario Details.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Target Creation"
+    Link="/Content/Topics/Assortment Planning/Target Creation.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_2.htm">
+      <TocEntry
+        Title="Header Area Controls"
+        Link="/Content/Topics/Assortment Planning/Header Area Controls_1.htm" />
+      <TocEntry
+        Title="Target Data Selection"
+        Link="/Content/Topics/Assortment Planning/Target Data Selection.htm" />
+      <TocEntry
+        Title="Target Segment Definitions"
+        Link="/Content/Topics/Assortment Planning/Target Segment Definitions.htm" />
+      <TocEntry
+        Title="Segment Cluster Details"
+        Link="/Content/Topics/Assortment Planning/Segment Cluster Details.htm" />
+      <TocEntry
+        Title="Rationalization"
+        Link="/Content/Topics/Assortment Planning/Rationalization.htm" />
+      <TocEntry
+        Title="Smart Start"
+        Link="/Content/Topics/Assortment Planning/Smart Start.htm" />
+      <TocEntry
+        Title="Scenario Behaviors by Status"
+        Link="/Content/Topics/Assortment Planning/Scenario Behaviors by Status.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_2.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Line Visualization"
+    Link="/Content/Topics/Assortment Planning/Line Visualization.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_3.htm"></TocEntry>
+    <TocEntry
+      Title="Placeholder &amp; Collection Modes"
+      Link="/Content/Topics/Assortment Planning/Placeholder Collection Modes.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Assortment Planning/Cluster Details Side Pane.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Assortment Planning/Lifespan Side Pane.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="View Parameters"
+        Link="/Content/Topics/Assortment Planning/View Parameters.htm" />
+      <TocEntry
+        Title="Hindsight Placeholder Management"
+        Link="/Content/Topics/Assortment Planning/Hindsight Placeholder Management.htm" />
+      <TocEntry
+        Title="Main Planning View"
+        Link="/Content/Topics/Assortment Planning/Main Planning View.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Assortment Planning/Image Mode.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Supporting Views"
+      Link="/Content/Topics/Assortment Planning/Supporting Views.htm">
+      <TocEntry
+        Title="Style Bank"
+        Link="/Content/Topics/Assortment Planning/Style Bank.htm" />
+      <TocEntry
+        Title="Cluster Set View"
+        Link="/Content/Topics/Assortment Planning/Cluster Set View.htm" />
+      <TocEntry
+        Title="Attributes View"
+        Link="/Content/Topics/Assortment Planning/Attributes View.htm" />
+      <TocEntry
+        Title="AUT View"
+        Link="/Content/Topics/Assortment Planning/AUT View.htm" />
+      <TocEntry
+        Title="Price Exceptions View"
+        Link="/Content/Topics/Assortment Planning/Price Exceptions View.htm" />
+      <TocEntry
+        Title="Seasonality Curve Generator"
+        Link="/Content/Topics/Assortment Planning/Seasonality Curve Generator.htm" />
+      <TocEntry
+        Title="Rate of Sale Calculator"
+        Link="/Content/Topics/Assortment Planning/Rate of Sale Calculator.htm">
+        <TocEntry
+          Title="ROS Scenario Creation/Selection"
+          Link="/Content/Topics/Assortment Planning/ROS Scenario Creation Selection.htm" />
+        <TocEntry
+          Title="ROS Scenario Calculation and Results"
+          Link="/Content/Topics/Assortment Planning/ROS Scenario Calculation and Results.htm" />
+        <TocEntry
+          Title="Scenario Detail Section"
+          Link="/Content/Topics/Assortment Planning/Scenario Detail Section.htm" />
+        <TocEntry
+          Title="Apply Rate of Sale Section"
+          Link="/Content/Topics/Assortment Planning/Apply Rate of Sale Section.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Promotions View"
+        Link="/Content/Topics/Assortment Planning/Promotions View.htm" />
+      <TocEntry
+        Title="Sales Plan View"
+        Link="/Content/Topics/Assortment Planning/Sales Plan View.htm" />
+      <TocEntry
+        Title="Receipt Plan View"
+        Link="/Content/Topics/Assortment Planning/Receipt Plan View.htm" />
+      <TocEntry
+        Title="Image View"
+        Link="/Content/Topics/Assortment Planning/Image View.htm" />
+      <TocEntry
+        Title="Variants View"
+        Link="/Content/Topics/Assortment Planning/Variants View.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_3.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Promotions"
+    Link="/Content/Topics/Assortment Planning/Promotions.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_4.htm">
+      <TocEntry
+        Title="General Functionality"
+        Link="/Content/Topics/Assortment Planning/General Functionality.htm">
+        <TocEntry
+          Title="Defined Promotions Section"
+          Link="/Content/Topics/Assortment Planning/Defined Promotions Section.htm" />
+        <TocEntry
+          Title="Promotion Application Section"
+          Link="/Content/Topics/Assortment Planning/Promotion Application Section.htm" />
+        <TocEntry
+          Title="Promotion Application Details Section"
+          Link="/Content/Topics/Assortment Planning/Promotion Application Details Section.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_4.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Assortment Planning Dashboard"
+    Link="/Content/Topics/Assortment Planning/Assortment Planning Dashboard.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_5.htm">
+      <TocEntry
+        Title="Assortment Buy Sheet Report"
+        Link="/Content/Topics/Assortment Planning/Assortment Buy Sheet Report.htm">
+        <TocEntry
+          Title="Practical Application"
+          Link="/Content/Topics/Assortment Planning/Practical Application_5.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Assortment Choice Count by Period Report"
+        Link="/Content/Topics/Assortment Planning/Assortment Choice Count by Period Report.htm">
+        <TocEntry
+          Title="Practical Application"
+          Link="/Content/Topics/Assortment Planning/Practical Application_6.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Assortment Choice Count Report"
+        Link="/Content/Topics/Assortment Planning/Assortment Choice Count Report.htm">
+        <TocEntry
+          Title="Practical Application"
+          Link="/Content/Topics/Assortment Planning/Practical Application_7.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Example of calculating choice counts"
+        Link="/Content/Topics/Assortment Planning/Example of calculating choice counts.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Assortment Planning/Assortment Upcoming Commitments Report.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Practical Application"
+          Link="/Content/Topics/Assortment Planning/Practical Application_8.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Assortment Rollup"
+    Link="/Content/Topics/Assortment Planning/Assortment Rollup.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_6.htm">
+      <TocEntry
+        Title="Data Parameters"
+        Link="/Content/Topics/Assortment Planning/Data Parameters.htm" />
+      <TocEntry
+        Title="Metric Definitions"
+        Link="/Content/Topics/Assortment Planning/Metric Definitions.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_9.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Reconciliation"
+    Link="/Content/Topics/Assortment Planning/Reconciliation.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_7.htm">
+      <TocEntry
+        Title="Reconciliation Parameters"
+        Link="/Content/Topics/Assortment Planning/Reconciliation Parameters.htm" />
+      <TocEntry
+        Title="Metric Definitions"
+        Link="/Content/Topics/Assortment Planning/Metric Definitions_1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_10.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Commitment Orders in Order Manager"
+    Link="/Content/Topics/Assortment Planning/Commitment Orders in Order Manager.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Assortment Planning/Essential Business Concepts_8.htm" />
+    <TocEntry
+      Title="General Functionality"
+      Link="/Content/Topics/Assortment Planning/General Functionality_1.htm">
+      <TocEntry
+        Title="Navigation"
+        Link="/Content/Topics/Assortment Planning/Navigation.htm" />
+      <TocEntry
+        Title="Working with Order Documents"
+        Link="/Content/Topics/Assortment Planning/Working with Order Documents.htm" />
+      <TocEntry
+        Title="Order Document Details – Break By Size"
+        Link="/Content/Topics/Assortment Planning/Order Document Details Break By Size.htm" />
+      <TocEntry
+        Title="Variant Manager – Prepack"
+        Link="/Content/Topics/Assortment Planning/Variant Manager Prepack.htm" />
+      <TocEntry
+        Title="Order Document Details – Prepack"
+        Link="/Content/Topics/Assortment Planning/Order Document Details Prepack.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Assortment Planning/Practical Application_11.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Currency and VAT Management"
+    Link="/Content/Topics/Currency and VAT Management/Currency and VAT Management Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Currency and VAT Management"
+      Link="/Project/TOCs/Currency and VAT Management.fltoc" />
+  </TocEntry>
+</CatapultToc>

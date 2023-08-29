@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Field Descriptions</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Size Similarity ID</span><span style="font-weight: bold;color: #000000;">: </span><span style="color: #000000;">non-editable integer; displays the unique system ID number associated with the similarity </span><span style="color: #000000;">set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Size Similarity Set Name</span><span style="color: #000000;">:</span><span style="color: #000000;"> user editable alpha numeric; displays/sets the name for the similarity set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Size Type</span><span style="color: #000000;">:</span><span style="color: #000000;"> user editable single-select dropdown; displays/sets the size type to define the similarity set for; populated with Size Types defined in the Allocation module</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Display Size</span><span style="color: #000000;">:</span><span style="color: #000000;"> user editable single-select dropdown; displays/sets the size name under which all similar sizes in the similarity set will be displayed in JustEnough after migration has occurred; populated with sizes contained in the selected Size Type</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Similar Size</span><span style="color: #000000;">:</span><span style="color: #000000;"> user editable multi-select dropdown; displays/sets the sizes to be grouped together in the similarity set; populated with sizes contained in the selected Size Type</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Queue For Migration</span><span style="color: #000000;">:</span><span style="color: #000000;"> non-editable checkbox; indicates that changes made to the similarity set have been saved and queued for migration in the next migration script run</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">similarity sets that have been queued for migration but which contain sizes that have yet to be migrated will have this cell conditionally formatted </span><span style="font-weight: bold;font-style: italic;color: #FF0000;">red</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Has Migrated</span><span style="color: #000000;">:</span><span style="color: #000000;"> non-editable checkbox; indicates whether or not migration has been completed for the similarity set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Last Migrated Date</span><span style="color: #000000;">:</span><span style="color: #000000;"> non-editable calendar control; displays the date the similarity set was last migrated</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Last Migrated User</span><span style="color: #000000;">:</span><span style="color: #000000;"> non-editable single-select dropdown; displays the user who last ran the migration script for the similarity set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Create Date</span><span style="color: #000000;">:</span><span style="color: #000000;"> non-editable calendar control; displays the date the similarity set was created</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Create User</span><span style="color: #000000;">:</span><span style="color: #000000;"> non-editable single-select dropdown; displays the user who created the similarity set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Last Modified Date</span><span style="color: #000000;">:</span> <span style="color: #000000;">non-editable calendar control; displays the date the </span><span style="color: #000000;">similarity set was last modified</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Last Modified User</span><span style="color: #000000;">:</span> <span style="color: #000000;">non-editable single-select dropdown; displays the user who last ran the </span><span style="color: #000000;">modified</span><span style="color: #000000;"> the similarity set</span></li>
+        </ul>
+    </body>
+</html>

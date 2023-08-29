@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="For Printed Manuals"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/Curves.fltoc"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  RemoveImagesFromHeadings="true"
+  EmbedImages="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  ConditionTagExpression="include[&quot;General.How-To Guides&quot; or &quot;General.Online Help&quot; or &quot;General.Printed Manuals&quot;] "
+  MasterPageLayout="/Content/Resources/PageLayouts/FrontMatter.flpgl"
+  OutputFolder="C:\Help_Files\3.7 Word Guides">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GeneratePDF="false"
+    DisableMasterPageUsage="true" />
+  <Variables>
+    <Variable
+      Name="JustEnough Variables/Printed Manual Title">Curves</Variable>
+    <Variable
+      Name="Variables/BookTitle">Generic view Collection Set Manager</Variable>
+    <Variable
+      Name="Variables/BookVersion">3.7.1</Variable>
+  </Variables>
+</CatapultTarget>

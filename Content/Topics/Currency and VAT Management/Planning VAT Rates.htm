@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h3 >Planning VAT Rates</h3>
+        <p>This view can be accessed via <span style="font-weight: bold;">Plan &gt; Views &gt; Currency &gt; Planning VAT </span>Rates. Some countries include tax in the actual ticket prices of products sold, rather than calculating it as a percent of the selling price during sales transactions. This is known as value added tax or VAT. In this view, users can manage VAT rates at any level of any defined product hierarchy and for Site Groups 1-20, as defined during implementation</p>
+        <p><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">All ticket prices (AUT) within Assortment Planning are assumed to be </span><span style="font-weight: bold;font-style: italic;">VAT Inclusive</span><span style="font-style: italic;"> unless otherwise noted by an “ex VAT” descriptor in the metric name.</span>
+        </p>
+        <p><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important: </span><span style="font-style: italic;">Even if VAT does not apply to your business, you must, at a minimum, assign a VAT Rate of zero to the highest level of all product hierarchies to be used in assortment plans. Because Site Groups are not explicitly tied to site hierarchies, you may need to enter this zero rate for more than highest level Site Group, depending on how your groups are defined</span>
+        </p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Planning VAT Rates.png" style="visibility: visible;width: 634px;height: 266px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Header Area Controls</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Product Hierarchy:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable dropdown; selects the product hierarchy for which you want to manage VAT Rates</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Hierarchy Level:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable single-select tree; selects the specific level of the selected Product Hierarchy for which you want to manage VAT Rates</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:</span><span style="font-style: italic;color: #000000;"> changes entered for </span><span style="font-style: italic;color: #000000;">higher levels of the product hierarchy </span><span style="font-style: italic;color: #000000;">will be pushed down to </span><span style="font-style: italic;color: #000000;">the levels beneath</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:</span><span style="font-style: italic;color: #000000;"> for higher </span><span style="font-style: italic;color: #000000;">hierarchy levels</span><span style="font-style: italic;color: #000000;"> with multiple VAT Rates assigned to the levels beneath, VAT Rate will display a straight average of the rates for those levels; bold italic formatting as shown below will be applied to make cases where this is true easily identifiable to the user:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Currency and VAT Management/Planning VAT Rates_1.png" style="visibility: visible;width: 634px;height: 145px;" />
+        </p>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Start Date:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable calendar control; selects the start of the time frame for which to display VAT rates in the view</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">End Date:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> calendar control; selects the end</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> of the time frame for which to display VAT rates in the view</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Site Group:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable dropdown; selects the Site Group level (1-20) for which to display and work with VAT rates in the view</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">c</span><span style="font-style: italic;color: #000000;">hanges entered for site groups corresponding to higher levels of the site hierarchy will be pushed down to lower level site groups</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:</span><span style="font-style: italic;color: #000000;"> for higher level site groups with multiple VAT Rates assigned to the levels beneath, VAT Rate will display a straight average of the rates for those levels; </span><span style="font-weight: bold;font-style: italic;color: #000000;">bold italic formatting</span><span style="font-style: italic;color: #000000;"> as shown below will be applied to make cases where this is true easily identifiable to the user:</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Currency and VAT Management/Planning VAT Rates_1.png" style="visibility: visible;width: 634px;height: 145px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Parameters:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">shows/hides the Parameters area of the view</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Execute:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">updates the view with all defined VAT rate entries for the intersection of the selected Hierarchy Level, Site Group, and time frame</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">with regard to time, any entries that overlap any portion of the time frame specified by the selected Start and End Dates will be shown</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Planning VAT Rates Section</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">New:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">adds a new VAT Rate line to the current view</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Delete:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">removes the selected VAT Rate line(s) from the current view</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span><span style="font-style: italic;color: #000000;"> users will not be asked to confirm deletion of </span><span style="font-style: italic;color: #000000;">VAT Rate lines</span><span style="font-style: italic;color: #000000;">, so be certain you want to remove them before clicking Delete</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Fields: </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">opens the fields Customization dialog; users can drag fields to/from the </span><span style="font-family: Arial;color: #000000;font-size: 12pt;">tab’s</span><span style="font-family: Arial;color: #000000;font-size: 12pt;"> header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Currency and VAT Management/Currency Exchange Rates_7.png" style="visibility: visible;width: 227px;height: 194px;" />
+        </p>
+        <p class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">Custom layouts can be saved/restored by right-clicking in the </span><span style="color: #000000;">Pivot Grid</span><span style="color: #000000;"> and selecting Save Layout or Restore Layout, respectively</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">saves all new VAT Rate lines and deletions of existing VAT Rate lines made since the last Apply</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">removes all new VAT Rate lines and undoes the deletion of exi</span><span style="font-family: Arial;color: #000000;font-size: 12pt;">s</span><span style="font-family: Arial;color: #000000;font-size: 12pt;">ting VAT Rate lines made since the last Apply</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Product Level:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable dropdown (non-editable for saved lines); sets the product level for the VAT Rate line</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Start Date:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable calendar control (non-editable for saved lines); sets the start date for the VAT Rate line to become effective</span></li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">End Date:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">user editable calendar control (non-editable for saved lines); sets the end date for the VAT Rate line</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 126pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 108pt;"><span style="font-family: Arial;font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-family: Arial;font-style: italic;color: #000000;font-size: 12pt;">the latest VAT rate line for a given product level will always Default to the end of the system timeline (currently Dec 31, 2999) in order to always provide an active VAT rate for system calculations. When setting VAT rate changes beyond the latest entry, the previous latest entry will change its End Date automatically to just before the new entry timeframe begins</span>
+            </li>
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 108pt;"><span style="font-family: Arial;font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-family: Arial;font-style: italic;font-size: 12pt;">if my latest VAT entry for Men’s Short Sleeve Tops is currently from January 1, 2018 to Dec 31, 2999 (the system default) and I enter a new line with a start date of June 1, 2018 and an end date of Dec 31, 2018, the previous latest entry’s End Date will change to May 31, 2018. The new entry will begin on June 1, 2018 as entered but the End Date will change to Dec 31, 2999 to provide VAT rates through the future</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="NormalWeb" style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-family: Arial;font-weight: bold;color: #000000;font-size: 12pt;">Site Group Columns:</span> <span style="font-family: Arial;color: #000000;font-size: 12pt;">columns shown depend on the levels that exist within the selected Site Group</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">VAT Rate:</span> <span style="color: #000000;">user editable decimal (0.0001) (non-editable for saved lines); sets the VAT Rate for the specified product level and time frame</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Site Count:</span> <span style="color: #000000;">non-editable integer; displays the number of sites to which the VAT Rate will be applied; updates after Apply for new lines</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important</span><span style="font-weight: bold;font-style: italic;color: #FF0000;">:</span> <span style="font-style: italic;color: #000000;">VAT rates cannot be set for newly entered lines until they have first been saved via Apply; this is a current system limitation rather than an error</span></li>
+        </ul>
+    </body>
+</html>

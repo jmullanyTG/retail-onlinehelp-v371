@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="4032" MadCap:lastWidth="2080">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Policy Task Parameters</h1>
+        <p>Policy task parameters appear on two tabs: General and Policy.</p>
+        <h2>General tab parameters</h2>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Name</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The display name of the policy task.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Description</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">An optional description field.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Filter</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The filter containing the items that the settings in this policy task will apply to.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Default Task</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Whether or not this is the default policy task for all items.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Task Enabled</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Whether or not this task is enabled. If the task is not enabled, it will not be applied to items.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Task Execution Order</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The order in which this task will be executed among all other active tasks. Execution order is important because tasks executed "later" in the order supersede those executed earlier. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Task Available From</td>
+                    <td rowspan="2" class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select these options if you want to set start and/or end dates for this task. The task will automatically be enabled on the Task&#160;Start Date and disabled on the Task End Date.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Task Available To</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Task Available From Date</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Select Task Enabled From to enable this property.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Task Available To Date</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Select Task Enabled To to enable this property.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>Policy tab parameters</h2>
+        <h3>Policy Task Actions box</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Manual Order Policy Indicator</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Sets whether or not the Order Policy Type of items included this task can be automatically changed by this or other policy tasks. </p>
+                        <ul>
+                            <li style="font-weight: normal;"><b>Set All Items As Auto</b> - An item's Order Policy Type can be automatically changed by a policy task.</li>
+                            <li style="font-weight: normal;"><b>Set All Items As Manual</b> - An item's Order Policy Type cannot be automatically changed by a policy task. It must be changed manually.</li>
+                            <li style="font-weight: normal;"><span style="font-weight: bold;">Do Not Update</span> - Preserves the current setting of this property in each item. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2"><b>Manual Policy Setting</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Sets whether or not the policy settings of items included this task can be automatically changed by this or other policy tasks. </p>
+                        <ul>
+                            <li style="font-weight: normal;"><b>Set All Items As Auto</b> - An item's policy settings can be automatically changed by a policy task.</li>
+                            <li style="font-weight: normal;"><b>Set All Items As Manual</b> - An item's policy settings cannot be automatically changed by a policy task. It must be changed manually.</li>
+                            <li style="font-weight: normal;"><span style="font-weight: bold;">Do Not Update</span> - Preserves the current setting of this property in each item.
+				</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Policy box </h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1">
+            </col>
+            <col class="TableStyle-jeTables-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Order Policy Type</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Sets whether and how order recommendations are generated for items in this task.</p>
+                        <ul>
+                            <li style="font-weight: normal;"><b>[Do Not Set]</b> - Preserves an item's current Order Policy Type.</li>
+                            <li style="font-weight: normal;"><b>Bin</b>- Applies a fixed-quantity order methodology to items (for example, if one is sold another one is ordered). Best suited for items with intermittent, low demand.</li>
+                            <li style="font-weight: normal;"><b>Non-Stocked</b> - Prevents JustEnough from making replenishment recommendations for these items, except in case of customer orders that cannot be filled with current stock on hand.</li>
+                            <li style="font-weight: normal;"><b>Normal Stocked</b>- Items that are everyday-selling items which should be continually stocked and replenished. JustEnough generates order recommendations for these items based on inventory policy and item-specific ordering criteria. </li>
+                            <li style="font-weight: normal;"><b>Redundant</b>- Items that will not be sold. JustEnough will not re-order these items.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Replenishment Strategy box</h3>
+        <p style="font-weight: normal;"><b>Note</b>: This table describes all possible replacement strategy parameters. Not all of these parameters appear in a given policy task. The parameters that appear in a specific policy task are determined by the task's Order Policy Type.<br /></p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Back Order Ratio</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The percentage of lost sales which areexpected to result in a customer returning to purchase the item.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Bin Min Units</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The minimum quantity of units required in the bin.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Bin Max Units</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The maximum quantity of units allowed in the bin.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Review Period Days</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The number of days between inventory reviews for this item. Inventory reviews determine whether or not the item needs to be re-ordered to comply with stocking parameters.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Replenishment Cycle Days</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">The number of days that must pass between orders for this item. Must be greater than or equal to Review Period Days.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Safety Stock box<br /></h3>
+        <p style="font-weight: normal;"><b>Notes</b>: </p>
+        <ul>
+            <li style="font-weight: normal;">This table describes all possible safety stock parameters. Not all of these parameters appear in a given policy task. The parameters that appear in a specific policy task are determined by the task's Order Policy Type.</li>
+            <li style="font-weight: normal;">The system policy <b>Max Safety Stock as Percent of Max Stock</b> lets you cap safety stock quantities at a specified percentage of an item's <b>Maximum Stock Units</b> value. Unit-based minimums (for example, Minimum Safety Stock Units) that exceed the Maximum Stock Units value will still be respected.<br /></li>
+        </ul>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Minimum Safety Stock Units</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The minimum planned inventory level (in units) for this item at your locations.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Safety Stock Days</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The number of days during which safety stock units may be sold to meet demand for the item.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Target Service Level</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">The target service level (as a percentage) for the item. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Returns box</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Return Rate</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The percentage of items which are expected to be returned.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Days Before Return</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The expected average number of days between the sale of an item and its return.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Reuse Rate</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The percentage of returned items that are expected to be salable stock again.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Days Before Reuse</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>The expected average number of days between an item being returned and it being considered salable stock again.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

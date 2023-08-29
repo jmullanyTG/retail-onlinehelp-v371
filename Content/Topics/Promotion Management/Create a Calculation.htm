@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="2705" MadCap:lastWidth="1272">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >Create a Calculation</h1>
+        <p class="NormalWeb_1"><span class="span_7">Within the Promotion Calc</span><span class="span_7">ulations </span><span class="span_7">tab</span><span class="span_7">, click </span><span class="span_8">New</span><span class="span_7"> above the Calculation Repository grid in the bottom half of the screen to create a new Promotion Calculation. Enter the</span><span class="span_7"> required fields and click </span><span class="span_8">Save</span><span class="span_7">.</span>
+        </p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p class="p_2">Field</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p class="p_2">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Calculation Name (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter a descriptive label to summarize the purpose of the Calculation. This will be used to identify the Calculation when creating Calculation Sets.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Calculation Description (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>A summary of the Calculation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Calculation Type (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Identify when the Calculation will be run in relation to the retrieval of any dynamic item, retail, or cost updates to the Promotion. Select the ‘Post’ option from the dropdown menu.</p>
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1"><span class="span_1">Pre</span> - To be developed as future functionality.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Post</span> - This should be selected in all cases and will run the Calculation after price and cost retrieval.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Both</span> - To be developed as future functionality.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Method (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The dropdown is populated by the available methods (i.e. advanced processes applied at the database level) configured for use. &#160;Select a method the system will apply for the Calculation. This will supersede any value entered in the Aggregation, Formula and Rounding fields.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Calculation Level (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Select a level from the populated dropdown. All levels act on the Site Cluster level.</p>
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1"><span class="span_1">Promotion Level </span>– To be developed as future functionality. For now, selecting this option means that Calculations will be performed at the Promotion Group level.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Promotion Aggregate Level</span> – Calculations will be performed at the Promotion Group level.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Group Level</span> – Calculations will be performed at the Product Group level.</li>
+                            <li class="ListParagraph_1">Product Level</li>
+                        </ul>
+                        <ul class="ul_2">
+                            <li class="ListParagraph_2"><span class="span_1">Item Level</span> – Calculations will be performed at the Item Master Level.</li>
+                            <li class="ListParagraph_2"><span class="span_1">Variant Level</span> – Calculations will be performed at the Variant Level.</li>
+                        </ul>
+                        <p><span class="span_2">Note</span><span class="span_3">: The Promotion Manager system defines Product Levels as follows:</span>
+                        </p>
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1"><span class="span_10">Inventory</span><span class="span_3"> – A product at a particular Site so it has a single price</span><span class="span_3">.</span>
+                            </li>
+                            <li class="ListParagraph_1"><span class="span_10">Item Master</span><span class="span_3"> – A product across all Sites that may have different prices at different Sites. An Item Master may have a max price for example.</span>
+                            </li>
+                            <li class="ListParagraph_1"><span class="span_10">Variant</span><span class="span_3"> – A variant of Item Masters based on a shared attribute i.e. size, color, style, etc. An example of a Variant is Men’s Polo Shirts</span><span class="span_3">.</span> </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Group Type (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>From the dropdown options, select one to identify which Group Association Type this Calculation will be run on:</p>
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1"><span class="span_1">Buy Group</span> - The Calculation will only be run on the Buy Group.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Get Group</span> - The Calculation will only be run on the Get Group.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Buy Get Group</span> - The Calculation will only be run on both the Buy and Get Groups. This option should also be selected for all Promotion Types that are not of the Buy Get type.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Calculation Field (<span class="span_5">Required</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The dropdown is populated with database fields where the resulting value of the Calculation will be stored.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Aggregation (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Select an aggregation Calculation from the populated dropdown. This will override the Formula if specified.</p>
+                        <ul class="ul_1">
+                            <li class="ListParagraph_1"><span class="span_1">AVG</span> - Average all results.</li>
+                            <li class="ListParagraph_1"><span class="span_1">Calculate</span> - Will run what is specified in the Formula column.</li>
+                            <li class="ListParagraph_1"><span class="span_1">MAX</span> - The maximum value of all results.</li>
+                            <li class="ListParagraph_1"><span class="span_1">MIN</span> - The minimum value of all results.</li>
+                            <li class="ListParagraph_1"><span class="span_1">SUM</span> - Total all results.</li>
+                            <li class="ListParagraph_1"><span class="span_1">MIN no 0</span> - The minimum value of all results, not including zero values.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Formula (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Enter a mathematical formula for the Calculation. Any Valid SQL statement can be used if all fields exists in the Promotion Price Output standard or custom table structure. This formula will be used only if the Method and Aggregation columns are blank or if Aggregation is set to ‘Calculate’.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p><a href="Delete a Calculation.htm">Delete</a> (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Leave this checkbox unselected. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p><a href="Rounding Rules.htm">Rounding Set</a> (<span class="span_9">Optional</span>)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Select from the configured list of Standard or Price Ending Rounding Rules to apply to the Calculation. Rounding Sets can always be assigned but are only applied when the Calculation Field is of a valid numeric data type (Float, Numeric, and Decimal) and when the Method is blank. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="NormalWeb_2">&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

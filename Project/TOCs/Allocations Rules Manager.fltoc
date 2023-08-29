@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Allocations Rules Manager Overview"
+    Link="/Content/Topics/Allocations Rules Manager/Allocations Rules Manager.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Allocation Rules"
+    Link="/Content/Topics/Allocations Rules Manager/Allocation Rules.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations Rules Manager/Essential Business Concepts.htm">
+      <TocEntry
+        Title="Fixed Rule"
+        Link="/Content/Topics/Allocations Rules Manager/Fixed Rule.htm" />
+      <TocEntry
+        Title="Runtime Rule"
+        Link="/Content/Topics/Allocations Rules Manager/Runtime Rule.htm" />
+      <TocEntry
+        Title="Hierarchy Rule"
+        Link="/Content/Topics/Allocations Rules Manager/Hierarchy Rule.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations Rules Manager/Practical Application.htm">
+      <TocEntry
+        Title="Create Rule"
+        Link="/Content/Topics/Allocations Rules Manager/Create Rule.htm" />
+      <TocEntry
+        Title="Set Item and/or Site Groups"
+        Link="/Content/Topics/Allocations Rules Manager/Set Item and or Site Groups.htm" />
+      <TocEntry
+        Title="Select Included Groups"
+        Link="/Content/Topics/Allocations Rules Manager/Select Included Groups.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations Rules Manager/Technical Execution.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Allocation Group"
+    Link="/Content/Topics/Allocations Rules Manager/Allocation Group.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Allocations Rules Manager/Essential Business Concepts_1.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Allocations Rules Manager/Practical Application_1.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Allocations Rules Manager/Technical Execution_1.htm" />
+  </TocEntry>
+</CatapultToc>

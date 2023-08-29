@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.Printed Manuals" />
+  <TocEntry
+    Title="How-To Guides"
+    ComputeToc="false">
+    <TocEntry
+      Title="How To Manage Supply Routes"
+      Link="/Content/Topics/How-To Guides/Supply Routes/How To Manage Supply Routes.htm" />
+    <TocEntry
+      Title="How To Manage Store Openings and Closings"
+      Link="/Content/Topics/How-To Guides/Store Management/How To Manage Store Openings and Closings.htm" />
+    <TocEntry
+      Title="How To Introduce New Items Into Stores"
+      Link="/Content/Topics/How-To Guides/Item Management/How to Introduce New Items Into Your Stores.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      ReplaceMergeNode="false" />
+    <TocEntry
+      Title="How To Manage Demand Forecasts"
+      Link="/Content/Topics/How-To Guides/Sales Demand/Managing Demand Forecasts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="How To Manage Inventory Strategies"
+      Link="/Content/Topics/Exceptions/Inventory/Inventory Exceptions Overview.htm" />
+    <TocEntry
+      Title="How to Manage End of Season"
+      Link="/Content/Topics/How-To Guides/How To Manage End of Season.htm" />
+  </TocEntry>
+</CatapultToc>

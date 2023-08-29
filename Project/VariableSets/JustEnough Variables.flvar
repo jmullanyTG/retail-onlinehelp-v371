@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Name="Printed Manual Title"
+    Comment="Replace with the TOC title of the guide to print"
+    EvaluatedDefinition="Demand Management">Demand Management</Variable>
+  <Variable
+    Name="JE Version"
+    Comment="The JustEnough version number"
+    EvaluatedDefinition="3.7.1">3.7.1</Variable>
+  <Variable
+    Name="Print Date"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2018-06-06T19:22:01.2054022-07:00"
+    EvaluatedDefinition="MMMMMMMMM dd, yyyy">MMMMMMMMM dd, yyyy</Variable>
+</CatapultVariableSet>

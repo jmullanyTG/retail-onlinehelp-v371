@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Special Character Translations</h1>
+        <p>To avoid mistranslations in Adobe InDesign, the Generate Output to File process automatically replaces some special characters with strings.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 314px;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Character</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Replacement string</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="text-align: center;">¢ </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">&amp;cent</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="text-align: center;">•</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">&amp;bull</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="text-align: center;">™</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1"> &amp;trade</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="text-align: center;">®</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">&amp;reg</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To configure InDesign to properly translate these strings back into their intended symbols:</p>
+        <ol>
+            <li>In InDesign, select a field.</li>
+            <li>Go to Field Properties &gt; General.</li>
+            <li>
+                <p>In the Cleansing Options area, enter the following translations:</p>
+                <p><code>&amp;cent=¢;&amp;bull=•;&amp;trade=™;&amp;reg=®</code>
+                </p>
+            </li>
+            <li>Repeat for all fields in which these symbols may appear.</li>
+        </ol>
+        <p>These configurations must be saved with the panel data source to be used to import the files into EasyCatalog.</p>
+        <p style="font-weight: bold;">Note: <span style="font-weight: normal;">The syntax for the cleansing options varies between versions of EasyCatalog. Refer to the your EasyCatalog User Guide for the correct translation for your version.</span></p>
+        <p>&#160;</p>
+    </body>
+</html>

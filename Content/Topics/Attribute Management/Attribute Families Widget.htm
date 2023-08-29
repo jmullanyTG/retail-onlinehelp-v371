@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Attribute Families Widget</h1>
+        <p>The attribute families widget allows for the creation and maintenance of attribute families. Each attribute family contains attribute that pertain to that family and can be imported from host systems if available.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Families Widget.png" style="visibility: visible;width: 634px;height: 196px;" />
+        </p>
+        <p>The attribute families widget returns a number of columns that define how attributes can be assigned and which families are available in the appropriate sets.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Family Name – Provides a descriptive name for the family of attributes</li>
+            <li style="list-style-type: disc;">Family Description – provides a description of the attribute family and the attributes it contains</li>
+            <li style="list-style-type: disc;">Entity types – the entity types selection restricts the data entities to which the attributes within the family can be applied.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Important: the Variant type must be assigned for an attribute family to be definable on variants within JustEnough; the Variant Placeholder entity type must be assigned for an attribute family to be definable for placeholders within Assortment Planning</li>
+            <li style="list-style-type: circle;">Note: by only assigning the Variant Placeholder entity type to a family, that family will not be assignable to variants and will be exclusively used within Assortment Planning; this can be useful in organizations where a master data team defines the primary attributes but there are others that users within the merchandising team wish to assign while planning</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Allow Multiple Values – This check box defines whether a user will be able to select multiple attributes from a family to assign to an entity.</li>
+            <li style="list-style-type: disc;">AP Updates Variants – This check box defines whether changes will be allowed in Assortment Planning to attributes attached to assigned variants</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Checked means the corresponding attribute families will be editable in Assortment Planning for placeholders with assigned variants, and any changes made to them will update the assigned variant’s attributes</li>
+            <li style="list-style-type: circle;">Unchecked means the corresponding attribute families will be grayed out and uneditable in Assortment Planning for placeholders with assigned variants</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Families Widget_1.png" style="visibility: visible;width: 393px;height: 172px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Note: this setting only appears when the system policy Update Variant Attribute Values In Assortment Planning is set to TRUE and is only valid for attribute families with the Variant Entity Type assigned; see JustEnough Assortment Planning Standard Documentation &gt; Line Visualization &gt; Supporting Views &gt; Attributes View for more information</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Attribute Set Assignment – The attribute sets selected in the filter described above will dynamically form columns which users can check to specify whether an attribute family is available for that set.</li>
+        </ul>
+        <p>Attribute Values</p>
+        <p>On selecting the attribute family from the widget above, the attribute values widget will update. </p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Families Widget_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 156px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>The attribute values widget allows users to create new widgets that have not been imported from a host system.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Value Code – The value code is a distinct code that identifies the attribute value</li>
+            <li style="list-style-type: disc;">Value Description – The value description describes the attribute value</li>
+            <li style="list-style-type: disc;">Value External ID – This identifier is read only and will only be populated on attribute values populated from external systems. Users may not edit attribute values on imported data.</li>
+            <li style="list-style-type: disc;">Behavior – For each attribute set to which the attribute value may be assigned, there are three behaviors for the value</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">“Blank/None” – This will mean the users cannot select this attribute value to assign to a product associated with the attribute set.</li>
+            <li style="list-style-type: circle;">Allowed – This means the attribute value is allowed to be set against a product associated with the attribute set.</li>
+            <li style="list-style-type: circle;">Default – This indicates the attribute value or values (depending on if multi values are allowed) that will be defaulted against any product associated with the attribute set.</li>
+        </ul>
+    </body>
+</html>

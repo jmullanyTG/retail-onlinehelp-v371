@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Demand Forecasting Overview"
+    Link="/Content/Topics/Demand Forecasting/Demand Forecasting Overview.htm"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"
+    AutoEndOnLeftPage="disabled">
+    <TocEntry
+      Title="JustEnough Forecast Tournament"
+      Link="/Content/Topics/Demand Forecasting/JustEnough Forecast Tournament.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Inventory Level Forecasting"
+    Link="/Content/Topics/Demand Forecasting/Inventory Level Forecasting.htm">
+    <TocEntry
+      Title="Filters"
+      Link="/Content/Topics/Demand Forecasting/Filters.htm" />
+    <TocEntry
+      Title="General Workflow Features"
+      Link="/Content/Topics/Demand Forecasting/General Workflow Features.htm">
+      <TocEntry
+        Title="Forecast Method and Method Fit"
+        Link="/Content/Topics/Demand Forecasting/Forecast Method and Method Fit.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Graph"
+      Link="/Content/Topics/Demand Forecasting/Graph.htm" />
+    <TocEntry
+      Title="Grid"
+      Link="/Content/Topics/Demand Forecasting/Grid.htm"></TocEntry>
+    <TocEntry
+      Title="Details"
+      Link="/Content/Topics/Demand Forecasting/Details.htm">
+      <TocEntry
+        Title="Forecast"
+        Link="/Content/Topics/Demand Forecasting/Forecast.htm" />
+      <TocEntry
+        Title="Details"
+        Link="/Content/Topics/Demand Forecasting/Details_1.htm" />
+      <TocEntry
+        Title="Settings"
+        Link="/Content/Topics/Demand Forecasting/Settings.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Demand Forecasting/Practical Application.htm">
+      <TocEntry
+        Title="Graph Viewer"
+        Link="/Content/Topics/Demand Forecasting/Graph Viewer.htm">
+        <TocEntry
+          Title="Series"
+          Link="/Content/Topics/Demand Forecasting/Series.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Grid View"
+        Link="/Content/Topics/Demand Forecasting/Grid View.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Demand Forecasting/Shape Forecasting.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Demand Forecasting/Technical Execution.htm">
+      <TocEntry
+        Title="SQL Tables and Procedures"
+        Link="/Content/Topics/Demand Forecasting/SQL Tables and Procedures.htm">
+        <TocEntry
+          Title="Forecast Tables"
+          Link="/Content/Topics/Demand Forecasting/Forecast Tables.htm" />
+        <TocEntry
+          Title="Effective Forecast View"
+          Link="/Content/Topics/Demand Forecasting/Effective Forecast View.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Forecasting Engine"
+        Link="/Content/Topics/Demand Forecasting/Forecasting Engine.htm">
+        <TocEntry
+          Title="Forecast Definition"
+          Link="/Content/Topics/Demand Forecasting/Forecast Definition.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Maintenance"
+        Link="/Content/Topics/Demand Forecasting/Maintenance.htm" />
+      <TocEntry
+        Title="Inventory Level Phase-in and Phase-out"
+        Link="/Content/Topics/Demand Forecasting/Inventory Level Phase in and Phase out.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Level Forecasting"
+    Link="/Content/Topics/Demand Forecasting/Level Forecasting.htm">
+    <TocEntry
+      Title="Essential Business Concepts"
+      Link="/Content/Topics/Demand Forecasting/Essential Business Concepts.htm" />
+    <TocEntry
+      Title="Practical Application"
+      Link="/Content/Topics/Demand Forecasting/Practical Application_1.htm" />
+    <TocEntry
+      Title="Technical Execution"
+      Link="/Content/Topics/Demand Forecasting/Technical Execution_1.htm">
+      <TocEntry
+        Title="Level Definition"
+        Link="/Content/Topics/Demand Forecasting/Level Definition.htm" />
+      <TocEntry
+        Title="Split Factors"
+        Link="/Content/Topics/Demand Forecasting/Split Factors.htm">
+        <TocEntry
+          Title="Split Modes"
+          Link="/Content/Topics/Demand Forecasting/Split Modes.htm" />
+        <TocEntry
+          Title="Split to Redundant / Split to Non-Stocked"
+          Link="/Content/Topics/Demand Forecasting/Split to Redundant Split to Non Stocked.htm" />
+        <TocEntry
+          Title="Effective Forecast Views"
+          Link="/Content/Topics/Demand Forecasting/Effective Forecast Views.htm" />
+        <TocEntry
+          Title="Cleanup Procedures"
+          Link="/Content/Topics/Demand Forecasting/Cleanup Procedures.htm" />
+        <TocEntry
+          Title="System Policies"
+          Link="/Content/Topics/Demand Forecasting/System Policies.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

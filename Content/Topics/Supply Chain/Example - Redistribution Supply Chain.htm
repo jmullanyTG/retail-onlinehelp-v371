@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3498" MadCap:lastWidth="2102" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Redistribution Supply Chain</h1>
+        <p>Redistribution supply chains create site pools  which define where inventory can be redistributed from when there are overages or shortages in your stores or DCs.</p>
+        <p>In this example, we'll assign the site "Web-Canada" to a pool of Canadian stores and adjust lead times and source priorities accordingly within the pool.</p>
+        <h2>Related video</h2>
+        <p>
+            <object MadCap:HTML5Video="true" src="../../Resources/Videos/BC-1 CD-4 S-1 Redistribution SC Management.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video" style="margin-left: 5px;">
+            </object>
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Maintain tab, click <b>Supply Chain</b>.</li>
+            <li>
+                <p>In the Open Supply Chain dialog box, select the  [Redistribution ] supply chain.</p>
+                <p><b>Note</b>: If the Open Supply Chain dialog box does not automatically appear, click <b>Open Supply Chain</b> on the toolbar.</p>
+            </li>
+            <li>
+                <p>The supply chain appears in the Supply Chain screen. Note that the Hierarchy pane contains an Unassigned Sites list and a set of 7 site pools. In this supply chain, a separate pool has been created for each site region. Each pool contains the stores from its region.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 4 pools.png" />
+                </p>
+            </li>
+            <li>To add unassigned sites to a pool, simply drag the stie from the Unassigned Sites list and drop it into a pool. For this example, drag the site Web-Canada into the Canada pool and then click <b>Save</b> in the Supply Chain toolbar.</li>
+            <li>
+                <p>Click on any site in the Canada pool to view the pool details, which include a lead time matrix for sites within the pool.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 4 matrix.png" />
+                </p>
+            </li>
+            <li>
+                <p>The Web-Canada site inherits the pool's default lead time value (2 days). You can customize lead time within the grid by clicking the LeadTime value for any site-site combination and entering a new value. In this example, we'll change the lead time between Web-Canada and Vancouver from 2 days to 3 days.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 4 leadtime.png" />
+                </p>
+            </li>
+            <li>
+                <p>Finally, we want the Ottawa store to get inventory from the Web-Canada site before any other site in the pool. To set this priority, go to the Ottawa row in the matrix and enter 1 in the priority column under Web-Canada.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 4 priority.png" />
+                </p>
+            </li>
+            <li>Click <b>Save</b> in the Supply Chain toolbar to save the changes.</li>
+        </ol>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Managing Supply Chains.htm">Managing Supply Chains</a>
+            </li>
+            <li><a href="Supply Chain Overview.htm">Supply Chain Overview</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

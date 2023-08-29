@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Attribute Set Hierarchy Assignments Widget</h1>
+        <p>If a compatible hierarchy is selected which supports the entity types selected, users will be presented with the hierarchy and be allowed to specify for each of the hierarchy paths an attribute set that would provide the list of attribute families that are allowed for that hierarchy.</p>
+        <p>Note that specifying an attribute set at the higher level of the hierarchy will default to all the levels below in the hierarchy </p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Set Hierarchy Assignments.png" style="visibility: visible;mso-wrap-style: square;width: 538px;height: 223px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>In the above example, specifying the attribute set at the Mens level of the hierarchy would mean that all of the subsequent Accessories levels of the hierarchy would inherit the default set for Mens. However, users could set a different attribute set for each level below in the hierarchy if necessary.</p>
+        <p>&#160;</p>
+        <p>Attribute Management </p>
+        <p>The attribute management screen contains two widgets, “attribute families” and “attribute values”.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Set Hierarchy Assignments_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 401px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>The screen is controlled by two filters:</p>
+        <p>Entity Type – This filter will control which attribute families will be returned to the screen based on the attribute families which are associated with the entity. Only attribute families that are associated with the chosen entity will be returned.</p>
+        <p>Attribute values can be assigned by entity and there are seven entities to which they can be assigned</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li style="list-style-type: disc;">Inventory – Item/location level for attributes that relate to an item at a specific location.</li>
+            <li style="list-style-type: disc;">Item master – item across all locations for attributes that are the same for each item across all locations.</li>
+            <li style="list-style-type: disc;">Site – site based attributes that can be specified at a site level.</li>
+            <li style="list-style-type: disc;">Customer – attributes specific to customers.</li>
+            <li style="list-style-type: disc;">Variant – Attributes that are applied to the defined variant. A variant is grouping of items for which plans are created and maintained. An example of this could be a style/color. Variants are used to define real products in assortment planning.</li>
+            <li style="list-style-type: disc;">Variant Placeholder – Variant placeholders are created in assortment planning to allow users to generate a plan for a variant that does not exist yet in any external system. Attributes can therefore be assigned to the variant placeholders before they become real variants.</li>
+        </ul>
+        <p>Attribute Sets – The attribute sets filter allows the user to return the sets they want to assign attribute families to. This is a multi-select as it allows users to bring back multiple attribute sets at a time.</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li style="list-style-type: disc;">Note: newly created Attribute Sets do not immediately appear for selection in this dropdown if they are for the currently selected Entity Type; to refresh the dropdown and show new sets, select a different Entity Type then select the Entity Type of the new set once more</li>
+        </ul>
+    </body>
+</html>

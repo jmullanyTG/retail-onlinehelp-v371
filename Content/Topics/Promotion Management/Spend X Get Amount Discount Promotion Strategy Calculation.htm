@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Spend X Get Amount Discount Promotion Strategy Calculation Set</h1>
+        <p>A Spend X type of Promotion Strategy does not change the Promotion Price. Instead the customer is offered an incentive that is in some sense independent of which items are purchased and their respective quantities, as long as the minimum spend is achieved for the products in the Promotion. </p>
+        <p>The products are sold at their regular retail price / EDLP. Since the EDLP value is always available for each Item in the system, it is not necessary to fill down this information from the Promotion level to the Item level. Set the Item level LowestPromotionPrice and HighestPromotionPrice equal to the EDLP. Roll up LowestPromotionPrice and HighestPromotionPrice from the Item level to the Promotion Aggregate level. </p>
+        <ol start="1" class="ol_1">
+            <li>EDLP - Promo Low -&#160; Item</li>
+            <li>EDLP - Promo High -&#160; Item</li>
+            <li>*Standard - Promo Low - Variant</li>
+            <li>*Standard - Promo High - Variant</li>
+            <li>Standard - Promo Low - Group</li>
+            <li>Standard - Promo High - Group</li>
+            <li>Standard - Promo Low - Promo Aggr</li>
+            <li class="ListParagraph">Standard - Promo High - Promo Aggr</li>
+        </ol>
+        <p>*Variant Calculations are only included in a Variant implementation and can be omitted for an Item Master implementation.</p>
+        <p>&#160;</p>
+    </body>
+</html>

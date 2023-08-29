@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Order Document Details – Prepack </h1>
+        <p>The Prepack tab allows users to further enrich order line details by allocating the units by size determined in Break By Size into pre-pack configurations defined in the Variant Manager module. In the Prepack tab, users can define a number of constraints to help guide the optimization process, including the % split between prepacks and singles.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Order Document Details Prepack.png" style="visibility: visible;width: 634px;height: 209px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Prepack Optimization and the Workload Queue</li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;color: #000000;">Whenever a user clicks Calculate or Calculate all (described below), the calculation job is sent to the JustEnough Workload Queue for prioritization, but before this happens, the system estimates the amount of time required to complete the calculations for each prepack group submitted. If any of those prepack groups are found to require a more significant amount of work than the system can complete immediately, the calculations for those groups will be deferred to a later time – either later that day, overnight, or during weekend processing.</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #245897;">Warning:</span> <span style="font-style: italic;color: #000000;">If this occurs, the system will raise a warning message to the user before proceeding:</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">For single prepack group submissions or multiple submissions with the same level of deferrence, the system will raise a message stating the exact nature of the deference for the group(s)</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Clicking OK will proceed for all</li>
+            <li style="margin-bottom: 0pt;color: #000000;">Clicking Cancel will cancel all</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">When multiple groups are submitted and only some will be deferred, or if all are deferred but by different lengths of time, the system will raise a message stating that one or more of the groups submitted will be deferred to whatever the maximum deference is for all groups</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">I submit 3 groups for calculation - one is deferred to later that day, one to overnight, and one to the weekend; the system will warn that one or more prepack groups submitted will be deferred to weekend processing</span></li>
+            <li style="margin-bottom: 0pt;color: #000000;">Clicking OK will proceed for all</li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">Clicking Cancel will </span><span style="font-weight: bold;color: #000000;">cancel only those groups that would be deferred</span><span style="color: #000000;"> but still proceed for any non-deferred groups</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Header Area Controls</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Save: </span>saves all changes made to the Prepack settings for the selected prepack group since the last time it was saved</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Undo: </span>undoes all the changes made to the Prepack settings for the selected prepack group since the last time it was saved</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Calculate: </span>calculates prepack allocation for variants in the selected prepack group</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Approve: </span>approves the prepack allocation for the selected prepack group</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Revert: </span>for a prepack group which was previously calculated and approved but on which a subsequent calculation has been done, reverts the calculated values back to their previously approved values; for the selected prepack group only</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Calculate All: </span>calculates prepack allocations for all prepack groups for the order document</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Approve All: </span>approves the prepack allocations of all prepack groups for the order document and transitions the Workflow Status of the order document to Prepack</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Approve All &amp; Route: </span>approves the prepack allocations of all prepack groups for the order document and launches the Commitment Status dialog, allowing the user to select the Workflow Status the document will be transitioned to from available states, based on the active workflow</li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Order Manager/Order Document Details Break By Size_5.png" style="visibility: visible;width: 332px;height: 94px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Optimize Prepack: </span><span style="color: #000000;">user editable checkbox; when checked, enables the Num Pack Configs and Min/Max Units Per Pack fields in the settings area and allows the engine to determine the most optimal prepack configurations, given the settings and data underlying each prepack group, rather than using those selected by the user</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cancel Queued: f</span><span style="color: #000000;">or any calculation jobs that have been submitted to the queue, clicking this button while the prepack group it was submitted for is selected will cancel the job, assuming it hasn’t already been completed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Prepack Groups</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Group: </span>non-editable alpha-numeric; displays the prepack group names for the order document</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;">if no Grouping Identifiers are used, group names default to the variant code for the associated order lines, with all lines containing that variant being included in a single group</li>
+            <li style="margin-bottom: 0pt;">If Grouping Identifiers are used, order lines are grouped by those with the same identifiers first, then any remaining order lines are grouped by variant code</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Calculated: </span>non-editable checkbox; checked if the corresponding prepack group has been calculated</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Approved: </span>non-editable checkbox; checked if the corresponding prepack group has been approved</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Prepacks</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Calculate: </span>user editable checkbox; selects a prepack configuration for use the in calculation of prepack allocations</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">available prepack configurations are based on those defined for the variant(s) in the prepack group in Variant Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Prepack: </span>non-editable alpha-numeric; displays the prepack configuration name</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Variant: </span>non-editable alpha-numeric; displays the variant code(s) contained in the corresponding prepack configuration</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Size: </span>non-editable alpha-numeric; displays the sizes contained in the corresponding prepack configuration</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Unit Count: </span>non-editable integer; displays the number of units per size contained in the corresponding prepack configuration</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Settings</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Maximum Pack % Total:</span><span style="color: #000000;"> user editable positive percentage to 2 decimal places (60.00%); defines the maximum % of units in a commitment order of the units within prepacks can represent as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">when set to less than 100%, units not placed in prepacks will be fulfilled as single units</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example: </span><span style="font-style: italic;color: #000000;">I have two placeholder instance orders for wk 4 for 500 units each; I choose to prepack them together and have a Maximum Pack % Total of 60.00% - the maximum number of units existing in prepacks for this order is 600, however, </span><span style="font-style: italic;color: #000000;">my prepack output could be less than 600 if the prepack configurations being used don’t evenly roll up to 600 units based on the need calculation by site</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Pack Tolerance:</span><span style="color: #000000;"> user editable positive percentage to 2 decimal places (5.00%); defines the number of units over the total order quantity the engine may suggest in an attempt to fulfill the Maximum Pack % Total, expressed as a percentage of the total order quantity; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="color: #000000;">I have a total order quantity of 1,000 units to be prepacked, a Maximum Pack % Total of 100%, and a Pack Tolerance of 1.00% - the engine may suggest an adjustment of the total order quantity of up to 1010 units to allow for 100% of the original order quantity to be fulfilled by units in prepacks.</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="color: #000000;">when calculating prepack optimization against a Pack Tolerance, the engine will prioritize stores with greater need first</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Maximum Packs Per Location:</span><span style="color: #000000;"> user editable positive integer; sets the maximum number of prepacks of any configuration that can be allocated to a single site within the prepack optimization calculation to fulfill the anticipated sales for that site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">the prepack optimization engine determines that a site requires 50 units from an order being prepacked, Maximum Packs Per Location is set to 5, and the selected prepack configurations all contain 9 units - ignoring site need by size for this example, the engine can only use 5 prepacks, containing 45 units total, as the prepack component of order fulfillment for the site and must assume the remaining 5 units will be fulfilled as single units.</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Underage Weight:</span><span style="color: #000000;"> user editable positive decimal to 2 places (1.25); sets the relative preference for underages when calculating optimal unit allocation by site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">used in conjunction with Overage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (ie. all 3 are summed then divided by the number of constraints that were not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Overage Weight:</span><span style="color: #000000;"> user editable positive decimal to 2 places (1.25); sets the relative preference for overages when calculating optimal unit allocation by site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">used in conjunction with Underage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (ie. all 3 are summed then divided by the number of constraints that were not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Maximum Overage: </span><span style="color: #000000;">user editable positive integer; sets the number of units per site the prepack optimization engine may overallocate during calculation to reach an acceptable solution; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Maximum Overage %:</span><span style="color: #000000;"> user editable percentage to 2 decimals (1.25%); sets the percent of total need in units per site the prepack optimization engine may overallocate during calculation to reach an acceptable solution; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Pack Weighting:</span><span style="color: #000000;"> user editable positive decimal to 2 places (1.25); sets the relative preference for using the fewest prepack configurations possible when calculating </span><span style="color: #000000;">optimal unit allocation by site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">used in conjunction with Underage Weight and Overage Weight and calculated as a % to total of the 3 parameters (ie. all 3 are summed then divided by the number of constraints that were not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Minimum Units Per Pack:</span><span style="color: #000000;"> user editable positive integer; sets the minimum number of units the prepack optimization engine may suggest in single prepack configurations; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="color: #000000;">only valid when </span><span style="color: #000000;">Optimize Prepack is checked for a given prepack group</span><span style="color: #000000;">, otherwise user selected prepack configurations are used</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Maximum Units Per Pack:</span><span style="color: #000000;"> user editable positive integer; sets the maximum number of units the prepack optimization engine may suggest in single prepack configurations; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="color: #000000;">only valid when </span><span style="color: #000000;">Optimize Prepack is checked for a given prepack group</span><span style="color: #000000;">, otherwise user selected prepack configurations are used</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Num</span><span style="font-weight: bold;color: #000000;"> Pack Configs:</span><span style="color: #000000;"> user editable positive integer; sets the number of configurations the prepack optimization engine </span><span style="color: #000000;">will</span> <span style="color: #000000;">create</span><span style="color: #000000;"> when determining optimal fulfillment of need within an order; used as a constraint for the prepack optimization engine within Order Manager</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note</span><span style="font-weight: bold;font-style: italic;color: #000000;">s</span><span style="font-weight: bold;font-style: italic;color: #000000;">: </span><span style="font-style: italic;color: #000000;">for true optimization, this setting can be set to NULL to allow the system to create configurations as needed; </span><span style="font-style: italic;color: #000000;">only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used; </span><span style="font-weight: bold;font-style: italic;color: #000000;">some created configurations may not be utilized in the final optimized allocation of inventory to packs</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Output</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Prepack: </span><span style="color: #000000;">non-editable alpha-numeric; displays the names of the prepack configurations used in the most recent calculation for the selected prepack group</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">there will also be a -(Singles)- line to display units not contained in prepacks</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Count: </span><span style="color: #000000;">non-editable integer; displays the number of the corresponding prepack configurations allocated to the prepack group; will be blank for the -(Singles)- line</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Variant: </span><span style="color: #000000;">non-editable alpha-numeric; displays the variant code(s) contained within the corresponding prepack configuration</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Size Columns: </span><span style="color: #000000;">non-editable integer; displays the allocated number of units per size for the corresponding prepack configuration, or in singles</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">the size columns displayed will coincide with all sizes available in all of the prepack configurations with the Calculate box checked in the Prepacks area</span>
+            </li>
+        </ul>
+    </body>
+</html>

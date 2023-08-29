@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="5388" MadCap:lastWidth="1869">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Rationalization </h1>
+        <p><span style="color: #000000;">The Rationalization calculation is meant to give users an idea of, for a historical period of time, what the most efficient number of variants would have been in order to reach a specific financial target. The primary mechanism we use for this is a </span><span style="font-weight: bold;color: #000000;">marginal return curve</span><span style="color: #000000;">. What we’ve found across retailers, product types, time and geography is that, given a large enough sample, these marginal return curves are extremely stable and repeatable. It is possible to make modest accuracy gains by modelling the distribution of sales within an insular set of product and stores with a Poisson distribution, but for ease of both implementation and calculation, the marginal return curve is close enough. The following steps are part of the Rationalization process:</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Sele</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">ction</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">The explicit inputs for creating a Rationalization Scenario are </span><span style="color: #000000;">the Target Segments,</span><span style="color: #000000;"> each </span><span style="color: #000000;">being </span><span style="color: #000000;">defined by a </span><span style="font-weight: bold;color: #000000;">Target Filter</span><span style="color: #000000;">, (optional) </span><span style="font-weight: bold;color: #000000;">Supplemental Filter, Sales Basis</span><span style="color: #000000;"> (units/revenue), </span><span style="font-weight: bold;color: #000000;">Sales Type(s)</span><span style="color: #000000;"> and </span><span style="font-weight: bold;color: #000000;">Cluster Set</span><span style="color: #000000;"> selection. Scenario level selections include </span><span style="font-weight: bold;color: #000000;">Scenario Target</span><span style="color: #000000;">, (optional) </span><span style="font-weight: bold;color: #000000;">Plan Basis</span><span style="color: #000000;">, and </span><span style="font-weight: bold;color: #000000;">Window of Time</span><span style="color: #000000;">. Implicit selections include the </span><span style="font-weight: bold;color: #000000;">period type</span><span style="color: #000000;"> assigned to the assortment plan and </span><span style="font-weight: bold;color: #000000;">minimum thresholds</span><span style="color: #000000;"> see Data Cleansing below).</span>
+            </li>
+            <li style="margin-bottom: 0pt;color: #000000;">If Supplemental Filter is set for a segment, the system uses this in place of the Target Filter in order to calculate marginal return curves; sales data is then aggregated to variant level (style/color) by site cluster and by period. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Data Cleansing</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> &amp; Deseasonalization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">Before calculating, several steps are taken to remove anomalies from the data that would skew subsequent calculations. The most common causes of inaccuracies when using historical sales to calculate future proje</span><span style="color: #000000;">ctions via </span><span style="color: #000000;">a simple average are:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">The item wasn’t available for sale during part of all of the window of time</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">If </span><span style="color: #000000;">averaging the entire window of time, zeros may be included</span>
+            </li>
+            <li style="margin-bottom: 0pt;color: #000000;">If averaging non-zero periods only, those values may not be representative of a true average period during the window of time</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">The item had inventory levels low enough to negatively impact sales</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">During </span><span style="color: #000000;">this </span><span style="color: #000000;">phase, the system determines which variants in the data set were considered “active” during the specified comparison time frames for each segment. The following system policies </span><span style="color: #000000;">(located in </span><span style="font-weight: bold;color: #000000;">Maintain &gt; Policies &gt; Module: </span><span style="font-weight: bold;color: #000000;">Assortment</span><span style="color: #000000;">) </span><span style="color: #000000;">exist</span><span style="color: #000000;"> to allow users to fine tune the output of this phase:</span><span style="color: #000000;"> This is accomplished through the following steps:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove Outliers: </span><span style="color: #000000;">prior to deseasonalizing the data, we first remove any extreme outliers on the low end of the data set, as these would </span><span style="color: #000000;">artificially</span><span style="color: #000000;"> deflate the deseasonalized average we use in subsequent steps</span><span style="color: #000000;">. To do this, we remove a % of each variant’</span><span style="color: #000000;">s maximum sales</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">System Policy:</span> <span style="font-weight: bold;color: #000000;">Average Inclusion Threshold</span><span style="color: #000000;">; default set at 3%</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Deseasonalize: </span><span style="color: #000000;">d</span><span style="color: #000000;">ata is then adjusted by period, flattening the sales trend across the lifecycle of each variant to allow for better comparison across time; this process is referred to as de-seasonalization. To achieve this, we </span><span style="color: #000000;">sum variant sales by period, calculate the median total sales across all periods and replace any period totals which fall below a system policy defined % of the median, calculating a period to mean for each period based on the revised values, then, finally, dividing each period’s revised sales by the period to mean</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">System Policy: Median Period Total Threshold</span><span style="color: #000000;">; default set at 50%</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove Abnormal Data Points: </span><span style="color: #000000;">after deseasonalization, we calculate the average period sales for each variant then remove any periods that fall below a system policy defined percentage of this average. This is done </span><span style="color: #000000;">to account for </span><span style="color: #000000;">periods where we can reasonably i</span><span style="color: #000000;">nfer that the item’s inventory was</span><span style="color: #000000;"> no longer allowing an accura</span><span style="color: #000000;">te gauge of its sales potential; </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">System Policy: Active Variant Threshold </span><span style="font-weight: bold;color: #000000;">Factor;</span><span style="color: #000000;"> default set at</span><span style="color: #000000;"> 30%</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:</span> <span style="font-style: italic;color: #000000;">this means we do not remove outliers with sales that are much higher than the rest of the dataset – this was an intentional decision to maintain consistency with logic used elsewhere with the JustEnough suite of applications, including the Rate of Sale Calculator</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove Variants With Insufficient Periods Remaining: </span><span style="color: #000000;">after all anomalous periods have been cleansed, we calculate the number of periods remaining for each variant and remove variants without remaining periods greater than or equal to </span><span style="color: #000000;">a system policy defined percentage of the window of time in the scenario.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">System Policy: Active Variant Time on Offer Minimum</span><span style="color: #000000;">; default set to 31%</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example: </span><span style="color: #0070C0;">&#160;</span>given a period type of week and a window of time of one month, setting this policy to 31% will <span style="color: #000000;">eliminate any site level/variant that does not have at least 2 </span><span style="color: #000000;">active selling periods</span><span style="color: #000000;"> registered</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Building Marginal Return Curves</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">Once </span><span style="color: #000000;">data has been cleansed</span><span style="color: #000000;">, </span><span style="color: #000000;">the system calculates cluster/variant productivity by taking </span><span style="color: #000000;">the average across the remaining </span><span style="color: #000000;">periods</span><span style="color: #000000;">. From here, we calculate two different marginal return curves.</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Inter-style Marginal Return Curve: </span><span style="color: #000000;">The most important curve is the inter-style marginal return curve (MRC). </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">In order to calculate, the system orders productivity values for all variants from greatest to least, and divides each N</span><span style="color: #000000;font-size: 7pt;">th </span><span style="color: #000000;">entry by the (N-1)</span><span style="color: #000000;font-size: 7pt;">st</span><span style="color: #000000;"> entry, defining N = 1 as 1, to get the marginal value of each variant to the cluster. </span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">When the target productivity is more than the productivity of the active variants, the marginal return curve must be extended. We test for this by determining the ratio of the target productivity divided by the average productivity of the active variants – if the ratio is less than or equal to 1, the curve does not require extension. If the ratio is greater than 1, we extend the curve by </span><span style="color: #000000;">creating an incremental marginal return curve (IMRC), and then using the increments defined therein to determine the marginal return for variants beyond the number of currently active variants. The new IMRC is assumed to take the form of an exponentially decreasing function that is fitted using characteristics from the original marginal return curve.</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;color: #000000;">this may artificially overstate the marginal productivity of additional variants added to a segment. Originally, the extension was to hold the last calculated marginal value to project the curve out, but numerous situations </span><span style="font-style: italic;color: #000000;">were found </span><span style="font-style: italic;color: #000000;">where the f</span><span style="font-style: italic;color: #000000;">inal two values were very close in magnitude, causing very small subsequent </span><span style="font-style: italic;color: #000000;">marginal value</span><span style="font-style: italic;color: #000000;">s. In general, this </span><span style="font-style: italic;color: #000000;">calculation</span><span style="font-style: italic;color: #000000;"> is intended </span><span style="font-style: italic;color: #000000;">to be somewhat conservative when projecting over unknowns.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Intra-style Marginal Return Curve: </span><span style="color: #000000;">The intra-style curve is a supplemental curve used in tandem with the Inter-style MRC to assist in the determination of how placeholder items created during Smart Start should be grouped into collections (ie. This crew neck tee in 5 colors, this V-neck tee in 3 colors, and so on). </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">In this case, the system indexes each variant according to its rank within its style (with the most productive variant ranking 1, the second ranking 2, etc.). </li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">The system then calculates each style’s MRC in the same manner as the Inter</span><span style="color: #000000;">-</span><span style="color: #000000;">style MRC, except it does not project beyond the calculated values.</span> <![CDATA[ ]]></li>
+            <li style="margin-bottom: 0pt;color: #000000;">Once each style’s curve has been calculated, they are combined by taking the marginal value of each variant with similar indices and weighting their contribution by their productivity values.</li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">When an index is reached for which there are no values, the same projection procedure us</span><span style="color: #000000;">ed for Intra-style MRCs is used with the following difference: </span><span style="color: #000000;">while the Inter-style MRC is entirely recalculated for all variants when extension is needed, the Intra-style curve retains the marginal return increment for existing variants and the exponential curve is only used for the additional variants that necessitated the extension</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">if Collection Option is not set to Multiple Variants Per Collection</span><span style="font-style: italic;color: #000000;">, </span><span style="font-style: italic;color: #000000;">the Intra-style MRC is not needed and is, therefore, not calculated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Marginal Return Curve Extrapolation</span><span style="color: #000000;">: this system policy, accessible in </span><span style="font-weight: bold;color: #000000;">Maintain &gt; Policies &gt; Module: </span><span style="font-weight: bold;color: #000000;">Assortment</span><span style="color: #000000;">, </span><span style="color: #000000;">sets the number of dat</span><span style="color: #000000;">a points required in a given period </span><span style="color: #000000;">for the system to use the original calculated intra-style marginal return curve in determining the number of recommended choices to assign to each recommended collection. If this minimum is not met, the system will calculate a weighted curve based on the original intra-style marginal return curve and a curve calculated at a higher level of the product hierarchy to provide </span><span style="color: #000000;">a more accurate recommendation.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Determining Recommended Variant Count</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">The </span><span style="color: #000000;">next</span><span style="color: #000000;"> step in the process is to generate the output of recommended variant count for each segment/cluster.</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">First, the system calculates </span><span style="font-weight: bold;color: #000000;">LY Variant Productivity</span><span style="color: #000000;">, </span><span style="color: #000000;">expressed as the sum of the Active Variant productivity numbers</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">In conjunction with the Inter-style MRC, the system builds an </span><span style="font-weight: bold;color: #000000;">Expected Volume Curve</span><span style="color: #000000;">, which,</span><span style="color: #000000;"> given the count of LY Active Variants and the LY Variant Productivity, determines the expected volumes for each other variant count. The system calculates the expected volume for the N</span><span style="color: #000000;font-size: 7pt;">th</span><span style="color: #000000;"> variant count in the curve by taking the LY Variant Productivity and multiplying by the ratio of the entry corresponding to the LY Active Variants in the Inter-style MRC, and the N</span><span style="color: #000000;font-size: 7pt;">th</span> <span style="color: #000000;">entry.</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">if LY Active Variant count is 5, and LY Variant Productivity is $1,000, in order to calculate the expected volume for 4 variants, </span><span style="font-style: italic;color: #000000;">the system</span> <span style="font-style: italic;color: #000000;">calculates</span><span style="font-style: italic;color: #000000;"> the ratio of the 5</span><span style="font-style: italic;color: #000000;font-size: 7pt;">th</span><span style="font-style: italic;color: #000000;"> to 4</span><span style="font-style: italic;color: #000000;font-size: 7pt;">th</span><span style="font-style: italic;color: #000000;"> entries</span><span style="font-style: italic;color: #000000;"> in </span><span style="font-style: italic;color: #000000;">the </span><span style="font-style: italic;color: #000000;">Intra</span><span style="font-style: italic;color: #000000;">-style MRC, and multiplies</span><span style="font-style: italic;color: #000000;"> by $1,000.</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Once the Expected Volume Curve has been generated, the recommended Variant Count is set equal to the greatest entry for which the expected volume is less than or equal to the TY Act New Sales volume for each segment/cluster.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Determining Collection/Variant Assignments</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">Once the Interstyle and Intrastyle marginal return curves are calculated and the choice count has been determined, the final step is to determine the number of collections and the number of variants in each collection</li>
+            <li style="margin-bottom: 0pt;">Assuming the user has selected the Collection Option Multiple Variants Per Collection, a marginal return matrix is calculated, in which each entry is a product of the Interstyle and Intrastyle curves</li>
+            <li style="margin-bottom: 0pt;">The top N entries in the matrix are then chosen where N=choice count. The chosen entries then represent the number of collections and variants per collection. Each row represents a collection and each column represents a variant within that collection</li>
+        </ul>
+    </body>
+</html>

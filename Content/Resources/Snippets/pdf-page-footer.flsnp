@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="42" MadCap:lastWidth="822">
+    <head>
+    </head>
+    <body>
+        <table>
+            <col style="width: 50%;" />
+            <col style="width: 50%;" />
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="RunningFooter"><MadCap:variable name="Variables.BookTitle" /> | <MadCap:variable name="Variables.BookVersion" /></p>
+                    </td>
+                    <td style="text-align: right;">
+                        <p class="RunningFooter">| <MadCap:variable name="System.PageNumber" /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

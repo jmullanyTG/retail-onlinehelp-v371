@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3677" MadCap:lastWidth="2337" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Multi-Level Supply Chain</h1>
+        <p>In this example, we'll show a multi-level supply chain with a "grandparent" scenario, where:</p>
+        <ul>
+            <li>External suppliers source a primary DC (DC-North America).</li>
+            <li>The primary DC sources regional DCs (DC-US East and DC-US West).</li>
+            <li>The regional DCs source their local stores. </li>
+        </ul>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Workflow</h2>
+        <p>Click to view a diagram of a multi-level supply chain.</p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=6" title="Click to open workflow" alt="Click to open workflow"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#6" class="workflow" /></a>
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Maintain tab, click <b>Supply Chain</b>.</li>
+            <li>
+                <p>In the Open Supply Chain dialog box, select <b>[Supplier - DC/Store - Store]</b>.</p>
+                <p><b>Note</b>: If the Open Supply Chain dialog box does not automatically appear, click <b>Open Supply Chain</b> on the toolbar.</p>
+            </li>
+            <li>
+                <p>The supply chain appears in the Supply Chain screen. In the Hierarchy pane, note that all of the stores are children of their respective DCs.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 3 - open.png" />
+                </p>
+            </li>
+            <li>
+                <p> In the Hierarchy pane, select DC - North America. In the Alternate Source pane, note that it's primary source is External Supplier.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 3 - na.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Hierarchy pane, expand DC - North America and select DC - US East. In the Alternate Source pane, note that it's primary source is DC - North America.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 3 - us east.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Hierarchy pane, expand DC - US East and select the Atlanta store. In the Alternate Source pane, note that it's primary source is DC - US&#160;East. </p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Example - cd 3 - atlanta.png" />
+                </p>
+            </li>
+        </ol>
+        <h2>Results</h2>
+        <p>With this supply chain, JustEnough will:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>Calculate projected demand versus projected stock on hand for each item at each store.</li>
+            <li>Roll up store demand to calculate stock needed at each regional DC.</li>
+            <li>Roll up regional DC demand to calculate stock needed at primary DCs.</li>
+            <li>Generate sufficient purchase orders from suppliers to ensure enough stock is available at primary DCs to distribute to regional DCs as needed.</li>
+            <li>Generate distribution orders between primary DCs, regional DCs, and stores to ensure stores have enough stock on hand to meet anticipated demand.</li>
+        </ol>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Managing Supply Chains.htm">Managing Supply Chains</a>
+            </li>
+            <li><a href="Supply Chain Overview.htm">Supply Chain Overview</a>
+            </li>
+        </ul>
+    </body>
+</html>

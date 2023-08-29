@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1184" MadCap:lastWidth="3209">
+    <head>
+    </head>
+    <body>
+        <h1>Policy Overview</h1>
+        <p>Inventory policies determine the rules by which JustEnough's replenishment engine operates. They are defined by a set of parameters that can be managed at the inventory level within the <a href="../Item Manager/Item Manager Overview.htm">Item Manager</a>. You can use policy tasks to assign default settings for these parameters to specific groups of items, and then refine these settings as needed on an item-by-item basis in the Item Manager. </p>
+        <h2>Policy parameters</h2>
+        <p>Policy parameters greatly influence the replenishment strategy for the item or items contained within the filter. Replenishment is done at review period intervals. By considering whether inventory levels are expected to drop below the safety stock level within the next lead-time, replenishment values are recommended to restore inventory to its maximum level. </p>
+        <p>Policy parameters define:</p>
+        <ul>
+            <li>What type of order policy to apply to an item (normal stocked, non-stocked, bin, redundant). This determines whether or not an item should be replenished and, if so, what ordering methodology to use.</li>
+            <li>The minimum amount of safety stock for an item at a location.</li>
+            <li>The expected rates of returns and reuse.</li>
+            <li>How frequently inventory levels are reviewed for re-ordering. </li>
+            <li>How often orders can be placed for the item.</li>
+            <li>What stores can stock an item (store eligibility).</li>
+            <li>And more.</li>
+        </ul>
+        <h2>Policy tasks </h2>
+        <p>A policy task lets you define the default values for a set of policy-related parameters and apply those values to the items in a specific filter. Once created, tasks can be executed manually in the Policy module and automatically through the Job Manager. You can set start and end dates for a policy task, giving you the flexibility to create tasks that should only apply for a specific period of time, such as a holiday season.</p>
+        <p>You can create as many policy tasks as you need. Note, however, that if multiple tasks are applied to the same item, each successive task may "overwrite"&#160;the previous task's policy. You can control the order which tasks are executed from within the Policy module.</p>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Creating Inventory Policy Tasks.htm">Creating Inventory Policy Tasks</a>
+            </li>
+            <li><a href="Policy Task Parameters.htm">Policy Task Parameters</a>
+            </li>
+            <li><a href="Example - Defining Stocking Strategy and Store Eligibility.htm">Example - Defining Stocking Strategy and Store Eligibility</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

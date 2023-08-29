@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1284" MadCap:lastWidth="2630">
+    <head>
+        <link href="../TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3>Static Time Frame Definition Fields</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Fixed Start Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The specific calendar date on which the time frame starts.</p>
+                        <p>Example: January 1, 2018.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Fixed End Date</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>The specific calendar date on which the time frame ends.</p>
+                        <p>Example: January 31, 2018.</p>
+                        <p style="font-weight: bold;">Note: <span style="font-weight: normal;">The end date cannot be before the start date.</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Static Time Frame Definition Fields</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1">
+            </col>
+            <col class="TableStyle-jeTables-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Offset days</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>The number of days before the current date to start the time frame period. (The current date is the date that a JustEnough operation runs , not the date that time frame was created. For example, if a product model is executed on July 1, the offset days are based on July 1. if the same model is executed again on December 1, the offset days are based on December 1.)</p>
+                        <p>Negative values start the time frame in the past. </p>
+                        <ul>
+                            <li>Example: The value"-365" starts a time frame on the same day of the previous year (not counting leap years).</li>
+                        </ul>
+                        <p>Positive values start the time frame in the future.</p>
+                        <ul>
+                            <li>Example: The value "30" starts a time frame on the 30th day after the current date of the time frame.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Number of Rolling Days</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">The number of days to include in the breadth of the time frame period. For example the value "30" indicates the time frame covers 30 days from the start date of the time frame period.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Schedule Time Frame Definition Fields</h3>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Schedule Set</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>The name of the schedule selected for the time frame. Schedules are defined in the Schedules module.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

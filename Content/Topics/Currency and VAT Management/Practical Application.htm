@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 ><span style="color: black;">Practical</span> <span style="color: black;">Application</span></h1>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;">Maintenance of currency exchange and VAT rates is very straightforward – aside from the establishment of data feeds during software implementation, you should rarely need to reference or change them. Price Translation Rules and how they interact with VAT, however, warrant abit more explanation:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;">Price Translations and AUR in Assortment Planning</span><span style="font-weight: bold;">:</span> though assortment plans are not done explicitly at by site, a number of site level calculations and changes can occur within assortment plans: product exclusions can be made at the site level as can participation in promotions. Because it is also possible for a single cluster to contain sites that do business in multiple currencies, price translation rules must also be considered when calculating blended AUR (average unit retail price) for products. Simply stated, the steps the system goes through to do this are:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Take the AUT (average unit ticket price) of a product for a given period and apply any promotions at the site level to determine the new base selling price</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Apply Price Translation Rules applicable to the base selling price from the previous step</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Apply VAT Rates applicable to the product, if any, to calculate the VAT inclusive selling price by site</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculate the weighted average selling price from the selling prices by site from the previous step and the values stored in the Location % Contribution tables (calculated based on historical sales units at the product hierarchy level defined by the <span style="font-weight: bold;">Level </span><span style="font-weight: bold;">Contribution</span> setting of the assortment plan; updated in regular recurring system processes) – this is the period level blended AUR</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculate the weighted average selling price across the entire life of the product using the same method but across all periods in the product’s life</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;">Blended VAT Rates in Assortment Planning: </span>as an extension of the above process used to calculate blended AUR, the system performs additional steps to arrive at a blended VAT Rate by period:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">For planned weekly sales for the product, project the sales by site based on the Location % Contribution tables</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculate projected sales revenue in home currency by site by multiplying projected site unit sales by the VAT inclusive selling price for each site</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculate the VAT revenue amount by multiplying the projected sales revenue for each site by the corresponding VAT Rate</li>
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;">Calculate the blended VAT Rate for the period by dividing the sum of VAT revenue for all sites by the projected sales revenue for all sites</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-top: 5pt;margin-bottom: 5pt;color: #0070C0;">A working Microsoft Excel model of how Price Translations, VAT, and Promotions interact is available, if needed, to assist in user understanding of these concepts</li>
+        </ul>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;">&#160;</p>
+    </body>
+</html>

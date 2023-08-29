@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="4084" MadCap:lastWidth="2386">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 >Rebalance Functionality</h1>
+        <p style="margin-bottom: 0pt;color: #000000;">It is a common occurrence within companies to have multiple versions of a plan for the same product/channel levels and window of time for the purpose of exploring different possible outcomes and/or analyzing the business from different perspectives. Sometimes there is a version built from the location level up and another from the top site level down, sometimes there are multiple scenarios built at the same level, or maybe there are even versions built using different hierarchies altogether. Eventually, a reconciliation occurs where those within the planning organization decide which version to move forward with, and it is for this purpose that Rebalance functionality exists – to take the desired values from the “winning” version and homogenize other versions to them.</p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;"><span style="color: #000000;">Before initiating a rebalance, it is necessary to have two plans that share at least one common site level, one common product level, and a common window of time. Once you are ready, click </span>
+            <img src="../../Resources/Images/MFP/Rebalance Functionality.png" style="visibility: visible;mso-wrap-style: square;width: 72px;height: 24px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" /><span style="color: #000000;"> in the header area controls to launch the </span><span style="color: #000000;">Rebalance Plan dialog</span>
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">it is not necessary for the common levels of the plans being rebalanced to exist in the same positions (i.e. </span><span style="font-style: italic;color: #000000;">the same number of levels deep). The system will adjust data as needed to ensure the proper values are transferred</span>
+        </p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Rebalance Functionality_1.png" style="visibility: visible;width: 634px;height: 360px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Source Plan:</span> <span style="color: #000000;">user editable single-select tree; displays/sets the Source Plan, the plan to which the Destination Plan will be homogenized, for the rebalance </span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Destination Plan:</span> <span style="color: #000000;">user editable single-select tree; displays/sets the Destination Plan, the plan to be homogenized with the Source Plan, for the rebalance</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Destination Product Hierarchy:</span> <span style="color: #000000;">user editable multi-select tree; displays/sets the level(s) of the Destination Plan product hierarchy to be homogenized with the Source Plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Destination Site Hierarchy:</span> <span style="color: #000000;">user editable multi-select tree; displays/sets the level(s) of the Destination Plan site hierarchy to be homogenized with the Source Plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Destination Time Hierarchy:</span> <span style="color: #000000;">user editable multi-select tree; displays/sets the time periods(s) of the Destination Plan to be homogenized with the Source Plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales:</span> <span style="color: #000000;">user editable checkbox; determines whether Sales revenue in the Destination Plan will be homogenized with the Source Plan</span><span style="color: #000000;"> for the selected product/site levels and window of time</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales Units:</span> <span style="color: #000000;">user editable checkbox; determines whether Sales Units in the Destination Plan will be homogenized with the Source Plan for the selected product/site levels and window of time</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">COGS:</span> <span style="color: #000000;">user editable checkbox; determines whether COGS (cost of goods sold) in the Destination Plan will be homogenized with the Source Plan for the selected product/site levels and window of time</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Receipt Retail:</span> <span style="font-weight: bold;color: #FF0000;">future functionality</span><span style="color: #FF0000;">; </span><span style="color: #000000;">user editable checkbox; determines whether Receipt Retail in the Destination Plan will be homogenized with the Source Plan for the selected product/site levels and window of time</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Receipt Units:</span> <span style="font-weight: bold;color: #FF0000;">future functionality</span><span style="color: #FF0000;">; </span><span style="color: #000000;">user editable checkbox; determines whether Receipt Units in the Destination Plan will be homogenized with the Source Plan for the selected product/site levels and window of time</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Receipt Cost:</span> <span style="font-weight: bold;color: #FF0000;">future functionality</span><span style="color: #FF0000;">; </span><span style="color: #000000;">user editable checkbox; determines whether Receipt Cost in the Destination Plan will be homogenized with the Source Plan for the selected product/site levels and window of time</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cancel:</span> <span style="color: #000000;">closes the Rebalance Plan dialog without performing a rebalance</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">OK:</span> <span style="color: #000000;">initiates a rebalance between the Source and Destination Plans of the selected product/site levels and window of time for the chosen metrics</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;"><span style="color: #000000;">Once a rebalance is initiated, the system will perform the rebalance from the Source to the Destination plan </span><span style="color: #000000;">at the lowest levels of commonality in the product and site hierarchies between plans using the following calculation rules, depending on which metrics were selected:</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales only: </span><span style="color: #000000;">Lock AUR, Lock AUC, Calc Sales Units, Calc COGS, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales Units only: </span><span style="color: #000000;">Lock AUR, Lock AUC, Calc Sales, Calc COGS, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">COGS only: </span><span style="color: #000000;">Lock Sales, Lock Sales Units, Calc AUC, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales and Sales Units: </span><span style="color: #000000;">Lock AUC, Calc AUR, Calc COGS, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales and COGS: </span><span style="color: #000000;">Lock AUR, Calc AUC, Calc Sales Units, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales Units and COGS: </span><span style="color: #000000;">Lock AUR, Calc AUC, Calc Sales, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Sales, Sales Units, and COGS: </span><span style="color: #000000;">Calc AUR, Calc AUC, Calc </span><span style="color: #000000;">MMU (Product)</span><span style="color: #000000;">, </span><span style="color: #000000;">MMU</span><span style="color: #000000;"> %</span><span style="color: #000000;"> (Product)</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;"><span style="color: #000000;">All other dependent metrics in the Destination Plan will recalculate per the normal calculations defined in </span><span style="font-weight: bold;color: #000000;">Main Planning View &gt; Metric Details</span><span style="color: #000000;"> for the appropriate plan type, Cost or Retail</span><span style="color: #000000;">. </span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">rather than overwrite the values in the Destination Plan, the system will create a rebalanced copy with the word “Rebalanced” appended to the beginning of the Destination Plan name</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example:</span> <span style="font-style: italic;color: #000000;">a very common scenario in the retail industry is where there are two sets of planners – tops-down financial planners and store planners. These individuals will create their ideal versions of the larger plan from their perspectives then meet to discuss which total volume outcome is most feasible, given all the available data. Once complete, one version will be rebalanced to the other</span></li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;"><span style="font-style: italic;color: #000000;">In this example, we have a Location Plan called Branch of Location Plan Rebalance USD, and a </span><span style="font-style: italic;color: #000000;">site level Hybrid Cost plan </span><span style="font-style: italic;color: #000000;">called Branch of Hybrid Cost Rebalance USD. Both Plans are for weeks 4</span><span style="font-style: italic;color: #000000;">0</span><span style="font-style: italic;color: #000000;"> – 4</span><span style="font-style: italic;color: #000000;">3</span><span style="font-style: italic;color: #000000;"> of 2017, for the product category Outer Jacket, and </span><span style="font-style: italic;color: #000000;">for the </span><span style="font-style: italic;color: #000000;">Atlanta</span><span style="font-style: italic;color: #000000;"> channel</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Rebalance Functionality_2.png" style="visibility: visible;width: 634px;height: 323px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;"><span style="font-style: italic;color: #000000;">The Location Plan has total Sales of </span><span style="font-style: italic;color: #000000;">$</span><span style="font-style: italic;color: #000000;">16,938</span><span style="font-style: italic;color: #000000;">…</span>
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Rebalance Functionality_3.png" style="visibility: visible;width: 634px;height: 374px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;"><span style="font-style: italic;color: #000000;">…</span><span style="font-style: italic;color: #000000;">while the </span><span style="font-style: italic;color: #000000;">site level hybrid cost</span><span style="font-style: italic;color: #000000;"> plan has Sales of </span><span style="font-style: italic;color: #000000;">$13.551</span><span style="font-style: italic;color: #000000;">. </span><span style="font-style: italic;color: #000000;">The user initiates a rebalance with the location plan as the Source, the hybrid cost plan as the Destination, the same product/site and time levels selected, and only Sales checked from the rebalance metrics…</span>
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/MFP/Rebalance Functionality_4.png" style="visibility: visible;width: 634px;height: 369px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;margin-left: 36pt;font-style: italic;color: #000000;">…after the rebalance is complete, the system has created a new plan with Sales matching the Source plan by period, AUR and AUC matching the original Destination plan by period, and Sales Units, MMU (product) and MMU % (Product) recalculated, as per the calculation logic for a Sales only rebalance</p>
+    </body>
+</html>

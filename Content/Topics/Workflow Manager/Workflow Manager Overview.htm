@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Workflow Manager Overview</h1>
+        <p>Workflows define processes related to specific JustEnough objects. At each step in a workflow, you control which users or roles have access to what actions, and, optionally, what actions the system performs. You can use workflows to:</p>
+        <ul>
+            <li> Set up approval processes for quality control.</li>
+            <li>Promote "safe" cross-team collaboration.</li>
+            <li>Ensure required steps and operations are always executed.</li>
+            <li>Automatically enforce corporate standards and policies.</li>
+        </ul>
+        <p>The Workflow Manager lets you create  workflows for the following JustEnough objects:</p>
+        <ul>
+            <li>Events</li>
+            <li>Promotions</li>
+            <li>Price Actions</li>
+            <li>Order Headers</li>
+        </ul>
+        <h2>Workflows</h2>
+        <p>JustEnough workflows have two main components: statuses and transitions. A status is a specific "step" in the workflow. A transition moves the object from its current status to its next status. Statuses and transitions are illustrated in the following workflow example:</p>
+        <p>
+            <img src="../../Resources/Images/Workflow Manager/WF example.png" />
+        </p>
+        <p>This workflow has 4 statuses: Planning, Ready for Approval, Changes Needed, and Approved/Confirmed for Export. The transition arrows connecting the statuses indicate what status can come "next". For example, the Ready for Approval status can transition to either "Changes Needed" OR "Approved/Confirmed for Export". </p>
+        <p>When designing a workflow, you can define the conditions in which a status can move from one status to the next. In some cases, you may want a specific person or role to decide (for example, a reviewer should determine whether an object in the "Ready for Approval" status moves to "Approved" or "Changes Needed"). In other cases, you way want to the transition to occur automatically on a specific date. </p>
+        <p>For more information about statuses, see <a href="Adding a Status to a Workflow.htm">Adding a Status to a Workflow</a>.</p>
+        <p>For more information about transitions, see <a href="Adding a Transition to a Workflow.htm">Adding a Transition to a Workflow</a>. </p>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Workflow Manager Screen.htm">Workflow Manager Screen</a>
+            </li>
+        </ul>
+    </body>
+</html>

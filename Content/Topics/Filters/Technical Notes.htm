@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="333" MadCap:lastWidth="2828">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Technical Notes</h1>
+        <ul>
+            <li>When a new filter is created, its cache is built immediately. </li>
+            <li>Rebuilding filter caches is an extremely important task and should, in most instances, be run on a daily basis. This may take a considerable amount of time during the overnight run and will depend on the volume of data and the number of filters which need to be rebuilt. </li>
+            <li>Custom code should no longer reference<code> tbl_FilterCache</code>, because population of<code> tbl_FilterCahce</code> is optional when filters are rebuilt. </li>
+            <li><code>Udf_ApplyFilter</code> has been officially scheduled for deprecation and should not be called.</li>
+        </ul>
+    </body>
+</html>

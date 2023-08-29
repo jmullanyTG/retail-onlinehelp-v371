@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MoveOutputContentToRoot="true"
+  SkinComponents=""
+  EnableResponsiveOutput="true"
+  MasterPage="/Content/Resources/MasterPages/OtherTopics.flmsp"
+  ResultsPerPage="10"
+  Skin="/Project/Skins/HTML5 - Top Navigation.flskn"
+  ConditionTagExpression="include[&quot;General.Online Help&quot;] exclude[&quot;General.Printed Manuals&quot; or &quot;General.Temp Exclude&quot;] "
+  DefaultUrl="/Content/Home.htm"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  MasterStylesheetOverride="false"
+  TabletBreakpoint="1270"
+  PreCompileScaledImages="true"
+  GenerateWebSafeImages="false"
+  WebSafeFileExtension="png"
+  ExcludeUnreferencedContent="true"
+  UseDeviceWidth="false"
+  MobileBreakpoint="1269"
+  DisableAutoSync="true"
+  TopNavTocPath="true"
+  EquationsOutputType="PNG">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Destinations> </Destinations>
+</CatapultTarget>

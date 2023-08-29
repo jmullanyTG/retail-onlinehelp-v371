@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Validating a Supply Chain</h1>
+        <p>The supply chain selected when <a href="Essential Business Concepts.htm#Creating">creating</a> or editing a plan must be valid in order for JustEnough to use it when <a href="Essential Business Concepts_2.htm#DC">splitting inventory</a> among DCs. </p>
+        <p>For a supply chain to be valid, the sites and DCs in the supply chain must match the sites and DCs in the plan, and all sites in the supply chain must have a DC as their primary source.</p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Financial Planning toolbar, click <b>Manage</b>.</li>
+            <li>
+                <p>In the Maintain Financial Plan window, find the <b>Supply Chain Status</b> field on the General tab.</p>
+                <p>
+                    <img src="../../Resources/Images/MFP/General.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click the checkmark on the right-side of the Supply Chain Status field to validate the supply chain.</p>
+                <p>
+                    <img src="../../Resources/Images/MFP/status validate.png" />
+                </p>
+                <p>The result of the validation appears in the Supply Chain Status field.</p>
+            </li>
+        </ol>
+        <h2>Results</h2>
+        <ul>
+            <li>If the Supply Chain Status value is <b>Valid</b>, JustEnough will use the supply chain to split inventory among your DCs.</li>
+            <li>
+                <p>If the Supply Chain Status value is <b>Invalid</b>, JustEnough will <a href="Essential Business Concepts_2.htm#Generic">generically</a> split inventory among your DCs.</p>
+                <ul>
+                    <li>
+                        <p><b>Note</b>: You can click the <b>Supply Chain Errors</b> tab to see what errors were detected.</p>
+                        <p>
+                            <img src="../../Resources/Images/MFP/Supply Chain Errors.png" />
+                        </p>
+                        <p>In the example above, the "Has non-DC source" error was detected for several sites (Anaheim, Las Vegas, Los Angeles, and others). To fix the error, edit the supply chain to make the primary source of these sites a DC. Then, re-validate the supply chain. </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="5533" MadCap:lastWidth="1804" MadCap:conditions="General.How-To Guides">
+    <head>
+        <link href="../../Resources/TableStyles/Video Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Example - Forecasting Supersession</h1>
+        <p>In this example, we will use JustEnough's supersessions feature to create a demand forecast for a new item, "High Collar Angelina Jacket", using the sales history of an old item, "Leather Moto Jacket". This example shows how to create a supersession and demand forecast for a single color/size combination of the new item. In practice, you will need to repeat these steps for each color/size combination your new items possess.</p>
+        <p style="font-weight: bold;">
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Workflow</h2>
+        <p>Click to open the Creating Supersessions workflow.</p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=12" title="Click to open workflow" alt="Click to open workflow"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#12" class="workflow" /></a>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Related videos</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p>
+                                    <p>
+                                        <object MadCap:HTML5Video="true" class="video" MadCap:Param_autoplay="false" MadCap:Param_loop="false" MadCap:Param_muted="false" src="../../Resources/Videos/BC-3 Item Supersession Creation_E.mp4" MadCap:Param_controls="true">
+                                        </object>
+                                    </p>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>
+                                    <p>&#160;</p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                                <p>Item Supersessions</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Instructions</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>1. Create the supersession.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Supersessions</b>.</li>
+                    <li>In the Supersessions toolbar, click <b>New</b>.</li>
+                    <li>
+                        <p>In the Items dialog box, select the filter that contains the new and existing items. </p>
+                        <p>For this example:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p> Select the <b>Supersession Model Management (by Dep)</b> filter.</p>
+                            </li>
+                            <li>
+                                <p>Add condition: ItemMaster Group 3 Description is One of the Following: <b>Coats &amp; Jackets.</b></p>
+                                <p>
+                                    <img src="../../Resources/Images/Supersessions/Example_Supersessions_Filter_Condition.png" />
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>In the Add Supersession wizard, select the following old item to supersede: </p>
+                        <ul>
+                            <li>Item Master Code: <b>543</b></li>
+                            <li>
+                                <p>Item Master Description: <b>Leather Moto Jacket_Dark Navy-L</b></p>
+                                <p>
+                                    <img src="../../Resources/Images/Supersessions/Example_Supersessions_Select_old.png" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Click <b>Next</b> to continue.</li>
+                    <li>
+                        <p>Select the following new item to supersede the Leather Moto Jacket_Dark Navy-L: </p>
+                        <ul>
+                            <li>Item Master Code: <b>708</b></li>
+                            <li>
+                                <p>Item Master Description: <b>High Collar Angelina Jacket_Grey - L;</b></p>
+                                <p>
+                                    <img src="../../Resources/Images/Supersessions/Example_Supersessions_Select_new.png" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Click <b>Next</b> to continue.</li>
+                    <li>
+                        <p>Select the following supersession parameters:</p>
+                        <ul>
+                            <li>Old Item Replenishment Strategy: <b>No change</b>.</li>
+                            <li>
+                                <p>Supersession Type: <b>Forecasting only</b>.</p>
+                                <p>
+                                    <img src="../../Resources/Images/Supersessions/Example_Supersessions_Parameters.png" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Click <b>Next</b> to continue.</li>
+                    <li>
+                        <p>Select the sites where you want to apply the supersession. In this example, all sites are selected.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supersessions/Example_Supersessions_Sites.png" />
+                        </p>
+                    </li>
+                    <li>Click <b>Next</b> to continue.</li>
+                    <li>Click <b>Finish</b> to close the wizard and create the supersession. </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2. Generate the demand forecast.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In the JustEnough Manage tab, click <b>Forecasts</b>.</li>
+                    <li>
+                        <p>In the Items - Level View dialog box: </p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>Select the <b>Supersession Model Management (by Dep)</b> filter.</li>
+                            <li>Add condition: ItemMaster Group 3 Description is One of the Following: <b>Coats &amp; Jackets.</b><b>.</b></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>In the Forecasts screen, select the new item, "High Collar Angelina Jacket":</p>
+                    </li>
+                    <li>
+                        <p>Create a demand forecast for the new item:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>In the Forecast toolbar, click <b>Forecast</b>.</li>
+                            <li>In the Forecast Task dialog box, click <b>OK</b> to star the forecast tournament.</li>
+                            <li>
+                                <p>Once the forecast is complete, it appears in the Forecast screen.</p>
+                                <p>
+                                    <img src="../../Resources/Images/Supersessions/Example_Supersessions_Forecast_Results.png">
+                                    </img>
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Supersessions Overview.htm">Supersessions Overview</a>
+            </li>
+            <li><a href="Creating Supersessions.htm">Creating Supersessions</a>
+            </li>
+        </ul>
+    </body>
+</html>

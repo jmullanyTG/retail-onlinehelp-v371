@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >ROS Scenario Creation/Selection</h1>
+        <p>Using the parameters and controls at the top and at the far left of the view, users can either select a saved rate of sale scenario to apply to the placeholders/collections selected in the Main Planning view, and edit that scenario is desired, or define the inputs for an entirely new scenario.</p>
+        <p style="font-weight: bold;">Step by Step Instructions</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Variant</span> and <span style="font-weight: bold;">Site</span><span style="font-weight: bold;"> Filter</span> selection</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph">Select an existing placeholder/variant filter or create a new filter to select the items for the scenario (this determines which scenarios will appear after scenarios have been created and saved)</li>
+            <li class="ListParagraph">Select an existing site filter or create a new filter to select the sites for the scenario (for application in assortment planning, select (All Sites)</li>
+        </ol>
+        <p style="margin-left: 54pt;">
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Creation Selection.png" style="visibility: visible;width: 469px;height: 37px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li class="ListParagraph">Click the <span style="font-weight: bold;">Execute</span> button</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;"> <img src="../../Resources/Images/Assortment Planning/ROS Scenario Creation Selection_1.png" style="visibility: visible;width: 73px;height: 31px;" /></p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li class="ListParagraph">Click the <span style="font-weight: bold;">Add </span>button to create a new scenario; this will reset the parameters at the left to their defaults to allow for a new scenario but will not alter any saved scenario that was selected previously</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;">
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Creation Selection_2.png" style="visibility: visible;width: 59px;height: 32px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li class="ListParagraph"><span style="font-weight: bold;">Scenario </span><span style="font-weight: bold;">inputs</span>
+            </li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Name</span> – Input a name for the scenario (a default name will populate, but can be overridden) </li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Description</span> – Input a description for the scenario</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Variant</span><span style="font-weight: bold;"> Filter</span> – Select the product filter for the scenario, this will drive which items are included in the calculation</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Cluster Set</span> <span style="font-weight: bold;">Names </span>– Select the cluster sets to be included for the scenario, this will drive which clusters are included in the calculation</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Time Frame</span> – Select an existing time frame or create a new time frame for the scenario</li>
+        </ol>
+        <p style="margin-left: 36pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Creation Selection_3.png" style="visibility: visible;width: 478px;height: 266px;" />
+        </p>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph">When creating a new time frame for the scenario, the following inputs are required:</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 144pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Name</span> – input a name for the Time Frame</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Description</span> – input a description for the Time Frame</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Dynamic Rule</span> – check the box to make the time frame dynamic.&#160; Save scenarios will recalculate based on the most up to date historical data</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Offset days</span> – sets the number of days from today’s date to include in the data set; use negative numbers for days back and positive numbers for days forward</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Number of Rolling Days </span>– number of days forward from the day defined by the offset days (ex. If offset days is -365 and rolling days is 365 that gives the user the last year of historical data in the data set)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Fixed Start Date </span>– Utilize if the scenario is static to define the begin date of the data set to be utilized in the calculation</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Fixed End Date </span>– Utilize if the scenario is static to define the end date of the data set to be utilized in the calculation</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Access Level </span>– determines whether a time frame that has been created is public, private or shared</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">User List </span>– if access level is shared, lists the users that have access to the Time Frame selection (auto populated)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Date Created </span>– date the time frame selection was created (auto populated)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Created by </span>– displays the user that created the time frame selection (auto populated)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Date last updated </span>– the date the time frame selection was most recently updated (auto populated)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Updated by </span>– displays the user that last updated the time frame selection (auto populated)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Status </span>– displays whether or not the time frame selection is active or inactive (auto populated)</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="6">
+            <li class="ListParagraph"><span style="font-weight: bold;">Scenario </span><span style="font-weight: bold;">Type</span> – Select Revenue or Sales Units to model against</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Sales types</span> – Select the type(s) of sales to include in scenario (Reg, Markdown, Promo, etc)</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Price Type</span> – Select the price type to include in the scenario</li>
+        </ol>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">price type is only valid with Max Price, Min Price, and/or Max Price Discount are specified; price types are defined by your organization during software implementation and can be things like MSRP, Clearance, etc.</span>
+            </li>
+            <li class="ListParagraph"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span> <span style="font-style: italic;">the difference between Sales Type and Price Type can be difficult to understand, but basically, think of Sales Types as defining the larger bucket of sales from which to draw; Price Type is an optional data point that can change by period and can be used to further limit the data selection for the scenario; </span><span style="font-style: italic;color: #0070C0;">for example, it is possible to include the Sales Type Markdown but then further limit that data by setting a Price Type of Clearance and a Max Price Discount of 75% to only capture variants that had the Clearance Price Type and selling prices that were no more than 75% the original ticket price for each period in the scenario time frame</span></li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="9">
+            <li class="ListParagraph"><span style="font-weight: bold;">Max Price</span> – Input the highest price of variants to include in the scenario; set to zero to ignore this parameter</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Min Price</span> – Input the lowest price of variants to include in the scenario; set to zero to ignore this parameter</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Max Price Discount</span> – Input the max % discount to ticket price of variants to include in the scenario; set to zero to ignore this parameter</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Minimum Volume Threshold</span> – Input the minimum number of sales per item/week/all sites to include in the scenario</li>
+            <li class="ListParagraph"><span style="font-weight: bold;">Access Level</span> – Select access level to the scenario</li>
+        </ol>
+        <ol style="list-style-type: lower-roman;margin-left: 108pt;" start="1">
+            <li class="ListParagraph">Public, Private, Shared</li>
+            <li class="ListParagraph">If shared, select the shared users by clicking on the <span style="font-weight: bold;">ellipsis</span></li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="5">
+            <li class="ListParagraph">Click <span style="font-weight: bold;">Appl</span><span style="font-weight: bold;">y – </span>This will save the scenario inputs</li>
+            <li class="ListParagraph">Click<span style="font-weight: bold;"> Calculate – </span>This will calculate the scenario line/lines</li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 36pt;">
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Creation Selection_4.png" style="visibility: visible;width: 156px;height: 46px;" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h2 style="color: #000000;">Essential Business Concepts</h2>
+        <h3><a name="Planning"></a>Planning With VAT</h3>
+        <p style="margin-left: 2pt;">If your organization includes VAT (value added tax) in its planning process, there are a few required configuration steps that must be completed prior to beginning to plan:</p>
+        <ol style="margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Create a verbose product hierarchy: </span>in order for VAT calculation functionality to work properly, a verbose product hierarchy is needed. This basically just means that data is able to be stored at all levels of the hierarchy rather than just the lowest leaf levels. <br />For example, if my hierarchy consists of the levels Company &gt; Gender &gt; Class, a verbose hierarchy allows data to also be stored against the Company and Gender levels, whereas a regular hierarchy would only allow data at the Class level. Because VAT rates can be set at any level of a product hierarchy, a verbose hierarchy is needed to allow the system to read the correct rates when calculating VAT related metrics.<br />To do this:<br />Click <span style="font-weight: bold;">Plan &gt; Views</span> then locate and open the <span style="font-weight: bold;">Hierarchy Filtering</span> view:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts.png" style="visibility: visible;width: 634px;height: 284px;" /><br />Next, select the <span style="font-weight: bold;">Variant</span> entity type and click <span style="font-weight: bold;">Execute</span>:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_1.png" style="visibility: visible;width: 634px;height: 156px;" /><br />If you need to create a new hierarchy, click <span style="font-weight: bold;">New</span>, enter a <span style="font-weight: bold;">Hierarchy Name</span> and <span style="font-weight: bold;">Description</span>, check the <span style="font-weight: bold;">Allow Data Storage at All Levels</span> checkbox, then <span style="font-weight: bold;">Save</span><span style="font-weight: bold;">:</span><br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_2.png" style="visibility: visible;width: 634px;height: 261px;" /><br />Lastly, set the <span style="font-weight: bold;">Order Number</span> and <span style="font-weight: bold;">Enabled </span>checkbox for the desired Item Master Groups and <span style="font-weight: bold;">Save</span>:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_3.png" style="visibility: visible;width: 634px;height: 249px;" /><br /><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">If a hierarchy already exists that you would like to use for this purpose, you can simply select the hierarchy, check the </span><span style="font-weight: bold;font-style: italic;">Allow Data Storage at All Levels</span><span style="font-style: italic;"> checkbox and </span><span style="font-weight: bold;font-style: italic;">Save</span><br /><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span><span style="font-style: italic;"> check with your JustEnough technical representative before making this change to hierar</span><span style="font-style: italic;">chies that are used in</span><span style="font-style: italic;"> modules other than Assortment Planning and MFP. Other modules, such as Allocation and Group Forecasting are not designed to work with verbose hierarchies.</span><br /></li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Set the MFP product hierarchy VAT rates will be assigned to: </span>the next step in setting up MFP for planning with VAT is telling the system which hierarchy to use for getting the VAT rates to be applied to your plans. <br />To do this:<br />While still in the <span style="font-weight: bold;">Hierarchy Filtering</span> view, click <span style="font-weight: bold;">Fields</span> in the <span style="font-weight: bold;">Hierarchy Configuration</span> section and drag the <span style="font-weight: bold;">Hierarchy ID</span> field into the grid:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_4.png" style="visibility: visible;width: 634px;height: 394px;" /><br />Note the <span style="font-weight: bold;">Hierarchy ID</span> for use in the next step:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_5.png" style="visibility: visible;width: 634px;height: 139px;" /><br />Next, click <span style="font-weight: bold;">Maintain &gt; Policies</span>, select the <span style="font-weight: bold;">Planning VAT Rate Product Hierarchy ID</span> from the <span style="font-weight: bold;">Module: Financial Planning folder</span> at the left, enter the <span style="font-weight: bold;">Hierarchy ID</span> you noted in the last step in the <span style="font-weight: bold;">New Setting</span> field, and click <span style="font-weight: bold;">Apply Changes</span>:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_6.png" style="visibility: visible;width: 634px;height: 514px;" /><br /></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Enable VAT in MFP: </span>the final step is to enable the use of VAT in MFP. To do this, while still in the Policies module, select the <span style="font-weight: bold;">Enable VAT in MFP</span> policy from the <span style="font-weight: bold;">Module: Financial Planning folder</span> at the left, select <span style="font-weight: bold;">True</span> in the <span style="font-weight: bold;">New Setting</span> field, and click <span style="font-weight: bold;">Apply Changes</span>:<br /><img src="../../Resources/Images/MFP 523/Essential Business Concepts_7.png" style="visibility: visible;width: 634px;height: 433px;" /><br /><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">like all system policies, the Enable VAT in MFP policy is a global setting, meaning all MFP plans will have VAT enabled once this policy is set to True. </span><span style="font-style: italic;color: #0070C0;">That said, if you have a VAT rate of zero set for the product/site levels included in a given plan, ex VAT metric values will be identical to their regular counterparts and there will be no mathematical effect on the plan.</span></li>
+        </ul>
+        <p>Assuming you have also set up VAT rates in the Planning VAT Rates view, after the above steps are complete, you will be able to plan with VAT included in MFP. For more information on setting VAT rates, please refer to <span style="font-weight: bold;">Currency and VAT Management &gt; Essential Business Concepts &gt; Planning VAT Rates</span>.<br /></p>
+        <h3><a name="Creating"></a>Creating New Plans</h3>
+        <p style="margin-left: 2pt;">When working in the financial plan maintenance view, the first action our clients need to take is to create a master plan.&#160; A master plan is a Financial Plan that is created in the MFP module and is not editable.&#160; This plan is considered the “single” version of the truth.&#160; Master plans should be used as approved plans within the planning process.&#160; Master plans contain historic and plan periods.&#160; Historic periods represent “what actually happened” within the business and plan periods are the approved plans for future periods.&#160; In managing a Master plan it is recommended that a super user or system administrator has control over this feature within the system.&#160; To create a master plan see the below example.</p>
+        <p style="margin-left: 2pt;">
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_8.png" style="visibility: visible;width: 634px;height: 327px;" />
+        </p>
+        <p>To create a master plan within the financial plan maintenance view, click on the “New” icon located in the top left portion of this view.&#160; Once the user has clicked on the “New” icon, the maintain financial plan window will appear on screen.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_9.png" style="visibility: visible;width: 634px;height: 345px;" />
+        </p>
+        <p>The first tab a user works with in this view is the General tab.&#160; The general tab is where the user will give the master plan a name and description, define the plan type, the currency to work with, how the plan will be seeded, the calendar to plan with, the level of the calendar, and finally the start period.&#160; These general setting form the basis of the structure of the master plan.&#160; </p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_10.png" style="visibility: visible;width: 489px;height: 457px;" />
+        </p>
+        <p><span style="font-weight: bold;">Name:</span><span style="font-weight: bold;">&#160; </span>This is free form text and describes the name of the plan</p>
+        <p><span style="font-weight: bold;">Description:&#160; </span>This is free form text and provides the opportunity to describe what the plan is and any other important information about the plan that may be important to the user group.</p>
+        <p><span style="font-weight: bold;color: #7030A0;"><span style="color: #000000;">Plan Type:&#160;</span> </span>The plan type defines the metric set and calculations that will make up the master plan.&#160; There are three main plan types to choose from.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;">Location Plan</span><span style="font-weight: bold;">: </span>This plan provides the ability to plan by location at defined levels of the product hierarchy.&#160; This plan contains the ability to plan sales, margin and Open to Ship to support the location planning process.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;">Hybrid Cost-Based Plan:</span> This plan provides the ability to plan by Channel/location groups at defined levels of the product hierarchy.&#160; This plan contains the ability to plan sales, cost of sales, margin, inventory, receipts, and open to buy to support the budgeting process.&#160; This plan is for clients who value their inventory at cost.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;">Hybrid Retail-Based Plan: </span>This plan provides the ability to plan by Channel/location groups at defined levels of the product hierarchy.&#160; This plan contains the ability to plan sales, cost of sales, margin, inventory, receipts and open to buy to support the budgeting process.&#160; This plan is for clients who value their inventory at retail.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;color: #7030A0;"><span style="color: #000000;">Hybrid Cost Dual-Markdown Plan</span>: </span>This plan type is for organizations who wish to plan their permanent and promotional markdowns separately. Promotional markdowns are tied directly to Promotional Sales and reduce AUR for periods in which they are realized, impacting margin through that reduction. Conversely, because markdown sales do not necessarily occur in the same period in which the actual markdowns are taken, Permanent Markdowns are managed strictly as a percentage of sales, and are subtracted directly from the Maintained Margin value for the period in which they occur. In this plan type, average unit cost (AUC) and average unit ticket (AUT) do not typically change from period to period because of changes to the sales plan. AUC will change as a result of incoming receipts or other changes to the inventory mix. AUT will only change if the user changes it directly or indirectly, through a change in IMU %.</p>
+        <p><span style="font-weight: bold;">Plan Currency:</span><span style="font-weight: bold;">&#160; </span>This selection defines the base currency in which the users will be working with, all currencies are supported in this version.</p>
+        <p><span style="font-weight: bold;">Management Type: </span>determines whether a plan will be created within JustEnough (<span style="font-weight: bold;">Manual type</span>) or data for the plan will be imported via API (<span style="font-weight: bold;">Import type</span>); set to Manual by default</p>
+        <p class="ListParagraph" style="margin-left: 36pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Error: </span><span style="font-style: italic;">if an import post runs for a plan of type Manual, </span><span style="font-style: italic;">the plan will not be affected and an error will be raised</span>
+        </p>
+        <p class="ListParagraph" style="margin-left: 36pt;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">when import posts run for plans of type Import, hierarchy levels will automatically be added to the plan based on the import data; if desired, the API can be run in “Window” mode, deleting all existing data in a plan and re-loading it from the import data</span>
+        </p>
+        <p><span style="font-weight: bold;">Seed Type:&#160; </span>This selection defines how future periods in the plan will be seeded for the metrics offered within the plan type that has been selected.&#160; There are three standard seeding options to choose from.&#160; Seed Types in our standard offering cannot be combined to seed future periods when creating the plan.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;">Historic Sales LY:&#160; </span>Selecting this option will seed future periods with sales, sales units, and average unit retail from last year’s comparable periods.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;">Historic Sales LLY:&#160;&#160; </span>Selecting this option will seed future periods with sales, sales units, and average unit retail from two years ago comparable periods.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;">Forecasted Sales:</span>&#160;&#160; Selecting this option will seed future periods with sales units that are coming from the forecast module.&#160; Sales are derived by multiplying the forecasted sales units times the average unit retail from last year’s comparable periods.</p>
+        <p style="margin-left: 36pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span> <span style="font-style: italic;">regardless of the selected Seed Type, metrics that would be seeded with negative values based on the available data indicated by that type will be seeded with zeroes instead</span></p>
+        <p><span style="font-weight: bold;">Calendar:&#160;&#160; </span>This selection defines the calendar that users will be working with in the master plan.&#160; We offer two standard selections based on a retail planning calendar.&#160; Users can select a <span style="font-weight: bold;">4-4-5</span> calendar or <span style="font-weight: bold;">4-5-4</span> calendar.&#160; These calendars are NRF retail planning calendars.&#160; It is possible to import custom calendars during implementation of this module if necessary.</p>
+        <p><span style="font-weight: bold;">Calendar Level:</span><span style="font-weight: bold;">&#160; </span>This selection defines the lowest level of time that users will be working with in the master plan.&#160; There are three standard options a user can select.&#160; (Year, Month, Week)&#160; Most plans created in this module go to the Month or Week level.</p>
+        <p><span style="font-weight: bold;">Start Period:</span><span style="font-weight: bold;">&#160; </span>This selection defines the first period contained within the plan.&#160; This can be a historical period or future period. </p>
+        <p><b>Stock Split Supply Chain:</b> The supply chain used to determine how inventory is <a href="Essential Business Concepts_2.htm#DC">split</a> among DCs. (The <b>Supply Chain Status</b> field indicates whether the supply chain is valid for use with this plan.)</p>
+        <p><b>Stock Split Sales Types</b>: The sales types to consider when apportioning stock to DCs.</p>
+        <p><b>Supply Chain Status</b>: This read-only field indicates whether or not the supply chain is valid. (See <a href="Validating a Supply Chain.htm">Validating a Supply Chain</a> for more information.)</p>
+        <p><span style="font-weight: bold;">Owner:</span><span style="font-weight: bold;">&#160;&#160; </span>This will be greyed out until the plan is created.&#160; Once the plan is created the system will display the name of the user who created the plan.</p>
+        <p><span style="font-weight: bold;">Creation Date:</span><span style="font-weight: bold;">&#160; </span>This will be greyed out until the plan is created.&#160; Once the plan is created the system will display the date the plan was created.</p>
+        <p><span style="font-weight: bold;">Status:</span><span style="font-weight: bold;">&#160;&#160; </span>This will be greyed out until the plan is created.&#160; Once the plan is created the system will display the status the plan is in.&#160; Plan status will be covered in the Plan approval section of this document.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_11.png" style="visibility: visible;width: 634px;height: 345px;" />
+        </p>
+        <p>The second tab a user works with in this view is the Product tab.&#160; The Product tab is where the user will define the product hierarchical structure contained within the plan.&#160; The product hierarchy levels selected define the levels in which users can work with.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_12.png" style="visibility: visible;width: 277px;height: 317px;" />
+        </p>
+        <p>The top window of the screen is where the plan levels are selected.&#160; In the example above, the lowest level of this master plan will be category.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_13.png" style="visibility: visible;width: 634px;height: 254px;" />
+        </p>
+        <p>The bottom window of the screen is where the user will determine which categories will be contained within the master plan. </p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_14.png" style="visibility: visible;width: 634px;height: 349px;" />&#160; </p>
+        <p>The third tab a user works with in this view is the Channel tab.&#160; The Channel tab is where the user will define the location hierarchical structure contained within the plan.&#160; The location hierarchy levels selected define the levels in which users can work with.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_15.png" style="visibility: visible;width: 437px;height: 311px;" />
+        </p>
+        <p>The top window of the screen is where the plan levels are selected.&#160; In the example above, the lowest level of this master plan will be channel.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_16.png" style="visibility: visible;width: 634px;height: 171px;" />
+        </p>
+        <p>The bottom window of the screen is where the user will determine which channels will be contained within the master plan. </p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_17.png" style="visibility: visible;width: 634px;height: 347px;" />
+        </p>
+        <p>The fourth tab a user works with in this view is the User Access tab.&#160; The User Access tab is where the user will define the user/role access permissions within the plan.&#160; Access permissions can be defined by role within the organization or by User.&#160; In the bottom window of this view, setting up the permissions requires that the user navigate through three tabs.&#160; (Product, Channel, Merge Measure Set).&#160; In the example above the highlighted user has read and write access to Women’s Denim.&#160; This means that the user can view and edit Women’s Denim for any branch created that is connected to this master plan.&#160; For the master plan, the user will have read and merge rights for Women’s Denim.&#160; </p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_18.png" style="visibility: visible;width: 634px;height: 344px;" />
+        </p>
+        <p>Access Permissions are also defined by channel.&#160; The user can click on the channel tab and define the level of the location hierarchy roles and users have for read and write access.&#160; In the example above the highlighted user has read and write access to US Retail and E-Com channels.&#160; This means that the user can view and edit Women’s Denim for the US Retail and E-Com for any branch that is connected to this master plan.&#160; For the master plan, the user will have read and merge rights for Women’s Denim.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_19.png" style="visibility: visible;width: 634px;height: 347px;" />
+        </p>
+        <p>Access Permissions control which measure sets can be merged into the master plan from a branch that belongs to that master plan.&#160; Measure sets are defined in the Header Area controls section.&#160; In the example above the highlighted user has permission to merge all measures within the Hybrid Cost-Based Plan type into the master from the branch or branches they are working with.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_20.png" style="visibility: visible;width: 634px;height: 347px;" />
+        </p>
+        <p>The last tab a user works with in this view is the View Collection tab. The View Collection tab defines the collection of metrics that are contained within the plan as well as the collection of metrics that are contained within any snapshot taken of the plan.&#160; View collections are set up by clicking add for both the top and bottom window in the view.&#160; Upon clicking add, the user will select the Plan Type and View Collection set that is to be associated with this plan.&#160; Once this screen is completed, the user will click OK and that will trigger the system to create the plan based on all the criteria that was defined in the five tabs contained in the maintain financial plan window.&#160; Upon clicking OK, the system will return the user back to the Financial Plan Maintenance view and will display the plan that has been created.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-style: italic;">Note: </span><span style="font-style: italic;">plan view collection sets defined in this tab are inherited by default by any Branch plans created from a Master plan. </span><span style="font-weight: bold;font-style: italic;">If the same view collection sets assigned to a Master plan are desired for use in Branch plans beneath it, this section can be left blank.</span><span style="font-style: italic;"> Only if different view collection sets are desired must the user make changes to this section.</span>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_21.png" style="visibility: visible;width: 634px;height: 325px;" />
+        </p>
+        <p><span style="font-weight: bold;font-style: italic;">Note:</span><span style="font-style: italic;"> The Master Financial Plan that has been created will update to “Created” state.&#160; This means the plan is ready to be initialized.&#160; Initializing the master plan basically populates all the measures defined for historical and future periods.&#160; A plan must be initialized in order to view and work with the Master Plan.&#160; To initialize a plan the user will simply click the Initialize icon in the header of the Financial Plan Maintenance view.&#160; Once the user clicks initialize a process will run and return the user back to the Financial Plan Maintenance view and the Master Financial Plan will be assigned the status of Initialized.</span>
+        </p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_22.png" style="visibility: visible;width: 595px;height: 41px;" />
+        </p>
+        <h3><a name="Branch"></a>Branch Plans</h3>
+        <p style="margin-left: 2pt;">When working in the financial plan maintenance view, after the Master Plan has been initialized, users will have the opportunity to create Branch plans.&#160; Branch plans are a copy of the master plan and can be edited by users who have permission access.&#160; To create a Branch plan, the user will follow the same steps as creating a master plan.&#160; A branch plan is a Financial Plan that is created from a Master plan in the MFP module and is directly editable.&#160; The branch plan is used to make changes to a financial plan.&#160; Branch plan examples include “working” plans, “stretch” plans or “shrink” plans.&#160; There is no limit to the number of branches that can be created.&#160; A branch will always be associated with a Master plan.&#160; Once a branch plan has been created it will show up underneath the Master plan it is associated with in the financial plan maintenance view.&#160; </p>
+        <p style="margin-left: 2pt;">
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_23.png" style="visibility: visible;width: 634px;height: 326px;" />
+        </p>
+        <p>As mentioned above, to create a branch plan a user will have to go through the same steps as creating a master plan, however all of the criteria in each of the tabs will be pre-populated with the same selection criteria of the master plan.&#160; To create a branch plan, the user will highlight the master plan they want to create a branch from and then click on the Branch icon.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_24.png" style="visibility: visible;width: 634px;height: 327px;" />
+        </p>
+        <p>Once the user has clicked on the Branch icon, the Branch Financial Plan window will appear.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_25.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 480px;" />
+        </p>
+        <p>The user has the ability to give the branch a name, description and start period and end period in the first tab that appears.&#160; The two most important tabs when creating a branch are the product and channel tab.&#160; Those tabs will contain the same selections as the master plan, however, the user has the ability to narrow down the selections.&#160; Once the branch has been defined the user will click ok and then initialize the branch in the Financial Plan Maintenance view.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_26.png" style="visibility: visible;width: 634px;height: 327px;" />
+        </p>
+        <p>Once the branch has been initialized, users can open up the branch and begin making changes to the plan.&#160; To open a branch or master plan, the user will highlight the desired plan and click OK.</p>
+        <h3><a name="Snapshot"></a>Snapshots</h3>
+        <p>Snapshots serve as the third main concept of plans and can be managed in the Financial Plan Maintenance view.&#160; Snapshots are locked down versions of master or branch plans.&#160; The main differences between a snapshot and any other plan is they do not actualize as we move forward in time.&#160; Snapshots can be accessed on the right hand side of view and will be specific to the master or branch plan highlighted on the left hand side of the view.&#160; To access the snapshot functionality the user will click on the snapshots tab on the left hand side of the view.</p>
+        <p>
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_27.png" style="visibility: visible;width: 634px;height: 329px;" />
+        </p>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;"><span style="font-weight: bold;color: #000000;">Snapshots Tab:&#160; </span><span style="color: #000000;">Launches the Manage Snapshots dialog - this is used to set up plan snapshots which occur on a regular schedule as well as to create and delete snapshots manually.&#160; Snapshots are, as their name implies, captures of the state the current plan at the time they are generated for the purpose of future comparisons as users work with the plan. Snapshots can be used within the main planning view, the comp/non-comp tab and the sales by type tab within Merchandise Financial planning; for details on the metrics included in snapshots, see Comparison metrics listed in under the respective sections for these supporting views.&#160; There are two main components that make up the Snapshots tab.&#160; The top portion of the view is the MFP Snapshot Templates.</span>
+        </p>
+        <p style="margin-bottom: 0pt; margin-left: 18pt;">
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_28.png" style="visibility: visible;width: 575px;height: 263px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Snapshot Templates:</span><span style="color: #000000;"> list of all snapshot templates for the current plan, which the current user has access to view; used to create recurring snapshots of the current plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">New:</span><span style="color: #000000;"> adds a new snapshot template line</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Delete:</span><span style="color: #000000;"> deletes the currently selected snapshot template(s) from the plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Fields:</span><span style="color: #000000;"> opens the fields Customization dialog; users can drag fields to/from the snapshot templates column header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Custom layouts can be saved/restored by right-clicking in the Snapshot Templates area and selecting Save Layout or Restore Layout, respectively</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Name:</span><span style="color: #000000;"> user editable alpha numeric; name for the snapshot template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Description:</span><span style="color: #000000;"> user editable alpha numeric; description for the snapshot template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove By Days:</span><span style="color: #000000;"> user editable positive integer; number of days from the generation of snapshots created by a template after which the system will automatically delete them; used for maintenance purposes</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Snapshot Start Days:</span><span style="color: #000000;"> user editable positive integer; number of days backward from the date a snapshot is generated to be captured</span> </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Snapshot End Days:</span><span style="color: #000000;"> user editable positive integer; number of days forward from the date a snapshot is generated to be captured</span> </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product Level:</span><span style="color: #000000;"> user editable dropdown; selection of a product hierarchy level to include in snapshots generated by the template; available choices based on the assigned product hierarchy for the current plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Channel Level:</span><span style="color: #000000;"> user editable dropdown; selection of a location hierarchy level to include in snapshots generated by the template; available choices based on the assigned location hierarchy for the current plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Schedule:</span><span style="color: #000000;"> user editable dropdown; sets the frequency and timing of snapshots generated by the template; standard options are:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Weekly Mondays</li>
+            <li style="margin-bottom: 0pt;color: #000000;">Monthly - first of month</li>
+            <li style="margin-bottom: 0pt;color: #000000;">Every 15 Days</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">the exact timing produced by each choice is dependent on the calendar assigned to the current plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Snapshot Access:</span><span style="color: #000000;"> user editable dropdown; sets user access to snapshots generated by the template; public, private, or shared</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Snapshot Users:</span><span style="color: #000000;"> user editable multi-select; if Snapshot Access is Shared, allows selection of specific users to have access to snapshots generated by the template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Template Access:</span><span style="color: #000000;"> user editable dropdown; sets user access to the template; public, private, or shared</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Template Users:</span><span style="color: #000000;"> user editable multi-select; if Template Access is Shared, allows selection of specific users to have access to the template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Apply:</span><span style="color: #000000;"> applies user changes made to snapshot templates and saves newly created templates since the last Apply</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cancel:</span><span style="color: #000000;"> cancels user changes made to snapshot templates and removes templates created since last Apply</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;color: #000000;">The bottom portion of the view is the MFP Snapshots</p>
+        <p style="margin-bottom: 0pt; margin-left: 18pt; color: #000000;">
+            <img src="../../Resources/Images/MFP 523/Essential Business Concepts_29.png" style="visibility: visible;width: 561px;height: 251px;" />
+            <br />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Snapshots:</span><span style="color: #000000;"> list of all snapshots for the current plan, whether created manually or by a template, which the current user has access to view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">New:</span><span style="color: #000000;"> adds a new snapshot line to the list</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Delete:</span><span style="color: #000000;"> deletes the selected snapshot(s) from the plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Fields:</span><span style="color: #000000;"> opens the fields Customization dialog; users can drag fields to/from the snapshots column header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Custom layouts can be saved/restored by right-clicking in the Snapshots area and selecting Save Layout or Restore Layout, respectively</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Start Date:</span><span style="color: #000000;"> non-editable calendar control; sets the start date for the snapshot window of time</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Notes: </span><span style="font-style: italic;color: #000000;">must be set before End Date; field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">End date:</span><span style="color: #000000;"> non-editable calendar control; sets the end date for the snapshot window of time</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Notes: </span><span style="font-style: italic;color: #000000;">must be set after Start Date; field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Remove By Date: </span><span style="color: #000000;">user editable calendar control; sets the date on which the system will automatically delete the snapshot; used for maintenance purposes</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">must be set after the current date</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product Level:</span><span style="color: #000000;"> non-editable dropdown; selection of a product hierarchy level to include in the snapshot; available choices based on the assigned product hierarchy for the current plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Channel Level:</span><span style="color: #000000;"> non-editable dropdown; selection of a location hierarchy level to include in the snapshot; available choices based on the assigned location hierarchy for the current plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Access Level:</span><span style="color: #000000;"> user editable dropdown; sets user access to the snapshot; public, private, or shared</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Access Users:</span><span style="color: #000000;"> user editable multi-select; if Snapshot Access is Shared, allows selection of specific users to have access to the snapshot</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Created From Template:</span><span style="color: #000000;"> read-only alpha-numeric; name of the template the snapshot was generated from; NULL if manually generated</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Apply: </span><span style="color: #000000;">applies user changes made to snapshots and generates newly created snapshots since the last Apply</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Cancel:</span><span style="color: #000000;"> cancels user changes made to snapshots and removes snapshots created since last Apply</span>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

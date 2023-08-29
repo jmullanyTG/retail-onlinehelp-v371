@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Global Site Priority</h1>
+        <p>Global site priority and priority group settings will alter the way in which the replenishment and allocations ordering engines prioritize stock distribution. The Replenish Engine ostensibly operates in two separate modes based on whether or not any values are present within priority group fields for any site. </p>
+        <h3>Site Prioritization Logic</h3>
+        <p>In a constrained DC stock situation, with more than one store requesting stock:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">If priority groups are not present (meaning that the values are NULL, not set to 0) the stores are prioritized by their global site priority on a day-by-day basis when their stock requests are fulfilled. </li>
+            <li class="ListParagraph" style="list-style-type: disc;">If priority groups are present, stores are grouped by their respective priority group value, then ordered by the requested demand quantity on a day-by-day basis when their stock requests are fulfilled.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">If all stores are within a single priority group, they are ordered by the requested demand quantity on a day-by-day basis when their stock requests are fulfilled. This can be used to create a “demand prioritization” version of the Replenish Engine. </li>
+        </ul>
+        <p>G &amp; Group Priority</p>
+        <p>Global and group priority is a globally applicable view and is not driven by the selected site in the top grid. Within this view, users will rank sites based on their priority as it relates to receiving stock in potential shortfall situations. </p>
+        <p>Priority group will allow users to “protect” a specific set of sites before referring to global priority to resolve shortfall situations. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Code – </span>Site code for the store or DC.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Type –</span> The site type (DC, Store, and DC/Store).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Description–</span> The name of the site.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Global Priority –</span> Unique, globally applied priority. Used to resolve shortfall situations.&#160; </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority Group –</span> Associated priority group. Used to resolve shortfall situations.&#160; Takes precedence over global priority. </li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

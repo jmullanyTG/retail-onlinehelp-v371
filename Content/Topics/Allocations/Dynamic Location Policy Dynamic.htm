@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3 >Dynamic Location Policy (Dynamic Store)</h3>
+        <p>If either “single dynamic location calculation” or “always calculate dynamic location” is selected in the “dynamic location policy” dropdown, JustEnough will selectively eliminate stores from the location strategy if they are determined to be receiving insufficient stock to appropriately represent the assortment. This is done as part of a multi-step process which will pre-calculate the item forecasts and store level need (demand-Stock on Hand).</p>
+        <p>In order to execute this process without creating entries in tbl_Allocate_Strategy_Inventory_Cache (and thus creating potentially superfluous entries into tbl_Inventory), the dynamic store calculation will create temporary tables with surrogate inventory entries against which to validate the store need against the specified threshold. </p>
+        <p>When a save action occurs from the user interface (or a scheduled batch calculation) and one of the two dynamic store options is selected, the process will:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">Build a list of itemmasters and sites into a temporary cache table (#tbl_Cahce_Inventory_DynamicStore) with surrogate InventoryIDs in the form of a RowID</li>
+            <li class="ListParagraph">Run the dynamic store validation (usp_Allocate_Maintenance_Build_AllocateStrategyForecast_Noncache), which will write to a temporary table (#tbl_Forecast_Allocate).</li>
+            <li class="ListParagraph">Based on the values in #tbl_Forecast_Allocate, the stock on hand at the stores, the available stock (based on inventory source selection and DC priority), the procedure will compare the value against the dynamic store threshold as specified in system policy. </li>
+            <li class="ListParagraph">Stores below the threshold will be removed from the temporary cache. The remaining entries will be added to tbl_Allocate_Strategy_Inventory_Cache.</li>
+        </ol>
+    </body>
+</html>

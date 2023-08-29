@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/_Print Topics/Title Page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.Printed Manuals"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Title.flpgl" />
+  <TocEntry
+    Title="Price Manager Overview"
+    Link="/Content/Topics/Price Planning/Price Planning Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Price Planning Configuration"
+    Link="/Content/Topics/Price Planning/Price Planning Configuration.htm">
+    <TocEntry
+      Title="Price Manager Global Policies"
+      Link="/Content/Topics/System Policies/Module - Price Planning.htm" />
+    <TocEntry
+      Title="Price Manager User Rights"
+      Link="/Content/Topics/Price Planning/Price Manager User Rights.htm" />
+    <TocEntry
+      Title="Rounding Rules"
+      Link="/Content/Topics/Price Planning/Rounding Rules.htm">
+      <TocEntry
+        Title="Create a Rounding Rule (Standard &amp; Price Ending)"
+        Link="/Content/Topics/Price Planning/Create a Rounding Rule Standard Price Ending.htm" />
+      <TocEntry
+        Title="Create Rounding Rule Criteria (Standard)"
+        Link="/Content/Topics/Price Planning/Create Rounding Rule Criteria Standard.htm" />
+      <TocEntry
+        Title="Create Rounding Rule Criteria (Price Ending)"
+        Link="/Content/Topics/Price Planning/Create Rounding Rule Criteria Price Ending.htm" />
+      <TocEntry
+        Title="Modify a Rounding Rule or Rounding Rule Criteria"
+        Link="/Content/Topics/Price Planning/Modify a Rounding Rule or Rounding Rule Criteria.htm" />
+      <TocEntry
+        Title="Delete a Rounding Rule or Rounding Rule Criteria"
+        Link="/Content/Topics/Price Planning/Delete a Rounding Rule or Rounding Rule Criteria.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Variables"
+      Link="/Content/Topics/Price Planning/Variables.htm">
+      <TocEntry
+        Title="Create a Variable"
+        Link="/Content/Topics/Price Planning/Create a Variable.htm" />
+      <TocEntry
+        Title="Modify a Variable"
+        Link="/Content/Topics/Price Planning/Modify a Variable.htm" />
+      <TocEntry
+        Title="Delete a Variable"
+        Link="/Content/Topics/Price Planning/Delete a Variable.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Strategy Calculation Rules"
+      Link="/Content/Topics/Price Planning/Strategy Calculation Rules.htm">
+      <TocEntry
+        Title="Create a Calculation"
+        Link="/Content/Topics/Price Planning/Create a Calculation.htm" />
+      <TocEntry
+        Title="Modify a Calculation"
+        Link="/Content/Topics/Price Planning/Modify a Calculation.htm" />
+      <TocEntry
+        Title="Delete a Calculation"
+        Link="/Content/Topics/Price Planning/Delete a Calculation.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Strategy Validation Rules"
+      Link="/Content/Topics/Price Planning/Strategy Validation Rules.htm">
+      <TocEntry
+        Title="Create a Validation"
+        Link="/Content/Topics/Price Planning/Create a Validation.htm" />
+      <TocEntry
+        Title="Modify a Validation"
+        Link="/Content/Topics/Price Planning/Modify a Validation.htm" />
+      <TocEntry
+        Title="Delete a Validation"
+        Link="/Content/Topics/Price Planning/Delete a Validation.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Price Strategies"
+      Link="/Content/Topics/Price Planning/Price Strategies.htm">
+      <TocEntry
+        Title="Create a Price Strategy"
+        Link="/Content/Topics/Price Planning/Create a Price Strategy.htm" />
+      <TocEntry
+        Title="Add a Price Strategy Rule"
+        Link="/Content/Topics/Price Planning/Add a Price Strategy Rule.htm" />
+      <TocEntry
+        Title="Set defaults Price Strategy Variables"
+        Link="/Content/Topics/Price Planning/Set defaults Price Strategy Variables.htm" />
+      <TocEntry
+        Title="Set Variables for integration"
+        Link="/Content/Topics/Price Planning/Set Variables for integration.htm" />
+      <TocEntry
+        Title="Modify a Price Strategy Rule"
+        Link="/Content/Topics/Price Planning/Modify a Price Strategy Rule.htm" />
+      <TocEntry
+        Title="Delete a Price Strategy Rule"
+        Link="/Content/Topics/Price Planning/Delete a Price Strategy Rule.htm" />
+      <TocEntry
+        Title="Modify a Price Strategy"
+        Link="/Content/Topics/Price Planning/Modify a Price Strategy.htm" />
+      <TocEntry
+        Title="Delete a Price Strategy"
+        Link="/Content/Topics/Price Planning/Delete a Price Strategy.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Workflow"
+      Link="/Content/Topics/Price Planning/Workflow.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Price Planning Home Screen"
+    Link="/Content/Topics/Price Planning/Price Planning Home Screen.htm">
+    <TocEntry
+      Title="Open a Pricing Plan"
+      Link="/Content/Topics/Price Planning/Open a Pricing Plan.htm" />
+    <TocEntry
+      Title="Open a Pricing Action"
+      Link="/Content/Topics/Price Planning/Open a Pricing Action.htm" />
+    <TocEntry
+      Title="Capturing new products, price &amp; cost changes"
+      Link="/Content/Topics/Price Planning/Capturing new products price cost changes.htm">
+      <TocEntry
+        Title="Product Change panel"
+        Link="/Content/Topics/Price Planning/Product Change panel.htm" />
+      <TocEntry
+        Title="Add to Existing Price Action"
+        Link="/Content/Topics/Price Planning/Add to Existing Price Action.htm" />
+      <TocEntry
+        Title="Create New Price Action"
+        Link="/Content/Topics/Price Planning/Create New Price Action.htm" />
+      <TocEntry
+        Title="Update a Future Price Action"
+        Link="/Content/Topics/Price Planning/Update a Future Price Action.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Create Pricing Plans"
+    Link="/Content/Topics/Price Planning/Create Pricing Plans.htm">
+    <TocEntry
+      Title="Create a Pricing Plan"
+      Link="/Content/Topics/Price Planning/Create a Pricing Plan.htm" />
+    <TocEntry
+      Title="Add Products to the Pricing Plan"
+      Link="/Content/Topics/Price Planning/Add Products to the Pricing Plan.htm" />
+    <TocEntry
+      Title="Add Sites to the Pricing Plan"
+      Link="/Content/Topics/Price Planning/Add Sites to the Pricing Plan.htm" />
+    <TocEntry
+      Title="Delete a Pricing Plan"
+      Link="/Content/Topics/Price Planning/Delete a Pricing Plan.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Create Pricing Plans and Actions"
+    Link="/Content/Topics/Price Planning/Create Pricing Plans and Actions.htm">
+    <TocEntry
+      Title="Create a Price Action"
+      Link="/Content/Topics/Price Planning/Create a Price Action.htm" />
+    <TocEntry
+      Title="View Price Action product’s inventory"
+      Link="/Content/Topics/Price Planning/View Price Action product s inventory.htm" />
+    <TocEntry
+      Title="Modify a Price Action"
+      Link="/Content/Topics/Price Planning/Modify a Price Action.htm">
+      <TocEntry
+        Title="Select a new Pricing Strategy for the Price Action"
+        Link="/Content/Topics/Price Planning/Select a new Pricing Strategy for the Price Action.htm" />
+      <TocEntry
+        Title="Modify Pricing at lower levels"
+        Link="/Content/Topics/Price Planning/Modify Pricing at lower levels.htm" />
+      <TocEntry
+        Title="Exclude Products from the Price Action"
+        Link="/Content/Topics/Price Planning/Exclude Products from the Price Action.htm" />
+      <TocEntry
+        Title="Exclude Sites from the Price Action"
+        Link="/Content/Topics/Price Planning/Exclude Sites from the Price Action.htm" />
+      <TocEntry
+        Title="Exclude individual products from the Price Action"
+        Link="/Content/Topics/Price Planning/Exclude individual products from the Price Action.htm" />
+      <TocEntry
+        Title="Exclude a specific Site product from the Price Action"
+        Link="/Content/Topics/Price Planning/Exclude a specific Site product from the Price Action.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Delete a Price Action"
+      Link="/Content/Topics/Price Planning/Delete a Price Action.htm" />
+    <TocEntry
+      Title="Calculate a Price Action"
+      Link="/Content/Topics/Price Planning/Calculate a Price Action.htm">
+      <TocEntry
+        Title="Price Action Validation Log and Overriding Validation Errors"
+        Link="/Content/Topics/Price Planning/Price Action Validation Log and Overriding Validation Errors.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Modify a Price Action Status"
+      Link="/Content/Topics/Price Planning/Modify a Price Action Status.htm" />
+    <TocEntry
+      Title="View Price Action Status Changes and Messages"
+      Link="/Content/Topics/Price Planning/View Price Action Status Changes and Messages.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Price Planning Help"
+    Link="/Content/Topics/Price Planning/Price Planning Help.htm" />
+</CatapultToc>

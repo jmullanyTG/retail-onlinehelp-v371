@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsExcelImport
+  SaveWorkbookToFolder="false"
+  WorksheetImportType="topic"
+  PersistFirstRowAsHeader="true"
+  LimitRows="false"
+  LimitRowsCount="30"
+  SaveChartsAs="true"
+  SaveChartsAsType="Png"
+  ConvertEquations="true"
+  ExclusionFilters="file:///C:/Users/Jonathan.Boswell/Documents/JustEnough/3.7.1/JIRA/DM Resolved Issues for RN (JIRA).xlsx?Worksheet=DM Resolved Issues for RN (JIRA;ColumnNumbers=4,5,7"
+  CreateMasterTopic="false"
+  IncludeWorksheetTitlesAsHeadings="false"
+  ImportHiddenRowsColumns="false"
+  KeepSourceLinks="true"
+  AutoSync="false"
+  Stylesheet=""
+  PreserveSourceStyles="false"
+  LastImport="2018-12-14T12:37:26.4633342-08:00">
+  <Files>
+    <Url
+      Source="../../../../JustEnough/3.7.1/JIRA/DM Resolved Issues for RN (JIRA).xlsx"
+      AbsoluteSource="file:///C:/Users/Jonathan.Boswell/Documents/JustEnough/3.7.1/JIRA/DM Resolved Issues for RN (JIRA).xlsx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/DM Resolved Issues for RN (JIRA)/DM Resolved Issues for RN (JIRA.htm"
+      TimeStamp="12/14/2018 12:37:14 PM" />
+    <Url
+      Source="../TOCs/DM Resolved Issues for RN (JIRA).fltoc"
+      TimeStamp="12/14/2018 12:37:14 PM" />
+  </GeneratedFiles>
+</MsExcelImport>

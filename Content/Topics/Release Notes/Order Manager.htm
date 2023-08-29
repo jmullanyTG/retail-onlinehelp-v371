@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Order Manager</h1>
+        <p>The following Order Manager enhancement is now available.</p>
+        <h2>Available Date fields</h2>
+        <p>Available date refers to the date on which an ordered product is expected to be "in stock" and ready for sale/distribution at the receiving site or DC. (Availability is counted at the immediate start of the day, before any demand is drawn off the available stock.) Available date differs from delivery date in that it accounts for any order processing time that occurs after the delivery date but before the product is considered in-stock.</p>
+        <p>When generating forecasts, lost sales projections are now calculated against available date, not delivery date.</p>
+        <h3>Calculation</h3>
+        <p>In 3.7.1, available date is calculated as "Delivery Date + Order Processing Lead Time Days".</p>
+        <p>"Order Processing Lead Time Days" is based on the Order Processing Lead Time value of the order's governing inventory policy. It is resolved using either calendar days or business days, depending on the <a href="General Enhancements.htm#System">Order Processing Lead Time Type system policy.</a></p>
+        <h3>Examples</h3>
+        <p>The following examples show how order processing lead type affects the available date of an item. Both examples have the same delivery date and order processing lead time, but Example 1 uses calendar days to resolve lead time days and Example 2 uses business days. (For Example 2, assume that Saturdays and Sundays are not scheduled business days.)</p>
+        <p>Because Saturdays and Sundays are counted as processing days in Example 1 but not in Example 2, the available date in Example 1 is 2 days earlier than in Example 2.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 34%;font-size: 9pt;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="font-size: 9pt;width: 34%;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 33%;font-size: 9pt;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1" style="font-size: 9pt;">&#160;</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1" style="font-size: 9pt;">Example 1</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1" style="font-size: 9pt;">Example 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Delivery Date</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Friday Feb 1</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Friday Feb 1</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;"><span style="font-weight: normal;"><span style="font-size: 9pt;">Order Processing Lead Time<br /> (inventory policy value)</span></span>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-size: 9pt;font-weight: normal;">3 days</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-size: 9pt;font-weight: normal;">3 days</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: normal;"><span style="font-size: 9pt;">Order Processing Lead Time Type </span><span style="font-weight: normal;"><span style="font-size: 9pt;">(system policy setting)</span></span>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Calendar days</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Business days</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-size: 9pt;font-weight: normal;">Scheduled business days</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-size: 9pt;font-weight: normal;">Monday - Friday</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-size: 9pt;font-weight: normal;">Monday - Friday</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Available date calculation</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Friday Feb 1 + 3 calendar days</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Friday Feb 1 + 3 business days</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-size: 9pt;font-weight: normal;">Resolved order processing lead time days</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-size: 9pt;font-weight: normal;">3 (Saturday, Sunday, Monday)</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;"><span style="font-size: 9pt;">5 (</span><i style="font-size: 9pt;">Saturday (closed)</i><span style="font-size: 9pt;">, </span><i style="font-size: 9pt;">Sunday (closed)</i><span style="font-size: 9pt;">, Monday, Tuesday, Wednesday)</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Available date</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Tuesday Feb 5</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1" style="font-size: 9pt;font-weight: normal;">Thursday Feb 7</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Fields</h3>
+        <p>The following Available Date fields are now available for display on the Order Manager grid.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">User Available Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">A date entered by a user to override the Recommended Available Date and Constrained Available Date values.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: normal;">Recommended Available Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">The available date calculated by the ordering engine before any constraints are applied. This date is derived from the delivery date, order processing lead time, and order processing lead time type. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Constrained Available Date</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">The recommended available date after factoring in ordering constraints.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

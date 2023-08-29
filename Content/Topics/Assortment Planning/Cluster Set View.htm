@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Cluster Set View </h1>
+        <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Cluster Set view </span><span style="color: #000000;font-size: 12pt;">contains all the essential metrics for building a sales plan and </span><span style="color: #000000;font-size: 12pt;">allows users to make Cluster Set or Cluster level changes to the </span><span style="color: #000000;font-size: 12pt;">single </span><span style="color: #000000;font-size: 12pt;">placeholder/collection selected in the Main Planning view</span>
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Cluster Set View.png" style="visibility: visible;width: 374px;height: 373px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold; font-size: 12pt; color: #000000;">Site Count (Active): </span><span style="color: #000000;font-size: 12pt;">non-editable decimal (10.1); displays the average total site count and the average active site count (in parenthesis) of the cluster set/cluster between Phase In and Phase Out</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Cluster Set View_1.png" style="visibility: visible;width: 467px;height: 145px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Typically, this metric will be a static whole number that equates to the sum of the </span><span style="color: #000000;font-size: 12pt;">sites in the cluster set or cluster</span><span style="color: #000000;font-size: 12pt;">, however, when multiple cluster set snapshots are present during a placeholder/collection’s life, it is possible for site count by cluster to vary</span><span style="color: #000000;font-size: 12pt;"> over time</span><span style="color: #000000;font-size: 12pt;">, thus necessitating the need for an average count</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUC</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Average Unit Cost)</span>: user editable currency ($10.01); sets the average unit cost price for the cluster set/cluster.<ul style="list-style-type: disc;margin-left: 36pt;"><li><p>Displays the weighted average of AUC values for all periods, both actualized and future, beneath</p></li><li style="margin-bottom: 0pt;"><b>Note</b><span style="font-weight: bold;font-style: italic;font-size: 12pt;">:</span> Once a placeholder has begun to actualize (current date is greater than Phase In date), AUC will not be directly editable</li></ul></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUT</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Average Unit Ticket)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span>user editable currency ($10.01); the average unit ticket price for the cluster set/cluster<ul style="list-style-type: disc;margin-left: 36pt;"><li><p>Displays the weighted average of AUT values for all periods, both actualized and future, beneath.</p></li><li><p>AUT is assumed to be VAT inclusive and is treated as such for all dependent calculations</p></li><li><p>Because of the potential for multiple currencies, VAT (value added tax) rates, and promotional participation to vary by site within a single cluster, changes to AUT require an Apply to properly calculate the effects on the rest of the plan for a given placeholder/collection. Details for this calculation are available in a supplemental Excel model.</p></li><li><p>Period level changes to AUT can be made in the AUT right pane view. See <a href="AUT View.htm">AUT&#160;View</a> for more information.</p><ul style="list-style-type: disc;margin-left: 36pt;"><li><p><b>Notes</b>: </p><ul style="list-style-type: disc;margin-left: 36pt;"><li>Once a placeholder has begun to actualize (current date is greater than Phase In date), AUT is no longer directly editable</li><li><p>AUR (average unit retail), being an outcome of the calculation mentioned above, is not directly editable</p></li></ul></li></ul></li></ul></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Gross Margin %:</span> <span style="color: #000000;font-size: 12pt;">non-editable percentage (10.01%); gross margin percentage for the cluster set/cluster</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(AUR</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> ex VAT</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> – AUC) / AUR</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> ex VAT</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Phase In: </span><span style="color: #000000;font-size: 12pt;">user editable period picker; selects the phase in date for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Selections limit to periods prior to Phase Out, if set</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">defaults to the earliest non-actualized period within the Window of Time in the data selection parameters</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Mkdn Date</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Markdown Date)</span><span style="color: #000000;font-size: 12pt;">:</span><span style="color: #000000;font-size: 12pt;"> user editable period picker; selects the markdown date for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Selections limit to periods from Phase In through Phase Out</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Mkdn date tells the system which period to stop respecting the various constraints utilized in the Receipt Plan supporting view, including Min Pres</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">When viewing the by-period plan for the cluster set/cluster in Sales Plan or Receipt Plan view, Min Pres will drop to zero in the period specified by Mkdn Date</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Mkdn date can be pushed by changing Phase In or Phase Out</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #7030A0;font-size: 12pt;">Phase Out: </span><span style="color: #000000;font-size: 12pt;">user editable period picker; selects the phase out date for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Selections limit to periods after Phase In, if set</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">defaults to the last period within the Window of Time in the data selection parameters</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">for placeholders/collections of Replen Status, Phase Out dates are derived from the maximum Phase Out date set in the Forecasting module for all relevant inventories</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Curve Mode</span><span style="color: #000000;font-size: 12pt;">:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets the mode of the selected Seasonality Curve</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Static:</span><span style="color: #000000;font-size: 12pt;"> the selected curve is applied exactly as it exists at the time of application and the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster’s curve</span><span style="color: #000000;font-size: 12pt;"> will not change if changes are made to the curve, whether manually in the Curves module or through dynamic recalculation. </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Think of this as making a copy of the applied curve</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Dynamic:</span><span style="color: #000000;font-size: 12pt;"> changes made to the curve will be pushed down to the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span><span style="color: #000000;font-size: 12pt;"> via automated system processes, and the dependent sales plans will recalculate when those changes are pushed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Seasonality Curve</span><span style="color: #000000;font-size: 12pt;">:</span> <span style="color: #000000;font-size: 12pt;">user editable dropdown; sets the seasonality curve applied to </span><span style="color: #000000;font-size: 12pt;">the cluster set/cluster</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Used to break down Ttl Sls $ and Ttl Sls U by period in Sales Plan View; see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Line Visualization Supporting Views – Sales Plan</span><span style="color: #000000;font-size: 12pt;"> for more information</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">curves must be generated with the Enhanced Filter type to be eligible for use within Assortment Planning and selectable here</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">click the in-cell ellipsis (</span>
+                <img src="../../Resources/Images/Assortment Planning/Main Planning View_9.png" style="visibility: visible;mso-wrap-style: square;width: 18px;height: 19px;" /><span style="color: #000000;font-size: 12pt;">) to launch the Curve Selection dialog</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Cluster Set View_2.png" style="visibility: visible;width: 634px;height: 421px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Tags: </span><span style="color: #000000;font-size: 12pt;">user editable multi-select dropdown; displays/sets the tags used to filter the curves returned for selection; making it easier for the user to find the desired one</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">the maximum number of curves returned based on the selected tags is set by the system policy </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Max Selectable Lookup Curves</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, located in </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Curves</span><span style="font-style: italic;color: #000000;font-size: 12pt;">; this is done to prevent slowdown in the user interface</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Helpful Hint:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">assigning meaningful tags to curves upon generation will help avoid situations where the desired curve may be truncated from the list returned for selection</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Curve Name: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha numeric; displays the name of the corresponding curve</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Curve Generation Type: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha numeric; displays the method used to generate the corresponding curve, </span><span style="color: #000000;font-size: 12pt;">Manual or Specified Conditions Using Enhanced Filtering</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Bucket Type: </span><span style="color: #000000;font-size: 12pt;">non-editable alpha numeric; displays the bucket type for the curve, usually weekly or monthly</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Bucket Start Date: </span><span style="color: #000000;font-size: 12pt;">non-editable date (10/3/2017); displays the start date of the first bucket within the curve Start Date and End Date of the corresponding curve</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">technically, this can be before Start Date if Start Date falls in the middle or at the end of the first bucket</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Start Date: </span><span style="color: #000000;font-size: 12pt;">non-editable date (10/3/2017); displays the start date of the corresponding curve</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">End Date: </span><span style="color: #000000;font-size: 12pt;">non-editable date (10/3/2017); displays the end date of the corresponding curve</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Number of Periods: </span><span style="color: #000000;font-size: 12pt;">non-editable integer; displays the number of time periods (buckets) encompassed by the curve</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Existing: </span><span style="color: #000000;font-size: 12pt;">non-editable checkbox; indicates that the corresponding curve is already assigned to one or more placeholders in the current view; provided for ease of assignment of curves that have already been used for other existing placeholders</span> </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Tags: </span><span style="color: #000000;font-size: 12pt;">non-editable checkbox; indicates that the corresponding curve has one or more of the selected Tags attached to it</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">ROS $</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Rate of Sale Revenue)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable currency ($10.01); sets the rate of sale (average sales per site per period) in revenue for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(Ttl Sls $ / No. Periods / Site Count)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">ROS U</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Rate of Sale Units)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable integer; sets the rate of sale (average sales per site per period) in units for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(Ttl Sls U / No. Periods / Site Count)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Ttl Sls $</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Total Sales Revenue)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable currency ($10.01); sets the total sales revenue for the cluster set/cluster from Phase In through Phase Out</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;"> (</span><span style="font-style: italic;color: #000000;font-size: 12pt;">ROS $ * No. Periods * Site Count)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Ttl Sls U</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Total Sales Units)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable integer; sets the total sales units for the cluster set/cluster from Phase In through Phase Out</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;"> (</span><span style="font-style: italic;color: #000000;font-size: 12pt;">ROS U * No. Periods * Site Count)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUR</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Average Unit Retail)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">non-editable currency ($10.01); displays the average unit retail price for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Because of the potential for multiple currencies, VAT (value added tax) rates, and promotional participation to vary by site within a single cluster, AUR is not directly editable and is only changed as a result of changes to AUT, Phase In, Phase Out, and promotion applications. </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Details for this calculation are available in a supplemental Excel model</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">(Ttl Sls $ / Ttl Sls U)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">AUR ex VAT</span><span style="font-weight: bold;font-size: 12pt;">: </span><span style="font-size: 12pt;">Non-editable currency ($1.01); average retail (selling) price excluding VAT per unit for the placeholder item </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation: </span><span style="font-style: italic;font-size: 12pt;">AUR / (1 + VAT %)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Min Pres</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Minimum Presentation)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable integer; sets the desired minimum presentation stock per site for the cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Min Pres represents additional non-sales units to be purchased for the cluster set/cluster to maintain adequate stock for presentation within each store</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">SUM (cluster site count * cluster min pres – for all clusters</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> within a set</span><span style="font-style: italic;color: #000000;font-size: 12pt;">) / </span><span style="font-style: italic;color: #000000;font-size: 12pt;">cluster set </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Site Count (yields a weighted average)</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> or (cluster site count * cluster min pres) for single clusters</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Ttl Buy $</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Total Buy Cost Value)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable currency ($10.01); sets the total buy in revenue for the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Changes to this metric directly affect the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span><span style="color: #000000;font-size: 12pt;"> sales plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(Ttl Sls U + (Min Pres * Site Count) + Additional Buy) * AUC</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Ttl Buy U</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Total Buy Units)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable integer; sets the total buy in revenue for the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Changes to this metric directly affect the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster </span><span style="color: #000000;font-size: 12pt;">sales plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(Ttl Sls U + (Min Pres * Site Count) + Additional Buy)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Additional Buy</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Additional Buy Units)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable integer; sets the quantity of additional non-sales and non-min pres units to buy for the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">The primary function of this field is to show discrepancies between the sum of Ttl Sls U and (Min Pres * Site Count) and Ttl Buy U that can occur because of the ability to directly edit S/T %</li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">To remove unwanted excess units and rebalance a </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span><span style="color: #000000;font-size: 12pt;">’s sales plan, simply zero this field out and Apply</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(Ttl Buy U – Ttl Sls U – (Min Pres * Site Count))</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">S/T %</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Sell-Through Percentage)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable percentage (10.1%); sets the target sell-through percentage for the </span><span style="color: #000000;font-size: 12pt;">cluster set/cluster</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Changes to this metric alter Ttl Sls U in relation to Ttl Buy U to achieve the entered S/T %</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;"> (</span><span style="font-style: italic;color: #000000;font-size: 12pt;">Ttl Sls U / Ttl Buy U)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt ($): </span><span style="font-size: 12pt;">non-editable currency ($10.01); sum of Receipt Cost from Receipt Plan view for the placeholder/collection at cluster level; included as a comparison of the actual receipt plan to the estimated Ttl Buy $ in Cluster Set View</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Receipt (U):</span><span style="color: #000000;font-size: 12pt;"> non-editable integer; sum of Receipt Units from Receipt Plan view for the placeholder/collection at cluster level; </span><span style="font-size: 12pt;">included as a comparison of the actual receipt plan to the estimated Ttl Buy U in Cluster Set View</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Units Per Location:</span> <span style="font-size: 12pt;">non-editable integer; displays the average units per location for a cluster set/cluster based on Ttl Buy U and Site Count</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;"> (</span><span style="font-style: italic;color: #000000;font-size: 12pt;">Ttl Buy U / Site Count)</span>
+            </li>
+        </ul>
+    </body>
+</html>

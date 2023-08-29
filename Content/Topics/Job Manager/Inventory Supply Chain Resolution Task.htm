@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1529" MadCap:lastWidth="2120">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Inventory Supply Chain Resolution Task</h1>
+        <p>The Inventory Supply Chain Resolution task reprocesses supply chains when added to nightly or weekly jobs.</p>
+        <p>Because supply chain overrides are filter dependent, be sure to run this task AFTER imports and filter-rebuild tasks and BEFORE replenish/order tasks.</p>
+        <p>
+            <img src="../../Resources/Images/Job Manager/Inventory Supply Chain Resoution Task Type.png" />
+        </p>
+        <h2>Task parameters</h2>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The task name.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Description</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The task description.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Progress Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>What to do if an error occurs when processing this task:</p>
+                        <ul>
+                            <li style="font-weight: bold;">Report Error And Continue</li>
+                            <li style="font-weight: bold;">Report Error And Halt</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Time Out (Seconds)</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The timeout period.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Retry Count</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The number of retry attempts to make if a timeout occurs.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Retry Invterval</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">The time to wait in between retry attempts.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Task Enabled</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Whether or not this task is active or disabled. </p>
+                        <ul>
+                            <li>When selected, the task is enabled and will be run if manually executed or part of a scheduled job.</li>
+                            <li>When not selected, this task is disabled and will not be run even if manually executed or part of a scheduled job.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Work Item Filter Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>The type of supply chains this task will process:</p>
+                        <ul>
+                            <li><b>All supply chains</b>
+                            </li>
+                            <li><b>Only supply chains with exceptions</b>
+                            </li>
+                            <li><b>Specified supply chains</b>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Supply Chain(s)</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">Visible only when <b>Specified Supply Chains</b> is selected as the Work Item Filter Type value. Lists all of your supply chains. Those selected will be processed by this task.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,1146 @@
+/*<meta />*/
+
+body
+{
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+/*----- Top Nav Bar Styles -----*/
+
+nav.tab-bar	/*Reduces the padding top on the nav bar from 10px (default) to 3px.*/
+{
+	padding-top: 3px;
+}
+
+ul.navigation > li.has-children:after	/*Disables the arrow on top of the navigation sub-menu*/
+{
+	display: none;
+}
+
+ul.navigation ul.sub-menu	/*Adds red border to top of navigation sub-menus*/
+{
+	border-top: 3px solid #eb2434;
+}
+
+ul.navigation a	/*Sets the font weight of the top nav items. Setting this to 300 isn't an option in the skin file.*/
+{
+	font-weight: 300;
+}
+
+ul.navigation > li > a:hover,
+ul.navigation > li > a.selected	/*Sets the top border for hover on nav items and applies the same settings for top nav item currently selected.*/
+{
+	color: #ed3424;
+	border-top: 3px solid #ed3424;
+	margin-top: -3px;
+}
+
+ul.navigation ul > li > a	/*adds bottom border to top nav drop-down items*/
+{
+	border-bottom: 1px solid rgb(60,60,60);
+}
+
+ul.navigation ul > li:nth-last-child(1) > a	/*removes the bottom border from the last item in the top nav drop downs*/
+{
+	border-bottom: none;
+}
+
+/*----- End Top Nav Bar Styles -----*/
+
+/*
+*
+*Top Nav Frame Styles
+*
+*/
+
+.main-section > .outer-row	/*removes default padding from top nav frame*/
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.inner-wrap .outer-row	/*removes default padding from top nav frame*/
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+nav.tab-bar,
+div.StandardBody	/*moves the content in from the edges and centers it*/
+{
+	max-width: 82em;
+	margin: 0 auto;
+}
+
+div.StandardBody
+{
+	margin-top: 40px;
+}
+
+/*
+*
+*End Top Nav Frame Corrections
+*
+*/
+
+/*
+*
+*Standard Page Search Bar
+*
+*/
+
+div.StandardSearchBar
+{
+	background-color: #353535;
+	height: 80px;
+}
+
+._Skins_StandardPageSearchBar.mc-component .search-field,
+._Skins_StandardPageSearchBar.mc-component .search-submit
+{
+	margin-top: 13px;
+}
+
+/*
+*
+*End Standard Page Search Bar
+*
+*/
+
+/*
+*
+*Navigation Menu Styles
+*
+*/
+
+ul.menu._Skins_NavigationMenu.mc-component li > a.selected
+{
+	border-left: 2px solid #ed3424;
+}
+
+ul.menu._Skins_NavigationMenu.mc-component ul > li > a
+{
+	margin-left: 7px;
+	padding-left: 13px;
+}
+
+/*
+*
+*End Navigations Menu Styles
+*
+*/
+
+div.Row-3-3-3-3	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.Row-3-3-3-3::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.Row-3-3-3-3::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.Row-3-3-3-3 > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 2.5px;
+	padding-right: 2.5px;
+}
+
+div.Row-3-3-3-3 > div:nth-child(1)
+{
+	width: 33%;
+	margin-left: 0%;
+	padding: 15px;
+	/*set width to 33% and margin right proporty to support 3 tile row. If 4 tiles, change width to 25% and eliminate margin-right*/
+}
+
+div.Row-3-3-3-3 > div:nth-child(2)
+{
+	width: 33%;
+	margin-left: 0%;
+	padding: 15px;
+	/*set width to 33% and margin right proporty to support 3 tile row. If 4 tiles, change width to 25% and eliminate margin-right*/
+}
+
+div.Row-3-3-3-3 > div:nth-child(3)
+{
+	width: 33%;
+	margin-left: 0%;
+	padding: 15px;
+}
+
+div.Row-3-3-3-3 > div:nth-child(4)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+/*
+*
+* Footer Styles
+*
+*/
+
+div.fusion-footer
+{
+	text-align: center;
+	/*horizonatally centers the footer content*/
+	background-color: #282a2b;
+	/*sets the footer background color*/
+	padding-top: 18px;
+	padding-bottom: 16px;
+	margin-top: 60px;
+}
+
+div.fusion-footer p
+{
+	color: #8c8989;
+	font-size: 12px;
+}
+
+div.fusion-footer ul li
+{
+	display: inline;
+	/*makes the social media icons align horizontally rather than vertically*/
+	margin-right: 20px;
+	/*adds 20px right margin to each social media icon for spacing*/
+}
+
+div.fusion-footer ul li:nth-last-child(1)
+{
+	margin-right: 0px;
+	/*removes the right margin for the last social media icon*/
+}
+
+div.fusion-footer a,
+div.fusion-footer a:visited	/*applies default color to social media icons*/
+{
+	color: #46494a;
+}
+
+a:link
+{
+	color: #000000;
+}
+
+a:visited
+{
+	color: #000000;
+}
+
+div.fusion-footer a:hover	/*applies red when hovering over links in the footer*/
+{
+	color: #ed3424;
+}
+
+div.Row-StandardMasterPage	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.Row-StandardMasterPage::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.Row-StandardMasterPage::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.Row-StandardMasterPage > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 2.5px;
+	padding-right: 2.5px;
+}
+
+div.Row-StandardMasterPage > div:nth-child(1)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.Row-StandardMasterPage > div:nth-child(2)
+{
+	width: 72%;
+	margin-left: 3%;
+}
+
+/*
+*
+* End Footer Styles
+*
+*/
+
+/*
+*
+*Heading Styles
+*
+*/
+
+h1
+{
+	font-size: 200%;
+	margin-top: 0px;
+}
+
+/*
+*
+*End Heading Styles
+*
+*/
+
+/*
+*
+*Table Styles
+*
+*/
+
+td#LightGreen
+{
+	background-color: #ebf1de;
+}
+
+td#DarkGreen
+{
+	background-color: #d8e4bc;
+}
+
+/*
+*
+*End Table Styles
+*
+*/
+
+/*
+*
+*Image Styles
+*
+*/
+
+img
+{
+	max-width: 100%;
+}
+
+img.IconInline
+{
+	max-width: 32px;
+}
+
+img.WithBorder
+{
+	border-style: solid;
+	border-width: 1px;
+}
+
+/*
+*
+*End Image Styles
+*
+*/
+
+MadCap|breadcrumbsProxy
+{
+	mc-breadcrumbs-prefix: ' ';
+	font-size: 12px;
+}
+
+/*
+*
+*Span and Paragraph Styles
+*
+*/
+
+.BodyWord,
+span.BodyWord
+{
+	font-weight: bold;
+}
+
+.Drop-downSelection
+{
+	font-style: italic;
+}
+
+.TabStyle
+{
+	font-style: italic;
+}
+
+/* Spans and paragraph styles that were discussed by Doc team. */
+
+p.CodeText
+{
+	margin-left: 30px;
+	font-family: Consolas, Courier, monospace;
+	mc-next-class: p;
+}
+
+span.CodeText
+{
+	/* Use this for in-line snippets of code text. Use p.CodeText for blocks of text, as that style has an indent. */
+	font-family: Consolas, Courier, monospace;
+}
+
+span.Variable
+{
+	/* Use this for text that varies depending on things such as the user, client, or environment (such as file paths). */
+	font-style: italic;
+}
+
+span.Keystroke
+{
+	/* Use this to name actual keyboard buttons that the user needs to press, such as Enter or Page Up. */
+	text-transform: uppercase;
+}
+
+span.Emphasis
+{
+	/* Generic emphasis style. */
+	font-weight: bold;
+}
+
+/* 
+End Doc Team paragraph and span styles
+*/
+
+/* 
+Paragraph or span styles that may be slated for removal because where the heck did these come from 
+*/
+
+.HeadingSub
+{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.MarginLeft
+{
+	margin-left: 20px;
+}
+
+/* end list of weird styles */
+/* Example box. Similar to note boxes but has formatting differences*/
+
+p.Example
+{
+	border-radius: 4px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	vertical-align: middle;
+	width: 90%;
+	border: solid 3px #000000;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	/* padding: 40px 20px 20px 20px; */
+	margin-left: 5%;
+	/* No page breaks before this box. Assumes that you want to put the box after any sort of content.*/
+	page-break-before: avoid;
+	page-break-inside: avoid;
+	background-color: #ffffff;
+	border-style: outset;
+	background-image: url('../Images/notes_example.png');
+	background-repeat: no-repeat;
+	background-position: 23px 20px;
+	/* Next line after you hit enter will always be a normal paragraph tag.*/
+	mc-next-class: p;
+}
+
+/* Formatting that applies to all note boxes*/
+
+p.BasicNote,
+p.Caution,
+p.Definition,
+p.HintsAndTips,
+p.Important,
+p.SeeAlso,
+p.TechNote,
+p.Result
+{
+	border-radius: 4px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 65px;
+	/*	padding: 20px 20px 20px 65px; buggy line? */
+	vertical-align: middle;
+	width: 90%;
+	/* No page breaks before this box. Assumes that you want to put the box after any sort of content.*/
+	page-break-before: avoid;
+	page-break-inside: avoid;
+	/* Next line after you hit enter will always be a normal paragraph tag.*/
+	mc-next-class: p;
+}
+
+p.BasicNote
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_basic.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #67AAD1;
+	background-color: #CFEDFF;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Note: {/b}';
+}
+
+p.Caution
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_caution.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #D7514E;
+	background-color: #FFC3C2;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Caution: {/b}';
+}
+
+p.Definition
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_definition.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #C28D38;
+	background-color: #FCE1B6;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Definition: {/b}';
+}
+
+p.HintsAndTips
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_hint.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #3DC63D;
+	background-color: #ccffcc;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Tip: {/b}';
+}
+
+p.Important
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_important.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #D1BB05;
+	background-color: #FFF499;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Important: {/b}';
+}
+
+p.SeeAlso
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_seealso.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #8787DB;
+	background-color: #e6e6ff;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}See Also: {/b}';
+}
+
+p.TechNote
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_technote.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #A6A6A6;
+	background-color: #e6e6e6;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Tech Note: {/b}';
+}
+
+p.Result
+{
+	/* background image for the note */
+	background-image: url('../Images/notes_result.png');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	/* Colors used by the note box */
+	border: solid 3px #00CCCC;
+	background-color: #A9FDFF;
+	border-style: outset;
+	/* Preceding text before note */
+	mc-auto-number-format: '{b}Result: {/b}';
+}
+
+/*
+*
+*End Span and Paragraph Styles
+*
+*/
+
+/*
+*
+*List Styles
+*
+*/
+
+li,
+li p
+{
+	margin-top: 0px;
+	margin-bottom: 8px;
+	page-break-inside: avoid;
+}
+
+li ul
+{
+	margin-top: 8px;
+}
+
+li ol
+{
+	margin-top: 8px;
+}
+
+/*
+li p
+{
+	page-break-after: avoid;
+}
+*/
+
+div.KeepTogether
+{
+	page-break-inside: avoid;
+}
+
+ul ul
+{
+	margin-top: 8px;
+	list-style-type: circle;
+}
+
+ol ol
+{
+	margin-top: 8px;
+	list-style-type: lower-alpha;
+}
+
+ul.TableCell
+{
+	margin-left: 0px;
+}
+
+/* This gets rid of the bulleted disc when glossaries are shown in online outputs */
+
+ul.MCGlossaryProxy_0
+{
+	list-style-type: none;
+}
+
+/*
+*
+*End List Styles
+*
+*/
+
+.L1indent
+{
+	margin-left: 40px;
+}
+
+.L2indent
+{
+	margin-left: 80px;
+}
+
+.L3indent
+{
+	margin-left: 120px;
+}
+
+.L4indent
+{
+	margin-left: 160px;
+}
+
+div.CodeSample	/*div to place code samples in*/
+{
+	font-family: Consolas, monospace;
+}
+
+a
+{
+	color: #000000;
+}
+
+MadCap|xref
+{
+	color: #000000;
+}
+
+MadCap|xref.IndexPageNumber
+{
+	text-align: right;
+}
+
+MadCap|xref.NoPageNumber
+{
+	mc-format: '{paratext}';
+}
+
+MadCap|glossaryProxy
+{
+	border-top-color: #000000;
+}
+
+p.IndexHeading
+{
+	font-size: 14pt;
+	text-decoration: none;
+	color: #000000;
+	text-align: left;
+}
+
+p.Index1
+{
+	mc-leader-align: right;
+	mc-leader-offset: 25px;
+}
+
+p.Index2
+{
+	mc-leader-align: right;
+	mc-leader-offset: 25px;
+}
+
+@media print
+{
+	body
+	{
+		font-family: Calibri, sans-serif;
+		font-size: 10pt;
+		mc-hyphenate: never;
+	}
+
+	h1
+	{
+		color: #000000;
+		font-size: 20pt;
+		page-break-after: avoid;
+	}
+
+	/* Chapter Title Page styles. Only use in topics that are used to start a new chapter.*/
+
+	h1.Chapter
+	{
+		color: #000000;
+		mc-auto-number-format: 'Chapter {chapnum}: ';
+		mc-auto-number-class: AutoNumHide;
+		font-size: 20pt;
+		page-break-after: avoid;
+	}
+
+	h1.Appendix
+	{
+		color: #000000;
+		mc-auto-number-format: 'Appendix {chapnum}: ';
+		mc-auto-number-class: AutoNumHide;
+		font-size: 20pt;
+		page-break-after: avoid;
+	}
+
+	span.AutoNumHide
+	{
+		display: none;
+	}
+
+	/* End chapter title page styles */
+
+	h2
+	{
+		font-size: 16pt;
+		font-style: italic;
+		color: #595959;
+		page-break-after: avoid;
+	}
+
+	h3
+	{
+		mc-heading-level: 0;
+		page-break-after: avoid;
+	}
+
+	h4
+	{
+		mc-heading-level: 0;
+	}
+
+	h5
+	{
+		mc-heading-level: 0;
+	}
+
+	h6
+	{
+		mc-heading-level: 0;
+	}
+
+	p.BookTitle
+	{
+		padding-top: .75in;
+		border-top: 4px solid #bfbfbf;
+		font-family: Calibri;
+		font-size: 36px;
+	}
+
+	p.BookSubTitle
+	{
+		padding-bottom: .75in;
+		border-bottom: 4px solid #bfbfbf;
+		font-family: Calibri;
+		font-size: 14pt;
+	}
+
+	p.RunningHeader
+	{
+		font-size: 8pt;
+	}
+
+	p.RunningFooter
+	{
+		font-size: 8pt;
+	}
+
+	p.Copyright,
+	p.CopyrightFirst
+	{
+		font-size: 9pt;
+	}
+
+	p.TOC
+	{
+		font-size: 20pt;
+		page-break-before: always;
+	}
+
+	p.KeepWithNext
+	{
+		page-break-after: avoid;
+	}
+
+	p.PageBreakAfter
+	{
+		page-break-after: always;
+	}
+
+	img
+	{
+		max-width: 100%;
+	}
+
+	td
+	{
+		/* No page breaks inside table cells. This prevents issues where a cell is carried over into the next page.*/
+		page-break-inside: avoid;
+	}
+
+	img.FullWidth
+	{
+		max-width: 100%;
+	}
+
+	li
+	{
+		page-break-inside: avoid;
+	}
+
+	div.KeepTogether
+	{
+		page-break-inside: avoid;
+	}
+
+	img.SS
+	{
+		max-width: 50%;
+	}
+}
+
+@media print_TOC_H3
+{
+	body
+	{
+		font-family: Calibri, sans-serif;
+		font-size: 10pt;
+		mc-hyphenate: never;
+	}
+
+	h1
+	{
+		color: #000000;
+		font-size: 20pt;
+		page-break-after: avoid;
+	}
+
+	/* Chapter Title Page styles. Only use in topics that are used to start a new chapter.*/
+
+	h1.Chapter
+	{
+		color: #000000;
+		mc-auto-number-format: 'Chapter {chapnum}: ';
+		mc-auto-number-class: AutoNumHide;
+		font-size: 20pt;
+		page-break-after: avoid;
+	}
+
+	h1.Appendix
+	{
+		color: #000000;
+		mc-auto-number-format: 'Appendix {chapnum}: ';
+		mc-auto-number-class: AutoNumHide;
+		font-size: 20pt;
+		page-break-after: avoid;
+	}
+
+	span.AutoNumHide
+	{
+		display: none;
+	}
+
+	/* End chapter title page styles */
+
+	h2
+	{
+		font-size: 16pt;
+		font-style: italic;
+		color: #595959;
+	}
+
+	h4
+	{
+		mc-heading-level: 0;
+	}
+
+	h5
+	{
+		mc-heading-level: 0;
+	}
+
+	h6
+	{
+		mc-heading-level: 0;
+	}
+
+	p.BookTitle
+	{
+		padding-top: .75in;
+		border-top: 4px solid #bfbfbf;
+		font-family: Calibri;
+		font-size: 36px;
+	}
+
+	p.BookSubTitle
+	{
+		padding-bottom: .75in;
+		border-bottom: 4px solid #bfbfbf;
+		font-family: Calibri;
+		font-size: 14pt;
+	}
+
+	p.RunningFooter
+	{
+		font-size: 8pt;
+	}
+
+	p.Copyright
+	{
+		font-size: 9pt;
+	}
+
+	p.TOC
+	{
+		font-size: 20pt;
+		page-break-before: always;
+	}
+
+	p.KeepWithNext
+	{
+		page-break-after: avoid;
+	}
+
+	p.PageBreakAfter
+	{
+		page-break-after: always;
+	}
+
+	img
+	{
+		max-width: 100%;
+	}
+
+	td
+	{
+		/* No page breaks inside table cells. This prevents issues where a cell is carried over into the next page.*/
+		page-break-inside: avoid;
+	}
+
+	img.FullWidth
+	{
+		max-width: 100%;
+	}
+
+	li
+	{
+		page-break-inside: avoid;
+	}
+
+	div.KeepTogether
+	{
+		page-break-inside: avoid;
+	}
+}
+
+@media tablet
+{
+	div.Row-3-3-3-3 > div:nth-child(1)
+	{
+		width: 33%;
+		margin-left: 0%;
+		margin-right: 0%;
+		/*adjusting width to 33% to support 3-tile row. Change to 50% for 4-tile row*/
+	}
+
+	div.Row-3-3-3-3 > div:nth-child(2)
+	{
+		width: 33%;
+		margin-left: 0%;
+		margin-right: 0%;
+		/*adjusting width to 33% to support 3-tile row. Change to 50% for 4-tile row*/
+	}
+
+	div.Row-3-3-3-3 > div:nth-child(3)
+	{
+		width: 33%;
+		margin-left: 0%;
+		/*adjusting width to 33% to support 3-tile row. Change to 50% for 4-tile row*/
+	}
+
+	div.Row-3-3-3-3 > div:nth-child(4)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.Row-StandardMasterPage > div:nth-child(1)
+	{
+		width: 25%;
+		margin-left: 0%;
+	}
+
+	div.Row-StandardMasterPage > div:nth-child(2)
+	{
+		width: 75%;
+		margin-left: 0%;
+	}
+
+	MadCap|breadcrumbsProxy
+	{
+		mc-breadcrumbs-prefix: ' ';
+	}
+}
+
+@media mobile
+{
+	div.Row-3-3-3-3 > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+
+	div.Row-3-3-3-3 > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+
+	div.Row-3-3-3-3 > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.Row-3-3-3-3 > div:nth-child(4)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	html.home-page
+	{
+		mc-master-page: url('../MasterPages/HomePage.flmsp');
+	}
+
+	div.Row-StandardMasterPage > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.Row-StandardMasterPage > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+
+MadCap|xref.StepNum
+{
+	mc-format: '{paranumonly}';
+}
+
+img.ScreenShot
+{
+	height: 43px;
+}
+

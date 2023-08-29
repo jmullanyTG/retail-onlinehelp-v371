@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h3 >Add/Edit Cluster Set</h3>
+        <p>All of the configuration for building and maintaining cluster sets.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Name – </span>The name used to identify the cluster set. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Description –</span> A description of the cluster set.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Group –</span> A folder style file structure for organizing cluster sets. Cluster sets groups may be maintained using the “change” button.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Security –</span> Will allow specific users or roles to view or maintain the cluster set. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Public –</span> All users with access to the cluster manager may view and maintain this cluster set.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Private –</span> Only the user responsible for creating the set may view and maintain it. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Shared –</span> The cluster set may be shared with selected users. This is done by including/excluding individual users or roles by clicking the “change” button.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Cluster Type – </span>This will determine the clustering method used to build the cluster sets. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">K-Means – </span>K-Means clustering will group the data points into logical clusters based on the nearest mean. The centroid will be a point in the center of the cluster, regardless of where the data points are. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">K-Medoid </span><span style="font-weight: bold;">–</span> K-Medoid clustering will group the data points into logical clusters while restricting the centroid to a data point. K-Medoid will still use the minimum mean distance to group the logical clusters. This is a more computationally intensive process than K-Means.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">K-Means Collection – </span>A template used to create similar K-Means sets in which a single parameter (partition filter by value) will change and therefore create new K-Means cluster sets. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">K-Medoid Collection – </span>A template used to create similar K-Medoid sets in which a single parameter (partition filter by value) will change and therefore create new K-Medoid cluster sets.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Entity Type – </span>The entity type will determine the granularity of data which will be clustered. Setting the entity type at a higher level will exclude lower level data.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Inventory – </span>An item/site combination. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Item Master –</span> An item across all sites.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Site –</span> A physical or virtual location capable of holding inventory records. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Customer –</span> The party at the receiving end of the sales transactions as supplied to JustEnough. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Filter by Type – </span>Will show the available filter types contained in, or parented by the entity type. Sets the level of filters which will appear in the filter by filter field.  </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Filter by Filter – </span>Will allow users to restrict the cluster set data to a specific filter (most commonly an inventory filter). This may be thought of as a cross-section of the data with an intersecting filter.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Group By – </span>The group by will represent the actual data points displayed and grouped in the cluster. The available options in the group by will be based on the supplied entity type (e.g. site groups will be displayed if “site” is selected as the entity type).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Partition Type –</span> The partition type will determine the mechanism by which cluster sets are segregated. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Filtering –</span> Will use the familiar JustEnough filtering.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Filtering Lite –</span> Will limit the filtering to only a single criterion, and only the “equals” clause (i.e. the filter <span style="text-decoration: underline;">must</span> be for distribution center site).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Partition Filter by Type – </span>Will determine the type/level of filter used for partitioning.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Partition Filter by Filter (if using traditional filtering) –</span> Will allow users to determine which filter is used to segregate the cluster set. Choosing the “change” button will bring up the available filter list from the specified filter type. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Partition Filter by Field (if using filtering lite) –</span> Will allow users to choose the specific field which must be equal to the partition filter by value supplied. Will be restricted to the available fields specified in the partition filter by type.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Partition Filter by Value (if using filtering lite) –</span> The value which must equal the data in order to be included in the cluster set. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Classification Items –</span> Classification items will determine the actual data to be classified by the clustering engine.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Classification Priority Order By –</span> The way in which the classifications are ranked. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Ascending –</span> Will rank each classification in ascending order using consecutive alphabetical letters to designate each cluster. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Descending –</span> Will rank each classification in descending order using consecutive alphabetical letters to designate each cluster (<span style="text-decoration: underline;">suggested use</span>). </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Classification Settings </span>– Classification settings will list the selected classification items and allow users to alter their priority. It is important to remember the priority order setting when determining the order. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Attribute Items </span>– Attribute items will be included in the classification engine as inputs.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Attribute Priority Order By </span>– The way in which the attributes are ranked. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Ascending –</span> Will rank each classification in ascending order using consecutive alphabetical letters to designate each cluster. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Descending –</span> Will rank each classification in descending order using consecutive alphabetical letters to designate each cluster (<span style="text-decoration: underline;">suggested use</span>). </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Attribute Settings – </span>The attribute settings section will allow users to edit the priority, determine the aggregation function, and assign a weight to the attribute if desired. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Attribute –</span> The attribute name. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Entity Type –</span> Will show the associated entity type for the attribute (Site, Item Master, etc.)</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Priority –</span> The ranked priority will determine how the clusters are built. Is affected by the attribute priority order by.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Order By –</span> An override for the attribute order by which may be changed for a single attribute. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Aggregate Function –</span> Will determine the mathematical means by which the attribute values are aggregated. </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Average</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Count</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Maximum</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Minimum</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Summation</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Statistical Standard Deviation</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Statistical Standard Deviation for the Population</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Statistical Variance</li>
+            <li class="ListParagraph" style="list-style-type: square;font-weight: bold;">Statistical Variance for the Population</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Weight – </span>A weight value for the attribute. Will be considered against all the other listed weight values. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Distance Function – </span>Distance function will determine how the mean distances are calculated. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Euclidean Distance –</span> The distance as drawn on the Euclidean plane (straight lines).</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Manhattan Distance –</span> The distance as drawn on a plane while restricted to 90deg right and left turns (often referred to as taxi cab distance).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Allow Cluster Count to be Resized – </span>A check box which will allow for the clustering engine to resize the overall number of clusters.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Compute Optimal Cluster Count –</span> A check box which will allow the clustering engine to compute and optimize the number of logical clusters. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Maximum Allowed Cluster Count –</span> A practical cap on the number of clusters. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Number of Iterations –</span> For use with K-Medoid clustering, this will cap the maximum number of computational iterations with which the clustering engine has to process exact fits for the centroids. Infinite if left NULL.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

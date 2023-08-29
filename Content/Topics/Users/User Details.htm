@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >User Details</h1>
+        <p>Within the user information window, the user details tab will contain most of the general information common to software user accounts, such as login credentials and password information, as well as assigned filters.</p>
+        <p>The concept of assigned filters will give an administrative user the ability to segment sections of the company data in order to restrict users, or streamline their individual workflows. Users may be assigned filters built on specific inventories, sites, item masters and many other filter types. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">User Name – </span>The user name as it appears in the main users window. This user name will also be the login credentials for users to gain access to JustEnough.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">User Description – </span>A description of the user account. If it is a cloned user, the description will read as “Cloned from _____” until it is changed (the blank is filled by the user account from which it was cloned).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Full Name – </span>The actual name of the user. This is an optional field.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">User Domain Name – </span>If the user is a domain account and has been imported from active directory, the associated domain will appear here. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Cube Role Name – </span>If there is a SQL Server Analysis Services (SSAS) OLAP cube deployed on the database, JustEnough will need to pass a cube role name to the OLAP cube in order to access information via the OLAP pivot grid widget. This role name will be stored by user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Password and Confi</span><span style="font-weight: bold;">rm Password – </span>The password fields will appear blank. Administrative users may change passwords for individual user accounts here.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Account is Disabled – </span>Checking this box will disable the user account. Disabled accounts will not appear in the user list, but will remain in the database table tbl_User.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Inventory Assigned Filter – </span>The default inventory level filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Site Assigned Filter - </span>The default site filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Promotion Assigned Filter – </span>The default promotion filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Event Assigned Filter – </span>The default event filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Item Master Assigned Filter – </span>The default item master level filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Supplier Assigned Filter – </span>The default supplier filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Customer Assigned Filter – </span>The default customer filter assigned to the specified user.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Customer Inventory Assigned Filter </span><span style="font-weight: bold;">– </span>The default filter for customer inventory (to support custom implementations of customer level forecasting only). </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Item Master Group Assigned Filter – </span>A default filter for item master groups, a sub-set of item master filters which can be used to further refine item master filtering within content manager.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Variant Assigned Filter – </span>A default variant filter assigned to the specified user. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Variant Group Assigned Filter – A </span>default filter for variant groups, a sub-set of variant filters which can be used to further refine variant filtering within content manager.</li>
+        </ul>
+    </body>
+</html>

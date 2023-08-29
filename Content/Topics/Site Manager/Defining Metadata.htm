@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Defining Metadata</h1>
+        <p>The data from the created view will need to be referenced by field in order for the filtering machinery to recognize and return it. This reference exists in tbl_Common_Filter_MetaViewData and should be populated by the initialization (INIT) procedure which was created in order to accompany the view. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">FilterTypeID – </span>Primary key referenced on <span style="font-family: Consolas;font-size: 9pt;">tbl_FilterType</span>. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ViewColumn –</span> The column name as it appears in the referenced table or view within <span style="font-family: Consolas;font-size: 9pt;">tbl_FilterType</span>. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">TableName –</span> The name of the table or view which contains the data.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">TableColumn –</span> The column name as it appears in the referenced table or view within the TableName field.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">FriendlyName –</span> The friendly name as it appears within the user interface of the application, before any translations. This will be the name referenced within all standard product documentation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">VisibleFlag –</span> Determines if the field will be visible within the user interface. May be set to “0” and used by filtering only. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Updateable –</span> If set to “1”, the field will be write enabled for users. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">LookupField – </span>If the field is a lookup field, the string value must be entered in this column. Can be used to refer an ID column to a description column. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Aggregatable –</span> The aggregation type for the field. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">0 –</span> None</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">1 –</span> Sum</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">2 –</span> Average </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">3 –</span> Max</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">4 –</span> Min</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">5 –</span> Count</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">6 –</span> Custom</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">7 –</span> Custom Distinct Sum</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">8 –</span> Custom Distinct Average</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">9 –</span> Custom Distinct Count</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Priority –</span> The inherited priority for the field. If more than one priority should be applied, separate row entries must be made. Priority 1 will inherit priority 0 abilities. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">0 –</span> Filtering</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">1 –</span> User Interface</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">UpdateTableName – </span>If the value may be updated, the name of the write-back destination must be specified. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ExpressionColumnFlag –</span> If the column is an expression column, set to “1”.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ExpressionColumnString –</span> The expression to be used. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ColumnFormatStringFlag –</span> If active, will adhere to standard format string for user interface presentation. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ColumnFormatString -</span> Standard format string for user interface presentation.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">ParentTableColumn –</span> Used to assist with lookup data related to trees. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">AplyUserItemAssignOnLookupDataFlag –</span> If selected, will apply user assign logic to lookups. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">LookupFlag –</span> If selected, will identify a lookup. </li>
+        </ul>
+    </body>
+</html>

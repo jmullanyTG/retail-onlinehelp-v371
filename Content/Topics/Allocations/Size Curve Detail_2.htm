@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h4 >Size Curve Detail</h4>
+        <p >Users can manually input size percentage values if Override option is checked in the widget above.</p>
+        <p >An override is considered <span style="text-decoration: underline;">a</span><span style="text-decoration: underline;">ny change</span> to a size at a site. Changing percentages or eligibility is considered an override… <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> is now the relevant field.</p>
+        <h5 >Percentages</h5>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="1">
+            <li >If percentages are good regardless of how many values being changed, system will update all the percentages to the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> field on <span style="font-family: Consolas;color: #C0504D;font-size: 9pt;">tbl_Size_SizeCurve_Quantity</span>.</li>
+            <li >If not all values are being changed and total does not equal 1, hold values that are manually entered and update remaining values with the delta * respective weight of the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ISNULL(Override, Contribution)</span><span style="font-family: Consolas;font-size: 9pt;">.</span></li>
+            <li >If all values are being changed and total does not equal 1, update all values with 1 * respective weight of <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ISNULL(Override, Contribution)</span> since we don’t trust any value </li>
+        </ol>
+        <h5 >IsEligible flag</h5>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="4">
+            <li >All sizes are Eligible on creation.</li>
+            <li >If size was eligible and is now ineligible, <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> value is marked as 0 and original <span style="font-family: Consolas;color: #9BBB59;">Contribution</span> values are also updated to the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> value.</li>
+        </ol>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li  style="list-style-type: square;">This is to handle the concept of ‘clear override’. The system will never change the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">IsEligible</span> flag setting when an override is cleared, so to have correct values adding to 1, the values in <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> will need to be updated the to match the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> values (**see more notes in section #4).</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="6">
+            <li >If size was ineligible and is now eligible, <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> value is marked as 0 and <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> values (which are the same as <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> at this point) are untouched; this weight will be marked as a 0 weight since the system will know what the user is intending by reactivating a size.</li>
+        </ol>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li  style="list-style-type: square;">In summary, only the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">IsEligible</span> flag is toggled in the backend for this action.</li>
+        </ul>
+        <h5 >Display</h5>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="7">
+            <li >If any override values exist in the table, the grid will select <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ISNULL(Override</span><span style="font-family: Consolas;font-size: 9pt;">,</span> <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution)</span>.</li>
+            <li >This will trigger an internal flag of <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">HasOverride</span><span style="color: #9BBB59;">&#160; </span>= 1.</li>
+        </ol>
+        <h5 >Clear override option</h5>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="9">
+            <li >If internal flag of <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">HasOverride</span> = 1, then the option to clear overrides becomes available via orange shading.</li>
+            <li >This button sets all <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverrides</span> to NULL, but DOES NOT change the <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">IsEligible</span> flag.</li>
+            <li >Select procedure will display the Contribution value... these will not be rebalanced on the fly! Anything existing in that column will be displayed, which is why we made <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">Contribution</span> equal to <span style="font-family: Consolas;color: #9BBB59;font-size: 9pt;">ContributionOverride</span> earlier when the flag was toggled (**see more notes in section #2).</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

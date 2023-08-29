@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Contract Site Details</h1>
+        <p>Contract sites offer users the ability to create a persistent logical partition of stock and incorporate it within their supply chain. Only DC type (SiteType = 2) sites may be operated as contract sites; these sites must exist at the top tier of a configured supply chain. A physical host site may have more than one contract site, but contract sites may not be linked to more than one physical host site. </p>
+        <h2 >Projections and Reporting </h2>
+        <p>Contract sites exist as logical partitions of physical stock within the Replenish Engine ordering logic, therefore, the projected values for stock metrics (e.g. stock on hand, etc.) for contract sites will be incorporated into the values of the physical host site; a separate projection for the contract site itself is not available. As these sites exist as a separate site entity value within JustEnough, supplementary reporting such as inventory on hand metadata will report on the specifics of the contract site and host site independently. When importing data (specifically supplier order data), the sitecode of the contract site should be specified, not the physical host site. Contract sites may not belong to more than one physical host site; a split contract must be split into multiple contract sites. </p>
+    </body>
+</html>

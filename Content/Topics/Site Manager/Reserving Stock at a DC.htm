@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2672" MadCap:lastWidth="2120">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Reserving Stock at a DC</h1>
+        <p>Allocations users can reserve stock in a DC for use by specific stores and channels. For example, you can reserve stock for a new store to guarantee the stock available to them when they open. Or you can reserve stock for specific sales channels, such as E-commerce. Reserved stock is logically partitioned in the JustEnough system, which “hides” it from other sites or channels and also prevents it from influencing normal order quantities for other sites and channels.</p>
+        <p>The actual amount of stock that JustEnough reserves for a store or channel is demand-driven and can vary from store-to-store and item-to-item based on:</p>
+        <ul>
+            <li>How many days of stock you want to reserve.</li>
+            <li>Whether or not you want to include safety stock in the reservation.</li>
+            <li>The forecasted demand for the item at that location.</li>
+        </ul>
+        <h2>Reservations-related fields</h2>
+        <p>The following fields support stock reservations. For easy management and visibility of stock reservation settings, add them as columns in <a href="Creating a Site Manager Document.htm">Site Manager documents</a>. </p>
+        <ul>
+            <li><b>Reserve?</b>  – Sets whether or not stock should be reserved for a store or channel.</li>
+            <li>
+                <p><b>Days Reserved</b>  – The number of days of demand to cover when calculating how much stock to reserve.</p>
+            </li>
+            <li><b>Consider Presentation?</b> – Sets whether or not safety stock (Safety Stock Days and Minimum Safety Stock Units values) should be included when calculating how much stock to reserve.</li>
+            <li>
+                <p><b>Is Contained in Location Strategy?</b> – Read-only. Displays whether or not the site is part of a location strategy.</p>
+            </li>
+        </ul>
+        <p>Default values for these fields can be set by store in Site Manager. If a site is part of a location strategy, you can override the default values in the Allocation module's <a href="../Allocations/Location Exceptions View.htm">Location Exceptions</a> view.</p>
+        <h2>Reservations and placeholder sites</h2>
+        <p>You can reserve stock for placeholder sites as well as regular stores/channels. </p>
+        <h2>Instructions</h2>
+        <p>To reserve stock at a DC:</p>
+        <ol>
+            <li>From the Manage tab, click <b>Site Manager.</b></li>
+            <li>Click <b>Site Manager Document</b> in the Site Manager toolbar.</li>
+            <li>Select a site filter that contains the sites you want to reserve stock for.</li>
+            <li>
+                <p>In the Columns toolbar, click <b>Choose</b> to add the following reservation-related columns to the document:</p>
+                <ul>
+                    <li style="font-weight: bold;">Reserve?</li>
+                    <li style="font-weight: bold;">Days Reserved</li>
+                    <li style="font-weight: bold;">Consider Presentation?</li>
+                    <li style="font-weight: bold;">
+                        <p>Is Contained in Location Strategy</p>
+                    </li>
+                </ul>
+                <p>
+                    <img src="../../Resources/Images/Site Manager/Reserve Stock Columns.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Site Manager document, find a store you want to reserve stock for. Enter values for it in the following columns:</p>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">Column</th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">Reserve?</td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>Whether or not JustEnough will reserve stock for this store. Click the checkbox to toggle checking/un-checking the box. </p>
+                                <p>When the box is "checked", JustEnough will reserve stock for this store.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">Days Reserved</td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">The number of days of stock to reserve. JustEnough uses the forecasted demand for each item at the selected site to calculate the quantity of stock required to meet this number of days of demand. Exact quantities of items reserved will vary according to the forecasted demand for each item.</td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">Consider Presentation?</td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p>Whether or not JustEnough includes stock to cover safety stock requirements (specified in each item's Safety Stock Days and Minimum Safety Stock Units values) in its reservation calculations. </p>
+                                <p>When the box is "checked", JustEnough will reserve enough stock to cover the safety stock requirements for each item.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Click <b>Save</b> when you are done editing reservation details for each site.</p>
+                <p>
+                    <img src="../../Resources/Images/Site Manager/Reseerve Stock Example.png" />
+                </p>
+                <p>JustEnough calculates how much stock is required for the reservation and then generates orders as needed to ensure enough stock is available to the site when needed (such a new site's phase-in date). </p>
+                <p style="font-weight: normal;"><b>Note</b>: The values entered in Site Manager can be <a href="../Allocations/Location Exceptions View.htm">overridden</a> in the Allocations module if a site is part of a location strategy. <br /></p>
+            </li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

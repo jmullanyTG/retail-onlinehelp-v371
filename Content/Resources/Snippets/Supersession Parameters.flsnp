@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="3037" MadCap:lastWidth="2728">
+    <head>
+        <link href="../TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Old Item Replenishment Strategy</b>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Sets the replenishment status for the existing (superseded) item. Status is reflected in the Old Item Type field on the Supersessions grid:</p>
+                        <ul>
+                            <li><b>Set the type to redundant</b> - the item will remain in stock, but no replenishment orders for the existing item will be generated. The new (superseding) item will be ordered instead to replenish the existing item's Stock on Hand.</li>
+                            <li><b>Set the type to non-stocked</b> - the item will no longer remain in stock (not on the shelf) and will not be replenished. The new (superseding) item will be ordered instead.</li>
+                            <li style="font-weight: normal;"><b>No change</b> -&#160;the existing item will remain in stock and replenishment orders for the existing item will continue to be placed.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Supersession Type</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>Determines whether the supersession is being created for forecasting purposes, replenishment purposes, or both.</p>
+                        <ul>
+                            <li><b>Forecasting only</b> - select this option when the existing item will continue to be replenished/is not being replaced by the new item. The existing item's Sales History will be used to generate a demand forecast for the new item, but replenishment orders for the existing item will still be generated.</li>
+                            <li style="font-weight: normal;"><b>Replenishment only</b> - select this option when you want to use the new item to replenish the stock of the existing item. The new item will replace the existing item in replenishment orders. The existing item's Stock on Hand value will be copied to the new item to calculate when new items need to be ordered.</li>
+                            <li style="font-weight: normal;"><b>Both forecasting and replenishment</b> - select this option when you want to generate a demand forecast and replenishment strategy for the new item based on the existing item's Sales History and Stock on Hand. The existing item will be replenished with the new item based on the new demand forecast. The existing item's Stock on Hand value will be copied to the new item to calculate when new items need to be ordered.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Sales History Start Date</td>
+                    <td rowspan="2" class="TableStyle-jeTables-BodyD-Column1-Body1">The existing item's sales history is used to calculate a demand forecast for the new item. Leaving these values blank uses the entire sales history of the old item to generate a demand forecast. If  you want to only use a particular sales date range to calculate demand, enter the start and/or end dates in these fields.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Sales History End Date</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Supersession Start Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Defines when the supersession becomes active. Should be set to one "lead time" before the new item is expected to start selling. (For example, if the lead time for the new item is 30 days and you want to start selling the item on October 1, set the Supersession Start Date to September 1.) Once the supersession starts and is active, JustEnough copies the sales history and/or stock on hand to the new item.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Supersession End Date</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Defines when the supersession becomes inactive. In most cases, leave this value blank. If you do select an end date, when the end date is reached the supersession becomes inactive and is deleted, along with the copied sales history and/or stock on hand. </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Note</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">An optional area to enter notes about the supersession. Populated with  the UserID of the note adder and a timestamp.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Supersession Ratios</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>Adjusts the existing item's stock on hand (replenishment ratio) and historical units sold (forecast ratio) by the specified ratio. For example, a replenishment value of "2" gives a 2:1 ratio (new item to old item) for stock on hand, meaning if the old item's stock on hand is 100 this will be converted to 200 when copied to the new item. Likewise, the value ".5" in the forecast ratio decreases the old item's month-for-month sales history quantities by 50% when they are copied to the new item.</p>
+                        <ul>
+                            <li style="font-weight: normal;"><span style="font-weight: normal;"><b>Replenishment ratio</b> - </span> increases or decreases the stock on hand value copied to the new item. This is typically needed when an item is repackaged and the pack size is increased or decreased. </li>
+                            <li style="font-weight: bold;"><span style="font-weight: normal;"><b>Forecast ratio</b> - increases or decreases the month-to-month sales history quantities copied to the new item.</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

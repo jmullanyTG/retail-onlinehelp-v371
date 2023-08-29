@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Cluster Set Management Window</h1>
+        <p><span style="font-size: 12pt;">In the Cluster Set Management window, users can view a list of all the cluster set templates, and their related cluster sets, to which they have access. Here, they can select templates or sets to </span><span style="font-size: 12pt;">view, edit, delete, and create cluster set snapshots for, as well as initiate the creation of new templates and sets.</span>
+        </p>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen.png" />
+        </p>
+        <p>To open a cluster set document for a given cluster set, simply double-click on the cluster set in the grid or select it and click <b>OK</b>.</p>
+        <h2>Toolbar</h2>
+        <p>Cluster Set toolbar actions are described below.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">New</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Launches the Add Cluster Set dialog box to create a new cluster set or template.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Clone</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Launches the Update Cluster Set dialog box with all parameters and criteria from the selected cluster set or template pre-populated and "Cloned:" pre-pended to the beginning of the cluster set name.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Edit</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Launches the Update Cluster Set dialog for the selected cluster set or template.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Delete</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        Deletes the selected cluster sets.
+                        <p style="font-weight: bold;">Notes:</p><ul><li style="font-weight: normal;">Validation exists to prevent you from deleting cluster sets that are currently in use by assortment plans.</li><li style="font-weight: normal;">Cluster sets are not truly deleted until the garbage collection procedure runs on the database; the frequency and timing of this procedure are determined during software implementation.</li></ul><p style="font-weight: normal;"><b style="color: #ff4500;">Warning</b>: Deleting cluster set templates also <b>deletes all cluster sets</b> that were created using the template.</p></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Allow Multiple </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        Toggles showing/hiding checkboxes in the grid. When enabled, you can select multiple cluster sets and/or cluster set partitions in the grid and then click <b>Delete</b>,<b> Snapshot</b>, or <b>Calculate</b> to perform the action on all of the selected cluster sets. 
+                        <p><b>Notes</b>:</p><ul><li>Selecting a cluster set partition automatically selects all of its cluster sets.</li><li>Multi-cluster set operations may be submitted as tasks to the <a href="../Workload Queue Manager/Workload Queue Overview.htm">workload queue</a>. You will receive a notification once the operations are done.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Snapshot</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Creates snapshots of selected cluster sets.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Calculate</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Calculates the cluster assignments for all stores included in a selected cluster set, based on the parameters and criteria specified during cluster set configuration.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Report</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                       Launches the <a href="Cluster Set Site Comparison Report.htm">Cluster Set Site Comparison Report</a>. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">View Collection Set Configuration</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Launches the View Collection Set Configuration dialog.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: bold;">Refresh</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Refreshes the list of cluster sets displayed in the grid below.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Grid</h2>
+        <p>Grid fields are described below.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body1">Name</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">The name of the cluster set.</th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body2">Description</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">
+                        <p>
+                            <img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen_4.png" style="visibility: visible;mso-wrap-style: square;width: 37px;height: 17px;" />indicates there is a description for this cluster set. Click the cell to view it.</p>
+                        <p>
+                            <img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen_5.png" style="visibility: visible;mso-wrap-style: square;width: 38px;height: 17px;" />indicates there is no description for this cluster set.</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body1">Hierarchy</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">The site hierarchy that the cluster set is based on. Is blank if a site filter was used instead of a site hierarchy.</th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body2">Level</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">The specific level of the site hierarchy that the cluster set is based on. Is blank if a site filter was used instead of a site hierarchy level.</th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body1">Filter</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">
+                        <p>The site filter that the cluster set is based on. Is blank if a site hierarchy was used instead of a site filter.</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body2">Last Modified</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">The date that the cluster set was last changed.</th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body1">Last Computed</th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">The date that the cluster set was last calculated.</th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Allocation</p>
+                    </th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">
+                        <p>Indicates whether or not the cluster set is <a href="Cluster Set Configuration Screen.htm">configured</a> for use with Allocation modules and allocation scenarios in the Rate of Sale module.</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Assortment</p>
+                    </th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">
+                        <p>Indicates whether or not the cluster set is <a href="Cluster Set Configuration Screen.htm">configured</a> for use with the Assortment Planning module and assortment planning scenarios in the Rate of Sale module.</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p>Events</p>
+                    </th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body2" style="font-weight: normal;">
+                        <p>Indicates whether or not the cluster set is <a href="Cluster Set Configuration Screen.htm">configured</a> for use with the Events module.</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <th class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>Promotions</p>
+                    </th>
+                    <th class="TableStyle-jeTables-BodyD-Column1-Body1" style="font-weight: normal;">
+                        <p>Indicates whether or not the cluster set is <a href="Cluster Set Configuration Screen.htm">configured</a> for use with the Promotions module.</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">
+                        <p><b>Price</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2" style="font-weight: normal;">
+                        <p>Indicates whether or not the cluster set is <a href="Cluster Set Configuration Screen.htm">configured</a> for use with the Price Manager module.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Snapshot pane</h2>
+        <p>Select a cluster set in the grid to open the Snapshot pane.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">New</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Creates a new snapshot of the selected cluster set.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Edit</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Edits the snapshot selected in the snapshot grid.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Delete</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">Deletes the snapshot selected in the snapshot grid.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2" style="font-weight: bold;">Report</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">Launches the <a href="Cluster Set Snapshot Comparison Report.htm">Cluster Set Snapshot Comparison Report</a>.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1" style="font-weight: bold;">Refresh</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">Refreshes the data in the snapshot grid.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The snapshot grid displays the following snapshot details. Its data is not editable.</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Cluster Set Name</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The name of the cluster set for which the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Cluster Set Description</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen_4.png" style="visibility: visible;mso-wrap-style: square;width: 37px;height: 17px;" />indicates there is a description for this snapshot. Click the cell to view it.<p><img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen_5.png" style="visibility: visible;mso-wrap-style: square;width: 38px;height: 17px;" />indicates there is no description for this snapshot.</p></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Snapshot Date Time</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">The date that the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">Snapshot Note</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen_4.png" style="visibility: visible;mso-wrap-style: square;width: 37px;height: 17px;" />indicates there is a note for this snapshot. Click the cell to view it.<p><img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen_5.png" style="visibility: visible;mso-wrap-style: square;width: 38px;height: 17px;" />indicates there is no note for this snapshot.</p></td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Classification</b> columns</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">For each classification column ("A", "B", "C", etc.), the count of stores within each classification at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Effective Date Time</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                        <p>The date that the cluster set snapshot became/will become effective.</p>
+                        <p><span style="color: #ff4500; font-weight: bold;">Warning</span>: Creating a new cluster set snapshot initiates recalculation of all assortment plans in which the snapshotted cluster set is active. This recalculation occurs as apart of regularly scheduled overnight processing; the frequency of which is determined during software implementation.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ListParagraph" style="margin-bottom: 0pt; margin-left: 72pt; font-size: 12pt;">&#160;</p>
+    </body>
+</html>

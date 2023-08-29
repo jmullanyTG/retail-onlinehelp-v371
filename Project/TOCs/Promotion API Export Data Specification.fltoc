@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Process Flow"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Process Flow.htm" />
+  <TocEntry
+    Title="Export Table Structures"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Export Table Structures.htm" />
+  <TocEntry
+    Title="Supporting &amp; Configuration Tables"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Supporting Configuration Tables.htm" />
+  <TocEntry
+    Title="Procedures"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Procedures.htm" />
+  <TocEntry
+    Title="Configuration and Execution"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Configuration and Execution.htm" />
+  <TocEntry
+    Title="Notes"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Notes.htm" />
+  <TocEntry
+    Title="Troubleshooting"
+    Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/TroubleShooting.htm"
+    StartSection="false" />
+</CatapultToc>

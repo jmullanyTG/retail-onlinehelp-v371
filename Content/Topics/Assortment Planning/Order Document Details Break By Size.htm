@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Order Document Details – Break By Size </h1>
+        <p>The Break By Size tab allows users to split order line quantities across assigned size curves, or specific sizes selected from curves, based on planned sales and anticipated size inventory across clusters. Sizing analysis is done for all order lines on a document simultaneously.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size.png" style="visibility: visible;width: 634px;height: 209px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;">Header Area Controls</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Save:</span> saves all changes made to the Break By Size information for the order document since the last time it was saved</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Undo:</span> undoes all the changes made to the Break By Size information for the order document since the last time it was saved</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Calculate:</span> calculates the ideal units per size to order by variant and cluster, based on the Size Curve and Selected Sizes for each order line on the order document</li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 72pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size_1.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 133px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size_2.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 121px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size_3.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 133px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size_4.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 133px;" />
+        </p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Approve:</span> approves the Break By Size information for the order document and transitions the Workflow Status of the document to Break By Size</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Approve &amp; Route:</span> approved the Break By Size information for the order and launches the Commitment Status dialog, allowing the user to select the Workflow Status the document will be transitioned to from available states, based on the active workflow</li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size_5.png" style="visibility: visible;width: 332px;height: 94px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Enforce Size Minimum</span>: user editable checkbox; related to Receipt Size Min set in Receipt Plan view of Assortment Planning; when checked, enforces the total minimum quantity per size defined by that constraint and increases the order quantity to meet it, if necessary</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Variant Detail Grid (</span><span style="font-weight: bold;">l</span><span style="font-weight: bold;">eft </span><span style="font-weight: bold;">s</span><span style="font-weight: bold;">ide)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Variant:</span> non-editable alpha-numeric; displays the variant code for the corresponding order line</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Cluster Set:</span>  non-editable alpha-numeric; if applicable, displays the cluster set for the corresponding order line</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;">Cluster:</span> non-editable alpha-numeric; if applicable, displays the cluster for the corresponding order line</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Receipt Date:</span> <span style="color: #000000;">non-editable alpha-numeric; displays the effective delivery date for the corresponding order line</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Size Curve:</span> <span style="color: #000000;">user editable dropdown; displays/</span> <span style="color: #000000;">sets the size curve to be applied to the corresponding order line; defaults to the size curve set for the variant in the assortment plan from which the order line was created</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Selected Sizes:</span> <span style="color: #000000;">user editable multi-select; displays/sets </span><span style="color: #000000;">the sizes to include in the corresponding order line; defaults to all sizes included in the selected Size Curve</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Site Count:</span> <span style="color: #000000;">non-editable integer; displays the number of sites the corresponding order line is for</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;">Sizing Pivot Grid (right side)</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Avg U/Site:</span> <span style="color: #000000;">user editable integer; </span><span style="color: #000000;">sets the desired average units per site </span><span style="color: #000000;">for the corresponding size </span><span style="color: #000000;">as a constraint for calculation of sizing needs</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning</span><span style="font-weight: bold;font-style: italic;color: #000000;">: </span><span style="font-style: italic;color: #000000;">entering Avg U/Site can cause an increase in the original order quantity for the order line</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Act Avg U/Site:</span> <span style="color: #000000;">non-editable integer; displays the </span><span style="color: #000000;">calculated</span><span style="color: #000000;"> average units per site for the corresponding size</span><span style="color: #000000;"> by simply dividing the corresponding Order Units by the Site Count for the cluster</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Quantity: </span><span style="color: #000000;">non-editable integer; displays the raw system suggested units to be ordered for the corresponding variant/cluster/size</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">this quantity does not include changes </span><span style="font-style: italic;color: #000000;">for the corresponding user specified Avg U/Site constraint, if any</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Constrained Qty: </span><span style="color: #000000;">non editable integer; displays the constrained system suggested units to be ordered for the corresponding variant/cluster/size</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">this quantity includes changes for the corresponding user specified Avg U/Site constraint, if any</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Final Qty</span><span style="font-weight: bold;color: #000000;">:</span> <span style="color: #000000;">user editable integer; displays/sets the units to be ordered for the corresponding variant/cluster/size</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">Defaults to Constrained Qty value, but can be overridden by the user</li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;">User overrides are </span><span style="color: #000000;">conditionally formatted in orange</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Order Document Details Break By Size_6.png" style="visibility: visible;width: 435px;height: 117px;" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">Final Qty</span><span style="font-style: italic;color: #000000;"> can also be entered in the subtotal/total rows of the Pivot Grid; doing so will proportionally split the number entered down to the lower levels based on their current values</span>
+            </li>
+        </ul>
+    </body>
+</html>

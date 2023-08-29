@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="_Execute_Action_Message_1"></a>Execute Action Message Allow Singleton Execution On Distinct Action</h1>
+        <p>The Execute Action Messages Allow Singleton Execution On Distinct Action is a strategy that allow only allows one singleton instance of an Action Message to be executed if Action Messages have identical Actions specified. This is the strictest of all the schemes in terms of granular control, ensuring that only the minimal amount of Action Messages are being processed. Note if there is an identical Action for an Action Message currently executed and a new Action Message with identical Action arrives for processing the new Action Message will be discarded and this discarding of the Action Message will be reported.</p>
+        <p>Consider the following scenario: Action Message A which is not identical to Action Message B but do have the same Action while Action Message C is not identical to A and B and does not have the same Action. All Action Messages A, B and C arrive at the Dispatch Broker for processing. In addition assume that they messages do arrive in order A, B and C. What would happen under this scenario for Execute Action Messages Allow Singleton Execution On Distinct Action strategy is that A and C would be processed immediately would be processed immediately while B would be discarded or thrown away.</p>
+        <p>In order to use this execution scheme one needs to compose an Action Message where the Action is the following constant string “DISPATCH_SERVICE_SEND_EXECUTE_ACTION_SINGLETON_DISTINCT_ACTION”. The example provided below is a simple action message to Ping the JEBDS to determine is the service is currently running using the Execute Action Messages Queue On Distinct Action strategy:</p>
+        <p>&lt;ActionMessage&gt;</p>
+        <p>&lt;Sender&gt;</p>
+        <p>&lt;string&gt;DATABASE&lt;/string&gt;</p>
+        <p>&lt;/Sender&gt;</p>
+        <p>&lt;Recipients&gt;</p>
+        <p>&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE&lt;/string&gt;</p>
+        <p>&lt;/ArrayOfString&gt;</p>
+        <p>&lt;/Recipients&gt;</p>
+        <p>&lt;Action&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE_SEND_EXECUTE_ACTION_SINGLETON_DISTINCT_ACTION&lt;/string&gt;</p>
+        <p>&lt;/Action&gt;</p>
+        <p>&lt;ActionParameters.Count&gt;</p>
+        <p>&lt;int&gt;2&lt;/int&gt;</p>
+        <p>&lt;/ActionParameters.Count&gt;</p>
+        <p>&lt;ActionParameters&gt;</p>
+        <p>&lt;ActionParameters.Item&gt;</p>
+        <p>&lt;ActionParameters.Item.Key&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE_EXECUTE_ACTION_ACTION_MESSAGE&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.Key&gt;</p>
+        <p>&lt;ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;string&gt;JustEnough.Common.Action.ActionMessage, JustEnough.Common.Action&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;ActionParameters.Item.Value&gt;</p>
+        <p>&lt;ActionMessage&gt;</p>
+        <p>&lt;Sender&gt;</p>
+        <p>&lt;string&gt;DATABASE&lt;/string&gt;</p>
+        <p>&lt;/Sender&gt;</p>
+        <p>&lt;Recipients&gt;</p>
+        <p>&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /&gt;</p>
+        <p>&lt;/Recipients&gt;</p>
+        <p>&lt;Action&gt;</p>
+        <p>&lt;string&gt;COMMON_SEND_PING&lt;/string&gt;</p>
+        <p>&lt;/Action&gt;</p>
+        <p>&lt;ActionParameters.Count&gt;</p>
+        <p>&lt;int&gt;0&lt;/int&gt;</p>
+        <p>&lt;/ActionParameters.Count&gt;</p>
+        <p>&lt;ActionParameters /&gt;</p>
+        <p>&lt;/ActionMessage&gt;</p>
+        <p>&lt;/ActionParameters.Item.Value&gt;</p>
+        <p>&lt;/ActionParameters.Item&gt;</p>
+        <p>&lt;ActionParameters.Item&gt;</p>
+        <p>&lt;ActionParameters.Item.Key&gt;</p>
+        <p>&lt;string&gt;DISPATCH_SERVICE_EXECUTE_ACTION_ACTION_MESSAGE_CALL_IDENTIFICATION_TOKEN&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.Key&gt;</p>
+        <p>&lt;ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;string&gt;System.String, mscorlib&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.ValueType&gt;</p>
+        <p>&lt;ActionParameters.Item.Value&gt;</p>
+        <p>&lt;string&gt;33CAECFF-2419-4E78-A4BD-9612953EC2D0&lt;/string&gt;</p>
+        <p>&lt;/ActionParameters.Item.Value&gt;</p>
+        <p>&lt;/ActionParameters.Item&gt;</p>
+        <p>&lt;/ActionParameters&gt;</p>
+        <p>&lt;/ActionMessage&gt;<a name="_Annexure_A_–"></a></p>
+    </body>
+</html>

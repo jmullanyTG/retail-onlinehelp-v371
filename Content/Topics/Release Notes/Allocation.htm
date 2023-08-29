@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Allocation</h1>
+        <p>The following enhancements are now available in the Allocation module. </p>
+        <h2>Product groups now built from allocation strategies</h2>
+        <p>Product groups are now composed of allocation strategies instead of variants. The major impact of this change is that omni-channel organizations can now create channel-specific product groups, which was not previously possible.  &#160;Before, adding a variant to a product group meant all of the allocation strategies associated with that variant were automatically and irrevocably included in that group. Now, for example, if an item has a different allocation strategy per channel, a user can choose just the specific strategies they want to include in a product group. The strategies that are not included in the product group will remain available for other uses.</p>
+        <p>The steps for creating and maintaining product groups in the Allocations module do not change as a result of this enhancement. What has changed in the UI&#160;is that the grid at the bottom of the Product Groups pane now shows eligible allocation strategies instead of eligible variants.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/producct group-channels.png" class="ScreenShot">
+            </img>
+        </p>
+        <p>New fields in the grid include:</p>
+        <ul>
+            <li>Allocation Strategy ID&#160;</li>
+            <li>Eligible Channel</li>
+            <li>Location Strategy</li>
+        </ul>
+        <p><b>Note</b>: To align existing product groups to the new architecture, this enhancement requires a migration step during upgrade. See <a href="Breaking Changes.htm">Breaking Changes</a> for more information.</p>
+    </body>
+</html>

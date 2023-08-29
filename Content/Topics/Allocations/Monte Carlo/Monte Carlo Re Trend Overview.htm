@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="1380" MadCap:lastWidth="2160">
+    <head>
+        <link href="../../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Monte Carlo Re-Trend Overview</h1>
+        <p>The re-trending of forecasts is an important step to correctly managing the continued allocation of products as they transition from a pre-season plan to in-season. As products begin to sell, their sales patterns will inevitably trend away from the initial plan (sometimes in the positive, sometimes in the negative) and the included re-trend mechanisms within JustEnough allow users to account for the trends in their sales and form an amended go-forward sales plan against which continued allocations may be structured. </p>
+        <p>With the initial launch of the JustEnough Allocations solution, a PID mechanism was included in order to provide a reactive result set based on potentially limited data. With the introduction of the Monte Carlo simulation re-trend mechanism, organizations now have additional tools at their disposal in order to provide flexibility when dealing with irregular sales patterns. </p>
+        <p style="font-weight: normal;"><b>Note</b>: This is currently a beta feature.</p>
+        <h2 >Essential Business Concepts</h2>
+        <p>Using historical demand for an item, we try to calculate a distribution for the observed demand values using Monte Carlo simulation.&#160; From there we calculate a dynamic confidence level based on the variability of the item’s demand and the number of observations available. </p>
+        <p>Using the confidence level and the demand distribution we calculate a total demand value and compare that to the total forecast over the same time frame.</p>
+        <p>A re-trend factor is then calculated based on a desired demand satisfaction percentage.</p>
+        <p>There are six inputs into the model:</p>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-size: 10pt;">Input</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-size: 10pt;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Min multiplication factor (min mf)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">Lower bound for re-trend factor </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Max multiplication factor (max mf)</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">Upper bound for re-trend factor</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Evaluation window</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">The max number of historic demand periods that will be used to calculate historic demand statistics</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Forecast Period</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">The number of forecast periods that will be used to calculate total forecast value, if value&lt;0 past forecast periods will be used, if value&gt;0 future forecast periods will be used (relative to the current date). It’s recommended to keep value greater than 0 with a suggested default of 12 weeks/periods</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-size: 10pt;">Min observations</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p style="font-size: 10pt;">Items where total observations &lt; min observations will be penalized when calculating a final confidence level.</p>
+                        <p style="font-size: 10pt;">Needs to be greater than Evaluation window.</p>
+                        <p style="font-size: 10pt;">Values between 4 and 12 weeks are preferable, recommended default is 6 weeks</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;">Number of Simulations</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p style="font-size: 10pt;">The number of Monte Carlo simulations that will be run to generate a demand distribution. More simulations will give a more continuous distribution but will increase calculation time.</p>
+                        <p style="font-size: 10pt;">Recommended default value is 100 simulations (in testing 100 simulations have been sufficient for producing consistent results)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-size: 10pt;">Desired demand satisfaction percentage</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p style="font-size: 10pt;">The percentage of total demand that needs to be satisfied i.e. if total demand = 40, and Desired demand satisfaction percentage=95% total forecast needs to be equal to at least 40*0.95=38.</p>
+                        <p style="font-size: 10pt;">Higher values (90% and upwards) are recommended for more consistent results.</p>
+                        <p style="font-size: 10pt;">Recommended default value is 100%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

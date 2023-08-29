@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Auto Lock on Cell Change</h1>
+        <p>When <b>Auto Lock on Cell Change</b> is enabled, each time you change the value of a sales-related metric in the grid, the system automatically locks the changed cell for you (and any related cells). This saves you from having to stop and click <b>Lock</b> after each change, which is especially convenient when you need to change a number of values in a plan.</p>
+        <h2>Turning Auto Lock on Cell Change on or off</h2>
+        <p>The <b>Auto Lock on Cell Change</b> option is located in the Calculation Direction Toggles pane. Simply click its checkbox to toggle enabling and disabling the option.</p>
+        <p>
+            <img src="../../../Resources/Images/MFP/auto lock on cell change.png" />
+        </p>
+        <h2>Example</h2>
+        <p>In this example, we'll use auto-lock when changing planned Sales values for the month of December. </p>
+        <ol>
+            <li>
+                <p>In the Calculation Direction Toggles pane, verify that the <b>Auto Lock on Cell Change</b> option is selected. If not, click the checkbox to select it. </p>
+                <p>
+                    <img src="../../../Resources/Images/autolock1.JPG" />
+                </p>
+            </li>
+            <li>
+                <p>First, we will manually change the planned aggregate Sales value for the month of December (the 2018 m_12 Total column). The new value for the month is $12,000,000 (see yellow box in screenshot below). </p>
+                <p>
+                    <img src="../../../Resources/Images/MFP/auto lock example 1.png" />
+                    <br />
+                </p>
+                <p>After making the change, the system does the following (see screenshot below):</p>
+                <ul>
+                    <li>Automatically updates the planned Sales Units value for 2018 m_12 Total from 111,506 to 142,381 to reflect the month's new planned Sales value.</li>
+                    <li>
+                        <p>Automatically locks the Sales, Sales Units, and AUR values for 2018 m_12 as a result of the <b>Auto Lock on Change</b> option being enabled. Those cells are now formatted with a <a href="The Hybrid Financial Planning Grid.htm#Cell">light-red gradient background</a> to indicate they are locked aggregated values.</p>
+                    </li>
+                </ul>
+                <p>
+                    <img src="../../../Resources/Images/MFP/auto lock example 2.png" />
+                </p>
+            </li>
+            <li>
+                <p>Next, we'll change the Sales values for each of the first 3 weeks in December (2018_wk48, 2018_wk49, and 2018_wk50) to $2,000,000 each. These changes are shown in the yellow boxes in the screenshot below.</p>
+                <p>
+                    <img src="../../../Resources/Images/month sales4.JPG" />
+                </p>
+                <p>After making each change to a weekly Sales value, the system does the following:</p>
+                <ul>
+                    <li>Automatically updates the week's Sales Units value to reflect its new Sales value.</li>
+                    <li>Automatically locks the Sales, Sales Units, and AUR values for that week as a result of the <b>Auto Lock on Change</b> option being enabled. Those cells are now formatted with a <a href="The Hybrid Financial Planning Grid.htm#Cell">light red background</a> to indicate their values are locked.</li>
+                    <li>Automatically updates the Sales and Sales Units values of the remaining unlocked weeks to make up the difference between the newly-locked weekly values and the locked monthly value. In the screenshot above, the Sales values in the three locked weeks now account for $6,000,000 of the locked $12,000,000 monthly Sales value. The remaining $6,000,000 in Sales is now spread proportionally across the remaining unlocked weeks (2018_wk51 and 2018_wk52, marked in a green box in the screenshot above).</li>
+                </ul>
+            </li>
+            <li>
+                <p>Finally, we'll change the Sales value for the 4th week in December (2018_wk51) to also be $2,000,000. </p>
+                <p>
+                    <img src="../../../Resources/Images/month sales6.JPG" />
+                </p>
+                <p>After making this change, the system does the following:</p>
+                <ul>
+                    <li>Automatically updates the Sales Units value for 2018_wk51 to reflect the week's new Sales value.</li>
+                    <li>Automatically locks the Sales, Sales Units, and AUR values for 2018_wk51 as a result of the <b>Auto Lock on Change</b> option being enabled..</li>
+                    <li>Automatically updates the Sales and Sales Units value of the remaining unlocked week (2018_wk52, shown in the green box above) to make up the difference between the locked weekly values and the locked monthly values. In this example, the locked monthly Sales value is $12,000,000 and the combined Sales values of the locked weeks (weeks 48-51) is $8,000,000, meaning the Sales value for week 52 has to be $4,000,000 in order for all the weeks in the month to aggregate to $12,000,000. </li>
+                    <li><span style="color: #ff0000;">Automatically locks the Sales, Sales Units, and AUR&#160;values of the remaining unlocked week (2018_wk52) </span><span style="color: #ff0000;">as a result of all the other periods in the month being locked AND the monthly value being locked</span>. This lock is <u>not</u> a direct result of the <b>Auto Lock on Change</b> option, because no change was manually entered in 2018_wk52. The lock is added because, logically, any changes to wk52 would require subsequent changes to either the aggregated monthly values (which is prevented by the locks to the monthly values added in step 2 above) or to the values in the other weeks in the month (which is prevented by the locks added in steps 3 and 4). Since wk52's values cannot be changed due to those other locks, the system automatically locks its values as well. </li>
+                </ul>
+                <h2>Notes</h2>
+                <ul>
+                    <li>The <b>Auto Lock on Cell Change</b> option follows the same behavior as the regular <a href="../Lock Spread.htm">lock and spread</a> functionality. it just replaces the need for users to click <b>Lock</b> after making cell changes.</li>
+                    <li>Locks added automatically by the <b>Auto Lock on Cell Change</b> option can be removed in the same manner as manually-added locks. </li>
+                    <li>In the current version, <b>Auto Lock on Cell Change</b> does not work on changes made through the <a href="Chaning Multiple Cells At Once.htm">Multiple Changes</a> action. This will be fixed in future versions of Financial Planning. </li>
+                </ul>
+                <p>&#160;</p>
+            </li>
+        </ol>
+    </body>
+</html>

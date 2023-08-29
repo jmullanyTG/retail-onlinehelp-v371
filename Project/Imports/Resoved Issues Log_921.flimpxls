@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsExcelImport
+  SaveWorkbookToFolder="false"
+  WorksheetImportType="topic"
+  PersistFirstRowAsHeader="true"
+  LimitRows="false"
+  LimitRowsCount="30"
+  SaveChartsAs="false"
+  SaveChartsAsType="Png"
+  ConvertEquations="false"
+  ExclusionFilters=""
+  CreateMasterTopic="false"
+  IncludeWorksheetTitlesAsHeadings="false"
+  ImportHiddenRowsColumns="false"
+  KeepSourceLinks="false"
+  AutoSync="false"
+  Stylesheet=""
+  PreserveSourceStyles="false"
+  LastImport="2018-09-21T12:14:17.8089807-07:00">
+  <Files>
+    <Url
+      Source="../../../../JustEnough/3.7/Release Notes/Resoved Issues Log_921.xlsx"
+      AbsoluteSource="file:///C:/Users/Jonathan.Boswell/Documents/JustEnough/3.7/Release Notes/Resoved Issues Log_921.xlsx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resoved Issues Log_921/Resoved Issues Log.htm"
+      TimeStamp="9/21/2018 12:01:08 PM" />
+    <Url
+      Source="../TOCs/Resoved Issues Log_921.fltoc"
+      TimeStamp="9/21/2018 12:01:08 PM" />
+  </GeneratedFiles>
+</MsExcelImport>

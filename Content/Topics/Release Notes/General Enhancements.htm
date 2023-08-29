@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>General Enhancements</h1>
+        <p>The following enhancements affect multiple JustEnough modules.</p>
+        <h2>Schedule-based order processing lead times</h2>
+        <p>The inventory policy field, Order Processing Lead Time, specifies the number of days after a delivery is received  to allow for processing before the ordered inventory can be considered "in stock" and available for sale/distribution. You can now choose whether that lead time is counted using calendar days (disregarding whether or not the business is open or closed on those days) or business days (using schedules to define days such as weekends and holidays that should not count as lead time). </p>
+        <p>If the lead time is counted using calendar days (existing behavior), the number of lead time days allotted to an order will always match the Order Policy Lead Time value set in the governing inventory policy. If the lead time is counted using business days (new behavior), the number of lead time days allotted to an order may exceed this value depending on the associated schedule (for example, closures for weekends or holidays). This enables better accuracy in determining the dates on which inventory will be available at a given location. </p>
+        <p>A number of Demand Management modules have been enhanced to support this feature. These enhancements are described below.</p>
+        <h3><a name="System"></a>System policy</h3>
+        <p>A new system policy, Order Processing Lead Time Type, has been added to the Engine:Replenish group. This new policy lets you define globally whether order processing lead time is based on calendar days (default behavior) or business days.</p>
+        <p><b>Engine: Replenish</b>
+        </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 35%" />
+            <col class="TableStyle-jeTables-Column-Column1" style="width: 45%;" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Display Name</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">System Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Order Processing Lead Time Type</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">Replenish.OrderProcessingLeadTimeType</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>Sets whether the Order Processing Lead Time value specified in an inventory policy is applied according to calendar days or business days.</p>
+                        <ul>
+                            <li>0 = Calendar days. </li>
+                            <li>1 = Business days. Business days are counted according to the Order Processing Lead Time Schedule set for a site or item. if schedules are defined for both a site and an item, the item schedule is used. </li>
+                        </ul>
+                        <p>Default value = 0.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 style="widows: 3;orphans: 4;">Metadata</h3>
+        <p style="widows: 3;orphans: 4;">New metadata has been added to support schedule-based order processing lead times.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/jeTables.css');" class="TableStyle-jeTables" cellspacing="0">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Group</th>
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">Name</th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Inventory Schedules</td>
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">Order Processing Schedule</td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>Sets the schedule to use when calculating the number of  lead time days needed to process orders of specific items. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: normal;">Site Schedules</td>
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: normal;">Order Processing Schedule</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2" style="font-weight: normal;">Sets the schedule to use when calculating the number of lead time days needed to process orders at specific sites.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Item Manager</h3>
+        <p>You can use the Order Processing  Schedule field to specify the schedule to use for calculating the order processing lead time of specific items. </p>
+        <p style="font-weight: bold;">Note: <span style="font-weight: normal;">Item-specific schedules override site-specific schedules.</span></p>
+        <ol>
+            <li>
+                <p>Add the Order Processing Schedule field to an inventory document.</p>
+                <p>
+                    <img src="../../Resources/Images/Item Manager/Order processing lead time schedule field.png" class="SS" />
+                </p>
+            </li>
+            <li>
+                <p>Select the schedule to use for an item in its Order Processing Schedule field.</p>
+                <p>
+                    <img src="../../Resources/Images/Item Manager/order processing schedule example.png" class="SS" />
+                </p>
+            </li>
+        </ol>
+        <h3>Site Manager</h3>
+        <p>You can use the Order Processing  Schedule field to specify the schedule to use for calculating order processing lead times at specific sites.</p>
+        <p style="font-weight: bold;">Note: <span style="font-weight: normal;">Item-specific schedules override site-specific schedules.</span></p>
+        <ol>
+            <li>
+                <p>Add the Order Processing Schedule field to a site document.</p>
+                <p>
+                    <img src="../../Resources/Images/Site Manager/site schedule fields.png" class="SS" />
+                </p>
+            </li>
+            <li>
+                <p>Select the schedule to use for a site in its Order Processing Schedule field.</p>
+                <p>
+                    <img src="../../Resources/Images/Item Manager/order processing schedule example.png" class="SS">
+                    </img>
+                </p>
+            </li>
+        </ol>
+        <h3>Order Manager</h3>
+        <p>The order processing lead time for a site or item is used to calculate the order's "available date" at a DC&#160;or store. The Order Manager can now show the available dates calculated for an order. See <a href="Order Manager.htm">Order Manager</a> enhancements for more information and examples.</p>
+        <h2>Dashboard widget configuration</h2>
+        <p>You can now configure dashboard widgets using the DevExpresss Dashboard Designer. To get started, sImply right-click in the widget and select <b>Setup</b>. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Dashboard configuration - setup option.png" class="SS" />
+        </p>
+        <h3>New user right</h3>
+        <p>The ability to configure dashboard widgets is controlled by a new user right, <b>Configure Dashboard Widget</b>.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-Standard" cellspacing="0">
+            <col class="TableStyle-Standard-Column-Column1">
+            </col>
+            <col class="TableStyle-Standard-Column-Column2">
+            </col>
+            <col class="TableStyle-Standard-Column-Column3">
+            </col>
+            <thead>
+                <tr class="TableStyle-Standard-Head-Header1">
+                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Right Group</th>
+                    <th class="TableStyle-Standard-HeadE-Column2-Header1">Right Name</th>
+                    <th class="TableStyle-Standard-HeadD-Column3-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Standard-Body-Body1">
+                    <td class="TableStyle-Standard-BodyB-Column1-Body1">Widgets</td>
+                    <td class="TableStyle-Standard-BodyB-Column2-Body1">Configure Dashboard Widget</td>
+                    <td class="TableStyle-Standard-BodyA-Column3-Body1">Enables the <b>Setup</b> option when a user right-clicks in a dashboard widget.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Dashboard Designer </h3>
+        <p>DevExpress Dashboard Designer provides an intuitive UI that facilitates data binding and shaping and layout design. Many of these normally complex tasks can be accomplished with a simple drag-and-drop operation, allowing you to start designing your dashboard immediately.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/dashboard designer.png" class="SS" />
+        </p>
+        <p>User documentation for Dashboard Designer is available <a href="https://devexpress.github.io/dotnet-eud/dashboard-for-desktop/articles/dashboard-designer.html">online</a> at:</p>
+        <p> https://devexpress.github.io/dotnet-eud/dashboard-for-desktop/articles/dashboard-designer.html.</p>
+    </body>
+</html>

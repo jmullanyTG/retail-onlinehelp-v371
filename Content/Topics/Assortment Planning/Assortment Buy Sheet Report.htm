@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="2727" MadCap:lastWidth="2219">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Assortment Buy Sheet Report</h1>
+        <p style="text-align: justify;"><span style="font-size: 12pt;">The Assortment Buy Sheet Report is intended to provide users the ability to view and evaluate planned </span><span style="font-size: 12pt;">items within an assortment for a defined time frame</span><span style="font-size: 12pt;">.&#160; The report contains key measures for placeholders/variants/collections related to what those entities are, where they are planned to sell</span><span style="font-size: 12pt;">,</span><span style="font-size: 12pt;"> and when they are planned to sell.&#160; Additionally, users have visibility to sales, pricing, margin, and receipts and on order for all items contained within the report.&#160; </span>
+        </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Buy Sheet Report.png" style="visibility: visible;width: 634px;height: 361px;" />
+        </p>
+        <p>The Assortment Buy Sheet Report is controlled by five parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Buy Sheet Report_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 53px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; selects a product filter for the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Assortment Planning/View Parameters.png" style="visibility: visible;mso-wrap-style: square;width: 21px;height: 18px;" /><span style="color: #000000;font-size: 12pt;">&#160; this button launches the Filter Conditions dialog, allowing the user to dynamically edit the criteria for the selected filter prior to executing it; the option also exists to create a new filter from the adjusted criteria on the fly</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" style="visibility: visible;mso-wrap-style: square;width: 22px;height: 22px;" /><span style="color: #000000;font-size: 12pt;">&#160; this button launches the Maintain Filter dialog, allowing the user to create or import a new filter, or update, delete, or export an existing filter</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Hierarchy: </span><span style="color: #000000;font-size: 12pt;">user editable tree multi-select; selects the levels of the current plan’s Site Hierarchy to include in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Cluster Sets</span>:&#160;&#160; <span style="color: #000000;font-size: 12pt;">user editable multi-select dropdown; selects the cluster sets to include in the current view. <span style="color: #000000;font-size: 12pt;">The cluster sets listed include all default and "additionally available" cluster sets for the product level selected in the Product parameter.</span></span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related, in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy; because of this, the Cluster Set dropdown will populate with the cluster sets contained beneath the selected Site Hierarchy levels</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Window of Time: </span><span style="color: #000000;font-size: 12pt;">user editable tree multi-select; selects the window of time to display in the current view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">any placeholder whose life cycle intersects with any part of the selected Window of Time will be displayed in the view; this is to allow the user to view placeholders holistically, as displaying subdivisions of their life cycle might alter the decisions made by the user if they have forgotten or are unaware of the full length of time a placeholder will be for sale</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning:</span> <span style="font-style: italic;font-size: 12pt;">the selected timeframe must be a contiguous range of periods; if it is not, the system will still use the window of time defined by the first and last selected periods</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Display Currency: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; sets the currency to display for all revenue based fields in the view; defaults to the Home Currency for the active Assortment Plan</span>
+            </li>
+        </ul>
+        <p style="margin-bottom: 0pt;margin-left: 18pt;">&#160;</p>
+        <p style="text-align: justify;">After the user has set the parameter selections at the top of the screen, clicking Execute will return the following columns in the Assortment Buy Sheet Report:</p>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Image</span> – <span style="color: #000000;font-size: 12pt;">displays a thumbnail of the primary image for the placeholder or attached variant</span></li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">PH/PLM Code</span><span style="font-size: 12pt;"> –</span> <span style="color: #000000;font-size: 12pt;">unique system generated cod</span><span style="color: #000000;font-size: 12pt;">e for the placeholder or if a variant </span><span style="color: #000000;font-size: 12pt;">is assigned in Line Visualization</span><span style="color: #000000;font-size: 12pt;">, </span><span style="color: #000000;font-size: 12pt;">displays the PLM code associated with the assigned variant</span></li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">PH/PLM Description</span><span style="font-size: 12pt;"> –</span> <span style="color: #000000;font-size: 12pt;">description for the placeholder or if a</span><span style="color: #000000;font-size: 12pt;"> variant </span><span style="color: #000000;font-size: 12pt;">is assigned in Line visualization, displays the PLM description associated with the assigned variant</span></li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Avg. Unit Ticket</span><span style="font-weight: bold;font-size: 12pt;"> (AUT)</span><span style="font-size: 12pt;"> – </span><span style="color: #000000;font-size: 12pt;">average unit ticket price for the placeholder</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-size: 12pt;">Avg. Unit Retail </span><span style="font-weight: bold;font-size: 12pt;">(AUR) </span><span style="font-weight: bold;font-size: 12pt;">– </span><span style="font-size: 12pt;">average unit retail price for the placeholder</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-size: 12pt;">Avg. Unit Cost </span><span style="font-weight: bold;font-size: 12pt;">(AUC) </span><span style="font-weight: bold;font-size: 12pt;">– </span><span style="font-size: 12pt;">average unit cost price for the placeholder</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;font-size: 12pt;">Margin % – </span><span style="font-size: 12pt;">margin percentage for the placeholder</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(AUR – AUC) / AUR</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Phase In</span> <span style="font-weight: bold;font-size: 12pt;">–</span> <span style="color: #000000;font-size: 12pt;">the phase in date for the placeholder, first period of planned sales</span></li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Phase Out</span> <span style="font-weight: bold;font-size: 12pt;">–</span> <span style="color: #000000;font-size: 12pt;">the phase out date for the placeholder, last period of planned sales</span></li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;"># Weeks</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">total number of weeks the </span><span style="font-size: 12pt;">placeholder</span><span style="font-size: 12pt;"> is on offer to the customer</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Rate of Sale $</span><span style="font-weight: bold;font-size: 12pt;"> -- </span><span style="font-size: 12pt;">average sales per site per period in revenue</span><span style="font-size: 12pt;"> for the placeholder</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Rate of Sale U</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">average sales per site per period in units</span><span style="font-size: 12pt;"> for the placeholder</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Total Sales $</span><span style="font-weight: bold;font-size: 12pt;"> -- </span><span style="font-size: 12pt;">total sales revenue for the item from Phase in through Phase out</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Total Sales U</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">total sales units for the item from Phase in through Phase out</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Promo</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">if checked a promotion exists for the </span><span style="font-size: 12pt;">placeholder</span><span style="font-size: 12pt;">, if un-checked no promotion exists</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Plan Receipt $</span><span style="font-weight: bold;font-size: 12pt;"> -</span><span style="font-weight: bold;font-size: 12pt;">- </span><span style="font-size: 12pt;">total cost of planned receipts for an </span><span style="font-size: 12pt;">placeholder</span><span style="font-size: 12pt;"> from Phase in through Phase out</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Plan Receipt U</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">total units of planned receipts for an </span><span style="font-size: 12pt;">placeholder</span><span style="font-size: 12pt;"> from Phase in through Phase out</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;"># of Flows</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">total number of periods that receipts are planned to deliver for an </span><span style="font-size: 12pt;">placeholder</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Site Count</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">total number of sites that an </span><span style="font-size: 12pt;">placeholder</span><span style="font-size: 12pt;"> is assorted to</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Avg. Units</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">average amount of planned receipts per site</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">On Order U</span><span style="font-weight: bold;font-size: 12pt;"> – </span><span style="font-size: 12pt;">total number of committed units planned to deliver for an </span><span style="font-size: 12pt;">placeholder</span>
+            </li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">% Commit</span><span style="font-weight: bold;font-size: 12pt;"> -- </span><span style="font-size: 12pt;">% of total planned receipts that have been committed to for an </span><span style="font-size: 12pt;">placeholder</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 74pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">(On Order U + prior actual receipts) / Planned Receipt U</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 38pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #7030A0;font-size: 12pt;">Status:</span> <span style="font-size: 12pt;">displays the placeholder Status, Open, Created, Assigned, Committed, or Replen</span></li>
+            <li class="ListParagraph" style="text-align: justify;"><span style="font-weight: bold;font-size: 12pt;">Cluster Sets</span><span style="font-weight: bold;font-size: 12pt;"> -- </span><span style="color: #000000;font-size: 12pt;">displays the cluster sets assigned to the placeholder</span>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >If constraining down:</h1>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph">The order line is not locked</li>
+            <li class="ListParagraph">The replenish order quantity (user order quantity!) is a positive number</li>
+            <li class="ListParagraph">The order line was not constrained within the previous loop/iteration </li>
+            <li class="ListParagraph">Ordered by replenish order quantity, ascending</li>
+            <li class="ListParagraph">If replenish order quantity is identical, ordered by default priority, descending</li>
+            <li class="ListParagraph">If default priority is identical, ordered by OrderLineID</li>
+        </ol>
+        <p>This allows for the constraining up of items with a higher volume stock is contained in current period order, wherein the future period orders is relatively small.</p>
+    </body>
+</html>

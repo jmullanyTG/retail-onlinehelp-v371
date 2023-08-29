@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Cleanup</h1>
+        <p>The Workload Queue Cleanse Task will clear historical logs that are no longer relevant to current processing nor immediate investigation. Within the existing ‘nightly’ maintenance Job, a new Task should be configured to cleanse the Workload logs:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">Archive Log</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Item Log</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Queue Log</li>
+        </ul>
+        <p>The Task should be scheduled to run during non-normal working hours, daily, outside of Workload Queue nightly and weekend processing.</p>
+    </body>
+</html>

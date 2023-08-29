@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="1662" MadCap:lastWidth="2378">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Parameters</h1>
+        <p style="margin-bottom: 0pt;color: #000000;">Selections made in the parameters area define the data that is returned not only in the Main Planning View but also to the Sales By Type and Comp/Non-Comp Supporting views</p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Parameters.png" style="visibility: visible;width: 634px;height: 39px;" />
+        </p>
+        <ul>
+            <li>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Channel</span><span style="font-weight: bold;color: #000000;">: </span><span style="color: #000000;">user editable multi-select tree</span><span style="color: #000000;">; selects the site hierarchy level(s) to display in the view</span> </p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">populates with only the active site hierarchy levels defined for the plan</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Channel Agg Level: </span><span style="color: #000000;">user editable single-select dropdown; selects the level </span><span style="color: #000000;">of</span><span style="color: #000000;"> the site hierarchy at which data will be pre-aggregated in the view</span><span style="color: #000000;">; levels below the selected level will not be displayed, however, the system will still respect the specific levels selected in Channel, and display aggregate values for only those levels</span>
+                </p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">this parameter should be set at the lowest level at which the user wishes to view/edit </span><span style="font-style: italic;color: #000000;">site </span><span style="font-style: italic;color: #000000;">data in the view</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product: </span><span style="color: #000000;">user editable multi-select tree; selects the product hierarchy level(s) to display in the view</span>
+                </p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">populates with only the active </span><span style="font-style: italic;color: #000000;">product</span><span style="font-style: italic;color: #000000;"> hierarchy levels defined for the plan</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product Agg Level: </span><span style="color: #000000;">user editable single-select dropdown; selects the level of the product hierarchy at which data will be pre-aggregated in the view; levels below the selected level will not be displayed, however, the system will still respect the specific levels selected in </span><span style="color: #000000;">Product</span><span style="color: #000000;">, and display aggregate values for only those levels</span>
+                </p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">this parameter should be set at the lowest level at which the user wishes to view/edit </span><span style="font-style: italic;color: #000000;">product </span><span style="font-style: italic;color: #000000;">data in the view</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Time:</span> <span style="color: #000000;">user editable multi-select tree; selects the period(s) to display in the view</span></p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">populates </span><span style="font-style: italic;color: #000000;">only periods including and between the Start Period and End Period settings for the active plan</span>
+                        </p>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:</span> <span style="font-style: italic;color: #000000;">the level at which periods are displayed and selectable is based on the Calendar Level setting for the active plan</span></p>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;">Important:</span> <span style="font-style: italic;color: #000000;">while it is technically possible to select non-contiguous ranges of time, in order for the system to properly calculate values for future periods, all periods between the earliest and latest selected will still be displayed</span></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Currency:</span> <span style="color: #000000;">user editable </span><span style="color: #000000;">single-select </span><span style="color: #000000;">dropdown; selects the currency in which to view all revenue based metrics within the view</span></p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">populates with only currencies that are currently assigned to active sites within the site hierarchy on which the active plan is based</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><span style="font-weight: bold;color: #000000;">Comparison Type:</span><span style="color: #000000;"> user editable single-select dropdown; determines the type of comparison to show in the view (comparison metrics appear in light purple). Options are: None (default), vs. Branch, vs. Master, vs. Snapshot,  and LLY (Last Last Year/two years back). </span>
+                </p>
+                <ul>
+                    <li style="margin-bottom: 0pt;font-weight: normal;font-style: italic;"><span style="color: #000000;"><b>Note</b>: <span style="color: #000000;">If you select vs. Branch, vs. Master, or vs. Snapshot, you must also select a comparison plan in the Comparison Plan parameter. </span>The LLY option  pulls comparison data directly from the database and does not use the Comparison Plan parameter. </span>
+                    </li>
+                </ul>
+            </li>
+            <li><span style="font-weight: bold;color: #000000;">Comparison Plan:</span> <span style="color: #000000;">user editable single-select dropdown; selects the specific plan to use as the source for vs. Branch, vs. Master, vs. Snapshot comparison types.</span><ul><li><p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note: </span><span style="font-style: italic;color: #000000;">all comparison metrics are populated via direct read from the source plan specified rather than calculated; if no data exists in the selected plan for a given site/product level and period, a value of zero will be displayed</span></p></li></ul></li>
+            <li>
+                <p><b>View Mode:</b> user editable dropdown; selects the view mode to show in the view– <a href="3.7/Total Company and Average Store Modes.htm">Total Company or Average Store</a>.</p>
+                <ul>
+                    <li><b>Total Company</b>: allows the user to view/plan revenue and unit metrics as total company values – meaning the total volume for all sites contained in whatever level the Pivot Grid is aggregated to</li>
+                    <li>
+                        <p><b>Average Store</b>: allows the user to view/plan revenue and unit metrics as average store values – meaning the per site volume for the number of sites contained in whatever level the Pivot Grid is aggregated to</p>
+                    </li>
+                </ul>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Parameters: </span><span style="color: #000000;">Shows/hides the Parameters controls in the current view; hide to increase vertical viewable space on-screen</span>
+                </p>
+                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Execute: </span><span style="color: #000000;">returns data to the view based on the selections made in the Parameters controls</span>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

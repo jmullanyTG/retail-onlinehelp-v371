@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:lastBlockDepth="7" MadCap:lastHeight="1991" MadCap:lastWidth="3149" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Current Consumption Exceptions</h1>
+        <p>The Current Consumption exception flags level forecasts when the sales for the current period do not match the forecasted demand for the current period. </p>
+        <h2>Formula </h2>
+        <p>This exception is based on the variance between the demand forecasted for the current period and the sales in the current period. The formula for determining the percentage of variance is: </p><pre xml:space="preserve"><code>(Current Forecast Rate - Current Demand Rate) / Current Demand Rate</code></pre>
+        <p>Where:</p>
+        <ul>
+            <li><code>Current Forecast Rate</code>= the result of dividing the current period's <b>Effective Forecast</b> quantity by the number of days in the forecast period. (For example, if the forecast period is a week long, divide by 7). </li>
+            <li><code>Current Demand Rate</code> = the result of dividing the current period's  <b>Total Sales</b> quantities (which represents week-to -date sales) by the number of days that have passed since the first day of the period (excluding the current day). </li>
+        </ul>
+        <p>A positive value resulting from this calculation occurs when the forecast for the current period is greater than the current demand, which may result in excess stock. A negative value occurs when the demand for the current period is greater than the forecast, which may result in stock outs.</p>
+        <p>Whether the resulting value constitutes an exception depends on the variance threshold defined in the exception filters. </p>
+        <p><b>Notes</b>:
+        </p>
+        <ul>
+            <li>If either the <code>Current Forecast Rate</code>or <code>Current Demand Rate</code> value is equal to zero, the variance percentage will equal 100%. </li>
+        </ul>
+        <h2>Examples</h2>
+        <p>The following example shows an <i>over-forecast</i> exception, which is a forecast where the upcoming demand is determined to be too<b>high</b> when compared to the demand history for the previous periods.</p>
+        <p>
+            <img src="../../../Resources/Images/Exceptions/Forecasting/Example - current period under.png" />
+        </p>
+        <p>The next example shows an<i>under-forecast</i> exception, which is a forecast where the upcoming demand is determined to be too <b>low</b> when compared to the demand for the same periods last year:</p>
+        <p>
+            <img src="../../../Resources/Images/Exceptions/Forecasting/Example - current period over.png" />
+        </p>
+        <h2>Filter conditions</h2>
+        <h3>To filter for forecasts with Current Consumption <i>over-forecast</i> exceptions</h3>
+        <p>From the Level Forecast Exceptions field group:
+        <ul><ul><li>Field <b>LevelForecastCurrentConsumptionPercent</b> is more or equal to <b>0.9</b> (or whatever positive percentage value you want to be the threshold).</li><li>Field <b>LevelForecastReviewed</b> is <b>False</b>.</li></ul></ul><h3>To filter for forecasts with Current Consumption <i>under-forecast</i> exceptions</h3><p>From the Level Forecast Exceptions field group:
+        <ul><ul><li>Field <b>LevelForecastCurrentConsumptionPercent</b> is smaller or equal to <b>-0.9</b> (or whatever negative percentage value you want to be the threshold).</li><li>Field <b>LevelForecastReviewed</b> is <b>False</b>.</li></ul></ul></p></p>
+        <h2>Reviewing and resolving Current Consumption exceptions</h2>
+        <p>See <a href="Reviewing Forecast Exceptions.htm">Reviewing Forecast Exceptions</a> for more information on how to review and resolve forecast exceptions.</p>
+    </body>
+</html>

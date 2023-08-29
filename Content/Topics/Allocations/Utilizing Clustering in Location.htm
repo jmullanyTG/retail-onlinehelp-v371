@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="2356" MadCap:lastWidth="2386">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Utilizing Clustering in Location Strategies</h1>
+        <p>In order to utilize clusters in allocation strategies, users will need to create cluster sets and provide an effective date for the cluster set snapshot that applies to the period in which the allocation strategy will occur.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Utilizing Clustering in Location.png" style="visibility: visible;width: 673px;height: 262px;" />
+        </p>
+        <p>In the Cluster site manager, create a snapshot of the cluster set and give it an effective date.</p>
+        <p>Once cluster sets have been created and snapshotted, users can now select from those cluster sets from within the allocation strategy screen. Users may have to add the “Cluster Sets” column to the allocation strategy view if it is not immediately visible (choose columns). </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Utilizing Clustering in Location_1.png" style="visibility: visible;width: 673px;height: 334px;" />
+        </p>
+        <p>Users have access to select specific clusters from the cluster set. Selecting the Cluster Sets column will now provide you an ellipses which will pop out the cluster selection screen</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Utilizing Clustering in Location_2.png" style="visibility: visible;width: 673px;height: 153px;" />&#160; </p>
+        <p>The pop-out cluster sets screen will now allow you to select specific clusters within each cluster set. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Utilizing Clustering in Location_3.png" style="visibility: visible;width: 673px;height: 295px;" />
+        </p>
+        <p>You will be able to select clusters from different cluster sets but note that there can be no duplication of sites. The system will check for duplicate sites selected and notify the user if duplicates are detected. This would only happen if two different cluster sets were formed on the same subset of stores.</p>
+        <h2>Intersection of Location Strategy and Clusters</h2>
+        <p>It is very important to note that cluster sets will intersect with the selected location strategy if any demand strategy but the “Rate of Sale by Grade” is selected. This is important to note because users could mistakenly exclude store that they intended to. There are two ways users should consider using this functionality</p>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="1">
+            <li class="ListParagraph">When using clusters to drive location eligibility in an allocation strategy, ensure the location strategy is set to all locations to ensure that the intersection of clusters and location strategy covers all locations.</li>
+            <li class="ListParagraph">The alternative is to drive a meaningful intersect for example; I would like A, B and C clusters that are also cold stores. In this case you would select A, B and C clusters as well as a filter that represents all stores attributed as cold weather stores. The intersection of these lists would provide the desired result.</li>
+        </ol>
+        <p>Note that the overrides in the location strategy column still work and return with the information of which cluster set and classification (cluster) a store belongs to for the effective life of the allocation. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Utilizing Clustering in Location_4.png" style="visibility: visible;width: 673px;height: 177px;" />
+        </p>
+        <h2>Cluster Selection for Rate of Sale by Grade</h2>
+        <p>In the case when clusters are selected to filter eligible stores for an allocation strategy and the rate of sale by cluster is selected as a demand type, the system will automatically set the location strategy for the user to “Cluster Based All Sites”. The reason for this is that all sites must be considered to accurately spread a cluster rate of sale to the appropriate locations even if those locations.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Utilizing Clustering in Location_5.png" style="visibility: visible;width: 673px;height: 130px;" />
+        </p>
+        <h2>Demand Signal</h2>
+        <p>A demand signal must be present to complete the strategy configuration. This may come from many possible sources and will vary from item to item. Examples of sources may include total sales demand, rate of sale, temporal plan values, and others. </p>
+    </body>
+</html>

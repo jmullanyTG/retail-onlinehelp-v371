@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="6453" MadCap:lastWidth="2217" MadCap:conditions="General.How-To Guides">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Supplier to DC to Store Supply Chain</h1>
+        <p>This example shows  a supply chain where external suppliers deliver to distribution centers (DCs), which then distribute stock to stores. </p>
+        <p>When we first create the supply chain in this example, it will be flat. You'll see all sites (stores and DCs) on the same level in the supply chain hierarchy, and the parent source for each site is the external supplier. To create a supplier &gt; DC &gt; store supply chain, we'll have to organize the stores "below" their regional DCs in the hierarchy, with each store having a DC as its parent source.</p>
+        <p>We'll finish the example by choosing a second DC to be an alternate source for a store.</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Example database text.flsnp" />
+        </p>
+        <h2>Workflow</h2>
+        <p>Click to view a diagram of a supplier-DC-store supply chain.</p>
+        <p><a href="../../Resources/PDFs/JustEnough Workflows.pdf#page=5" title="Click to open workflow" alt="Click to open workflow"><img src="../../Resources/PDFs/JustEnough Workflows.pdf#5" class="workflow" /></a>
+        </p>
+        <h2>Example</h2>
+        <p>The JustEnough Standard Demo database includes an example [Supplier - DC - Store] supply chain based on the instructions provided below.</p>
+        <h2>Instructions </h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>1. Create the initial supply chain.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>
+                        <p>From the Maintain tab, click <b>Supply Chain</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the Supply Chain toolbar, click <b>New</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the Create Supply Chain dialog box, enter a name for the supply chain and select <b>Site/Supplier</b> as the supply chain type.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Supply Chain create.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The supply chain appears in the Supply Chain screen. In the Hierarchy pane, note that the organization is flat (stores and DCs are on the same level). In the following steps, we'll change the inventory source for stores from "External Supplier" to their actual DCs. </p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - flat.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Hierarchy toolbar, click <b>Switch View</b> to change the hierarchy view to a grid.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - cd 2 switch.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Next, we'll add columns to the grid to make it easy to identify which sites should move to which DCs In the Hierarchy grid, right-click on a column header and choose <b>Column Chooser</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the Customize pop-up, double-click on <b>Channel Description</b>, <b>Country Description</b>, and <b>Site Region Description</b> to add these columns to the grid.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - cd 2 fieldspng.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Filter the Channel Description column and select <b>Retail</b>, then filter the Country Description column and select <b>Canada</b>.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - cd 2 filter.png" />
+                        </p>
+                    </li>
+                    <li>Right-click in the grid and choose <b>Select All</b> to select all stores.</li>
+                    <li>Right-click in the Parent Site column and choose <b>Multiple Changes</b>.</li>
+                    <li>
+                        <p>In the Multi Data Change Form for Column Parent Site dialog box: </p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>Select the <b>New Value</b> option.</li>
+                            <li>Choose <b>DC - Canada</b> as the new value. </li>
+                            <li>
+                                <p>Click <b>Save</b>.</p>
+                                <p>
+                                    <img src="../../Resources/Images/Supply Chain/Example - cd 2 change.png" />
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>The Hierarchy grid now shows DC-Canada as the new parent site for Canadian stores.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - cd2 canada.png" />
+                        </p>
+                    </li>
+                    <li>Click <b>Save</b> in the Supply Chain toolbar to save the changes.</li>
+                    <li>Continue changing inventory sources for your other regions until all stores have their primary DC as their inventory source.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2. Define alternate sources for stores.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In this example, we will set DC-North America as an alternate source of inventory for the Toronto store. </p>
+                <ol>
+                    <li>Click <b>Switch View</b> to return to the Hierarchy view. You will see that Canadian stores are now children of DC-Canada in the hierarchy.<object MadCap:HTML5Video="true" class="video" src="../../Resources/Videos/BC-1 CD-2 S-1 Alternate Source Setup.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false"></object></li>
+                    <li>Click on Toronto in the hierarchy.</li>
+                    <li>
+                        <p>In the Alternate Source grid, find DC-North America and enter <samp>2</samp> in its <b>Priority</b> column.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - cd2 alternate.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Click <b>Save</b> in the Supply Chain toolbar to save the change. DC - North America is now set as the second source of inventory for Toronto.</p>
+                        <p>
+                            <img src="../../Resources/Images/Supply Chain/Example - cd2 final.png" />
+                        </p>
+                    </li>
+                    <li>Continue assigning alternate sources for your other stores.</li>
+                    <li>Click <b>Reprocess</b> in the Supply Chain toolbar to process the saved changes and rebuild the supply chain.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Results</h2>
+        <p>With a supplier to DC to store supply chain, JustEnough will:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>Calculate projected demand versus projected stock on hand for each item at each store.</li>
+            <li>Calculate stock needed in each DC to meet the demand of stores stocked from that DC.</li>
+            <li>Generate orders from external suppliers as needed to stock the DCs with enough inventory to meet the collective store demand.</li>
+            <li>Generate distribution orders to deliver the right amount of inventory from DCs to stores to meet each store's projected demand.</li>
+        </ol>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Managing Supply Chains.htm">Managing Supply Chains</a>
+            </li>
+            <li><a href="Supply Chain Overview.htm">Supply Chain Overview</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

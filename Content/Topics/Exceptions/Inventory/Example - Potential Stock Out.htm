@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="3545" MadCap:lastWidth="1805">
+    <head>
+        <link href="../../../Resources/TableStyles/Video Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Example - Potential Stock Out</h1>
+        <p style="margin-bottom: 0;">Potential stock out exceptions identify items that are projected to be understocked at a location, resulting in all stock (including safety stock) at that location being sold out for a number of days. If incoming orders already exist for these items, you may choose to expedite those orders to prevent or minimize the potential stock out. If no orders have yet been created for these items, you may choose to create expedited orders for them. </p>
+        <p style="margin-bottom: 0;">You can use filters and views to create ad-hoc Potential Stock Out reports in Item Manager. In this example, we'll use two pre-created filters. The first identifies items with 10 or more days of potential stock outs. The second filter identifies  items with 10 or more days of potential stock shortfalls which also have incoming orders that can be expedited to alleviate the stock out. </p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Example database text.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <h2>Related videos</h2>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/jeTables.css');">
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <col class="TableStyle-jeTables-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p>
+                            <p>
+                                <object MadCap:HTML5Video="true" src="../../../Resources/Videos/BC-5 CD-18 Inventory Exception Management_Understock_POTSO.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video">
+                                </object>
+                            </p>
+                        </p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>
+                            <p>
+                                <p>
+                                    <p>
+                                        <object MadCap:HTML5Video="true" src="../../../Resources/Videos/BC-5 CD-18 Inventory Exception Management_Understock_POTSOExpedite.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video">
+                                        </object>
+                                    </p>
+                                </p>
+                            </p>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body2">Potential Stock Out Exception</td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body2">Potential Stock Out Exception:&#160;Expedite</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Instructions</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Potential stock out exception </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>From the Manage tab, click <b>Item Manager</b>.</li>
+                    <li>
+                        <p> In the Items dialog box, select the <b>Inventory Exception: POTSO</b> filter.</p>
+                    </li>
+                    <li style="font-weight: normal;">
+                        <p>In the Choose Fields dialog box, select the <b>Inventory Exception: POTSO</b> view. </p>
+                    </li>
+                    <li>
+                        <p> In the item document, you can see all of the items that exceed the Potential Stock Out Days threshold specified in the filter.</p>
+                        <p>For this example, the threshold is "more or equal to 10 days". </p>
+                    </li>
+                    <li>
+                        <p>In the grid, you can sort items by priority ("A" items listed first) and review each item's Potential Stockout Date, Potential Stockout Days, Potential Stockout Quantity, Potential Stockout Value, and more.</p>
+                        <p>
+                            <img src="../../../Resources/Images/Exceptions/Inventory/Example - POTSO grid.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Details pane, review an item's Stock Holding Projection tab to see the potential stockout (where projected stock on hand falls to 0) and any lost sales that may result from the stockout.</p>
+                        <p>
+                            <img src="../../../Resources/Images/Exceptions/Inventory/Example - POTSO shp.png" />
+                        </p>
+                    </li>
+                    <li>Review other tabs in the Detail pane as desired to get a better understanding of the forecasted demand, inventory policy, and other information governing the item stock at the location.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Potential stock out exception (with expedite option)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>
+                        <ol>
+                            <li>From the Manage tab, click <b>Item Manager</b>.</li>
+                            <li>
+                                <p> In the Items dialog box, select the <b>Inventory Exception: POTSO Expedite</b> filter.</p>
+                            </li>
+                            <li style="font-weight: normal;">
+                                <p>In the Choose Fields dialog box, select the <b>Inventory Exception: POTSO Expedite</b> view. </p>
+                            </li>
+                            <li>
+                                <p> In the item document, you can see all of the items that exceed the Potential Stock Out Days threshold specified in the filter.</p>
+                                <p>For this example, the threshold is "more or equal to 10 days". </p>
+                            </li>
+                            <li>
+                                <p>In the grid, you can sort items by priority ("A" items listed first) and review each item's Potential Stockout Date, Potential Stockout Days, Potential Stockout Quantity, Potential Stockout Value, and more.</p>
+                            </li>
+                            <li>
+                                <p>IIn the Details pane, review an item's Stock Holding Projection tab to see the potential stockout (where projected stock on hand falls to zero) that occurs before the incoming order arrives.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Exceptions/Inventory/Example - POTSO shp expedite.png" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Click on the Inbound and Outbound Orders tab in the Details pane to see the upcoming order details.</p>
+                            </li>
+                            <li>Review other tabs in the Detail pane as desired to get a better understanding of the forecasted demand, inventory policy, and other information governing the item stock at the location.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Potential Actions</h2>
+        <p>Actions you can take to resolve shortfall exceptions include:</p>
+        <ul>
+            <li>Creating and/or expediting orders.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Help Overview</h1>
+        <p>The JustEnough Help Module manages the location and type of help documentation which the application can access. </p>
+        <h2 >Essential Business Concepts</h2>
+        <p>Details of the help context will be displayed and maintained within the single help context management screen of the Help Module. </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Help Context Key – </span>The name used to identify the location in which the help will launch. The help context key will be one of the module UIL files.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Help Type –</span> The file type of the associated help document.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Open File –</span> A plain text file which may be opened by an outside application on the client computer (e.g. MS Word, Notepad, etc.)</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">HTML Help Pages –</span> A website which is accessible through use of a web browser. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Microsoft Help –</span> A windows compatible Microsoft help file, such as a .chm file.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">HTML URL – </span>If using an HTML type help document, this field should contain the destination URL.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">MS Help File Location – </span>If using a Microsoft help file (.chm, etc.), this will be the file name. All .chm files should be loaded into the database (using the files module) and may be referenced only by their full filename. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">MS Help Navigator Type –</span> The Microsoft help navigator type will assist the help module in directing the help action to the appropriate section within a .chm document. There are two types which should be used for most cases:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">The help file opens to a specific topic, if the topic exists – </span>Used to link to a specific segment of a larger .chm file (such as a sub-heading). Will require an accompanying MS Help Parameter in order to work. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">The help file opens to the table of contents –</span> Will default to the table of contents for the .chm file. Default for module specific help. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">The help file opens to the index –</span> Will open to the index. <span style="font-style: italic;">Not intended for use with current JustEnough help files. </span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">The help file opens to the search page </span><span style="font-weight: bold;">–</span> Will open to the search page. <span style="font-style: italic;">Not intended for use with current JustEnough help files. </span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">The help file opens to the index entry for the first letter of a specified topic –</span> Will open to the index entry for the first letter of a specified topic. <span style="font-style: italic;">Not intended for use with current JustEnough help files. </span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">The help file opens to the topic with the specified index entry, if one exists;</span> <span style="font-weight: bold;">otherwise, the index entry closest to the specified keyword is displayed. </span><span style="font-weight: bold;">–</span> Gives multiple options for how the file is opened. <span style="font-style: italic;">Not intended for use with current JustEnough help files. </span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">MS Help Parameter – </span>If the help navigator type required a parameter (if using “the help file opens to a specific topic, if the topic exists”, a parameter will be required), this field will hold the parameter. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Other File Location –</span> If using “open file”, this will be the file path of the file. </li>
+        </ul>
+        <h2 >Practical Application</h2>
+        <p>Form most installations of JustEnough, the help files will be pre-loaded into the user interface by way of the database. During implementations, it may be necessary to import a JustEnough Help Configuration (.jehc) file, which will contain all of the appropriate file links.</p>
+        <h3 >Creating or Modifying Entries</h3>
+        <p>If desired, users may create new entries or modify entries to point to a new location. This can be useful for custom workflow screens which would benefit from specific help documentation. </p>
+        <p>
+            <img src="../../Resources/Images/Help/Help Overview.png" style="visibility: visible;mso-wrap-style: square;width: 448px;height: 36px;" />
+        </p>
+        <p>A new line may be added by clicking the “add” button. The highlighted row will be deleted by clicking the “delete” button. Any changes made to the grid will enable the “save” and “undo” buttons. </p>
+        <h4 >Creating Entries for MS Help Files (.chm)</h4>
+        <p>When building a help configuration entry to accompany a .chm help file which has already been added to the database using the Files Module, there are a few tricks and tips which will make it an easy process. </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Getting the Context Key </span><span style="font-weight: bold;">–</span> The context key is the module file name. As some of these can be quite verbose, an easy way to collect this syntax has been included. </li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph"><span style="font-weight: bold;">Navigate to the Module and click the help button or press “F1”.</span> The following window will pop up, informing the user that no help file currently exists. </li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 72pt;">
+            <img src="../../Resources/Images/Help/Help Overview_1.png" style="visibility: visible;mso-wrap-style: square;width: 467px;height: 184px;" />
+        </p>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="2">
+            <li class="ListParagraph"><span style="font-weight: bold;">Click “yes”.</span> The context key syntax will be copied to the clipboard.</li>
+            <li class="ListParagraph" style="font-weight: bold;">Return to the Help Module and paste in the context key.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li class="ListParagraph"><span style="font-weight: bold;">Getting the MS Help Parameter –</span> If using the “help file opens to a specific topic, if the topic exists” option to link to a certain sub-heading within a .chm file, the required parameter must be included.</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li class="ListParagraph" style="font-weight: bold;">Open the .chm file and browse to the desired sub-heading. </li>
+            <li class="ListParagraph" style="font-weight: bold;">Right click and choose properties. </li>
+            <li class="ListParagraph" style="font-weight: bold;">Under the “Address (URL)” section, the end of the entry will display the file name and link for the specific sub-heading. </li>
+        </ol>
+        <p class="ListParagraph" style="margin-left: 72pt;">
+            <img src="../../Resources/Images/Help/Help Overview_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 223px;" />
+        </p>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="4">
+            <li class="ListParagraph" style="font-weight: bold;">Copy this syntax and paste it into the MS Help Parameter.</li>
+        </ol>
+        <h3 >Importing and Exporting Help Configuration Files</h3>
+        <p>The most common way in which the JustEnough help will be configured is via a full import of a .jehc file. This will contain the links to the appropriate help file locations, <span style="text-decoration: underline;">however, it does not contain the help files themselves</span>. These must still be imported using the Files Module. </p>
+        <h2 >Technical Execution</h2>
+        <p>To load .chm help files into the database, the functionality included in the Files Module is the optimal tool (reference the help in the Files Module). </p>
+    </body>
+</html>

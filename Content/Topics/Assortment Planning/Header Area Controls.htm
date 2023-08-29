@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="26850" MadCap:lastWidth="1272">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 >Header Area Controls</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;color: #7030A0;font-size: 12pt;"><span style="color: #000000;">New button: </span></span><span style="color: #000000;font-size: 12pt;"><span style="color: #000000;">Launch</span>es the Add Assortment dialog</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls.png" style="visibility: visible;width: 483px;height: 511px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Name</span><span style="color: #000000;font-size: 12pt;">: User editable alpha-numeric; sets the name for the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Description (not required):</span><span style="color: #000000;font-size: 12pt;"> User editable alpha-numeric; user description for the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Calendar</span><span style="color: #000000;font-size: 12pt;">: User editable dropdown; sets the calendar for the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Period:</span><span style="color: #000000;font-size: 12pt;"> User editable dropdown; sets the lowest level period to be planned in the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product Hierarchy:</span><span style="color: #000000;font-size: 12pt;"> User editable dropdown; sets the product hierarchy for the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Level Contribution:</span><span style="color: #000000;font-size: 12pt;"> User editable dropdown; sets the product hierarchy level at which location % contribution tables will be calculated</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Hierarchy:</span><span style="color: #000000;font-size: 12pt;"> User editable dropdown; sets the location hierarchy for the assortment plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">cluster sets to be used within an assortment plan must be contained within a single leaf level of the assigned Site Hierarchy. For example, if you assign a hierarchy that goes down to Country level and contains the leaves North America, Canada, and UK</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, cluster sets within </span><span style="font-style: italic;color: #000000;font-size: 12pt;">the assortment plan cannot have sites that exist in more than one country.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Linked Financial Plan (not required):</span><span style="color: #000000;font-size: 12pt;"> User editable dropdown; sets a merchandise financial plan to which the assortment plan will be linked</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Default Currency:</span><span style="color: #000000;font-size: 12pt;"> User editable dropdown; sets the base currency to be used for all revenue metrics in the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Home Site: </span><span style="color: #000000;font-size: 12pt;">User editable single-select tree dropdown; selects a site to use for determining the home currency VAT % to apply when calculating AUT/AUR within the assortment plan; populates from sites within the selected site hierarchy that have an assigned currency matching the selected Default Currency</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">as VAT rates can fluctuate throughout the planning season, we’ve chosen to link this value to a site rather than using an explicit rate so that the Home VAT % will change dynamically as needed</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">to accommodate cases where the site chosen as the Home Site closes or becomes otherwise inactive, this parameter will remain editable even after the user begins making changes within the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">the system policy </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Allow DCs as Home Site</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, which can be accessed via </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Assortment</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, determines whether or not sites of type DC will appear for selection as the Home Site; this is to accommodate scenarios where planning occurs in a currency and/or country where there are no non-DC sites present</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;font-size: 12pt;">changing the home site in an existing plan will initiate a recalculation of all VAT dependent metrics within, such as AUT/AUR, etc.</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important: </span><span style="font-style: italic;font-size: 12pt;">the site selected for the Home Site should mirror the currency and VAT % you will use as a basis for your planning activities</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Sales Types: </span><span style="color: #000000;font-size: 12pt;">User editable multi-select dropdown</span><span style="color: #000000;font-size: 12pt;">; displays/sets the sales types used i</span><span style="color: #000000;font-size: 12pt;">n the location % contribution calculations for the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Replen AUT Price Type: </span><span style="color: #000000;font-size: 12pt;">User editable dropdown; displays/sets the price type from which AUT will be derived for placeholders of Replen Status</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Replen AUR Price Type:</span> <span style="color: #000000;font-size: 12pt;">User editable dropdown; displays/sets the price type from which AUR will be derived for placeholders of Replen Status</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Replen AUC Cost Type:</span> <span style="color: #000000;font-size: 12pt;">User editable dropdown; displays/sets the cost type from which AUC will be derived for placeholders of Replen Status</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Period</span> <span style="font-weight: bold;color: #000000;font-size: 12pt;">Horizon:</span><span style="color: #000000;font-size: 12pt;"> User editable integer; sets the rolling number of weeks into the future that the assortment plan will extend</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Created By</span><span style="color: #000000;font-size: 12pt;">: Non-editable alpha-numeric; name of the user who created the assortment plan </span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Created Date:</span><span style="color: #000000;font-size: 12pt;"> Non-editable date; date the assortment plan was created on</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Last Initialized: </span><span style="color: #000000;font-size: 12pt;">Non-editable date; date the Seed process was last completed for the assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="color: #000000;font-size: 12pt;">Closes the Add Assortment dialog without saving the new plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Save and Close:</span> <span style="color: #000000;font-size: 12pt;">Once all required parameters are set, saves the assortment plan and closes the dialog</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-top: 5pt;margin-bottom: 5pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error:</span> <span style="color: #000000;font-size: 12pt;">Clicking before required parameters are set will trigger the following error dialog:</span></p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_1.png" style="visibility: visible;width: 507px;height: 196px;" alt="https://lh3.googleusercontent.com/lZhSQ7MguMR6nrAO3DeknPDgT6NPec-s9CUAa4YUYXz2nBJTj9ltWnISYNch__HStMks2FyoBHrBTFtHkHweHWmeaFUUNIDjH-byeDEJDZVE18tb8pxtSnXcOx9H1Udph2pFfZ0Q" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-top: 5pt;margin-bottom: 5pt;">
+                <p><span style="font-weight: bold; font-size: 12pt; color: #000000;">Edit button</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">L</span><span style="color: #000000;font-size: 12pt;">aunches the Update Assortment dialog for the selected assortment plan</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_2.png" style="visibility: visible;width: 468px;height: 495px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Note that most of the plan parameters are now locked</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">User Access tab:</span> <span style="color: #000000;font-size: 12pt;">Edit user and role permissions for the assortment plan in the same manner as described in the </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">User Access button</span><span style="color: #000000;font-size: 12pt;"> section below</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Delete button: </span><span style="color: #000000;font-size: 12pt;">Deletes the selected assortment plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-top: 5pt;margin-bottom: 5pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning:</span> <span style="color: #000000;font-size: 12pt;">On click, user is prompted with the following dialog to confirm:</span></p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_3.png" style="visibility: visible;width: 281px;height: 166px;" alt="https://lh4.googleusercontent.com/a9WffvI6ktFOWI4oStmyb5uC4J2ori3wEEkqODfBUKT1UkrpI3iZ9ea0H-HaJPMlUUwp-SlozsCBLFKNFSE54Qy5oFHWXbuk-pYhJ6FKoHK1w9qYQLnWJE5ihKHWNwa9nGWnQC-n" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-top: 5pt;margin-bottom: 5pt;">
+                <p><span style="font-weight: bold;color: #000000;font-size: 12pt;">User Access button</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">L</span><span style="color: #000000;font-size: 12pt;">aunches the Manage Access dialog for the selected plan</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_4.png" style="visibility: visible;width: 523px;height: 431px;" alt="https://lh5.googleusercontent.com/CZdyQyIlnd_QQsRGDkQni9yjPBHtZt96Y51_AUb0iWh7MvNIgDMfS1IKAXMqC_2uX6mXhTKfaNItaUUToZYwZjA7TVNvAjQ1RWqatFhuPmXfB9exWxvPwgP1DPpu8YNbi595Yctb" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Product and Site Hierarchy access levels available are dependent on the corresponding parameter selections for the assortment plan (see Product Hierarchy and Site Hierarchy in the </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields</span><span style="color: #000000;font-size: 12pt;"> section below)</span>
+            </li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Access can be set at the User level or by Role, with roles being assigned as users are added to the system</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">The Select All and Select None buttons Product and Site Access in the upper portion of the dialog can be used to quickly apply or remove complete access to all available Product or Site hierarchy levels within the plan without having to interact with the bottom portion of the dialog</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Save:</span> <span style="color: #000000;font-size: 12pt;">Saves permissions changes made to the assortment plan without closing the dialog</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="color: #000000;font-size: 12pt;">Closes the Manage Access dialog without saving changes made to the assortment plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Save and Close:</span> <span style="color: #000000;font-size: 12pt;">Saves permissions changes made to the assortment plan and closes the Manage Access dialog</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Note: </span><span style="color: #000000;font-size: 12pt;">User permissions for assortment plans can also be edited via the User Access tab of the Update Assortment dialog (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Edit button</span><span style="color: #000000;font-size: 12pt;"> section above)</span><span style="color: #000000;font-size: 12pt;">. Additional permissions can also be setup in the user manager </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Refresh button</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">Refreshes the Manage Assortment Plans dialog</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshot button</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">Launches the Manage Snapshots dialog - this is used to set up plan snapshots which occur on a regular schedule as well as to create and delete snapshots manually</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Snapshots are, as their name implies, captures of the state the current plan at the time they are generated for the purpose of future comparisons as users work with the plan</li>
+            <li style="margin-top: 5pt;margin-bottom: 5pt;color: #000000;font-size: 12pt;">
+                <p>Snapshots can be used within the Sales Plan, Assortment Rollup, and Reconciliation views within Assortment planning; for details on the metrics included in snapshots, see Comparison metrics listed in under the respective sections for these supporting views</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_5.png" style="visibility: visible;width: 471px;height: 416px;" alt="https://lh6.googleusercontent.com/XYMkqkoOihI7W-bizh20xfFhesJsx0vkNwnR8o1RK-ZCc6EKlBThk0K58F3zl9WoJAmyIkuPxQeeqo7J_lwSxxOUNKszLfxu_62rON6vFGrX-1ypyIHfUu2UlJwFprH-aDHlicQr" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshot Templates:</span><span style="color: #000000;font-size: 12pt;"> list of all snapshot templates for the current plan, which the current user has access to view; used to create recurring snapshots of the current plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">New:</span><span style="color: #000000;font-size: 12pt;"> adds a new snapshot template line</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Delete:</span><span style="color: #000000;font-size: 12pt;"> deletes the currently selected snapshot template(s) from the plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields:</span><span style="color: #000000;font-size: 12pt;"> opens the fields Customization dialog; users can drag fields to/from the snapshot templates column header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Custom layouts can be saved/restored by right-clicking in the Snapshot Templates area and selecting Save Layout or Restore Layout, respectively</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Name:</span><span style="color: #000000;font-size: 12pt;"> user editable alpha numeric; name for the snapshot template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Description:</span><span style="color: #000000;font-size: 12pt;"> user editable alpha numeric; description for the snapshot template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Remove By Days:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; number of days from the generation of snapshots created by a template after which the system will automatically delete them; used for maintenance purposes</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshot Start Days:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; </span><span style="color: #000000;font-size: 12pt;">number of </span><span style="color: #000000;font-size: 12pt;">days backward</span> <span style="color: #000000;font-size: 12pt;">from the date a snapshot is generated</span><span style="color: #000000;font-size: 12pt;"> to be captured</span> </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshot End Days:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; </span><span style="color: #000000;font-size: 12pt;">number of </span><span style="color: #000000;font-size: 12pt;">days forward</span> <span style="color: #000000;font-size: 12pt;">from the date a snapshot is generated</span><span style="color: #000000;font-size: 12pt;"> to be captured</span> </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product Level:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; selection of a product hierarchy level to include in snapshots generated by the template; available choices based on the assigned product hierarchy for the current plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Level:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; selection of a site hierarchy level to include in snapshots generated by the template; available choices based on the assigned site hierarchy for the current plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Schedule:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets the frequency and timing of snapshots generated by the template; standard options are:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Weekly Mondays</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Monthly - first of month</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Every 15 Days</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">the exact timing produced by each choice is dependent on the calendar assigned to the current plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshot Access:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets user access to snapshots generated by the template; public, private, or shared</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshot Users:</span><span style="color: #000000;font-size: 12pt;"> user editable multi-select; if Snapshot Access is Shared, allows selection of specific users to have access to snapshots generated by the template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Template Access:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets user access to the template; public, private, or shared</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Template Users:</span><span style="color: #000000;font-size: 12pt;"> user editable multi-select; if Template Access is Shared, allows selection of specific users to have access to the template</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span><span style="color: #000000;font-size: 12pt;"> applies user changes made to snapshot templates and saves newly created templates since the last Apply</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span><span style="color: #000000;font-size: 12pt;"> cancels user changes made to snapshot templates and removes templates created since last Apply</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Snapshots:</span><span style="color: #000000;font-size: 12pt;"> list of all snapshots for the current plan, whether created manually or by a template, which the current user has access to view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">New:</span><span style="color: #000000;font-size: 12pt;"> adds a new snapshot line to the list</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Delete:</span><span style="color: #000000;font-size: 12pt;"> deletes the selected snapshot(s) from the plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields:</span><span style="color: #000000;font-size: 12pt;"> opens the fields Customization dialog; users can drag fields to/from the snapshots column header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Custom layouts can be saved/restored by right-clicking in the Snapshots area and selecting Save Layout or Restore Layout, respectively</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Start Date:</span> <span style="color: #000000;font-size: 12pt;">non-</span><span style="color: #000000;font-size: 12pt;">editable calendar control; sets the start date for the snapshot window of time</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Notes: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">must be set before End Date; field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">End date:</span> <span style="color: #000000;font-size: 12pt;">non-</span><span style="color: #000000;font-size: 12pt;">editable calendar control; sets the end date for the snapshot window of time</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Notes: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">must be set after Start Date; field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Remove By Date: </span><span style="color: #000000;font-size: 12pt;">user editable calendar control; sets the date on which the system will automatically delete the snapshot; used for maintenance purposes</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">must be set after the current date</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Product Level:</span> <span style="color: #000000;font-size: 12pt;">non-</span><span style="color: #000000;font-size: 12pt;">editable dropdown; selection of a product hierarchy level to include in the snapshot; available choices based on the assigned product hierarchy for the current plan</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Site Level:</span> <span style="color: #000000;font-size: 12pt;">non-</span><span style="color: #000000;font-size: 12pt;">editable dropdown; selection of a site hierarchy level to include in the snapshot; available choices based on the assigned site hierarchy for the current plan</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">field locks after snapshot is generated</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Access Level:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets user access to the snapshot; public, private, or shared</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Access Users:</span><span style="color: #000000;font-size: 12pt;"> user editable multi-select; if Snapshot Access is Shared, allows selection of specific users to have access to the snapshot</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Created From Template:</span><span style="color: #000000;font-size: 12pt;"> read-only alpha-numeric; name of the template the snapshot was generated from; NULL if manually generated</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Apply: </span><span style="color: #000000;font-size: 12pt;">applies user changes made to snapshots and generates newly created snapshots since the last Apply</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span><span style="color: #000000;font-size: 12pt;"> cancels user changes made to snapshots and removes snapshots created since last Apply</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Defaults button</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Launches the Manage Assortment Defaults dialog for the current plan</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Users can set default parameters for plan elements and functions used frequently within Assortment Planning so they don’t have to be manually set each time; default parameters can generally still be changed later by the user if needed</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Defaults set here are applied to placeholders assigned to the specified level of the product hierarchy at the time of generation, whether manually within Line Visualization or through the Smart Start function</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">changing defaults in this screen will not alter these settings for placeholders that already exist.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Defaults are set in an inheritance scheme, meaning defaults set at higher levels of the product hierarchy persist down through the levels beneath unless different defaults are set at those lower levels as exceptions</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Example: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">my hierarchy has a department called Men’s Tops, and beneath Men’s Tops exist the sub-departments Men’s Tees, Men’s Wovens, and Men’s Knits. I set a default at the Men’s Tops level then set a different default at the Men’s Knits level. Men’s Tees and Wovens inherit the same </span><span style="font-style: italic;color: #000000;font-size: 12pt;">default set at the Men’s Tops level, but Men’s Knits uses the default set at it’s own level.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;font-style: italic;color: #000000;font-size: 12pt;">All default settings are not required</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">
+                <p>Assortment Plan Defaults tab</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_6.png" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields:</span><span style="color: #000000;font-size: 12pt;"> opens the fields Customization dialog; users can drag fields to/from the Assortment Plan Defaults column header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Custom layouts can be saved/restored by right-clicking in the Snapshots area and selecting Save Layout or Restore Layout, respectively</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span><span style="color: #000000;font-size: 12pt;"> saves all default parameter changes made in the Assortment Plan Defaults tab since the last Apply to the database</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span><span style="color: #000000;font-size: 12pt;"> reverts all default parameters on the Assortment Plan Defaults tab to the values stored in the database without saving any changes</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Path Code:</span><span style="color: #000000;font-size: 12pt;"> read-only alpha-numeric; displays the code for the corresponding level of the product hierarchy assigned to the current plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Path Description: </span><span style="color: #000000;font-size: 12pt;">read-only alpha-numeric; displays the full description of the product hierarchy path corresponding to the Path Code of the product hierarchy assigned to the current plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Sets:</span><span style="color: #000000;font-size: 12pt;"> user editable multi-select; sets the default cluster sets assigned to new placeholders generated within the specified level of the product hierarchy. Also sets (along with Additional Allowed Cluster Sets) the cluster sets that will be available in the Cluster Sets parameter when the associated product level is chosen. </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Available choices are only cluster sets which have been snapshotted and passed validation for use within the current assortment plan</li>
+            <li style="margin-top: 5pt;margin-bottom: 5pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error:</span> <span style="color: #000000;font-size: 12pt;">If a user attempts to assign multiple cluster sets containing overlapping sites to a single level of the product hierarchy, the following message will display on Apply:</span></p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_7.png" style="visibility: visible;width: 486px;height: 181px;" alt="https://lh3.googleusercontent.com/h9ETl2hdR5-H28onqZrRtSeudNhKH4ZUmWJypY6cN7riQzidsc6eQALwmwyWyErdOQ9WgtxRsyre8CZDW_ESvE4SoqyljoLEwf5ZKryfEuITp997WCbxA0id2Kakb7xuVz0CGonD" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Additional Allowed Cluster Sets:</span><span style="color: #000000;font-size: 12pt;"> user editable multi-select; <span style="color: #000000;font-size: 12pt;">Sets (along with  Cluster Sets) the cluster sets that will be available in the Cluster Sets parameter when the associated product level is chosen. </span></span>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="color: #000000;">Cluster sets selected here are not automatically assigned to new placeholders.</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Available choices are only cluster sets which have been snapshotted and passed validation for use within the current assortment plan</li>
+            <li style="margin-top: 5pt;margin-bottom: 5pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error:</span><span style="color: #000000;font-size: 12pt;"> If a user attempts to assign multiple cluster sets containing overlapping sites to a single level of the product hierarchy, an error message will appear.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Minimum Presentation:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the minimum presentation stock in units per site for a given period within the current assortment plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this setting will persist across time for any periods for which Minimum Presentation has NOT been set in the Assortment Plan Defaults By Time tab, with values entered there acting as overrides to this value</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Seasonality Curve:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets the default seasonality curve applied to placeholder instances generated within the specified level of the product hierarchy</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">only </span><span style="font-style: italic;color: #000000;font-size: 12pt;">curves </span><span style="font-style: italic;color: #000000;font-size: 12pt;">of the Manual or Specified Conditions Using Enhanced </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Filter</span><span style="font-style: italic;color: #000000;font-size: 12pt;">ing</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> type</span><span style="font-style: italic;color: #000000;font-size: 12pt;">s</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">will be available for selection within </span><span style="font-style: italic;color: #000000;font-size: 12pt;"> Assortme</span><span style="font-style: italic;color: #000000;font-size: 12pt;">nt Planning</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Curve Mode:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets the mode of the seasonality curve being applied to a placeholder instance; Static or Dynamic</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Static:</span><span style="color: #000000;font-size: 12pt;"> the selected curve is applied exactly as it exists at the time of application and the placeholder’s curve will not change if changes are made to the curve, whether manually in the Curves module or through dynamic recalculation. </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Think of this as making a copy of the applied curve</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Dynamic:</span><span style="color: #000000;font-size: 12pt;"> changes made to the curve will be pushed down to the placeholder via automated system processes, and the dependent sales plans will recalculate when those changes are pushed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Lead Time Days:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the number of days prior to a given receipt date that an order must be placed </span><span style="color: #000000;font-size: 12pt;">in order to arrive on time</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Used to calculate Next Order Date in the Main Planning and Receipt Plan views of Line Visualization and Due Date in the Assortment Upcoming Commitments Dashboard for placeholders </span><span style="color: #000000;font-size: 12pt;">belonging to the corresponding product hierarchy level </span><span style="color: #000000;font-size: 12pt;">for which commitment orders have not been created and which either don’t have variants assigned or their assigned variants lack supplier association</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Periods of Supply:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the periods of supply (period type as defined by the current assortment plan) for placeholder instances as a minimum stock constraint for receipt engine outputs within the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Actual by period constraint is defined as the sales planned for this many periods forward from a given period</li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this setting interacts with the system policy: Assortment Engine Lead Time (Maintain &gt; Policies &gt; Engine: Commitments) </span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">Assortment Engine Lead Time is set to 7 days, Periods of Supply is set to 2, and I am planning a receipt to arrive in Wk 1. For this constraint to be considered fulfilled for Wk 1, I must end the period with at least 60 units of inventory on hand to cover weeks 2 and 3. The lead time of 7 days stipulates that stock being received in given week cannot be used to cover the sales planned in that week, thus Periods of Supply begins calculating need at Wk 2 rather than Wk 1</span>
+                </p>
+                <table align="center" class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Period</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 0</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 1</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 2</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 3</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Sales Units</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">0</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">20</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">30</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">30</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Receipt Units</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">0</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">50</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">0</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">0</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">EOP Units</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">20</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">6</span><span style="color: #000000;font-size: 12pt;">0</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">3</span><span style="color: #000000;font-size: 12pt;">0</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">0</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Rec Var Min</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Receipt Variant Minimum)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the minimum total order quantity (including all cluster level orders) for a variant in a given period; used in the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a Rec Var Min of 1000, this constraint is considered NOT met in Wk 0 but met in Wk 3 in the table below:</span></p>
+                <table align="center" class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Period</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 0</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 1</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 2</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 3</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">A</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">200</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">B</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">C</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The following message will display if this constraint is not met when attempting to Create Commitments within the Receipt Plan supporting view:</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_8.png" style="visibility: visible;width: 480px;height: 226px;" alt="https://lh5.googleusercontent.com/qXkqaD1NifEqHrwdIxk0RqhuFTT4R5kxE4-uVoGH9t3fLrQqI52paeWljKhrgLB-5njDIc9BUY3sCI0uKckgtQT2egaazZwxe-vAFHuSCYqlah9MfKPEUYL7Tg9UoAcHCBCIyVBW" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Yes overrides the constraint and creates the commitment orders in the current view; No cancels commitment order creation</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Rec Size Min</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Receipt Size Minimum)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the minimum total order quantity (including all cluster level orders) for a variant in a given period as a function of the number of sizes present in the Size Curve attached to the variant; used in the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a Rec Size Min of 200 and a Size Curve of S, M, L, XL, XXL assigned to the variant being ordered, this constraint is considered NOT met in Wk 0 but met in Wk 3 in the table below:</span></p>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Period</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 0</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 1</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 2</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="margin-bottom: 0pt;font-weight: bold;color: #000000;font-size: 12pt;">Wk 3</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">A</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">200</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">B</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">C</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                                <p style="margin-bottom: 0pt;">&#160;</p>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                                <p style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;font-size: 12pt;">Warning: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The same message as shown for Rec Var Min will display if this constraint is not met when attempting to Create Commitments within the Receipt Plan supporting view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Var Order Multiple</span><span style="color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer;</span><span style="color: #000000;font-size: 12pt;"> sets the number by which receipt quantities generated by the Recalculate Receipts functions in the Line Visualization main and receipt plan views will be evenly divisible by; persists in orders generated from assortment plans within Order Manager (see </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Order Manager – Break By Size </span><span style="color: #000000;font-size: 12pt;">and</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> Prepack</span> <span style="color: #000000;font-size: 12pt;">sections below for details)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">This </span><span style="font-style: italic;color: #000000;font-size: 12pt;">constraint ca</span><span style="font-style: italic;color: #000000;font-size: 12pt;">n also be set in the Placeholder Constraints area of Receipt Plan view</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">The system will always round up to meet Order Multiple constraints; this ensures that the base sales plan on which the receipt plan is built will always be satisfied</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a sales plan of </span><span style="font-style: italic;color: #000000;font-size: 12pt;">2</span><span style="font-style: italic;color: #000000;font-size: 12pt;">41 units for weeks 1-4, and an Order Multiple of 50 set (this is common in businesses where </span><span style="font-style: italic;color: #000000;font-size: 12pt;">very small parts are sold individually but it is not practical to ship them that way); the system will yield a receipt quantity of 250 units – the lowest multiple of 50 that will satisfy the entire sales plan</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Size Curve:</span><span style="color: #000000;font-size: 12pt;"> user editable dropdown; sets the size curve assigned to placeholders generated within the specified level of the product hierarchy for the current plan; works in conjunction with Rec Size Min in the Receipt Plan supporting view of Line Visualization; passed to Order Manager for use in the Break by Size stage of the commitment process</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">all available size curves populate for selection in this field.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Periods Before Phase In: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the default number of periods prior to Phase In date that initial receipt quantities for placeholder instances should be scheduled to be received; used in the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">I have a placeholder instance with a Phase In date of wk 4 and a Periods Before Phase In of 2 - my default calculated initial receipt for the placeholder instance will be in wk 2</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Flow Cadence:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the default number of periods between receipt dates calculated by the receipt planning engine; used in the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">I have a placeholder instance with a Phase In date of wk 3, a Periods Before Phase In of 2, and a Flow Cadence of 4 - if I have 3 receipts, they will occur in wk 1, wk 7, and wk 11. This is because the purpose of Periods Before Phase In is to ensure product can be in stores by the Phase In date, thus the first flow date is considered to be the Phase In date for the purposes of receipt engine calculation</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Min Stk/Sales</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> (Minimum Stock to Sales)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the minimum stock to sales ratio for placeholder instances as a minimum stock constraint for receipt engine outputs within the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Actual by period constraint is defined as the sales planned for a given period multiplied by the constraint value (period sales of 10 * Min Stk/Sls of 4 = EOP stock requirement of 40)</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Shrink % of Sales:</span><span style="color: #000000;font-size: 12pt;"> user editable positive percentage to 2 decimal places (1.52%); sets the anticipated shrink units per period as a percentage of planned period sales units for placeholder instances as a minimum stock constraint for receipt engine outputs within the Receipt Plan supporting view of Line Visualization</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">if I have a period with planned sales of 500</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> units</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> and a Shrink % of Sales of 2.00%, I must have an EOP units of at least 10 for this constraint to be satisfied for the period</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Maximum Pack % Total:</span><span style="color: #000000;font-size: 12pt;"> user editable positive percentage to 2 decimal places (60.00%); defines the maximum % of units in a commitment order </span><span style="color: #000000;font-size: 12pt;">of the</span><span style="color: #000000;font-size: 12pt;"> units within prepacks can represent as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">when set to less than 100%, units not placed in prepacks will be fulfilled as single units</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">I have two placeholder instance orders for wk 4 for 500 units each; I choose to prepack them together and have a Maximum Pack % Total of 60.00% - the maximum number of units existing in prepacks for this order is 600, however, my prepack output could be less than 600 if the prepack configurations being used don’t evenly roll up to 600 units based on the need calculation by site</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Pack Tolerance:</span><span style="color: #000000;font-size: 12pt;"> user editable positive percentage to 2 decimal places (5.00%); defines the number of units over the total order quantity the engine may suggest in an attempt to fulfill the Maximum Pack % Total, expressed as a percentage of the total order quantity; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="color: #000000;font-size: 12pt;">I have a total order quantity of 1</span><span style="color: #000000;font-size: 12pt;">,</span><span style="color: #000000;font-size: 12pt;">000 units to be prepacked, a Maximum Pack % Total of 100%, and a Pack Tolerance of 1.00% - the engine may suggest an adjustment of the total order quantity of up to 1010 units to allow for 100% of the original order quantity to be fulfilled by units in prepacks.</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="color: #000000;font-size: 12pt;">when calculating prepack optimization against a Pack Tolerance, the engine will prioritize stores with greater need first</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Maximum Packs Per Location:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the maximum number of prepacks of any configuration that can be allocated to a single site within the prepack optimization calculation to fulfill the </span><span style="color: #000000;font-size: 12pt;">anticipated sales for that site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #0070C0;font-size: 12pt;">Example:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">the prepack optimization engine determines that a site requires 50 units from an order being prepacked, Maximum Packs Per Location is set to 5, and the selected prepack configurations all contain 9 units - ignoring site need by size for this example, the engine can only use 5 prepacks, containing 45 units total, as the prepack component of order fulfillment for the site and must assume the remaining 5 units will be fulfilled as single units.</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Underage Weight:</span><span style="color: #000000;font-size: 12pt;"> user editable positive decimal to 2 places (1.25); sets the relative preference for underages when calculating optimal unit allocation by site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">used in conjunction with Overage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (ie. all 3 are summed then divided by the number of constraints that were not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Overage Weight:</span><span style="color: #000000;font-size: 12pt;"> user editable positive decimal to 2 places (1.25); sets the relative preference for overages when calculating optimal unit allocation by site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">used in conjunction with Underage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (ie. all 3 are summed then divided by the number of constraints that were not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Maximum Overage: </span><span style="color: #000000;font-size: 12pt;">user editable positive integer; sets the number of units per site the prepack optimization engine may overallocate during calculation to reach an acceptable solution; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Maximum Overage %:</span><span style="color: #000000;font-size: 12pt;"> user editable percentage to 2 decimals (1.25%); sets the percent of total need in units per site the prepack optimization engine may overallocate during calculation to reach an acceptable solution; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Pack Weighting:</span><span style="color: #000000;font-size: 12pt;"> user editable positive decimal to 2 places (1.25); sets the relative preference for using the fewest prepack configurations possible when calculating optimal unit allocation by site; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">used in conjunction with Underage Weight and Overage Weight and calculated as a % to total of the 3 parameters (ie. all 3 are summed then divided by the number of constraints that were </span><span style="font-style: italic;color: #000000;font-size: 12pt;">not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Minimum Units Per Pack:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the minimum number of units the prepack optimization engine may suggest in single prepack configurations; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="color: #000000;font-size: 12pt;">only valid when </span><span style="color: #000000;font-size: 12pt;">Optimize Prepack is checked for a given prepack group</span><span style="color: #000000;font-size: 12pt;">, otherwise user selected prepack configurations are used</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Maximum Units Per Pack:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the maximum number of units the prepack optimization engine may suggest in single prepack configurations; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="color: #000000;font-size: 12pt;">only valid when </span><span style="color: #000000;font-size: 12pt;">Optimize Prepack is checked for a given prepack group</span><span style="color: #000000;font-size: 12pt;">, otherwise user selected prepack configurations are used</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Num</span><span style="font-weight: bold;color: #000000;font-size: 12pt;"> Pack Configs:</span><span style="color: #000000;font-size: 12pt;"> user editable positive integer; sets the maximum number of configurations the prepack optimization engine may suggest when determining optimal fulfillment of need within an order; used as a constraint for the prepack optimization engine within Order Manager</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="color: #000000;font-size: 12pt;">only valid when </span><span style="color: #000000;font-size: 12pt;">Optimize Prepack is checked for a given prepack group</span><span style="color: #000000;font-size: 12pt;">, otherwise user selected prepack configurations are used</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;font-weight: bold;color: #000000;">
+                <p>Assortment Plan Defaults By Time tab</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_9.png" style="visibility: visible;width: 635px;height: 423px;" alt="https://lh3.googleusercontent.com/q-Yr8M0kgOuex6m6I7lnFyCnEYRfplF3vWuzQBIbH8b8d6Ge_2yqDV-mMlgRTi5hPS9U43JyVl4op65P43JQP5oRGb65JVOHybMd8jQ53YmJ3z73cF_jQI1SnbC5K4N_k9Jb2LUU" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Purpose:</span><span style="color: #000000;font-size: 12pt;"> this tab is used to make adjustments to Minimum Presentation defaults across time by product hierarchy level to account for seasonal fluctuations in store inventory needs; values entered in this tab will override the Minimum Presentation value set in the Assortment Plan Defaults tab for the corresponding level of the product hierarchy for the periods in which overrides are made</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Pivot Grid Functionality:</span><span style="color: #000000;font-size: 12pt;"> this tab features JustEnough standard Pivot Grid functionality, allowing the user to manipulate the field layout by dragging and dropping fields in the Filter, Row, Column, and Data areas of the grid</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Aggregation: time based fields (Year, Half, Quarter, Month, Week) can be removed from the grid to allow entry of Minimum Presentation for larger timeframes at once</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">when viewing Minimum Presentation at aggregate time levels, the system will display the average across all periods beneath the level being viewed</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">When entering Minimum Presentation at aggregate time levels, the system will push down the entered value to all periods beneath</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Window of Time:</span><span style="color: #000000;font-size: 12pt;"> user editable tree multi-select; sets the time range to display in the Assortment Plan Defaults By Time tab</span>
+            </li>
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;color: #000000;font-size: 12pt;">Graph: </span><span style="color: #000000;font-size: 12pt;">activates the standard JE Pivot Grid graph, which graphs any data series selected by the user</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_10.png" style="visibility: visible;width: 635px;height: 423px;" alt="https://lh3.googleusercontent.com/RIkmwQRqe3C-lHvcaFnXOa4VTohF7a5tcn78K403a0KlxHQiiE-1YeU6Kd4zoFvst7YtGt4cPQx7R0rH23oAtQimIKkz_zq9zKXLnQbewKW9yNUBq0eGPQBAZOiYloAy8N3W1B1u" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields:</span><span style="color: #000000;font-size: 12pt;"> launches the Pivot Grid Fields Customization dialog; </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Simple tab: here, fields can be dragged and dropped between Filter, Row, Column, and Data areas of the Pivot Grid to manipulate the current layout</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">dragging fields to the None area hides them in the layout</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_11.png" style="visibility: visible;width: 549px;height: 414px;" alt="https://lh3.googleusercontent.com/gJkRyeySCY_FDq0Qu0fAb6_JKGgmiERi4zzIjliYU6EfkshGjuL7xv3zOS4PPFCMScVxGRMo6b8HhPicWZ1xwnxPCNiz-qVoObRNsdDyVlePpQVtEmkEzDF6azxBh9rtET_krbx4" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;color: #000000;font-size: 12pt;">Advanced tab:</span><span style="color: #000000;font-size: 12pt;"> manipulate the layout here by selecting the desired location of each field from the Pivot Area dropdowns next to each; within each area, an Index can be specified to define the order in which the fields display</span>
+                </p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_12.png" style="visibility: visible;width: 543px;height: 265px;" alt="https://lh4.googleusercontent.com/cCUAQR6YeG21WZty5vwUSxtkZiK8-KokE6P3c4aiRu16RMhkZTJTuxUYL0VHfzWIGJPYmjl7hT8CsKxENZDILwCdBGep0nwz5QAI-VOxDb5izSmagE0B0LLQunelDaWnrB7-9nJ2" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Search bars: </span><span style="color: #000000;font-size: 12pt;">each tab contains a search bar in which you can enter text to more quickly locate the fields you wish to </span><span style="color: #000000;font-size: 12pt;">manipulate; the fields shown in the view will be limited to only those containing the text you have entered</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Custom </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">L</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">ayouts: </span><span style="color: #000000;font-size: 12pt;">changes made to the Assortment Plan Defaults By Time layout can be saved for future use</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">
+                <p>After making changes and clicking OK in the Fields Customization dialog, right click anywhere in the Pivot Grid and choose Save Layout</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_13.png" style="visibility: visible;width: 541px;height: 274px;" alt="https://lh4.googleusercontent.com/DwdTm5pDqaFlck_38VcXJljva2omHXTrXpJx1YiUQvD2fWKeTr65JTFKJJ__4pT0XN7sonQnoBZYYdwe6Mdq-BaLzR-Gww8jcdQoBu-JztDsMlnLTDQoDLIu8boYF4nkdF4d9Ify" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 216pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Name:</span><span style="color: #000000;font-size: 12pt;"> Enter a name for a new layout, or select an existing layout using the dropdown menu</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Description:</span><span style="color: #000000;font-size: 12pt;"> Enter a description for the layout; not required</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Default:</span><span style="color: #000000;font-size: 12pt;"> check this to make the layout you are saving the default layout that loads when you launch the Manage Assortment Defaults dialog</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Private/Public/Shared:</span><span style="color: #000000;font-size: 12pt;"> set whether the current layout is only available for the current user, for all users, or for specified users only; when selecting Shared, click the ellipsis (...) button to select the desired users</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">OK:</span><span style="color: #000000;font-size: 12pt;"> saves the current layout with the settings you have specified</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span><span style="color: #000000;font-size: 12pt;"> cancels saving the layout without applying any changes to Description, Default, or Privacy settings</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 180pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">Restore a custom layout by right-clicking anywhere in the Pivot Grid, choosing Restore Layout, and selecting the layout to restore</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;">
+                <p><span style="font-weight: bold;color: #000000;font-size: 12pt;">Seed button:</span> <span style="color: #000000;font-size: 12pt;">Launches the Seed Placeholders dialog</span></p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Header Area Controls_14.png" style="visibility: visible;width: 634px;height: 408px;" />
+                </p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Purpose: </span><span style="color: #000000;font-size: 12pt;">because of the way placeholder entities are used within Assortment Planning, a necessary step in creating new plans is generating equivalent placeholder entities for existing items for which you want to utilize historical selling information</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">ideally, this process will only be done one time per plan, as all new items created in Assortment Planning are generated as placeholder entities</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, however, the process can be re-run to pick up new items that weren’t present at the time of seeding without adversely affecting anything that has already been seeded – the process simply looks for variants that don’t have placeholder entities created and creates them</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Seeding and Attribute Inheritance: </span><span style="color: #000000;font-size: 12pt;">when seeding placeholders from historical variants, any attributes attached to those variants will also be attached to the resultant placeholders, provided the following are true:</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">A valid attribute set is associated with the product level to which the variants belong; association can be by directly choosing an attribute set for that level of the product hierarchy or through inheritance of a set from a level above</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">That attribute set is assigned to both the Variant and Variant Placeholder entity types</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">That attribute set includes all attribute families containing the attribute values associated with the variants placeholders are being created for</li>
+            <li style="margin-bottom: 0pt;color: #000000;font-size: 12pt;">All applicable attribute families are assigned to both the Variant and Variant Placeholder entity types</li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">All attribute values associated with the variants placeholders are being created for are marked as </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Allowed</span><span style="color: #000000;font-size: 12pt;"> for the corresponding attribute set</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">See </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Attribute Management Standard Documentation</span><span style="color: #000000;font-size: 12pt;"> for details on creating and assigning attribute sets, families, and values</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Start Date: </span><span style="color: #000000;font-size: 12pt;">user editable date picker; sets the historical date you want the system to begin at when generating placeholders for existing items</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this should be set to the farthest date back for which you want to utilize historical sales in Assortment Planning – a general best practice is at least 2 years, as most businesses typically view data this far back as being relevant to current plans</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Important:</span> <span style="font-style: italic;color: #000000;font-size: 12pt;">Start date cannot fall before the date designated by the current date minus the number of days specified in the </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Assortment days history to maintain</span><span style="font-style: italic;color: #000000;font-size: 12pt;"> system policy, as noted above in </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Prerequisites &gt; Review/set foundational system policies</span><span style="font-style: italic;color: #000000;font-size: 12pt;">; this policy can be accessed via </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Assortment</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Execute:</span> <span style="color: #000000;font-size: 12pt;">click after selecting a Start Date to populate the </span><span style="color: #000000;font-size: 12pt;">Assortment Seed Placeholders section below</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Selected: </span><span style="color: #000000;font-size: 12pt;">user editable checkbox; selects the cluster sets in which the historical items you wish to generate placeholders for were present</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Use Default Cluster Set(s) per product level: </span><span style="color: #000000;font-size: 12pt;">this option appears at the top of the cluster set list and has been included to allow users to easily seed historical placeholders for the default cluster sets assigned by product level. </span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error</span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">For this option to work properly, at least one default cluster set must be assigned, either directly or through inheritance from a level above, for all product levels present in the plan being seeded</span><span style="font-style: italic;color: #000000;font-size: 12pt;">; an error will be raised indicating the need to do this if it has not been done at the time seeding is initiated</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;">Error</span><span style="font-weight: bold;font-style: italic;font-size: 12pt;">:</span> <span style="font-style: italic;font-size: 12pt;">this option cannot be used in tandem with the selection of other cluster sets within the list; if you attempt to do so, an error will be raised</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">because of the dynamic nature of cluster configurations, all that is needed here is to select the cluster sets that contain the sites where the items sold historically – sales assignments are made at site level and returned based on the active cluster set snapshot for a given period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cluster Set:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha numeric; description for each validated cluster set within the current plan</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Overlapping Cluster Sets:</span> <span style="color: #000000;font-size: 12pt;">non-editable alpha numeric; description for any validated cluster sets that overlap with a given cluster set – meaning it contains some or all of the same sites as another set</span></li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">while it is possible to have overlapping cluster sets within a single plan, it is not possible to assort placeholder items to multiple overlapping cluster sets – you must choose one cluster set per group of sites </span><span style="font-style: italic;color: #000000;font-size: 12pt;">in which to plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Current Placeholder Count:</span> <span style="color: #000000;font-size: 12pt;">non-editable integer; count of all placeholder items currently generated that registered sales in a given cluster set from the Start Date forward</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Fields:</span><span style="color: #000000;font-size: 12pt;"> opens the fields Customization dialog; users can drag fields to/from the Assortment </span><span style="color: #000000;font-size: 12pt;">Seed Placeholders</span><span style="color: #000000;font-size: 12pt;"> column header area and this dialog to customize the view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">Custom layouts can be saved/restored by right-clicking in the Assortment </span><span style="color: #000000;font-size: 12pt;">Seed Placeholders</span><span style="color: #000000;font-size: 12pt;"> area and selecting Save Layout or Restore Layout, respectively</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Apply:</span> <span style="color: #000000;font-size: 12pt;">initiates the placeholder generation procedure for the selected cluster sets from the Start Date forward</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel:</span> <span style="color: #000000;font-size: 12pt;">unchecks</span> <span style="color: #000000;font-size: 12pt;">selected cluster sets</span> <span style="color: #000000;font-size: 12pt;">in the </span><span style="color: #000000;font-size: 12pt;">Assortment </span><span style="color: #000000;font-size: 12pt;">Seed Placeholders</span><span style="color: #000000;font-size: 12pt;"> section</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Cancel button</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">Closes the Manage Assortment Plans dialog without opening an assortment plan</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">OK button</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">Opens the selected assortment plan and launches the Smart Start screen</span>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

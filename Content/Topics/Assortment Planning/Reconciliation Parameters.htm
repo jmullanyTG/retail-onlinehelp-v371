@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="1122" MadCap:lastWidth="2081">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Reconciliation Parameters</h1>
+        <p>The Reconciliation Report is controlled by eight parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Reconciliation Parameters.png" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Product Hierarchy</span>:<span style="color: #000000;"> user editable tree multi-select ; selects the levels of the common product hierarchy between Comparison Plan 1 and Comparison Plan 2</span> <span style="color: #000000;">at which to compare the reconciliation metrics</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Site Hierarchy</span>:<span style="font-weight: bold;color: #000000;"> </span><span style="color: #000000;">user editable dropdown; selects the level of the common site hierarchy between Comparison Plan 1 and Comparison Plan 2</span> <span style="color: #000000;">at which to compare the reconciliation metrics</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;">Cluster Sets</span>: <span style="color: #000000;">user editable multi-select dropdown; selects the cluster sets to include in the current view</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;color: #000000;">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related, in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy; because of this, the Cluster Set dropdown will populate with the cluster sets contained beneath the selected Site Hierarchy levels</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Window of Time: </span><span style="color: #000000;">user editable tree multi-select; selects the window of time to </span><span style="color: #000000;">compare for Comparison Plan 1 and Comparison Plan 2</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #F79646;">Warning:</span> <span style="font-style: italic;">the selected timeframe must be a contiguous range of periods; if it is not, the system will still use the window of time defined by the first and last selected periods</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Comparison Type 1</span>:<span style="font-weight: bold;color: #000000;">&#160;&#160;</span><span style="color: #000000;">user editable dropdown; selects</span> <span style="color: #000000;">the plan type of Comparison Plan 1 – either Assortment Plan or Merchandise Financial Plan</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:&#160; </span><span style="font-style: italic;color: #000000;">this selection will determine how the variance measures are calculated in the report.&#160; For example, if the assortment plan is selected as Comparison type 1 and the financial plan is selected as Comparison type 2, the assortment plan will be the first variable in the calculation that determines the variance.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Comparison Plan 1:</span> <span style="color: #000000;">user editable d</span><span style="color: #000000;">ropdown</span><span style="color: #000000;">; selects</span> <span style="color: #000000;">the first plan or snapshot to compare in the view</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Comparison Type 2:&#160;</span><span style="color: #000000;">user editable d</span><span style="color: #000000;">ropdown</span><span style="color: #000000;">; selects</span> <span style="color: #000000;">the plan </span><span style="color: #000000;">type </span><span style="color: #000000;">of Comparison Plan 2 – either </span><span style="color: #000000;">Assortment Plan or Merchandise Financial Plan</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;">Note:&#160; </span><span style="font-style: italic;color: #000000;">this selection will determine how the variance measures are calculated in the report.&#160; For example, if the assortment plan is selected as Comparison type 2 and the financial plan is selected as Comparison type 1, the assortment plan will be the second variable in the calculation that determines the variance.</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;">Comparison Plan 2:&#160; </span><span style="color: #000000;">user editable d</span><span style="color: #000000;">ropdown</span><span style="color: #000000;">; selects</span> <span style="color: #000000;">the first plan or snapshot to compare in the view</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Display Currency: </span><span style="color: #000000;font-size: 12pt;">user editable dropdown; sets the currency to display for all revenue based fields in the view; defaults to the Home Currency for the active Assortment Plan</span>
+            </li>
+        </ul>
+    </body>
+</html>

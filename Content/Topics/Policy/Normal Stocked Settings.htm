@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Normal Stocked Settings</h1>
+        <p>The following settings apply to inventories set to normal as an order policy type.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="BodyText" style="list-style-type: disc;"><span style="font-weight: bold;">Review Period Days – </span>The review period is how often inventory will be <span style="text-decoration: underline;">reviewed</span> for re-ordering. The more frequently inventory is reviewed, the higher service levels will be, since corrective action can be taken on unusual demands or when lead times are inaccurate.</li>
+            <li class="BodyText" style="list-style-type: disc;"><span style="font-weight: bold;">Replenishment Cycle Days –</span> The replenishment cycle is how often inventory must be <span style="text-decoration: underline;">ordered</span><span style="text-decoration: underline;">. </span>The replenishment cycle is always a factor of RP and must be more or equal. In order to reduce stockholding, replenishment cycles need to be kept as low as possible. However, constraints that typically prohibit very low replenishment cycles are: </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="BodyText" style="list-style-type: circle;"><span style="font-weight: bold;">Supplier Constraints – </span>The supplier may not be able to deliver as frequently or may require a minimum amount of inventory to be ordered before making a delivery.</li>
+            <li class="BodyText" style="list-style-type: circle;"><span style="font-weight: bold;">Administration Cost –</span> The cost associated with processing an order might make placing small orders economically unfeasible.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Back Order Ratio –</span> The percentage of lost sales which are expected to result in a customer returning to purchase the item.</li>
+            <li class="BodyText" style="list-style-type: disc;"><span style="font-weight: bold;">Safety Stock Days -</span> The safety stock for an item is the minimum planned inventory level. Safety stock is insurance stock and is held for primarily two reasons: to compensate for variances in supplier lead times, or to compensate for variances in forecasts. Keeping safety stock ensures that, in spite of lead time and forecast variances, stock will still be available to meet demand in proportion to the service level specified. Safety stock days refers to the period of time over which the demand may be met with the current stock level. Safety stock typically accounts for 40-80% of total inventory holding. Since it is such a significant portion, it makes sense to attempt to drop the safety stock as low as possible to reduce the overall investment in inventory. To do this appropriately, forecasts and supplier lead times need to be accurate.</li>
+            <li class="BodyText" style="list-style-type: disc;"><span style="font-weight: bold;">Target Service Level - </span>Safety stock may be set as safety stock days, or service level. A high service level will require a higher volume of units in the safety stock (and higher stockholding costs). Safety stock is held to ensure customer service levels. JustEnough service levels may be specified, which are then converted to safety stock values. It stands to reason that the higher service levels translate to higher safety stocks. However, when approaching 100%, increased service levels are only achieved through a substantial increase in safety stock investment to account for all lead-time and forecasting variances. When evaluated over time, the cost of carrying this additional safety stock can out-weigh the profit made by these additional sales. JustEnough has the option to set safety stock based on what is most profitable and this takes this balance of profit margins, forecasted demand and carrying cost into account.</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Minimum Safety Stock Units –</span> Users may choose to set a minimum safety stock in units. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Return Rate –</span> The percentage of products which are expected to be returned to the store. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Days Before Return –</span> The expected number of days between the sale of a product and the return of the product to the store. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Reuse Rate –</span> The percentage of products which have been returned and may be considered as saleable stock again. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Days Before Reuse –</span> The expected number of days between the return date of a product and it being considered as regular saleable stock again. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Order Multiple –</span> The multiple of units in which the stock must be ordered. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Order Multiple Rounding –</span> The rounding rules used to determine how order quantities which do not precisely align with the order multiple should be adjusted. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Up –</span> Rounds up to the nearest order multiple.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Down –</span> Rounds down to the nearest order multiple.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Nearest –</span> Rounds to the nearest order multiple (round natural). </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Down Protected -</span> Rounds down unless the action of rounding will create a projected lost sale, in which case it will round up. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Nearest Protected –</span> Rounds nearest (natural) unless the action of rounding will create a projected lost sale, in which case it will round up. <span style="font-style: italic;">This is the recommended setting</span>. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Excess for Redistribution Days – </span>They days of excess which should be considered to be “protected” from a redistribution action. As a “days” value, the calculated unit value will be a resolved function of projected demand. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Expedite Freeze Days –</span> The forward looking days within which orders should not be considered eligible for an expedite action. </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Surplus Freeze Days –</span> The forward looking days within which orders should not be considered eligible for a surplus action.</li>
+        </ul>
+    </body>
+</html>

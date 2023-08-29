@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="686" MadCap:lastWidth="2346">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3 >Available to Allocate Calculation</h3>
+        <p>The available to allocate calculation is used in many places throughout the module. It is a dynamic calculation with several parameters, the inclusion of which will affect how the calculation is accomplished.</p>
+        <ul style="list-style-type: disc;margin-left: 0pt;">
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@bIncludeStockOnHand BIT = 1 --Should the StockOnHand column be included? Read from tbl_InventoryLevel</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@bIncludeOnOrder BIT = 1 --Should entries from SupplierOrderLine be included? </li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@bIncludePrepacks BIT = 1 --Should stock in prepacks be included? If there are prepacks defined, it will go to the prepacks, then go to inventory line of the prepacks</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-family: Consolas;font-size: 9pt;">@bIncludeReserved BIT = </span><span style="font-family: Consolas;font-size: 9pt;">0</span><span style="font-family: Consolas;font-size: 9pt;"> --Should the Reserved column be accounted for? Stock reserved is currently subtracted from StockOnHand in tbl_InventoryLevel</span><span style="font-family: Consolas;font-size: 9pt;">; if selected, it will be added back in.</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-family: Consolas;font-size: 9pt;">@bIncludePending BIT = 1 --Shoul</span><span style="font-family: Consolas;font-size: 9pt;">d the Pending column be accounted for?--subtracted if included</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-family: Consolas;font-size: 9pt;">@bIncludeSuperceded BIT = 1 --Should the Superseded column be accounted for? </span><span style="font-family: Consolas;font-size: 9pt;">–</span><span style="font-family: Consolas;font-size: 9pt;"> added</span><span style="font-family: Consolas;font-size: 9pt;"> if included</span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-family: Consolas;font-size: 9pt;">@iTodayDays INT = NULL --Number of days from "Today" to be considered as avail</span><span style="font-family: Consolas;font-size: 9pt;">able (uses sys policy </span><span style="font-family: Consolas;font-size: 9pt;">allocate.availableorderswindow</span><span style="font-family: Consolas;font-size: 9pt;"> if null) </span>
+            </li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@dToday DATETIME = NULL --defines "Today", uses actual today if null</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@bPrepackOnly BIT = 0 --Return only prepack stock ignoring all others</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@iLateDays INT = NULL --How many days back from today to look at late orders and include them (uses sys policy allocate.lateorderswindow</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">if null</li>
+            <li class="ListParagraph" style="list-style-type: disc;font-family: Consolas;font-size: 9pt;">@bOnOrderOnly BIT = 0 --Return only on order stock ignoring all others</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-family: Consolas;font-size: 9pt;">@cDestinationTableName NVARCHAR(128) = NULL -- This will Change the Stored Procedure Data exchange mechanism.</span><span style="font-family: Consolas;font-size: 9pt;"> Not relevant to the calculation.</span>
+            </li>
+        </ul>
+    </body>
+</html>

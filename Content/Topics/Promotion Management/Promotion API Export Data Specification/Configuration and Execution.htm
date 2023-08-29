@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">Configuration and Execution</h1>
+        <p>All configurable exports will read data from export.Promotion_xxxx tables. Prior to sending any data via API processes, procedure export. Promotion_Export_Promotions_API must be executed for a specific ExportID and ExportBatchID.</p>
+        <p>This procedure loads table export.Promotion_Staging_API creating a BatchPartitionID (page) for each batch of detail records. The exact number of detail records that make up a batch is specified in the Export configuration. Each BatchPartition will include a Header and detail records. </p>
+        <p>For very simple example…</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;">An Export is defined to output 200 records per BatchPartition.</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Promotion ‘A’ contains 1000 price records</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Procedure export. Promotion_Export_Promotions_API is executed</li>
+            <li class="ListParagraph" style="list-style-type: disc;">Resulting in five (5) Batch Partitions for Promotion’A’ written to table export.Promotion_Staging_API. Each Batch Partition will contain a header record (PromotionID, etc.) and 200 detail records.</li>
+        </ul>
+        <h2 >Execution</h2>
+        <p>While configured exports can be run individually, it is suggested that these exports be controlled by executing procedure <span style="font-style: italic;">export.</span><span style="font-style: italic;">Promotion_Extract_Wrapper. </span></p>
+        <p>&#160;</p>
+        <p style="margin-left: 36pt;"><span style="font-style: italic;">EXEC </span><span style="font-style: italic;">export.Promotion_Extract_Wrapper</span>
+        </p>
+        <p style="margin-left: 36pt;font-style: italic;"> @iUserid =1</p>
+        <p style="margin-left: 36pt;"><span style="font-style: italic;">,@</span><span style="font-style: italic;">iExportID</span><span style="font-style: italic;">&#160; =&#160; </span><span style="font-style: italic;">--</span><span style="font-style: italic;">&lt;configurable Export ID&gt; </span>
+        </p>
+        <p style="margin-left: 36pt;"><span style="font-style: italic;">,@</span><span style="font-style: italic;">iExportBatchID</span> <span style="font-style: italic;">= </span><span style="font-style: italic;">--</span><span style="font-style: italic;">&lt;ExportBatchID to pull data from&gt;</span></p>
+        <p style="margin-left: 36pt;"><span style="font-style: italic;">,@bDebug&#160; = 0</span> <span style="font-style: italic;"> --&lt;</span><span style="font-style: italic;">Setting to 1 will output all data to SSMS results pane. Helpful for confirming.troubleshooting</span></p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

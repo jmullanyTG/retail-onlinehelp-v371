@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2043" MadCap:lastWidth="1884">
+    <head>
+    </head>
+    <body>
+        <h1>Example - Excess Stock</h1>
+        <p style="margin-bottom: 0;">Excess stock exceptions identify items that are projected to be overstocked at a site beyond specified day and value thresholds. In such cases, you may want to redistribute the excess stock to other locations.</p>
+        <p style="margin-bottom: 0;">You can use filters and views to create an ad-hoc Excess Stock report in Item Manager that displays your excess stock exceptions. In this example, we'll use a pre-created exception filter that identifies items with 60 days of excess stock and $5,000 in excess stock value.</p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Example database text.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <h2>Related video</h2>
+        <p>
+            <object MadCap:HTML5Video="true" src="../../../Resources/Videos/BC-5 CD-18 Inventory Exception Management_Overstock_ExcessForRedistribution.mp4" MadCap:Param_controls="true" MadCap:Param_muted="false" MadCap:Param_loop="false" MadCap:Param_autoplay="false" class="video">
+            </object>
+        </p>
+        <h2>Instructions</h2>
+        <ol>
+            <li>From the Manage tab, click <b>Item Manager</b>.</li>
+            <li>
+                <p> In the Items dialog box, select the <b>Inventory Exception: Excess For Redistribution</b> filter<code>.</code></p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>In the Choose Fields dialog box, select the <b>Inventory Exception: Overstock (Excess)</b> view<code>.</code></p>
+            </li>
+            <li>
+                <p> In the item document, you can see all of the items that exceed the Excess Stock Days and Excess Stock Value thresholds specified in the filter.</p>
+                <p>For this example, the threshold is "more or equal to 60 days". </p>
+            </li>
+            <li>
+                <p>In the grid, you can sort items by priority ("A" items listed first) and review each item's Excess Stock Days, Excess Stock Quantity, Excess Stock Value, and more.</p>
+                <p>
+                    <img src="../../../Resources/Images/Exceptions/Inventory/Example - Excess grid.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Details pane, review an item's Stock Holding Projection tab to see the projected amount of excess stock at the location over time.</p>
+                <p>
+                    <img src="../../../Resources/Images/Exceptions/Inventory/Example - Excesss shp.png" />
+                </p>
+            </li>
+            <li>Review other tabs in the Detail pane as desired to get a better understanding of the forecasted demand, inventory policy, and other information governing the item stock at the location.</li>
+        </ol>
+        <h2>Potential Actions</h2>
+        <p>Actions you can take to resolve overstock exceptions include:</p>
+        <ul>
+            <li><a href="../../How-To Guides/How To Manage End of Season.htm">Redistributing</a> excess stock.</li>
+            <li>Canceling or deferring upcoming orders until stock quantities are balanced with demand.</li>
+        </ul>
+    </body>
+</html>

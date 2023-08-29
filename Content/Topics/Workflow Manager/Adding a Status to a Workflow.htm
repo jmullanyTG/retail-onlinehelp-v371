@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/jeTables.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Adding a Status to a Workflow</h1>
+        <ol>
+            <li>From the Maintain tab, click <b>Workflow Manager</b>.</li>
+            <li>In the Workflows list. select the workflow you want to add a new status to.</li>
+            <li>
+                <p>Click <b>New</b> in the Status toolbar.</p>
+                <p>
+                    <img src="../../Resources/Images/Workflow Manager/Status toolbar.png" />
+                </p>
+            </li>
+            <li>
+                <p>A new status box appears in the workflow diagram.</p>
+                <p><b>TIP</b>: If you select an existing status box in the workflow diagram before clicking <b>New</b>, a transition will automatically be created from the selected status box to the new status box.</p>
+            </li>
+            <li>
+                <p>In the Information pane, edit the following status information properties:</p>
+                <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <col class="TableStyle-jeTables-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-jeTables-Head-Header1">
+                            <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                                <p style="font-weight: bold;"><a name="StatusProperties"></a>Property</p>
+                            </th>
+                            <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                                <p style="font-weight: bold;">Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Name</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">The status name appears in the status box in the Design pane.</td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Completion Days Out</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p>The number of days before or after the workflow object's goal date that the status is due. See <b>Trigger Method</b> below. (Optional) </p>
+                                <p>A positive number indicates the status is due <i>before</i> the goal date. A negative number indicates the status is due <i>after</i> the goal date.</p>
+                                <p>For example, a workflow's goal date is typically the object's start date (promotion goal date = the sale/promotion start date; event goal date = the ad start date; price action oal date = the price action start date, etc.). So if you want this status to be due 30 days <i>before</i> the start date, enter the value "30". If you want this status to be due 14 days <i>after</i> the start date, enter the value "-14". </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1"><b>Prefix Method</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>The method JustEnough should execute <i>before</i> applying this status. (Optional) </p>
+                                <p>A method is an advanced process applied at the database level (such as the execution of a SQL script). This list is empty unless methods are configured to appear in it.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body2"><b>Post Fix Method</b>
+                            </td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                                <p>The method JustEnough should execute <i>after</i> applying this status. (Optional)</p>
+                                <p>A method is an advanced process applied at the database level (such as the execution of a SQL script). This list is empty unless methods are configured to appear in it.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body1">
+                            <td class="TableStyle-jeTables-BodyE-Column1-Body1" style="font-weight: bold;">Trigger Method</td>
+                            <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                                <p>The method JustEnough should execute once the completion day specified in the <b>Completion Days Out </b>property arrives.(Optional) </p>
+                                <p>This list includes the method "Auto Advance Node Status by&#160;Completion Days Out for Workflow Triggers", which automatically advances the workflow to its "next" status once the completion day is reached. If there is more than one possible "next" status (for example, "Approve" or "Change Needed"), the workflow will advance to the status with the highest <a href="Adding a Transition to a Workflow.htm">transition weight</a>.</p>
+                                <p style="margin-bottom: 0pt;"><span style="font-weight: bold;">Note</span>: </p>
+                                <ul>
+                                    <li>Completion Days Out are tracked using the Workflow Heartbeat task, which is in the <a href="../Workload Queue Manager/Standardized Jobs.htm">daily job</a> run by the   JustEnough Job Manager. This task stops tracking days out in a workflow on the furthest "negative" day out specified in the workflow. If the heartbeat task does not run on that specific day, the trigger method will never automatically execute. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-jeTables-Body-Body2">
+                            <td class="TableStyle-jeTables-BodyB-Column1-Body2" style="font-weight: bold;">Status Permission Blacklist</td>
+                            <td class="TableStyle-jeTables-BodyA-Column1-Body2">
+                                <p>The <a href="Status Permission Blacklist.htm">state-based permission sets</a> to enforce in JustEnough while the workflow is in this status. The list includes a row for each user right controlled by the workflow and a column for each possible object state. A black user icon indicates the user right is granted to all users when an object governed by the workflow is in that state. A&#160;blue user icon indicates the user right is denied to one or more users when an object governed by the workflow is in that state. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>Click <b>Save</b> on the Workflow toolbar to save the change to the workflow.</li>
+        </ol>
+        <h2>Next steps</h2>
+        <p>Once a status is created, you can start making the following changes:</p>
+        <ul>
+            <li>Edit its status information and <a href="Status Permission Blacklist.htm">permission blacklist</a>.</li>
+            <li>Add or <a href="Adding a Transition to a Workflow.htm">edit</a> transitions to the new status.</li>
+        </ul>
+    </body>
+</html>

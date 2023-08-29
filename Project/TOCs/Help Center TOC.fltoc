@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Release Notes"
+    Link="/Project/TOCs/Release Notes.fltoc" />
+  <TocEntry
+    Title="Online Help"
+    Link="/Content/Home.htm">
+    <TocEntry
+      Title="Plan"
+      Link="/Content/Topics/Menus/Plan.htm">
+      <TocEntry
+        Title="Assortment"
+        Link="/Content/Topics/Assortment Planning/Assortment Planning Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Assortment Planning"
+          Link="/Project/TOCs/Assortment Planning.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Financial Planning"
+        Link="/Content/Topics/Merchandise Financial Planning/Merchandise Financial Planning Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Merchandise Financial Planning"
+          Link="/Project/TOCs/Merchandise Financial Planning.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Rate of Sale"
+        Link="/Content/Topics/Rate of Sale Calculator/Rate of Sale Calculator Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Rate of Sale Calculator"
+          Link="/Project/TOCs/Rate of Sale Calculator.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Campaigns and Events"
+        Link="/Content/Topics/Campaigns and Events/Campaigns and Events Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Campaigns and Events"
+          Link="/Project/TOCs/Campaigns and Events.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Promotions"
+        Link="/Content/Topics/Promotion Management/Promotion Management Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Promotion Management"
+          Link="/Project/TOCs/Promotion Management.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Price Manager" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Topics/Price Planning/Price Planning Overview.htm">
+        <TocEntry
+          Title="Price Planning"
+          Link="/Project/TOCs/Price Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Cluster Manager"
+        Link="/Content/Topics/Cluster Manager/Cluster Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Cluster Manager"
+          Link="/Project/TOCs/Cluster Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Cluster Site Manager"
+        Link="/Content/Topics/Cluster Site Manager/Cluster Site Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Cluster Site Manager"
+          Link="/Project/TOCs/Cluster Site Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Dashboard"
+        Link="/Content/Topics/Dashboard/Dashboard Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Dashboard"
+          Link="/Project/TOCs/Dashboard.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Views"
+        Link="/Content/Topics/Views/Views Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Views"
+          Link="/Project/TOCs/Views.fltoc" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Manage"
+      Link="/Content/Topics/Menus/Manage.htm">
+      <TocEntry
+        Title="Forecasts"
+        Link="/Content/Topics/Demand Forecasting/Demand Forecasting Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Demand Forecasting"
+          Link="/Project/TOCs/Demand Forecasting.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Group Forecast"
+        Link="/Content/Topics/Group Forecasts/Group Forecasts Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Group Forecasts"
+          Link="/Project/TOCs/Group Forecasts.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Profiles"
+        Link="/Content/Topics/Profiles/Profiles Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Profiles"
+          Link="/Project/TOCs/Profiles.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Causals"
+        Link="/Content/Topics/Causals/Causals Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Causals"
+          Link="/Project/TOCs/Causals.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Classification"
+        Link="/Content/Topics/Classification/Classification Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Classification"
+          Link="/Project/TOCs/Classification.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Policy"
+        Link="/Content/Topics/Policy/Policy Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Policy"
+          Link="/Project/TOCs/Policy.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Ordering Constraints"
+        Link="/Content/Topics/Ordering Constraints/Ordering Constraints Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Ordering Constraints"
+          Link="/Project/TOCs/Ordering Constraints.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Supersessions"
+        Link="/Content/Topics/Supersessions/Supersessions Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supersessions/Supersessions Screen.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supersessions/Creating Supersessions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supersessions/Example - Replacing Old Items with New items.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supersessions/Example - Using Supersessions to Generate Demand Forecasts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supersessions/Technical Details About Supersessions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Content Manager"
+        Link="/Content/Topics/Content Manaqger/Content Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Content Manaqger"
+          Link="/Project/TOCs/Content Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Allocation"
+        Link="/Content/Topics/Allocations/Allocation Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Allocations"
+          Link="/Project/TOCs/Allocations.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Adaptive Allocations"
+        Link="/Content/Topics/Adaptive Allocations/Adaptive Allocations Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Adaptive Allocations"
+          Link="/Project/TOCs/Adaptive Allocations.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Item Manager"
+        Link="/Content/Topics/Item Manager/Item Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Item Manager"
+          Link="/Project/TOCs/Item Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Order Manager"
+        Link="/Content/Topics/Order Manager/Order Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Order Manager"
+          Link="/Project/TOCs/Order Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Site Manager"
+        Link="/Content/Topics/Site Manager/Site Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Site Manager"
+          Link="/Project/TOCs/Site Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Supplier Manager"
+        Link="/Content/Topics/Supplier Manager/Supplier Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Variant Manager"
+        Link="/Content/Topics/Variant Manager/Variant Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Maintain"
+      Link="/Content/Topics/Menus/Maintain.htm">
+      <TocEntry
+        Title="Media Manager"
+        Link="/Content/Topics/Media Manager/Media Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Media Manager"
+          Link="/Project/TOCs/Media Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Curves"
+        Link="/Content/Topics/Curves/Curves Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Curves"
+          Link="/Project/TOCs/Curves.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Schedules"
+        Link="/Content/Topics/Schedules/Schedules Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Schedules"
+          Link="/Project/TOCs/Schedules.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Supply Chain"
+        Link="/Content/Topics/Supply Chain/Supply Chain Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Managing Supply Chains.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Filtering for Unconfigured Supply Chains.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Example - Direct to Store Supply Chain.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Example - Supplier to DC to Store Supply Chain.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Example - Multi-Level Supply Chain.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Example - Redistribution Supply Chain.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Supply Chain/Example - Supply Chain Override.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Allocations Rules"
+        Link="/Content/Topics/Allocations Rules Manager/Allocations Rules Manager.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Allocations Rules Manager"
+          Link="/Project/TOCs/Allocations Rules Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Tags"
+        Link="/Content/Topics/Tags/Tags Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Attribute Management"
+        Link="/Content/Topics/Attribute Management/Attribute Management and Assignment.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Attribute Management"
+          Link="/Project/TOCs/Attribute Management.fltoc"
+          ReplaceMergeNode="false" />
+      </TocEntry>
+      <TocEntry
+        Title="Filters"
+        Link="/Content/Topics/Filters/Filters Overview.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Filters/Filters Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Filters/Maintain Filters Dialog Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Filters/Creating a New Filter.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Topics/Filters/Example - Creating a New Item Filter.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Topics/Filters/Example - Creating a New Sites Filter.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        </TocEntry>
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Filters/Editing a Filter.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Filters/Selecting a Filter.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Filters/Technical Notes.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Time Frames"
+        Link="/Content/Topics/Time Frame/Time Frames Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Time Frames"
+          Link="/Project/TOCs/Time Frames.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Workflow Manager"
+        Link="/Content/Topics/Workflow Manager/Workflow Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Workflow Manager"
+          Link="/Project/TOCs/Workflow Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Configuration Migration"
+        Link="/Content/Topics/Configuration Migration/Configuration Migration Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Generic View Collection Set Manager"
+        Link="/Content/Topics/GVCSM/Generic View Collection Set Manager.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Job Manager"
+        Link="/Content/Topics/Job Manager/Job Manager Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Users"
+        Link="/Content/Topics/Users/Users Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Users"
+          Link="/Project/TOCs/Users.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Policies"
+        Link="/Content/Topics/System Policies/System Policies Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Languages"
+        Link="/Content/Topics/Languages/Languages Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Languages/Default Strings Maintenance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Languages/Default Culture for Language Maintenance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Languages/Translate a Language or Language and Culture.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Files"
+        Link="/Content/Topics/Files/Files Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Files"
+          Link="/Project/TOCs/Files.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Broker Dispatch Viewer"
+        Link="/Content/Topics/Broker Dispatch/Broker Dispatch Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Broker Dispatch"
+          Link="/Project/TOCs/Broker Dispatch.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Workload Queue"
+        Link="/Content/Topics/Workload Queue Manager/Workload Queue Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Workload Queue Manager"
+          Link="/Project/TOCs/Workload Queue Manager.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Notification Maintenance"
+        Link="/Content/Topics/Notifications/Notifications Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Notifications"
+          Link="/Project/TOCs/Notifications.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Forecast "
+        Link="/Content/Topics/Forecast Definition/Forecast Definition Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Forecast Definition"
+          Link="/Project/TOCs/Forecast Definition.fltoc" />
+      </TocEntry>
+      <TocEntry
+        Title="Help"
+        Link="/Content/Topics/Help/Help Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Settings"
+      Link="/Content/Topics/settings/Setting Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Other"
+      Link="/Content/Topics/Menus/Other.htm">
+      <TocEntry
+        Title="Administrator Panel"
+        Link="/Content/Topics/Administrator Panel/Administrator Panel Overview.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Administrator Panel/Audit Configuration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Administrator Panel/Filters and Hierarchies.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Administrator Panel/Forecast Policy Maintenance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Promotion API Export Data Specification"
+        Link="/Content/Topics/Promotion Management/Promotion API Export Data Specification/Process Flow.htm">
+        <TocEntry
+          Title="Promotion API Export Data Specification"
+          Link="/Project/TOCs/Promotion API Export Data Specification.fltoc" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

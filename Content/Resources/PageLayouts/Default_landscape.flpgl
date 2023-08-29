@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Normal" Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="landscape">
+        <Frame Flow="footer" Height="0.4166667in" Right="12px" Bottom="-65px" X="12px" Y="6.760417in" Width="8.75in" VerticalAlign="middle" BorderTopStyle="solid" BorderTopWidth="1px" BorderTopColor="#a9a9a9" Anchors="Width">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <MadCap:snippetBlock xhtml:src="../Snippets/pdf-page-footer.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="8.75in" Height="6.5in" X="12px" Y="0px" Right="12px" Bottom="0px" Anchors="Width,Height">
+        </Frame>
+        <Frame X="12px" Y="-59px" Width="76px" Height="48px" Flow="decoration0" Right="776px" Bottom="635px" BackgroundImage="../Images/brand/Mi9-logo(RGB).svg" BackgroundRepeat="stretch" />
+        <Frame X="12px" Y="-59px" Width="8.75in" Height="47px" Flow="header" Right="12px" Bottom="636px" BorderBottomStyle="solid" BorderBottomWidth="1px" BorderBottomColor="#808080" Anchors="Width" VerticalAlign="middle">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <MadCap:snippetBlock xhtml:src="../Snippets/pdf-page-header.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="title">
+        <Frame X="489px" Y="26px" Width="135px" Height="87px" Flow="decoration0" Right="0px" Bottom="751px" BackgroundImage="../Images/brand/Mi9-logo(RGB).svg" BackgroundRepeat="stretch" />
+        <Frame X="-96px" Y="-96px" Width="108px" Height="1056px" Flow="decoration1" Right="612px" Bottom="-96px" BackgroundImage="../Images/brand/PageLayoutTitlePageSideBar.jpg" BackgroundRepeat="stretch" />
+        <Frame X="83px" Y="201px" Width="541px" Height="343px" Flow="body" Right="0px" Bottom="320px" Anchors="" />
+    </Page>
+</PageStyles>

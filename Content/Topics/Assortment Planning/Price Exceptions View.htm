@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="2575" MadCap:lastWidth="1869">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Price Exceptions View</h1>
+        <p style="margin-bottom: 0pt;"><span style="color: #000000;font-size: 12pt;">This view allows users to manage price exceptions by placeholder for all of the currencies used in the clusters to which that placeholder is assorted</span><span style="color: #000000;font-size: 12pt;">. This view reads information from the </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Currency Exchange Rates, Price Translation Management, and Price Translation Hierarchy Management </span><span style="color: #000000;font-size: 12pt;">views located in </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Plan &gt; Views &gt; Currency</span> <span style="color: #000000;font-size: 12pt;">to populate the fields shown but provides users with the flexibility to </span><span style="color: #000000;font-size: 12pt;">override any of them to set local ticket prices in whatever way is most meaningful to them</span></p>
+        <p style="margin-bottom: 0pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">The system policy </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Line Visualization Allow Price Exceptions</span><span style="font-style: italic;color: #000000;font-size: 12pt;">, accessible via </span><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Maintain &gt; Policies &gt; Module: Assortment</span><span style="font-style: italic;color: #000000;font-size: 12pt;"><span style="color: #000000;">, sets whether or not this view will be viewable/editable. If set to False, the view will still appear but will be disabled; </span></span><span style="font-style: italic;color: #FF0000;font-size: 12pt;"><span style="color: #000000;">note that to affect a change in this policy on an already open plan, the plan must be reopened through the </span></span><span style="font-weight: bold;font-style: italic;color: #FF0000;font-size: 12pt;"><span style="color: #000000;">Manage Assortment Plans</span></span><span style="font-style: italic;color: #FF0000;font-size: 12pt;"><span style="color: #000000;"> dialog</span></span>
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">
+            <img src="../../Resources/Images/Assortment Planning/Price Exceptions View.png" style="visibility: visible;width: 448px;height: 379px;" />
+        </p>
+        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Reset Default Factors:</span> <span style="font-size: 12pt;">restores default translation factors for all non-actualized periods for the product level of the selected placeholder (as defined in the </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Price Translation Management, and Price Translation Hierarchy Management </span><span style="color: #000000;font-size: 12pt;">views)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;font-size: 12pt;">Note: </span><span style="font-style: italic;font-size: 12pt;">restoring default factors will cause the Local AUT and Home AUT Equivalent fields to recalculate accordingly</span> <![CDATA[ ]]></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Apply:</span> <span style="font-size: 12pt;">Saves all changes made </span><span style="font-size: 12pt;">since the last Apply </span><span style="color: #000000;font-size: 12pt;">and initiates recalculation of blended AUR values for the selected placeholder</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Cancel:</span> <span style="color: #000000;font-size: 12pt;">cancels all changes made since the last Apply and reverts them to previously saved values</span></li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Period: </span><span style="color: #000000;font-size: 12pt;">indicates the period being changed; this aligns with the period type for the current assortment plan</span>
+            </li>
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Home </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">AUT</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">:</span> <span style="color: #000000;font-size: 12pt;">displays</span><span style="color: #000000;font-size: 12pt;"> the </span><span style="color: #000000;font-size: 12pt;">selected </span><span style="color: #000000;font-size: 12pt;">placeholder AUT in default currency for the active assortment plan (as defined in the plan settings – </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Manage &gt; Default Currency</span><span style="color: #000000;font-size: 12pt;">)</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #000000;font-size: 12pt;">Note: </span><span style="font-style: italic;color: #000000;font-size: 12pt;">this field shows a weighted average AUT for all clusters for the period in question, thus, if differences exist by cluster and/or from period to period, values shown may not align with those shown in the main planning view or the AUT view</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;color: #000000;font-size: 12pt;">Home AUT </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">(</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">ex VAT</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">)</span><span style="font-weight: bold;color: #000000;font-size: 12pt;">: </span><span style="color: #000000;font-size: 12pt;">displays the selected placeholder AUT excluding VAT in the default currency for the active assortment plan (as defined in the plan settings – </span><span style="font-weight: bold;color: #000000;font-size: 12pt;">Manage &gt; Default Currency</span><span style="color: #000000;font-size: 12pt;">)</span><span style="color: #000000;font-size: 12pt;">; hidden by default</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">Home AUT / (1 + VAT %)</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Local AUT:</span> <span style="font-size: 12pt;">displays/sets the ticket price in local currency (as indicated in the column section header – </span><span style="font-size: 12pt;">EUR</span><span style="font-size: 12pt;"> in the shot above) for the selected placeholder for the period</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation: </span><span style="font-style: italic;font-size: 12pt;">Local AUT ex VAT + (Local AUT ex VAT * VAT %)</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Local AUT </span><span style="font-weight: bold;font-size: 12pt;">(</span><span style="font-weight: bold;font-size: 12pt;">ex VAT</span><span style="font-weight: bold;font-size: 12pt;">)</span><span style="font-weight: bold;font-size: 12pt;">: </span><span style="font-size: 12pt;">displays/sets the ticket price excluding VAT in local currency (as indicated in the column section header – EUR in the shot above) for the selected placeholder for the period</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation: </span><span style="font-style: italic;font-size: 12pt;">Home AUT ex VAT</span> <span style="font-style: italic;font-size: 12pt;">Equivalent * Exchange Rate</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Home AUT </span><span style="font-weight: bold;font-size: 12pt;">(ex VAT) </span><span style="font-weight: bold;font-size: 12pt;">Equivalent:</span> <span style="font-size: 12pt;">displays/sets the ticket price as </span><span style="font-size: 12pt;">a local equivalent price </span><span style="font-size: 12pt;">excluding VAT </span><span style="font-size: 12pt;">in the home currency after a translation factor has been applied for the selected placeholder for the period</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">Home AUT </span><span style="font-style: italic;font-size: 12pt;">ex VAT </span><span style="font-style: italic;font-size: 12pt;">* Translation Factor</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Translation Factor:</span> <span style="font-size: 12pt;">displays/sets the</span><span style="font-size: 12pt;"> translation factor to apply </span><span style="font-size: 12pt;">to determine the final ticket price in home and local currencies (as indicated in the column section header – </span><span style="font-size: 12pt;">EUR</span><span style="font-size: 12pt;"> in the shot above) for the selected placeholder for the period</span></li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-style: italic;color: #00B050;font-size: 12pt;">Calculation:</span> <span style="font-style: italic;font-size: 12pt;">Home AUT </span><span style="font-style: italic;font-size: 12pt;">ex VAT </span><span style="font-style: italic;font-size: 12pt;">Equivalent / Home AUT</span><span style="font-style: italic;font-size: 12pt;"> ex VAT</span></li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="margin-bottom: 0pt;"><span style="font-weight: bold;font-size: 12pt;">Conditional Formatting: </span><span style="font-size: 12pt;">orange shaded cells in the Price Exceptions view indicate a change in Local AUT from the prior period for the currency indicated by the column section header</span>
+            </li>
+        </ul>
+    </body>
+</html>

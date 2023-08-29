@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 >Schedule Tree Data Selection</h1>
+        <p>The data selection tab will determine how data is brought into the widget. This data specifically pertains to the schedule tree.</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">SQL Connection Type – </span>Choosing a SQL connection type will tell the widget from which database to return the data. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Operations Database –</span> The normal database containing most of the current and operational data for JustEnough. This will be the selection for most applications. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Warehouse Database –</span> If configured, the warehouse database may function as a container for archived data. Selecting the warehouse database to return data to a widget</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="margin-bottom: 0pt;"><span style="font-weight: bold;">Method – </span>The method drop down will return every SQL stored procedure listed in <span style="font-family: Consolas;color: #008080;font-size: 10pt;">tbl_Common_StoredProcedureLookup</span>, which should be representative of every stored procedure in the database. This is the procedure which will execute when the “execute” button is pressed on the widget (when parameters are present) or which will return the data to the widget (i.e. a <span style="font-family: Consolas;color: #0000FF;font-size: 10pt;">SELECT </span>statement).</li>
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Method Parameters –</span> Upon selection of the stored procedure, the “Method Parameters” window will populate with the required parameters for the procedure. These parameters will vary greatly depending on the requirements of the stored procedure. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Method Parameter Name –</span> The name of the required parameter as specified in the stored procedure. </li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Parameter –</span> The selected parameter entry to be passed. These may be selected from the list of parameters detailed in the “maintain parameters” section.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Maintain Parameters –</span> Will bring up the “select parameter” window, displaying all available parameters. More detail may be found in the “maintain parameters” section.</li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Default Value –</span> The default value, if any, passed to the parameter. </li>
+        </ul>
+    </body>
+</html>

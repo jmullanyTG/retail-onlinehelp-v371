@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Functionality Notes</h1>
+        <p><span style="color: #000000;">When working </span><span style="color: #000000;">with the Size Similarity Manager,</span><span style="color: #000000;"> there are some basic constructs and conventions the user should be aware of in order to get the most out of the available functionality:</span>
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;color: #FF0000;">Destructive Nature of Size Similarity Sets</span><span style="font-weight: bold;color: #FF0000;">: </span>The most important point to understand about this functionality is that, in order to prevent the need for live reads and conversions based on saved similarity sets, <span style="color: #FF0000;">migrated data is permanently changed within JustEnough and cannot be restored by simply deleting a similarity set for which migration has occurred</span>. Similarly, newly imported data is converted to the selected Display Size for the corresponding similarity set. We do maintain reference to original external identifiers for the purpose of syncing exported data with external systems, but within JustEnough, Similar Sizes other than the Display Size of migrated similarity sets do not exist. For this reason, <span style="color: #FF0000;">it is essential that access to the Size Similarity Manager be limited to only users trusted to make such system changes and that those changes be well-thought out and agreed upon by all interested parties prior to being saved and queued for migration.</span></li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 36pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Related Import and System Changes: </span>Multiple imports were updated to account for sizes that are migrated. The checks ONLY consider sizes that are active and were previously migrated (not “Queue For Migration”). The import changed are Prepack, Item Master, Size Curve, Size Range, and Supplier Order Line Variant</li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 36pt;">&#160;</p>
+        <p class="ListParagraph" style="margin-left: 36pt;">In addition to import scripts, the UI Size Range scripts were updated and auditing was applied to the Size Similarity Tables. Lastly, a new column “ImportSizeID” was added to tbl_ItemMaster</p>
+        <p class="ListParagraph" style="margin-left: 36pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Size Type and Similarity </span><span style="font-weight: bold;">Sets</span><span style="font-weight: bold;">: </span>the intent of similarity sets is to identify data that should be homogenized within single defined size types, thus, you won’t be able to choose sizes outside of the chosen size type for the rule Display Size or for the Similar Sizes to be grouped</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;color: #0070C0;">Example: </span><span style="font-style: italic;">I want to create a new size curve for Men’s Short Sleeve Tees. The newest items in that category have the size range S, M, L, XL, and XXL, but some pre-existing items were sized with a slightly different but equivalent range – S, M, L, XL, and 2XL. </span><span style="font-style: italic;">Currently, my Men’s Short Sleeve Tees size type does not contain the new XXL size but I want to use XXL as my go-forward Display Size. In order to do this, I first need to add XXL to the Men’s Short Sleeve Tees size type, then I will be able to both choose it as the Display Size for my similarity </span><span style="font-style: italic;">set</span><span style="font-style: italic;"> and choose both XXL and 2XL as the Similar Sizes to group</span>
+            </li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 72pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Data Migration</span><span style="font-weight: bold;">:</span> in order to homogenize data for the Similar Sizes defined in a similarity rule, a migration script (<span style="font-family: Consolas;color: #FF0000;font-size: 10pt;">usp_Size_SizeSimilarity_Data_Migration</span>) was been created</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Rights: </span><span style="font-style: italic;">In order to run the </span><span style="font-style: italic;">script,</span><span style="font-style: italic;"> a user must have the required Configuration Rights</span>
+            </li>
+        </ul>
+        <table class="TableStyle-jeTables" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/jeTables.css');">
+            <thead>
+                <tr class="TableStyle-jeTables-Head-Header1">
+                    <th class="TableStyle-jeTables-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #FFFFFF;">Parameter Name</p>
+                    </th>
+                    <th class="TableStyle-jeTables-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;color: #FFFFFF;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-weight: bold;color: #000000;">@iUserID</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;color: #000000;">@bOkayToMigrate</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>An explicit opt in variable to tell the procedure when it is okay to migrate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body1">
+                        <p style="font-weight: bold;color: #000000;">@bLogInformation</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body1">
+                        <p>An optional parameter to suppress logging to tbl_Size_SizeSimilarity_LogData; if migrating will force logging on</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body2">
+                    <td class="TableStyle-jeTables-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;color: #000000;">@bTurnONTransaction</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyD-Column1-Body2">
+                        <p>BEWARE: This is to allow turning off of our transactions for testing purposes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-jeTables-Body-Body1">
+                    <td class="TableStyle-jeTables-BodyB-Column1-Body1">
+                        <p style="font-weight: bold;color: #000000;">@bDebug</p>
+                    </td>
+                    <td class="TableStyle-jeTables-BodyA-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Running the Script: </span><span style="font-style: italic;">The ideal place is during the weekly scripts since imports were updated as well to help align the sizes to the display size.</span> <span style="font-style: italic;">The process will gather all of the sizes that are “Queue For Migration”. Any of the canned tables that are detected will be backed up if the user decides to migrate. The backed up tables will be listed in the temp schema which means they can be destroyed at any time.</span></li>
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Data Log: </span><span style="font-style: italic;">A </span><span style="font-style: italic;">user</span><span style="font-style: italic;"> can decide to not migrate but can consult the log table (</span><span style="font-style: italic;color: #FF0000;">tbl_Size_SizeSimilarity_LogData</span><span style="font-style: italic;">) in order to see which tables were f</span><span style="font-style: italic;">lagged as having migration work</span>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Allocation Size/Functionality Notes.png" style="visibility: visible;width: 634px;height: 169px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;font-style: italic;">Garbage Collection: </span><span style="font-style: italic;">Because of the extensive logs created by the Size Similarity Manager, </span><span style="font-style: italic;">a </span><span style="font-style: italic;">g</span><span style="font-style: italic;">arbage </span><span style="font-style: italic;">c</span><span style="font-style: italic;">ollection script (</span><span style="font-style: italic;color: #FF0000;">usp_Size_GarbageCollection_Manager</span><span style="font-style: italic;">) was created</span><span style="font-style: italic;"> to help minimize storage of log data that is no longer needed</span>
+            </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li class="ListParagraph" style="list-style-type: square;"><span style="font-weight: bold;font-style: italic;">System Policy</span><span style="font-weight: bold;font-style: italic;">: </span><span style="font-style: italic;">data log entries created by the Size Similarity Manager </span><span style="font-style: italic;">use the system policy </span><span style="font-weight: bold;font-style: italic;">Size.SizeSimilarity.WaitMinutesBeforeLogTableGarbageCollection</span><span style="font-style: italic;"> to determine how long they should be kept prior to deletion.</span> <span style="font-style: italic;">This policy is set in minutes and has a default value of </span><span style="font-style: italic;">43</span><span style="font-style: italic;">,</span><span style="font-style: italic;">200 </span><span style="font-style: italic;">– the equivalent of 30 days</span></li>
+        </ul>
+        <p class="ListParagraph" style="margin-left: 108pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Saving/Restoring Layouts:</span> changes made to the screen layout through use of the Fields button and/or PivotGrid manipulation can be saved and quickly recalled later:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Saving: </span>right clicking anywhere in the data grid area will bring up a context menu:</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Allocation Size/Functionality Notes_1.png" style="visibility: visible;width: 631px;height: 259px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 72pt;">Click <span style="font-weight: bold;">Save Layout </span>to launch the Save Layout dialog:</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Allocation Size/Functionality Notes_2.png" style="visibility: visible;width: 484px;height: 245px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 72pt;">Enter a Name for the layout, an optional Description, and a privacy option – Private, Public, or Shared (if Shared, click <img src="../../Resources/Images/Allocation Size/Functionality Notes_3.png" style="visibility: visible;mso-wrap-style: square;width: 23px;height: 22px;" /> to define the users with which to share the layout). If you wish to make the layout you are saving the Default system layout for the current view, check Default. Click OK and then the layout will be saved for future recall</p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li class="ListParagraph" style="list-style-type: circle;"><span style="font-weight: bold;">Restoring:</span> right click as shown in <span style="font-weight: bold;">Saving</span>, above, to bring up the context menu:</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Allocation Size/Functionality Notes_4.png" style="visibility: visible;width: 631px;height: 257px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 72pt;">Click <span style="font-weight: bold;">Restore Layout</span> then choose the layout you wish to recall to switch the view to the chosen layout</p>
+        <p class="ListParagraph" style="margin-left: 72pt;">&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li class="ListParagraph" style="list-style-type: disc;"><span style="font-weight: bold;">Open/Export: </span>right clicking anywhere in the data grid area will bring up a context menu:</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Allocation Size/Functionality Notes_5.png" style="visibility: visible;width: 633px;height: 250px;" />
+        </p>
+        <p class="ListParagraph" style="margin-left: 36pt;">Click <span style="font-weight: bold;">Open/Export </span>and then click the desired format; note that Open will open the data from the view directly in the application associated with the chosen format whereas Export requires the user to name and save the file and DOES NOT immediately open the data in the associated application.</p>
+    </body>
+</html>
